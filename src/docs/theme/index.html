@@ -16,26 +16,8 @@
     <!-- header-->
     <header class="landing">
       <div class="overlay"></div>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container"><a class="navbar-brand" href="#"> <img src="/img/logo.png" width="185" alt="logo"/></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="navbar-icon"></div>
-            <div class="navbar-icon"></div>
-            <div class="navbar-icon"></div>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto align-items-center">
-              <li class="nav-item"><a class="nav-link" href="/documentation/">Documentation</a></li>
-              <li class="nav-item"><a class="nav-link" href="/changelog">Changelog</a></li>
-              <li class="nav-item"><a class="nav-link" href="/support">Support/Training</a></li>
-              <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
-              <li class="nav-item"><a class="nav-link" href="https://connect.http4k.org">http4k Connect</a></li>
-              <li class="nav-item"><a class="nav-link" href="https://toolbox.http4k.org">Toolbox</a></li>
-              <li class="nav-item"><a class="nav-link btn-github" href="https://github.com/http4k/http4k" title="GitHub Source"></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+
+      {% include "partials/header-nav.html" %}
       <div class="container h-80">
         <div class="row align-items-center h-100">
           <div class="col-md-7 col-lg-5 col-xl-4">

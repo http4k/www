@@ -1,0 +1,68 @@
+<footer class="shared footer bg-blue-light py-5">
+    <div class="container">
+        <div class="row pb-5 text-start text-xl-start" style="padding-left: 10px">
+            <div class="col-12 col-xl-4 pb-4">
+                <a class="navbar-brand d-flex align-items-center" href="{{ .Site.BaseURL }}">
+                    <img src="{{ .Site.Params.Logo }}" width="30" height="30"/>
+                    <span class="fs-3 text-uppercase text-logo text-primary">&nbsp;{{ .Site.Title }}</span>
+                </a>
+                <p class="small text-black-61">{{ .Site.Params.description }}</p>
+            </div>
+            <div class="col-12 col-xl-4 pb-4">
+                <div class="col-12 col-xl-2 pb-4" style="float: left; width: 33%">
+                    <h5 class="fs-6 fw-semibold text-primary">About us</h5>
+                    <ul class="list-unstyled">
+                        {{ range .Site.Menus.footer }}
+                        <li class="">
+                            <a class="small text-black-61 text-decoration-none" href="{{ .URL }}">
+                                {{ .Name }}
+                                {{ with .Params }} {{ with .icon }}<i class="{{ . }}"></i>{{ end }} {{ end }}
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                <div class="col-12 col-xl-2 pb-4" style="float: left; width: 33%;">
+                    <h5 class="fs-6 fw-semibold text-primary">Legal</h5>
+                    <ul class="list-unstyled">
+                        {{ range .Site.Menus.legal }}
+                      <li class="">
+                        <a class="small text-black-61 text-decoration-none" href="{{ .URL }}">{{ .Name }}</a>
+                      </li>
+                        {{ end }}
+                    </ul>
+                  <h5 class="fs-6 fw-semibold text-primary">Contact us</h5>
+                  <ul class="d-flex list-unstyled">
+                    {{ with .Site.Params.social }}
+                    <a class="small text-black-61 text-decoration-none" href="{{ .linkedin }}"><i class="bi bi-linkedin"></i></a>
+                    {{ end }}
+                    &nbsp;
+                    {{ with .Site.Params.contact }}
+                    <a class="small text-black-61 text-decoration-none" href="mailto:{{ .email }}"><i class="bi bi-envelope"></i></a>
+                    {{ end }}
+                  </ul>
+                </div>
+                <div class="col-12 col-xl-2 pb-4" style="float: left; width: 33%">
+                    <h5 class="fs-6 fw-semibold text-primary">Members</h5>
+                    <ul class="list-unstyled">
+                        {{ range .Site.Menus.members }}
+                      <li class="">
+                        <a class="small text-black-61 text-decoration-none" href="{{ .URL }}">
+                          {{ .Name }}
+                          {{ with .Params }} {{ with .icon }}<i class="{{ . }}"></i>{{ end }} {{ end }}
+                        </a>
+                      </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {{ with .Site.Params.copyright }}
+                <p class="small text-black-61 text-center">{{ . }}</p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</footer>

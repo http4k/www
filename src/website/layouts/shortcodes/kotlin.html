@@ -1,0 +1,4 @@
+{{ $file := .Get "file" }}
+{{ with readFile (printf "%s/%s" .Page.Path $file) }}
+{{ highlight . "kotlin" }}
+{{ end }}

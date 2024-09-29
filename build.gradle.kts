@@ -52,5 +52,8 @@ sourceSets {
     test {
         kotlin.srcDir("$projectDir/src/docs")
         resources.srcDir("$projectDir/src/docs")
+
+        kotlin.srcDir("$projectDir/src/website")
+        resources.srcDir("$projectDir/src/website")
     }
 }

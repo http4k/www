@@ -1,0 +1,10 @@
+{{ with .Site.Params.FathomAnalytics }}
+  {{ if and (not hugo.IsServer) .Enabled }}
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="{{ .ID }}" defer></script>
+  {{ end }}
+{{ end }}
+
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/schema.html" . }}

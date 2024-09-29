@@ -1,0 +1,106 @@
+baseURL: "https://http4k.ing"
+theme: "blank"
+languageCode: "en-us"
+
+title: "http4k"
+
+summaryLength: 20
+
+markup:
+  asciidocExt:
+    attributes:
+      sectlinks: true
+  goldmark:
+    renderer:
+      unsafe: true
+params:
+  title: "http4k"
+  description: "The Functional toolkit for Kotlin HTTP applications"
+  logo: "/images/logo.png"
+  images: 
+    - "images/hero-image.webp"
+
+  favicons:
+    themeColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF"
+    faviconColor: "#FFFFFF"
+
+  fathomAnalytics:
+    enabled: true
+    id: "BGFZWRDS"
+
+  contact:
+    email: "info@http4k.ing?subject=Get in touch with http4k"
+
+  copyright: "© 2024 http4k Ltd – All Rights Reserved"
+
+menus:
+  main:
+    - name: "Our story"
+      url: "/#our-story"
+      weight: 1
+
+    - name: "Our expertise"
+      url: "/#our-expertise"
+      weight: 2
+
+    - name: "How we work"
+      url: "/#how-we-work"
+      weight: 3
+
+    - name: "Case studies"
+      url: "/case-study"
+      weight: 4
+
+    - name: "Our consultants"
+      url: "/directory"
+      weight: 5
+
+  footer:
+    - name: "Home"
+      url: "/"
+      weight: 1
+
+    - name: "Our story"
+      url: "/#our-story"
+      weight: 2
+
+    - name: "Our expertise"
+      url: "/#our-expertise"
+      weight: 3
+
+    - name: "How we work"
+      url: "/#how-we-work"
+      weight: 4
+
+    - name: "Case studies"
+      url: "/case-study"
+      weight: 8
+
+    - name: "Our consultants"
+      url: "/directory"
+      weight: 7
+
+  members:
+    - name: "Slack"
+      url: "https://clockworking.slack.com"
+      weight: 8
+      params:
+        icon: "bi bi-slack"
+
+  legal:
+    - name: "Privacy policy"
+      url: "/privacy-policy"
+      weight: 1
+
+    - name: "Terms & conditions"
+      url: "/terms-and-conditions"
+      weight: 2
+
+    - name: "Disclaimer"
+      url: "/disclaimer"
+      weight: 3
+
+taxonomies:
+  expertise: "expertise"
+  tag: "tags"
