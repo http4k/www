@@ -34,7 +34,7 @@ params:
   copyright: "http4k Ltd – All Rights Reserved"
 
 menus:
-  main:
+  nav:
     - name: about
       title: About
       weight: 10
