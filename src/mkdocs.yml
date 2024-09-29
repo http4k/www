@@ -1,0 +1,28 @@
+site_name: http4k
+site_url: https://new.http4k.org/
+site_description: The Functional toolkit for Kotlin HTTP applications
+site_author: http4 Ltd
+copyright: 'Copyright &copy; 2024 - http4k Ltd'
+remote_branch: main
+theme:
+  name: 'material'
+  custom_dir: ./docs/theme
+  static_templates:
+      - ./index.html
+  palette:
+    primary: 'indigo'
+    accent: 'blue'
+  logo: img/logo_1100x200_white_on_blue_trans.png
+google_analytics: ['UA-125143867-1', 'auto']
+markdown_extensions:
+  - meta
+  - codehilite
+  - toc:
+      permalink: True
+      separator: "_"
+extra_css:
+  - ./css/site.css
+extra:
+  logo: img/logo_1100x200_white_on_blue_trans.png
+edit_uri: edit/master/src/docs/
+strict: false
