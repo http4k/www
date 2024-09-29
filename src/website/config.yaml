@@ -170,19 +170,24 @@ menus:
       parent: community
       weight: 54
 
-    - name: tools
-      title: Tools
-      weight: 60
-    - name: tools-toolbox
+    - name: toolbox
       title: Toolbox
+      weight: 60
+    - name: tools-web
+      title: Web
       url: https://toolbox.http4k.org
-      parent: tools
+      parent: toolbox
       weight: 61
-    - name: tools-ide
-      title: IntelliJ plugin
+    - name: toolbox-intellij
+      title: IntelliJ
       url: https://plugins.jetbrains.com/plugin/25243-http4k-toolbox
-      parent: tools
+      parent: toolbox
       weight: 62
+    - name: tools-cli
+      title: CLI
+      url: https://toolbox.http4k.org
+      parent: toolbox
+      weight: 63
 
   developers:
     - name: "Quick Start"
