@@ -17,7 +17,7 @@ params:
   title: "http4k"
   description: "The Functional toolkit for Kotlin HTTP applications"
   logo: "/images/logo.png"
-  images: 
+  images:
     - "images/hero-image.webp"
 
   favicons:
@@ -35,72 +35,41 @@ params:
   copyright: "© 2024 http4k Ltd – All Rights Reserved"
 
 menus:
-  main:
-    - name: "Our story"
-      url: "/#our-story"
+  developers:
+    - name: "Quick Start"
+      url: "/quickstart"
       weight: 1
-
-    - name: "Our expertise"
-      url: "/#our-expertise"
+    - name: "Documentation"
+      url: "/documentation"
       weight: 2
-
-    - name: "How we work"
-      url: "/#how-we-work"
+    - name: "F.A.Q"
+      url: "/faq"
       weight: 3
-
-    - name: "Case studies"
-      url: "/case-study"
+    - name: "Licensing"
+      url: "https://github.com/http4k/http4k/blob/master/LICENSE"
       weight: 4
 
-    - name: "Our consultants"
-      url: "/directory"
-      weight: 5
-
-  footer:
-    - name: "Home"
-      url: "/"
+  community:
+    - name: "GitHub"
+      url: "https://github.com/http4k/http4k"
       weight: 1
-
-    - name: "Our story"
-      url: "/#our-story"
-      weight: 2
-
-    - name: "Our expertise"
-      url: "/#our-expertise"
-      weight: 3
-
-    - name: "How we work"
-      url: "/#how-we-work"
-      weight: 4
-
-    - name: "Case studies"
-      url: "/case-study"
-      weight: 8
-
-    - name: "Our consultants"
-      url: "/directory"
-      weight: 7
-
-  members:
     - name: "Slack"
-      url: "https://clockworking.slack.com"
-      weight: 8
-      params:
-        icon: "bi bi-slack"
-
-  legal:
-    - name: "Privacy policy"
-      url: "/privacy-policy"
-      weight: 1
-
-    - name: "Terms & conditions"
-      url: "/terms-and-conditions"
+      url: "https://kotlinlang.slack.com/archives/C5AL3AKUY"
       weight: 2
-
-    - name: "Disclaimer"
-      url: "/disclaimer"
+    - name: "Twitter"
+      url: "https://twitter.com/http4k"
       weight: 3
+    - name: "Code of Conduct"
+      url: "/code-of-conduct"
+      weight: 4
 
-taxonomies:
-  expertise: "expertise"
-  tag: "tags"
+  company:
+    - name: "About Us"
+      url: "/guide/concepts/rationale"
+      weight: 1
+    - name: "Support/Training"
+      url: "/support"
+      weight: 2
+    - name: "Contact"
+      url: "mailto:contact@http4k.org"
+      weight: 3

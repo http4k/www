@@ -10,9 +10,35 @@
             </div>
             <div class="col-12 col-xl-4 pb-4">
                 <div class="col-12 col-xl-2 pb-4" style="float: left; width: 33%">
-                    <h5 class="fs-6 fw-semibold text-primary">About us</h5>
+                    <h5 class="fs-6 fw-semibold text-primary">Developers</h5>
                     <ul class="list-unstyled">
-                        {{ range .Site.Menus.footer }}
+                        {{ range .Site.Menus.developers }}
+                        <li class="">
+                            <a class="small text-black-61 text-decoration-none" href="{{ .URL }}">
+                                {{ .Name }}
+                                {{ with .Params }} {{ with .icon }}<i class="{{ . }}"></i>{{ end }} {{ end }}
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                <div class="col-12 col-xl-2 pb-4" style="float: left; width: 33%">
+                    <h5 class="fs-6 fw-semibold text-primary">Community</h5>
+                    <ul class="list-unstyled">
+                        {{ range .Site.Menus.community }}
+                        <li class="">
+                            <a class="small text-black-61 text-decoration-none" href="{{ .URL }}">
+                                {{ .Name }}
+                                {{ with .Params }} {{ with .icon }}<i class="{{ . }}"></i>{{ end }} {{ end }}
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                <div class="col-12 col-xl-2 pb-4" style="float: left; width: 33%">
+                    <h5 class="fs-6 fw-semibold text-primary">Company</h5>
+                    <ul class="list-unstyled">
+                        {{ range .Site.Menus.company }}
                         <li class="">
                             <a class="small text-black-61 text-decoration-none" href="{{ .URL }}">
                                 {{ .Name }}
