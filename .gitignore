@@ -1,17 +1,11 @@
-.idea/
+.idea
 *.iml
-.gradle/
+.gradle
 .kotlin
 .DS_Store
 .venv
-.http4kclasses/
-/site/
-build/
-out/
-store/
-intellij-settings/
-**/*.actual
-**/generated/**
-/RenderingTest - render successful trace - Sequence.puml
-jte-classes
-/dependencies.txt
+.http4k
+classes
+build
+out
+store
