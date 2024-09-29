@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - master
-permissions:
-  contents: read
 
 jobs:
   release-site:
