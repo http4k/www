@@ -1,118 +1,35 @@
 @import url('https://fonts.cdnfonts.com/css/varela');
 
 .text-logo {
-    color: #7c76bb;
+    color: #D59657;
     font-family: "Inter Black", sans-serif;
     font-weight: normal;
     font-style: normal;
 }
 
 .text-highlight {
-    color: #7c76bb;
+    color: #D59657;
     font-weight: 600;
 }
 
 .icon-primary {
-    color: #7c76bb;
+    color: #D59657;
 }
 
 .icon-secondary {
-    color: #D3D3D3;
+    color: #D59657;
 }
 
 .border-primary {
-    border-color: #7c76bb
+    border-color: #D59657
 }
 
 .primary-color {
-    background-color: #7c76bb;
+    background-color: #D59657;
 }
 
 .secondary-color {
-    background-color: #7c76bb;
-}
-
-@media print {
-    hr {
-        border: 1px solid black !important;
-        opacity: .25;
-        visibility: visible !important;
-    }
-
-    .text-primary {
-        color: #7c76bb !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
-    .primary-color {
-        background-color: #7c76bb !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
-    .secondary-color {
-        background-color: #7c76bb !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
-    .prose-content {
-        h2 {
-            margin-top: 1rem;
-        }
-
-        h3 {
-            margin-top: 1rem;
-        }
-    }
-
-    .card {
-        page-break-inside: avoid;
-    }
-
-    .card-body {
-        .fs-2 {
-            font-size: 1.2rem !important;
-        }
-
-        .fs-5 {
-            font-size: 1rem !important;
-        }
-
-        .fs-6 {
-            font-size: 0.8rem !important;
-        }
-    }
-
-    .card.case-study-highlight {
-        margin: 1rem 0 1rem 0 ;
-        min-height: 13rem;
-    }
-
-    .case-study-client-box {
-        margin: 0 0.5rem !important;
-        min-width: 8rem !important;
-        max-width: 11rem !important;
-        .card-body {
-            font-size: 0.8rem !important;
-        }
-    }
-
-    .hero-image {
-        img {
-            width: 80% !important;
-            height: 80% !important;
-        }
-    }
-
-    .hero-title {
-        font-size: 3.2em !important;
-    }
-}
-
-.pagebreak {
-    page-break-after: always;
+    background-color: #D59657;
 }
 
 .cards {
@@ -121,11 +38,6 @@
 
 .text-justify {
     text-align: justify;
-}
-
-.headshot {
-    text-align: center;
-    thumbnail-border-radius: 20px;
 }
 
 .thumbnail-border-radius {
@@ -144,76 +56,11 @@
 
 .d-flex {
     flex-wrap: nowrap !important; /* Prevent wrapping */
+   align-items: center;
 }
 
 .no-links a {
     text-decoration: none;
     color: inherit;
     pointer-events: none;
-}
-
-.d-flex {
-    align-items: center;
-}
-
-.card-body {
-    padding: 20px;
-}
-
-.card.case-study-highlight {
-    margin: 1rem;
-    min-width: 30%;
-    min-height: 11rem;
-}
-
-.case-study-client-box {
-    min-width: 10rem;
-    margin: 1rem;
-}
-
-.prose-content {
-    max-width: 80%;
-
-    h2 {
-        margin-top: 2rem;
-    }
-
-    h3 {
-        margin-top: 2rem;
-    }
-
-    .highlight {
-        pre {
-            padding: 16px;
-            border-radius: 8px;
-        }
-    }
-}
-
-.slick-dots li button:before {
-    color: mediumpurple;
-}
-
-.slick-dots li.slick-active button:before {
-    color: mediumpurple !important;
-}
-
-.slick-prev:before {
-    color: #7c76bb;
-}
-
-.slick-next:before {
-    color: #7c76bb;
-}
-
-.slick-prev:before {
-    content: "<";
-    color: red;
-    font-size: 30px;
-}
-
-.slick-next:before {
-    content: ">";
-    color: red;
-    font-size: 30px;
 }
