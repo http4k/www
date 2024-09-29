@@ -1,12 +1,33 @@
-<header>
-	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-	{{ with .Site.Menus.main }}
-	<nav>
-		<ul>
-			{{ range . }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-			{{ end }}
-		</ul>
-	</nav>
-	{{ end }}
-</header>
+<nav class="navbar navbar-expand-xl navbar-light bg-light py-4">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ .Site.BaseURL }}">
+            <img class="" src="/images/logo.png" alt="logo" width="925" height="288">
+            <span class="fs-3 text-uppercase text-logo text-primary">&nbsp;{{ .Site.Title }}</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+                {{ range .Site.Menus.main }}
+                <li class="nav-item dropdown {{ if .HasChildren }}dropdown{{ end }}">
+                    {{ if .HasChildren }}
+                    <a class="nav-link dropdown-toggle text-primary px-4" href="{{ .URL }}" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ .Title }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {{ range .Children }}
+                        <li><a class="dropdown-item" href="{{ .URL }}">{{ .Title }}</a></li>
+                        {{ end }}
+                    </ul>
+                    {{ else }}
+                    <a class="nav-link text-primary px-4" href="{{ .URL }}">{{ .Title }}</a>
+                    {{ end }}
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>

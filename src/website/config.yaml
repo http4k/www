@@ -34,6 +34,156 @@ params:
   copyright: "© 2024 http4k Ltd – All Rights Reserved"
 
 menus:
+  main:
+    - name: about
+      title: About
+      weight: 10
+      children:
+    - name: about-overview
+      title: Overview
+      url: /about
+      parent: about
+      weight: 11
+    - name: about-concepts
+      title: Concepts
+      url: /concepts
+      parent: about
+      weight: 12
+    - name: about-server
+      title: Server
+      url: /#server
+      parent: about
+      weight: 13
+    - name: about-serverless
+      title: Serverless
+      url: /#serverless
+      parent: about
+      weight: 14
+    - name: about-native
+      title: Native
+      url: /#native
+      parent: about
+      weight: 15
+    - name: about-in-action
+      title: http4k in action
+      url: /in-action
+      parent: about
+      weight: 16
+
+    - name: learn
+      title: Learn
+      weight: 20
+    - name: learn-overview
+      title: Overview
+      parent: learn
+      weight: 21
+    - name: learn-quickstart
+      title: Quickstart
+      url: /quickstart
+      parent: learn
+      weight: 22
+    - name: learn-tutorials
+      title: Tutorials
+      url: /tutorials
+      parent: learn
+      weight: 23
+    - name: learn-howto
+      title: How-to guides
+      url: /how-to
+      parent: learn
+      weight: 24
+    - name: learn-performance
+      title: Performance
+      url: /performance
+      parent: learn
+      weight: 25
+    - name: learn-faq
+      title: FAQ
+      url: /faq
+      parent: learn
+      weight: 25
+    - name: learn-blog
+      title: Blog
+      url: /blog
+      parent: learn
+      weight: 26
+
+    - name: projects
+      title: Projects
+      weight: 30
+    - name: projects-http4k
+      title: http4k Core
+      url: /projects/http4k
+      parent: projects
+      weight: 31
+    - name: projects-connect
+      title: http4k Connect
+      url: /projects/connect
+      parent: projects
+      weight: 32
+
+    - name: solutions
+      title: Solutions
+      weight: 40
+    - name: solutions-overview
+      title: Overview
+      url: /solutions
+      parent: solutions
+      weight: 41
+    - name: solutions-lts
+      title: LTS Support
+      url: /lts-support
+      parent: solutions
+      weight: 42
+    - name: solutions-consulting
+      title: http4k Consulting
+      url: /consulting
+      parent: solutions
+      weight: 43
+    - name: solutions-training
+      title: Training
+      url: /training
+      parent: solutions
+      weight: 44
+
+    - name: community
+      title: Community
+      weight: 50
+    - name: community-overview
+      title: Overview
+      url: /community
+      parent: community
+      weight: 51
+    - name: community-slack
+      title: Slack
+      url: https://kotlinlang.slack.com/archives/C5AL3AKUY
+      parent: community
+      weight: 52
+    - name: community-coc
+      title: Code of conduct
+      url: /code-of-conduct
+      parent: community
+      weight: 53
+    - name: community-contributors
+      title: Contributors
+      url: /contributors
+      parent: community
+      weight: 54
+
+    - name: tools
+      title: Tools
+      weight: 60
+    - name: tools-toolbox
+      title: Toolbox
+      url: https://toolbox.http4k.org
+      parent: tools
+      weight: 61
+    - name: tools-ide
+      title: IntelliJ plugin
+      url: https://plugins.jetbrains.com/plugin/25243-http4k-toolbox
+      parent: tools
+      weight: 62
+
   developers:
     - name: "Quick Start"
       url: "/quickstart"
