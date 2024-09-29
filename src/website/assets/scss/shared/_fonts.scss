@@ -15,9 +15,3 @@
   src: url('{{ site.BaseURL }}/fonts/Inter-Bold.ttf') format('truetype');
   font-weight: bold;
 }
-
-@font-face {
-  font-family: 'Inter Black';
-  src: url('{{ site.BaseURL }}/fonts/Inter-Black.ttf') format('truetype');
-  font-weight: normal;
-}

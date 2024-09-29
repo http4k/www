@@ -72,3 +72,7 @@ menus:
     - name: "Contact"
       url: "mailto:contact@http4k.org"
       weight: 3
+
+taxonomies:
+  module: "module"
+  project: "projects"
