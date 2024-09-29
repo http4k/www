@@ -10,7 +10,7 @@ jobs:
   release-site:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v4.1.7
+      - uses: actions/checkout@v4.2.0
         with:
           fetch-depth: 1
       - uses: actions/setup-java@v4.3.0
@@ -27,7 +27,7 @@ jobs:
           architecture: 'x64'
       - run: pip install -r requirements.txt
       - run: ./tools/embed_code.py
-#      - uses: actions/checkout@v4.1.7
+#      - uses: actions/checkout@v4.2.0
 #        with:
 #          repository: http4k/http4k.github.io
 #          path: tmp
