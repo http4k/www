@@ -31,7 +31,7 @@ params:
   contact:
     email: "info@http4k.ing?subject=Get in touch with http4k"
 
-  copyright: "© 2024 http4k Ltd – All Rights Reserved"
+  copyright: "http4k Ltd – All Rights Reserved"
 
 menus:
   main:
