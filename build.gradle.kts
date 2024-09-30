@@ -140,7 +140,7 @@ dependencies {
 
         testApi("dev.zacsweers.moshix:moshi-metadata-reflect:_")
         testApi("se.ansman.kotshi:api:_")
-        kspTest("se.ansman.kotshi:compiler:_")
+//        kspTest("se.ansman.kotshi:compiler:_")
 
         testApi("software.amazon.awssdk:s3:_")
         testApi("com.azure:azure-search-documents:_")
