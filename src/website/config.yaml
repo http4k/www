@@ -108,23 +108,23 @@ menus:
       parent: learn
       weight: 25
 
-    - name: projects
-      title: Projects
+    - name: ecosystem
+      title: Ecosystems
       weight: 30
-    - name: projects-overview
+    - name: ecosystem-overview
       title: Overview
-      url: /projects
-      parent: projects
+      url: /ecosystems
+      parent: ecosystem
       weight: 31
-    - name: projects-http4k
+    - name: ecosystem-http4k
       title: http4k Core
-      url: /projects/http4k
-      parent: projects
+      url: /ecosystems/http4k
+      parent: ecosystem
       weight: 32
-    - name: projects-connect
+    - name: ecosystem-connect
       title: http4k Connect
-      url: /projects/connect
-      parent: projects
+      url: /ecosystems/connect
+      parent: ecosystem
       weight: 33
 
     - name: solutions
@@ -137,17 +137,17 @@ menus:
       weight: 41
     - name: solutions-lts
       title: LTS Support
-      url: /solutions/lts-support
+      url: /lts-support
       parent: solutions
       weight: 42
     - name: solutions-consulting
       title: http4k Consulting
-      url: /solutions/consulting
+      url: /consulting
       parent: solutions
       weight: 43
     - name: solutions-training
       title: Training
-      url: /solutions/training
+      url: /training
       parent: solutions
       weight: 44
 
@@ -235,4 +235,4 @@ menus:
 
 taxonomies:
   module: "module"
-  project: "projects"
+  ecosystem: "ecosystem"
