@@ -1,6 +1,6 @@
 ---
 draft: true
-title: Example blog
+title: Example news
 description: Subtitle
 ---
 

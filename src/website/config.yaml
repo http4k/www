@@ -111,16 +111,21 @@ menus:
     - name: projects
       title: Projects
       weight: 30
+    - name: projects-overview
+      title: Overview
+      url: /projects
+      parent: projects
+      weight: 31
     - name: projects-http4k
       title: http4k Core
       url: /projects/http4k
       parent: projects
-      weight: 31
+      weight: 32
     - name: projects-connect
       title: http4k Connect
       url: /projects/connect
       parent: projects
-      weight: 32
+      weight: 33
 
     - name: solutions
       title: Solutions
@@ -132,17 +137,17 @@ menus:
       weight: 41
     - name: solutions-lts
       title: LTS Support
-      url: /lts-support
+      url: /solutions/lts-support
       parent: solutions
       weight: 42
     - name: solutions-consulting
       title: http4k Consulting
-      url: /consulting
+      url: /solutions/consulting
       parent: solutions
       weight: 43
     - name: solutions-training
       title: Training
-      url: /training
+      url: /solutions/training
       parent: solutions
       weight: 44
 
@@ -155,7 +160,7 @@ menus:
       parent: community
       weight: 51
     - name: community-slack
-      title: Slack
+      title: http4k Slack
       url: https://kotlinlang.slack.com/archives/C5AL3AKUY
       parent: community
       weight: 52
