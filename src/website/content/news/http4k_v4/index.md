@@ -38,7 +38,7 @@ As you can see, for our users we'll be concentrating on changes in numbers A (oc
 <hr/>
 #### "Platforms, Guv! Thousands of 'em!" (well, more than a few...)
 
-<img class="blogImage" src="./backends.png" alt="http4k backends"/>
+<img class="blogImageMid" src="./backends.png" alt="http4k backends"/>
 
 When http4k v3 was released, we only supported 3 JVM Server backends and 1 Serverless platform. Since then, we've added a bunch, and are now up to a very respectable 17 standard deployment options for http4k apps...
 
@@ -62,14 +62,14 @@ The even better news is that testing your http4k apps locally (regardless of pla
 <hr/>
 #### http4k Toolbox: your new Swiss Army Knife
 
-<img class="blogImage" src="./toolbox.png" alt="toolbox"/>
+<img class="blogImageMid" src="./toolbox.png" alt="toolbox"/>
 
 As documented in the [Toolbox announcement post](/blog/toolbox), we've been busy consolidating a bunch of handy tools for generating code to work with http4k projects, and we christened this the **http4k Toolbox** and it's available in both [online](https://toolbox.http4k.org) and a CLI flavours (available from Brew and SDKMan!). From [Project Generation](https://toolbox.http4k.org/project) to our own more sophisticated [OpenAPI3 Generator](https://toolbox.http4k.org/openapi), we hope that this become an essential tool in every **http4k** developer's pocket.
 
 <hr/>
 #### Infinirouting
 
-<img class="blogImage" src="./routing.png" alt="http4k routing"/>
+<img class="blogImageMid" src="./routing.png" alt="http4k routing"/>
 
 The v3 routing scheme was pretty good as you could bind routes on static or dynamic paths and HTTP verbs, but being rampant power seekers, we wanted it to be better. We reasoned that if we could route traffic to HttpHandlers based on those things, then why not be able to route on *any* part of the request? We'd like to be able to do complicated matching - so for instance: 
 
@@ -88,7 +88,7 @@ So after a lot of clattering and banging of heads, we cracked it - and in doing 
 
 <hr/>
 #### Graph power
-<img class="blogImage" src="./graphql.png" alt="http4k graphql"/>
+<img class="blogImageMid" src="./graphql.png" alt="http4k graphql"/>
 
 Traditionally, http4k has concentrated on providing routing for REST-style APIs. However, there is this new thing called GraphQL that has suddenly sprung up overnight and seems quite popular. 
 
@@ -97,7 +97,7 @@ Not wanting our users to miss out on anything, we've added support for simply in
 <hr/>
 #### OpenTelemetry: Monitor all the things!
 
-<img class="blogImage" src="./opentelemetry.png" alt="open telemetry"/>
+<img class="blogImageMid" src="./opentelemetry.png" alt="open telemetry"/>
 
 The [OpenTelemetry](https://opentelemetry.io/) project describes itself as...
 > **"... a collection of tools, APIs, and SDKs. You use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior." - OpenTelemetry.io**
@@ -130,7 +130,7 @@ If your team would also like to take advantage of our experience in delivering p
 <hr/>
 #### http4k Connect - Flyweight 3rd party adapters
 
-<img class="blogImage" src="./connect.png" alt="http4k connect"/>
+<img class="blogImageMid" src="./connect.png" alt="http4k connect"/>
 
 [http4k-connect](http://github.com/http4k/http4k-connect) is the team's newest side project, the purpose of which is to eventually standardise patterns for building 3rd party system adapters to various backend services, and for building your own Fakes (backed by data-stores such as InMemory, S3 or Redis). So far (v2.8.0.0), http4k-connect supports at least the common-use case actions for the following systems (and the API is easily extendable for non-supplied actions):
 
