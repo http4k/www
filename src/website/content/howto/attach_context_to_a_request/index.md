@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Request Contexts"
 description: Recipes for using http4k with per-request context objects
 ---

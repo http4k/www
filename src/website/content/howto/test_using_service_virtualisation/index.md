@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Test using Service Virtualisation "
 description: Implementing Service Virtualisation using Servirtium contracts
 ---

@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Server-as-a-Function"
 description: The simplest example of an http4k application 
 ---

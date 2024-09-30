@@ -1,9 +1,10 @@
 ---
+layout: howto
 title: "Arrange Filters into stacks"
 description: A strategy for composing your applications
 layout: how-to
+ecosystem: http4k Core
 ---
-
 http4k Filters are just decorator functions for HttpHandlers and process requests by applying the following process:
 
 1. Receive the Request

@@ -1,25 +1,23 @@
 <aside class="sidebar">
     <div>
-        <div>
-            <ul class="list-unstyled">
-                {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
-                {{ $ecosystem := .Params.ecosystem }}
-                <li>
-                    <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse-{{ .File.UniqueID }}">
-                        {{ .Title }}
-                    </a>
-                    <div id="collapse-{{ .File.UniqueID }}" class="collapse {{ if eq $.Page.Params.ecosystem $ecosystem }}show{{ end }}">
-                        <ul class="list-unstyled ms-3">
-                            {{ range where (where .Site.RegularPages ".Type" "module") ".Params.ecosystem" "eq" $ecosystem }}
-                            <li>
-                                <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
-                            </li>
-                            {{ end }}
-                        </ul>
-                    </div>
-                </li>
-                {{ end }}
-            </ul>
-        </div>
+        <ul class="list-unstyled">
+            {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
+            {{ $ecosystem := .Params.ecosystem }}
+            <li>
+                <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse-{{ .File.UniqueID }}">
+                    {{ .Title }}
+                </a>
+                <div id="collapse-{{ .File.UniqueID }}" class="collapse {{ if eq $.Page.Params.ecosystem $ecosystem }}show{{ end }}">
+                    <ul class="list-unstyled ms-3">
+                        {{ range where (where .Site.RegularPages ".Type" "module") ".Params.ecosystem" "eq" $ecosystem }}
+                        <li>
+                            <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
     </div>
 </aside>

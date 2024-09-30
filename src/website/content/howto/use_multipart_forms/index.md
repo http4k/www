@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Use Multipart Forms"
 description: Recipes for using http4k with Multipart forms
 ---

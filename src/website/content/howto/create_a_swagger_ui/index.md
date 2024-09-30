@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Redoc and Swagger UI"
 description: Create a Redoc or Swagger UI for your REST API
 ---

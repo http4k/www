@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Use a templating engine"
 description: Recipes for using server-side templating engines with http4k applications, including hot-reload functionality
 ---

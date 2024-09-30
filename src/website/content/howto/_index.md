@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "How-To Guides"
 description: Introduction to the http4k How-tos
 ---

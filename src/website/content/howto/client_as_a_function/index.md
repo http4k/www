@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Client as a function"
 description: Recipes for using http4k to consume HTTP services
 ---

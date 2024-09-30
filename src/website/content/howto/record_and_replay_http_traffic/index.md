@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Record and replay HTTP traffic"
 description: Recipes for using http4k to record and replay HTTP traffic
 ---

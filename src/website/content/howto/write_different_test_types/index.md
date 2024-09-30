@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Write different test types"
 description: Recipes for testing http4k applications
 ---

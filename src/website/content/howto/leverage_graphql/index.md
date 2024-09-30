@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Leverage GraphQL"
 description: Recipe for using GraphQL plugins 
 ---

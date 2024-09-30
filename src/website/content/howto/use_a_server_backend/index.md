@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Use a Server backend"
 description: Recipes for using http4k with the various Server backends
 ---

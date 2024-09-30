@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Typesafe your API with lenses"
 description: Recipes for using the inbuilt http4k Lens API to marshall HTTP messages on and off the wire in a typesafe fashion
 ---

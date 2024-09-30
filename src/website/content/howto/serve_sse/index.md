@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Serve SSE"
 description: Recipes for using http4k with Server-Sent Events
 ---

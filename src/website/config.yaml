@@ -96,7 +96,7 @@ menus:
       weight: 25
 
     - name: ecosystem
-      title: Ecosystems
+      title: Ecosystem
       weight: 30
     - name: ecosystem-overview
       title: Overview

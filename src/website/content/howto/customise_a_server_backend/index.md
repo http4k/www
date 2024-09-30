@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Customise a Server backend"
 description: How to use write custom servers backends
 ---

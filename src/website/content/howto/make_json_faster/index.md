@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Make JSON Faster"
 description: Recipes to make JSON faster through the use of lighter reflection or code generation
 ---

@@ -1,4 +1,5 @@
 ---
+layout: howto
 title: "Routing API (Simple)"
 description: Recipes for using the http4k composable routing API
 ---
