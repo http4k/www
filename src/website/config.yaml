@@ -69,6 +69,11 @@ menus:
       url: /in-action
       parent: about
       weight: 16
+    - name: about-news
+      title: News
+      url: /news
+      parent: about
+      weight: 17
 
     - name: learn
       title: Learn
@@ -102,11 +107,6 @@ menus:
       url: /faq
       parent: learn
       weight: 25
-    - name: learn-blog
-      title: Blog
-      url: /blog
-      parent: learn
-      weight: 26
 
     - name: projects
       title: Projects
