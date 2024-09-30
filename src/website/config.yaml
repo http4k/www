@@ -89,7 +89,7 @@ menus:
       weight: 23
     - name: learn-howto
       title: How-to guides
-      url: /how-to
+      url: /howto
       parent: learn
       weight: 24
     - name: learn-performance
