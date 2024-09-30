@@ -1,5 +1,5 @@
 ---
-title: http4k News
+title: http4k Ecosystem News
 description: List of articles published on the http4k ecosystem
 ---
 
