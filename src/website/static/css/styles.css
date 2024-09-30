@@ -114,3 +114,8 @@ footer {
     padding-top: 65px;
     color: #ffffff;
 }
+
+.active {
+    font-weight: bold;
+    color: #007bff;
+}
