@@ -1,11 +1,8 @@
 ---
 title: Add typesafe 12-factor configuration to http4k apps with Environments
-description: An overview of how to configure http4k applications using the http4k-cloudnative module
+description: An overview of how to configure http4k applications using the http4k-config module
+date: 2021-10-01
 ---
-
-# Add typesafe 12-factor configuration to http4k apps with Environments
-
-##### november 2018 / [@daviddenton][github]
 
 ### Intro
 This post covers the various concerns around configuring HTTP apps, and introduces the http4k approach for addressing these when deploying applications into cloud-native environments, which leverages the Kotlin type system for maximum safely and code reuse.
@@ -100,7 +97,7 @@ Implementing this kind of fallback logic manually, you'd end up with code like t
 
 ### The http4k approach...
 There are [already][properlty] [many][config4k] [options][konf] [for][cfg4k] [configurational][configur8] 
-[libraries][kaconf] written in Kotlin, but http4k also provides an option in the `http4k-cloudnative` add-on module 
+[libraries][kaconf] written in Kotlin, but http4k also provides an option in the `http4k-config` add-on module 
 which leverages the power of the Lens system already built into the core library to provide a consistent experience to 
 API users. In case you're new to Lenses, here's a recap...
 

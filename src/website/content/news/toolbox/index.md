@@ -1,11 +1,8 @@
 ---
 title: http4k Toolbox - Guns for show, knives for a pro
 description: An introduction to the http4k Toolbox website and CLI.
+date: 2020-11-01
 ---
-
-# http4k Toolbox: Guns for show, knives for a pro
-
-##### november 2020 / [@daviddenton][github]
 
 <img class="blogImageMid" src="./guns.jpg" alt="lock stock: guns for show"/>
 

@@ -1,11 +1,8 @@
 ---
 title: http4k v4 - 17 platforms and counting...
 description: There's a new major http4k release! Read about all the new stuff the team have been working on for http4k v4.
+date: 2021-01-01
 ---
-
-# http4k v4: 17 platforms and counting...
-
-##### january 2021 / the http4k team
 
 Well, at last it's here - after 3 years - http4k v4! Following on from the [retrospective](/blog/retrospective_v3) that we did on version 3, we've been busy polishing, tidying up the edges, and pushing out a bunch of changes to make the project sparkle. Ready? Then let's dive into the good stuff that's been going on at http4k Towers.
 

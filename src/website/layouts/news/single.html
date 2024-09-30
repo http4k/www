@@ -5,6 +5,7 @@
 	<main class="main-content">
 		<article>
 			<h1>{{ .Title }}</h1>
+			<h5>{{ .Params.date }} / the http4k team</h5>
 			<time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "02.01.2006 15:04" }}</time>
 			<div>
 				{{ .Content }}

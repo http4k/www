@@ -1,11 +1,8 @@
 ---
 title: Reassurance to http4k users regarding JCenter shutdown
 description: Announcement regarding JCenter shutdown
+date: 2021-02-01
 ---
-
-# Reassurance to http4k users regarding JCenter shutdown
-
-##### feb 2021 / the http4k team
 
 It was announced this week that the JCenter artifact repository would be [shutting down in May 2021](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/). As JCenter was a superset of the Maven Central repository, this obviously comes as disappointing and worrying news regarding the future of Open Source software distribution for the JVM. Many builds will undoubtedly break as a result of this move.
 

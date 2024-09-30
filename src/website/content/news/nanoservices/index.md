@@ -1,11 +1,8 @@
 ---
 title: Nanoservices - The Power of Composition 
 description: You thought that microservices were a thing? Pah! The powerful abstractions in the http4k toolkit allow you to write entire useful apps which fit in a Tweet.
+date: 2020-10-01
 ---
-
-# Nanoservices: The Power of Composition 
-
-##### october 2020 / [@daviddenton][github]
 
 http4k is a small library with a zero dependencies (apart from Kotlin StdLib), but what really makes it shine is the power afforded by the combination of the "Server as a Function" concepts of `HttpHandler` and `Filter`. 
 
