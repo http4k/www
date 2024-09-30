@@ -1,5 +1,7 @@
-title: TDDing http4k Part 1: Building a walking skeleton
+---
+title: "TDDing http4k Part 1: Building a walking skeleton"
 description: A step-by-step guide to TDDing a simple http4k application
+---
 
 Until we have an application that can be deployed, we cannot create any business value. The Walking Skeleton
 model dictates that putting the most trivial endpoint into a production environment will prove our deployment

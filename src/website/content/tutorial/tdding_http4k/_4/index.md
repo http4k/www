@@ -1,6 +1,7 @@
-title:Part 4: Adding an external dependency
-
+---
+title: "TDDing http4k Part 4: Adding an external dependency"
 description: A step-by-step guide to TDDing a simple http4k application
+---
 
 - [Part 1: Building a walking skeleton](../_1)
 - [Part 2: Adding an endpoint](../_2)

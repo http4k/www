@@ -1,5 +1,7 @@
-title: TDDing http4k Part 2: Adding an endpoint
+---
+title: "TDDing http4k Part 2: Adding an endpoint"
 description: A step-by-step guide to TDDing a simple http4k application
+---
 
 - [Part 1: Building a walking skeleton](../_1)
 
