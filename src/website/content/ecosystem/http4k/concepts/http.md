@@ -1,8 +1,8 @@
 ---
-layout: module
-type: module
+layout: concept
+type: concept
 ecosystem: http4k
-title:  http4k HTTP 
+title: HTTP 
 description: An explanation of the core function types for dealing with HTTP applications
 ---
 

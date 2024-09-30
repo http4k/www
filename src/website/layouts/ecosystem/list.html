@@ -6,9 +6,9 @@
             <div>
                 <ul>
                     {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
-                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    <li><a href="">{{ .Title }}</a></li>
                     {{ range where .Site.RegularPages ".Params.ecosystem" "eq" .Params.ecosystem }}
-                        <li>>{{ .Title }}</li>
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                     {{ end }}
                     {{ end }}
                 </ul>

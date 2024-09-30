@@ -1,12 +1,11 @@
 ---
-layout: module
-type: module
+layout: concept
+type: concept
 ecosystem: http4k
-title:  http4k Serverless
+title: Serverless
 description: An explanation of the core function types for dealing with Serverless applications
 ---
 
-# Serverless
 **http4k** provides Serverless support using a simple, consistent, typesafe, and testable API on multiple supported Serverless platforms.
 
 There are two main types of API that can be served using the http4k infrastructure, although they are backed by the same lightweight system. As with the http4k ethos, there is a primary focus on simplicity, testability and portability - http4k simply acts as a shim layer over the top of the underlying platform.
