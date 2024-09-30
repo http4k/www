@@ -46,3 +46,17 @@ _recipes:
 @install:
     brew install hugo
     git submodule update --init --recursive
+
+# run the entire build
+check +args="":
+    rm -rf src/website/public
+    ./gradlew check
+
+# run the entire build
+versions +args="":
+    ./gradlew refreshVersions
+
+# run the entire build
+rerun +args="":
+    rm -rf src/website/public
+    ./gradlew clean check --rerun-tasks
