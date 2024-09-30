@@ -100,17 +100,17 @@ menus:
       weight: 30
     - name: ecosystem-overview
       title: Overview
-      url: /ecosystems
+      url: /ecosystem
       parent: ecosystem
       weight: 31
     - name: ecosystem-http4k
       title: http4k Core
-      url: /ecosystems/http4k
+      url: /ecosystem/http4k
       parent: ecosystem
       weight: 32
     - name: ecosystem-connect
       title: http4k Connect
-      url: /ecosystems/connect
+      url: /ecosystem/connect
       parent: ecosystem
       weight: 33
 
