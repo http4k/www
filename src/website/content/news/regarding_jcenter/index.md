@@ -1,5 +1,7 @@
-title: http4k blog: Reassurance to http4k users regarding JCenter shutdown
+---
+title: Reassurance to http4k users regarding JCenter shutdown
 description: Announcement regarding JCenter shutdown
+---
 
 # Reassurance to http4k users regarding JCenter shutdown
 

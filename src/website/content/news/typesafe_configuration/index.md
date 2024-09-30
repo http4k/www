@@ -1,5 +1,7 @@
-title: http4k blog: Add typesafe 12-factor configuration to http4k apps with Environments
+---
+title: Add typesafe 12-factor configuration to http4k apps with Environments
 description: An overview of how to configure http4k applications using the http4k-cloudnative module
+---
 
 # Add typesafe 12-factor configuration to http4k apps with Environments
 

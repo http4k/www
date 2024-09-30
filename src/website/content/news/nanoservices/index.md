@@ -1,5 +1,7 @@
-title: http4k blog: Nanoservices: The Power of Composition 
+---
+title: Nanoservices - The Power of Composition 
 description: You thought that microservices were a thing? Pah! The powerful abstractions in the http4k toolkit allow you to write entire useful apps which fit in a Tweet.
+---
 
 # Nanoservices: The Power of Composition 
 
