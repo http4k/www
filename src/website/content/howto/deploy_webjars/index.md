@@ -1,7 +1,7 @@
 ---
 title: "Deploy WebJars"
 description: Recipe for using WebJars with http4k 
---- 
+---
 ### Gradle setup
 
 ```kotlin

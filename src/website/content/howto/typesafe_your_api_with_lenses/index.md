@@ -1,7 +1,7 @@
 ---
 title: "Typesafe your API with lenses"
 description: Recipes for using the inbuilt http4k Lens API to marshall HTTP messages on and off the wire in a typesafe fashion
---- 
+---
 Example showing how to create and apply lenses to requests and responses to both extract and inject typesafe values out of and into HTTP messages. Note that since the **http4k** `Request/Response` objects are immutable, all injection occurs via copy.
 
 ### Gradle setup

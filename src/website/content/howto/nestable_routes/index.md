@@ -1,7 +1,7 @@
 ---
 title: "Routing API (Advanced)"
 description: Recipes for using the http4k composable routing API, including serving static content
---- 
+---
 This is a fairly comprehensive example of the core-routing logic available: 
 
 - Individual HTTP endpoints are represented as `HttpHandlers`.

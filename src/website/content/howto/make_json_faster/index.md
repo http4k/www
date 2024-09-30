@@ -1,7 +1,8 @@
 ---
 title: "Make JSON Faster"
 description: Recipes to make JSON faster through the use of lighter reflection or code generation
---- 
+---
+
 The standard JSON format modules included in Http4k (like Jackson and Moshi) are good enough for most applications.
 However there are scenarios where you may want to further optimize them for runtime performance,
 or to achieve acceptable cold start times in serverless deployments.

@@ -1,7 +1,7 @@
 ---
 title: "Lookup a user principal"
 description: Recipes for looking up and populating a user principal from a request
---- 
+---
 
 ### Gradle setup
 

@@ -1,7 +1,7 @@
 ---
 title: "Self Document Systems with Tests"
 description: Recipe for creating a Distributed Tracing Tree
---- 
+---
 ### Gradle setup
 
 ```kotlin

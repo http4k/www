@@ -1,7 +1,7 @@
 ---
 title: "Authentication for HTTP services"
 description: Recipes for how to secure and authenticate HTTP services
---- 
+---
 ### Gradle setup
 
 ```kotlin

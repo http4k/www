@@ -1,7 +1,7 @@
 ---
 title: "Leverage GraphQL"
 description: Recipe for using GraphQL plugins 
---- 
+---
 ### Gradle setup
 
 ```kotlin
