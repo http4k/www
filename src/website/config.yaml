@@ -16,6 +16,7 @@ params:
   title: "http4k"
   description: "The Functional toolkit for Kotlin HTTP applications"
   logo: "/images/logo.png"
+  logoSvg: "/images/logo.svg"
   images:
     - "images/hero-image.webp"
 

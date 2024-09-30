@@ -107,3 +107,10 @@
     width: 30%;
     height: auto;
 }
+
+footer {
+    background-color:#60c0ff;
+    padding-bottom: 85px;
+    padding-top: 65px;
+    color: #ffffff;
+}

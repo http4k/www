@@ -1,28 +1,23 @@
-<footer class="shared footer bg-blue-light py-5">
+<footer >
     <div class="container">
         <div class="row pb-3 text-start text-xl-start">
-            <div class="col-12 col-lg-2">
-                <a class="navbar-brand d-flex align-items-center" href="{{ .Site.BaseURL }}">
-                    <img src="{{ .Site.Params.Logo }}" width="30" height="30"/>
-                    <span class="fs-3 text-uppercase text-logo text-primary">&nbsp;{{ .Site.Title }}</span>
+            <div class="col-md-6 col-lg-3" style="width: 200px">
+                <a class="p-0" href="https://http4k.org" >
+                    <img src="{{ .Site.Params.LogoSvg }}" alt="logo"/>
                 </a>
-                <p class="small text-black-61">{{ .Site.Params.description }}</p>
+                Copyright © 2023<br/><br/>
             </div>
             {{ range .Site.Menus.nav }}
             <div class="col-xs-12 col-md">
-                <h5 class="fs-6 fw-semibold text-primary">{{ .Title }}</h5>
+                <h5>{{ .Title }}</h5>
                 <ul class="list-unstyled">
                     {{ range .Children }}
-                    <li><a class="small text-black-61 text-decoration-none" href="{{ .URL }}">{{ .Title }}</a></li>
+                    <li><a class="small text-white text-decoration-none" href="{{ .URL }}">{{ .Title }}</a></li>
                     {{ end }}
                 </ul>
             </div>
             {{ end }}
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <p class="small text-black-61 text-center">&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Params.copyright }}</p>
-            </div>
+
         </div>
     </div>
 </footer>
