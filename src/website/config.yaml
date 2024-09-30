@@ -44,36 +44,21 @@ menus:
       url: /overview
       parent: about
       weight: 11
-    - name: about-concepts
-      title: Concepts
-      url: /concepts
+    - name: about-rationale
+      title: Rationale
+      url: /rationale
       parent: about
       weight: 12
-    - name: about-server
-      title: Server
-      url: /#server
-      parent: about
-      weight: 13
-    - name: about-serverless
-      title: Serverless
-      url: /#serverless
-      parent: about
-      weight: 14
-    - name: about-native
-      title: Native
-      url: /#native
-      parent: about
-      weight: 15
-    - name: about-in-action
-      title: http4k in action
-      url: /in-action
-      parent: about
-      weight: 16
     - name: about-news
       title: News
       url: /news
       parent: about
-      weight: 17
+      weight: 13
+    - name: about-in-action
+      title: http4k in action
+      url: /in-action
+      parent: about
+      weight: 14
 
     - name: learn
       title: Learn
