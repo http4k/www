@@ -1,6 +1,4 @@
 ---
-layout: module
-type: module
 ecosystem: core
 title: Contract
 description: Feature overview of the http4k-contract module

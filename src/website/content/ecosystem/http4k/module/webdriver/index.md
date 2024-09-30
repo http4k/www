@@ -1,6 +1,4 @@
 ---
-layout: module
-type: module
 ecosystem: core
 title: Webdriver
 description: Feature overview of the http4k-testing-webdriver module

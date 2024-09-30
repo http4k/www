@@ -1,6 +1,4 @@
 ---
-layout: module
-type: module
 ecosystem: core
 title: Approval Testing
 description: Feature overview of the http4k-testing-approval module

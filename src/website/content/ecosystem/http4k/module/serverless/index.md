@@ -1,6 +1,4 @@
 ---
-layout: module
-type: module
 ecosystem: core
 title: Serverlesss
 description: Feature overview of the http4k-serverless modules, covering Serverless backends

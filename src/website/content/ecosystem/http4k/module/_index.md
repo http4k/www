@@ -1,7 +1,5 @@
 ---
 ---
-layout: module
-type: module
 ecosystem: core
 title: extension modules and integrations
 description: Details about the various http4k integration libraries

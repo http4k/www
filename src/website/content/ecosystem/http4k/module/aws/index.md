@@ -1,6 +1,4 @@
 ---
-layout: module
-type: module
 ecosystem: core
 title: AWS
 description: Feature overview of the http4k-aws module

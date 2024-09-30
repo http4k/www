@@ -1,6 +1,4 @@
 ---
-layout: module
-type: module
 ecosystem: core
 title: Kotest
 description: Feature overview of the http4k-testing-kotest module

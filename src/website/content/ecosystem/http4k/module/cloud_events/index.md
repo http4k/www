@@ -1,6 +1,4 @@
 ---
-layout: module
-type: module
 ecosystem: core
 title: Cloud Events
 description: Feature overview of the http4k-cloudevents module

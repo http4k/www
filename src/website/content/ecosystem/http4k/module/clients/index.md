@@ -1,6 +1,4 @@
 ---
-layout: module
-type: module
 ecosystem: core
 title: Clients
 description: Feature overview of the http4k-client modules

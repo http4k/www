@@ -1,6 +1,4 @@
 ---
-layout: module
-type: module
 ecosystem: core
 title: OpenTelemetry
 description: Feature overview of the http4k-opentelemetry module

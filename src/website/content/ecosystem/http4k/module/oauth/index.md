@@ -1,6 +1,4 @@
 ---
-layout: module
-type: module
 ecosystem: core
 title: OAuth security
 description: Feature overview of the http4k-security-oauth form module
