@@ -1,4 +1,6 @@
 ---
+layout: module
+type: module
 ecosystem: core
 title: Cloud Native tooling
 description: Feature overview of the http4k-cloudnative module

@@ -1,4 +1,6 @@
 ---
+layout: module
+type: module
 ecosystem: core
 title: Digest security
 description: Feature overview of the http4k-security-digest module

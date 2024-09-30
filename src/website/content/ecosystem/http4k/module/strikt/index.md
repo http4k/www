@@ -1,4 +1,6 @@
 ---
+layout: module
+type: module
 ecosystem: core
 title: Strikt
 description: Feature overview of the http4k-testing-strikt module

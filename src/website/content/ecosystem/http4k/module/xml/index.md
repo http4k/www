@@ -1,4 +1,6 @@
 ---
+layout: module
+type: module
 ecosystem: core
 title: XML
 description: Feature overview of the modules providing XML support, including an auto-marshalling capability

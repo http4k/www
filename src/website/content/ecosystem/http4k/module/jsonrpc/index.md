@@ -1,4 +1,6 @@
 ---
+layout: module
+type: module
 ecosystem: core
 title: JSON-RPC
 description: Feature overview of the http4k-jsonrpc module

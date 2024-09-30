@@ -1,4 +1,6 @@
 ---
+layout: module
+type: module
 ecosystem: core
 title: Playwright
 description: Feature overview of the http4k-testing-playwright module

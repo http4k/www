@@ -1,4 +1,6 @@
 ---
+layout: module
+type: module
 ecosystem: core
 title: Failsafe
 description: Feature overview of the http4k-failsafe module

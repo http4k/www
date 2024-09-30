@@ -1,4 +1,6 @@
 ---
+layout: module
+type: module
 ecosystem: core
 title: TracerBullet
 description: Feature overview of the http4k-tracerbullet module

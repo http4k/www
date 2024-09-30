@@ -1,4 +1,6 @@
 ---
+layout: module
+type: module
 ecosystem: core
 title: Micrometer
 description: Feature overview of the http4k-metrics-micrometer module
