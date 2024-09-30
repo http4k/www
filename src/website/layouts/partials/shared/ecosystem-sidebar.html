@@ -1,0 +1,22 @@
+<aside class="sidebar">
+    <div>
+        <div>
+            <ul class="list-unstyled">
+                {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
+                <li>
+                    <p>{{ .Title }}</p>
+                    <div>
+                        <ul class="list-unstyled ms-3">
+                            {{ range where .Site.RegularPages ".Params.ecosystem" "eq" .Params.ecosystem }}
+                            <li>
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</aside>
