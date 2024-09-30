@@ -1,6 +1,13 @@
 {{ define "main" }}
-	<main>
-		DEFAULT
+
+
+<div class="layout">
+	<aside class="sidebar">
+		<div>
+			{{ partial "shared/sidebar.html" (dict "context" . "type" "how-to") }}
+		</div>
+	</aside>
+	<main class="main-content">
 		<article>
 			<h1>{{ .Title }}</h1>
 			<time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "02.01.2006 15:04" }}</time>
@@ -18,4 +25,6 @@
 			{{ end }}
 		</article>
 	</main>
+
+</div>
 {{ end }}

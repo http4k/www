@@ -64,3 +64,24 @@
     color: inherit;
     pointer-events: none;
 }
+
+.layout {
+    display: flex;
+}
+
+.main-content {
+    flex: 3; /* Take up more space for the main content */
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1; /* Take up less space for the sidebar */
+    padding: 20px;
+    background-color: #f0f0f0; /* Optional: Add background color to distinguish the sidebar */
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column; /* Stack the elements vertically on smaller screens */
+    }
+}
