@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Servirtium Testing Module
+ecosystem: core
+title: Servirtium Testing
 description: Feature overview of the http4k-testing-servirtium module, used for Service Virtualisation
 ---
 

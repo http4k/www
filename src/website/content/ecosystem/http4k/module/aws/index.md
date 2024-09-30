@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:  http4k AWS Module
+ecosystem: core
+title: AWS
 description: Feature overview of the http4k-aws module
 ---
 

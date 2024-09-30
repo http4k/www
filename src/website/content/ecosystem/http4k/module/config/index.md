@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Configuration tooling
+ecosystem: core
+title: Config
 description: Feature overview of the http4k-config module
 ---
 

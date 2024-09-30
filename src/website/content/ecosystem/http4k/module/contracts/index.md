@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Contract Module
+ecosystem: core
+title: Contract
 description: Feature overview of the http4k-contract module
 ---
 

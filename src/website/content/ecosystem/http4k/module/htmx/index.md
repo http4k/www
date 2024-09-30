@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k htmx Module
+ecosystem: core
+title: htmx
 description: Feature overview of the http4k-htmx module
 ---
 

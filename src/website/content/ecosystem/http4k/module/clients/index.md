@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Client Modules
+ecosystem: core
+title: Clients
 description: Feature overview of the http4k-client modules
 ---
 

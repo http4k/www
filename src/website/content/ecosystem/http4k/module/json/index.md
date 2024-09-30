@@ -1,11 +1,10 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k JSON Message Format Modules
+ecosystem: core
+title: JSON
 description: Feature overview of the JSON http4k-format modules, several of which support auto-marshalling into data classes.
 ---
-
 
 ### Installation (Gradle)
 

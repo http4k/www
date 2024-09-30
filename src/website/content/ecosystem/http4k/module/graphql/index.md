@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k GraphQL module
+ecosystem: core
+title: GraphQL module
 description: Feature overview of the http4k-graphql module.
 ---
 

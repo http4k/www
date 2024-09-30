@@ -1,9 +1,9 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Metrics Modules
-description: Feature overview of the http4k-metrics modules
+ecosystem: core
+title: Micrometer
+description: Feature overview of the http4k-metrics-micrometer module
 ---
 
 

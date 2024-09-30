@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k OpenTelemetry Modules
+ecosystem: core
+title: OpenTelemetry
 description: Feature overview of the http4k-opentelemetry module
 ---
 

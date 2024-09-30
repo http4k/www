@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Resilience4J Module
+ecosystem: core
+title: Resilience4J
 description: Feature overview of the http4k-resilience4j module
 ---
 

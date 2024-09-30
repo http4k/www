@@ -1,9 +1,9 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Webdriver Module
-description: Feature overview of the http4k-webdriver module
+ecosystem: core
+title: Webdriver
+description: Feature overview of the http4k-testing-webdriver module
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Digest security Module
+ecosystem: core
+title: Digest security
 description: Feature overview of the http4k-security-digest module
 ---
 

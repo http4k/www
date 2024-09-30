@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Webhooks Module
+ecosystem: core
+title: Webhooks
 description: Feature overview of the http4k-webhooks module
 ---
 

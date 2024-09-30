@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Azure Module
+ecosystem: core
+title: Azure
 description: Feature overview of the http4k-azure module
 ---
 

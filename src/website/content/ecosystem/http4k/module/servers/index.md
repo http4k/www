@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
-title:   http4k Server Modules
+ecosystem: core
+title: Servers
 description: Feature overview of the http4k-server modules, covering Server backends
 ---
 

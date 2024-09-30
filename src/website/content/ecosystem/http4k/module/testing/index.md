@@ -1,7 +1,7 @@
 ---
 layout: module
 type: module
-ecosystem: http4k
+ecosystem: core
 title:   Testing http4k applications
 description: How to test http4k endpoints and applications, and modules that support testing
 ---
