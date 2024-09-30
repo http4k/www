@@ -41,7 +41,7 @@ menus:
       children:
     - name: about-overview
       title: Overview
-      url: /about
+      url: /overview
       parent: about
       weight: 11
     - name: about-concepts
