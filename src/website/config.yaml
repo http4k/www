@@ -65,6 +65,7 @@ menus:
       weight: 20
     - name: learn-overview
       title: Overview
+      url: /learn
       parent: learn
       weight: 21
     - name: learn-quickstart

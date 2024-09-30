@@ -85,3 +85,25 @@
         flex-direction: column; /* Stack the elements vertically on smaller screens */
     }
 }
+
+
+.blogImage {
+    width: 100%;
+    height: auto;
+}
+
+.blogImageMid {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+}
+
+.blogImageSmall {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: auto;
+}

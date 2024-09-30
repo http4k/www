@@ -1,5 +1,5 @@
 ---
-title: About http4k
+title: Rationale
 description: Overview of why we created http4k, the problems it solves, and the core concepts
 ---
 

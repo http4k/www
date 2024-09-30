@@ -28,7 +28,7 @@ The AWS Lambda runtime works by implementing an AWS supplied interface `Request/
 
 http4k supplies pre-built StreamHandler adapters (they are faster) using the lightweight Moshi library to convert the invocations to standard http4k Request/Responses. We need to decide which version of the [ApiGateway](https://aws.amazon.com/api-gateway/) binding to use and then use the correct http4k class. For this example we're going to use ApiGateway HTTP Version 2, so we simply create a class `HelloServerlessHttp4k` extending the relevant http4k class and pass our app `HttpHandler` to it's constructor:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/tutorials/serverless_http4k_with_aws_lambda/HelloServerlessHttp4k.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/tutorial/serverless_http4k_with_aws_lambda/HelloServerlessHttp4k.kt"></script>
 
 #### Step 3
 To build the Lambda code into a ZIP file, we need to add a task to our `build.gradle`:
@@ -62,7 +62,7 @@ pulumi new --name hello-http4k --force
 #### Step 5
 Pulumi creates a few files in the directory, but the most interesting one is `index.ts`, which is where we will configure our AWS resources for exposing the Lambda. Overwrite the content of `index.ts` with:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/tutorials/serverless_http4k_with_aws_lambda/index.ts"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/tutorial/serverless_http4k_with_aws_lambda/index.ts"></script>
 
 The most important things to note in the above file are:
 
@@ -76,7 +76,7 @@ pulumi up --stack dev --yes
 ```
 Pulumi will churn for a bit and all being well will display the URL at the end of the process.
 
-<img class="blogImage" src="step6.png" alt="pulumi output"/>
+<img class="blogImageMid" src="step6.png" alt="pulumi output"/>
 
 #### Step 7
 You can now call your deployed lambda by visiting: `https://{publishedUrl}/echo/helloHttp4k`. You should see `helloHttp4k` in the response body.
@@ -92,7 +92,7 @@ You have successfully deployed and invoked an http4k Lambda to AWS!
 
 To see a complete example of a similar setup, you can check out the complete [AWS Lambda](https://github.com/http4k/examples/tree/master/aws-lambda-http) app from the [http4k Examples repo](https://github.com/http4k/examples/)
 
-**(Ready for more? Let's move on to [deploying a native http4k GraalVM Lambda to AWS](/guide/tutorials/going_native_with_graal_on_aws_lambda))**
+**(Ready for more? Let's move on to [deploying a native http4k GraalVM Lambda to AWS](/tutorial/going_native_with_graal_on_aws_lambda))**
 
-[Your first http4k app]: /guide/tutorials/your_first_http4k_app
+[Your first http4k app]: /tutorial/your_first_http4k_app
 [pulumi]: https://www.pulumi.com/docs/get-started/install/

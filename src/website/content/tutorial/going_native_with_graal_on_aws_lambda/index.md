@@ -10,7 +10,7 @@ We'll take an existing http4k application built with Gradle and deployed with Pu
 
 ## Pre-requisites:
 - All the pre-requisites from the [Your first http4k app] and [Serverless http4k with AWS Lambda] tutorials. This will give you a working http4k application deployed to AWS Lambda.
-- Docker installed and running on your system. See [here]() for details.
+- Docker installed and running on your system. See [here](https://docs.docker.com/engine/install/) for details.
 <hr/>
 
 #### Step 1
@@ -25,7 +25,7 @@ This custom runtime is a lightweight, zero-reflection module which allows you to
 #### Step 2
 Lambdas working from a native binary have to supply their own `main` function to launch the runtime, instead of implementing the standard `Request/StreamHandler` interfaces. To use it on our app, we simply create a launcher and wrap our http4k `HttpHandler` with the appropriate FnHandler class before starting the Runtime. Put this into a new `HelloServerlessHttp4k.kt` (different package to before:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/tutorials/going_native_with_graal_on_aws_lambda/HelloServerlessHttp4k.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/tutorial/going_native_with_graal_on_aws_lambda/HelloServerlessHttp4k.kt"></script>
 
 Update the Pulumi config to point to the new file:
 
@@ -75,7 +75,7 @@ docker run -v $(pwd):/source  --platform=linux/amd64 \
 
 GraalVM will churn away for a few minutes and all being well, the `HelloHttp4k.zip` file will be generated in the main directory. 
 
-<img class="blogImage" src="step4.png" alt="graalvm output"/>
+<img class="blogImageMid" src="step4.png" alt="graalvm output"/>
 
 #### Step 5
 We need to update our Pulumi configuration to upload the new binary. This is pretty simple and just involves changing the runtime, ZIP target and handler in our `index.ts`. We can also remove the `timeout` as the native binary will startup in milliseconds:
@@ -96,12 +96,12 @@ pulumi up --stack dev --yes
 ```
 Pulumi will churn for a bit and all being well will display the URL at the end of the process.
 
-<img class="blogImage" src="../serverless_http4k_with_aws_lambda/step6.png" alt="pulumi output"/>
+<img class="blogImageMid" src="../serverless_http4k_with_aws_lambda/step6.png" alt="pulumi output"/>
 
 #### Step 7
 You can now call your deployed lambda by visiting: `https://{publishedUrl}/echo/helloHttp4k`. You should see `helloHttp4k` in the response body. Notice that the response time is super-super quick, especially after the lambda is warm. If we invoke it from the console, you should see something similar:
 
-<img class="blogImage" src="step7.png" alt="pulumi output"/>
+<img class="blogImageMid" src="step7.png" alt="pulumi output"/>
 
 #### Step 8
 To avoid any unwanted AWS charges, don't forget to delete all of the resources in your stack when you've finished by running:
@@ -112,6 +112,6 @@ pulumi destroy --stack dev --yes
 #### Congratulations!
 You have successfully compiled an http4k application with GraalVM, then deployed and invoked it as a Lambda in AWS!
 
-[Your first http4k app]: /guide/tutorials/your_first_http4k_app
-[Serverless http4k with AWS Lambda]: /guide/tutorials/serverless_http4k_with_aws_lambda
+[Your first http4k app]: /tutorial/your_first_http4k_app
+[Serverless http4k with AWS Lambda]: /tutorial/serverless_http4k_with_aws_lambda
 [pulumi]: https://www.pulumi.com/docs/get-started/install/
