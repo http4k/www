@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Test using Service Virtualisation "
 description: Implementing Service Virtualisation using Servirtium contracts
 ---

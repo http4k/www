@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Serve SSE"
 description: Recipes for using http4k with Server-Sent Events
 ---

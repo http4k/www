@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Use a custom OAuth provider"
 description: Recipe for using http4k with custom OAuth provider
 ---

@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Routing API (Advanced)"
 description: Recipes for using the http4k composable routing API, including serving static content
 ---

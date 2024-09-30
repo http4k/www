@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Use HTML Forms"
 description: Recipes for using http4k with HTML forms
 ---

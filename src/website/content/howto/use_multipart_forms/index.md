@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Use Multipart Forms"
 description: Recipes for using http4k with Multipart forms
 ---

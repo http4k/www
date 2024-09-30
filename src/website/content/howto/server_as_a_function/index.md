@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Server-as-a-Function"
 description: The simplest example of an http4k application 
 ---

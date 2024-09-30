@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Write different test types"
 description: Recipes for testing http4k applications
 ---

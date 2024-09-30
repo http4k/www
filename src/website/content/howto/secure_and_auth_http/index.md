@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Authentication for HTTP services"
 description: Recipes for how to secure and authenticate HTTP services
 ---

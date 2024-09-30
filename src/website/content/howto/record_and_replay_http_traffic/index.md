@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Record and replay HTTP traffic"
 description: Recipes for using http4k to record and replay HTTP traffic
 ---

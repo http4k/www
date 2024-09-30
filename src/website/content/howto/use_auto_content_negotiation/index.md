@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Use Auto Content Negotiation"
 description: Recipes for using the Auto Content Negotiation Lens to marshall and unmarshall HTTP messages of various formats
 ---

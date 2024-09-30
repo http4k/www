@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Redoc and Swagger UI"
 description: Create a Redoc or Swagger UI for your REST API
 ---

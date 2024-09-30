@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Leverage GraphQL"
 description: Recipe for using GraphQL plugins 
 ---

@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Client as a function"
 description: Recipes for using http4k to consume HTTP services
 ---

@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Monitor http4k"
 description: How to monitor http4k endpoints and applications
 ---

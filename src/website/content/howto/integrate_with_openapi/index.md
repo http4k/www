@@ -1,5 +1,6 @@
 ---
 layout: howto
+tags: [http4k Core]
 title: "Integrate with OpenAPI"
 description: Recipes for using the http4k-contract module to provide typesafe endpoints with automatically generated OpenAPI documentation
 ---
