@@ -4,6 +4,7 @@
     <main class="main-content ms-4">
         <h1>{{ .Title }}</h1>
         {{ .Content }}
+        <hr/>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
             {{ range where .Site.RegularPages "Type" "eq" "howto" }}
             <div class="col">
