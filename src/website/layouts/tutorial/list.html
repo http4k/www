@@ -1,0 +1,11 @@
+{{ define "main" }}
+<main>
+    tutorial
+</main>
+<aside>
+    <div>
+        {{ partial "shared/sidebar.html" (dict "context" . "type" "tutorial") }}
+    </div>
+</aside>
+
+{{ end }}

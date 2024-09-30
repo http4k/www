@@ -84,7 +84,7 @@ menus:
       weight: 22
     - name: learn-tutorials
       title: Tutorials
-      url: /tutorials
+      url: /tutorial
       parent: learn
       weight: 23
     - name: learn-howto

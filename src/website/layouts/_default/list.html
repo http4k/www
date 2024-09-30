@@ -1,5 +1,6 @@
 {{ define "main" }}
 	<main>
+		DEFAULT
 		{{ if or .Title .Content }}
 		<div>
 			{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
@@ -12,5 +13,4 @@
 		{{ end }}
 		{{ partial "shared/pagination.html" . }}
 	</main>
-{{ partial "shared/sidebar.html" . }}
 {{ end }}
