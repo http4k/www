@@ -1,8 +1,10 @@
 ---
-title:  http4k Approval Testing Module
+layout: module
+type: module
+ecosystem: http4k
+title:   http4k Approval Testing Module
 description: Feature overview of the http4k-testing-approval module
 ---
-
 
 ### Installation (Gradle)
 

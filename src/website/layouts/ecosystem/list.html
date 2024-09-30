@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<div class="layout">
+    <aside class="sidebar">
+        <div>
+            <div>
+                <ul>
+                    {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ .Params.ecosystem }}
+<!--                    {{ range .Site.RegularPages }}-->
+<!--                    <li><a href="{{ .RelPermalink }}">{{ .Params }}</a></li>-->
+<!--                    {{ end }}-->
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <main class="main-content">
+        {{ .Content }}
+    </main>
+</div>
+
+{{ end }}

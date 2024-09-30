@@ -1,5 +1,8 @@
 ---
-title:  http4k Kotest Module
+layout: module
+type: module
+ecosystem: http4k
+title:   http4k Kotest Module
 description: Feature overview of the http4k-testing-kotest module
 ---
 

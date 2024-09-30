@@ -1,5 +1,8 @@
 ---
-title:  http4k OAuth security Module
+layout: module
+type: module
+ecosystem: http4k
+title:   http4k OAuth security Module
 description: Feature overview of the http4k-security-oauth form module
 ---
 

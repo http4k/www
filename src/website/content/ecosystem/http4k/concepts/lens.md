@@ -1,5 +1,8 @@
 ---
-title: http4k Lenses
+layout: module
+type: module
+ecosystem: http4k
+title:  http4k Lenses
 description: An explanation of Lenses and how they are used in http4k
 ---
 

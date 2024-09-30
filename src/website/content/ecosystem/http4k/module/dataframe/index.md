@@ -1,5 +1,8 @@
 ---
-title:  http4k KotlinX DataFrame Module
+layout: module
+type: module
+ecosystem: http4k
+title:   http4k KotlinX DataFrame Module
 description: Feature overview of the DataFrame http4k-format module, allowing for automatic extraction of DataFrames from HTTP messages.
 ---
 

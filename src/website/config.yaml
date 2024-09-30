@@ -223,3 +223,5 @@ menus:
 taxonomies:
   module: "module"
   ecosystem: "ecosystem"
+  news: "news"
+  howto: "howto"

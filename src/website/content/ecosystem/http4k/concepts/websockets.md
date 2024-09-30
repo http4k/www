@@ -1,5 +1,8 @@
 ---
-title: http4k WebSockets
+layout: module
+type: module
+ecosystem: http4k
+title:  http4k WebSockets
 description: An explanation of the core function types for dealing with WebSockets
 ---
 

@@ -1,5 +1,8 @@
 ---
-title:  http4k Core Module
+layout: module
+type: module
+ecosystem: http4k
+title:   http4k Core Module
 description: Feature overview of the http4k-core module, including the Lens system for typesafe HTTP
 ---
 

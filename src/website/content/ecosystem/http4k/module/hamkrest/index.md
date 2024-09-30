@@ -1,5 +1,8 @@
 ---
-title:  http4k Hamkrest Module
+layout: module
+type: module
+ecosystem: http4k
+title:   http4k Hamkrest Module
 description: Feature overview of the http4k-testing-hamkrest module
 ---
 

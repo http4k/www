@@ -1,5 +1,8 @@
 ---
-title:  Testing http4k applications
+layout: module
+type: module
+ecosystem: http4k
+title:   Testing http4k applications
 description: How to test http4k endpoints and applications, and modules that support testing
 ---
 

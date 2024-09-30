@@ -1,5 +1,8 @@
 ---
-title:  http4k Cloud Events support
+layout: module
+type: module
+ecosystem: http4k
+title:   http4k Cloud Events support
 description: Feature overview of the http4k-cloudevents module
 ---
 

@@ -1,5 +1,8 @@
 ---
-title:  http4k Templating Modules
+layout: module
+type: module
+ecosystem: http4k
+title:   http4k Templating Modules
 description: Feature overview of the http4k-templating modules
 ---
 

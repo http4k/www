@@ -1,5 +1,8 @@
 ---
-title: http4k Serverless
+layout: module
+type: module
+ecosystem: http4k
+title:  http4k Serverless
 description: An explanation of the core function types for dealing with Serverless applications
 ---
 

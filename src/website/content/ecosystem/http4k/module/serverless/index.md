@@ -1,5 +1,8 @@
 ---
-title:  http4k Serverless Modules
+layout: module
+type: module
+ecosystem: http4k
+title:   http4k Serverless Modules
 description: Feature overview of the http4k-serverless modules, covering Serverless backends
 ---
 

@@ -1,5 +1,8 @@
 ---
-title: http4k Server-Sent Events
+layout: module
+type: module
+ecosystem: http4k
+title:  http4k Server-Sent Events
 description: An explanation of the core function types for dealing with Server-Sent Events
 ---
 
