@@ -21,7 +21,7 @@ We recommend that all new users familiarise themselves with at least the [ration
 Read more about the theory behind Concepts [here](https://diataxis.fr/explanation/).
 
 ### Tutorials
-Getting started with a new library can be quite daunting, and sometimes everyone needs a little hand holding to get comfortable with how things fit together. This section contains step-by-step guides to get you started with each of http4k's main conceptual areas. The [first tutorial](/tutorial/your_first_http4k_app) will get you out of the gate and up and running in no time.
+Getting started with a new library can be quite daunting, and sometimes everyone needs a little hand holding to get comfortable with how things fit together. This section contains step-by-step guides to get you started with each of http4k's main conceptual areas. The [first tutorial](/tutorial/your_first_http4k_app/) will get you out of the gate and up and running in no time.
 
 Read more about the theory behind Tutorials [here](https://diataxis.fr/tutorials/).
 

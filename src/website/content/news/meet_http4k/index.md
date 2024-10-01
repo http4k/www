@@ -212,7 +212,7 @@ val message: Message = messageLens(Request(GET, "/").body(body))
 ```
 
 This mechanism works for all incoming and outgoing JSON and XML Requests and Responses. To assist with developing whilst 
-using this type of auto-marshalling, we have created a [tool](http://http4k-data-class-gen.herokuapp.com/) to automatically 
+using this type of auto-marshalling, we have created a [tool](https://toolbox.http4k.org/dataclass) to automatically 
 generate a set of data classes for a given messages.
 
 ### Claim D. Serverless
