@@ -56,7 +56,7 @@ We hope to soon provide some tools to automate at least some of the above proces
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/serverless/lambda/example.kt)
 
-{{< kotlin file="example.kt" >}}
+{{< kotlin file="lambda/example.kt" >}}
 
 #### AWS Lambda integration (Event-based apps)
 http4k also supports writing Event-based functions to receive AWS events from services like SQS and Dynamo. One advantage of using http4k version is that it uses the AWS SDK RequestStreamHandler instead of the standard RequestHandler - which avoids the heavyweight Jackson deserialisation process (we use Moshi under the covers) utilised by the standard AWS runtime. To use this events functionality, you should also import the AWS Events JAR:
@@ -71,7 +71,7 @@ The process of configuration is the same as for HTTP apps above.
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/http4k-serverless/lambda/src/examples/kotlin/example_event_handling.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/http4k-serverless/lambda/src/examples/kotlin/example_event_handling.kt"></script>
+{{< kotlin file="lambda/example_event_handling.kt" >}}
 
 #### Google Cloud Functions integration
 Google Cloud Functions are triggered in the cloud by calling an entry point class which implements their `HttpFunction` interface.
@@ -83,7 +83,7 @@ Here is an example:
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/serverless/gcf/example.kt)
 
-{{< kotlin file="example.kt" >}}
+{{< kotlin file="gcf/example.kt" >}}
 
 If you are using gradle, gcloud can't deploy the function directly from the project, you must build the fat jar first.
 Applying this plugin [shadow jar](https://imperceptiblethoughts.com/shadow/) will provide you with appropriate gradle task to build the fat jar.
@@ -126,7 +126,7 @@ In order to achieve this in http4k, only a single interface `AppLoader` needs to
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/serverless/openwhisk/example.kt)
 
-{{< kotlin file="example.kt" >}}
+{{< kotlin file="openwhisk/example.kt" >}}
 
 Packaging of the app should be done using [ShadowJar](https://imperceptiblethoughts.com/shadow/) and then an action created with the `wsk` CLI:
 

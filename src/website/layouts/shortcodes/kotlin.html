@@ -1,4 +1,8 @@
 {{ $file := .Get "file" }}
-{{ with readFile (printf "%s/%s" .Page.Path $file) }}
+{{ $filePath := printf "%s/%s" .Page.Path $file }}
+
+{{ with readFile $filePath }}
 {{ highlight . "kotlin" }}
+{{ else }}
+{{ errorf "File not found: %s" $filePath }}
 {{ end }}
