@@ -4,7 +4,7 @@ description: There's a new major http4k release! Read about all the new stuff th
 date: 2021-01-01
 ---
 
-Well, at last it's here - after 3 years - http4k v4! Following on from the [retrospective](/blog/retrospective_v3) that we did on version 3, we've been busy polishing, tidying up the edges, and pushing out a bunch of changes to make the project sparkle. Ready? Then let's dive into the good stuff that's been going on at http4k Towers.
+Well, at last it's here - after 3 years - http4k v4! Following on from the [retrospective](/news/retrospective_v3) that we did on version 3, we've been busy polishing, tidying up the edges, and pushing out a bunch of changes to make the project sparkle. Ready? Then let's dive into the good stuff that's been going on at http4k Towers.
 
 <hr/>
 #### Four digits good, three digits bad. The new http4k versioning scheme
@@ -61,7 +61,7 @@ The even better news is that testing your http4k apps locally (regardless of pla
 
 <img class="blogImageMid" src="./toolbox.png" alt="toolbox"/>
 
-As documented in the [Toolbox announcement post](/blog/toolbox), we've been busy consolidating a bunch of handy tools for generating code to work with http4k projects, and we christened this the **http4k Toolbox** and it's available in both [online](https://toolbox.http4k.org) and a CLI flavours (available from Brew and SDKMan!). From [Project Generation](https://toolbox.http4k.org/project) to our own more sophisticated [OpenAPI3 Generator](https://toolbox.http4k.org/openapi), we hope that this become an essential tool in every **http4k** developer's pocket.
+As documented in the [Toolbox announcement post](/news/toolbox), we've been busy consolidating a bunch of handy tools for generating code to work with http4k projects, and we christened this the **http4k Toolbox** and it's available in both [online](https://toolbox.http4k.org) and a CLI flavours (available from Brew and SDKMan!). From [Project Generation](https://toolbox.http4k.org/project) to our own more sophisticated [OpenAPI3 Generator](https://toolbox.http4k.org/openapi), we hope that this become an essential tool in every **http4k** developer's pocket.
 
 <hr/>
 #### Infinirouting

@@ -289,7 +289,7 @@ allow us to revisit this decision.
 [UtterlyIdle]: https://github.com/bodar/utterlyidle
 [Typealias]: https://kotlinlang.org/docs/reference/type-aliases.html
 [extension methods]: https://kotlinlang.org/docs/reference/extensions.html
-[blog post]: https://www.http4k.org/blog/typesafe_websockets/
+[blog post]: /news/typesafe_websockets/
 [Lens]: https://www.schoolofhaskell.com/school/to-infinity-and-beyond/pick-of-the-week/basic-lensing
 [slack.kotlinlang,org]: http://slack.kotlinlang.org/
 [Apache]: https://hc.apache.org/
