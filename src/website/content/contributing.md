@@ -10,7 +10,7 @@ There are many ways in which you can contribute to the development of the librar
 - [Back us!](https://opencollective.com/http4k#backer) The http4k team build the library out of love for software
   engineering and the OpenSource community, but running a project of this size is not without it's costs. Please see
   below for sponsorship options to help us keep the project running.
-- [Get help!](/lts-support) The http4k team support the library beyond the normal GitHub issues and PRs with our Long-term support packages. 
+- [Get help!](/lts-support/) The http4k team support the library beyond the normal GitHub issues and PRs with our Long-term support packages. 
 
 ### General guidelines
 

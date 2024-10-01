@@ -4,7 +4,7 @@ description: A step-by-step guide to compiling http4k apps with GraalVM for AWS 
 weight: 4
 ---
 
-In this guide, we'll run you through the steps required to get an http4k application deployed and running on AWS Lambda with GraalVM and available to call over the internet using AWS ApiGateway. If you're not familiar with the http4k concepts for HTTP and Serverless apps, then we advise you read them [here](/guide/concepts/http/) and [here](/guide/concepts/serverless/). To make an app you can follow the [Your first http4k app] tutorial. Then follow the steps in the [Serverless http4k with AWS Lambda] tutorial before tackling this guide.
+In this guide, we'll run you through the steps required to get an http4k application deployed and running on AWS Lambda with GraalVM and available to call over the internet using AWS ApiGateway. If you're not familiar with the http4k concepts for HTTP and Serverless apps, then we advise you read them [here](/ecosystem/http4k/concepts/http/) and [here](/ecosystem/http4k/concepts/serverless/). To make an app you can follow the [Your first http4k app] tutorial. Then follow the steps in the [Serverless http4k with AWS Lambda] tutorial before tackling this guide.
 
 We'll take an existing http4k application built with Gradle and deployed with Pulumi, add the bits that are important to GraalVM Serverless HTTP apps, then compile it natively and deploy it to AWS Lambda and API Gateway using Pulumi. The resulting Lambda has super-quick startup time and low memory footprint.
 
@@ -112,6 +112,6 @@ pulumi destroy --stack dev --yes
 #### Congratulations!
 You have successfully compiled an http4k application with GraalVM, then deployed and invoked it as a Lambda in AWS!
 
-[Your first http4k app]: /tutorial/your_first_http4k_app
+[Your first http4k app]: /tutorial/your_first_http4k_app/
 [Serverless http4k with AWS Lambda]: /tutorial/serverless_http4k_with_aws_lambda/
 [pulumi]: https://www.pulumi.com/docs/get-started/install/

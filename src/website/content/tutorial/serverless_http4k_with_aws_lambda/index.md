@@ -4,7 +4,7 @@ description: A step-by-step guide to deploying an HTTP app to AWS Lambda
 weight: 3
 ---
 
-In this guide, we'll run you through the steps required to get an http4k application deployed and running on AWS Lambda and available to call over the internet using AWS ApiGateway. If you're not familiar with the http4k concepts for HTTP and Serverless apps, then we advise you read them [here](/guide/concepts/http/) and [here](/guide/concepts/serverless/). To make an app you can follow the [Your first http4k app] tutorial before tackling this guide.
+In this guide, we'll run you through the steps required to get an http4k application deployed and running on AWS Lambda and available to call over the internet using AWS ApiGateway. If you're not familiar with the http4k concepts for HTTP and Serverless apps, then we advise you read them [here](/ecosystem/http4k/concepts/http/) and [here](/ecosystem/http4k/concepts/serverless/). To make an app you can follow the [Your first http4k app] tutorial before tackling this guide.
 
 We'll take an existing http4k application built with Gradle, add the bits that are important to Serverless HTTP apps then deploy it to AWS Lambda and API Gateway using Pulumi.
 
@@ -92,7 +92,7 @@ You have successfully deployed and invoked an http4k Lambda to AWS!
 
 To see a complete example of a similar setup, you can check out the complete [AWS Lambda](https://github.com/http4k/examples/tree/master/aws-lambda-http) app from the [http4k Examples repo](https://github.com/http4k/examples/)
 
-**(Ready for more? Let's move on to [deploying a native http4k GraalVM Lambda to AWS](/tutorial/going_native_with_graal_on_aws_lambda))**
+**(Ready for more? Let's move on to [deploying a native http4k GraalVM Lambda to AWS](/tutorial/going_native_with_graal_on_aws_lambda/))**
 
-[Your first http4k app]: /tutorial/your_first_http4k_app
+[Your first http4k app]: /tutorial/your_first_http4k_app/
 [pulumi]: https://www.pulumi.com/docs/get-started/install/

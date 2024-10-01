@@ -99,8 +99,6 @@ The SDK provides a simple API for developers to simply compose their plugins by 
 
 Once created, plugins can be installed into the `FakeOpenAI` server, and expose a standard http4k `HttpHandler` which means they can be tested in memory, run locally standalone, or composed into part of a larger http4k application. It's pretty neat and we can't wait to see what the community uses it for!
 
-There's a full example of how to build a plugin with the http4k-connect-openai-plugin SDK and deploy it to AWS Lambda with Pulumi - see [the repo] for details.
-
 #### Removal of deprecated and unsupported features
 
 As part of the major release cycle, we’re removing all code marked as deprecated in v3 of http4k-connect.
@@ -135,7 +133,6 @@ Cheers
 [here]: https://bit.ly/hyperpyramid-kotlinconf
 [Connect pattern]: https://dentondav.id/posts/2021/02/smash-your-adapter-monolith
 [http4k-connect-openai]: https://github.com/http4k/http4k-connect/tree/master/openai
-[the repo]: https://github.com/http4k/http4k-connect-examples/tree/master/developing-openai-plugins
 [ChatGPT plugin programme]: https://openai.com/blog/chatgpt-plugins
 [http4k-connect-openai-plugin]: https://mvnrepository.com/artifact/org.http4k/http4k-connect-openai-plugin
 [demo repo]: https://github.com/http4k/exploring-the-testing-hyperpyramid
