@@ -22,9 +22,9 @@ Apps can generally be split into 3 tiers:
 
 The tutorial is split into 4 sections:
 
-- [Part 1: Building a walking skeleton](_1)
-- [Part 2: Adding an endpoint](_2)
-- [Part 3: Adding another endpoint](_3)
-- [Part 4: Adding an external dependency](_4)
+- [Part 1: Building a walking skeleton](_1/)
+- [Part 2: Adding an endpoint](_2/)
+- [Part 3: Adding another endpoint](_3/)
+- [Part 4: Adding an external dependency](_4/)
 
 [http4k]: https://http4k.org
