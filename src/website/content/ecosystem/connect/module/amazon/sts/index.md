@@ -49,6 +49,6 @@ fun main() {
 
 To start:
 
-```
+```kotlin
 FakeSTS().start()
 ```

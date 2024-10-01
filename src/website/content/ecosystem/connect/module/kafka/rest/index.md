@@ -166,6 +166,6 @@ to.
 
 To start:
 
-```
+```kotlin
 FakeKafkaRest().start()
 ```

@@ -60,6 +60,6 @@ performance factor.
 
 To start:
 
-```
+```kotlin
 FakeLambda().start()
 ```

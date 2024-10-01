@@ -53,6 +53,6 @@ the `MessageCompletionGenerator` interface and return as appropriate.
 
 To start:
 
-```
+```kotlin
 FakeAnthropicAI().start()
 ```

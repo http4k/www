@@ -24,7 +24,7 @@ The GA connector provides the following Actions:
 
 To start:
 
-```
+```kotlin
 FakeGoogleAnalytics().start()
 ```
 

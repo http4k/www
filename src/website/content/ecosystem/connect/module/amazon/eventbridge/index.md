@@ -30,6 +30,6 @@ The client APIs utilise the `http4k-aws` module for request signing, which means
 ### Default Fake port: 13577
 
 To start:
-```
+```kotlin
 FakeEventBridge().start()
 ```

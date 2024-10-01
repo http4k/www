@@ -28,7 +28,7 @@ Actions:
 
 To start:
 
-```
+```kotlin
 FakeOIDC().start()
 ```
 
@@ -41,7 +41,7 @@ Actions:
 
 To start:
 
-```
+```kotlin
 FakeSSO().start()
 ```
 

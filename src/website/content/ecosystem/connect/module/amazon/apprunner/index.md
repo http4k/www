@@ -50,6 +50,6 @@ performance factor.
 
 To start:
 
-```
+```kotlin
 FakeAppRunner().start()
 ```

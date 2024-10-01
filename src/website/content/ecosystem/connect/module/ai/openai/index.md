@@ -55,7 +55,7 @@ fun main() {
 }
 ```
 
-Other examples can be found [here](https://github.com/http4k/http4k-connect/tree/master/openai/fake/src/examples/kotlin).
+Other examples can be found [here](https://github.com/http4k/http4k-connect/tree/master/ai/openai/fake/src/examples/kotlin).
 
 # OpenAI Plugin SDK
 
@@ -158,6 +158,6 @@ exposed Plugin API.
 
 To start:
 
-```
+```kotlin
 FakeOpenAI().start()
 ```

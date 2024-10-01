@@ -73,6 +73,6 @@ performance factor.
 
 To start:
 
-```
+```kotlin
 FakeEvidently().start()
 ```

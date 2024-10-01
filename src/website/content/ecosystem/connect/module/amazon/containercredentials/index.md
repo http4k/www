@@ -27,6 +27,6 @@ performance factor.
 
 To start:
 
-```
+```kotlin
 FakeContainerCredentials().start()
 ```

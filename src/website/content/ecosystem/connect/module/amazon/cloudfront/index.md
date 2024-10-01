@@ -46,6 +46,6 @@ fun main() {
 
 To start:
 
-```
+```kotlin
 FakeCloudFront().start()
 ```

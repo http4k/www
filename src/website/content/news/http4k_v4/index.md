@@ -4,7 +4,7 @@ description: There's a new major http4k release! Read about all the new stuff th
 date: 2021-01-01
 ---
 
-Well, at last it's here - after 3 years - http4k v4! Following on from the [retrospective](/news/retrospective_v3) that we did on version 3, we've been busy polishing, tidying up the edges, and pushing out a bunch of changes to make the project sparkle. Ready? Then let's dive into the good stuff that's been going on at http4k Towers.
+Well, at last it's here - after 3 years - http4k v4! Following on from the [retrospective](/news/retrospective_v3/) that we did on version 3, we've been busy polishing, tidying up the edges, and pushing out a bunch of changes to make the project sparkle. Ready? Then let's dive into the good stuff that's been going on at http4k Towers.
 
 <hr/>
 #### Four digits good, three digits bad. The new http4k versioning scheme
@@ -61,7 +61,7 @@ The even better news is that testing your http4k apps locally (regardless of pla
 
 <img class="blogImageMid" src="./toolbox.png" alt="toolbox"/>
 
-As documented in the [Toolbox announcement post](/news/toolbox), we've been busy consolidating a bunch of handy tools for generating code to work with http4k projects, and we christened this the **http4k Toolbox** and it's available in both [online](https://toolbox.http4k.org) and a CLI flavours (available from Brew and SDKMan!). From [Project Generation](https://toolbox.http4k.org/project) to our own more sophisticated [OpenAPI3 Generator](https://toolbox.http4k.org/openapi), we hope that this become an essential tool in every **http4k** developer's pocket.
+As documented in the [Toolbox announcement post](/news/toolbox/), we've been busy consolidating a bunch of handy tools for generating code to work with http4k projects, and we christened this the **http4k Toolbox** and it's available in both [online](https://toolbox.http4k.org) and a CLI flavours (available from Brew and SDKMan!). From [Project Generation](https://toolbox.http4k.org/project) to our own more sophisticated [OpenAPI3 Generator](https://toolbox.http4k.org/openapi), we hope that this become an essential tool in every **http4k** developer's pocket.
 
 <hr/>
 #### Infinirouting
@@ -101,7 +101,7 @@ The [OpenTelemetry](https://opentelemetry.io/) project describes itself as...
 
 It's a great project run by the CNCF and very well fits in with the [ethos](/rationale/) that the http4k team believes in. As with all http4k integration modules, we want to enable http4k developers to be able to plug in their apps as simply as possible - in this case, just configure the OpenTelemetry API or Java-agent, then just add some simple `Filters` to your code to start collecting Distributed Traces or Metrics. Several tracing schemes are supported, including Amazon XRay, Jaeger and Zipkin.
 
-For more docs on how to get it all working, head over to the [docs](/ecosystem/http4k/module/opentelemetry).
+For more docs on how to get it all working, head over to the [docs](/ecosystem/http4k/module/opentelemetry/).
 
 <hr/>
 #### Upgrading & library API changes
@@ -122,14 +122,14 @@ One of the things that our users feedback about was that the structure of the do
 
 There has been a decent amount of interest lately from our users to come to us to ask for advice about how we can help teams get the best out of http4k. In that vein, we have also been busy building training materials which we can deliver to teams either new to (or experienced in) the library, or to visit teams (currently virtually) to help them out. 
 
-If your team would also like to take advantage of our experience in delivering projects using http4k, then please visit the [support/training](/support) page, reach out and we'd love to see how we can help.
+If your team would also like to take advantage of our experience in delivering projects using http4k, then please visit the [support/training](/solutions) page, reach out and we'd love to see how we can help.
 
 <hr/>
 #### http4k Connect - Flyweight 3rd party adapters
 
 <img class="blogImageMid" src="./connect.png" alt="http4k connect"/>
 
-[http4k-connect](http://github.com/http4k/http4k-connect) is the team's newest side project, the purpose of which is to eventually standardise patterns for building 3rd party system adapters to various backend services, and for building your own Fakes (backed by data-stores such as InMemory, S3 or Redis). So far (v2.8.0.0), http4k-connect supports at least the common-use case actions for the following systems (and the API is easily extendable for non-supplied actions):
+[http4k-connect](/ecosystem/connect) is the team's newest side project, the purpose of which is to eventually standardise patterns for building 3rd party system adapters to various backend services, and for building your own Fakes (backed by data-stores such as InMemory, S3 or Redis). So far (v2.8.0.0), http4k-connect supports at least the common-use case actions for the following systems (and the API is easily extendable for non-supplied actions):
 
 - AWS KMS: Key Management Service
 - AWS Lambda

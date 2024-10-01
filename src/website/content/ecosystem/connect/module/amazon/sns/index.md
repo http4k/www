@@ -33,6 +33,6 @@ performance factor.
 
 To start:
 
-```
+```kotlin
 FakeSNS().start()
 ```

@@ -54,6 +54,6 @@ performance factor.
 
 To start:
 
-```
+```kotlin
 FakeSecretsManager().start()
 ```

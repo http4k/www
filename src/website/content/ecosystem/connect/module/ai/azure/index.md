@@ -55,7 +55,7 @@ println(result.orThrow().toList())
 }
 ```
 
-Other examples can be found [here](https://github.com/http4k/http4k-connect/tree/master/azure/fake/src/examples/kotlin).
+Other examples can be found [here](https://github.com/http4k/http4k-connect/tree/master/ai/azure/fake/src/examples/kotlin).
 
 ## Fake AzureAI Server
 
@@ -81,6 +81,6 @@ the `ChatCompletionGenerator` interface and return as appropriate.
 
 To start:
 
-```
+```kotlin
 FakeAzureAI().start()
 ```

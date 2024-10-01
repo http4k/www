@@ -52,6 +52,6 @@ println(result)
 
 To start:
 
-```
+```kotlin
 FakeCloudWatchLogs().start()
 ```

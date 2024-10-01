@@ -29,6 +29,6 @@ performance factor.
 
 To start:
 
-```
+```kotlin
 FakeSES().start()
 ```

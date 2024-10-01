@@ -54,7 +54,7 @@ fun main() {
 ```
 
 Other examples can be
-found [here](https://github.com/http4k/http4k-connect/tree/master/lmstudio/fake/src/examples/kotlin).
+found [here](https://github.com/http4k/http4k-connect/tree/master/ai/lmstudio/fake/src/examples/kotlin).
 
 ## Fake LmStudio Server
 
@@ -74,6 +74,6 @@ the `ChatCompletionGenerator` interface and return as appropriate.
 
 To start:
 
-```
+```kotlin
 FakeLmStudio().start()
 ```

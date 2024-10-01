@@ -65,6 +65,6 @@ undeleted messages to each consumer). Fake SQS queues are, as such, all inherent
 
 To start:
 
-```
+```kotlin
 FakeSQS().start()
 ```
