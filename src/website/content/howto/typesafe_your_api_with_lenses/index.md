@@ -24,6 +24,6 @@ An alternative approach to using Exceptions to automatically produce `BadRequest
 
 Additionally, the lack of Higher Kinded Types in Kotlin means that we are unable to provide a generic method for converting standard lenses. However, it is easy to implement an extension method to use in specific use cases - you can follow the example in the http4k source to implement your own version of the one we supply for Result4k. Below is an example which uses that Result4k ADT:
 
-### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/typesafe_your_api_with_lenses/example_result4k.kt)
+### Code
 
 {{< kotlin file="example_result4k.kt" >}}

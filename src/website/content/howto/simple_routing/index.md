@@ -16,6 +16,6 @@ dependencies {
 }
 ```
 
-### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/simple_routing/example.kt)
+### Code
 
 {{< kotlin file="example.kt" >}}

@@ -45,7 +45,7 @@ will inject the `Approver` automatically into test methods.
 ### Standard Approval tests
 By using the `ApprovalTest` extension, an instance of an `Approver` is injected into each test.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/approvaltests/example_standard.kt)
+#### Code
 
 {{< kotlin file="example_standard.kt" >}}
 
@@ -63,7 +63,7 @@ The module also provides the following built-in extensions:
 - `JsonApprovalTest`
 - `XmlApprovalTest`
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/approvaltests/example_json.kt)
+#### Code
 
 {{< kotlin file="example_json.kt" >}}
 

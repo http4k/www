@@ -136,7 +136,7 @@ Once the lens is declared, you can use it on a target object to either get or se
 - Retrieving a value: use `<lens>.extract(<target>)`, or the more concise invoke form: `<lens>(<target>)`
 - Setting a value: use `<lens>.inject(<value>, <target>)`, or the more concise invoke form: `<lens>(<value>, <target>)`
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/core/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}
 

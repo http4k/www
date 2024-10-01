@@ -31,6 +31,6 @@ dependencies {
 }
 ```
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/cloud_events/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}

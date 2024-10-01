@@ -20,7 +20,7 @@ dependencies {
 
 A set of [Kotest] matchers for use when testing http4k apps.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/kotest/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}
 

@@ -24,6 +24,6 @@ dependencies {
 
 Note: although we use Argo here as our JSON API, you could also switch in any of the `http4k-format-xxx` JSON modules. 
 
-### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/integrate_with_openapi/example.kt)
+### Code
 
 {{< kotlin file="example.kt" >}}

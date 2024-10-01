@@ -26,7 +26,7 @@ to declare server-side `Routes` in a completely typesafe way, leveraging the Len
  models for messages.
 - **Security:** to secure the `Routes` against unauthorised access. Current implementations include `ApiKey`, `BasicAuth`, `BearerAuth`, `OpenIdConnect` and `OAuth`.
 - **Callbacks and Webhooks** can be declared, which give the same level of documentation and model generation
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/contracts/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}
 

@@ -51,7 +51,7 @@ dependencies {
 Server-backend modules provide a consistent API to mount HttpHandlers into the specified container in 1 LOC, by 
 simply passing it to the relevant `ServerConfig` implementation (in this case `Jetty`):
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/servers/example_http.kt)
+#### Code
 
 {{< kotlin file="example_http.kt" >}}
 

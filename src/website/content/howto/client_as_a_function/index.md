@@ -14,6 +14,6 @@ dependencies {
 }
 ```
 
-### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/client_as_a_function/example.kt)
+### Code
 
 {{< kotlin file="example.kt" >}}

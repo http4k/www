@@ -27,6 +27,6 @@ webJars().asServer(SunHttp(8080)).start()
 
 ... or a more standard use-case is to mix it into your application routing as in the example below:
 
-### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/deploy_webjars/example.kt)
+### Code
 
 {{< kotlin file="example.kt" >}}

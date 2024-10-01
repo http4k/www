@@ -47,6 +47,6 @@ dependencies {
 }
 ```
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/arrange_filters_into_stacks/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}

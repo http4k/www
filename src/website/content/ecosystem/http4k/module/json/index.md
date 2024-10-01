@@ -49,7 +49,7 @@ objects, including custom Lens methods for each library so that JSON node object
 - **GSON** support is provided in http4k, but is not recommended due to being mostly unsupported.
 - We have found **KotlinSerialisation** is possibly the least friendly to use in the context of http4k.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/json/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}
 
@@ -60,7 +60,7 @@ to/from JSON and XML using reflection.
 
 We can use this facility in http4k to automatically marshall objects to/from HTTP message bodies using **Lenses**. Note that this approach also sets the appropriate `Content-Type` header for the message.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/json/autoJson.kt)
+#### Code
 
 {{< kotlin file="autoJson.kt" >}}
 

@@ -24,7 +24,7 @@ Create your application as normal and pass to the JUnit extension when registeri
 on a random port and a connected browser object injected into the test - requests to non-http URLs are automatically
 routed to your app.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/playwright/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}
 

@@ -67,7 +67,7 @@ A **Stage** provides the lifecycle for applying a behaviour, and applies until a
 ### Manually injecting Chaos
 For use in automated test suites, it is simple to define the Chaos behaviour programmatically using the API and then use the `ChaosEngine` to add it onto an existing application.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/chaos/example_chaos.kt)
+#### Code
 
 {{< kotlin file="example_chaos.kt" >}}
 
@@ -117,12 +117,12 @@ Apart from being able to turn the Chaos on/off and check the status, the most po
 ]
 ```
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/chaos/example_chaos_controls_openapi.kt)
+#### Code
 
 {{< kotlin file="example_chaos_controls_openapi.kt" >}}
 
 ### Interacting with ChaosEngine using an HTTP client
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/chaos/example_chaos_controls_client.kt)
+#### Code
 
 {{< kotlin file="example_chaos_controls_client.kt" >}}

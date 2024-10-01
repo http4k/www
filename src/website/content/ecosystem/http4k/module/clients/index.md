@@ -58,7 +58,7 @@ This chain allows for the easy configuration and management of complex processin
 
 These examples are for the Apache HTTP client, but the API is similar for the others:
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/clients/example_http.kt)
+#### Code
 
 {{< kotlin file="example_http.kt" >}}
 
@@ -67,7 +67,7 @@ Additionally, all HTTP client adapter modules allow for custom configuration of 
 ### Websocket
 http4k supplies both blocking and non-blocking Websocket clients. The former is perfect for integration testing purposes, and as it uses the same interface `WsClient` as the in-memory test client (`WsHandler.testWsClient()`) it is simple to write unit tests which can then be reused as system tests by virtue of swapping out the client.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/clients/example_websocket.kt)
+#### Code
 
 {{< kotlin file="example_websocket.kt" >}}
 

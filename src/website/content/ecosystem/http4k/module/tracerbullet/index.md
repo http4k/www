@@ -52,7 +52,7 @@ One of the best things about the TracerBullet plugin is that it fits in seamless
 Once your applications have been designed to send data to the Events stream, just install the plugin and the diagramming
 comes for free!
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/self_document_systems_with_tests/example.kt)
+#### Code
 
 Here's an example of making this work - note the use of the filters to use RequestTracing on the Events and the servers
 and clients. This is required to make the TracerBullet work.

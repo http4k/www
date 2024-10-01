@@ -21,7 +21,7 @@ This module provides 2 things: a http4k compatible `SdkHttpClient` and a super-s
 
 1. With the `SdkHttpClient` you can use the standard Amazon SDKs libraries by plugging in a standard `HttpHandler`. This simplifies fault testing and means that you can print out the exact traffic which is going to AWS - which is brilliant for both debugging and writing Fakes. :)
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/aws/example_sdk.kt)
+#### Code
 
 {{< kotlin file="example_sdk.kt" >}}
 
@@ -30,6 +30,6 @@ This module provides 2 things: a http4k compatible `SdkHttpClient` and a super-s
 http4k provides a `Filter` which does this request signing process. Just decorate a standard HTTP client and then make the relevant calls:
 
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/aws/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}

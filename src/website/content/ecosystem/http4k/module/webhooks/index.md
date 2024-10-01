@@ -23,7 +23,7 @@ signing and verifying of Webhook requests (HMAC256 only currently) as per the st
 
 The example below shows how to use sign and verify filters to automatically provide security and marshalling for the Standard Webhook format.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/webhooks/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}
 

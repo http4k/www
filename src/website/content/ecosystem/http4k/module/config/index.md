@@ -29,6 +29,6 @@ instances around to redistribute load or avoid problematic server/rack/DCs.
 All application configuration should be injected via environmental variables. http4k provides an `Environment` object, along with
 typesafe variable binding using the in-built Lenses mechanism. This typesafe API is consistent with the other usages of Lenses
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/config/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}

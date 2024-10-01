@@ -27,6 +27,6 @@ A specialised ErrorHandler can also be assigned to the RPC contract.
 
 Note that in order to activate JSON RPC, you need to import one of the supported JSON modules.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/jsonrpc/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}

@@ -35,7 +35,7 @@ A basic Selenium WebDriver API implementation for http4k HttpHandlers, which run
 
 Use the API like any other WebDriver implementation, by simply passing your app HttpHandler to construct it.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/webdriver/example.kt)
+#### Code
 
 {{< kotlin file="example.kt" >}}
 

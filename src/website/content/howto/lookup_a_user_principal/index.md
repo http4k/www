@@ -17,6 +17,6 @@ When authorising requests, it is common to need to store some credentials or a u
 
 This can be easily achieved by combining the typesafe RequestContext functionality with one of the built-in authorisation Filters:
 
-### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/lookup_a_user_principal/example.kt)
+### Code
 
 {{< kotlin file="example.kt" >}}
