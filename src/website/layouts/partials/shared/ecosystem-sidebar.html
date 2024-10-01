@@ -12,7 +12,7 @@
                 <ul class="list-unstyled ms-3">
                     {{ range where (where .Site.RegularPages "Type" "eq" "concept") ".Params.ecosystem" "eq" $ecosystem }}
                     <li>
-                        <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
+                        <a href="{{ .RelPermalink }}/" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
                     </li>
                     {{ end }}
                 </ul>
@@ -33,7 +33,7 @@
                 <ul class="list-unstyled ms-3">
                     {{ range where (where .Site.RegularPages "Type" "eq" "module") ".Params.ecosystem" "eq" $ecosystem }}
                     <li>
-                        <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
+                        <a href="{{ .RelPermalink }}/" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
                     </li>
                     {{ end }}
                 </ul>

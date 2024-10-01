@@ -42,22 +42,22 @@ menus:
       children:
     - name: about-overview
       title: Overview
-      url: /overview
+      url: /overview/
       parent: about
       weight: 11
     - name: about-rationale
       title: Rationale
-      url: /rationale
+      url: /rationale/
       parent: about
       weight: 12
     - name: about-news
       title: News
-      url: /news
+      url: /news/
       parent: about
       weight: 13
     - name: about-in-action
       title: http4k in action
-      url: /http4k-in-action
+      url: /http4k-in-action/
       parent: about
       weight: 14
 
@@ -66,32 +66,32 @@ menus:
       weight: 20
     - name: learn-overview
       title: Overview
-      url: /learn
+      url: /learn/
       parent: learn
       weight: 21
     - name: learn-quickstart
       title: Quickstart
-      url: /quickstart
+      url: /quickstart/
       parent: learn
       weight: 22
     - name: learn-tutorials
       title: Tutorials
-      url: /tutorial
+      url: /tutorial/
       parent: learn
       weight: 23
     - name: learn-howto
       title: How-to guides
-      url: /howto
+      url: /howto/
       parent: learn
       weight: 24
     - name: learn-performance
       title: Performance
-      url: /performance
+      url: /performance/
       parent: learn
       weight: 25
     - name: learn-faq
       title: FAQ
-      url: /faq
+      url: /faq/
       parent: learn
       weight: 25
 
@@ -100,17 +100,17 @@ menus:
       weight: 30
     - name: ecosystem-overview
       title: Overview
-      url: /ecosystem
+      url: /ecosystem/
       parent: ecosystem
       weight: 31
     - name: ecosystem-http4k
       title: http4k Core
-      url: /ecosystem/http4k
+      url: /ecosystem/http4k/
       parent: ecosystem
       weight: 32
     - name: ecosystem-connect
       title: http4k Connect
-      url: /ecosystem/connect
+      url: /ecosystem/connect/
       parent: ecosystem
       weight: 33
 
@@ -119,27 +119,27 @@ menus:
       weight: 40
     - name: solutions-overview
       title: Overview
-      url: /solutions
+      url: /solutions/
       parent: solutions
       weight: 41
     - name: solutions-lts
       title: LTS Support
-      url: /lts-support
+      url: /lts-support/
       parent: solutions
       weight: 42
     - name: solutions-consulting
       title: http4k Consulting
-      url: /consulting
+      url: /consulting/
       parent: solutions
       weight: 43
     - name: solutions-training
       title: Training
-      url: /training
+      url: /training/
       parent: solutions
       weight: 44
     - name: solutions-training
       title: Security Advisories
-      url: /security
+      url: /security/
       parent: solutions
       weight: 45
 
@@ -148,7 +148,7 @@ menus:
       weight: 50
     - name: community-overview
       title: Overview
-      url: /community
+      url: /community/
       parent: community
       weight: 51
     - name: community-slack
@@ -158,12 +158,12 @@ menus:
       weight: 52
     - name: community-coc
       title: Code of conduct
-      url: /code-of-conduct
+      url: /code-of-conduct/
       parent: community
       weight: 53
     - name: community-contributors
       title: Contributing
-      url: /contributing
+      url: /contributing/
       parent: community
       weight: 54
 
@@ -172,7 +172,7 @@ menus:
       weight: 60
     - name: tools-web
       title: Web
-      url: https://toolbox.http4k.org
+      url: https://toolbox.http4k.org/
       parent: toolbox
       weight: 61
     - name: toolbox-intellij
@@ -182,18 +182,18 @@ menus:
       weight: 62
     - name: tools-cli
       title: CLI
-      url: https://toolbox.http4k.org
+      url: https://toolbox.http4k.org/
       parent: toolbox
       weight: 63
   legal:
     - name: "Privacy policy"
-      url: "/privacy-policy"
+      url: /privacy-policy/
       weight: 1
     - name: "Terms & conditions"
-      url: "/terms-and-conditions"
+      url: /terms-and-conditions/
       weight: 2
     - name: "Disclaimer"
-      url: "/disclaimer"
+      url: /disclaimer/
       weight: 3
 
 taxonomies:
