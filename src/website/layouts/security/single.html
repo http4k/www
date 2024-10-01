@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<div class="layout d-flex">
+    <main class="main-content ms-4">
+        <h1>{{ .File.BaseFileName }}: {{ .Title }}</h1>
+        <p class="small">{{ .Params.date | time.Format "January 1st 2006" }}</p>
+        {{ .Content }}
+    </main>
+</div>
+
+{{ end }}
