@@ -113,5 +113,5 @@ pulumi destroy --stack dev --yes
 You have successfully compiled an http4k application with GraalVM, then deployed and invoked it as a Lambda in AWS!
 
 [Your first http4k app]: /tutorial/your_first_http4k_app
-[Serverless http4k with AWS Lambda]: /tutorial/serverless_http4k_with_aws_lambda
+[Serverless http4k with AWS Lambda]: /tutorial/serverless_http4k_with_aws_lambda/
 [pulumi]: https://www.pulumi.com/docs/get-started/install/
