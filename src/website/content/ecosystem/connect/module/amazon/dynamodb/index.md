@@ -172,7 +172,7 @@ fun main() {
 }
 ```
 
-See another [example](client/src/examples/kotlin/using_the_table_mapper.kt) with secondary indices.
+See another [example](https://github.com/http4k/http4k-connect/blob/master/amazon/dynamodb/client/src/examples/kotlin/using_the_table_mapper.kt) with secondary indices.
 
 Complex scan or query expressions may be constructed using functions from the `KeyConditionBuilder` and `FilterExpressionBuilder` classes
 (which therefore provide a scan/query DSL). This DSL is not complete, however it should cover most of the common use cases. 
