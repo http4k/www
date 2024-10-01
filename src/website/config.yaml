@@ -1,4 +1,4 @@
-baseURL: "https://http4k.ing"
+baseURL: "https://http4k.org"
 languageCode: "en-us"
 
 title: "http4k"
@@ -30,7 +30,7 @@ params:
     id: "BGFZWRDS"
 
   contact:
-    email: "info@http4k.ing?subject=Get in touch with http4k"
+    email: "info@http4k.org?subject=Get in touch with http4k"
 
   copyright: "http4k Ltd – All Rights Reserved"
 
