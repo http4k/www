@@ -121,7 +121,7 @@ Cheers
 [43 line spike]: https://bit.ly/BarelyMagical
 [SpringerNature Technology]: https://springernature.com
 [http4k-connect]: https://github.com/http4k/http4k-connect
-[serverless-lambda-runtime]: /guide/tutorials/going_native_with_graal_on_aws_lambda
+[serverless-lambda-runtime]: /tutorial/going_native_with_graal_on_aws_lambda
 [digest]: /ecosystem/http4k/module/digest
 [strikt]: /ecosystem/http4k/module/strikt/
 [Helidon]: https://helidon.io/
