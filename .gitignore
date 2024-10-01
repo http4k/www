@@ -9,5 +9,6 @@ classes
 build
 out
 store
+tmp
 
 /RenderingTest - render successful trace - Sequence.puml
