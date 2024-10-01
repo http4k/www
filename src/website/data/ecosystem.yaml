@@ -1,0 +1,6 @@
+"http4k Core":
+  github: "https://github.com/http4k/http4k"
+  ref: http4k
+"http4k Connect":
+  github: "https://github.com/http4k/http4k-connect"
+  ref: connect

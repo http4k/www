@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+<div class="layout">
+	{{ partial "shared/ecosystem-sidebar" . }}
+	<main class="main-content">
+		{{ (resources.GetRemote .Params.remote).Content | markdownify }}
+	</main>
+</div>
+
+{{ end }}
