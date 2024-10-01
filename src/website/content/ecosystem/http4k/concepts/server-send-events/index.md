@@ -11,7 +11,7 @@ description: An explanation of the core function types for dealing with Server-S
 Sse communication consists of a few main concepts:
 
 ### SseMessage
-As per the **http4k** ethos, an immutable message object to be pushed from the server to the connected client. There are 2 types of SseMessage - Events (for sending known constructs), and Data (for sending byte streams). [Lenses](/ecosystem/http4k/concept/lens) can be used to provide typesafe object marshalling with SseMessages. 
+As per the **http4k** ethos, an immutable message object to be pushed from the server to the connected client. There are 2 types of SseMessage - Events (for sending known constructs), and Data (for sending byte streams). [Lenses](/ecosystem/http4k/concepts/lens) can be used to provide typesafe object marshalling with SseMessages. 
 
 ### Sse
 ```kotlin
@@ -22,7 +22,7 @@ interface Sse {
     fun onClose(fn: () -> Unit)
 }
 ```
-An interface representing the available server callback API to the Server-Sent Event channel. Sse objects can `send()` SseMessages to the client, or `close()` the connection. The Sse has a reference to the incoming [HTTP Request](/ecosystem/http4k/concept/http) which was used during connection.
+An interface representing the available server callback API to the Server-Sent Event channel. Sse objects can `send()` SseMessages to the client, or `close()` the connection. The Sse has a reference to the incoming [HTTP Request](/ecosystem/http4k/concepts/http) which was used during connection.
 
 ### SseConsumer
 ```kotlin
@@ -36,14 +36,14 @@ The primary callback received when an Sse server is connected to a client. API u
 typelias SseHandler = (Request) -> SseResponse
 ```
 
-Provides the route mapping of an [HTTP Request](/ecosystem/http4k/concept/http) to a particular SseResponse (which contains a SseConsumer).
+Provides the route mapping of an [HTTP Request](/ecosystem/http4k/concepts/http) to a particular SseResponse (which contains a SseConsumer).
 
 ### SseFilter
 ```kotlin
 fun interface SseFilter : (SseConsumer) -> SseConsumer
 ```
 
-Applies decoration to a matched SseConsumer before it is invoked. SseFilters can be used to apply tangental effects to the matched SseConsumer such as logging/security, or to modify the incoming [HTTP Request](/ecosystem/http4k/concept/http).
+Applies decoration to a matched SseConsumer before it is invoked. SseFilters can be used to apply tangental effects to the matched SseConsumer such as logging/security, or to modify the incoming [HTTP Request](/ecosystem/http4k/concepts/http).
 
 ### SseRouter
 ```kotlin
