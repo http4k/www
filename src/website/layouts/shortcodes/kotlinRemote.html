@@ -1,0 +1,5 @@
+{{ with resources.GetRemote .Params.remote }}
+{{ highlight .Content "kotlin" }}
+{{ else }}
+{{ errorf "Remote not found: %s" .Params.remote }}
+{{ end }}

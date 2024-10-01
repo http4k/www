@@ -2,7 +2,7 @@
 layout: module
 type: module
 ecosystem: http4k Core
-title: Serverlesss
+title: Serverless
 description: Feature overview of the http4k-serverless modules, covering Serverless backends
 ---
 
@@ -71,7 +71,7 @@ The process of configuration is the same as for HTTP apps above.
 
 #### Code
 
-{{< kotlin file="lambda/example_event_handling.kt" >}}
+{{< kotlinRemote remote="https://raw.githubusercontent.com/http4k/http4k/refs/heads/master/http4k-serverless/lambda/src/examples/kotlin/example_event_handling.kt" >}}
 
 #### Google Cloud Functions integration
 Google Cloud Functions are triggered in the cloud by calling an entry point class which implements their `HttpFunction` interface.
