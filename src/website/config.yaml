@@ -180,44 +180,15 @@ menus:
       url: https://toolbox.http4k.org
       parent: toolbox
       weight: 63
-
-  developers:
-    - name: "Quick Start"
-      url: "/quickstart"
+  legal:
+    - name: "Privacy policy"
+      url: "/privacy-policy"
       weight: 1
-    - name: "Documentation"
-      url: "/documentation"
+    - name: "Terms & conditions"
+      url: "/terms-and-conditions"
       weight: 2
-    - name: "F.A.Q"
-      url: "/faq"
-      weight: 3
-    - name: "Licensing"
-      url: "https://github.com/http4k/http4k/blob/master/LICENSE"
-      weight: 4
-
-  community:
-    - name: "GitHub"
-      url: "https://github.com/http4k/http4k"
-      weight: 1
-    - name: "Slack"
-      url: "https://kotlinlang.slack.com/archives/C5AL3AKUY"
-      weight: 2
-    - name: "Twitter"
-      url: "https://twitter.com/http4k"
-      weight: 3
-    - name: "Code of Conduct"
-      url: "/code-of-conduct"
-      weight: 4
-
-  company:
-    - name: "About Us"
-      url: "/guide/concepts/rationale"
-      weight: 1
-    - name: "Support/Training"
-      url: "/support"
-      weight: 2
-    - name: "Contact"
-      url: "mailto:contact@http4k.org"
+    - name: "Disclaimer"
+      url: "/disclaimer"
       weight: 3
 
 taxonomies:

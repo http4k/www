@@ -1,14 +1,16 @@
-<footer >
+<footer>
     <div class="container">
         <div class="row pb-3 text-start text-xl-start">
             <div class="col-md-6 col-lg-3" style="width: 200px">
-                <a class="p-0" href="https://http4k.org" >
-                    <img src="{{ .Site.Params.LogoSvg }}" alt="logo"/>
+                <a class="p-0" href="https://http4k.org">
+                    <img src="{{ .Site.Params.LogoSvg }}" alt="logo" width="50%"/>
                 </a>
-                Copyright © 2023<br/><br/>
+                <br/>
+                <br/>
+                Copyright © {{ now.Format "2006" }}
             </div>
             {{ range .Site.Menus.nav }}
-            <div class="col-xs-12 col-md">
+            <div class="col-xs-6 col-md">
                 <h5>{{ .Title }}</h5>
                 <ul class="list-unstyled">
                     {{ range .Children }}
@@ -17,6 +19,13 @@
                 </ul>
             </div>
             {{ end }}
+            <div class="col-xs-6 col-md">
+                <h5>Legal</h5>
+                <ul class="list-unstyled">
+                {{ range .Site.Menus.legal }}
+                    <li><a class="small text-white text-decoration-none" href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
+                </ul>
+            </div>
         </div>
-    </div>
 </footer>
