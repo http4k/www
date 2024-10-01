@@ -1,6 +1,7 @@
 <aside class="sidebar">
     <div>
         <ul class="list-unstyled">
+            {{ $current := $.Page }}
             {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
             {{ $ecosystem := .Params.ecosystem }}
             <li>
@@ -9,7 +10,7 @@
                 </a>
                 <div id="collapse-{{ .File.UniqueID }}" class="collapse {{ if eq $.Page.Params.ecosystem $ecosystem }}show{{ end }}">
                     <ul class="list-unstyled ms-3">
-                        {{ range where (where .Site.RegularPages ".Type" "module") ".Params.ecosystem" "eq" $ecosystem }}
+                        {{ range where (where .Site.RegularPages "Type" "eq" "module") ".Params.ecosystem" "eq" $ecosystem }}
                         <li>
                             <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
                         </li>
