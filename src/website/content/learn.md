@@ -16,7 +16,7 @@ Regardless of which section you are reading, as much of the code as possible exi
 ### Concepts
 http4k is a simple framework based around several function types, and hopefully the ideas behind it are not difficult to grasp. This section conveys the mindset and rationale behind http4k, and lays out each of the main function types used in the toolkit and how they relate to each other.
 
-We recommend that all new users familiarise themselves with at least the [rationale](/rationale) and [HTTP](/concepts/http) pages of this section.
+We recommend that all new users familiarise themselves with at least the [rationale](/rationale/) and [HTTP](/concepts/http) pages of this section.
 
 Read more about the theory behind Concepts [here](https://diataxis.fr/explanation/).
 
