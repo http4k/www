@@ -21,4 +21,4 @@ also been converted to reusable extension methods on Response.
 {{< kotlin file="project.kt" >}}
 
 - [Part 3: Adding another endpoint](../part3/)
-- [Part 4: Adding an external dependency](../part4)
+- [Part 4: Adding an external dependency](../part4/)
