@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<div class="layout">
+	{{ partial "shared/ecosystem-sidebar" . }}
+	<main class="main-content">
+		<h1>{{ .Title }}</h1>
+		{{ .Content }}
+	</main>
+</div>
+
+{{ end }}

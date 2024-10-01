@@ -1,7 +1,7 @@
 ---
 layout: concept
 type: concept
-ecosystem: http4k
+ecosystem: http4k Core
 title: Lenses
 description: An explanation of Lenses and how they are used in http4k
 ---
