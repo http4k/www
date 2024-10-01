@@ -2,7 +2,9 @@
 <html lang="en">
 {{ partial "head/head.html" . }}
 <body>
-{{- partial "shared/header.html" . -}}
+<header style="background: url('/images/pipes-hero.svg'); background-color: #59aff5;">
+    {{- partial "shared/header.html" . -}}
+</header>
 {{- block "main" . -}}{{- end -}}
 {{- partial "shared/footer.html" . -}}
 </body>
