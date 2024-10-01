@@ -53,7 +53,7 @@ The main documentation has moved to the http4k Connect [site](https://connect.ht
 
 ## Supported APIs and Fakes:
 
-See the [Module Reference](https://connect.http4k.org/guide/reference/) for the complete list of supported services.
+See the [Module Reference](https://connect.http4k.org/ecosystem/http4k/module/) for the complete list of supported services.
 
 <div class="github">
 - [Example Template](./example) -> `"org.http4k:http4k-connect-example"` / `"org.http4k:http4k-connect-example-fake"`

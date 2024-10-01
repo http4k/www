@@ -23,8 +23,8 @@ signing and verifying of Webhook requests (HMAC256 only currently) as per the st
 
 The example below shows how to use sign and verify filters to automatically provide security and marshalling for the Standard Webhook format.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/webhooks/example.kt)
+#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/webhooks/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/webhooks/example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/webhooks/example.kt"></script>
 
 [http4k]: https://http4k.org

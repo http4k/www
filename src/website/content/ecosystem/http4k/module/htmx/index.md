@@ -22,6 +22,6 @@ dependencies {
 
 Utilities to support [htmx](https://htmx.org) development. Includes the htmx and hyperscript Webjar support and a set of classes/functions to ease development of htmx-powered applications.
 
-### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/htmx/example.kt)
+### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/htmx/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/htmx/example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/htmx/example.kt"></script>

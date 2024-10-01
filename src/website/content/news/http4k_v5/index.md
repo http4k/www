@@ -122,11 +122,11 @@ Cheers
 [SpringerNature Technology]: https://springernature.com
 [http4k-connect]: https://github.com/http4k/http4k-connect
 [serverless-lambda-runtime]: /guide/tutorials/going_native_with_graal_on_aws_lambda
-[digest]: /guide/reference/digest
-[strikt]: /guide/reference/strikt/
+[digest]: /ecosystem/http4k/module/digest
+[strikt]: /ecosystem/http4k/module/strikt/
 [Helidon]: https://helidon.io/
 [Jetty]: https://github.com/eclipse/jetty.project/issues/8007
-[TracerBullet]: /guide/reference/tracerbullet/
+[TracerBullet]: /ecosystem/http4k/module/tracerbullet/
 [PlantUML]: https://plantuml.com/
 [Mermaid]: https://mermaid.live/
 [d2]: https://d2lang.com/

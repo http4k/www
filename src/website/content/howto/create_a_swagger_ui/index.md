@@ -15,7 +15,7 @@ but any hand-crafted or external description can be used as well.
 
 For more detail on generating **OpenAPI** descriptions, see:
 
-- [Http4k Reference: Contracts](/guide/reference/contracts)
+- [Http4k Reference: Contracts](/ecosystem/http4k/module/contracts)
 - [Integrate with OpenAPI](/howto/integrate_with_openapi)
 
 ### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleContract.kt)

@@ -39,16 +39,16 @@ then transmits them to the server, along with the plaintext `username`
    and compares is to the one supplied by the client.  If they match, it grants the client access to the protected resource
 
 
-### Example Provider [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/digest/example_provider_digest.kt)
+### Example Provider [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/digest/example_provider_digest.kt)
 
 This example has an integrated username/password store; you will want to come up with your own version, with credentials encrypted at rest.
 
 The server accepts a path parameter, and parrots back the value provided by the client.
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/digest/example_provider_digest.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/digest/example_provider_digest.kt"></script>
 
-### Example Client  [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/digest/example_client_digest.kt)
+### Example Client  [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/digest/example_client_digest.kt)
 
 This example integrates with the provider above, sending a request with a value to be parroted back.
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/digest/example_client_digest.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/digest/example_client_digest.kt"></script>

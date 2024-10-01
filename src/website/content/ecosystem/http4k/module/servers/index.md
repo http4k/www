@@ -51,9 +51,9 @@ dependencies {
 Server-backend modules provide a consistent API to mount HttpHandlers into the specified container in 1 LOC, by 
 simply passing it to the relevant `ServerConfig` implementation (in this case `Jetty`):
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/servers/example_http.kt)
+#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/servers/example_http.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/servers/example_http.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/servers/example_http.kt"></script>
 
 ### Customisation
 Each of the server backends implement an interface `ServerConfig`, which is written with sensible defaults for the server in questions, 
