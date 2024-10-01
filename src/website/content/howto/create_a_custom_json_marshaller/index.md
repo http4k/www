@@ -125,8 +125,8 @@ object MyJackson : ConfigurableJackson(
 
 A full worked example is shown below.
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/create_a_custom_json_marshaller/example.kt)
+#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_custom_json_marshaller/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/create_a_custom_json_marshaller/example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_custom_json_marshaller/example.kt"></script>
 
 

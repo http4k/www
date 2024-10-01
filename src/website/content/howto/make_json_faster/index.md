@@ -34,9 +34,9 @@ dependencies {
 }
 ```
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/make_json_faster/kotlinx_example.kt)
+### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/make_json_faster/kotlinx_example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/make_json_faster/kotlinx_example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/make_json_faster/kotlinx_example.kt"></script>
 
 ## Moshi Metadata Reflect
 
@@ -58,9 +58,9 @@ dependencies {
 }
 ```
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/make_json_faster/moshi_metadata_reflect_example.kt)
+### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/make_json_faster/moshi_metadata_reflect_example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/make_json_faster/moshi_metadata_reflect_example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/make_json_faster/moshi_metadata_reflect_example.kt"></script>
 
 ## Kotshi
 
@@ -90,6 +90,6 @@ dependencies {
 }
 ```
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/make_json_faster/kotshi_example.kt)
+### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/make_json_faster/kotshi_example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/make_json_faster/kotshi_example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/make_json_faster/kotshi_example.kt"></script>

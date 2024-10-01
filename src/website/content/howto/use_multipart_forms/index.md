@@ -19,22 +19,22 @@ dependencies {
 }
 ```
 
-### Standard (non-typesafe) API [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_multipart_forms/example_standard.kt)
+### Standard (non-typesafe) API [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_multipart_forms/example_standard.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_multipart_forms/example_standard.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_multipart_forms/example_standard.kt"></script>
 
-### Lens (typesafe, validating) API - reads ALL contents onto disk/memory [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_multipart_forms/example_lens.kt)
+### Lens (typesafe, validating) API - reads ALL contents onto disk/memory [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_multipart_forms/example_lens.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_multipart_forms/example_lens.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_multipart_forms/example_lens.kt"></script>
 
-### Streaming - iterate over Multiparts [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_multipart_forms/example_streaming.kt)
+### Streaming - iterate over Multiparts [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_multipart_forms/example_streaming.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_multipart_forms/example_streaming.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_multipart_forms/example_streaming.kt"></script>
 
-### Processing Files with a Filter and convert to standard form [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_multipart_forms/example_processing.kt)
+### Processing Files with a Filter and convert to standard form [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_multipart_forms/example_processing.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_multipart_forms/example_processing.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_multipart_forms/example_processing.kt"></script>
 
-### Multipart combined with typesafe contract (OpenApi) [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_multipart_forms/example_contract.kt)
+### Multipart combined with typesafe contract (OpenApi) [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_multipart_forms/example_contract.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_multipart_forms/example_contract.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_multipart_forms/example_contract.kt"></script>

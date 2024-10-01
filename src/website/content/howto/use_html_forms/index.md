@@ -18,10 +18,10 @@ dependencies {
 }
 ```
 
-### Standard (non-typesafe) API [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_html_forms/example_standard.kt)
+### Standard (non-typesafe) API [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_html_forms/example_standard.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_html_forms/example_standard.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_html_forms/example_standard.kt"></script>
 
-### Lens (typesafe, validating) API [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_html_forms/example_lens.kt)
+### Lens (typesafe, validating) API [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_html_forms/example_lens.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_html_forms/example_lens.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_html_forms/example_lens.kt"></script>

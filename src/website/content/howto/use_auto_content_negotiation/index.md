@@ -44,6 +44,6 @@ It can then be used to:
 If the `CONTENT_TYPE` and `ACCEPT` headers are not present, or if there is no lens for the requested format,
 then a default lens is used.
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_auto_content_negotiation/example.kt)
+### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_auto_content_negotiation/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/use_auto_content_negotiation/example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_auto_content_negotiation/example.kt"></script>

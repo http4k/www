@@ -46,6 +46,6 @@ In harmony with the [ethos](/guide/concepts/rationale) of **http4k** there is no
 
 The example below shows a simple application that outputs structured logs to StdOut which can be analysed by an aggregator, along with the attachment of extra `Event` metadata via a custom `EventFilter`.
  
-### Code [<img class="octocat" src="/img/octocat-32.png"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/structure_your_logs_with_events/example.kt)
+### Code [<img class="octocat" src="/img/octocat-32.png"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/structure_your_logs_with_events/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/structure_your_logs_with_events/example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/structure_your_logs_with_events/example.kt"></script>

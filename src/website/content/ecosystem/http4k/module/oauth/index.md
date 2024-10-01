@@ -49,7 +49,7 @@ Out of the box, http4k provides implementations for several OAuth providers.
 
 <script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/reference/oauth/example_provider_oauth.kt"></script>
 
-See the [how-to guides](/guide/howto/use_a_custom_oauth_provider/) for a custom implementation.
+See the [how-to guides](/howto/use_a_custom_oauth_provider/) for a custom implementation.
 
 ### Refresh Token Grant
 

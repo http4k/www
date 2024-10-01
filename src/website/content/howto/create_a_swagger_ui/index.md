@@ -17,13 +17,13 @@ but any hand-crafted or external description can be used as well.
 For more detail on generating **OpenAPI** descriptions, see:
 
 - [Http4k Reference: Contracts](/guide/reference/contracts)
-- [Integrate with OpenAPI](/guide/howto/integrate_with_openapi)
+- [Integrate with OpenAPI](/howto/integrate_with_openapi)
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/create_a_swagger_ui/exampleContract.kt)
+### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleContract.kt)
 
 This simple description will be used for all examples in this guide:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/create_a_swagger_ui/exampleContract.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleContract.kt"></script>
 
 ## Build the UI
 
@@ -39,9 +39,9 @@ dependencies {
 }
 ```
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/create_a_swagger_ui/exampleLite.kt)
+### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleLite.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/create_a_swagger_ui/exampleLite.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleLite.kt"></script>
 
 ## Bundle the UI with Webjars
 
@@ -60,6 +60,6 @@ dependencies {
 
 You can pick and choose whether you want Redoc, Swagger UI, or both bundled with your application.
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/create_a_swagger_ui/exampleWebjar.kt)
+### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleWebjar.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/create_a_swagger_ui/exampleWebjar.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleWebjar.kt"></script>

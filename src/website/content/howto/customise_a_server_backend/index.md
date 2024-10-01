@@ -20,6 +20,6 @@ dependencies {
 
 The example below shows a customised Jetty setup which enables HTTPS traffic by reimplementing the `ServerConfig` interface. The idea is that this single class will encapsulate the usage of the Server platform API behind the http4k abstraction and provide a simple way to reuse it across different applications.
 
-### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/customise_a_server_backend/example.kt)
+### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/customise_a_server_backend/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/customise_a_server_backend/example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/customise_a_server_backend/example.kt"></script>

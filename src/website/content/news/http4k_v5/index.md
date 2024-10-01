@@ -131,7 +131,7 @@ Cheers
 [Mermaid]: https://mermaid.live/
 [d2]: https://d2lang.com/
 [KotlinConf 2023]: https://kotlinconf.com/
-[automatically generate sequence and interaction diagrams]: /guide/howto/self_document_systems_with_tests
+[automatically generate sequence and interaction diagrams]: /howto/self_document_systems_with_tests
 [here]: https://bit.ly/hyperpyramid-kotlinconf
 [Connect pattern]: https://dentondav.id/posts/2021/02/smash-your-adapter-monolith
 [http4k-connect-openai]: https://github.com/http4k/http4k-connect/tree/master/openai

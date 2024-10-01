@@ -6,7 +6,7 @@ description: Recipes for using the http4k composable routing API
 ---
 This example shows how to use the simple routing functionality to bind several routes.
 
-For the typesafe contract-style routing, refer to [this](/guide/howto/integrate_with_openapi/) recipe instead,
+For the typesafe contract-style routing, refer to [this](/howto/integrate_with_openapi/) recipe instead,
 
 ### Gradle setup
 
@@ -17,6 +17,6 @@ dependencies {
 }
 ```
 
-### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/simple_routing/example.kt)
+### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/simple_routing/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/simple_routing/example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/simple_routing/example.kt"></script>

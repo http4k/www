@@ -52,12 +52,12 @@ One of the best things about the TracerBullet plugin is that it fits in seamless
 Once your applications have been designed to send data to the Events stream, just install the plugin and the diagramming
 comes for free!
 
-#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/self_document_systems_with_tests/example.kt)
+#### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/self_document_systems_with_tests/example.kt)
 
 Here's an example of making this work - note the use of the filters to use RequestTracing on the Events and the servers
 and clients. This is required to make the TracerBullet work.
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/self_document_systems_with_tests/example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/self_document_systems_with_tests/example.kt"></script>
 
 An extended example of this technique can be found at the [this repository](https://github.com/http4k/exploring-the-testing-hyperpyramid).
 

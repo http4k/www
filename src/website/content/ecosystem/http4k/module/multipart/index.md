@@ -20,7 +20,7 @@ dependencies {
 
 Multipart form support for fields and files, including a set of lens extensions for fields/files.
 
-See the [how-to guides](/guide/howto/use_multipart_forms/) for example use.
+See the [how-to guides](/howto/use_multipart_forms/) for example use.
 
 ### Receiving Binary content with http4k Contracts
 

@@ -25,10 +25,10 @@ dependencies {
 }
 ```
 
-#### String-based keys [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/attach_context_to_a_request/string_key_example.kt)
+#### String-based keys [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/attach_context_to_a_request/string_key_example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/attach_context_to_a_request/string_key_example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/attach_context_to_a_request/string_key_example.kt"></script>
 
-#### Lens-based keys [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/attach_context_to_a_request/lens_key_example.kt)
+#### Lens-based keys [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/attach_context_to_a_request/lens_key_example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/guide/howto/attach_context_to_a_request/lens_key_example.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/attach_context_to_a_request/lens_key_example.kt"></script>
