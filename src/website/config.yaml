@@ -162,8 +162,8 @@ menus:
       parent: community
       weight: 53
     - name: community-contributors
-      title: Contributors
-      url: /contributors
+      title: Contributing
+      url: /contributing
       parent: community
       weight: 54
 
