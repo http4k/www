@@ -1,6 +1,5 @@
 ---
 layout: howto
-tags: [http4k Core]
 title: "Lookup a user principal"
 description: Recipes for looking up and populating a user principal from a request
 ---

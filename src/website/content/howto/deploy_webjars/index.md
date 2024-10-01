@@ -1,6 +1,5 @@
 ---
 layout: howto
-tags: [http4k Core]
 title: "Deploy WebJars"
 description: Recipe for using WebJars with http4k 
 ---

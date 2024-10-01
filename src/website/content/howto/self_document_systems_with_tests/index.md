@@ -1,6 +1,5 @@
 ---
 layout: howto
-tags: [http4k Core]
 title: "Self Document Systems with Tests"
 description: Recipe for creating a Distributed Tracing Tree
 ---

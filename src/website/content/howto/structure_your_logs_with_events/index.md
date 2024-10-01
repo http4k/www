@@ -1,6 +1,5 @@
 ---
 layout: howto
-tags: [http4k Core]
 title: "Structure your logs with Events"
 description: Recipe for using http4k Events to send structured logs to external log sinks
 ---

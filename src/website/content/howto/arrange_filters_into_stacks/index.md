@@ -1,6 +1,5 @@
 ---
 layout: howto
-tags: [http4k Core]
 title: "Arrange Filters into stacks"
 description: A strategy for composing your applications
 layout: how-to

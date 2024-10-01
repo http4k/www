@@ -1,6 +1,5 @@
 ---
 layout: howto
-tags: [http4k Core]
 title: "Make JSON Faster"
 description: Recipes to make JSON faster through the use of lighter reflection or code generation
 ---

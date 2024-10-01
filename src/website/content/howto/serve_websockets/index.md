@@ -1,6 +1,5 @@
 ---
 layout: howto
-tags: [http4k Core]
 title: "Serve Websocket"
 description: Recipes for using http4k with websockets
 ---

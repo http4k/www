@@ -1,6 +1,5 @@
 ---
 layout: howto
-tags: [http4k Core]
 title: "Use a Server backend"
 description: Recipes for using http4k with the various Server backends
 ---

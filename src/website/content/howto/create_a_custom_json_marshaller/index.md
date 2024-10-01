@@ -1,6 +1,5 @@
 ---
 layout: howto
-tags: [http4k Core]
 title: "Create a custom JSON marshaller"
 description: Recipes for using JSON in http4k applications with a variety of popular JSON APIS
 ---

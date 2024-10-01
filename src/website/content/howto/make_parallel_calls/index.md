@@ -1,6 +1,5 @@
 ---
 layout: howto
-tags: [http4k Core]
 title: "Make HTTP calls in parallel"
 description: Recipe to make HTTP calls in parallel using a ThreadPoolExecutor
 ---
