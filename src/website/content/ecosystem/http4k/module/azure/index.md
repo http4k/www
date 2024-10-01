@@ -21,4 +21,4 @@ This module provides a http4k compatible `HttpClient` so you can http4k-ise your
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/aws/example_sdk.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/azure/example_sdk.kt"></script>
+{{< kotlin file="example_sdk.kt" >}}

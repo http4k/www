@@ -27,7 +27,7 @@ As with the [ethos](/guide/concepts/rationale) of http4k, the uniform Server/Cli
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/graphql/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/graphql/example.kt"></script>
+{{< kotlin file="example.kt" >}}
 
 [http4k]: https://http4k.org
 [GraphQL]: https://graphql.org

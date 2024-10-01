@@ -31,5 +31,4 @@ typesafe variable binding using the in-built Lenses mechanism. This typesafe API
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/config/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/config/example.kt"></script>
-
+{{< kotlin file="example.kt" >}}

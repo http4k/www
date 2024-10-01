@@ -15,7 +15,7 @@ find "$BASE_DIR" -type f -exec grep -Il '<script src="https://gist-it.appspot.co
     content=$(<"$file")
 
     # Use sed to replace the script tags with the desired Hugo shortcode format
-    modified_content=$(echo "$content" | sed -E 's|<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/(.*/)?([^/]+)"></script>|{{< kotlin file="\2" >}}|g')
+    modified_content=$(echo "$content" | sed -E 's|<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/.*/([^/]+)"></script>|{{< kotlin file="\1" >}}|g')
 
     # Write the modified content back to the file if there are changes
     if [ "$content" != "$modified_content" ]; then

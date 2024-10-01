@@ -69,7 +69,7 @@ For use in automated test suites, it is simple to define the Chaos behaviour pro
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/chaos/example_chaos.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/chaos/example_chaos.kt"></script>
+{{< kotlin file="example_chaos.kt" >}}
 
 ### Dynamic behaviour injection using Chaos Controls
 For use in deployed environments or when experimenting with the reaction of systems to failure, there is the need to vary (and otherwise control) the Chaos behaviour that an application or downstream fake exhibits, in order to simulate periods of failures and then observe the after-effects.
@@ -119,10 +119,10 @@ Apart from being able to turn the Chaos on/off and check the status, the most po
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/chaos/example_chaos_controls_openapi.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/chaos/example_chaos_controls_openapi.kt"></script>
+{{< kotlin file="example_chaos_controls_openapi.kt" >}}
 
 ### Interacting with ChaosEngine using an HTTP client
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/chaos/example_chaos_controls_client.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/chaos/example_chaos_controls_client.kt"></script>
+{{< kotlin file="example_chaos_controls_client.kt" >}}

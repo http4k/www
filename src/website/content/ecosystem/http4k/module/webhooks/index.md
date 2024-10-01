@@ -25,6 +25,6 @@ The example below shows how to use sign and verify filters to automatically prov
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/webhooks/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/webhooks/example.kt"></script>
+{{< kotlin file="example.kt" >}}
 
 [http4k]: https://http4k.org

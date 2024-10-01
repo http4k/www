@@ -36,11 +36,11 @@ These modules provide auto-marshalling functionality to convert XML into arbitra
 - Has trouble with repeating child-elements, depending on zero, one or many elements in the XML. This is due to the underlying library implementation
 - Only handles objects with primitive JDK types
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/xml/jacksonAutoXml.kt"></script>
+{{< kotlin file="jacksonAutoXml.kt" >}}
 
 ### Xml
 As above, we recommend using `http4k-format-jackson-xml` as it has more predictable and consistent behaviour.
  
 #### XML Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/xml/autoXml.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/xml/autoXml.kt"></script>
+{{< kotlin file="autoXml.kt" >}}

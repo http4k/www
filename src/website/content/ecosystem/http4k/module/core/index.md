@@ -92,7 +92,7 @@ Check out the `org.http4k.filter` package for the exact list.
 
 #### Testing Filters [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/core/FilterTest.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/core/FilterTest.kt"></script>
+{{< kotlin file="FilterTest.kt" >}}
 
 ### Routers - Nestable, path-based Routing
 Create a Router using routes() to bind a static or dynamic path to either an HttpHandler, or to another sub-Router. These Routers can be nested infinitely deep and http4k will search for a matching route using a depth-first search algorithm, before falling back finally to a 404:
@@ -109,7 +109,7 @@ Note that the `http4k-contract` module contains a more typesafe implementation o
 
 #### Testing Routers [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/core/RoutingTest.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/core/RoutingTest.kt"></script>
+{{< kotlin file="RoutingTest.kt" >}}
 
 
 ### Typesafe parameter destructuring/construction of HTTP messages with Lenses
@@ -138,7 +138,7 @@ Once the lens is declared, you can use it on a target object to either get or se
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/core/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/core/example.kt"></script>
+{{< kotlin file="example.kt" >}}
 
 ### Serving static assets
 For serving static assets, just bind a path to a Static block as below, using either a Classpath or Directory (Hot reloading) based ResourceLoader instance (find these on the `ResourceLoader` companion object). Typically, Directory is used during development and the Classpath strategy is used to serve assets in production from an UberJar. This is usually based on a "devmode" flag when constructing your app". **Note** that you should avoid setting the Classpath value to the root because otherwise it will serve anything from your classpath (including Java class files!)!:

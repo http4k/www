@@ -11,10 +11,10 @@ description: A step-by-step guide to TDDing a simple http4k application
 
 ### Tests:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/tutorial/tdding_http4k/_3/tests.kt"></script>
+{{< kotlin file="tests.kt" >}}
 
 ### Production:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/tutorial/tdding_http4k/_3/project.kt"></script>
+{{< kotlin file="project.kt" >}}
 
 - [Part 4: Adding an external dependency](../_4)

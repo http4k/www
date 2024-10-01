@@ -51,7 +51,7 @@ objects, including custom Lens methods for each library so that JSON node object
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/json/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/json/example.kt"></script>
+{{< kotlin file="example.kt" >}}
 
 ### Auto-marshalling capabilities
 
@@ -62,10 +62,10 @@ We can use this facility in http4k to automatically marshall objects to/from HTT
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/json/autoJson.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/json/autoJson.kt"></script>
+{{< kotlin file="autoJson.kt" >}}
 
 serializing an object/class for a Response via `Lens.inject()` - this properly sets the `Content-Type` header to `application/json`:
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/json/autoJsonResponse.kt"></script>
+{{< kotlin file="autoJsonResponse.kt" >}}
 
 There is a utility to generate Kotlin data class code for JSON documents [here](http://toolbox.http4k.org/dataclasses). 
 These data classes are compatible with using the `Body.auto<T>()` functionality. 
@@ -105,6 +105,6 @@ As shown, a workaround to this is to use `Body.auto<Array<MyIntWrapper>>().toLen
 
 [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/json/list_gotcha.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/json/list_gotcha.kt"></script>
+{{< kotlin file="list_gotcha.kt" >}}
 
 [http4k]: https://http4k.org

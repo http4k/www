@@ -15,11 +15,11 @@ documentation, and checking in a high-level way that the business endpoints are 
 
 ### Tests:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/tutorial/tdding_http4k/_1/tests.kt"></script>
+{{< kotlin file="tests.kt" >}}
 
 ### Production:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/tutorial/tdding_http4k/_1/project.kt"></script>
+{{< kotlin file="project.kt" >}}
 
 - [Part 2: Adding an endpoint](../_2)
 - [Part 3: Adding another endpoint](../_3)

@@ -47,7 +47,7 @@ By using the `ApprovalTest` extension, an instance of an `Approver` is injected 
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/approvaltests/example_standard.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/approvaltests/example_standard.kt"></script>
+{{< kotlin file="example_standard.kt" >}}
 
 ### Content-type specific Approval tests
 Because so many APIs are based around messages with a particular content type, the 
@@ -65,7 +65,7 @@ The module also provides the following built-in extensions:
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/approvaltests/example_json.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/approvaltests/example_json.kt"></script>
+{{< kotlin file="example_json.kt" >}}
 
 ### Implementing custom JUnit Extensions
 As with the rest of http4k, a base implementation, `BaseApprovalTest` of the Junit5 Extension is 

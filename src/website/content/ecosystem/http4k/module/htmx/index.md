@@ -24,4 +24,4 @@ Utilities to support [htmx](https://htmx.org) development. Includes the htmx and
 
 ### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/htmx/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/htmx/example.kt"></script>
+{{< kotlin file="example.kt" >}}

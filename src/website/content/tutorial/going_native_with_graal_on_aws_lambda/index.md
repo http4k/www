@@ -25,7 +25,7 @@ This custom runtime is a lightweight, zero-reflection module which allows you to
 #### Step 2
 Lambdas working from a native binary have to supply their own `main` function to launch the runtime, instead of implementing the standard `Request/StreamHandler` interfaces. To use it on our app, we simply create a launcher and wrap our http4k `HttpHandler` with the appropriate FnHandler class before starting the Runtime. Put this into a new `HelloServerlessHttp4k.kt` (different package to before:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/tutorial/going_native_with_graal_on_aws_lambda/HelloServerlessHttp4k.kt"></script>
+{{< kotlin file="HelloServerlessHttp4k.kt" >}}
 
 Update the Pulumi config to point to the new file:
 

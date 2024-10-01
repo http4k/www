@@ -30,7 +30,7 @@ The example below shows how:
 - Lens-based marshalling of Websocket message objects using Jackson. 
 - `WsHandler` can be combined with an `HttpHandler` to make a `PolyHandler` - an application which can serve many protocols. Conversion of the `PolyHandler` to a supporting Server can be done via the standard `asServer()` mechanism, or it can be kept offline for ultra-fast in-memory testing:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/blog/typesafe_websockets/example.kt"></script>
+{{< kotlin file="example.kt" >}}
 
 Alternatively, you can check out the Websocket enabled http4k demo: [IRC clone in 30 lines of Kotlin](https://github.com/daviddenton/http4k-demo-irc).
 
@@ -39,7 +39,7 @@ As well as API simplicity, the http4k team are very passionate about testing, an
 
 In the below example, we have gone one step further - defining a contract test case and then providing 2 implementations of it - one for unit-testing (in memory), one using a server. http4k provides clients with an identical interface for both cases, meaning it's possible reuse the same test logic:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/blog/typesafe_websockets/example_testing.kt"></script>
+{{< kotlin file="example_testing.kt" >}}
 
 #### Fin
 

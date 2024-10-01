@@ -45,10 +45,10 @@ This example has an integrated username/password store; you will want to come up
 
 The server accepts a path parameter, and parrots back the value provided by the client.
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/digest/example_provider_digest.kt"></script>
+{{< kotlin file="example_provider_digest.kt" >}}
 
 ### Example Client  [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/digest/example_client_digest.kt)
 
 This example integrates with the provider above, sending a request with a value to be parroted back.
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/digest/example_client_digest.kt"></script>
+{{< kotlin file="example_client_digest.kt" >}}

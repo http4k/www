@@ -39,5 +39,4 @@ easily start these services on a different port to the main application API via 
  
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/cloud_native/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/cloud_native/example.kt"></script>
-
+{{< kotlin file="example.kt" >}}

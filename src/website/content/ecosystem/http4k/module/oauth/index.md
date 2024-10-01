@@ -47,7 +47,7 @@ implementations of the provider to be used across environments.
 
 Out of the box, http4k provides implementations for several OAuth providers.
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/oauth/example_provider_oauth.kt"></script>
+{{< kotlin file="example_provider_oauth.kt" >}}
 
 See the [how-to guides](/howto/use_a_custom_oauth_provider/) for a custom implementation.
 
@@ -65,6 +65,4 @@ The flow plays out like this:
 
 Http4k provides a filter that can be attached to your client to authorize requests to the OAuth resource server.
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/oauth/example_offline_oauth.kt"></script>
-
-
+{{< kotlin file="example_offline_oauth.kt" >}}

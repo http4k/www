@@ -60,7 +60,7 @@ These examples are for the Apache HTTP client, but the API is similar for the ot
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/clients/example_http.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/clients/example_http.kt"></script>
+{{< kotlin file="example_http.kt" >}}
 
 Additionally, all HTTP client adapter modules allow for custom configuration of the relevant underlying client. Async-supporting clients implement the `AsyncHttpClient` interface can be passed a callback.
 
@@ -69,8 +69,8 @@ http4k supplies both blocking and non-blocking Websocket clients. The former is 
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/clients/example_websocket.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/clients/example_websocket.kt"></script>
+{{< kotlin file="example_websocket.kt" >}}
 
 #### Testing Websockets with offline and online clients [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/clients/TestingWebsockets.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/clients/TestingWebsockets.kt"></script>
+{{< kotlin file="TestingWebsockets.kt" >}}
