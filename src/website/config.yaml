@@ -146,9 +146,9 @@ menus:
     - name: community
       title: Community
       weight: 50
-    - name: community-overview
-      title: Overview
-      url: /community/
+    - name: community-contributors
+      title: Contributing
+      url: /contributing/
       parent: community
       weight: 51
     - name: community-slack
@@ -157,15 +157,10 @@ menus:
       parent: community
       weight: 52
     - name: community-coc
-      title: Code of conduct
+      title: Code of Conduct
       url: /code-of-conduct/
       parent: community
       weight: 53
-    - name: community-contributors
-      title: Contributing
-      url: /contributing/
-      parent: community
-      weight: 54
 
     - name: toolbox
       title: Toolbox
