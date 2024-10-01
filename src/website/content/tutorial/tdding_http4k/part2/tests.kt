@@ -1,8 +1,8 @@
-package content.tutorial.tdding_http4k._2
+package content.tutorial.tdding_http4k.part2
 
 import com.natpryce.hamkrest.and
 import com.natpryce.hamkrest.assertion.assertThat
-import content.tutorial.tdding_http4k._2.Matchers.answerShouldBe
+import content.tutorial.tdding_http4k.part2.Matchers.answerShouldBe
 import org.http4k.client.OkHttp
 import org.http4k.core.Method.GET
 import org.http4k.core.Request

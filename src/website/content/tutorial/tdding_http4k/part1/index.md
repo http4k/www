@@ -21,6 +21,6 @@ documentation, and checking in a high-level way that the business endpoints are 
 
 {{< kotlin file="project.kt" >}}
 
-- [Part 2: Adding an endpoint](../_2/)
-- [Part 3: Adding another endpoint](../_3/)
-- [Part 4: Adding an external dependency](../_4/)
+- [Part 2: Adding an endpoint](../part2/)
+- [Part 3: Adding another endpoint](../part3/)
+- [Part 4: Adding an external dependency](../part4/)

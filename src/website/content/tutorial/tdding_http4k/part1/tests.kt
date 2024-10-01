@@ -1,4 +1,4 @@
-package content.tutorial.tdding_http4k._1
+package content.tutorial.tdding_http4k.part1
 
 import com.natpryce.hamkrest.assertion.assertThat
 import org.http4k.client.OkHttp

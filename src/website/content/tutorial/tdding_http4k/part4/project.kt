@@ -1,4 +1,4 @@
-package content.tutorial.tdding_http4k._4
+package content.tutorial.tdding_http4k.part4
 
 import org.http4k.client.OkHttp
 import org.http4k.core.HttpHandler

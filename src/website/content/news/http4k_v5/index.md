@@ -91,7 +91,7 @@ Today with the v5 release, we're expanding the focus slightly - http4k-connect w
 
 It's 2023, and the new hotness that everyone is talking about is AI - and who are we to go against the weight of the hypemachine? After playing with GPT-4, one of the most frustrating things we found was the slowness of the responses and the effect that had on our testing-cycle, so the http4k team started to build a client adapter and fake OpenAI server so that Kotlin developer teams could integrate and test with OpenAI APIs quickly without waiting ages for the model to respond, and burning through those precious GPT-4 tokens and API limits. And thus [http4k-connect-openai] was born. The Fake server even allows you to generate images.
 
-A little later, the team received an early access invite to the [ChatGPT plugin programme] and it immediately occured that the requirements for developing plugins were all already supported within existing http4k libraries. So we set out to develop a plugin SDK, and [http4k-connect-openai-plugin] was born.
+A little later, the team received an early access invite to the [ChatGPT plugin programme] and it immediately occured that the requirements for developing plugins were all already supported within existing http4k libraries. So we set out to develop a plugin SDK, and **http4k-connect-openai-plugin** was born.
 
 The SDK provides a simple API for developers to simply compose their plugins by supplying some config and a standard `http4k-contract` endpoints, which generate the required OpenAPI specifications. The SDK does the rest for you, providing the required OpenAI plugin manifest, and then protects the API with one of 4 security models - including the ability to "login with ChatGPT" and OAuth into your plugin.
 
@@ -134,6 +134,5 @@ Cheers
 [Connect pattern]: https://dentondav.id/posts/2021/02/smash-your-adapter-monolith
 [http4k-connect-openai]: https://github.com/http4k/http4k-connect/tree/master/openai
 [ChatGPT plugin programme]: https://openai.com/blog/chatgpt-plugins
-[http4k-connect-openai-plugin]: https://mvnrepository.com/artifact/org.http4k/http4k-connect-openai-plugin
 [demo repo]: https://github.com/http4k/exploring-the-testing-hyperpyramid
 
