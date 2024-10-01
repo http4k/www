@@ -43,6 +43,6 @@ It can then be used to:
 If the `CONTENT_TYPE` and `ACCEPT` headers are not present, or if there is no lens for the requested format,
 then a default lens is used.
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_auto_content_negotiation/example.kt)
+### Example 
 
 {{< kotlin file="example.kt" >}}

@@ -21,13 +21,13 @@ dependencies {
 This module provides a configurable Filter to provide fault tolerance (CircuitBreaking, RateLimiting, Retrying, Bulkheading, Timeouts etc.),
 by integrating with the [Failsafe](https://failsafe.dev/) library.
 
-### Basic example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/failsafe/example_bulkheading.kt)
+### Basic example 
 
 Here's an example that uses BulkHeading to demonstrate how easy it is to use the filter with configured Failsafe policies.
 
 {{< kotlin file="example_bulkheading.kt" >}}
 
-### Example of using multiple policies [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/failsafe/example_multiple_policies.kt)
+### Example of using multiple policies 
 
 Using multiple Failsafe policies in the filter is just as easy, as the following example shows.
 

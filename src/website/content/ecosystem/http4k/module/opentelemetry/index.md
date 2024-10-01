@@ -22,13 +22,13 @@ This module provides configurable Filters to provide distributed tracing and met
 
 `OpenTelemetry is a collection of tools, APIs, and SDKs. You use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior.`
 
-### Tracing [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/opentelemetry/example_tracing.kt)
+### Tracing 
 
 OpenTelemetry provides a pluggable interface for tracing propagation, so you can easily switch between different implementations such as AWS X-Ray, B3 and Jaeger etc.
 
 {{< kotlin file="example_tracing.kt" >}}
 
-### Metrics [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/opentelemetry/example_metrics.kt)
+### Metrics 
 
 Both Server and Client filters are available for recording request counts and latency, optionally overriding values for the metric names, descriptions and request identification.
 

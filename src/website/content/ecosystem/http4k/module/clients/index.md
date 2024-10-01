@@ -71,6 +71,6 @@ http4k supplies both blocking and non-blocking Websocket clients. The former is 
 
 {{< kotlin file="example_websocket.kt" >}}
 
-#### Testing Websockets with offline and online clients [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/clients/TestingWebsockets.kt)
+#### Testing Websockets with offline and online clients 
 
 {{< kotlin file="TestingWebsockets.kt" >}}

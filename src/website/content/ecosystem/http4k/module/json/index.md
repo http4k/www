@@ -103,7 +103,7 @@ the same as a native Kotlin list of objects. This can make tests break as the un
 As shown, a workaround to this is to use `Body.auto<Array<MyIntWrapper>>().toLens()` instead, and then compare using 
 `Arrays.equal()`
 
-[<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/json/list_gotcha.kt)
+
 
 {{< kotlin file="list_gotcha.kt" >}}
 

@@ -17,10 +17,10 @@ dependencies {
 }
 ```
 
-### Standard (non-typesafe) API [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_html_forms/example_standard.kt)
+### Standard (non-typesafe) API 
 
 {{< kotlin file="example_standard.kt" >}}
 
-### Lens (typesafe, validating) API [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_html_forms/example_lens.kt)
+### Lens (typesafe, validating) API 
 
 {{< kotlin file="example_lens.kt" >}}

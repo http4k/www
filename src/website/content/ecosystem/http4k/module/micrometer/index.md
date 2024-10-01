@@ -20,7 +20,7 @@ dependencies {
 
 This module provides configurable Filters to provide metrics for http4k apps, plugging into the awesome [Micrometer](http://micrometer.io/) library.
 
-### Micrometer [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/micrometer/example.kt)
+### Micrometer 
 
 Both Server and Client filters are available for recording request counts and latency, optionally overriding values for the metric names, descriptions and request identification.
 

@@ -33,7 +33,7 @@ dependencies {
 }
 ```
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/make_json_faster/kotlinx_example.kt)
+### Example 
 
 {{< kotlin file="kotlinx_example.kt" >}}
 
@@ -57,7 +57,7 @@ dependencies {
 }
 ```
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/make_json_faster/moshi_metadata_reflect_example.kt)
+### Example 
 
 {{< kotlin file="moshi_metadata_reflect_example.kt" >}}
 
@@ -89,6 +89,6 @@ dependencies {
 }
 ```
 
-### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/make_json_faster/kotshi_example.kt)
+### Example 
 
 {{< kotlin file="kotshi_example.kt" >}}

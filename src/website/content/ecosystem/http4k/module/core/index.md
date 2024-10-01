@@ -90,7 +90,7 @@ The `http4k-core` module comes with a set of handy Filters for application to bo
 
 Check out the `org.http4k.filter` package for the exact list.
 
-#### Testing Filters [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/core/FilterTest.kt)
+#### Testing Filters 
 
 {{< kotlin file="FilterTest.kt" >}}
 
@@ -107,7 +107,7 @@ routes(
 
 Note that the `http4k-contract` module contains a more typesafe implementation of routing functionality, with runtime-generated live documentation in OpenApi format.
 
-#### Testing Routers [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/core/RoutingTest.kt)
+#### Testing Routers 
 
 {{< kotlin file="RoutingTest.kt" >}}
 

@@ -48,7 +48,7 @@ The http4k templating API provides a standard mechanism for rendering using comm
 
 The examples below are for Handlebars, but the others have the same APIs:
 
-#### Code  [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/templating/example.kt)
+#### Code  
 
 {{< kotlin file="example.kt" >}}
 

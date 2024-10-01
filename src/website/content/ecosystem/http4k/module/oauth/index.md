@@ -43,7 +43,7 @@ To enable OAuth integration, construct a configured instance of `OAuthProvider`.
 1. A fully configured API client (which populated the Host on the URI) - this allows different
 implementations of the provider to be used across environments.
 
-#### Example provider [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/oauth/example_provider_oauth.kt)
+#### Example provider 
 
 Out of the box, http4k provides implementations for several OAuth providers.
 
@@ -61,7 +61,7 @@ The flow plays out like this:
 2. The next time you need to access a protected resource on behalf of the user, your server retrieves the user's `RefreshToken`, then uses the preconfigured `Client Id` and `Client Secret` to exchange the `RefreshToken` for a new `AccessToken`.
 3. [Optional] Your server can cache the refreshed `AccessToken` if several calls need to be made in a short period of time
 
-#### Example Filter [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/oauth/example_offline_oauth.kt)
+#### Example Filter 
 
 Http4k provides a filter that can be attached to your client to authorize requests to the OAuth resource server.
 

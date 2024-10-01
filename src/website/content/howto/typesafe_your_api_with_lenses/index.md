@@ -14,7 +14,7 @@ dependencies {
 }
 ```
 
-### Standard (exception based) approach [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/typesafe_your_api_with_lenses/example.kt)
+### Standard (exception based) approach 
 Errors in extracting Lenses are propagated as exceptions which are caught and handled by the `CatchLensFailure` Filter.
 
 {{< kotlin file="example.kt" >}}

@@ -29,7 +29,7 @@ These modules provide auto-marshalling functionality to convert XML into arbitra
 - Generally requires `Jackson` field annotations to manipulate output format
 - Provides extension point to map custom types using BiDiMapping registration (so supports all Java and Http4k primitives such as `Uri`)
 
-#### JacksonXML Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/xml/jacksonAutoXml.kt)
+#### JacksonXML Code 
 - Provides extraction conversion only
 - Exposes an XML DOM node model as a first-class citizen - so can read directly from a string into a DOM model
 - Does not generate a wrapper element to represent the parent node
@@ -41,6 +41,6 @@ These modules provide auto-marshalling functionality to convert XML into arbitra
 ### Xml
 As above, we recommend using `http4k-format-jackson-xml` as it has more predictable and consistent behaviour.
  
-#### XML Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/ecosystem/http4k/module/xml/autoXml.kt)
+#### XML Code 
 
 {{< kotlin file="autoXml.kt" >}}
