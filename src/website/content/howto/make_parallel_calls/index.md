@@ -13,5 +13,5 @@ This recipe also covers how to make [distributed tracing] work when tracing info
 {{< kotlin file="example.kt" >}}
 
 [premature optimisation]: https://wiki.c2.com/?PrematureOptimization
-[distributed tracing]: /howto/monitor_http4k/#distributed_tracing
+[distributed tracing]: /howto/monitor_http4k
 [ThreadPoolExecutor]: https://www.baeldung.com/thread-pool-java-and-guava

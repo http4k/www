@@ -14,7 +14,7 @@ WebSocket communication consists of a few main concepts:
 ### WsMessage
 
 As per the **http4k** ethos, an immutable message object providing duplex communication between the server to the
-connected client. [Lenses](/guide/concepts/lens) can be used to provide typesafe object marshalling with WsMessages.
+connected client. [Lenses](/ecosystem/http4k/concept/lens) can be used to provide typesafe object marshalling with WsMessages.
 
 ### WebSocket
 
@@ -31,7 +31,7 @@ interface Websocket {
 
 An interface representing the available server callback API to the WebSocket channel. WebSocket objects can `send()`
 WsMessages to the client, or react to incoming events by binding behaviour with `onMessage()`, `onError()` or
-`onClose()`. The WebSocket has a reference to the incoming [HTTP Request](/guide/concepts/http#HttpMessage) which was
+`onClose()`. The WebSocket has a reference to the incoming [HTTP Request](/ecosystem/http4k/concept/http) which was
 used during connection.
 
 ### WsConsumer
@@ -48,7 +48,7 @@ The primary callback received when an WebSocket server is connected to a client.
 typealias WsHandler = (Request) -> WsConsumer
 ```
 
-Provides the route mapping of an [HTTP Request](/guide/concepts/http#HttpMessage) to a particular WsConsumer.
+Provides the route mapping of an [HTTP Request](/ecosystem/http4k/concept/http) to a particular WsConsumer.
 
 ### WsFilter
 
@@ -57,7 +57,7 @@ fun interface WsFilter : (WsConsumer) -> WsConsumer
 ```
 
 Applies decoration to a matched WsConsumer before it is invoked. WsFilters can be used to apply tangental effects to the
-matched WsConsumer such as logging/security, or to modify the incoming [HTTP Request](/guide/concepts/http#HttpMessage).
+matched WsConsumer such as logging/security, or to modify the incoming [HTTP Request](/ecosystem/http4k/concept/http).
 
 ### WsRouter
 
