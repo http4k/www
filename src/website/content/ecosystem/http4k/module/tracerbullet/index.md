@@ -57,7 +57,7 @@ comes for free!
 Here's an example of making this work - note the use of the filters to use RequestTracing on the Events and the servers
 and clients. This is required to make the TracerBullet work.
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/self_document_systems_with_tests/example.kt"></script>
+{{< kotlin file="example.kt" >}}
 
 An extended example of this technique can be found at the [this repository](https://github.com/http4k/exploring-the-testing-hyperpyramid).
 

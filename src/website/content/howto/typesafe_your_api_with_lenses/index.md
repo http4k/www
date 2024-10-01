@@ -17,7 +17,7 @@ dependencies {
 ### Standard (exception based) approach [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/typesafe_your_api_with_lenses/example.kt)
 Errors in extracting Lenses are propagated as exceptions which are caught and handled by the `CatchLensFailure` Filter.
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/typesafe_your_api_with_lenses/example.kt"></script>
+{{< kotlin file="example.kt" >}}
 
 ### Using "Result" ADT
 An alternative approach to using Exceptions to automatically produce `BadRequests` is to use an Either-type structure, and this would be easy to implement - but the lack of an usable Result/Either type in the standard Kotlin library means that we have chosen to use `Result4k` as an optional dependency. If it is on the classpath you will gain support for it.
@@ -26,5 +26,4 @@ Additionally, the lack of Higher Kinded Types in Kotlin means that we are unable
 
 ### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/typesafe_your_api_with_lenses/example_result4k.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/typesafe_your_api_with_lenses/example_result4k.kt"></script>
-
+{{< kotlin file="example_result4k.kt" >}}

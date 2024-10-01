@@ -22,7 +22,7 @@ For more detail on generating **OpenAPI** descriptions, see:
 
 This simple description will be used for all examples in this guide:
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleContract.kt"></script>
+{{< kotlin file="exampleContract.kt" >}}
 
 ## Build the UI
 
@@ -40,7 +40,7 @@ dependencies {
 
 ### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleLite.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleLite.kt"></script>
+{{< kotlin file="exampleLite.kt" >}}
 
 ## Bundle the UI with Webjars
 
@@ -61,4 +61,4 @@ You can pick and choose whether you want Redoc, Swagger UI, or both bundled with
 
 ### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleWebjar.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/create_a_swagger_ui/exampleWebjar.kt"></script>
+{{< kotlin file="exampleWebjar.kt" >}}

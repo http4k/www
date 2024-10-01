@@ -10,7 +10,7 @@ In this example, we show how to use the extension function on [ExecutionService]
 
 This recipe also covers how to make [distributed tracing] work when tracing information is consumed by multiple threads.
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/make_parallel_calls/example.kt"></script>
+{{< kotlin file="example.kt" >}}
 
 [premature optimisation]: https://wiki.c2.com/?PrematureOptimization
 [distributed tracing]: /howto/monitor_http4k/#distributed_tracing

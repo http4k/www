@@ -17,4 +17,4 @@ For this example, you need to configure `OAuthServer` instance with the correct 
 
 ### Code [<img class="octocat" src="/img/octocat-32.png"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/configure_an_oauth_server/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/configure_an_oauth_server/example.kt"></script>
+{{< kotlin file="example.kt" >}}

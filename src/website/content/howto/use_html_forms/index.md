@@ -19,8 +19,8 @@ dependencies {
 
 ### Standard (non-typesafe) API [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_html_forms/example_standard.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_html_forms/example_standard.kt"></script>
+{{< kotlin file="example_standard.kt" >}}
 
 ### Lens (typesafe, validating) API [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_html_forms/example_lens.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_html_forms/example_lens.kt"></script>
+{{< kotlin file="example_lens.kt" >}}

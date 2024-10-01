@@ -7,4 +7,4 @@ This example shows the various styles of testing endpoints, and requires both th
 
 ### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/write_different_test_types/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/write_different_test_types/example.kt"></script>
+{{< kotlin file="example.kt" >}}

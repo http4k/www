@@ -21,4 +21,4 @@ The example below shows a customised Jetty setup which enables HTTPS traffic by 
 
 ### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/customise_a_server_backend/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/customise_a_server_backend/example.kt"></script>
+{{< kotlin file="example.kt" >}}

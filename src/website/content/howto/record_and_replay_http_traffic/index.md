@@ -21,7 +21,7 @@ implementations DO NOT have any facility for Cache Control or eviction, or respe
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/record_and_replay_http_traffic/example_cache.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/record_and_replay_http_traffic/example_cache.kt"></script>
+{{< kotlin file="example_cache.kt" >}}
 
 ### Recording Streams of HTTP Traffic 
 
@@ -29,7 +29,7 @@ Using `Filters` it's possible to record a stream traffic and then replay recorde
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/record_and_replay_http_traffic/example_stream.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/record_and_replay_http_traffic/example_stream.kt"></script>
+{{< kotlin file="example_stream.kt" >}}
 
 ### Concepts
 

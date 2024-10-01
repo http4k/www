@@ -29,4 +29,4 @@ webJars().asServer(SunHttp(8080)).start()
 
 ### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/deploy_webjars/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/deploy_webjars/example.kt"></script>
+{{< kotlin file="example.kt" >}}

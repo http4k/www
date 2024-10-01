@@ -19,4 +19,4 @@ This can be easily achieved by combining the typesafe RequestContext functionali
 
 ### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/lookup_a_user_principal/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/lookup_a_user_principal/example.kt"></script>
+{{< kotlin file="example.kt" >}}

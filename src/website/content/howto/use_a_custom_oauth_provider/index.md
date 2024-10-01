@@ -19,4 +19,4 @@ For this example, simply reconfigure the `OAuthProvider` instance with the corre
 
 ### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_a_custom_oauth_provider/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_a_custom_oauth_provider/example.kt"></script>
+{{< kotlin file="example.kt" >}}

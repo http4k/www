@@ -20,7 +20,7 @@ src="/img/diagram.jpg">
 
 #### Code [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/self_document_systems_with_tests/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/self_document_systems_with_tests/example.kt"></script>
+{{< kotlin file="example.kt" >}}
 
 [PlantUML]: https://plantuml.com/
 [Mermaid]: https://mermaid.js.org/

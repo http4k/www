@@ -47,4 +47,4 @@ The example below shows a simple application that outputs structured logs to Std
  
 ### Code [<img class="octocat" src="/img/octocat-32.png"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/structure_your_logs_with_events/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/structure_your_logs_with_events/example.kt"></script>
+{{< kotlin file="example.kt" >}}

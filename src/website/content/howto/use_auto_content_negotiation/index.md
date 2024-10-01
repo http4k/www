@@ -45,4 +45,4 @@ then a default lens is used.
 
 ### Example [<img class="octocat"/>](https://github.com/http4k/http4k/blob/master/src/docs/howto/use_auto_content_negotiation/example.kt)
 
-<script src="https://gist-it.appspot.com/https://github.com/http4k/http4k/blob/master/src/docs/howto/use_auto_content_negotiation/example.kt"></script>
+{{< kotlin file="example.kt" >}}
