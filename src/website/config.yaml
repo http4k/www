@@ -137,6 +137,11 @@ menus:
       url: /training
       parent: solutions
       weight: 44
+    - name: solutions-training
+      title: Security Advisories
+      url: /security
+      parent: solutions
+      weight: 45
 
     - name: community
       title: Community
