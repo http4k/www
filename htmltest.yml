@@ -1,4 +1,8 @@
-IgnoreURLs: ["^.*js$", ".*.png$", ".*.svg$"]
 IgnoreAltMissing: true
 IgnoreAltEmpty: true
 IgnoreDirectoryMissingTrailingSlash: true
+IgnoreURLs:
+  - "favicon.svg"
+  - "^.*js$"
+  - ".*.png$"
+  - ".*.svg$"

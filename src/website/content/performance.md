@@ -24,7 +24,7 @@ Command-line JVM options, however, were tuned for the test to take advantage of 
 The full implementation of the benchmark can be found [here](https://github.com/TechEmpower/FrameworkBenchmarks/tree/master/frameworks/Kotlin/http4k).
 
 ### Results - Round 22
-Overall, http4k continues to do well in this round of benchmarking, placing 48/159 - especially considering that the [ethos](/guide/concepts/rationale) of the library is one of excellent Developer experience over and above high-end performance (which tends to result in less friendly APIs).
+Overall, http4k continues to do well in this round of benchmarking, placing 48/159 - especially considering that the [ethos](/rationale) of the library is one of excellent Developer experience over and above high-end performance (which tends to result in less friendly APIs).
 
 Rankings below are filtered for JVM libraries:
 

@@ -23,7 +23,7 @@ dependencies {
 ### About
 This module provides http4k integration for the excellent [GraphQL-java](https://www.graphql-java.com/) library, allowing you to either serve or consume [GraphQL] services using a simple adapter API.
 
-As with the [ethos](/guide/concepts/rationale) of http4k, the uniform Server/Client GraphQLHandler model means that you can test applications entirely in-memory without binding to a port. Http4k also ships with a page serving the GraphQL playground which can be added as a simple route.
+As with the [ethos](/rationale) of http4k, the uniform Server/Client GraphQLHandler model means that you can test applications entirely in-memory without binding to a port. Http4k also ships with a page serving the GraphQL playground which can be added as a simple route.
 
 #### Code
 
