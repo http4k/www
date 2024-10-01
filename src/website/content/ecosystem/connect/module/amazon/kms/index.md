@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS KMS
+ecosystem: http4k Connect
+title: "AWS: KMS"
 description: Feature overview of the http4k Connect AWS KMS modules
 ---
 

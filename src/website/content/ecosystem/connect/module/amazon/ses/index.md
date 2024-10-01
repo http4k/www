@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS Simple Email Service
+ecosystem: http4k Connect
+title: "AWS: Simple Email Service"
 description: Feature overview of the http4k Connect AWS Simple Email Service modules
 ---
 

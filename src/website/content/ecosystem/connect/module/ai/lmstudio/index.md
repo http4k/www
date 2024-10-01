@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: LMStudio
+ecosystem: http4k Connect
+title: "AI: LMStudio"
 description: Feature overview of the http4k Connect LMStudio modules
 ---
 ### Installation

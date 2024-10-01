@@ -1,4 +1,10 @@
-# AWS Overview Guide
+---
+layout: module
+type: module
+ecosystem: http4k Connect
+title: AWS
+description: AWS Overview Guide for http4k Connect
+---
 
 http4k-connect provides a standardised mechanism to connect to several AWS services. They all use the same mechanisms for authentication, which is what this page is about.
 

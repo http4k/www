@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS Simple Queue Service
+ecosystem: http4k Connect
+title: "AWS: Simple Queue Service"
 description: Feature overview of the http4k Connect AWS Simple Queue Service modules
 ---
 

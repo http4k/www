@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: S3 Storage
+ecosystem: http4k Connect
+title: "Storage: S3"
 description: Feature overview of the http4k Connect S3 Storage module
 ---
 

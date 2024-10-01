@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: HTTP Storage
+ecosystem: http4k Connect
+title: "Storage: HTTP"
 description: Feature overview of the http4k Connect HTTP Storage module
 ---
 

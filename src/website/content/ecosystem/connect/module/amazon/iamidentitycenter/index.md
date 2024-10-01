@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS IAM Identity Center
+ecosystem: http4k Connect
+title: "AWS: IAM Identity Center"
 description: Feature overview of the http4k Connect AWS IAM Identity Center modules
 ---
 

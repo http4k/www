@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: Ollama
+ecosystem: http4k Connect
+title: "AI: Ollama"
 description: Feature overview of the http4k Connect Ollama modules
 ---
 

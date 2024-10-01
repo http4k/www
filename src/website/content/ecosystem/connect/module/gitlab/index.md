@@ -1,7 +1,7 @@
 ---
 layout: module
 type: module
-ecosystem: connect
+ecosystem: http4k Connect
 title: GitLab
 description: Feature overview of the http4k Connect GitLab module
 ---

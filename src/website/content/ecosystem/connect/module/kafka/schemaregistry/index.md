@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: Kafka Schema Registry
+ecosystem: http4k Connect
+title: "Kafka: Schema Registry"
 description: Feature overview of the http4k Connect Kafka Schema Registry modules
 ---
 

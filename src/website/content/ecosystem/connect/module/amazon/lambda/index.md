@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS Lambda
+ecosystem: http4k Connect
+title: "AWS: Lambda"
 description: Feature overview of the http4k Connect AWS Lambda modules
 ---
 

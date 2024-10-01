@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: JDBC Storage
+ecosystem: http4k Connect
+title: "Storage: JDBC"
 description: Feature overview of the http4k Connect JDBC Storage module
 ---
 

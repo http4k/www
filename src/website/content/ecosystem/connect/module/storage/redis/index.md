@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: Redis Storage
+ecosystem: http4k Connect
+title: "Storage: Redis"
 description: Feature overview of the http4k Connect Redis Storage module
 ---
 

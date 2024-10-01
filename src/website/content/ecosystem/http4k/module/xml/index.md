@@ -1,7 +1,7 @@
 ---
 layout: module
 type: module
-ecosystem: core
+ecosystem: http4k Core
 title: XML
 description: Feature overview of the modules providing XML support, including an auto-marshalling capability
 ---

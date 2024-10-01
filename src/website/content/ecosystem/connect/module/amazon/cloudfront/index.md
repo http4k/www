@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS CloudFront
+ecosystem: http4k Connect
+title: "AWS: CloudFront"
 description: Feature overview of the http4k Connect AWS CloudFront modules
 ---
 

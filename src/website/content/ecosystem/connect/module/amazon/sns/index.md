@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS Simple Notification Service
+ecosystem: http4k Connect
+title: "AWS: Simple Notification Service"
 description: Feature overview of the http4k Connect AWS Simple Notification Service modules
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: Anthropic AI
+ecosystem: http4k Connect
+title: "AI: Anthropic"
 description: Feature overview of the http4k Connect Anthropic AI modules
 ---
 

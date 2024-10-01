@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS EventBridge
+ecosystem: http4k Connect
+title: "AWS: EventBridge"
 description: Feature overview of the http4k Connect AWS EventBridge modules
 ---
 

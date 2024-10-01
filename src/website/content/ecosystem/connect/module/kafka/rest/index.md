@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: Kafka Rest Proxy
+ecosystem: http4k Connect
+title: "Kafka: Rest Proxy"
 description: Feature overview of the http4k Connect Kafka Rest Proxy modules
 ---
 

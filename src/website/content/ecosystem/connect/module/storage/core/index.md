@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: Storage Core
+ecosystem: http4k Connect
+title: Storage
 description: Feature overview of the http4k Connect Storage Core module
 ---
 

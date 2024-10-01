@@ -1,7 +1,7 @@
 ---
 layout: module
 type: module
-ecosystem: connect
+ecosystem: http4k Connect
 title: Mattermost
 description: Feature overview of the http4k Connect Mattermost modules
 ---

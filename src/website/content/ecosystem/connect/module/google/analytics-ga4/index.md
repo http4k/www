@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: Google Analytics GA4
+ecosystem: http4k Connect
+title: "Google: Analytics GA4"
 description: Feature overview of the http4k Connect Google Analytics GA4 modules
 ---
 

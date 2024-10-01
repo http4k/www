@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS Cognito
+ecosystem: http4k Connect
+title: "AWS: Cognito"
 description: Feature overview of the http4k Connect AWS Cognito modules
 ---
 

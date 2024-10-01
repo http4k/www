@@ -1,7 +1,7 @@
 ---
 layout: module
 type: module
-ecosystem: core
+ecosystem: http4k Core
 title: Multipart
 description: Feature overview of the http4k-multipart form module
 ---

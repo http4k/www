@@ -1,7 +1,7 @@
 ---
 layout: module
 type: module
-ecosystem: connect
+ecosystem: http4k Connect
 title: Gradle KSP Plugin
 description: Feature overview of the http4k Connect Gradle KSP Plugin module
 ---

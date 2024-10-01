@@ -1,7 +1,7 @@
 ---
 layout: module
 type: module
-ecosystem: core
+ecosystem: http4k Core
 title: Hamkrest
 description: Feature overview of the http4k-testing-hamkrest module
 ---

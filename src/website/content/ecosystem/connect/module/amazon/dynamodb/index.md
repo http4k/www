@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS DynamoDb
+ecosystem: http4k Connect
+title: "AWS: DynamoDb"
 description: Feature overview of the http4k Connect AWS DynamoDb modules
 ---
 

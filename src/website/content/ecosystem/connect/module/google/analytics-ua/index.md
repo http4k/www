@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: Google Analytics UA
+ecosystem: http4k Connect
+title: "Google: Analytics UA"
 description: Feature overview of the http4k Connect Google Analytics UA modules
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS Secrets Manager
+ecosystem: http4k Connect
+title: "AWS: Secrets Manager"
 description: Feature overview of the http4k Connect AWS Secrets Manager modules
 ---
 

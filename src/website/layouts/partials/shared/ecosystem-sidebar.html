@@ -1,14 +1,9 @@
 <aside class="sidebar">
     <div>
         <ul class="list-unstyled">
-            {{ $current := $.Page }}
-            {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
+            <h2> {{ .Params.ecosystem }}</h2>
             {{ $ecosystem := .Params.ecosystem }}
             <li>
-                <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse-{{ .File.UniqueID }}">
-                    {{ .Title }}
-                </a>
-                <div id="collapse-{{ .File.UniqueID }}" class="collapse {{ if eq $.Page.Params.ecosystem $ecosystem }}show{{ end }}">
                     <ul class="list-unstyled ms-3">
                         {{ range where (where .Site.RegularPages "Type" "eq" "module") ".Params.ecosystem" "eq" $ecosystem }}
                         <li>
@@ -16,9 +11,7 @@
                         </li>
                         {{ end }}
                     </ul>
-                </div>
             </li>
-            {{ end }}
         </ul>
     </div>
 </aside>

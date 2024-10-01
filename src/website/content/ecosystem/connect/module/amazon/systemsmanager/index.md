@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS Systems Manager
+ecosystem: http4k Connect
+title: "AWS: Systems Manager"
 description: Feature overview of the http4k Connect AWS Systems Manager modules
 ---
 

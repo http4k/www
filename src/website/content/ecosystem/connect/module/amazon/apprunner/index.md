@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS AppRunner
+ecosystem: http4k Connect
+title: "AWS: AppRunner"
 description: Feature overview of the http4k Connect AWS AppRunner modules
 ---
 

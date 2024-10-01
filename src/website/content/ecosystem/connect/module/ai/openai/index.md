@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: OpenAI
+ecosystem: http4k Connect
+title: "AI: OpenAI"
 description: Feature overview of the http4k Connect OpenAI modules
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS Firehose
+ecosystem: http4k Connect
+title: "AWS: Firehose"
 description: Feature overview of the http4k Connect AWS Firehose modules
 ---
 

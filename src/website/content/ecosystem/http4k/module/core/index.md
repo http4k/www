@@ -1,7 +1,7 @@
 ---
 layout: module
 type: module
-ecosystem: core
+ecosystem: http4k Core
 title: Core
 description: Feature overview of the http4k-core module, including the Lens system for typesafe HTTP
 weight: -1

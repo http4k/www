@@ -1,7 +1,7 @@
 ---
 layout: module
 type: module
-ecosystem: core
+ecosystem: http4k Core
 title: JSON
 description: Feature overview of the JSON http4k-format modules, several of which support auto-marshalling into data classes.
 ---

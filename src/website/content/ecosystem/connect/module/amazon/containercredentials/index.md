@@ -1,8 +1,8 @@
 ---
 layout: module
 type: module
-ecosystem: connect
-title: AWS Container Credentials
+ecosystem: http4k Connect
+title: "AWS: Container Credentials"
 description: Feature overview of the http4k Connect AWS Container Credentials modules
 ---
 
