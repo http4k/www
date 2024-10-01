@@ -1,35 +1,50 @@
 @import url('https://fonts.cdnfonts.com/css/varela');
 
+:root {
+    --primary-color: #D59657;
+    --secondary-color: #ffa654;
+    --secondary-colour-hover: #FF9800;
+}
+
 .text-logo {
-    color: #D59657;
+    color: var(--primary-color);
     font-family: "Inter Black", sans-serif;
     font-weight: normal;
     font-style: normal;
 }
 
 .text-highlight {
-    color: #D59657;
+    color: var(--primary-color);
     font-weight: 600;
 }
 
 .icon-primary {
-    color: #D59657;
+    color: var(--primary-color);
 }
 
 .icon-secondary {
-    color: #D59657;
+    color: var(--primary-color);
 }
 
 .border-primary {
-    border-color: #D59657
+    border-color: var(--primary-color)
 }
 
 .primary-color {
-    background-color: #D59657;
+    background-color: var(--primary-color);
 }
 
+.btn-secondary {
+    background-color: var(--secondary-color) !important; /* Replace with your custom color */
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-colour-hover) !important; /* Darker shade for hover */
+    border-color: var(--secondary-colour-hover) !important;
+}
 .secondary-color {
-    background-color: #D59657;
+    background-color: var(--primary-color);
 }
 
 .cards {
