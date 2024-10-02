@@ -8,9 +8,8 @@
         text-align: left;
     }
 
-
     .landing {
-        min-height: 500px;
+        min-height: 480px;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
         background: url("../images/pipes-hero.svg");
@@ -20,27 +19,21 @@
         background-position: top;
     }
 
+    .landing h2 {
+        padding-top: 40px;
+    }
+
     @media (max-width: 991.98px) {
         .landing {
             height: 100%;
-            background: none;
-            background-color: #59aff5;
             -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
         }
     }
 
-    .landing .navbar {
-        padding-top: 30px;
-    }
-
     .landing .overlay {
         background-image: linear-gradient(73.88deg, #59aff5 32.66%, #60c0ff 91.08%);
         opacity: 0.1;
-    }
-
-    .landing .header {
-        padding-top: 1em;
     }
 
     @media (min-width: 768px) {
