@@ -6,11 +6,13 @@
         {{ .Content }}
         <div class="row row-cols-1 row-cols-sm-2 mt-5 g-4 justify-content-center">
             {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
+            {{ $ecosystem := .Params.ecosystem }}
             <div class="col">
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">{{ .Title }}</h5>
-                        <p class="card-text">{{ .Params.description }}</p>
+                        {{ $data := index .Site.Data.ecosystem $ecosystem }}
+                        <img style="height: 5rem; margin-bottom: 20px;" src="{{ $data.image }}"  alt="logo">
+                        <p class="card-text">{{ .Params.description | markdownify }}</p>
                         <div class="mt-auto d-flex justify-content-end">
                             <a href="{{ .RelPermalink }}/" class="btn btn-primary">Read More</a>
                         </div>
