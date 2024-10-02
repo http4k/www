@@ -1,9 +1,4 @@
-{{- $logo := resources.Get "images/logo.png" -}}
-{{- with .Site.Params.logo -}}
-  {{- with resources.Get . -}}
-    {{- $logo = . -}}
-  {{- end -}}
-{{- end -}}
+{{- $logo := resources.Get "images/favicon.png" -}}
 
 {{- $favicon32png := partial "utilities/create-favicon.html" (dict "logo" $logo "filename" "favicon-32.png" "size" "32x32") -}}
 {{- $favicon57png := partial "utilities/create-favicon.html" (dict "logo" $logo "filename" "favicon-57.png" "size" "57x57") -}}
