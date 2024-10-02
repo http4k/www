@@ -5,17 +5,21 @@
         <h2>HTTP as a Function</h2>
         <div class="row">
             <div class="col-md-6 text-center">
-                <img class="img-fluid" style="border-radius: 8px" src="/images/server.png" alt="Creating a server with http4k"/>
+                <img class="img-fluid" style="border-radius: 8px" src="/images/server.png"
+                     alt="Creating a server with http4k"/>
                 <p>An http4k server is just a regular function that gets invoked with a Request and returns a Response.
                     </br></br>
-                    In a single line of code you can switch your server between Java (built-in), Apache, Jetty, Netty, Undertow, Ktor, Ratpack or Helidon.
+                    In a single line of code you can switch your server between Java (built-in), Apache, Jetty, Netty,
+                    Undertow, Ktor, Ratpack or Helidon.
                 </p>
             </div>
             <div class="col-md-6 text-center">
-                <img class="img-fluid" style="border-radius: 8px" src="/images/client.png" alt="Creating a client with http4k"/>
+                <img class="img-fluid" style="border-radius: 8px" src="/images/client.png"
+                     alt="Creating a client with http4k"/>
                 <p>An http4k client is just a regular function that you invoke with a Request and receives a Response.
                     </br></br>
-                    In a single line of code you can switch your client implementation between Java (built-in), Apache, Fuel, Jetty, and OkHttp.
+                    In a single line of code you can switch your client implementation between Java (built-in), Apache,
+                    Fuel, Jetty, and OkHttp.
                 </p>
             </div>
         </div>
@@ -32,8 +36,10 @@
                     <div class="dash blue-color">
 
                     </div>
-                    <p>The core library has no dependencies and it’s all you need to create fully-functional applications. </br></br>
-                        http4k APIs take advantage of Kotlin features and are powered by Functional Programming techniques.
+                    <p>The core library has no dependencies and it’s all you need to create fully-functional
+                        applications. </br></br>
+                        http4k APIs take advantage of Kotlin features and are powered by Functional Programming
+                        techniques.
                     </p>
                 </div>
             </div>
@@ -44,9 +50,11 @@
 
                     </div>
                     <p>
-                        Supports many Server, Serverless and HTTP Client technologies behind simple, consistent interfaces. </br></br>
+                        Supports many Server, Serverless and HTTP Client technologies behind simple, consistent
+                        interfaces. </br></br>
                         http4k provides
-                        <a href="/ecosystem/http4k/">60+ pre-built integrations</a> for developers to choose from including Observability, JSON, and OpenAPI support.
+                        <a href="/ecosystem/http4k/">60+ pre-built integrations</a> for developers to choose from
+                        including Observability, JSON, and OpenAPI support.
                     </p>
                 </div>
             </div>
@@ -57,7 +65,8 @@
 
                     </div>
                     <p>
-                        Create lightning fast, rock solid test suites for individual endpoints, applications or multi-service systems, all running fully in-memory. </br></br>
+                        Create lightning fast, rock solid test suites for individual endpoints, applications or
+                        multi-service systems, all running fully in-memory. </br></br>
                         http4k embraces advanced testing approaches such as
                         <a href="/ecosystem/http4k/module/approvaltests/">Approval</a>,
                         <a href="/ecosystem/http4k/module/chaos/">Chaos</a> and
@@ -70,8 +79,10 @@
                     <div class="dash green-color">
 
                     </div>
-                    <p>http4k takes advantage of technologies that have millions of hours of production runtime. </br></br>
-                        The toolkit has been used to build high volume applications in Banking, Publishing & Government projects.</p>
+                    <p>http4k takes advantage of technologies that have millions of hours of production
+                        runtime. </br></br>
+                        The toolkit has been used to build high volume applications in Banking, Publishing & Government
+                        projects.</p>
                 </div>
             </div>
         </div>
@@ -95,7 +106,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-xl-4">
                         <h2>More than 100 integrations</h2>
-                        <p>http4k integrates with many tools, libraries and APIs for building Cloud-Native applications.</p>
+                        <p>http4k integrates with many tools, libraries and APIs for building Cloud-Native
+                            applications.</p>
                         <a class="btn btn-primary" href="/ecosystem/">Check it out</a>
                     </div>
                     <div class="col-lg-7 offset-xl-1 col-lg-7 offset-xl-1">
@@ -187,87 +199,101 @@
                                 <img class="img-fluid" src="/images/jetty.svg" alt="jetty"/>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- corporate sponsors -->
-    <div style="margin-bottom: 75px; margin-top: -75px">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-8 text-center">
-                    <h2>Corporate sponsors</h2>
-                    <p>http4k partners with selected companies to fund and explore continued innovation around the project.
-                        If your company is using http4k and would like to take advantage of this program,
-                        please <a href="mailto:info@http4k.org?subject=Corporate Sponsorship">get in touch</a>.
-                    </p>
-                    <a href="https://springernature.com"><img class="img-fluid" src="/images/SN_Technology_simple_black_resized.png" alt="Springer Nature Technology"/></a>
-                    <a href="https://kotlinfoundation.org/"><img class="img-fluid" src="/images/kotlin-foundation.png" alt="Kotlin Foundation"/></a>
+        <!-- corporate sponsors -->
+        <div style="margin-bottom: 75px; margin-top: -75px">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-8 text-center">
+                        <h2>Corporate sponsors</h2>
+                        <p>http4k partners with selected companies to fund and explore continued innovation around the
+                            project.
+                            If your company is using http4k and would like to take advantage of this program,
+                            please <a href="mailto:info@http4k.org?subject=Corporate Sponsorship">get in touch</a>.
+                        </p>
+                    </div>
+                    <div class="row-col-6 justify-content-center d-flex">
+                        {{ range .Site.Data.sponsors }}
+                            <div class="col-3">
+                                <a href="{{ .url }}"><img class="img-fluid"
+                                                          src="{{ .logo }}"
+                                                          alt="{{ .name}}"/></a>
+                            </div>
+                        {{ end }}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- community-->
-    <div class="community">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-md-6 col-lg-5">
-                    <h2>We love <br/> our community</h2>
-                    <p>Many of the features of the http4k ecosystem have been added by its amazing contributors. New versions for features and fixes are released quickly and without fuss.
-                        <br/><br/>
-                        http4k had been designed to make it easy to contribute or get help when you need it.</p>
-                    <a class="btn btn-primary" href="/contributing/">Contribute</a>
-                </div>
-                <div class="col-md-6 col-lg-5 p-md-0">
-                    <!-- Our Contribuitors-->
-                    <div class="contributors">
-                        <h4>Some of our contributors</h4>
-                        <div class="row justify-content-between align-content-center no-gutters">
-                            <a href="https://github.com/http4k/http4k/graphs/contributors">
-                                <img src="https://opencollective.com/http4k/contributors.svg?width=380&limit=49&button=false"/>
-                            </a>
+        <!-- community-->
+        <div class="community">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-lg-5">
+                        <h2>We love <br/> our community</h2>
+                        <p>Many of the features of the http4k ecosystem have been added by its amazing contributors. New
+                            versions for features and fixes are released quickly and without fuss.
+                            <br/><br/>
+                            http4k had been designed to make it easy to contribute or get help when you need it.</p>
+                        <a class="btn btn-primary" href="/contributing/">Contribute</a>
+                    </div>
+                    <div class="col-md-6 col-lg-5 p-md-0">
+                        <!-- Our Contribuitors-->
+                        <div class="contributors">
+                            <h4>Some of our contributors</h4>
+                            <div class="row justify-content-between align-content-center no-gutters">
+                                <a href="https://github.com/http4k/http4k/graphs/contributors">
+                                    <img
+                                        src="https://opencollective.com/http4k/contributors.svg?width=380&limit=49&button=false"/>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- support-->
-    <div class="support">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card-shadow">
-                        <div class="row">
-                            <div class="col-auto"><img src="/images/support.svg" alt="support"/>
+        <!-- support-->
+        <div class="support">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card-shadow">
+                            <div class="row">
+                                <div class="col-auto"><img src="/images/support.svg" alt="support"/>
+                                </div>
+                                <div class="col p-0">
+                                    <h3>Getting Support</h3>
+                                    <p>Sometimes everybody needs a little help. http4k provides several way to seek
+                                        assistance, both through the community Slack channels and through bespoke
+                                        support services.</p>
+                                    <div class="see-more"><a href="/community/">See more ››</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col p-0">
-                                <h3>Getting Support</h3>
-                                <p>Sometimes everybody needs a little help. http4k provides several way to seek assistance, both through the community Slack channels and through bespoke support services.</p>
-                                <div class="see-more"><a href="/community/">See more ››</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-shadow">
+                            <div class="row">
+                                <div class="col-auto"><img src="/images/faq.svg" alt="faq"/>
+                                </div>
+                                <div class="col p-0">
+                                    <h3>http4k in the wild</h3>
+                                    <p>If you're looking for more complete examples http4k applications, look here.
+                                        There are also a collection of public talks covering various aspects of the
+                                        toolkit.</p>
+                                    <div class="see-more"><a href="/http4k-in-action/">See more ››</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="card-shadow">
-                        <div class="row">
-                            <div class="col-auto"><img src="/images/faq.svg" alt="faq"/>
-                            </div>
-                            <div class="col p-0">
-                                <h3>http4k in the wild</h3>
-                                <p>If you're looking for more complete examples http4k applications, look here. There are also a collection of public talks covering various aspects of the toolkit.</p>
-                                <div class="see-more"><a href="/http4k-in-action/">See more ››</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="pumb">
+                <!-- pumb image--><img class="img-fluid" src="/images/pumb.svg" alt="pumb"/>
             </div>
         </div>
-        <div class="pumb">
-            <!-- pumb image--><img class="img-fluid" src="/images/pumb.svg" alt="pumb"/>
-        </div>
-    </div>
-    {{ end }}
+        {{ end }}
