@@ -40,7 +40,7 @@ As a community-driven project, we would welcome new or updated recipes to make h
 
 Read more about the theory behind How-to guides [here](https://diataxis.fr/how-to-guides/).
 
-### Eco-system references
+### Ecosystem references
 In order to "fly like a butterfly and sting like a bee", http4k is heavily modularised. This section contains more detailed technical notes on the capabilities present each of the http4k modules. It's more of a "what" than a "why".
 
 Read more about the theory behind Reference guides [here](https://diataxis.fr/reference/).
