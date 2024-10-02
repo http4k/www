@@ -4,7 +4,7 @@
     <main class="main-content ms-4">
         <h1>{{ .Title }}</h1>
         {{ .Content }}
-        <div class="row row-cols-1 row-cols-sm-3 mt-5 g-4 justify-content-center">
+        <div class="row row-cols-1 row-cols-sm-2 mt-5 g-4 justify-content-center">
             {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
             <div class="col">
                 <div class="card h-100">
