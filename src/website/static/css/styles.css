@@ -94,11 +94,12 @@
 
 .layout {
     display: flex;
+    justify-content: center;
 }
 
 .main-content {
-    flex: 3; /* Take up more space for the main content */
     padding: 20px;
+    width: 80ch;
 }
 
 .sidebar {
