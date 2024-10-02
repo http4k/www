@@ -151,3 +151,7 @@ footer {
 .highlight pre {
     padding: 10px;
 }
+
+.github {
+    display: none;
+}

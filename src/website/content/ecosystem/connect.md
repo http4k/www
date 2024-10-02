@@ -4,6 +4,7 @@ description: http4k Connect is designed to facilitate seamless **integration wit
 ecosystem: http4k Connect
 type: ecosystem
 weight: 2
+remote: "https://raw.githubusercontent.com/http4k/http4k-connect/refs/heads/master/README.md"
 ---
 
 <img src="https://connect.http4k.org/img/logo-intro.png" class="blogImageMid" alt="http4k connect logo">
