@@ -88,17 +88,6 @@
         </div>
     </div>
 </div>
-<div class="our-document">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6 text-center">
-                <h2>Learn by example</h2>
-                <p class="lead">The docs are based on real, runnable examples that you can just use to get started.</p>
-                <a class="btn btn-primary" href="/howto/">See How-to guides</a>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10">
@@ -148,40 +137,12 @@
                 </div>
             </div>
         </div>
-        <!-- community-->
-        <div class="community">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-md-6 col-lg-5">
-                        <h2>We love <br/> our community</h2>
-                        <p>Many of the features of the http4k ecosystem have been added by its amazing contributors.
-                            New
-                            versions for features and fixes are released quickly and without fuss.
-                            <br/><br/>
-                            http4k had been designed to make it easy to contribute or get help when you need it.</p>
-                        <a class="btn btn-primary" href="/contributing/">Contribute</a>
-                    </div>
-                    <div class="col-md-6 col-lg-5 p-md-0">
-                        <!-- Our Contribuitors-->
-                        <div class="contributors">
-                            <h4>Some of our contributors</h4>
-                            <div class="row justify-content-between align-content-center no-gutters">
-                                <a href="https://github.com/http4k/http4k/graphs/contributors">
-                                    <img
-                                        src="https://opencollective.com/http4k/contributors.svg?width=380&limit=49&button=false"/>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- support-->
         <div class="support">
             <div class="container">
-                <div class="row">
+                <div class="row row-cols-1 row-cols-xl-3">
                     {{ range .Site.Data.cta }}
-                        <div class="col-lg-4">
+                        <div class="col">
                             <div class="card-shadow">
                                 <div class="row">
                                     <div class="col-2 p-1">
@@ -198,8 +159,11 @@
                     {{ end }}
                 </div>
             </div>
-            <div class="pumb">
-                ><img class="img-fluid" src="/images/pumb.svg" alt="pumb"/>
-            </div>
         </div>
-        {{ end }}
+    </div>
+</div>
+<div class="pumb">
+    <img class="img-fluid" src="/images/pumb.svg" alt="pumb"/>
+</div>
+{{ end }}
+
