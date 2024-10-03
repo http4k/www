@@ -34,12 +34,6 @@ Testing with default settings is required when push changes. Note that we curren
 Thank you to all the people who have already contributed to http4k!
 <a href="https://github.com/http4k/http4k/graphs/contributors"><img src="https://opencollective.com/http4k/contributors.svg?width=890" /></a>
 
-### Backers
-
-Thank you to all our backers! [[Become a backer](https://opencollective.com/http4k#backer)]
-
-<a href="https://opencollective.com/http4k#backers" target="_blank"><img src="https://opencollective.com/http4k/backers.svg?width=890"></a>
-
 ### Vendor support
 
 Many thanks to all of the software vendors who supply tools to help us deliver http4k to it's community:
