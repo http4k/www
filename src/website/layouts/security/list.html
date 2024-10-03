@@ -1,29 +1,34 @@
 {{ define "main" }}
 
 <div class="layout d-flex">
-    <main class="main-content ms-4">
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-        <div class="row row-cols-12 g-4 mt-5">
-            {{ range where .Site.RegularPages "Type" "eq" "security" }}
-            <div class="col-12">
-                <h5>{{ .File.BaseFileName }}: {{ .Title }}</h5>
-                <p class="small">{{ .Params.date | time.Format "January 1st 2006" }}</p>
-                <p>{{ .Params.description }}</p>
-                <div class="mt-auto d-flex justify-content-end">
-                    <a href="{{ .RelPermalink }}/" class="btn btn-primary">Read More</a>
+    <main class="main-content">
+        <div class="row mt-5">
+            <div class="col-7 p-4">
+                <h1>{{ .Title }}</h1>
+                {{ .Content }}
+                <div class="row row-cols-12 g-4">
+                    {{ range where .Site.RegularPages "Type" "eq" "security" }}
+                    <div class="col-12">
+                        <h5>{{ .File.BaseFileName }}: {{ .Title }}</h5>
+                        <p class="small">{{ .Params.date | time.Format "January 1st 2006" }}</p>
+                        <p>{{ .Params.description }}</p>
+                        <div class="mt-auto d-flex justify-content-end">
+                            <a href="{{ .RelPermalink }}/" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    <hr>
+                    {{ end }}
                 </div>
             </div>
-            <hr>
-            {{ end }}
+            <div class="col-5 p-4">
+                <div class="p-3 card-shadow">
+                    <h3>Report a security vulnerability</h3>
+                    To report a security vulnerability for a project within the http4 ecosystem, see the
+                    <a href="/security-policy/">Security Policy</a>
+                </div>
+
+            </div>
     </main>
-    <aside class="sidebar">
-        <div>
-            <h3>Report a security vulnerability</h3>
-            To report a security vulnerability for a project within the http4 ecosystem, see the
-            <a href="/security-policy/">Security Policy</a>
-        </div>
-    </aside>
 </div>
 
 {{ end }}

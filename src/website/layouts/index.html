@@ -53,7 +53,7 @@
                         Supports many Server, Serverless and HTTP Client technologies behind simple, consistent
                         interfaces. </br></br>
                         http4k provides
-                        <a href="/ecosystem/http4k/">60+ pre-built integrations</a> for developers to choose from
+                        <a href="/ecosystem/">over 100 pre-built integrations</a> for developers to choose from
                         including Observability, JSON, and OpenAPI support.
                     </p>
                 </div>
@@ -111,108 +111,29 @@
                         <a class="btn btn-primary" href="/ecosystem/">Check it out</a>
                     </div>
                     <div class="col-lg-7 offset-xl-1 col-lg-7 offset-xl-1">
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/undertow.svg" alt="undertow"/>
+                        {{ range .Site.Data.modules }}
+                            <div class="row justify-content-center align-items-center">
+                                {{ range . }}
+                                    <div class="col text-center integrationLogo">
+                                        <img class="img-fluid" src="{{ .image }}" alt="{{ .alt }}"/>
+                                    </div>
+                                {{ end }}
                             </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/openai.svg" alt="openai">
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/amazon-lambda.svg" alt="amazon-lambda"/>
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/dynamodb.png" alt="dynamodb">
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/open-api.svg" alt="open-api"/>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/google-analytics.svg" alt="google analytics">
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/kms.png" alt="kms">
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/oauth.svg" alt="oauth"/>
-                            </div>
-
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/monkey.svg" alt="monkey"/>
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/sqs.png" alt="sqs">
-                            </div>
-                        </div>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/apache.svg" alt="apache"/>
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/anthropic.png" alt="anthropic">
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/gcp-functions.svg" alt="google-cloud-functions"/>
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/eventbridge.png" alt="eventbridge">
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/websockets.svg" alt="websockets"/>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/kafka.svg" alt="kafka">
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/gson.svg" alt="gson"/>
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/cloudwatch.png" alt="cloudwatch">
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/netty.svg" alt="netty"/>
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/langchain.svg" alt="langchain">
-                            </div>
-                        </div>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/openwhisk.svg" alt="openwhisk"/>
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/firehose.svg" alt="firehose">
-                            </div>
-
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/handlebars.svg" alt="handlebars"/>
-                            </div>
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/s3.png" alt="s3">
-                            </div>
-
-                            <div class="col text-center integrationLogo">
-                                <img class="img-fluid" src="/images/jetty.svg" alt="jetty"/>
-                            </div>
-                        </div>
+                        {{ end }}
                     </div>
                 </div>
             </div>
         </div>
-        <!-- corporate sponsors -->
         <div style="margin-bottom: 75px; margin-top: -75px">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-8 text-center">
-                        <h2>Corporate sponsors</h2>
-                        <p>http4k partners with selected companies to fund and explore continued innovation around the
-                            project.
-                            If your company is using http4k and would like to take advantage of this program,
-                            please <a href="mailto:info@http4k.org?subject=Corporate Sponsorship">get in touch</a>.
+                        <h2>Corporate partners</h2>
+                        <p>
+                            http4k works with selected companies to fund and explore continued innovation around the
+                            project. If your organisation is using http4k and would like to take advantage of this
+                            program, please <a href="mailto:info@http4k.org?subject=Corporate Sponsorship">get in
+                                touch</a>.
                         </p>
                     </div>
                     <div class="row-col-6 justify-content-center d-flex">
@@ -233,7 +154,8 @@
                 <div class="row justify-content-between">
                     <div class="col-md-6 col-lg-5">
                         <h2>We love <br/> our community</h2>
-                        <p>Many of the features of the http4k ecosystem have been added by its amazing contributors. New
+                        <p>Many of the features of the http4k ecosystem have been added by its amazing contributors.
+                            New
                             versions for features and fixes are released quickly and without fuss.
                             <br/><br/>
                             http4k had been designed to make it easy to contribute or get help when you need it.</p>
@@ -258,42 +180,26 @@
         <div class="support">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="card-shadow">
-                            <div class="row">
-                                <div class="col-auto"><img src="/images/support.svg" alt="support"/>
-                                </div>
-                                <div class="col p-0">
-                                    <h3>Getting Support</h3>
-                                    <p>Sometimes everybody needs a little help. http4k provides several way to seek
-                                        assistance, both through the community Slack channels and through bespoke
-                                        support services.</p>
-                                    <div class="see-more"><a href="/community/">See more ››</a>
+                    {{ range .Site.Data.cta }}
+                        <div class="col-lg-4">
+                            <div class="card-shadow">
+                                <div class="row">
+                                    <div class="col-2 p-1">
+                                        <img src="{{ .img }}" alt="{{ .alt }}"/>
+                                    </div>
+                                    <div class="col p-0">
+                                        <h3>{{ .title }}</h3>
+                                        <p>{{ .description }}</p>
+                                        <a class="btn btn-primary" href="{{ .link }}">See more</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="card-shadow">
-                            <div class="row">
-                                <div class="col-auto"><img src="/images/faq.svg" alt="faq"/>
-                                </div>
-                                <div class="col p-0">
-                                    <h3>http4k in the wild</h3>
-                                    <p>If you're looking for more complete examples http4k applications, look here.
-                                        There are also a collection of public talks covering various aspects of the
-                                        toolkit.</p>
-                                    <div class="see-more"><a href="/http4k-in-action/">See more ››</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{ end }}
                 </div>
             </div>
             <div class="pumb">
-                <!-- pumb image--><img class="img-fluid" src="/images/pumb.svg" alt="pumb"/>
+                ><img class="img-fluid" src="/images/pumb.svg" alt="pumb"/>
             </div>
         </div>
         {{ end }}
