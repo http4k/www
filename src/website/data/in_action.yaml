@@ -7,7 +7,7 @@ talks:
             link: https://speakerdeck.com/http4k/exploring-the-testing-hyperpyramid-with-kotlin-and-http4k
           - title: "code"
             link: https://github.com/http4k/exploring-the-testing-hyperpyramid
-    - title: "Talking Kotlin ep. 99: HTTP as a function with http4k"
+    - title: "Talking Kotlin ep. 99: HTTP as a function with http4k (2021)"
       link: https://www.youtube.com/watch?v=mPmUjJhdYME
       thumbnail: https://i3.ytimg.com/vi/mPmUjJhdYME/maxresdefault.jpg
       extra_links:
