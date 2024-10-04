@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="layout">
+	<main class="main-content">
+		<article>
+			<h1>{{ .Title }}</h1>
+			<div>
+				{{ .Content }}
+			</div>
+            <h3>See http4k in action</h3>
+            <div class="row row-cols-4">
+                <div class="card m-2 p-2">
+                    <div class="card-body">
+                        <a class="" href="https://github.com/http4k/examples"><strong>http4k/examples</strong></a>
+                        <div class="pt-2 pb-3">A collection of examples using various http4k features.</div>
+                    </div>
+                </div>
+            </div>
+            <h3>Standalone projects</h3>
+            <p>Each project is tagged with the http4k features it demonstrates:</p>
+            <div class="row row-cols-4">
+            {{ range .Site.Data.in_action.projects }}
+            <div class="card m-2 p-2">
+                <div class="card-body">
+                <a class="" href="https://github.com/{{ .github_slug }}"><strong>{{ .github_slug }}</strong></a>
+                <div class="pt-2 pb-3">{{ .title }}</div>
+                {{ range .tags }}
+                <span class="badge text-bg-secondary" style="display:inline">{{ . }}</span>
+                {{ end }}
+                </div>
+            </div>
+            {{ end }}
+            </div>
+        </article>
+	</main>
+</div>
+{{ end }}

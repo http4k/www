@@ -1,0 +1,47 @@
+projects:
+    - title: "TDD’d example application"
+      github_slug: http4k/http4k-by-example
+      tags:
+        - Templates
+        - Testing
+        - JSON / Lenses
+        - CD pipeline
+        - Approval Testing
+        - OpenApi
+        - Static resources
+    - title: "Dropbox clone in 100 lines of Kotlin"
+      github_slug: http4k/http4kbox
+      tags:
+        - Testing
+        - Http Client
+        - Multipart
+        - AWS
+        - CD pipeline
+        - Serverless
+        - GraalVM
+    - title: "Simple websocket driven chat-server in 30 lines of Kotlin"
+      github_slug: http4k/http4k-irc
+      tags:
+        - Testing
+        - Websockets
+        - CD Pipeline
+        - Static resources
+    - title: "Todo backend (standard routing)"
+      github_slug: http4k/http4k-todo-backend
+      tags:
+        - Testing
+        - JSON / Lenses
+        - CD pipeline
+    - title: "Todo backend (contract routing)"
+      github_slug: http4k/http4k-contract-todo-backend
+      tags:
+        - Testing
+        - JSON / Lenses
+        - OpenApi
+        - CD pipeline
+    - title: "Real World example (Medium clone)"
+      github_slug: alisabzevari/kotlin-http4k-realworld-example-app
+      tags:
+        - Testing
+        - Contracts
+
