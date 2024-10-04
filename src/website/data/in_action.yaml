@@ -1,4 +1,58 @@
+talks:
+    - title: "Exploring the Testing Hyperpyramid with Kotlin & http4k @KotlinConf 2023"
+      link: https://www.youtube.com/watch?v=CrslqbMbaD8
+      thumbnail: https://i3.ytimg.com/vi/CrslqbMbaD8/maxresdefault.jpg
+      extra_links:
+          - title: "slides"
+            link: https://speakerdeck.com/http4k/exploring-the-testing-hyperpyramid-with-kotlin-and-http4k
+          - title: "code"
+            link: https://github.com/http4k/exploring-the-testing-hyperpyramid
+    - title: "Talking Kotlin ep. 99: HTTP as a function with http4k"
+      link: https://www.youtube.com/watch?v=mPmUjJhdYME
+      thumbnail: https://i3.ytimg.com/vi/mPmUjJhdYME/maxresdefault.jpg
+      extra_links:
+          - title: "audio"
+            link: https://overcast.fm/+QCXbEUw4Q
+    - title: "http4k: Server as a Function (Kotlin Webinars vol. 3, 2021)"
+      link: https://www.youtube.com/watch?v=NjoCjupV8HE
+      thumbnail: https://i3.ytimg.com/vi/NjoCjupV8HE/maxresdefault.jpg
+      extra_links:
+          -   title: "webinar series"
+              link: https://blog.jetbrains.com/kotlin/2021/05/server-side-with-kotlin-webinar-series-vol-3/
+    - title: "Introduction to http4k by Dmitry Kandalov (2021)"
+      link: https://www.youtube.com/watch?v=FVvn-aFO--Q
+      thumbnail: https://i3.ytimg.com/vi/FVvn-aFO--Q/maxresdefault.jpg
+    - title: "Writing Test Driven Apps with http4k @ Kotliners 2020"
+      link: https://bit.ly/tdd-http4k-kotliners
+      thumbnail: https://i3.ytimg.com/vi/p1VTfcQJefk/maxresdefault.jpg
+    - title: "Designing Microservices in Functional Style by Uberto Barbini @ VirtualJUG 2020"
+      link: https://www.youtube.com/watch?v=k5yz7t6dnkU
+      thumbnail: http://i3.ytimg.com/vi/k5yz7t6dnkU/hqdefault.jpg
+    - title: "Server as a Function. In Kotlin. _______________ @ KotlinConf 2018"
+      link: http://bit.ly/serverasafunction
+      thumbnail: https://i3.ytimg.com/vi/vdxBNh1qx1Q/maxresdefault.jpg
+      extra_links:
+          - title: "slides"
+            link: https://speakerdeck.com/daviddenton/server-as-a-function-in-kotlin
+    - title: "Test Driven Gilded Rose in Kotlin by Duncan McGregor"
+      link: https://www.youtube.com/watch?v=1XtSVSmu3BI&list=PL1ssMPpyqocg2D_8mgIbcnQGxCPI2_fpA&index=3
+      thumbnail: https://i3.ytimg.com/vi/1XtSVSmu3BI/maxresdefault.jpg
+      extra_links:
+          - title: "full series"
+            link: https://www.youtube.com/playlist?list=PL1ssMPpyqocg2D_8mgIbcnQGxCPI2_fpA
 projects:
+    - title: A collection of examples using various http4k features.
+      github_slug: http4k/examples
+      tags:
+          - AWS
+          - GraalVM
+          - Security
+          - GraphQL
+          - Hexagonal
+          - Hotwire
+          - OpenApi
+          - Quarkus
+          - Websockets
     - title: "TDD’d example application"
       github_slug: http4k/http4k-by-example
       tags:
