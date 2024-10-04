@@ -12,6 +12,11 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+  highlight:
+    style: "monokai"
+    lineNos: false
+
 params:
   title: "http4k"
   description: "The Functional toolkit for Kotlin HTTP applications"
