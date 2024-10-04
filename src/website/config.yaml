@@ -45,21 +45,16 @@ menus:
       url: /overview/
       parent: about
       weight: 11
-    - name: about-rationale
-      title: Rationale
-      url: /rationale/
-      parent: about
-      weight: 12
     - name: about-news
       title: News
       url: /news/
       parent: about
-      weight: 13
+      weight: 12
     - name: about-in-action
       title: http4k in action
       url: /http4k-in-action/
       parent: about
-      weight: 14
+      weight: 13
 
     - name: learn
       title: Learn

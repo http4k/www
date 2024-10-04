@@ -32,7 +32,7 @@ Testing with default settings is required when push changes. Note that we curren
 ### Contributors
 
 Thank you to all the people who have already contributed to http4k!
-<a href="https://github.com/http4k/http4k/graphs/contributors"><img src="https://opencollective.com/http4k/contributors.svg?width=890" /></a>
+<a href="https://github.com/http4k/http4k/graphs/contributors"><img src="https://opencollective.com/http4k/contributors.svg?width=800" /></a>
 
 ### Vendor support
 
