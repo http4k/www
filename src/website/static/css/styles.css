@@ -87,7 +87,7 @@
 
 .d-flex {
     flex-wrap: nowrap !important; /* Prevent wrapping */
-   align-items: center;
+    align-items: center;
 }
 
 .no-links a {
@@ -135,7 +135,7 @@
 }
 
 footer {
-    background-color:#60c0ff;
+    background-color: #60c0ff;
     padding-bottom: 85px;
     padding-top: 65px;
     color: #ffffff;
