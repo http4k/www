@@ -7,5 +7,5 @@ OLD_VERSION=$(grep -o 'http4k_version=.*' gradle.properties | head -n 1 | cut -d
 
 echo "Old version: $OLD_VERSION"
 
-sed -i "s/\$OLD_VERSION\b/$NEW_VERSION/g" gradle.properties
-sed -i "s/\$OLD_VERSION\b/$NEW_VERSION/g" src/website/config.yaml
+sed -i '' "s/${OLD_VERSION}/${NEW_VERSION}/g" gradle.properties
+sed -i '' "s/${OLD_VERSION}/${NEW_VERSION}/g" src/website/config.yaml

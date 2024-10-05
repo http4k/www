@@ -26,8 +26,8 @@ params:
     - "images/hero-image.webp"
 
   versions:
-    http4k: "A.B.C"
-    connect: "C.D.E"
+    http4k: "5.32.1.0"
+    connect: "5.25.0.0"
 
   favicons:
     themeColor: "#FFFFFF"
