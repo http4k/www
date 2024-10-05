@@ -12,7 +12,9 @@ jobs:
          ./upgrade_http4k.sh ${{ github.event.client_payload.version }}
          git add .
          git commit -am "Upgrade http4k"
-      - name: Push changes
-        run: git push
+      - run: git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: peter-evans/repository-dispatch@v3.0.0
+        with:
+          event-type: release

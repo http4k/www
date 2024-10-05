@@ -2,9 +2,10 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch: release
 jobs:
   release-site:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.0
         with:
