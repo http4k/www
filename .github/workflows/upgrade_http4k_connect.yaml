@@ -7,8 +7,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
       - run: |
-         ./upgrade_http4k_connect.sh ${{ github.event.client_payload.version }}
-          git commit -am "Upgrade http4k"
+            git config --local user.name "github-actions"
+            git config --local user.email "github-actions@github.com"
+            ./upgrade_http4k_connect.sh ${{ github.event.client_payload.version }}
+            git commit -am "Upgrade http4k"
       - name: Push changes
         run: git push
         env:
