@@ -134,10 +134,10 @@ menus:
       weight: 43
     - name: solutions-training
       title: Training
-      url: /training/
+      url: /education/
       parent: solutions
       weight: 44
-    - name: solutions-training
+    - name: solutions-security
       title: Security Advisories
       url: /security/
       parent: solutions
