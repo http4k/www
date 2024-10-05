@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
       - run: |
-         ./upgrade_http4k_connect_version.sh ${{ github.event.client_payload.version }}
+         ./upgrade_http4k_connect.sh ${{ github.event.client_payload.version }}
           git commit -am "Upgrade http4k"
       - name: Push changes
         run: git push
