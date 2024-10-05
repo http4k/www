@@ -1,27 +1,27 @@
 {{ define "main" }}
 
 <div class="layout">
-	<main class="main-content">
-		<article>
-			<h1>{{ .Title }}</h1>
-			<div>
-				{{ .Content }}
-			</div>
-			{{ with .Params.tags }}
-			<div>
-				<ul id="tags">
-					{{ range . }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-					{{ end }}
-				</ul>
-			</div>
-			{{ end }}
-		</article>
+    <main class="main-content">
+        <article>
+            <h1>{{ .Title }}</h1>
+            <div>
+                {{ .Content }}
+            </div>
+            {{ with .Params.tags }}
+            <div>
+                <ul id="tags">
+                    {{ range . }}
+                    <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </article>
 
-		<div class="mt-auto d-flex justify-content-center">
-			<a href="../" class="btn btn-primary">All How-to guides</a>
-		</div>
-	</main>
+        <div class="mt-auto d-flex justify-content-center">
+            <a href="../" class="btn btn-primary">All How-to guides</a>
+        </div>
+    </main>
 
 </div>
 {{ end }}

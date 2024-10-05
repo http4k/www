@@ -96,14 +96,30 @@
     pointer-events: none;
 }
 
-.layout {
-    display: flex;
-    justify-content: center;
+@media (min-width: 968px) {
+    .layout {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .layout {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .main-content {
     padding: 20px;
-    width: 100ch;
+    width: 100%;
 }
 
 .sidebar {
