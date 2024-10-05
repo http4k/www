@@ -5,13 +5,13 @@ type: solutions
 highlights:
     - title: Some things we can help with
       description: A description of a thing we can help with
-      img: "/images/extendable.svg"
+      icon: "/images/supportive.svg"
     - title: Some things we can help with
       description: A description of a thing we can help with
-      img: "/images/extendable.svg"
+      icon: "/images/testability.svg"
     - title: Some things we can help with
       description: A description of a thing we can help with
-      img: "/images/extendable.svg"
+      icon: "/images/faq.svg"
 ---
 
 Unlock the full potential of your applications with consulting services directly from the architects of http4k. We provide tailored guidance and support at every stage of your journey through the http4k ecosystem.

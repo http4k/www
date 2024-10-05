@@ -5,13 +5,13 @@ type: solutions
 highlights:
     - title: Some things we can help with
       description: A description of a thing we can help with
-      img: "/images/extendable.svg"
+      icon: "/images/supportive.svg"
     - title: Some things we can help with
       description: A description of a thing we can help with
-      img: "/images/extendable.svg"
+      icon: "/images/testability.svg"
     - title: Some things we can help with
       description: A description of a thing we can help with
-      img: "/images/extendable.svg"
+      icon: "/images/extendable.svg"
 ---
 
 The **http4k** project is a culmination of work on real-world projects in many different industries. Whilst the library is designed to be simple to learn and use, there are many advantages to learning from our mistakes when using it! To this end, the  team have developed a significant amount of training materials which can be used to give teams new to **http4k** the best possible start, especially around the following areas:
