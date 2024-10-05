@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+<div class="layout d-flex">
+    <main class="main-content">
+        <div class="row mt-5">
+            <h1>http4k Solutions</h1>
+            Maximize your productivity with http4k, leveraging the simplicity and power of the world’s most flexible and lightweight HTTP libraries. http4k Solutions equips your developers with the tools to build, modernize, and maintain cutting-edge web applications with ease.
+        </div>
+        <div class="row mt-5">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-xl-3">
+                    {{ range .Site.Data.solutions.top }}
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-2 p-1">
+                                <img src="{{ .img }}" alt="{{ .alt }}"/>
+                            </div>
+                            <div class="col p-0">
+                                <h3>{{ .title }}</h3>
+                                <p>{{ .description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="row row-cols-2 row-cols-xl-5 justify-content-center mt-4">
+                    <div class="col-2">
+                        <a class="btn btn-primary" href="mailto:info@http4k.org?subject=http4k Solutions">Talk to an expert</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-xl-3">
+                    {{ range .Site.Data.solutions.bottom }}
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-2 p-1">
+                                <img src="{{ .img }}" alt="{{ .alt }}"/>
+                            </div>
+                            <div class="col p-0">
+                                <h3>{{ .title }}</h3>
+                                <p>{{ .description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+{{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}
+
+{{ end }}

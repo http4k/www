@@ -1,0 +1,29 @@
+<div class="container">
+    {{ $hide := .hideImages }}
+    <div class="row row-cols-1 row-cols-xl-3">
+        {{ range page.Site.Data.cta }}
+        <div class="col">
+            <div class="card-shadow">
+                {{ if $hide }}
+                <div class="">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                    <a class="btn btn-primary" href="{{ .link }}">{{ .action_text }}</a>
+                </div>
+                {{ else }}
+                <div class="row">
+                    <div class="col-2 p-1">
+                        <img src="{{ .img }}" alt="{{ .alt }}"/>
+                    </div>
+                    <div class="col p-0">
+                        <h3>{{ .title }}</h3>
+                        <p>{{ .description }}</p>
+                        <a class="btn btn-primary" href="{{ .link }}">{{ .action_text }}</a>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>

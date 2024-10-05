@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<div class="layout d-flex">
+    <main class="main-content">
+        <div class="row mt-5">
+            <div class="col-7 p-4">
+                <h1>{{ .Title }}</h1>
+                {{ .Content }}
+            </div>
+        </div>
+    </main>
+</div>
+{{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}
+
+{{ end }}
