@@ -133,8 +133,8 @@ menus:
       parent: solutions
       weight: 43
     - name: solutions-training
-      title: Training
-      url: /education/
+      title: Developer Training
+      url: /training/
       parent: solutions
       weight: 44
     - name: solutions-security
