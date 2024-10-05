@@ -10,7 +10,7 @@ description: Feature overview of the http4k-testing-approval module
 
 ```kotlin
 dependencies {
-    implementation(platform("org.http4k:http4k-bom:5.32.1.0"))
+    {{< http4k_bom>}}
     implementation("org.http4k:http4k-testing-approval")
 }
 ```

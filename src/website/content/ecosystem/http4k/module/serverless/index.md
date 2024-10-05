@@ -11,7 +11,7 @@ description: Feature overview of the http4k-serverless modules, covering Serverl
 
 ```kotlin
 dependencies {
-    implementation(platform("org.http4k:http4k-bom:5.32.1.0"))
+    {{< http4k_bom>}}
 
     // AWS Lambda: 
     implementation("org.http4k:http4k-serverless-lambda")
@@ -92,7 +92,7 @@ After building, and having your jar as the only file in the `libs/` folder you c
 
 ```gcloud functions deploy example-function --runtime=java11 --entry-point=guide.modules.serverless.gcf.FunctionsExampleEntryClass --trigger-http --source=libs/```
 
-If you wan't to invoke functions locally you can do it with this gradle setup and passing a `-PrunFunction.target` parameter to the build task : 
+If you want to invoke functions locally you can do it with this gradle setup and passing a `-PrunFunction.target` parameter to the build task : 
 ```kotlin
 configurations {
     invoker

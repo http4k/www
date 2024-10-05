@@ -42,7 +42,7 @@ The client-side is similar, but simpler:
 
 ```kotlin
 dependencies {
-    implementation(platform("org.http4k:http4k-bom:5.32.1.0"))
+    {{< http4k_bom>}}
     implementation("org.http4k:http4k-core")
 }
 ```

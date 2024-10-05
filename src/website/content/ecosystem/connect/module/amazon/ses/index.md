@@ -8,7 +8,7 @@ description: Feature overview of the http4k Connect AWS Simple Email Service mod
 
 ```kotlin
 dependencies {
-    implementation(platform("org.http4k:http4k-connect-bom:5.22.1.0"))
+    {{< http4k_connect_bom>}}
     implementation("org.http4k:http4k-connect-amazon-ses")
     implementation("org.http4k:http4k-connect-amazon-ses-fake")
 }

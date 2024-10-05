@@ -11,7 +11,7 @@ description: Feature overview of the modules providing XML support, including an
 
 ```kotlin
 dependencies {
-    implementation(platform("org.http4k:http4k-bom:5.32.1.0"))
+    {{< http4k_bom>}}
     // json.org XML:
     implementation("org.http4k:http4k-format-xml")
 
