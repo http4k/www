@@ -112,12 +112,6 @@
     background-color: #f0f0f0; /* Optional: Add background color to distinguish the sidebar */
 }
 
-@media (max-width: 768px) {
-    .layout {
-        flex-direction: column; /* Stack the elements vertically on smaller screens */
-    }
-}
-
 
 .blogImage {
     width: 100%;

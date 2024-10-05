@@ -1,53 +1,40 @@
 {{ define "main" }}
 
-<div class="layout d-flex">
+<div class="layout">
     <main class="main-content">
         <div class="row my-5">
-            <h1>http4k Solutions</h1>
-            Maximize your productivity with http4k, leveraging the simplicity and power of the world’s most flexible and lightweight HTTP libraries. http4k Solutions equips your developers with the tools to build, modernize, and maintain cutting-edge web applications with ease.
+            <div class="col-12">
+                <h1>http4k Solutions</h1>
+                <p>Maximize your productivity with http4k, leveraging the simplicity and power of the world’s most flexible and lightweight HTTP libraries. http4k Solutions equips your developers with the tools to build, modernize, and maintain cutting-edge web applications with ease.</p>
+            </div>
         </div>
-        <div class="row my-5">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-xl-3">
-                    {{ range .Site.Data.solutions.top }}
-                    <div class="col">
-                        <div class="row">
-                            <div class="col-2 p-1">
-                                <img src="{{ .img }}" alt="{{ .alt }}"/>
-                            </div>
-                            <div class="col p-0">
-                                <h3>{{ .title }}</h3>
-                                <p>{{ .description }}</p>
-                            </div>
-                        </div>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-xl-3 justify-content-center">
+            {{ range .Site.Data.solutions.top }}
+            <div class="col">
+                <h3>{{ .title }}</h3>
+                <p >{{ .description | markdownify }}</p>
+            </div>
+            {{ end }}
+        </div>
+        <div class="row p-4 justify-content-center">
+            <div class="col-6 d-flex justify-content-center">
+                <a class="btn btn-primary w-100" href="mailto:info@http4k.org?subject=http4k Solutions">Talk to an expert</a>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 ">
+            {{ range .Site.Data.solutions.bottom }}
+            <div class="col p-3">
+                <div class="row">
+                    <div class="col-2 p-1">
+                        <img src="{{ .img }}" alt="{{ .alt }}"/>
                     </div>
-                    {{ end }}
-                </div>
-                <div class="row row-cols-3 p-4 justify-content-center">
-                    <div class="col-6 d-flex justify-content-center">
-                        <a class="btn btn-primary w-100" href="mailto:info@http4k.org?subject=http4k Solutions">Talk to an expert</a>
+                    <div class="col p-0">
+                        <h3>{{ .title }}</h3>
+                        <p>{{ .description | markdownify }}</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row my-5">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-xl-3">
-                    {{ range .Site.Data.solutions.bottom }}
-                    <div class="col p-3">
-                        <div class="row">
-                            <div class="col-2 p-1">
-                                <img src="{{ .img }}" alt="{{ .alt }}"/>
-                            </div>
-                            <div class="col p-0">
-                                <h3>{{ .title }}</h3>
-                                <p>{{ .description }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
+            {{ end }}
         </div>
     </main>
 </div>

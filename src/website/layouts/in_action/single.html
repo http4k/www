@@ -8,7 +8,7 @@
 			</div>
             <h3>Talks</h3>
             Here's a curated list of talks worth watching. Check out the <a href="https://bit.ly/http4k-talks">YouTube Playlist</a> for the latest collection of talks featuring http4k.
-            <div class="row row-cols-3 pb-4">
+            <div class="row row-cols-1 row-cols-md-3 pb-4">
                 {{ range (sort .Site.Data.in_action.talks ".date" "desc" )  }}
                 <div class="col p-2">
                 <div class="card h-100">
@@ -38,7 +38,7 @@
             </div>
             <h3>Standalone projects</h3>
             <p>Each project is tagged with the http4k features it demonstrates:</p>
-            <div class="row row-cols-4">
+            <div class="row row-cols-1 row-cols-md-3">
             {{ range .Site.Data.in_action.projects }}
             <div class="col p-2">
                 <div class="card h-100">
