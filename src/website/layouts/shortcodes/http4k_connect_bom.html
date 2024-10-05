@@ -1,1 +1,2 @@
-implementation(platform("org.http4k:http4k-connect-bom:X.Y.Z"))
+{{ $version := .Site.Params.versions.connect }}
+implementation(platform("org.http4k:http4k-connect-bom:{{ $version }}"))
