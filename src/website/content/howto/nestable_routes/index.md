@@ -47,7 +47,7 @@ Note that paths, not strings, will match by default. `"/news/{date}"` will match
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-core")
 }
 ```

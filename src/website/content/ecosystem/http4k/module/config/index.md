@@ -10,7 +10,7 @@ description: Feature overview of the http4k-config module
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-config")
 }
 ```

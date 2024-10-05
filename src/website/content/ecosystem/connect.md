@@ -35,7 +35,7 @@ lightweight versions of popular APIs covering standard use-cases.
 ```kotlin
 dependencies {
     // install the platform...
-    {{< http4k_connect_bom>}}
+    {{< http4k_connect_bom >}}
 
     // ...then choose an API Client
     implementation("org.http4k:http4k-connect-amazon-s3")

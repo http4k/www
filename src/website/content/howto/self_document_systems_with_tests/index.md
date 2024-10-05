@@ -7,7 +7,7 @@ description: Recipe for creating a Distributed Tracing Tree
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-core")
     testImplementation("org.http4k:http4k-testing-tracerbullet")
 }

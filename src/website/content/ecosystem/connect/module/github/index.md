@@ -12,7 +12,7 @@ The GitHub connector currently provides basic action interfaces and support for 
 
 ```kotlin
 dependencies {
-    {{< http4k_connect_bom>}}
+    {{< http4k_connect_bom >}}
     implementation("org.http4k:http4k-connect-github")
 }
 ```

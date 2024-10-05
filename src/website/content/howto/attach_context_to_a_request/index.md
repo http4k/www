@@ -19,7 +19,7 @@ the shared bag of state for each request, and to remove the state after the requ
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-core")
 }
 ```

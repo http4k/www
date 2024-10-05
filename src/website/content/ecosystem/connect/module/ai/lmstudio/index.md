@@ -9,7 +9,7 @@ description: Feature overview of the http4k Connect LMStudio modules
 
 ```kotlin
 dependencies {
-    {{< http4k_connect_bom>}}
+    {{< http4k_connect_bom >}}
     implementation("org.http4k:http4k-connect-ai-lmstudio")
     implementation("org.http4k:http4k-connect-ai-lmstudio-fake")
 }

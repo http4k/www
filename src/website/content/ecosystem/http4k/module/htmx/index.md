@@ -11,7 +11,7 @@ description: Feature overview of the http4k-htmx module
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-htmx")
 
     implementation("org.http4k:http4k-template-handlebars") // Handlebars

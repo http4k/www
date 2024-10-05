@@ -8,7 +8,7 @@ description: Feature overview of the http4k Connect AWS S3 modules
 
 ```kotlin
 dependencies {
-    {{< http4k_connect_bom>}}
+    {{< http4k_connect_bom >}}
     implementation("org.http4k:http4k-connect-amazon-s3")
     implementation("org.http4k:http4k-connect-amazon-s3-fake")
 }

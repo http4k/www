@@ -7,7 +7,7 @@ description: Recipe for using http4k Events to send structured logs to external 
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-core")
     implementation("org.http4k:http4k-format-jackson")
 }

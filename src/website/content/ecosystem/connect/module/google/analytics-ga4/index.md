@@ -10,7 +10,7 @@ description: Feature overview of the http4k Connect Google Analytics GA4 modules
 
 ```kotlin
 dependencies {
-    {{< http4k_connect_bom>}}
+    {{< http4k_connect_bom >}}
     implementation("org.http4k:http4k-connect-google-analytics-ga4")
     implementation("org.http4k:http4k-connect-google-analytics-ga4-fake")
 }

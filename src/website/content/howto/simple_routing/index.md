@@ -11,7 +11,7 @@ For the typesafe contract-style routing, refer to [this](/howto/integrate_with_o
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-core")
 }
 ```

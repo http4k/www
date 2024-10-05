@@ -8,7 +8,7 @@ description: Feature overview of the http4k Connect Kafka Schema Registry module
 
 ```kotlin
 dependencies {
-    {{< http4k_connect_bom>}}
+    {{< http4k_connect_bom >}}
     implementation("org.http4k:http4k-connect-kafka-schemaregistry")
     implementation("org.http4k:http4k-connect-kafka-schemaregistry-fake")
 }

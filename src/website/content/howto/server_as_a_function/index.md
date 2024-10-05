@@ -9,7 +9,7 @@ This example is the simplest possible "server" implementation. Note that we are 
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-core")
 }
 ```

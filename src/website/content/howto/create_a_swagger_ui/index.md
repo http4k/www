@@ -33,7 +33,7 @@ These "lite" UIs are thin; meaning most of the assets are pulled from an externa
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-contract")
 }
 ```
@@ -51,7 +51,7 @@ For more control over the assets, http4k has optional modules to bundle the asse
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-contract-ui-swagger")
     implementation("org.http4k:http4k-contract-ui-redoc")
 }

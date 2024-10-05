@@ -11,7 +11,7 @@ description: Feature overview of the YAML http4k-format modules, several of whic
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-format-jackson-yaml")
     implementation("org.http4k:http4k-format-moshi-yaml")
 }

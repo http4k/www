@@ -10,7 +10,7 @@ description: Feature overview of the JSON http4k-format modules, several of whic
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
  
     // Argo:  
     implementation("org.http4k:http4k-format-argo")

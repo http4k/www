@@ -11,7 +11,7 @@ description: Feature overview of the http4k-graphql module.
 
 ```kotlin
 dependencies {
-    {{< http4k_bom>}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-graphql")
 
     // for the example below you will also need this dependency...
