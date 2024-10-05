@@ -1,0 +1,15 @@
+on:
+  repository_dispatch:
+    types: [http4k-release]
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - run: |
+         ./upgrade_http4k_version.sh ${{ github.event.client_payload.version }}
+          git commit -am "Upgrade http4k"
+      - name: Push changes
+        run: git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
