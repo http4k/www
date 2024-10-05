@@ -1,41 +1,53 @@
 talks:
-    - title: "Exploring the Testing Hyperpyramid with Kotlin & http4k @KotlinConf 2023"
+    - title: "Exploring the Testing Hyperpyramid with Kotlin & http4k @KotlinConf"
       link: https://www.youtube.com/watch?v=CrslqbMbaD8
       thumbnail: https://i3.ytimg.com/vi/CrslqbMbaD8/maxresdefault.jpg
+      date: 2023-10-18
       extra_links:
           - title: "slides"
             link: https://speakerdeck.com/http4k/exploring-the-testing-hyperpyramid-with-kotlin-and-http4k
           - title: "code"
             link: https://github.com/http4k/exploring-the-testing-hyperpyramid
-    - title: "Talking Kotlin ep. 99: HTTP as a function with http4k (2021)"
+    - title: "Have your Serverless Kotlin Functions and Eat Them Too"
+      link: https://www.youtube.com/watch?v=L1DvD83sjAw
+      date: 2024-05-22
+      thumbnail: https://i3.ytimg.com/vi/L1DvD83sjAw/maxresdefault.jpg
+    - title: "Talking Kotlin ep. 99: HTTP as a function with http4k"
       link: https://www.youtube.com/watch?v=mPmUjJhdYME
+      date: 2021-11-02
       thumbnail: https://i3.ytimg.com/vi/mPmUjJhdYME/maxresdefault.jpg
       extra_links:
           - title: "audio"
             link: https://overcast.fm/+QCXbEUw4Q
-    - title: "http4k: Server as a Function (Kotlin Webinars vol. 3, 2021)"
+    - title: "http4k: Server as a Function (Kotlin Webinars vol. 3)"
       link: https://www.youtube.com/watch?v=NjoCjupV8HE
+      date: 2021-06-24
       thumbnail: https://i3.ytimg.com/vi/NjoCjupV8HE/maxresdefault.jpg
       extra_links:
           -   title: "webinar series"
               link: https://blog.jetbrains.com/kotlin/2021/05/server-side-with-kotlin-webinar-series-vol-3/
-    - title: "Introduction to http4k by Dmitry Kandalov (2021)"
+    - title: "Introduction to http4k by Dmitry Kandalov"
       link: https://www.youtube.com/watch?v=FVvn-aFO--Q
+      date: 2021-05-26
       thumbnail: https://i3.ytimg.com/vi/FVvn-aFO--Q/maxresdefault.jpg
-    - title: "Writing Test Driven Apps with http4k @ Kotliners 2020"
+    - title: "Writing Test Driven Apps with http4k @ Kotliners"
       link: https://bit.ly/tdd-http4k-kotliners
+      date: 2020-11-26
       thumbnail: https://i3.ytimg.com/vi/p1VTfcQJefk/maxresdefault.jpg
-    - title: "Designing Microservices in Functional Style by Uberto Barbini @ VirtualJUG 2020"
+    - title: "Designing Microservices in Functional Style by Uberto Barbini @ VirtualJUG"
       link: https://www.youtube.com/watch?v=k5yz7t6dnkU
+      date: 2020-10-15
       thumbnail: http://i3.ytimg.com/vi/k5yz7t6dnkU/hqdefault.jpg
-    - title: "Server as a Function. In Kotlin. _______________ @ KotlinConf 2018"
+    - title: "Server as a Function. In Kotlin. _______________ @ KotlinConf"
       link: http://bit.ly/serverasafunction
+      date: 2018-10-04
       thumbnail: https://i3.ytimg.com/vi/vdxBNh1qx1Q/maxresdefault.jpg
       extra_links:
           - title: "slides"
             link: https://speakerdeck.com/daviddenton/server-as-a-function-in-kotlin
     - title: "Test Driven Gilded Rose in Kotlin by Duncan McGregor"
       link: https://www.youtube.com/watch?v=1XtSVSmu3BI&list=PL1ssMPpyqocg2D_8mgIbcnQGxCPI2_fpA&index=3
+      date: 2021-11-08
       thumbnail: https://i3.ytimg.com/vi/1XtSVSmu3BI/maxresdefault.jpg
       extra_links:
           - title: "full series"

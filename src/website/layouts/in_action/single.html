@@ -9,7 +9,7 @@
             <h3>Talks</h3>
             Here's a curated list of talks worth watching. Check out the <a href="https://bit.ly/http4k-talks">YouTube Playlist</a> for the latest collection of talks featuring http4k.
             <div class="row row-cols-3 pb-4">
-                {{ range .Site.Data.in_action.talks }}
+                {{ range (sort .Site.Data.in_action.talks ".date" "desc" )  }}
                 <div class="col p-2">
                 <div class="card h-100">
                     <div class="card-body ">
