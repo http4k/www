@@ -1,0 +1,15 @@
+services:
+  - title: "Rapid Onboarding"
+    description: "Kickstart your project with a thorough evaluation of your existing portfolio to pinpoint enhancements and create a roadmap for success. Get into action quickly—within days, not months."
+  - title: "Drive Efficiency"
+    description: "Uncover and document repeatable processes to streamline your development workflow. Our team will assist you in establishing best practices while mentoring your engineers to ensure continuous improvement."
+  - title: "Expand with Confidence"
+    description: "Partner with us to collaboratively manage and implement your initiatives as they grow across multiple teams and applications."
+blurb:
+  - title: "Seamless Upgrades to the Latest http4k"
+    description: "Say farewell to the hassle of manual upgrades and embrace a more efficient strategy that conserves both time and resources. Safeguard your organization from the risks of outdated http4k versions by ensuring a smooth transition to the latest release. Our seasoned experts leverage advanced knowledge and automation tools to keep your applications secure and compliant with industry standards."
+  - title: "Design and Develop http4k Applications"
+    description: "Enhance the speed of application delivery using the highly flexible http4k framework. Our time-tested development strategies, refined through years of experience, enable our specialists to collaborate with your developers, speeding up delivery or crafting new applications that fully leverage the capabilities of http4k."
+  - title: "Transform Your Existing Applications to http4k"
+    description: "Elevate your application portfolio by migrating to the highly versatile http4k framework. Our dedicated team will engage with you to assess your application environment, identify potential challenges, and formulate a clear roadmap for a successful migration."
+  - title: "Comprehensive Support Throughout Your Journey"
