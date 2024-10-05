@@ -5,13 +5,16 @@
         <div class="container">
             <article>
                 <h1>{{ .Title }}</h1>
-                <div>
-                    {{ .Content }}
+                {{ .Content }}
+                <div class="my-5">
+                    {{ partial "shared/highlight.html" .Params.highlights }}
                 </div>
             </article>
         </div>
     </main>
 </div>
+
+
 {{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}
 
 {{ partial "shared/pipes.html" }}

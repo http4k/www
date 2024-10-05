@@ -2,6 +2,16 @@
 title: http4k LTS Programme
 description: It's important to us that you can rely on http4k for the long term. That's why we offer Long Term Support (LTS) for our releases.
 type: solutions
+highlights:
+    - title: Some things we can help with
+      description: A description of a thing we can help with
+      img: "/images/extendable.svg"
+    - title: Some things we can help with
+      description: A description of a thing we can help with
+      img: "/images/extendable.svg"
+    - title: Some things we can help with
+      description: A description of a thing we can help with
+      img: "/images/extendable.svg"
 ---
 
 Enjoy long-term stability and support with **http4k’s Long-Term Support (LTS)** offering, designed for organizations that rely on **http4k** for their critical applications. Our LTS version of **http4k** provides guaranteed maintenance and updates for a stable release, ensuring your projects remain secure and fully functional without needing frequent upgrades. With support extending for at least 18 months, **http4k LTS** is your key to maintaining focus on feature delivery while ensuring your applications are future-proof.
