@@ -198,3 +198,10 @@ footer {
 .card-shadow .see-more a {
     color: #000000;
 }
+
+.grey-color {
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #4f5050;
+}

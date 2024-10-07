@@ -6,16 +6,38 @@
             <article>
                 <h1>{{ .Title }}</h1>
                 {{ .Content }}
+
+                <div class="mt-5 row row-cols-3 row-cols-xl-3 justify-content-center">
+                    <div class="row">
+                        <a class="btn btn-secondary" href="mailto://{{.Params.email}}"><b>Contact us</b></a>
+                    </div>
+                </div>
+
                 <div class="my-5">
                     {{ partial "shared/highlight.html" .Params.highlights }}
                 </div>
             </article>
+
+            {{ with .Params.faq }}
+            <ul>
+                {{ range . }}
+                <li>
+                    <h2>{{ .question }}</h2>
+                    <p>{{ .answer }}</p>
+                </li>
+                {{ end }}
+            </ul>
+            {{ end }}
+
         </div>
+
     </main>
+
 </div>
 
-
 {{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}
+
+{{ partial "shared/cta-width.html" }}
 
 {{ partial "shared/pipes.html" }}
 
