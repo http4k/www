@@ -1,6 +1,7 @@
 ---
 title: http4k Solutions
 description: How to make the most of http4k, helped by the experts who know it best.
+email: solutions@http4k.org
 top:
     - title: Scale up your http4k expertise
       description: On-demand training developed and curated by the maintainers of http4k, designed to upskill your team at scale.
