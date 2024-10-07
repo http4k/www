@@ -61,7 +61,7 @@ menus:
       weight: 12
     - name: about-in-action
       title: http4k in action
-      url: /http4k-in-action/
+      url: /in-action/
       parent: about
       weight: 13
 

@@ -265,7 +265,7 @@ Finally, http4k is **proven in production**, it has been adopted in at least 2 g
 the vast majority of traffic for a major publishing website (in the top 1000 sites globally according to 
 [alexa.com] - ie. easily serving 10s of million hits per day on a few nodes) since March 2017. 
 
-You can see a few example applications [here](/http4k-in-action/), including a bootstrap project for creating a 
+You can see a few example applications [here](/in-action/), including a bootstrap project for creating a 
 [**Github -> Travis -> Heroku** CD pipeline](https://github.com/http4k/http4k-bootstrap) in a single command.
 
 Well, that's it for this whirlwind tour - we hope you found it worth reading this far! We'd love you to try out http4k 
