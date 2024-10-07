@@ -11,27 +11,30 @@
                     <a class="btn btn-secondary" href="mailto://{{.Params.email}}"><b>Contact us</b></a>
                 </div>
 
-                <div class="my-5">
+                <div class="mt-5">
                     {{ partial "shared/highlight.html" .Params.highlights }}
                 </div>
             </article>
-
-            {{ with .Params.faq }}
-            <ul>
-                {{ range . }}
-                <li>
-                    <h2>{{ .question }}</h2>
-                    <p>{{ .answer }}</p>
-                </li>
-                {{ end }}
-            </ul>
-            {{ end }}
-
         </div>
-
     </main>
-
 </div>
+
+{{ with .Params.faq }}
+<div class="my-5 py-5" style="background-color: #f8f8f8">
+    <div class="m-5 p-5 card-shadow justify-content-center">
+
+        <h1>Frequently Asked Questions</h1>
+        <ul style="list-style: circle" class="mt-5">
+            {{ range . }}
+            <li>
+                <h2>{{ .question }}</h2>
+                <p>{{ .answer }}</p>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}
 
 {{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}
 

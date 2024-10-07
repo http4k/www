@@ -8,6 +8,7 @@
             {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
             {{ $ecosystem := .Params.ecosystem }}
             <div class="col">
+                <a href="{{ .RelPermalink }}/"></a>
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
                         {{ $data := index .Site.Data.ecosystem $ecosystem }}

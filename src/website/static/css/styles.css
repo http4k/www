@@ -96,25 +96,9 @@
     pointer-events: none;
 }
 
-@media (min-width: 968px) {
-    .layout {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .layout {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 575px) {
-    .layout {
-        display: flex;
-        justify-content: center;
-    }
+.layout {
+    display: flex;
+    justify-content: center;
 }
 
 .main-content {
