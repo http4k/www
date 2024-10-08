@@ -33,4 +33,4 @@ jobs:
           external_repository: http4k/www.http4k.org
           publish_branch: main
           publish_dir: src/website/public
-          cname: new.http4k.org
+          cname: www.http4k.org
