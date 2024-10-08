@@ -204,18 +204,12 @@ a {
 
 @media (max-width: 1199.98px) {
     .newEcosystem .aside {
-        width: 280px;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .newEcosystem .aside {
         padding: 40px 15px;
         width: 220px;
     }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
     .newEcosystem .aside {
         transform: translate(-220px);
         position: fixed;
@@ -229,7 +223,7 @@ a {
     }
 }
 
-@media (min-width: 991.98px) {
+@media (min-width: 1199.98px) {
     .newEcosystem .sideToggle {
         display: none;
     }
