@@ -76,7 +76,7 @@ pulumi up --stack dev --yes
 ```
 Pulumi will churn for a bit and all being well will display the URL at the end of the process.
 
-<img class="blogImageMid" src="step6.png" alt="pulumi output"/>
+<img class="imageMid" src="step6.png" alt="pulumi output"/>
 
 #### Step 7
 You can now call your deployed lambda by visiting: `https://{publishedUrl}/echo/helloHttp4k`. You should see `helloHttp4k` in the response body.

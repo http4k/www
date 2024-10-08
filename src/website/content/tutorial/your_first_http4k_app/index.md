@@ -20,7 +20,7 @@ The Toolbox is designed as a questionnaire which will help you configure a worki
 
 We explain each of the parts in the remainder of this step, but if you just want to skip to the end, just keep hitting **Next** until the progress bar hits 100% then go to **step 2**:
 
-<img class="blogImageMid" src="step1.png" alt="toolbox"/>
+<img class="imageMid" src="step1.png" alt="toolbox"/>
 
 a. First we select a deployment model for our App - **Server** or **Serverless**. Hit **Next** to select **Server**.
 
@@ -48,12 +48,12 @@ b. A runnable program containing the http4k app in the `src/main/kotlin` directo
 
 c. The `src/test/kotlin` directory containing a working test and a runnable client program for our app.
 
-<img class="blogImageMid" src="step3.png" alt="layout"/>
+<img class="imageMid" src="step3.png" alt="layout"/>
 
 #### Step 4
 First, let's take a tour of the `/src/main/kotlin/HelloWorld.kt` file which contains our production app.
 
-<img class="blogImageMid" src="step4.png" alt="app code"/>
+<img class="imageMid" src="step4.png" alt="app code"/>
 
 - **Lines 14-18** defines our production application. It consists of a single HTTP endpoint binding all HTTP `GET` requests on the path `/ping` to an `HttpHandler` function. This   function takes an implicit `Request` parameter `it` (which it ignores), and just constructs and returns a `Response` object with status and a static body string. The return type of the call to `routes()` is also an `HttpHandler`.
 - **Lines 20-26** form a runnable program which starts our application.
@@ -65,7 +65,7 @@ Hit the little green arrow and the application will run and start. Point your br
 #### Step 5
 In `/src/test/kotlin/HelloWorldClient.kt` there is an example of an HTTP client which we can use to call our running app.
 
-<img class="blogImageMid" src="step5.png" alt="client code"/>
+<img class="imageMid" src="step5.png" alt="client code"/>
 
 - **Lines 12** creates an HTTP client - note that it's type is also `HttpHandler`.
 - **Lines 14** decorates the client with a `Response` printing `Filter`. The result type of new client is also `HttpHandler`.
@@ -78,7 +78,7 @@ Modify the request in `/src/test/kotlin/HelloWorldClient.kt` to point at `http:/
 
 To bind an `HttpHandler` to the `pong` endpoint, modify `/src/main/kotlin/HelloWorld.kt` by adding lines 18-20 below:
 
-<img class="blogImageMid" src="step6.png" alt="client code"/>
+<img class="imageMid" src="step6.png" alt="client code"/>
 
 - **Lines 19-21** add an HTTP endpoint binding all HTTP `GET` requests on the path `/pong` to an `HttpHandler` function.
 
@@ -87,7 +87,7 @@ To see this update in action, first rerun the main application by hitting the gr
 #### Step 7
 A test for our app is found in `/src/test/kotlin/HelloWorldTest.kt`. Run it with the green arrow on **line 10** and it should pass.
 
-<img class="blogImageMid" src="step7.png" alt="client code"/>
+<img class="imageMid" src="step7.png" alt="client code"/>
 
 Cool things to notice about the test:
 

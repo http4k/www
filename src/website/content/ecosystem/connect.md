@@ -7,7 +7,7 @@ weight: 2
 remote: "https://raw.githubusercontent.com/http4k/http4k-connect/refs/heads/master/README.md"
 ---
 
-<img src="https://connect.http4k.org/img/logo-intro.png" class="blogImageMid" alt="http4k connect logo">
+<img src="https://connect.http4k.org/img/logo-intro.png" class="imageMid" alt="http4k connect logo">
 
 http4k Connect is a lightweight API Client toolkit which includes libraries for connecting to popular third-party cloud
 services and AI backends using [http4k](https://http4k.org) compatible APIs, along with Fake implementations for usage

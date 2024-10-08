@@ -107,18 +107,12 @@
 }
 
 .sidebar {
-    flex: 1; /* Take up less space for the sidebar */
+    flex: 1;
     padding: 20px;
-    background-color: #f0f0f0; /* Optional: Add background color to distinguish the sidebar */
+    background-color: #f0f0f0;
 }
 
-
-.blogImage {
-    width: 100%;
-    height: auto;
-}
-
-.blogImageMid {
+.imageMid {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -126,7 +120,7 @@
     height: auto;
 }
 
-.blogImageSmall {
+.imageSmall {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -203,7 +197,7 @@ a {
     padding: 20px;
     height: auto;
     overflow: scroll;
-    width: 320px;
+    width: ;
     transition: 0.3s ease-in-out all;
     will-change: width;
 }

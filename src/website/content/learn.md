@@ -9,7 +9,7 @@ That said, there remains a lot to be written to ensure that the basic concepts o
 
 You can read more about the theory [here](https://documentation.divio.com/), but essentially there are four distinct styles of useful documentation, based on what mode the reader is operating in.
 
-<img alt="grand unified theory of documentation" class="blogImageMid" src="/images/doc-system.png">
+<img alt="grand unified theory of documentation" class="imageMid" src="/images/doc-system.png">
 
 Regardless of which section you are reading, as much of the code as possible exists in the repository and is built with the rest of http4k in our CI. This has the effect of a making the code more verbose (including import statements and similar), but at the same time we can guarantee that the code compiles and you can navigate around it to find where everything is coming from. We hope you agree that this tradeoff is worth it.
 

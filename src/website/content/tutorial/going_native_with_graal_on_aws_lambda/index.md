@@ -75,7 +75,7 @@ docker run -v $(pwd):/source  --platform=linux/amd64 \
 
 GraalVM will churn away for a few minutes and all being well, the `HelloHttp4k.zip` file will be generated in the main directory. 
 
-<img class="blogImageMid" src="step4.png" alt="graalvm output"/>
+<img class="imageMid" src="step4.png" alt="graalvm output"/>
 
 #### Step 5
 We need to update our Pulumi configuration to upload the new binary. This is pretty simple and just involves changing the runtime, ZIP target and handler in our `index.ts`. We can also remove the `timeout` as the native binary will startup in milliseconds:
@@ -96,12 +96,12 @@ pulumi up --stack dev --yes
 ```
 Pulumi will churn for a bit and all being well will display the URL at the end of the process.
 
-<img class="blogImageMid" src="../serverless_http4k_with_aws_lambda/step6.png" alt="pulumi output"/>
+<img class="imageMid" src="../serverless_http4k_with_aws_lambda/step6.png" alt="pulumi output"/>
 
 #### Step 7
 You can now call your deployed lambda by visiting: `https://{publishedUrl}/echo/helloHttp4k`. You should see `helloHttp4k` in the response body. Notice that the response time is super-super quick, especially after the lambda is warm. If we invoke it from the console, you should see something similar:
 
-<img class="blogImageMid" src="step7.png" alt="pulumi output"/>
+<img class="imageMid" src="step7.png" alt="pulumi output"/>
 
 #### Step 8
 To avoid any unwanted AWS charges, don't forget to delete all of the resources in your stack when you've finished by running:
