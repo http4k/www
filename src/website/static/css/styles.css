@@ -141,9 +141,14 @@ footer {
     color: #ffffff;
 }
 
+a {
+    color: #0a53be;
+    text-decoration: none;
+}
+
 .active {
     font-weight: bold;
-    color: #007bff;
+    color: #0a53be;
 }
 
 .highlight pre {
@@ -236,10 +241,6 @@ footer {
     .newEcosystem .sideToggle {
         display: none;
     }
-}
-
-a {
-    text-decoration: none;
 }
 
 .github {
