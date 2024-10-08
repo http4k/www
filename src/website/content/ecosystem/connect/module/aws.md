@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Connect
 title: AWS
 description: AWS Overview Guide for http4k Connect

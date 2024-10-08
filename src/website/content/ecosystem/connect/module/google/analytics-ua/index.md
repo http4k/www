@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Connect
 title: "Google: Analytics UA"
 description: Feature overview of the http4k Connect Google Analytics UA modules

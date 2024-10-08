@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Connect
 title: "AWS: S3"
 description: Feature overview of the http4k Connect AWS S3 modules

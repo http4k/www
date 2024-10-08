@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Connect
 title: "AWS: CloudWatchLogs"
 description: Feature overview of the http4k Connect AWS CloudWatchLogs modules

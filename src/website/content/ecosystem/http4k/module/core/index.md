@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Core
 title: Core
 description: Feature overview of the http4k-core module, including the Lens system for typesafe HTTP

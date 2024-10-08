@@ -1,5 +1,5 @@
 ---
-layout: ecosystem
+type: ecosystem
 type: ecosystem
 ecosystem: http4k Connect
 title: http4k Connect Contributors Guide

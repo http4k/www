@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Connect
 title: "Google: Analytics GA4"
 description: Feature overview of the http4k Connect Google Analytics GA4 modules

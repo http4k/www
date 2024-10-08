@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Core
 title: Chaos
 description: Feature overview of the http4k-testing-chaos module

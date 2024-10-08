@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Connect
 title: "AWS: Instance Metadata Service"
 description: Feature overview of the http4k Connect AWS Instance Metadata Service modules

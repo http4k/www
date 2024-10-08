@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Core
 title: Servirtium Testing
 description: Feature overview of the http4k-testing-servirtium module, used for Service Virtualisation

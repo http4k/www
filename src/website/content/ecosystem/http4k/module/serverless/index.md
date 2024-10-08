@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Core
 title: Serverless
 description: Feature overview of the http4k-serverless modules, covering Serverless backends

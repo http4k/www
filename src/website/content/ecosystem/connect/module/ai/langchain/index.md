@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Connect
 title: "AI: LangChain"
 description: Feature overview of the http4k Connect LangChain module

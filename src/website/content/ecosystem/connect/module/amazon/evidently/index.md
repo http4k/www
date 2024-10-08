@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Connect
 title: "AWS: Cloudwatch Evidently"
 description: Feature overview of the http4k Connect AWS Cloudwatch Evidently modules

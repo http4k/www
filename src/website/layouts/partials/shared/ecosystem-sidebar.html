@@ -33,7 +33,7 @@
             <li>
                 <h4>Reference</h4>
                 <ul class="list-unstyled ms-3">
-                    {{ range where (where $page.Site.RegularPages "Type" "eq" "module") ".Params.ecosystem" "eq" $ecosystem }}
+                    {{ range where (where $page.Site.RegularPages ".Params.Category" "eq" "Reference") ".Params.ecosystem" "eq" $ecosystem }}
                     <li>
                         <a href="{{ .RelPermalink }}/" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
                     </li>

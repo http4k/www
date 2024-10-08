@@ -1,6 +1,6 @@
 ---
-layout: module
-type: module
+category: Reference
+type: ecosystem
 ecosystem: http4k Core
 title: YAML
 description: Feature overview of the YAML http4k-format modules, several of which support auto-marshalling into data classes.
