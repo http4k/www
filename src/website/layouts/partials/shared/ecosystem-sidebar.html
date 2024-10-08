@@ -9,7 +9,7 @@
             <li>
                 <h4>Concepts</h4>
                 <ul class="list-unstyled ms-3">
-                    {{ range where (where .Site.RegularPages "Type" "eq" "concept") ".Params.ecosystem" "eq" $ecosystem }}
+                    {{ range where (where .Site.RegularPages ".Params.Category" "eq" "Concept") ".Params.ecosystem" "eq" $ecosystem }}
                     <li>
                         <a href="{{ .RelPermalink }}/" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
                     </li>

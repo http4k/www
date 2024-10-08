@@ -1,6 +1,6 @@
 ---
-layout: concept
-type: concept
+type: ecosystem
+category: Concept
 ecosystem: http4k Core
 title: HTTP 
 description: An explanation of the core function types for dealing with HTTP applications

@@ -1,6 +1,6 @@
 ---
-layout: concept
-type: concept
+type: ecosystem
+category: Concept
 ecosystem: http4k Core
 title: Server-Sent Events
 description: An explanation of the core function types for dealing with Server-Sent Events

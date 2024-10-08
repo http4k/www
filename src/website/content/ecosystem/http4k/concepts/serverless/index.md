@@ -1,6 +1,6 @@
 ---
-layout: concept
-type: concept
+type: ecosystem
+category: Concept
 ecosystem: http4k Core
 title: Serverless
 description: An explanation of the core function types for dealing with Serverless applications
