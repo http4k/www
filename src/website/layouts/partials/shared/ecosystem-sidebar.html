@@ -4,14 +4,16 @@
         <ul class="list-unstyled">
             {{ $ecosystem := .Params.ecosystem }}
 
-            <h2>{{ $ecosystem }}</h2>
+            {{ range (where .Site.Data.ecosystem "title" "eq" $ecosystem) }}
+            <li><h2><a href="/ecosystem/{{ .ref }}">{{ $ecosystem }}</a></h2></li>
+            {{ end }}
 
             <li>
                 <h4>Concepts</h4>
                 <ul class="list-unstyled ms-3">
                     {{ range where (where .Site.RegularPages ".Params.Category" "eq" "Concept") ".Params.ecosystem" "eq" $ecosystem }}
                     <li>
-                        <a href="{{ .RelPermalink }}/" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
+                        <a href="{{ .RelPermalink }}/" class="ecoLink {{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
                     </li>
                     {{ end }}
                 </ul>
@@ -23,10 +25,10 @@
             <li>
                 <h4>Project</h4>
                 <ul class="list-unstyled ms-3">
-                    <li><a href="/ecosystem/{{ .ref }}/changelog/">Changelog</a></li>
-                    <li><a href="{{ .github }}">GitHub</a></li>
-                    <li><a href="/ecosystem/{{ .ref }}/contributing/">Contributing</a></li>
-                    <li><a href="{{ .github }}/issues">Issue Tracker</a></li>
+                    <li><a class="ecoLink" href="/ecosystem/{{ .ref }}/changelog/">Changelog</a></li>
+                    <li><a class="ecoLink" href="{{ .github }}">GitHub</a></li>
+                    <li><a class="ecoLink" href="/ecosystem/{{ .ref }}/contributing/">Contributing</a></li>
+                    <li><a class="ecoLink" href="{{ .github }}/issues">Issue Tracker</a></li>
                 </ul>
             </li>
 
@@ -35,7 +37,7 @@
                 <ul class="list-unstyled ms-3">
                     {{ range where (where $page.Site.RegularPages ".Params.Category" "eq" "Reference") ".Params.ecosystem" "eq" $ecosystem }}
                     <li>
-                        <a href="{{ .RelPermalink }}/" class="{{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
+                        <a href="{{ .RelPermalink }}/" class="ecoLink {{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
                     </li>
                     {{ end }}
                 </ul>

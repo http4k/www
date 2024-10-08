@@ -237,3 +237,11 @@ footer {
         display: none;
     }
 }
+
+a {
+    text-decoration: none;
+}
+
+.github {
+    display: none;
+}
