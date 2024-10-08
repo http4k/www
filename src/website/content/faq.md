@@ -40,7 +40,7 @@ If you're running http4k in production and would like to be listed on the site a
 ### Lenses & Auto-Marshalling
 **Q. I am having a problem with the usage of Moshi, Jackson or GSON for auto marshalling**
 
-**A.** Please see the [custom FAQ](/ecosystem/http4k/module/json/) for JSON handling questions.
+**A.** Please see the [custom FAQ](/ecosystem/http4k/reference/json/) for JSON handling questions.
 
 **Q. My application uses Lenses, but when they fail I get an HTTP 500 instead of the promised 400.**
 

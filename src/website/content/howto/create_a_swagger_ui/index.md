@@ -15,7 +15,7 @@ but any hand-crafted or external description can be used as well.
 
 For more detail on generating **OpenAPI** descriptions, see:
 
-- [Http4k Reference: Contracts](/ecosystem/http4k/module/contracts/)
+- [Http4k Reference: Contracts](/ecosystem/http4k/reference/contracts/)
 - [Integrate with OpenAPI](/howto/integrate_with_openapi/)
 
 ### Example 

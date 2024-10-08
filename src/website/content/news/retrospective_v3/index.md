@@ -162,7 +162,7 @@ Whatever happens though, the focus of http4k will always be on providing a best-
 [Thoughtworks Technology Radar]: https://www.thoughtworks.com/radar/languages-and-frameworks/http4k
 [Cold Start War]: https://mikhail.io/2018/08/serverless-cold-start-war/
 [v3]: https://github.com/http4k/http4k/tree/6639c964abf43c265591e3f70eb59467e60cd089
-[cloudnative]: https://new.http4k.org/ecosystem/http4k/module/cloud_native/
+[cloudnative]: https://new.http4k.org/ecosystem/http4k/reference/cloud_native/
 [KotlinConf]: https://bit.ly/serverasafunction
 ["most loved language"]: https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved
 [Approval Testing]: http://approvaltests.com
