@@ -132,7 +132,7 @@ menus:
       parent: solutions
       weight: 42
     - name: solutions-consulting
-      title: http4k Consulting
+      title: Consulting
       url: /consulting/
       parent: solutions
       weight: 43
