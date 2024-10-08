@@ -1,10 +1,17 @@
 {{ define "main" }}
 
-<div class="layout">
+<div class="layout newEcosystem">
 	{{ partial "shared/ecosystem-sidebar" . }}
-	<main class="main-content">
+
+	<main class="main-content col">
+        <img class="mb-3 sideToggle" src="/images/exchange-icon.svg" width="20" alt="" srcset=""/>
 		{{ (resources.GetRemote .Params.remote).Content | markdownify }}
 	</main>
 </div>
 
+<script language="JavaScript">
+    $(".sideToggle").on("click", function() {
+        $(".aside").toggleClass("no-side");
+    });
+</script>
 {{ end }}

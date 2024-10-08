@@ -226,11 +226,14 @@ footer {
         z-index: 99;
         box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
     }
-}
-
-@media (max-width: 767.98px) {
     .newEcosystem .no-side {
         width: auto;
         transform: translate(0px);
+    }
+}
+
+@media (min-width: 767.98px) {
+    .newEcosystem .sideToggle {
+        display: none;
     }
 }
