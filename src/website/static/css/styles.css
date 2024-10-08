@@ -148,7 +148,6 @@ a {
 
 .active {
     font-weight: bold;
-    color: #0a53be;
 }
 
 .highlight pre {
@@ -158,7 +157,6 @@ a {
 .github {
     display: none;
 }
-
 
 .card-shadow {
     box-shadow: 0px 7.28173px 36.4087px rgba(0, 0, 0, 0.13);
