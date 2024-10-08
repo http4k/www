@@ -5,7 +5,7 @@
             {{ $ecosystem := .Params.ecosystem }}
 
             {{ range (where .Site.Data.ecosystem "title" "eq" $ecosystem) }}
-            <li><h2><a href="/ecosystem/{{ .ref }}">{{ $ecosystem }}</a></h2></li>
+            <li><h2><a href="/ecosystem/{{ .ref }}/">{{ $ecosystem }}</a></h2></li>
             {{ end }}
 
             <li>
