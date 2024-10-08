@@ -195,6 +195,39 @@ footer {
     width: 0;
 }
 
+.newEcosystem .aside {
+    background-color: #f8f8f8;
+    padding: 20px;
+    height: calc(100vh - 8px);
+    overflow: scroll;
+    width: 320px;
+    transition: 0.3s ease-in-out all;
+    will-change: width;
+}
+
+@media (max-width: 1199.98px) {
+    .newEcosystem .aside {
+        width: 280px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .newEcosystem .aside {
+        padding: 40px 15px;
+        width: 220px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .newEcosystem .aside {
+        transform: translate(-220px);
+        position: fixed;
+        left: 0;
+        z-index: 99;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    }
+}
+
 @media (max-width: 767.98px) {
     .newEcosystem .no-side {
         width: auto;
