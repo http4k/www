@@ -215,7 +215,7 @@ a {
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
     .newEcosystem .aside {
         transform: translate(-220px);
         position: fixed;
@@ -229,7 +229,7 @@ a {
     }
 }
 
-@media (min-width: 767.98px) {
+@media (min-width: 991.98px) {
     .newEcosystem .sideToggle {
         display: none;
     }

@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title:   Testing http4k applications
+title: Testing http4k
 description: How to test http4k endpoints and applications, and modules that support testing
 ---
 
