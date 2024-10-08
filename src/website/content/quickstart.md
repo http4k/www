@@ -42,4 +42,4 @@ The following creates a simple endpoint, binds it to a Undertow server then star
 {{< kotlin file="example.kt" >}}
 
 # I want to see what http4k can do!
-We have a page dedicated to how **http4k** can be used in a variety of scenarios. See [http4k In Action](/in-action).
+We have a page dedicated to how **http4k** can be used in a variety of scenarios. See [http4k In Action](/showcase).

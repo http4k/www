@@ -59,9 +59,9 @@ menus:
       url: /news/
       parent: about
       weight: 12
-    - name: about-in-action
-      title: http4k in action
-      url: /in-action/
+    - name: about-showcase
+      title: Showcase
+      url: /showcase/
       parent: about
       weight: 13
 

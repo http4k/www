@@ -1,6 +1,6 @@
 ---
-title: In Action
+title: Showcase
 description: Example applications and usages of http4k, including TDD approach
-type: in_action
+type: showcase
 ---
 
