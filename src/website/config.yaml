@@ -68,8 +68,8 @@ menus:
     - name: learn
       title: Learn
       weight: 20
-    - name: learn-overview
-      title: Overview
+    - name: learn-about-the-docs
+      title: About the docs
       url: /learn/
       parent: learn
       weight: 21

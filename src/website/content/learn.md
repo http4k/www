@@ -1,5 +1,5 @@
 ---
-title: How to use the http4k docs
+title: About the docs
 description: An explanation of how the http4k docs are organised
 ---
 
