@@ -64,5 +64,5 @@ fun main() {
     val app = App(debug)
 
     // this just proxies the request to the internet
-    app(Request(GET, "https://www.http4k.org"))
+    app(Request(GET, "https://http4k.org"))
 }

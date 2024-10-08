@@ -17,5 +17,5 @@ fun main() {
         .withChaosApi()
         .asServer(SunHttp(9000))
         .start()
-        .also { println("Visit the app at http://localhost:9000 or see the OpenApi at https://www.http4k.org/openapi3/?url=http://localhost:9000/chaos") }
+        .also { println("Visit the app at http://localhost:9000 or see the OpenApi at https://http4k.org/openapi3/?url=http://localhost:9000/chaos") }
 }

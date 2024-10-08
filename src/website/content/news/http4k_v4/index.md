@@ -154,7 +154,7 @@ We're pretty excited about this release and hope the library will continue to pr
 
 In the meantime, if you are using http4k, please consider [sponsoring the project](https://github.com/sponsors/http4k) to help offset the costs of development, documentation, and support. 
 
-If you're using it commercially, we offer [Commercial Support and Consulting](https://www.http4k.org/support/#commercial_support_consulting) to ensure you're getting maximum value from the toolkit and its related techniques.
+If you're using it commercially, we offer [Commercial Support and Consulting](https://http4k.org/support/#commercial_support_consulting) to ensure you're getting maximum value from the toolkit and its related techniques.
 
 As ever, we'd love to hear how we're doing, so please drop into the comm channels to get in touch.
 

@@ -107,4 +107,4 @@ Obviously we haven't thought of everything here. We'd love to hear your ideas ab
 [github]: http://github.com/daviddenton
 [http4k]: https://http4k.org
 [Principles of Chaos](https://principlesofchaos.org/)
-[channels]: https://www.http4k.org/support
+[channels]: https://http4k.org/support

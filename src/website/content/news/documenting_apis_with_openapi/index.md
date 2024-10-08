@@ -12,7 +12,7 @@ In microservice environments, some of the biggest challenges exist around the co
 There have been various efforts to standardise these aspects, and one of the most popular is **[OpenApi]**, which grew out of the original **[Swagger]** project. There are 3 key advantages to OpenApi:
 
 1. It provides a standardised way of documenting APIs, including routes, parameter optionality and format, security models and JSON Schema breakdown of JSON messages. It has standardised support from cloud providers such as **[Google Cloud Endpoints]** and **[AWS API Gateway]**.
-1. The OpenApi **[UI](https://www.http4k.org/openapi3/)** allows a very simple and developer-focused way of exploring and interacting with HTTP services from a browser environment.
+1. The OpenApi **[UI](https://http4k.org/openapi3/)** allows a very simple and developer-focused way of exploring and interacting with HTTP services from a browser environment.
 1. It is cross-platform and has good tooling support. Using **[OpenApi Generators]**, a specification document can be used to generate HTTP server stubs and working HTTP clients in a variety of languages, thus reducing integration efforts.
 
 ### Typesafe HTTP contracts with http4k-contract
@@ -51,7 +51,7 @@ Whilst all of the settings used in this DSL above are optional (and default to s
 
 {{< kotlin file="2_app.kt" >}}
 
-Now we've got a complete contract, we can simply start the server and browse to `http://localhost:9000/api/swagger.json` to see the basic API spec in the OpenApi UI (or see the online version **<a target="_blank" href="https://www.http4k.org/openapi3/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhttp4k%2Fhttp4k%2Fmaster%2Fsrc%2Fdocs%2Fblog%2Fdocumenting_apis_with_openapi%2F2_openapi.json">here</a>**) to see how the endpoint contract looks and how the process of supplying credentials is done through the UI by clicking `Authorize`. 
+Now we've got a complete contract, we can simply start the server and browse to `http://localhost:9000/api/swagger.json` to see the basic API spec in the OpenApi UI (or see the online version **<a target="_blank" href="https://http4k.org/openapi3/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhttp4k%2Fhttp4k%2Fmaster%2Fsrc%2Fdocs%2Fblog%2Fdocumenting_apis_with_openapi%2F2_openapi.json">here</a>**) to see how the endpoint contract looks and how the process of supplying credentials is done through the UI by clicking `Authorize`. 
 
 This covers the very basics of generating API docs, but there is still a lot more http4k can do for us...
 
@@ -76,7 +76,7 @@ If we then add the `Greetings` endpoint to the contract and make a call omitting
 
 {{< kotlin file="3_failure-response.http" >}}
 
-We can see the updated OpenApi UI **<a target="_blank" href="https://www.http4k.org/openapi3/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhttp4k%2Fhttp4k%2Fmaster%2Fsrc%2Fdocs%2Fblog%2Fdocumenting_apis_with_openapi%2F3_openapi.json">here</a>**. Note that because request parameters are validated before sending, we cannot replicate the above invalid request in the UI.
+We can see the updated OpenApi UI **<a target="_blank" href="https://http4k.org/openapi3/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhttp4k%2Fhttp4k%2Fmaster%2Fsrc%2Fdocs%2Fblog%2Fdocumenting_apis_with_openapi%2F3_openapi.json">here</a>**. Note that because request parameters are validated before sending, we cannot replicate the above invalid request in the UI.
 
 ### 4. Modelling HTTP body messages
 The most exciting part http4k supporting OpenApi3 is the ability to represent HTTP messages in **[JSON Schema]** form in the documentation. This facility is what unlocks the true cross-language support and takes the usefulness of the OpenApi UI to another level, for both exploratory and support functions. Request and response messages can both be specified in the `meta {}` block using overloads of the `receiving()` and `returning()` functions. By using these functions, we can supply an example object to the DSL - this is what drives the generation of the JSON Schema and, more importantly, ensures that the documentation cannot go stale as it is driven by code.
@@ -87,7 +87,7 @@ For JSON bodies, the lens is created with `Body.auto<>().toLens()` (`auto()` is 
 
 {{< kotlin file="4_route.kt" >}}
 
-Taking a final look at the OpenApi UI **<a target="_blank" href="https://www.http4k.org/openapi3/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhttp4k%2Fhttp4k%2Fmaster%2Fsrc%2Fdocs%2Fblog%2Fdocumenting_apis_with_openapi%2F4_openapi.json">here</a>** shows that not just has the UI been updated with the new route, but that example entries for the expected response are now displayed, as well as JSON Schema entries for the `Person` and `Age` classes in the `Schemas` section at the bottom.
+Taking a final look at the OpenApi UI **<a target="_blank" href="https://http4k.org/openapi3/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhttp4k%2Fhttp4k%2Fmaster%2Fsrc%2Fdocs%2Fblog%2Fdocumenting_apis_with_openapi%2F4_openapi.json">here</a>** shows that not just has the UI been updated with the new route, but that example entries for the expected response are now displayed, as well as JSON Schema entries for the `Person` and `Age` classes in the `Schemas` section at the bottom.
 
 ### Wrapping up...
 Once we have the final specification document available, users of our API can use the various **[OpenApi Generators]** to generate HTTP clients in various languages for interacting with it, or to generate fake services that provide our API in their own environments (and thus enabling more simple end-to-end testing). The "Fake HTTP services" technique also enables the creation of Consumer-Driven-Contract style tests, and opens up possibilities for all kinds of interesting Chaos/failure-mode testing (you can even use the `http4k-testing-chaos` module to help with this 😉).
