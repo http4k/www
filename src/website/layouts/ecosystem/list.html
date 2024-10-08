@@ -5,19 +5,17 @@
         <h1>{{ .Title }}</h1>
         {{ .Content }}
         <div class="row row-cols-1 row-cols-sm-2 my-5 g-4 justify-content-center">
-            {{ range where .Site.RegularPages "Type" "eq" "ecosystem" }}
-            {{ $ecosystem := .Params.ecosystem }}
+            {{ range .Site.Data.ecosystem }}
             <div class="col">
-                <a href="{{ .RelPermalink }}/"></a>
+                <a href="/ecosystem/{{ .ref }}/"></a>
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
-                        {{ $data := index .Site.Data.ecosystem $ecosystem }}
                         <img
                             style="height: 5rem; max-width: 100%; object-fit: contain; margin-bottom: 20px;"
-                            src="{{ $data.image }}"  alt="logo">
-                        <p class="card-text">{{ .Params.description | markdownify }}</p>
+                            src="{{ .image }}"  alt="logo">
+                        <p class="card-text">{{ .description | markdownify }}</p>
                         <div class="mt-auto d-flex justify-content-end">
-                            <a href="{{ .RelPermalink }}/" class="btn btn-primary">Read More</a>
+                            <a href="/ecosystem/{{ .ref }}/" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>

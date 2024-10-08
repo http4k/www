@@ -1,8 +1,10 @@
-"http4k Core":
+- title: http4k Core
+  description: The core ecosystem is the foundation of the http4k project, providing the **essential building blocks** for creating HTTP servers and clients. This ecosystem is designed to be lightweight, efficient, and testable, making it ideal for building reliable, high-performance applications.
   github: "https://github.com/http4k/http4k"
   image: "/images/logo-http4k.png"
   ref: http4k
-"http4k Connect":
+- title: http4k Connect
+  description: http4k Connect is designed to facilitate seamless **integration with external systems and services** from the client viewpoint. It is optimised for zero-reflection, ideal for native and serverless use. It ships with in-memory fakes for testing without Docker and keeps dependencies minimal for small binary sizes.
   github: "https://github.com/http4k/http4k-connect"
   image: "/images/logo-connect.png"
   ref: connect
