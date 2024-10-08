@@ -7,7 +7,7 @@ Depending on your learning situation, there are a number of options to get start
 
 # Help - I'm new and scared!
 
-**Follow a tutorial**: There is a step-by-step [beginner tutorial](/tutorial/your_first_http4k_app). This will get you up and running with a basic buildable project.
+**Follow a tutorial**: There is a step-by-step [beginner tutorial](/tutorial/your_first_http4k_app/). This will get you up and running with a basic buildable project.
 
 # I know what I'm doing but would like a helping hand...
 
