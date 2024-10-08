@@ -197,7 +197,7 @@ a {
     padding: 20px;
     height: auto;
     overflow: scroll;
-    width: ;
+    width: 320px;
     transition: 0.3s ease-in-out all;
     will-change: width;
 }
