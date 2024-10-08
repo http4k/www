@@ -1,9 +1,9 @@
 ---
-title: Ecosystem News
+title: News
 description: List of articles published on the http4k ecosystem
 ---
 
-Stay up to date with the latest from the world of http4k. In this section, you’ll find updates about new releases,
+Stay up to date with the latest from the http4k ecosystem. In this section, you’ll find updates about new releases,
 features, and important changes to the library. Whether it’s about new integrations, performance improvements, or
 enhancements to the developer experience, this is the place to learn about what’s happening in the http4k ecosystem.
 
