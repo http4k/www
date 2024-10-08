@@ -198,7 +198,7 @@ footer {
 .newEcosystem .aside {
     background-color: #f8f8f8;
     padding: 20px;
-    height: calc(100vh - 8px);
+    height: auto;
     overflow: scroll;
     width: 320px;
     transition: 0.3s ease-in-out all;
