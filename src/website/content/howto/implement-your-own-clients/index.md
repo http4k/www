@@ -1,6 +1,6 @@
 ---
 layout: howto
-title: Implement your own Connect clients
+title: "http4k Connect: Implement your own clients"
 description: How to implement your own clients for the Connect pattern
 ecosystem: http4k Connect
 ---

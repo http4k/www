@@ -1,6 +1,6 @@
 ---
 layout: howto
-title: Pimp your Connect API Clients with KSP!
+title: "http4k Connect: Pimp your Connect API Clients with KSP!"
 description: How to use KSP to generate extension functions for your Connect clients
 ecosystem: http4k Connect
 ---
