@@ -1,5 +1,5 @@
 ---
-title: http4k LTS programme
+title: LTS programme
 description: It's important to us that you can rely on http4k for the long term. That's why we offer Long Term Support (LTS) for our releases.
 type: solutions
 email: lts@http4k.org

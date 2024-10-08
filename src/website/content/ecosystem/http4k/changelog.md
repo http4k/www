@@ -1,6 +1,5 @@
 ---
 type: ecosystem
-type: ecosystem
 ecosystem: http4k Core
 title: Changelog
 description: http4k Core Changelog

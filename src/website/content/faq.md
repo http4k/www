@@ -1,5 +1,5 @@
 ---
-title: http4k FAQ
+title: FAQ
 description: Find answers to frequently asked questions about http4k
 ---
 

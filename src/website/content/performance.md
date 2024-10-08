@@ -1,5 +1,5 @@
 ---
-title: http4k Performance
+title: Performance
 description: An overview of http4k performance
 ---
 

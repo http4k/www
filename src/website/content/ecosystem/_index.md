@@ -1,5 +1,5 @@
 ---
-title: The http4k Ecosystem
+title: Ecosystem Overview
 description: Introduction to the http4k ecosystem
 ---
 
