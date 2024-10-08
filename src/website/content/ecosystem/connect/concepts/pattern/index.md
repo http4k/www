@@ -4,6 +4,7 @@ category: Concept
 ecosystem: http4k Connect
 title: Connect Overview 
 description: An explanation of the Connect Pattern underpinning http4k Connect
+weight: -1
 ---
 
 The main bulk of non-operationally focussed application code in a modern Server-based HTTP microservice can be broken
