@@ -2,6 +2,7 @@
 layout: howto
 title: "Use HTML Forms"
 description: Recipes for using http4k with HTML forms
+ecosystem: http4k Core
 ---
 HTML form support is provided on 2 levels:
 

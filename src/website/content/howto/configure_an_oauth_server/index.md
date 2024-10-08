@@ -2,6 +2,7 @@
 layout: howto
 title: "Configure an OAuth_Server"
 description: Recipe for using http4k to create an authorization server that provides an *authorization code* access flow
+ecosystem: http4k Core
 ---
 ### Gradle setup
 

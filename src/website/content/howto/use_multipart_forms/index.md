@@ -2,6 +2,7 @@
 layout: howto
 title: "Use Multipart Forms"
 description: Recipes for using http4k with Multipart forms
+ecosystem: http4k Core
 ---
 Multipart form support is provided on 2 levels:
 

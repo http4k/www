@@ -2,6 +2,7 @@
 layout: howto
 title: "Client as a function"
 description: Recipes for using http4k to consume HTTP services
+ecosystem: http4k Core
 ---
 This example demonstrates using http4k as a client, to consume HTTP services. A client is just another HttpHandler.
 

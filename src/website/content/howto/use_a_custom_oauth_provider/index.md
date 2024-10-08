@@ -2,6 +2,7 @@
 layout: howto
 title: "Use a custom OAuth provider"
 description: Recipe for using http4k with custom OAuth provider
+ecosystem: http4k Core
 ---
 It is very easy to configure http4k to integrate with any OAuth2 provider who supports the Authorisation Code Grant.
 

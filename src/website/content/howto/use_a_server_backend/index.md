@@ -2,6 +2,7 @@
 layout: howto
 title: "Use a Server backend"
 description: Recipes for using http4k with the various Server backends
+ecosystem: http4k Core
 ---
 This example shows how to both serve an application HttpHandler using an embedded HTTP server and to query it using an HTTP client. All server-backend implementations are launched in an identical manner (in 1LOC) using implementations of the `ServerConfig` interface - and a base implementation of this interface is provided for each server backend.
 

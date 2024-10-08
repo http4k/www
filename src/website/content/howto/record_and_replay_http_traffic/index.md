@@ -2,6 +2,7 @@
 layout: howto
 title: "Record and replay HTTP traffic"
 description: Recipes for using http4k to record and replay HTTP traffic
+ecosystem: http4k Core
 ---
 A set of classes to provide simple recording/replaying of HTTP traffic. This is perfect for testing purposes, or in short lived, low traffic environments where no proper caches are available.
 

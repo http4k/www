@@ -2,6 +2,7 @@
 layout: howto
 title: "Make HTTP calls in parallel"
 description: Recipe to make HTTP calls in parallel using a ThreadPoolExecutor
+ecosystem: http4k Core
 ---
 There are cases where an application needs to make multiple HTTP calls to other services as part of handling a particular request. 
 As a general rule-of-thumb, we recommend people to avoid [premature optimisation], however sometimes the quantity of calls or performance of other services demand those to be executed in parallel.

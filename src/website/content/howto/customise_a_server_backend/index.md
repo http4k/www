@@ -2,6 +2,7 @@
 layout: howto
 title: "Customise a Server backend"
 description: How to use write custom servers backends
+ecosystem: http4k Core
 ---
 ### How to write a custom server implmentation
 

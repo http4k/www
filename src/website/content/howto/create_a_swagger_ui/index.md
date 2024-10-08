@@ -2,6 +2,7 @@
 layout: howto
 title: "Redoc and Swagger UI"
 description: Create a Redoc or Swagger UI for your REST API
+ecosystem: http4k Core
 ---
 Http4k makes it easy to include Swagger UI or Redoc in your application.
 These UIs can often replace traditional hand-written documentation for API consumers to learn your API,
