@@ -1,6 +1,6 @@
 ---
-layout: ecosystem-remote
-type: ecosystem-remote
+layout: ecosystem
+type: ecosystem
 ecosystem: http4k Core
 title: Changelog
 description: http4k Core Changelog

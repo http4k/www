@@ -1,6 +1,6 @@
 ---
-layout: ecosystem-remote
-type: ecosystem-remote
+layout: ecosystem
+type: ecosystem
 ecosystem: http4k Connect
 title: http4k Connect Contributors Guide
 description: How to contribute to http4k Connect

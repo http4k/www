@@ -5,7 +5,12 @@
 
     <main class="main-content col">
         <img class="mb-3 sideToggle" src="/images/exchange-icon.svg" width="20" alt="" srcset=""/>
-        {{ (resources.GetRemote .Params.remote).Content | markdownify }}
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.remote }}
+        {{ (resources.GetRemote .).Content | markdownify }}
+        {{ end }}
+
+        {{ .Content }}
     </main>
 </div>
 
