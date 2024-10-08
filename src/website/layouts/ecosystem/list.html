@@ -7,7 +7,6 @@
         <div class="row row-cols-1 row-cols-sm-2 my-5 g-4 justify-content-center">
             {{ range .Site.Data.ecosystem }}
             <div class="col">
-                <a href="/ecosystem/{{ .ref }}/"></a>
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
                         <img
@@ -19,6 +18,7 @@
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
             {{ end }}
         </div>
