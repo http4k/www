@@ -1,5 +1,5 @@
 - title: "Support"
-  description: "It's important to us that you can rely on your core dependencies for the long term. That's why we offer **Long Term Support** packages (LTS) for http4k releases."
+  description: "It's important that you can rely on your core dependencies for the long term. That's why we offer **Long Term Support** packages (LTS) for http4k releases."
   img: "/images/support.svg"
   alt: "support"
   link: "/lts-support/"

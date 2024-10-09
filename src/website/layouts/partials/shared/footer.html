@@ -5,9 +5,12 @@
                 <a class="p-0" href="https://http4k.org">
                     <img src="{{ .Site.Params.LogoSvg }}" alt="logo" width="50%"/>
                 </a>
-                <br/>
-                <br/>
-                Copyright © {{ now.Format "2006" }}
+                <p></p>
+                <ul class="list-unstyled">
+                    <li class="small text-white text-decoration-none">http4k Limited</li>
+                    <li class="small text-white text-decoration-none">Registered in England & Wales</li>
+                    <li class="small text-white text-decoration-none">Reg no: 14687467</li>
+                </ul>
             </div>
             {{ range .Site.Menus.nav }}
             <div class="col-xs-6 col-md">
@@ -20,12 +23,24 @@
             </div>
             {{ end }}
             <div class="col-xs-6 col-md">
-                <h5>Legal</h5>
+                <h5>Company</h5>
                 <ul class="list-unstyled">
-                {{ range .Site.Menus.legal }}
-                    <li><a class="small text-white text-decoration-none" href="{{ .URL }}">{{ .Name }}</a></li>
-                {{ end }}
+                    <li><a class="small text-white text-decoration-none" href="/company/">About</a></li>
+                    <li><a class="small text-white text-decoration-none" href="mailto:info@http4k.org">Contact</a></li>
+                    <li><a class="small text-white text-decoration-none" href="https://www.linkedin.com/company/http4k">LinkedIn</a></li>
+                    <li><a class="small text-white text-decoration-none" href="https://x.com/http4k">X</a></li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="row text-center">
+        <div class="col">
+            <p class="small text-white text-decoration-none">
+                © {{ now.Format "2006" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;&nbsp;
+                {{ range .Site.Menus.legal }}
+                    |&nbsp;&nbsp;&nbsp;<a class="text-white text-decoration-none" href="{{ .URL }}">{{ .Name }}</a>&nbsp;&nbsp;&nbsp;
+                {{ end }}
+            </p>
+        </div>
+    </div>
 </footer>

@@ -1,0 +1,17 @@
+founders:
+  - name: David Denton
+    description: "Co-creator of http4k, driving Tech and Community engagement. Extensive delivery experience across diverse industries, having led high-impact projects and their teams. A Google Developer Expert and Kotlin Open Source Voice, serial international speaker."
+    image: https://clockwork.ing/directory/david-denton/image.webp
+    links:
+      clockwork: "https://clockwork.ing/directory/david-denton"
+      linkedin: "https://www.linkedin.com/in/denton-david/"
+      github: "https://github.com/daviddenton"
+      email: "david@http4k.ing"
+  - name: Ivan Sanchez
+    description: "Co-creator of http4k, focusing on technical strategy and team leadership. With over twenty years of experience, excels in fostering collaboration across cross-functional teams to deliver complex software systems. A Google Developer Expert in Kotlin, international speaker and trainer."
+    image: https://clockwork.ing/directory/ivan-sanchez/image.webp
+    links:
+      clockwork: "https://clockwork.ing/directory/ivan-sanchez"
+      linkedin: "https://www.linkedin.com/in/s4nchez/"
+      github: "https://github.com/s4nchez"
+      email: "ivan@http4k.ing"
