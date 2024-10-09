@@ -40,14 +40,14 @@ Many thanks to all of the software vendors who supply tools to help us deliver h
 
 #### Kotlin IDE
 
-<img src="https://http4k.org/img/intellij-100.png" alt="intellij"/></a>
+<img src="/images/intellij-100.png" alt="intellij"/></a>
 
 [Jetbrains](https://www.jetbrains.com) kindly supplies the project with an Open Source License for the amazing IntelliJ
 IDE.
 
 #### Pairing tools
 
-<img src="https://http4k.org/img/tuple.png" alt="tuple"/></a>
+<img src="/images/tuple.png" alt="tuple"/></a>
 
 [Tuple](https://tuple.app/) supplies the http4k team with their amazing Pair-Programming tool Tuple allowing us to
 collaborate to build the library. Pairing is ace - everyone should do it!
