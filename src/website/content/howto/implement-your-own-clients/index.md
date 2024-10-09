@@ -32,4 +32,4 @@ fun MySystem.Companion.Http(http: HttpHandler) = object : MySystem {
 }
 ```
 
-See also the [guide]() on using KSP to generate extension functions for your clients!
+See also the guide on using KSP to generate extension functions for your clients!
