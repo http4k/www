@@ -151,12 +151,12 @@ menus:
       title: Community
       weight: 50
     - name: community-contributors
-      title: Contributing
-      url: /contributing/
+      title: Our Community of Contributors
+      url: /community/
       parent: community
       weight: 51
     - name: community-slack
-      title: http4k Slack
+      title: Community Slack
       url: https://kotlinlang.slack.com/archives/C5AL3AKUY
       parent: community
       weight: 52
