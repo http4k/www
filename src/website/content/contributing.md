@@ -1,6 +1,23 @@
 ---
 title: Contributing
+type: contributing
 description: Our contributors are the lifeblood of the http4k project. This page lists the people who have contributed to the project.
+vendors:
+  - tool: IntelliJ
+    vendor: Jetbrains
+    link: https://www.jetbrains.com
+    description: "Jetbrains kindly provides the project with an Open Source License for the amazing IntelliJ IDE and their suite of developer productivity tools."
+    image: /images/jetbrains.webp   
+  - tool: Tuple
+    vendor: Tuple
+    link: https://tuple.app/
+    description: "Tuple provides the http4k team with their amazing Pair-Programming tool Tuple allowing us to collaborate to build the library."
+    image: /images/tuple.jpg
+  - tool: JProfiler
+    vendor: YourKit
+    description: "YourKit supports open source projects with innovative and intelligent tools
+for monitoring and profiling .Net and Java applications."
+    image: /images/yourkit.png
 ---
 
 There are many ways in which you can contribute to the development of the library:
@@ -28,36 +45,3 @@ Testing with default settings is required when push changes. Note that we curren
 ```shell
 ./gradlew check
 ```
-
-### Contributors
-
-Thank you to all the people who have already contributed to http4k!
-<a href="https://github.com/http4k/http4k/graphs/contributors"><img src="https://opencollective.com/http4k/contributors.svg?width=800" /></a>
-
-### Vendor support
-
-Many thanks to all of the software vendors who supply tools to help us deliver http4k to it's community:
-
-#### Kotlin IDE
-
-<img src="/images/intellij-100.png" alt="intellij"/></a>
-
-[Jetbrains](https://www.jetbrains.com) kindly supplies the project with an Open Source License for the amazing IntelliJ
-IDE.
-
-#### Pairing tools
-
-<img src="/images/tuple.png" alt="tuple"/></a>
-
-[Tuple](https://tuple.app/) supplies the http4k team with their amazing Pair-Programming tool Tuple allowing us to
-collaborate to build the library. Pairing is ace - everyone should do it!
-
-#### JVM Profiling tools
-
-<img src="https://www.yourkit.com/images/yklogo.png" alt="yourkit"/>
-
-YourKit supports open source projects with innovative and intelligent tools
-for monitoring and profiling Java and .NET applications.
-YourKit is the creator of <a href="https://www.yourkit.com/java/profiler/">YourKit Java Profiler</a>,
-<a href="https://www.yourkit.com/.net/profiler/">YourKit .NET Profiler</a>,
-and <a href="https://www.yourkit.com/youmonitor/">YourKit YouMonitor</a>.
