@@ -1,28 +1,29 @@
 {{ define "main" }}
 
-
 <div class="layout">
-	<main class="page-content">
-		<article>
-			<h1>{{ .Title }}</h1>
-			<h5>{{ .Params.date | time.Format "January 2006" }} / the http4k team</h5>
-			<div>
-				{{ .Content }}
-			</div>
-			{{ with .Params.tags }}
-			<div>
-				<ul id="tags">
-					{{ range . }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-					{{ end }}
-				</ul>
-			</div>
-			{{ end }}
-		</article>
-		<div class="mt-auto d-flex justify-content-center">
-			<a href="../" class="btn btn-primary">All News</a>
-		</div>
-	</main>
+    <main class="page-content">
+        <header>
+            <h1>{{ .Title }}</h1>
+        </header>
+        <article>
+            <h5>{{ .Params.date | time.Format "January 2006" }} / the http4k team</h5>
+            <div>
+                {{ .Content }}
+            </div>
+            {{ with .Params.tags }}
+            <div>
+                <ul id="tags">
+                    {{ range . }}
+                    <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </article>
+        <div class="mt-auto d-flex justify-content-center">
+            <a href="../" class="btn btn-primary">All News</a>
+        </div>
+    </main>
 
 </div>
 {{ end }}

@@ -2,18 +2,19 @@
 
 <div class="layout">
     <main class="page-content">
+        <header>
+            <h1>{{ .Title }}</h1>
+        </header>
+
         <article>
-            <div class="container">
-                <h1>{{ .Title }}</h1>
-                {{ .Content }}
+            {{ .Content }}
 
-                <div class="mt-5 row row-cols-3 row-cols-xl-3 justify-content-center">
-                    <a class="btn btn-secondary" href="mailto:{{.Params.email}}"><b>Contact us</b></a>
-                </div>
+            <div class="mt-5 row row-cols-3 row-cols-xl-3 justify-content-center">
+                <a class="btn btn-secondary" href="mailto:{{.Params.email}}"><b>Contact us</b></a>
+            </div>
 
-                <div class="mt-5">
-                    {{ partial "shared/highlight.html" .Params.highlights }}
-                </div>
+            <div class="mt-5">
+                {{ partial "shared/highlight.html" .Params.highlights }}
             </div>
         </article>
     </main>

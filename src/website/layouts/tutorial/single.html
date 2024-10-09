@@ -2,13 +2,13 @@
 
 <div class="layout">
     <main class="page-content">
-		<article>
-			<h1>{{ .Title }}</h1>
-			<div>
-				{{ .Content }}
-			</div>
-			{{ partial "shared/tags.html" }}
-		</article>
-	</main>
+        <header>
+            <h1>{{ .Title }}</h1>
+        </header>
+        <article>
+            {{ .Content }}
+            {{ partial "shared/tags.html" }}
+        </article>
+    </main>
 </div>
 {{ end }}

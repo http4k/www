@@ -1,17 +1,17 @@
 {{ define "main" }}
 
-<div class="layout d-flex">
-    <main class="page-content">
+<main class="page-content">
+    <div class="layout d-flex">
         <header>
             <h1>{{ .Title }}</h1>
         </header>
         <article>
             {{ .Content }}
         </article>
-    </main>
-</div>
-{{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}
+    </div>
+    {{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}
 
-{{ partial "shared/pipes.html" }}
+    {{ partial "shared/pipes.html" }}
+</main>
 
 {{ end }}

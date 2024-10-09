@@ -2,8 +2,10 @@
 
 <div class="layout">
     <main class="page-content">
+        <header>
+            <h1>{{ .Title }}</h1>
+        </header>
         <article>
-            <h1>How-To: {{ .Title }}</h1>
             <div class="justify-content-end">
                 {{ range .Params.tags }}
                 <span class="badge text-bg-secondary" style="display:inline">{{ . }}</span>
