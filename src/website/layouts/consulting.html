@@ -2,8 +2,11 @@
 
 <div class="layout d-flex">
     <main class="main-content">
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
+        <article class="DocSearch-content">
+
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </article>
     </main>
 </div>
 {{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}

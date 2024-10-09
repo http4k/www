@@ -2,26 +2,28 @@
 
 <div class="layout d-flex">
     <main class="main-content ms-4">
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-        <div class="row row-cols-1 row-cols-sm-2 my-5 g-4 justify-content-center">
-            {{ range .Site.Data.ecosystem }}
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <img
-                            style="height: 5rem; max-width: 100%; object-fit: contain; margin-bottom: 20px;"
-                            src="{{ .image }}"  alt="logo">
-                        <p class="card-text">{{ .description | markdownify }}</p>
-                        <div class="mt-auto d-flex justify-content-end">
-                            <a href="/ecosystem/{{ .ref }}/" class="btn btn-primary">Read More</a>
+        <article class="DocSearch-content">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+            <div class="row row-cols-1 row-cols-sm-2 my-5 g-4 justify-content-center">
+                {{ range .Site.Data.ecosystem }}
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <img
+                                style="height: 5rem; max-width: 100%; object-fit: contain; margin-bottom: 20px;"
+                                src="{{ .image }}" alt="logo">
+                            <p class="card-text">{{ .description | markdownify }}</p>
+                            <div class="mt-auto d-flex justify-content-end">
+                                <a href="/ecosystem/{{ .ref }}/" class="btn btn-primary">Read More</a>
+                            </div>
                         </div>
                     </div>
+                    </a>
                 </div>
-                </a>
+                {{ end }}
             </div>
-            {{ end }}
-        </div>
+        </article>
     </main>
 </div>
 {{ partial "shared/pipes.html" }}

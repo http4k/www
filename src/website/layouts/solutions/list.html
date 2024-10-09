@@ -2,21 +2,23 @@
 
 <div class="layout d-flex">
     <main class="main-content ms-4">
-        <h1>http4k Professional Solutions</h1>
-        <p>Maximize your productivity with http4k, leveraging the simplicity and power of the world’s most flexible and lightweight HTTP libraries. http4k Solutions equips your developers with the tools to build, modernize, and maintain cutting-edge web applications with ease.</p>
-        <div class="my-5 py-5">
-            <div class="row row-cols-1 row-cols-md-3 row-cols-xl-3 justify-content-center">
-                {{ range .Params.top }}
-                <div class="col">
-                    <h3>{{ .title }}</h3>
-                    <p>{{ .description | markdownify }}</p>
+        <article class="DocSearch-content">
+            <h1>http4k Professional Solutions</h1>
+            <p>Maximize your productivity with http4k, leveraging the simplicity and power of the world’s most flexible and lightweight HTTP libraries. http4k Solutions equips your developers with the tools to build, modernize, and maintain cutting-edge web applications with ease.</p>
+            <div class="my-5 py-5">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-xl-3 justify-content-center">
+                    {{ range .Params.top }}
+                    <div class="col">
+                        <h3>{{ .title }}</h3>
+                        <p>{{ .description | markdownify }}</p>
+                    </div>
+                    {{ end }}
                 </div>
-                {{ end }}
-            </div>
 
-            {{ partial "shared/contact-us.html" . }}
-        </div>
-        {{ partial "shared/highlight.html" .Params.highlights }}
+                {{ partial "shared/contact-us.html" . }}
+            </div>
+            {{ partial "shared/highlight.html" .Params.highlights }}
+        </article>
     </main>
 </div>
 {{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}

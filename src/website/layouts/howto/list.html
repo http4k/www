@@ -2,30 +2,32 @@
 
 <div class="layout d-flex">
     <main class="main-content ms-4">
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-5">
-            {{ range where .Site.RegularPages "Type" "eq" "howto" }}
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">{{ .Title }}</h5>
-                        <p class="card-text">{{ .Params.description | markdownify }}</p>
-                        <div class="mt-auto">
-                            <div class="row">
-                                {{ range .Params.tags }}
-                                <span class="badge text-bg-secondary" style="display:inline">{{ . }}</span>
-                                {{ end }}
-                            </div>
-                            <div class="row mt-2">
-                                <a href="{{ .RelPermalink }}/" class="btn btn-primary">Read More</a>
+        <article class="DocSearch-content">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-5">
+                {{ range where .Site.RegularPages "Type" "eq" "howto" }}
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{{ .Title }}</h5>
+                            <p class="card-text">{{ .Params.description | markdownify }}</p>
+                            <div class="mt-auto">
+                                <div class="row">
+                                    {{ range .Params.tags }}
+                                    <span class="badge text-bg-secondary" style="display:inline">{{ . }}</span>
+                                    {{ end }}
+                                </div>
+                                <div class="row mt-2">
+                                    <a href="{{ .RelPermalink }}/" class="btn btn-primary">Read More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                {{ end }}
             </div>
-            {{ end }}
-        </div>
+        </article>
     </main>
 </div>
 {{ partial "shared/pipes.html" }}

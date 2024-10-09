@@ -2,12 +2,14 @@
 
 <div class="layout d-flex">
     <main class="main-content ms-4">
-        <h1>{{ .File.BaseFileName }}: {{ .Title }}</h1>
-        <p class="small">{{ .Params.date | time.Format "January 1st 2006" }}</p>
-        {{ .Content }}
-        <div class="mt-auto d-flex justify-content-center">
-            <a href="../" class="btn btn-primary">All Security Advisories</a>
-        </div>
+        <article class="DocSearch-content">
+            <h1>{{ .File.BaseFileName }}: {{ .Title }}</h1>
+            <p class="small">{{ .Params.date | time.Format "January 1st 2006" }}</p>
+            {{ .Content }}
+            <div class="mt-auto d-flex justify-content-center">
+                <a href="../" class="btn btn-primary">All Security Advisories</a>
+            </div>
+        </article>
     </main>
 </div>
 
