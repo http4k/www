@@ -212,7 +212,7 @@ a {
 @media (max-width: 1199.98px) {
     .newEcosystem .aside {
         transform: translate(-220px);
-        position: fixed;
+        position: absolute;
         left: 0;
         z-index: 99;
         box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
