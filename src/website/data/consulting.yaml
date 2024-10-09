@@ -7,7 +7,7 @@ services:
     description: "Partner with us to collaboratively manage and implement your initiatives as they grow across multiple teams and applications."
 blurb:
   - title: "Seamless Upgrades to the Latest http4k"
-    description: "Say farewell to the hassle of manual upgrades and embrace a more efficient strategy that conserves both time and resources. Safeguard your organization from the risks of outdated http4k versions by ensuring a smooth transition to the latest release. Our seasoned experts leverage advanced knowledge and automation tools to keep your applications secure and compliant with industry standards."
+    description: "Say farewell to the hassle of manual upgrades and embrace a more efficient strategy that conserves both time and resources. Safeguard your organisation from the risks of outdated http4k versions by ensuring a smooth transition to the latest release. Our seasoned experts leverage advanced knowledge and automation tools to keep your applications secure and compliant with industry standards."
   - title: "Design and Develop http4k Applications"
     description: "Enhance the speed of application delivery using the highly flexible http4k framework. Our time-tested development strategies, refined through years of experience, enable our specialists to collaborate with your developers, speeding up delivery or crafting new applications that fully leverage the capabilities of http4k."
   - title: "Transform Your Existing Applications to http4k"

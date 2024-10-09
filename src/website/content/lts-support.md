@@ -34,7 +34,7 @@ faq:
             provide a custom build.
 ---
 
-Enjoy long-term stability and support with **http4k’s Long-Term Support (LTS)** offering, designed for organizations that rely on http4k for their critical applications. Our LTS version of http4k provides guaranteed maintenance and updates for a stable release, ensuring your projects remain secure and fully functional without needing frequent upgrades. Additionally, our priority support extends up to 24 months, meaning **http4k LTS** is your key to maintaining focus on feature delivery while ensuring your http4k applications are future-proof.
+Enjoy long-term stability and support with **http4k’s Long-Term Support (LTS)** offering, designed for organisations that rely on http4k for their critical applications. Our LTS version of http4k provides guaranteed maintenance and updates for a stable release, ensuring your projects remain secure and fully functional without needing frequent upgrades. Additionally, our priority support extends up to 24 months, meaning **http4k LTS** is your key to maintaining focus on feature delivery while ensuring your http4k applications are future-proof.
 
 Access expert guidance and priority support directly from the creators and maintainers of http4k. With dedicated channels, including email and Slack, you’ll get fast resolutions to any issues or questions, backed by our deep knowledge of the http4k ecosystem. Whether it’s compatibility updates or bug fixes, our team ensures that your http4k deployment remains fully integrated with the broader Kotlin and JVM environments.
 

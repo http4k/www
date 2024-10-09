@@ -101,9 +101,41 @@
     justify-content: center;
 }
 
-.main-content {
-    padding: 20px;
-    width: 80%;
+@media (min-width: 998.98px) {
+    .main-content {
+        padding: 20px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 998.98px) {
+    .main-content {
+        padding: 20px;
+        width: 85%;
+    }
+}
+
+@media (min-width: 600.98px) {
+    .headshot-card {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .headshot {
+        border-radius: 34px;
+        height: 20rem;
+        max-width: 100%;
+        object-fit: contain;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600.98px) {
+
+    .headshot {
+        border-radius: 34px;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 .sidebar {
@@ -217,6 +249,7 @@ a {
         z-index: 99;
         box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
     }
+
     .newEcosystem .no-side {
         width: auto;
         transform: translate(0px);
