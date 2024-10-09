@@ -274,3 +274,15 @@ td, th {
     border: 1px solid #333;
     padding: 0 .2em;
 }
+
+/* remove when search index is updated */
+.searchBox {
+    display: none;
+}
+
+@media (max-width: 1199.98px) {
+    .searchBox {
+        display: none;
+    }
+}
+

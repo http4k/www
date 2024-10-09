@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
                 {{ range .Site.Menus.nav }}
-                <li class="nav-item dropdown {{ if .HasChildren }}dropdown{{ end }}">
+                <li class="nav-item {{ if .HasChildren }}dropdown{{ end }}">
                     {{ if .HasChildren }}
                     <a class="nav-link dropdown-toggle text-white px-4" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
@@ -26,6 +26,9 @@
                     {{ end }}
                 </li>
                 {{ end }}
+                <li class="nav-item searchBox align-content-center">
+                    <input id="search" type="text" placeholder="Search (Ctrl/⌘ K)"/>
+                </li>
             </ul>
         </div>
     </div>
