@@ -1,8 +1,8 @@
 ---
 layout: howto
-title: "http4k Connect: Implement your own clients"
+title: "Implement your own clients"
 description: How to implement your own clients for the Connect pattern
-ecosystem: http4k Connect
+tags: [ "http4k Connect" ]
 ---
 
 It is very easy to implement your own clients to follow the pattern. For the system `MySystem`, you would need to:

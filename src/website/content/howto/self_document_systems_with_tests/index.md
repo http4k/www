@@ -2,8 +2,9 @@
 layout: howto
 title: "Self Document Systems with Tests"
 description: Recipe for creating a Distributed Tracing Tree
-ecosystem: http4k Core
+tags: [ "http4k Core" ]
 ---
+
 ### Gradle setup
 
 ```kotlin

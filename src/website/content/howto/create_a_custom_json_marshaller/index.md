@@ -2,8 +2,9 @@
 layout: howto
 title: "Create a custom JSON marshaller"
 description: Recipes for using JSON in http4k applications with a variety of popular JSON APIS
-ecosystem: http4k Core
+tags: [ "http4k Core" ]
 ---
+
 ### Gradle setup
 
 ```kotlin

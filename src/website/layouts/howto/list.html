@@ -10,9 +10,16 @@
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">{{ .Title }}</h5>
-                        <p class="card-text">{{ .Params.description }}</p>
-                        <div class="mt-auto d-flex justify-content-end">
-                            <a href="{{ .RelPermalink }}/" class="btn btn-primary">Read More</a>
+                        <p class="card-text">{{ .Params.description | markdownify }}</p>
+                        <div class="mt-auto">
+                            <div class="row">
+                                {{ range .Params.tags }}
+                                <span class="badge text-bg-secondary" style="display:inline">{{ . }}</span>
+                                {{ end }}
+                            </div>
+                            <div class="row mt-2">
+                                <a href="{{ .RelPermalink }}/" class="btn btn-primary">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </div>

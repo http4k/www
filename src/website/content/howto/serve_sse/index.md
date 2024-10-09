@@ -2,8 +2,9 @@
 layout: howto
 title: "Serve SSE"
 description: Recipes for using http4k with Server-Sent Events
-ecosystem: http4k Core
+tags: [ "http4k Core" ]
 ---
+
 ### Gradle setup
 
 ```kotlin

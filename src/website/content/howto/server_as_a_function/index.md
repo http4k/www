@@ -2,8 +2,9 @@
 layout: howto
 title: "Server-as-a-Function"
 description: The simplest example of an http4k application 
-ecosystem: http4k Core
+tags: [ "http4k Core" ]
 ---
+
 This example is the simplest possible "server" implementation. Note that we are not spinning up a server-backend here - but the entire application(!) is testable by firing HTTP requests at it as if it were.
 
 ### Gradle setup

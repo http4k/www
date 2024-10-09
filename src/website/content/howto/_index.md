@@ -2,8 +2,9 @@
 layout: howto
 title: "How-To Guides"
 description: Introduction to the http4k How-tos
-ecosystem: http4k Core
+tags: [ "http4k Core" ]
 ---
+
 
 The meat of the http4k documentation is in this section, in which you'll find ready made solutions to many common use-cases. Because if you've got something to achieve - it's pretty likely that we've probably come across it already 😉. Check out the nav on the left for the list of recipes.
 

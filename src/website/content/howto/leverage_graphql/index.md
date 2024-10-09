@@ -2,8 +2,9 @@
 layout: howto
 title: "Leverage GraphQL"
 description: Recipe for using GraphQL plugins 
-ecosystem: http4k Core
+tags: [ "http4k Core" ]
 ---
+
 ### Gradle setup
 
 ```kotlin

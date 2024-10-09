@@ -2,8 +2,9 @@
 layout: howto
 title: "Authentication for HTTP services"
 description: Recipes for how to secure and authenticate HTTP services
-ecosystem: http4k Core
+tags: [ "http4k Core" ]
 ---
+
 ### Gradle setup
 
 ```kotlin

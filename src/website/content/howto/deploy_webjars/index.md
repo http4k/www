@@ -2,8 +2,9 @@
 layout: howto
 title: "Deploy WebJars"
 description: Recipe for using WebJars with http4k 
-ecosystem: http4k Core
+tags: [ "http4k Core" ]
 ---
+
 ### Gradle setup
 
 ```kotlin

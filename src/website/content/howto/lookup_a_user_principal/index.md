@@ -2,8 +2,9 @@
 layout: howto
 title: "Lookup a user principal"
 description: Recipes for looking up and populating a user principal from a request
-ecosystem: http4k Core
+tags: [ "http4k Core" ]
 ---
+
 
 ### Gradle setup
 

@@ -2,8 +2,9 @@
 layout: howto
 title: "Serve Websocket"
 description: Recipes for using http4k with websockets
-ecosystem: http4k Core
+tags: [ "http4k Core" ]
 ---
+
 ### Gradle setup
 
 ```kotlin
