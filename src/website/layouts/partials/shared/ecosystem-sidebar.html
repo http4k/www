@@ -1,11 +1,15 @@
 <aside class="aside col-auto">
     <div>
         <img class="mb-3 sideToggle" src="/images/exchange-icon.svg" width="20" alt="" srcset=""/>
+
         <ul class="list-unstyled">
             {{ $ecosystem := .Params.ecosystem }}
+            {{ $versions := .Site.Params.versions }}
 
             {{ range (where .Site.Data.ecosystem "title" "eq" $ecosystem) }}
+
             <li><h2><a href="/ecosystem/{{ .ref }}/">{{ $ecosystem }}</a></h2></li>
+            <li><h6>Latest version: <span class="badge text-bg-secondary">{{ index $versions .ref }}</span></h6></li>
             {{ end }}
 
             <li>
