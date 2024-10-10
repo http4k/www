@@ -58,7 +58,7 @@
         $('.highlight').each(function () {
             const copyButton = $('<i class="fs-2 bi bi-clipboard copy-button"></i>');
 
-            $(this).prepend(copyButton);
+            $(this).find("pre").prepend(copyButton);
 
             copyButton.on('click', function () {
                 const $icon = $(this);

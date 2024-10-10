@@ -283,8 +283,8 @@ td, th {
 }
 
 .copy-button {
-    position: absolute;
-    right: 1em;
+    position: relative;
+    float: inline-end;
     color: #ffffff;
     cursor: pointer;
 }
