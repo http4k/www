@@ -62,9 +62,9 @@
 
             copyButton.on('click', function () {
                 const $icon = $(this);
-                const textToCopy = $('#text-to-copy').text();
+                const codeContent = $icon.parent().find('code').text();
 
-                navigator.clipboard.writeText(textToCopy)
+                navigator.clipboard.writeText(codeContent)
                     .then(() => {
                         $icon.removeClass('bi-clipboard').addClass('bi-clipboard-check-fill');
 
