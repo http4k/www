@@ -1,5 +1,6 @@
 baseURL: "https://http4k.org"
 languageCode: "en-us"
+publishDir: "../../build/www"
 
 title: "http4k"
 

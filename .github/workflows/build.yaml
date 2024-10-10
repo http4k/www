@@ -32,5 +32,5 @@ jobs:
           personal_token: ${{ secrets.TOOLBOX_REPO_TOKEN }}
           external_repository: http4k/http4k.github.io
           publish_branch: master
-          publish_dir: src/website/public
+          publish_dir: build/www
           cname: www.http4k.org
