@@ -4,6 +4,8 @@ on:
       - master
   repository_dispatch:
       types: [release]
+  schedule:
+      - cron: "0 /6 * * *"
 jobs:
   release-site:
     runs-on: ubuntu-latest
