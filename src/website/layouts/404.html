@@ -1,13 +1,24 @@
 {{ define "main" }}
-<section class="section py-5">
-  <div class="container">
-    <div class="row mb-4 mr-4">
-      <span class="col-sm-8 display-6 fw-bold text-primary">//404</span>
-    </div>
-    <div class="row">
-      <span class="m-2 mb-5">You seem to have taken a wrong turn! <a href="{{ .Site.Home.RelPermalink }}">Let's get you back on track!</a></span>
-      <img src="/images/404.webp" class="border-radius-34" alt="404" width="50%"/>
-    </div>
-  </div>
-</section>
+<div class="layout">
+    <main class="page-content">
+        <header>
+            <h1>//404</h1>
+        </header>
+        <p>
+        <p>You seem to have taken a wrong turn! <a href="/">Let's get you back on track!</a>.</p>
+        <p>
+            Note that we have recently redesigned the site so a lot of the old links will be broken,
+            especially from Gootle results (which will be reindexed at their leisure).
+            Everything is still here though - here are some helpful hints to help you find what you might be looking for:
+        </p>
+        <ul>
+            <li>Guides under <code>/guide/*</code> is now <a href="/howto/">here</a></li>
+            <li>The http4k reference  <code>/reference/*</code> is now <a href="/ecosystem/http4k/">here</a></li>
+            <li>Tutorials  <code>/tutorials/*</code> is now <a href="/tutorial/">here</a></li>
+        </ul>
+        <img src="/images/404.webp" class="border-radius-34" alt="404" width="50%"/>
+        </article>
+    </main>
+</div>
+
 {{ end }}
