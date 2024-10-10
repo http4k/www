@@ -40,7 +40,7 @@ val handler: RoutingHttpHandler = routes(
         // SAME AS:
         // val pathDate: LocalDate = pathLocalDate.extract(request)
 
-        val customType: public.ecosystem.http4k.concepts.lens.CustomType = requiredCustomQuery(request)
+        val customType: CustomType = requiredCustomQuery(request)
         val anIntHeader: Int? = optionalHeader(request)
 
         val baseResponse = Response(OK)
@@ -54,7 +54,7 @@ val handler: RoutingHttpHandler = routes(
 
 //With the addition of the `CatchLensFailure` filter, no other validation is required when using Lenses, as http4k
 // will handle invalid requests by returning a BAD_REQUEST (400) response.
-val app = ServerFilters.CatchLensFailure.then(public.ecosystem.http4k.concepts.lens.handler)(
+val app = ServerFilters.CatchLensFailure.then(handler)(
     Request(
         GET,
         "/hello/2000-01-01?myCustomType=someValue"
@@ -65,7 +65,7 @@ val app = ServerFilters.CatchLensFailure.then(public.ecosystem.http4k.concepts.l
 // which is useful for properly building both requests and responses in a typesafe way without resorting to string
 // values (especially in URLs which should never be constructed using String concatenation):
 val modifiedRequest: Request = Request(GET, "http://google.com/{pathLocalDate}").with(
-    public.ecosystem.http4k.concepts.lens.pathLocalDate of LocalDate.now(),
-    public.ecosystem.http4k.concepts.lens.requiredQuery of "myAmazingString",
-    public.ecosystem.http4k.concepts.lens.optionalHeader of 123
+    pathLocalDate of LocalDate.now(),
+    requiredQuery of "myAmazingString",
+    optionalHeader of 123
 )
