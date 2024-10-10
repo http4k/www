@@ -120,6 +120,7 @@
         margin-left: 2rem;
         margin-right: 2rem;
     }
+
     .headshot {
         border-radius: 34px;
         height: 20rem;
@@ -281,3 +282,9 @@ td, th {
     }
 }
 
+.copy-button {
+    position: absolute;
+    right: 1em;
+    color: #ffffff;
+    cursor: pointer;
+}

@@ -38,13 +38,14 @@
             <p class="small text-white text-decoration-none">
                 © {{ now.Format "2006" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;&nbsp;
                 {{ range .Site.Menus.legal }}
-                    |&nbsp;&nbsp;&nbsp;<a class="text-white text-decoration-none" href="{{ .URL }}">{{ .Name }}</a>&nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;<a class="text-white text-decoration-none" href="{{ .URL }}">{{ .Name }}</a>&nbsp;&nbsp;&nbsp;
                 {{ end }}
             </p>
         </div>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+
 <script type="text/javascript">
     docsearch({
         appId: 'YCNGOLH2XD',
@@ -52,5 +53,31 @@
         indexName: 'http4k',
         container: '#searchBox',
     });
-</script>
 
+    $(document).ready(function () {
+        $('.highlight').each(function () {
+            const copyButton = $('<i class="fs-2 bi bi-clipboard copy-button"></i>');
+
+            $(this).prepend(copyButton);
+
+            copyButton.on('click', function () {
+                const codeContent = $(this).parent().find('code').text();
+
+                const tempTextArea = $('<textarea>');
+                tempTextArea.text(codeContent);
+                $('body').append(tempTextArea);
+
+                tempTextArea.select();
+                document.execCommand('copy');
+                tempTextArea.remove();
+
+                const $icon = $(this);
+                $icon.removeClass('bi-clipboard').addClass('bi-clipboard-check-fill');
+
+                setTimeout(() => {
+                    $icon.removeClass('bi-clipboard-check-fill').addClass('bi-clipboard');
+                }, 250);
+            });
+        });
+    });
+</script>
