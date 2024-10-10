@@ -61,22 +61,20 @@
             $(this).prepend(copyButton);
 
             copyButton.on('click', function () {
-                const codeContent = $(this).parent().find('code').text();
-
-                const tempTextArea = $('<textarea>');
-                tempTextArea.text(codeContent);
-                $('body').append(tempTextArea);
-
-                tempTextArea.select();
-                document.execCommand('copy');
-                tempTextArea.remove();
-
                 const $icon = $(this);
-                $icon.removeClass('bi-clipboard').addClass('bi-clipboard-check-fill');
+                const textToCopy = $('#text-to-copy').text();
 
-                setTimeout(() => {
-                    $icon.removeClass('bi-clipboard-check-fill').addClass('bi-clipboard');
-                }, 250);
+                navigator.clipboard.writeText(textToCopy)
+                    .then(() => {
+                        $icon.removeClass('bi-clipboard').addClass('bi-clipboard-check-fill');
+
+                        setTimeout(() => {
+                            $icon.removeClass('bi-clipboard-check-fill').addClass('bi-clipboard');
+                        }, 250);
+                    })
+                    .catch(err => {
+                        console.error('Could not copy text: ', err);
+                    });
             });
         });
     });
