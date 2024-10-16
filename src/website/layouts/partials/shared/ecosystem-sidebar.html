@@ -17,7 +17,7 @@
                 <ul class="list-unstyled ms-3">
                     {{ range where (where .Site.RegularPages ".Params.Category" "eq" "Concept") ".Params.ecosystem" "eq" $ecosystem }}
                     <li>
-                        <a href="{{ .RelPermalink }}/" class="ecoLink {{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
+                        <a href="{{ .RelPermalink }}" class="ecoLink {{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
                     </li>
                     {{ end }}
                 </ul>
