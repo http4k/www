@@ -28,7 +28,7 @@ params:
 
   versions:
     http4k: "5.33.0.1"
-    connect: "5.25.0.0"
+    connect: "5.25.1.0"
 
   favicons:
     themeColor: "#FFFFFF"
