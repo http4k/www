@@ -8,7 +8,7 @@
             <div class="">
                 {{ range where .Site.RegularPages "Type" "eq" "news" }}
                 <div class="row mb-4 card p-3" style="background-color: white">
-                    <a href="{{ .RelPermalink }}/" class="text-reset text-decoration-none text-">
+                    <a href="{{ .RelPermalink }}" class="text-reset text-decoration-none text-">
                         <div class="d-flex justify-content-between">
                             <h5>{{ .Title }}</h5>
                             <div class="d-flex flex-row-reverse">{{ .Params.date | time.Format "January 2006" }}</div>

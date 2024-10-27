@@ -25,7 +25,7 @@
                     <p class="small">{{ .Params.date | time.Format "January 1st 2006" }}</p>
                     <p>{{ .Params.description }}</p>
                     <div class="mt-auto d-flex justify-content-end">
-                        <a href="{{ .RelPermalink }}/" class="btn btn-primary">Read More</a>
+                        <a href="{{ .RelPermalink }}" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
                 {{ end }}
