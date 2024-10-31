@@ -174,7 +174,7 @@
         return `${wholeYear} Q${quarter}`;
     }
 
-    function createTimeline(data, containerId, title, startYear = 2023, endYear = 2031) {
+    function createTimeline(data, title, startYear = 2023, endYear = 2031) {
         const containerDiv = document.createElement('div');
         containerDiv.className = 'timeline-container';
 
@@ -188,12 +188,12 @@
         containerDiv.appendChild(markersDiv);
 
         const timelineDiv = document.createElement('div');
-        timelineDiv.id = containerId;
+        timelineDiv.id = title;
         containerDiv.appendChild(timelineDiv);
 
         document.body.appendChild(containerDiv);
 
-        const container = document.getElementById(containerId);
+        const container = document.getElementById(title);
         container.innerHTML = '';
 
         // Calculate the total width including the final year
@@ -286,8 +286,8 @@
     }
 </script>
 <script language="JavaScript">
-    createTimeline(data, 'javaTimeline', 'Java');
-    createTimeline(data, 'http4kTimeline', 'http4k LTS');
+    createTimeline(data, 'Java');
+    createTimeline(data, 'http4k LTS');
 </script>
 </body>
 </html>
