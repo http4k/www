@@ -1,80 +1,4 @@
 <!DOCTYPE html>
-<script language="JavaScript">
-    const timelineData = [
-        {
-            title: "Java 11",
-            segments: [
-                { start: 2023, end: 2025, type: "Public", color: "#a8d5ff" },
-                { start: 2025, end: 2030, type: "Commercial", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "http4k 4 (Java 8)",
-            segments: [
-                { start: 2023, end: 2023.25, type: "OSS", color: "#a8d5ff" },
-                { start: 2023.25, end: 2027, type: "LTS", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "http4k 5 (Java 8)",
-            segments: [
-                { start: 2023, end: 2023.75, type: "OSS", color: "#a8d5ff" },
-                { start: 2023.75, end: 2027, type: "LTS", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "Java 17",
-            segments: [
-                { start: 2023, end: 2025, type: "Public", color: "#a8d5ff" },
-                { start: 2025, end: 2030, type: "Commercial", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "Java 21",
-            segments: [
-                { start: 2023.75, end: 2028, type: "Public", color: "#a8d5ff" },
-                { start: 2027, end: 2031, type: "Commercial", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "http4k 6 (Java 21)",
-            segments: [
-                { start: 2025, end: 2027, type: "OSS", color: "#a8d5ff" },
-                { start: 2027, end: 2029, type: "LTS", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "Java 25",
-            segments: [
-                { start: 2025.75, end: 2030, type: "Public", color: "#a8d5ff" },
-                { start: 2029, end: 2031, type: "Commercial", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "http4k 7 (Java 25)",
-            segments: [
-                { start: 2027, end: 2029, type: "OSS", color: "#a8d5ff" },
-                { start: 2029, end: 2031, type: "LTS", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "Java 29",
-            segments: [
-                { start: 2027.75, end: 2032, type: "Public", color: "#a8d5ff" },
-                { start: 2031, end: 2032, type: "Commercial", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "http4k 8 (Java 29)",
-            segments: [
-                { start: 2029, end: 2031, type: "OSS", color: "#a8d5ff" },
-                { start: 2031, end: 2033, type: "LTS", color: "#ffe69c" }
-            ]
-        },
-    ];
-
-</script>
-<!DOCTYPE html>
 <html>
 <head>
     <title>Timeline Visualization</title>
@@ -82,6 +6,14 @@
         .timeline-container {
             font-family: Arial, sans-serif;
             padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
         }
 
         .timeline-row {
@@ -92,7 +24,7 @@
         }
 
         .timeline-label {
-            width: 150px;
+            width: 120px;
             flex-shrink: 0;
             font-weight: bold;
         }
@@ -117,7 +49,7 @@
 
         .year-markers {
             display: flex;
-            margin-left: 150px;
+            margin-left: 120px;
             margin-bottom: 20px;
             position: relative;
             height: 25px;
@@ -171,27 +103,98 @@
     </style>
 </head>
 <body>
-<div class="timeline-container">
-    <div id="yearMarkers" class="year-markers"></div>
-    <div id="timeline"></div>
-</div>
-
 <script>
-    // Your timeline data here
-
+    const data = {
+        "Java": [
+            {
+                title: "11",
+                segments: [
+                    {start: 2023, end: 2025, type: "Public", color: "#a8d5ff"},
+                    {start: 2025, end: 2030, type: "Commercial", color: "#ffe69c"}
+                ]
+            },
+            {
+                title: "17",
+                segments: [
+                    {start: 2023, end: 2025, type: "Public", color: "#a8d5ff"},
+                    {start: 2025, end: 2030, type: "Commercial", color: "#ffe69c"}
+                ]
+            },
+            {
+                title: "21",
+                segments: [
+                    {start: 2023.75, end: 2028, type: "Public", color: "#a8d5ff"},
+                    {start: 2027, end: 2031, type: "Commercial", color: "#ffe69c"}
+                ]
+            },
+            {
+                title: "25",
+                segments: [
+                    {start: 2025.75, end: 2030, type: "Public", color: "#a8d5ff"},
+                    {start: 2029, end: 2031, type: "Commercial", color: "#ffe69c"}
+                ]
+            }
+        ],
+        "http4k LTS": [
+            {
+                title: "4.X (Java 8)",
+                segments: [
+                    {start: 2023, end: 2023.25, type: "OSS", color: "#a8d5ff"},
+                    {start: 2023.25, end: 2027, type: "LTS", color: "#ffe69c"}
+                ]
+            },
+            {
+                title: "5.X (Java 8)",
+                segments: [
+                    {start: 2023, end: 2023.75, type: "OSS", color: "#a8d5ff"},
+                    {start: 2023.75, end: 2027, type: "LTS", color: "#ffe69c"}
+                ]
+            },
+            {
+                title: "6.X (Java 21)",
+                segments: [
+                    {start: 2025, end: 2027, type: "OSS", color: "#a8d5ff"},
+                    {start: 2027, end: 2029, type: "LTS", color: "#ffe69c"}
+                ]
+            },
+            {
+                title: "7.X (Java 25)",
+                segments: [
+                    {start: 2027, end: 2029, type: "OSS", color: "#a8d5ff"},
+                    {start: 2029, end: 2031, type: "LTS", color: "#ffe69c"}
+                ]
+            },
+        ]
+    }
+</script>
+<script type="text/javascript">
     function formatQuarter(year) {
         const wholeYear = Math.floor(year);
         const quarter = Math.floor((year - wholeYear) * 4) + 1;
         return `${wholeYear} Q${quarter}`;
     }
 
-    function createTimeline(data, startYear = 2023, endYear = 2032) {
-        const container = document.getElementById('timeline');
-        container.innerHTML = '';
+    function createTimeline(data, containerId, title, startYear = 2023, endYear = 2031) {
+        const containerDiv = document.createElement('div');
+        containerDiv.className = 'timeline-container';
 
-        // Create year and quarter markers
-        const yearMarkersContainer = document.getElementById('yearMarkers');
-        yearMarkersContainer.innerHTML = '';
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'timeline-header';
+        headerDiv.textContent = title;
+        containerDiv.appendChild(headerDiv);
+
+        const markersDiv = document.createElement('div');
+        markersDiv.className = 'year-markers';
+        containerDiv.appendChild(markersDiv);
+
+        const timelineDiv = document.createElement('div');
+        timelineDiv.id = containerId;
+        containerDiv.appendChild(timelineDiv);
+
+        document.body.appendChild(containerDiv);
+
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';
 
         // Calculate the total width including the final year
         const totalYears = endYear - startYear;
@@ -215,7 +218,7 @@
             yearLine.className = 'year-line';
             yearMarker.appendChild(yearLine);
 
-            yearMarkersContainer.appendChild(yearMarker);
+            markersDiv.appendChild(yearMarker);
 
             // Add quarter markers if not the last year
             if (year < endYear) {
@@ -225,13 +228,13 @@
                     const quarterMarker = document.createElement('div');
                     quarterMarker.className = 'quarter-marker';
                     quarterMarker.style.left = `${quarterPosition}%`;
-                    yearMarkersContainer.appendChild(quarterMarker);
+                    markersDiv.appendChild(quarterMarker);
                 }
             }
         }
 
         // Create timeline rows
-        data.forEach(row => {
+        data[title].forEach(row => {
             const timelineRow = document.createElement('div');
             timelineRow.className = 'timeline-row';
 
@@ -281,9 +284,10 @@
             container.appendChild(timelineRow);
         });
     }
-
-    // Initialize the timeline
-    createTimeline(timelineData);
+</script>
+<script language="JavaScript">
+    createTimeline(data, 'javaTimeline', 'Java');
+    createTimeline(data, 'http4kTimeline', 'http4k LTS');
 </script>
 </body>
 </html>
