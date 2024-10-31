@@ -1,7 +1,7 @@
 ---
 title: Long-Term Support (LTS)
 description: It's important to us that you can rely on http4k for the long term. That's why we offer Long Term Support (LTS) for our releases.
-type: lts
+type: solutions
 email: lts@http4k.org here
 highlights:
     -   title: Access to priority support
@@ -42,6 +42,14 @@ Additionally, **http4k LTS**  offers transparency with full access to the codeba
 
 ## LTS Timeline
 
-We are commited to providing LTS support using a predictable timeline, which will be synchronized with the official JDK release and support cycle, but offset by a 3 month window. This means that new LTS versions will be released at least every 24 months, with the previous LTS version receiving updates for 24 months.
+When considering the timeline for the LTS offering, we have tried to strike a balance between a generous open source and the need for us to upgrade to later base JDK versions of in order to drive the ecosystem forward. We are also commited to providing support using a predictable timeline for our LTS customers, which will be synchronized with the official JDK release and support cycle of LTS versions, but offset by a 3 month window. To put that more visually, this is the timeline for current and future Java LTS releases:
 
-The current LTS timeline is as follows:
+{{< timeline data="Java" >}}
+
+Based on the above, the current plan is for http4k LTS versions to have the following open source and commercial support schedule:
+
+{{< timeline data="http4k LTS" >}}
+
+In the case of an intermediate major version upgrade between JDK versions, the previous major version will also immediate start a 24 month support window to ensure that customers have a smooth upgrade path. 
+
+If you have any questions about the LTS programme, or long-term support requirements outside of the above schedule, please get in touch using the below contact link and we will endeavour to assist.

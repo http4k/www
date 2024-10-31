@@ -1,0 +1,7 @@
+{{ $data := .Get "data" }}
+<div id="{{ $data }}"></div>
+
+<script language="JavaScript">
+    createTimeline('{{ $data }}');
+</script>
+
