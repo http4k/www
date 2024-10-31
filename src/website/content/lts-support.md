@@ -39,3 +39,5 @@ Enjoy long-term stability and support with **http4k’s Long-Term Support (LTS)*
 Access expert guidance and priority support directly from the creators and maintainers of http4k. With dedicated channels, including email and Slack, you’ll get fast resolutions to any issues or questions, backed by our deep knowledge of the http4k ecosystem. Whether it’s compatibility updates or bug fixes, our team ensures that your http4k deployment remains fully integrated with the broader Kotlin and JVM environments.
 
 Additionally, **http4k LTS**  offers transparency with full access to the codebase and rapid integration of community-driven improvements. Built under a permissive Apache2 license, you can rest assured that your applications comply with industry standards while enjoying the reliability and accountability that **http4k LTS**  support provides. Get in touch to learn more about how **http4k LTS**  can stabilize your development process for the long term.
+
+{{< timeline >}}

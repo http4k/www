@@ -1,4 +1,73 @@
 <!DOCTYPE html>
+<script language="JavaScript">
+    const timelineData = [
+        {
+            title: "Java 11",
+            segments: [
+                { start: 2023, end: 2025, type: "Public", color: "#a8d5ff" },
+                { start: 2025, end: 2030, type: "Commercial", color: "#ffe69c" }
+            ]
+        },
+        {
+            title: "http4k 4 (min JDK 8)",
+            segments: [
+                { start: 2023, end: 2023.25, type: "OSS", color: "#a8d5ff" },
+                { start: 2023.25, end: 2027, type: "LTS", color: "#ffe69c" }
+            ]
+        },
+        {
+            title: "http4k 5 (min JDK 8)",
+            segments: [
+                { start: 2023, end: 2023.75, type: "OSS", color: "#a8d5ff" },
+                { start: 2023.75, end: 2027, type: "LTS", color: "#ffe69c" }
+            ]
+        },
+        {
+            title: "Java 17",
+            segments: [
+                { start: 2023, end: 2025, type: "Public", color: "#a8d5ff" },
+                { start: 2025, end: 2030, type: "Commercial", color: "#ffe69c" }
+            ]
+        },
+        {
+            title: "Java 21",
+            segments: [
+                { start: 2023.75, end: 2028, type: "Public", color: "#a8d5ff" },
+                { start: 2027, end: 2031, type: "Commercial", color: "#ffe69c" }
+            ]
+        },
+        {
+            title: "http4k 6 (min JDK 21)",
+            segments: [
+                { start: 2025, end: 2027, type: "OSS", color: "#a8d5ff" },
+                { start: 2027, end: 2029, type: "LTS", color: "#ffe69c" }
+            ]
+        },
+        {
+            title: "Java 25",
+            segments: [
+                { start: 2025.75, end: 2030, type: "Public", color: "#a8d5ff" },
+                { start: 2029, end: 2031, type: "Commercial", color: "#ffe69c" }
+            ]
+        },
+        {
+            title: "http4k 7 (min JDK 25)",
+            segments: [
+                { start: 2027, end: 2029, type: "OSS", color: "#a8d5ff" },
+                { start: 2029, end: 2031, type: "LTS", color: "#ffe69c" }
+            ]
+        },
+        {
+            title: "Java 29",
+            segments: [
+                { start: 2027.75, end: 2032, type: "Public", color: "#a8d5ff" },
+                { start: 2031, end: 2032, type: "Commercial", color: "#ffe69c" }
+            ]
+        },
+    ];
+
+</script>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Timeline Visualization</title>
@@ -24,7 +93,7 @@
         .timeline-chart {
             position: relative;
             flex-grow: 1;
-            height: 25px;
+            height: 30px;
             background-color: #f5f5f5;
         }
 
@@ -49,7 +118,6 @@
 
         .year-marker {
             position: absolute;
-            transform: translateX(-50%);
             color: #666;
             bottom: 0;
             display: flex;
@@ -59,6 +127,7 @@
 
         .year-label {
             margin-bottom: 5px;
+            transform: translateX(-50%);
         }
 
         .year-line {
@@ -74,6 +143,22 @@
             bottom: 0;
             background-color: #666;
         }
+
+        .timeline-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .grid-line {
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
     </style>
 </head>
 <body>
@@ -83,71 +168,6 @@
 </div>
 
 <script>
-    const timelineData = [
-        {
-            title: "Java 11",
-            segments: [
-                { start: 2023.1, end: 2024.4, type: "Public", color: "#a8d5ff" },
-                { start: 2024.4, end: 2029.4, type: "Commercial", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "http4k 4 (min JDK 8)",
-            segments: [
-                { start: 2023.1, end: 2023.2, type: "OSS", color: "#a8d5ff" },
-                { start: 2023.2, end: 2027.1, type: "LTS", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "http4k 5 (min JDK 8)",
-            segments: [
-                { start: 2023.1, end: 2023.3, type: "OSS", color: "#a8d5ff" },
-                { start: 2023.3, end: 2027.1, type: "LTS", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "Java 17",
-            segments: [
-                { start: 2023.1, end: 2024.4, type: "Public", color: "#a8d5ff" },
-                { start: 2024.4, end: 2029.4, type: "Commercial", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "Java 21",
-            segments: [
-                { start: 2023.3, end: 2027.4, type: "Public", color: "#a8d5ff" },
-                { start: 2026.4, end: 2031.1, type: "Commercial", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "http4k 6 (min JDK 21)",
-            segments: [
-                { start: 2025.1, end: 2027.1, type: "OSS", color: "#a8d5ff" },
-                { start: 2027.1, end: 2029.1, type: "LTS", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "Java 25",
-            segments: [
-                { start: 2025.3, end: 2029.4, type: "Public", color: "#a8d5ff" },
-                { start: 2028.4, end: 2031.1, type: "Commercial", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "http4k 7 (min JDK 25)",
-            segments: [
-                { start: 2027.1, end: 2029.1, type: "OSS", color: "#a8d5ff" },
-                { start: 2029.1, end: 2030.4, type: "LTS", color: "#ffe69c" }
-            ]
-        },
-        {
-            title: "Java 29",
-            segments: [
-                { start: 2027.3, end: 2031.4, type: "Public", color: "#a8d5ff" },
-                { start: 2030.4, end: 2030.4, type: "Commercial", color: "#ffe69c" }
-            ]
-        },
-    ];
 
     function formatQuarter(year) {
         const wholeYear = Math.floor(year);
@@ -155,7 +175,7 @@
         return `${wholeYear} Q${quarter}`;
     }
 
-    function createTimeline(data, startYear = 2023, endYear = 2030) {
+    function createTimeline(data, startYear = 2023, endYear = 2031) {
         const container = document.getElementById('timeline');
         container.innerHTML = '';
 
@@ -163,12 +183,15 @@
         const yearMarkersContainer = document.getElementById('yearMarkers');
         yearMarkersContainer.innerHTML = '';
 
-        // Create year markers with quarters
+        // Calculate the total width including the final year
+        const totalYears = endYear - startYear;
+
+        // Create year markers and quarter markers
         for (let year = startYear; year <= endYear; year++) {
-            // Add year marker
+            // Add year marker at the start of each year
             const yearMarker = document.createElement('div');
             yearMarker.className = 'year-marker';
-            const position = ((year - startYear) / (endYear - startYear)) * 100;
+            const position = ((year - startYear) / totalYears) * 100;
             yearMarker.style.left = `${position}%`;
 
             // Add year label
@@ -184,15 +207,16 @@
 
             yearMarkersContainer.appendChild(yearMarker);
 
-            // Add quarter markers
-            for (let quarter = 1; quarter < 4; quarter++) {
-                const quarterValue = year + (quarter * 0.25);
-                const quarterPosition = ((quarterValue - startYear) / (endYear - startYear)) * 100;
+            // Add quarter markers if not the last year
+            if (year < endYear) {
+                for (let quarter = 1; quarter < 4; quarter++) {
+                    const quarterPosition = ((year - startYear + quarter * 0.25) / totalYears) * 100;
 
-                const quarterMarker = document.createElement('div');
-                quarterMarker.className = 'quarter-marker';
-                quarterMarker.style.left = `${quarterPosition}%`;
-                yearMarkersContainer.appendChild(quarterMarker);
+                    const quarterMarker = document.createElement('div');
+                    quarterMarker.className = 'quarter-marker';
+                    quarterMarker.style.left = `${quarterPosition}%`;
+                    yearMarkersContainer.appendChild(quarterMarker);
+                }
             }
         }
 
@@ -208,14 +232,29 @@
             const chart = document.createElement('div');
             chart.className = 'timeline-chart';
 
+            // Add light grid lines
+            const timelineGrid = document.createElement('div');
+            timelineGrid.className = 'timeline-grid';
+            for (let year = startYear; year <= endYear; year++) {
+                for (let quarter = 0; quarter < 4; quarter++) {
+                    if (year === endYear && quarter > 0) continue;
+                    const position = ((year - startYear + quarter * 0.25) / totalYears) * 100;
+                    const gridLine = document.createElement('div');
+                    gridLine.className = 'grid-line';
+                    gridLine.style.left = `${position}%`;
+                    timelineGrid.appendChild(gridLine);
+                }
+            }
+            chart.appendChild(timelineGrid);
+
             // Add segments
             row.segments.forEach(segment => {
                 const bar = document.createElement('div');
                 bar.className = 'timeline-bar';
 
                 // Calculate position and width with quarter precision
-                const startPosition = ((segment.start - startYear) / (endYear - startYear)) * 100;
-                const width = ((segment.end - segment.start) / (endYear - startYear)) * 100;
+                const startPosition = ((segment.start - startYear) / totalYears) * 100;
+                const width = ((segment.end - segment.start) / totalYears) * 100;
 
                 bar.style.left = startPosition + '%';
                 bar.style.width = width + '%';
