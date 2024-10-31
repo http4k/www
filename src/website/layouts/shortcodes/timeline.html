@@ -64,6 +64,13 @@
                 { start: 2031, end: 2032, type: "Commercial", color: "#ffe69c" }
             ]
         },
+        {
+            title: "http4k 8 (min JDK 29)",
+            segments: [
+                { start: 2029, end: 2031, type: "OSS", color: "#a8d5ff" },
+                { start: 2031, end: 2033, type: "LTS", color: "#ffe69c" }
+            ]
+        },
     ];
 
 </script>
@@ -85,7 +92,7 @@
         }
 
         .timeline-label {
-            width: 100px;
+            width: 150px;
             flex-shrink: 0;
             font-weight: bold;
         }
@@ -110,7 +117,7 @@
 
         .year-markers {
             display: flex;
-            margin-left: 100px;
+            margin-left: 150px;
             margin-bottom: 20px;
             position: relative;
             height: 25px;
@@ -123,11 +130,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            transform: translateX(-50%);
         }
 
         .year-label {
             margin-bottom: 5px;
-            transform: translateX(-50%);
         }
 
         .year-line {
@@ -142,6 +149,7 @@
             height: 4px;
             bottom: 0;
             background-color: #666;
+            transform: translateX(-50%);
         }
 
         .timeline-grid {
@@ -158,6 +166,7 @@
             width: 1px;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.05);
+            transform: translateX(-50%);
         }
     </style>
 </head>
@@ -168,6 +177,7 @@
 </div>
 
 <script>
+    // Your timeline data here
 
     function formatQuarter(year) {
         const wholeYear = Math.floor(year);
@@ -175,7 +185,7 @@
         return `${wholeYear} Q${quarter}`;
     }
 
-    function createTimeline(data, startYear = 2023, endYear = 2031) {
+    function createTimeline(data, startYear = 2023, endYear = 2032) {
         const container = document.getElementById('timeline');
         container.innerHTML = '';
 
