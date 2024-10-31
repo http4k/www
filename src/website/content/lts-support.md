@@ -1,7 +1,7 @@
 ---
 title: Long-Term Support (LTS)
 description: It's important to us that you can rely on http4k for the long term. That's why we offer Long Term Support (LTS) for our releases.
-type: solutions
+type: lts
 email: lts@http4k.org
 highlights:
     -   title: Access to priority support
@@ -40,4 +40,6 @@ Access expert guidance and priority support directly from the creators and maint
 
 Additionally, **http4k LTS**  offers transparency with full access to the codebase and rapid integration of community-driven improvements. Built under a permissive Apache2 license, you can rest assured that your applications comply with industry standards while enjoying the reliability and accountability that **http4k LTS**  support provides. Get in touch to learn more about how **http4k LTS**  can stabilize your development process for the long term.
 
-{{< timeline >}}
+{{< timeline dataSet="Java" >}}
+
+{{< timeline dataSet="http4k LTS" >}}
