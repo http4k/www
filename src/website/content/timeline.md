@@ -1,5 +1,0 @@
----
-title : "Timeline"
-layout: "timeline"
----
-

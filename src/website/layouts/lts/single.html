@@ -9,6 +9,14 @@
         <article>
             {{ .Content }}
 
+            <div>
+                {{ partial "shared/timeline.html" "Java"  }}
+            </div>
+
+            <div>
+                {{ partial "shared/timeline.html" "http4k LTS"  }}
+            </div>
+
             <div class="mt-5 row row-cols-3 row-cols-xl-3 justify-content-center">
                 <a class="btn btn-secondary" href="mailto:{{.Params.email}}"><b>Contact us</b></a>
             </div>
@@ -16,9 +24,11 @@
             <div class="mt-5">
                 {{ partial "shared/highlight.html" .Params.highlights }}
             </div>
+
         </article>
     </main>
 </div>
+
 
 {{ with .Params.faq }}
 <div class="my-5 py-5" style="background-color: #f8f8f8">

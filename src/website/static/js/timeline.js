@@ -40,14 +40,14 @@ const data = {
             title: "4.X (Java 8)",
             segments: [
                 {start: 2023, end: 2023.25, type: "OSS", color: "#a8d5ff"},
-                {start: 2023.25, end: 2027, type: "LTS", color: "#ffe69c"}
+                {start: 2023.25, end: 2025.25, type: "LTS", color: "#ffe69c"}
             ]
         },
         {
             title: "5.X (Java 8)",
             segments: [
-                {start: 2023, end: 2023.75, type: "OSS", color: "#a8d5ff"},
-                {start: 2023.75, end: 2027, type: "LTS", color: "#ffe69c"}
+                {start: 2023, end: 2025, type: "OSS", color: "#a8d5ff"},
+                {start: 2025, end: 2027, type: "LTS", color: "#ffe69c"}
             ]
         },
         {
@@ -68,26 +68,28 @@ const data = {
 }
 
 function createTimeline(title, startYear = 2023, endYear = 2031) {
+    const root = document.getElementById(title);
+    root.innerHTML = ''; // Clear the root element
+
+    // Create container
     const containerDiv = document.createElement('div');
     containerDiv.className = 'timeline-container';
 
+    // Create header
     const headerDiv = document.createElement('div');
     headerDiv.className = 'timeline-header';
     headerDiv.textContent = title;
     containerDiv.appendChild(headerDiv);
 
+    // Create markers container
     const markersDiv = document.createElement('div');
     markersDiv.className = 'year-markers';
     containerDiv.appendChild(markersDiv);
 
+    // Create timeline container
     const timelineDiv = document.createElement('div');
-    timelineDiv.id = title;
+    timelineDiv.className = 'timeline-content';
     containerDiv.appendChild(timelineDiv);
-
-    document.body.appendChild(containerDiv);
-
-    const container = document.getElementById(title);
-    container.innerHTML = '';
 
     // Calculate the total width including the final year
     const totalYears = endYear - startYear;
@@ -174,6 +176,9 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
 
         timelineRow.appendChild(label);
         timelineRow.appendChild(chart);
-        container.appendChild(timelineRow);
+        timelineDiv.appendChild(timelineRow);
     });
+
+    // Append the entire container to the root element
+    root.appendChild(containerDiv);
 }
