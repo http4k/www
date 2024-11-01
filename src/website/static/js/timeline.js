@@ -65,7 +65,7 @@ const data = {
 function formatDate(year) {
     const wholeYear = Math.floor(year);
     const fractionalYear = year - wholeYear;
-    const date = new Date(wholeYear, fractionalYear * 12, 1);
+    const date = new Date(wholeYear, (fractionalYear * 12) +1, 1);
     return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
@@ -100,7 +100,7 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
     // Create header
     const headerDiv = document.createElement('div');
     headerDiv.className = 'timeline-header';
-    headerDiv.textContent = title;
+    headerDiv.innerHTML = "<b>"+title+"</b>";
     containerDiv.appendChild(headerDiv);
 
     // Create markers container
@@ -249,7 +249,7 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
 
     const currentDateLabel = document.createElement('span');
     currentDateLabel.className = 'legend-label';
-    currentDateLabel.textContent = `Current (${formatDate(currentPosition)})`;
+    currentDateLabel.textContent = `Today (${formatDate(currentPosition)})`;
 
     currentDateLegend.appendChild(currentDateLine);
     currentDateLegend.appendChild(currentDateLabel);
