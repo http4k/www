@@ -60,6 +60,25 @@ const data = {
         }
     ]
 }
+
+
+function formatDate(year) {
+    const wholeYear = Math.floor(year);
+    const fractionalYear = year - wholeYear;
+    const date = new Date(wholeYear, fractionalYear * 12, 1);
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+
+function calculateDayPosition(date) {
+    const year = date.getFullYear();
+    const startOfYear = new Date(year, 0, 1);
+    const diff = date - startOfYear;
+    const oneDay = 1000 * 60 * 60 * 24;
+    const dayOfYear = Math.floor(diff / oneDay);
+    const daysInYear = new Date(year, 11, 31).getDate() === 31 ? 366 : 365;
+    return year + (dayOfYear / daysInYear);
+}
+
 function formatQuarter(year) {
     const wholeYear = Math.floor(year);
     const quarter = Math.floor((year - wholeYear) * 4) + 1;
@@ -72,10 +91,7 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
 
     // Calculate current date position
     const now = new Date();
-    const currentYear = now.getFullYear();
-    const currentMonth = now.getMonth();
-    const currentQuarter = Math.floor(currentMonth / 3) / 4;
-    const currentPosition = currentYear + currentQuarter;
+    const currentPosition = calculateDayPosition(now);
 
     // Create container
     const containerDiv = document.createElement('div');
@@ -139,6 +155,7 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
         const dateLine = document.createElement('div');
         dateLine.className = 'current-date-line';
         dateLine.style.left = `${dateLinePosition}%`;
+        dateLine.title = formatDate(currentPosition);
         timelineDiv.appendChild(dateLine);
     }
 
@@ -232,7 +249,7 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
 
     const currentDateLabel = document.createElement('span');
     currentDateLabel.className = 'legend-label';
-    currentDateLabel.textContent = `Current (${formatQuarter(currentPosition)})`;
+    currentDateLabel.textContent = `Current (${formatDate(currentPosition)})`;
 
     currentDateLegend.appendChild(currentDateLine);
     currentDateLegend.appendChild(currentDateLabel);
