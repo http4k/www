@@ -179,6 +179,69 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
         timelineDiv.appendChild(timelineRow);
     });
 
+    // Create legend
+    const legendDiv = document.createElement('div');
+    legendDiv.className = 'timeline-legend';
+
+    // Get unique segment types and colors from the data
+    const legendItems = new Set();
+    data[title].forEach(row => {
+        row.segments.forEach(segment => {
+            legendItems.add(JSON.stringify({type: segment.type, color: segment.color}));
+        });
+    });
+
+    // Create legend items
+    Array.from(legendItems).map(item => JSON.parse(item)).forEach(({type, color}) => {
+        const legendItem = document.createElement('div');
+        legendItem.className = 'legend-item';
+
+        const colorBox = document.createElement('div');
+        colorBox.className = 'legend-color';
+        colorBox.style.backgroundColor = color;
+
+        const label = document.createElement('span');
+        label.className = 'legend-label';
+        label.textContent = type;
+
+        legendItem.appendChild(colorBox);
+        legendItem.appendChild(label);
+        legendDiv.appendChild(legendItem);
+    });
+
+    containerDiv.appendChild(legendDiv);
+
+    // Add styles for legend
+    const style = document.createElement('style');
+    style.textContent = `
+        .timeline-legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        
+        .legend-label {
+            font-size: 14px;
+            color: #666;
+        }
+    `;
+    document.head.appendChild(style);
+
     // Append the entire container to the root element
     root.appendChild(containerDiv);
 }

@@ -42,7 +42,7 @@ Additionally, **http4k LTS**  offers transparency with full access to the codeba
 
 ## LTS Timeline
 
-When considering the timeline for the LTS offering, we have tried to strike a balance between a generous open source and the need for us to upgrade to later base JDK versions of in order to drive the ecosystem forward. We are also commited to providing support using a predictable timeline for our LTS customers, which will be synchronized with the official JDK release and support cycle of LTS versions, but offset by a 3 month window. To put that more visually, this is the timeline for current and future Java LTS releases:
+The timeline for the LTS offering has been designed to strike a balance between a generous open source period and the need for us to take advantage for new language features available in the JDK. We are also commited to providing support using a predictable timeline for our LTS customers, which is synchronized with the official JDK release and support cycle of LTS versions (currently every 2 years), but offset by a 3 month window. To put that more visually, this is the timeline for current and future Java LTS releases:
 
 {{< timeline data="Java" >}}
 
