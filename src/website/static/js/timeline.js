@@ -3,59 +3,59 @@ const data = {
         {
             title: "11",
             segments: [
-                { start: 2023, end: 2025, type: "Public", color: "#a8d5ff" },
-                { start: 2025, end: 2030, type: "Commercial", color: "#ffe69c" }
+                {start: 2023, end: 2025, type: "Public", color: "#a8d5ff"},
+                {start: 2025, end: 2030, type: "Commercial", color: "#ffe69c"}
             ]
         },
         {
             title: "17",
             segments: [
-                { start: 2023, end: 2025, type: "Public", color: "#a8d5ff" },
-                { start: 2025, end: 2030, type: "Commercial", color: "#ffe69c" }
+                {start: 2023, end: 2025, type: "Public", color: "#a8d5ff"},
+                {start: 2025, end: 2030, type: "Commercial", color: "#ffe69c"}
             ]
         },
         {
             title: "21",
             segments: [
-                { start: 2023.75, end: 2028, type: "Public", color: "#a8d5ff" },
-                { start: 2027, end: 2031, type: "Commercial", color: "#ffe69c" }
+                {start: 2023.75, end: 2028, type: "Public", color: "#a8d5ff"},
+                {start: 2027, end: 2031, type: "Commercial", color: "#ffe69c"}
             ]
         },
         {
             title: "25",
             segments: [
-                { start: 2025.75, end: 2030, type: "Public", color: "#a8d5ff" },
-                { start: 2029, end: 2031, type: "Commercial", color: "#ffe69c" }
+                {start: 2025.75, end: 2030, type: "Public", color: "#a8d5ff"},
+                {start: 2029, end: 2031, type: "Commercial", color: "#ffe69c"}
             ]
         }
     ],
-    "http4k LTS": [
+    "http4k": [
         {
             title: "4.X (Java 8)",
             segments: [
-                { start: 2023, end: 2023.25, type: "OSS", color: "#a8d5ff" },
-                { start: 2023.25, end: 2025.25, type: "LTS", color: "#ffe69c" }
+                {start: 2023, end: 2023.25, type: "Open Source", color: "#a8d5ff"},
+                {start: 2023.25, end: 2025.25, type: "LTS", color: "#ffe69c"}
             ]
         },
         {
             title: "5.X (Java 8)",
             segments: [
-                { start: 2023, end: 2025, type: "OSS", color: "#a8d5ff" },
-                { start: 2025, end: 2027, type: "LTS", color: "#ffe69c" }
+                {start: 2023, end: 2025, type: "Open Source", color: "#a8d5ff"},
+                {start: 2025, end: 2027, type: "LTS", color: "#ffe69c"}
             ]
         },
         {
             title: "6.X (Java 21)",
             segments: [
-                { start: 2025, end: 2027, type: "OSS", color: "#a8d5ff" },
-                { start: 2027, end: 2029, type: "LTS", color: "#ffe69c" }
+                {start: 2025, end: 2027, type: "Open Source", color: "#a8d5ff"},
+                {start: 2027, end: 2029, type: "LTS", color: "#ffe69c"}
             ]
         },
         {
             title: "7.X (Java 25)",
             segments: [
-                { start: 2027, end: 2029, type: "OSS", color: "#a8d5ff" },
-                { start: 2029, end: 2031, type: "LTS", color: "#ffe69c" }
+                {start: 2027, end: 2029, type: "Open Source", color: "#a8d5ff"},
+                {start: 2029, end: 2031, type: "LTS", color: "#ffe69c"}
             ]
         }
     ]
@@ -65,8 +65,8 @@ const data = {
 function formatDate(year) {
     const wholeYear = Math.floor(year);
     const fractionalYear = year - wholeYear;
-    const date = new Date(wholeYear, (fractionalYear * 12) +1, 1);
-    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+    const date = new Date(wholeYear, (fractionalYear * 12) + 1, 1);
+    return date.toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'});
 }
 
 function calculateDayPosition(date) {
@@ -100,7 +100,7 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
     // Create header
     const headerDiv = document.createElement('div');
     headerDiv.className = 'timeline-header';
-    headerDiv.innerHTML = "<b>"+title+"</b>";
+    headerDiv.innerHTML = "<b>" + title + " Support</b>";
     containerDiv.appendChild(headerDiv);
 
     // Create markers container
@@ -126,7 +126,7 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
 
         // Add year label
         const yearLabel = document.createElement('div');
-        if(year % 2 === 0){
+        if (year % 2 === 0) {
             yearLabel.className = 'year-label';
         } else {
             yearLabel.className = 'year-label d-none d-md-inline';
@@ -222,12 +222,12 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
     const legendItems = new Set();
     data[title].forEach(row => {
         row.segments.forEach(segment => {
-            legendItems.add(JSON.stringify({ type: segment.type, color: segment.color }));
+            legendItems.add(JSON.stringify({type: segment.type, color: segment.color}));
         });
     });
 
     // Create legend items
-    Array.from(legendItems).map(item => JSON.parse(item)).forEach(({ type, color }) => {
+    Array.from(legendItems).map(item => JSON.parse(item)).forEach(({type, color}) => {
         const legendItem = document.createElement('div');
         legendItem.className = 'legend-item';
 

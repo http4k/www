@@ -46,9 +46,9 @@ The timeline for the LTS offering has been designed to strike a balance between 
 
 {{< timeline data="Java" >}}
 
-Based on the above, the current plan is for http4k LTS versions to have the following open source and commercial support schedule:
+Based on the above, the current plan is for future major http4k versions to have the following Open Source and LTS schedule:
 
-{{< timeline data="http4k LTS" >}}
+{{< timeline data="http4k" >}}
 
 In the case of an intermediate major version upgrade between JDK versions, the previous major version will also immediate start a 24 month support window to ensure that customers have a smooth upgrade path. 
 
