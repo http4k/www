@@ -63,20 +63,15 @@ const data = {
 
 
 function formatDate(year) {
-    const wholeYear = Math.floor(year);
-    const fractionalYear = year - wholeYear;
-    const date = new Date(wholeYear, (fractionalYear * 12) + 1, 1);
-    return date.toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'});
+    return new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric'});
 }
 
 function calculateDayPosition(date) {
-    const year = date.getFullYear();
-    const startOfYear = new Date(year, 0, 1);
+    const startOfYear = new Date(date.getFullYear(), 0, 1);
     const diff = date - startOfYear;
-    const oneDay = 1000 * 60 * 60 * 24;
-    const dayOfYear = Math.floor(diff / oneDay);
-    const daysInYear = new Date(year, 11, 31).getDate() === 31 ? 366 : 365;
-    return year + (dayOfYear / daysInYear);
+    const oneDayInMs = 1000 * 60 * 60 * 24;
+    const dayOfYear = Math.floor(diff / oneDayInMs);
+    return date.getFullYear() + (dayOfYear / 365);
 }
 
 function formatQuarter(year) {
@@ -159,7 +154,7 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
         const dateLine = document.createElement('div');
         dateLine.className = 'current-date-line';
         dateLine.style.left = `${dateLinePosition}%`;
-        dateLine.title = formatDate(currentPosition);
+        dateLine.title = formatDate();
         timelineDiv.appendChild(dateLine);
     }
 
@@ -253,7 +248,7 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
 
     const currentDateLabel = document.createElement('span');
     currentDateLabel.className = 'legend-label';
-    currentDateLabel.textContent = `Today (${formatDate(currentPosition)})`;
+    currentDateLabel.textContent = `Today (${formatDate()})`;
 
     currentDateLegend.appendChild(currentDateLine);
     currentDateLegend.appendChild(currentDateLabel);
