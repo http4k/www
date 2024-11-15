@@ -10,7 +10,7 @@ description: Feature overview of the http4k Connect S3 Storage module
 
 ```kotlin
 dependencies {
-    {{< http4k_connect_bom >}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-connect-storage-s3")
 }
 ```

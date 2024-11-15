@@ -8,7 +8,7 @@ description: Feature overview of the http4k Connect AWS Security Token Service m
 
 ```kotlin
 dependencies {
-    {{< http4k_connect_bom >}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-connect-amazon-sts")
     implementation("org.http4k:http4k-connect-amazon-sts-fake")
 }

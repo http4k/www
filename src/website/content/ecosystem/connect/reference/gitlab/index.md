@@ -15,7 +15,7 @@ The GitLab connector currently provides basic action interfaces.
 
 ```kotlin
 dependencies {
-    {{< http4k_connect_bom >}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-connect-gitlab")
 }
 ```

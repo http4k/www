@@ -8,7 +8,7 @@ description: Feature overview of the http4k Connect AWS AppRunner modules
 
 ```kotlin
 dependencies {
-    {{< http4k_connect_bom >}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-connect-amazon-apprunner")
     implementation("org.http4k:http4k-connect-amazon-apprunner-fake")
 }

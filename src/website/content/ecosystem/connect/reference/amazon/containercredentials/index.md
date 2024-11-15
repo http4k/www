@@ -8,7 +8,7 @@ description: Feature overview of the http4k Connect AWS Container Credentials mo
 
 ```kotlin
 dependencies {
-    {{< http4k_connect_bom >}}
+    {{< http4k_bom >}}
     implementation("org.http4k:http4k-connect-amazon-containercredentials")
     implementation("org.http4k:http4k-connect-amazon-containercredentials-fake")
 }
