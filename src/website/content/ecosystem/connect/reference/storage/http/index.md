@@ -28,4 +28,4 @@ baseStorage.asHttpHandler().asServer(SunHttp(8000)).start()
 
 Then simply use your browser to see the OpenAPI specification at http://localhost:8000:
 
-<img alt="openapi.png" src="openapi.png" width="100%">
+<img class="imageMid" alt="openapi.png" src="openapi.png">
