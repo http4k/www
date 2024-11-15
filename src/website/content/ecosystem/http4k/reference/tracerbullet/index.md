@@ -41,12 +41,12 @@ use it to document HOW our system behaves as well as if it works. Examples of th
 
 And here is an example of a multi-service test and the type of visual documentation that is created:
 
-<img src="./trace_diagram_success.png" alt="trace diagram success">
+<img class="imageMid" src="./trace_diagram_success.png" alt="trace diagram success">
 
 Additionally, in the case of the test failing, the extension still auto-generates the trace diagram for the traffic 
 which did occur - this provides excellent feedback as to where the system went wrong:
 
-<img src="./trace_diagram_failure.png" alt="trace diagram failure">
+<img class="imageMid" src="./trace_diagram_failure.png" alt="trace diagram failure">
 
 One of the best things about the TracerBullet plugin is that it fits in seamlessly with the rest of the http4k stack.
 Once your applications have been designed to send data to the Events stream, just install the plugin and the diagramming
