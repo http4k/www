@@ -5,5 +5,5 @@ ecosystem: http4k Connect
 type: ecosystem
 weight: 2
 image : "/images/logo-connect.png"
-remote: "https://raw.githubusercontent.com/http4k/http4k-connect/refs/heads/master/README.md"
+remote: "https://raw.githubusercontent.com/http4k/http4k/refs/heads/master/connect/README.md"
 ---
