@@ -118,6 +118,11 @@ menus:
       url: /ecosystem/connect/
       parent: ecosystem
       weight: 33
+    - name: ecosystem-changelog
+      title: Changelog
+      url: /ecosystem/changelog/
+      parent: ecosystem
+      weight: 34
 
     - name: solutions
       title: Solutions
