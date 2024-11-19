@@ -40,7 +40,6 @@ tasks {
 
 dependencies {
     testApi(platform("org.http4k:http4k-bom:${project.properties["http4k_version"]}"))
-    testApi(platform("org.http4k:http4k-connect-bom:${project.properties["http4k_version"]}"))
     testApi(platform("dev.forkhandles:forkhandles-bom:_"))
     testApi(platform("org.junit:junit-bom:_"))
 
