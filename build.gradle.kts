@@ -40,6 +40,7 @@ tasks {
 
 dependencies {
     testApi(platform("org.http4k:http4k-bom:${project.properties["http4k_version"]}"))
+    testApi(platform("org.http4k:http4k-connect-bom:${project.properties["http4k_version"]}"))
     testApi(platform("dev.forkhandles:forkhandles-bom:_"))
     testApi(platform("org.junit:junit-bom:_"))
 
@@ -184,8 +185,6 @@ dependencies {
     testApi("org.http4k:http4k-connect-amazon-systemsmanager-fake")
     testApi("org.http4k:http4k-connect-core")
     testApi("org.http4k:http4k-connect-core-fake")
-    testApi("org.http4k:http4k-connect-example")
-    testApi("org.http4k:http4k-connect-example-fake")
     testApi("org.http4k:http4k-connect-github")
     testApi("org.http4k:http4k-connect-github-fake")
     testApi("org.http4k:http4k-connect-gitlab")
