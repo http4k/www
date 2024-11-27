@@ -56,22 +56,22 @@ simply passing it to the relevant `ServerConfig` implementation (in this case `J
 
 ### Feature support
 
-**http4k** provides support for the following server backends:
+**http4k** provides support for the following Server backends:
 
-| Server     | HTTP | WS | SSE | Loom | Notes          |  
-|------------|------|----|-----|------|----------------|
-| Apache     | ✅    | ❌  | ❌   | ❌    |                |
-| Apache 4   | ✅    | ❌  | ❌   | ❌    | Superceded     |
-| Helidon    | ✅    | ✅  | ✅   | ❌    |                |
-| Jetty      | ✅    | ✅  | ✅   | ✅    |                |
-| Jetty 11   | ✅    | ✅  | ✅   | ✅    | Superceded     |
-| Ktor CIO   | ✅    | ❌  | ❌   | ❌    |                |
-| Ktor Netty | ✅    | ❌  | ❌   | ❌    |                |
-| Netty      | ✅    | ❌  | ❌   | ❌    |                |
-| Ratpack    | ✅    | ❌  | ❌   | ❌    |                |
-| SunHttp    | ✅    | ✅  | ✅   | ✅    | Non-production |
-| Undertow   | ✅    | ✅  | ✅   | ❌    |                |
-| Websocket  | ❌    | ✅  | ❌   | ❌    |                |
+| Server     | HTTP | WebSockets | SSE | Virtual Threads | Notes          |  
+|------------|------|------------|-----|-----------------|----------------|
+| Apache     | ✅    | ❌          | ❌   | ❌               |                |
+| Apache 4   | ✅    | ❌          | ❌   | ❌               | Legacy         |
+| Helidon    | ✅    | ✅          | ✅   | ✅               |                |
+| Jetty      | ✅    | ✅          | ✅   | ✅               |                |
+| Jetty 11   | ✅    | ✅          | ✅   | ✅               | Legacy         |
+| Ktor CIO   | ✅    | ❌          | ❌   | ❌               |                |
+| Ktor Netty | ✅    | ❌          | ❌   | ❌               |                |
+| Netty      | ✅    | ❌          | ❌   | ❌               |                |
+| Ratpack    | ✅    | ❌          | ❌   | ❌               |                |
+| SunHttp    | ✅    | ✅          | ✅   | ✅               | Non-production |
+| Undertow   | ✅    | ✅          | ✅   | ❌               |                |
+| Websocket  | ❌    | ✅          | ❌   | ❌               |                |
 
 #### Code
 
