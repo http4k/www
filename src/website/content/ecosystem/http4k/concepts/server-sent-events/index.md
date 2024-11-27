@@ -55,3 +55,4 @@ interface SseRouter {
 ```
 
 Applies the route matching functionality when requests for Sse connections are received by the server.
+

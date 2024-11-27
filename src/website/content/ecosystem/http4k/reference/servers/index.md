@@ -6,12 +6,11 @@ title: Servers
 description: Feature overview of the http4k-server modules, covering Server backends
 ---
 
-
 ### Installation (Gradle)
 
 ```kotlin
 dependencies {
-    {{< http4k_bom >}}
+    { { < http4k_bom > } }
     // Apache v5: 
     implementation("org.http4k:http4k-server-apache")
 
@@ -19,6 +18,9 @@ dependencies {
     implementation("org.http4k:http4k-server-apache4")
 
     // Jetty & JettyLoom: 
+    implementation("org.http4k:http4k-server-jetty")
+
+    // Jetty11 & Jetty11Loom: 
     implementation("org.http4k:http4k-server-jetty")
 
     // Helidon (Loom): 
@@ -38,7 +40,7 @@ dependencies {
 
     // Undertow: 
     implementation("org.http4k:http4k-server-undertow")
-    
+
     // Java WebSocket:
     implementation("org.http4k:http4k-server-websocket")
 
@@ -48,14 +50,39 @@ dependencies {
 ```
 
 ### About
-Server-backend modules provide a consistent API to mount HttpHandlers into the specified container in 1 LOC, by 
+
+Server-backend modules provide a consistent API to mount HttpHandlers into the specified container in 1 LOC, by
 simply passing it to the relevant `ServerConfig` implementation (in this case `Jetty`):
+
+### Feature support
+
+**http4k** provides support for the following server backends:
+
+| Server     | HTTP | WS | SSE | Loom | Notes          |  
+|------------|------|----|-----|------|----------------|
+| Apache     | ✅    | ❌  | ❌   | ❌    |                |
+| Apache 4   | ✅    | ❌  | ❌   | ❌    | Superceded     |
+| Helidon    | ✅    | ✅  | ✅   | ❌    |                |
+| Jetty      | ✅    | ✅  | ✅   | ✅    |                |
+| Jetty 11   | ✅    | ✅  | ✅   | ✅    | Superceded     |
+| Ktor CIO   | ✅    | ❌  | ❌   | ❌    |                |
+| Ktor Netty | ✅    | ❌  | ❌   | ❌    |                |
+| Netty      | ✅    | ❌  | ❌   | ❌    |                |
+| Ratpack    | ✅    | ❌  | ❌   | ❌    |                |
+| SunHttp    | ✅    | ✅  | ✅   | ✅    | Non-production |
+| Undertow   | ✅    | ✅  | ✅   | ❌    |                |
+| Websocket  | ❌    | ✅  | ❌   | ❌    |                |
 
 #### Code
 
 {{< kotlin file="example_http.kt" >}}
 
 ### Customisation
-Each of the server backends implement an interface `ServerConfig`, which is written with sensible defaults for the server in questions, 
-but is also designed to be used as a starting point for tweaking to API user needs. To customize, simply use the relevant `ServerConfig` 
+
+Each of the server backends implement an interface `ServerConfig`, which is written with sensible defaults for the
+server in questions,
+but is also designed to be used as a starting point for tweaking to API user needs. To customize, simply use the
+relevant `ServerConfig`
 class as a starting point and reimplement as required. See the how-to guides for an example of this in use.
+
+
