@@ -3,29 +3,29 @@ const data = {
         {
             title: "11",
             segments: [
-                {start: 2023, end: 2025, type: "Public", color: "#a8d5ff"},
-                {start: 2025, end: 2030, type: "Commercial", color: "#ffe69c"}
+                {start: 2023, end: 2023, type: "Public", color: "#a8d5ff"},
+                {start: 2023, end: 2023.75, type: "Commercial", color: "#ffe69c"}
             ]
         },
         {
             title: "17",
             segments: [
-                {start: 2023, end: 2025, type: "Public", color: "#a8d5ff"},
-                {start: 2025, end: 2030, type: "Commercial", color: "#ffe69c"}
+                {start: 2023, end: 2024.75, type: "Public", color: "#a8d5ff"},
+                {start: 2024.75, end: 2026.75, type: "Commercial", color: "#ffe69c"}
             ]
         },
         {
             title: "21",
             segments: [
-                {start: 2023.75, end: 2028, type: "Public", color: "#a8d5ff"},
-                {start: 2027, end: 2031, type: "Commercial", color: "#ffe69c"}
+                {start: 2023.75, end: 2026.75, type: "Public", color: "#a8d5ff"},
+                {start: 2026.75, end: 2028.75, type: "Commercial", color: "#ffe69c"}
             ]
         },
         {
             title: "25",
             segments: [
-                {start: 2025.75, end: 2030, type: "Public", color: "#a8d5ff"},
-                {start: 2029, end: 2031, type: "Commercial", color: "#ffe69c"}
+                {start: 2026.75, end: 2029.75, type: "Public", color: "#a8d5ff"},
+                {start: 2029.75, end: 2031, type: "Commercial", color: "#ffe69c"}
             ]
         }
     ],
