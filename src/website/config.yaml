@@ -27,7 +27,7 @@ params:
     - "images/hero-image.webp"
 
   versions:
-    http4k: "5.36.0.0"
+    http4k: "5.37.0.0"
     connect: "5.26.0.2"
 
   favicons:
