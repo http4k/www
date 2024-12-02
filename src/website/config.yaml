@@ -132,9 +132,9 @@ menus:
       url: /solutions/
       parent: solutions
       weight: 41
-    - name: solutions-lts
-      title: LTS Support
-      url: /lts-support/
+    - name: solutions-enterprise
+      title: Enterprise Edition
+      url: /enterprise/
       parent: solutions
       weight: 42
     - name: solutions-consulting

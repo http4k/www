@@ -33,29 +33,29 @@ const data = {
         {
             title: "4.X (Java 8)",
             segments: [
-                {start: 2023, end: 2023.25, type: "Open Source", color: "#a8d5ff"},
-                {start: 2023.25, end: 2025.25, type: "LTS", color: "#ffe69c"}
+                {start: 2023, end: 2023.25, type: "Community", color: "#a8d5ff"},
+                {start: 2023.25, end: 2025.25, type: "EE / LTS", color: "#ffe69c"}
             ]
         },
         {
             title: "5.X (Java 8)",
             segments: [
-                {start: 2023, end: 2025, type: "Open Source", color: "#a8d5ff"},
-                {start: 2025, end: 2027, type: "LTS", color: "#ffe69c"}
+                {start: 2023, end: 2025, type: "Community", color: "#a8d5ff"},
+                {start: 2025, end: 2027, type: "EE / LTS", color: "#ffe69c"}
             ]
         },
         {
             title: "6.X (Java 21)",
             segments: [
-                {start: 2025, end: 2027, type: "Open Source", color: "#a8d5ff"},
-                {start: 2027, end: 2029, type: "LTS", color: "#ffe69c"}
+                {start: 2025, end: 2027, type: "Community", color: "#a8d5ff"},
+                {start: 2027, end: 2029, type: "EE / LTS", color: "#ffe69c"}
             ]
         },
         {
             title: "7.X (Java 25)",
             segments: [
-                {start: 2027, end: 2029, type: "Open Source", color: "#a8d5ff"},
-                {start: 2029, end: 2031, type: "LTS", color: "#ffe69c"}
+                {start: 2027, end: 2029, type: "Community", color: "#a8d5ff"},
+                {start: 2029, end: 2031, type: "EE / LTS", color: "#ffe69c"}
             ]
         }
     ]

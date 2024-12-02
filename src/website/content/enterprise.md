@@ -1,8 +1,10 @@
 ---
-title: Long-Term Support (LTS)
-description: It's important to us that you can rely on http4k for the long term. That's why we offer Long Term Support (LTS) for our releases.
+title: http4k Enterprise Edition
+description: It's important to us that you can rely on http4k for the long term. That's why we offer http4k EE with it;s Long-Term Support (LTS) programme.
 type: solutions
-email: lts@http4k.org here
+email: enterpise@http4k.org here
+aliases:
+    - /lts-support
 highlights:
     -   title: Access to priority support
         description: The http4k team are here on Slack and Email to guide you through any issues or questions.
@@ -46,7 +48,7 @@ The timeline for the LTS offering has been designed to strike a balance between 
 
 {{< timeline data="Java" >}}
 
-Based on the above, the current plan is for future major http4k versions to have the following Open Source and LTS schedule:
+Based on the above, the current plan is for future major http4k versions to have the following Community and Enterprise Edition (LTS) schedule:
 
 {{< timeline data="http4k" >}}
 
