@@ -1,13 +1,28 @@
 <style>
-    .pricing-table {
-        font-family: system-ui, -apple-system, sans-serif;
-        width: 75%;
-        max-width: 75%;
-        margin: 2rem auto;
-        border-collapse: collapse;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    @media (max-width: 998.98px) {
+        .pricing-table {
+            font-family: system-ui, -apple-system, sans-serif;
+            width: 95%;
+            max-width: 95%;
+            margin: 0.25rem auto;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    @media (min-width: 998.98px) {
+        .pricing-table {
+            font-family: system-ui, -apple-system, sans-serif;
+            width: 75%;
+            max-width: 75%;
+            margin: 2rem auto;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     }
 
     .pricing-table th {
