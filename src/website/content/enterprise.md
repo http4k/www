@@ -13,23 +13,21 @@ highlights:
         description: The http4k team are here on Slack and Email to guide you through any issues or questions.
         icon: "/images/faq.svg"
     -   title: Source code access
-        description: Full access to the LTS http4k codebase for transparency and auditing.
+        description: Full access to the LTS editions of the http4k codebase for transparency and auditing.
         icon: "/images/connections.svg"
 faq:
-    -   question: "What is the http4k LTS programme?"
-        answer: The LTS programme is a service provided by the http4k team to ensure that your applications remain stable and secure over the long term, enabling peace of mind for organisations that rely on http4k for their critical infrastructure.
-    -   question: "How long are http4k LTS versions available for?"
-        answer: As standard, the open source (OSS) version of http4k releases major versions of the ecosystem on a delayed cadence
-            which is aligned with major release dates of the JDK. As a new major http4k OSS version is released, the previous major version enters the http4k LTS programme. See the schedule below for the current timeline. 
-    -   question: "How will my teams access the LTS versions?"
-        answer: The LTS versions of http4k are hosted in a private Maven repository. To access the these assets, you will
-            need to sign up for the LTS programme and will be supplied with the necessary credentials.
-    -   question: "What types of updates are included with in the http4k LTS programme?"
-        answer: LTS version of http4k receive security and necessary bug fixes for community identified bugs. This ensures that your applications remain secure and fully functional without needing frequent upgrades.
-    -   question: "What type of support is available in http4k LTS"
+    -   question: "How long are LTS versions of http4k EE available for?"
+        answer: As standard, the open source http4k CE of http4k releases major versions of the ecosystem on a delayed cadence
+            which is aligned with major release dates of the JDK every 2 years. As a new major http4k CE version is released, the previous major version enters the http4k EE LTS programme for 2 years. See the schedule above for the current timeline. 
+    -   question: "How will my teams access the LTS binaries of http4k EE?"
+        answer: The LTS versions of http4k EE are hosted in a private Maven repository. To access the these assets, you will
+            need to sign up for the http4k Enterprise Subscription and will be supplied with the necessary credentials.
+    -   question: "What types of updates are included with in the http4k EE LTS offering?"
+        answer: LTS version of http4k EE receive security and necessary bug fixes for community identified bugs. This ensures that your applications remain secure and fully functional without needing frequent upgrades.
+    -   question: "What type of support is available for http4k EE subscribers"
         answer: After signup you will be given access to both email and Slack-based support channels. The http4k team is there
             to help you with any issues or questions you may have regarding the LTS version of http4k libraries.
-    -   question: "Can I request specialised features for the http4k LTS version?"
+    -   question: "Can I request specialised features for the http4k EE LTS versions?"
         answer: For stability reasons, the LTS version of http4k is focused on security and bug fixes so new features are
             not considered for these versions. If you have a particular feature request, please get in touch to discuss
             it with the team. We will then prioritise it for inclusion in the mainline release or can work with you to
