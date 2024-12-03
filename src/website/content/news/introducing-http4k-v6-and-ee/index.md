@@ -2,7 +2,6 @@
 title: http4k v6 and beyond! Introducing Enterprise Edition and Long-Term Support
 description:  There's a new major http4k release! Read about all the new things the team have been working on for http4k v6.
 date: 2024-12-03
-draft: true
 ---
 
 #### TL;DR
