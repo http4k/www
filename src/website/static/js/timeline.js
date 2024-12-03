@@ -124,7 +124,7 @@ function createTimeline(title, startYear = 2023, endYear = 2031) {
         if (year % 2 === 0) {
             yearLabel.className = 'year-label';
         } else {
-            yearLabel.className = 'year-label d-none d-md-inline';
+            yearLabel.className = 'year-label odd-year d-none d-md-inline';
         }
         yearLabel.textContent = year;
         yearMarker.appendChild(yearLabel);

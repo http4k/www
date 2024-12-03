@@ -319,6 +319,12 @@ td, th {
     height: 40px;
 }
 
+@media (max-width: 998.98px) {
+    .odd-year {
+        display: none;
+    }
+}
+
 .timeline-label {
     width: 150px;
     flex-shrink: 0;
