@@ -9,7 +9,7 @@ draft: true
 - http4k will release its next major version (6) in January 2025
 - http4k Community Edition (CE) - will continue to be released under the existing Apache 2 license.
 - From v6, http4k CE will set its minimum supported target JVM version to 21.
-- We are introducing the http4k Enterprise Edition (EE) subscription under a new commercial license, which will provide LTS support for http4k v5 and older JVMs as well as enterprise support features.
+- We are introducing the [http4k Enterprise Edition (EE)](/enterprise) subscription under a new commercial license, which will provide LTS support for http4k v5 and older JVMs as well as enterprise support features.
 
 #### A brief history of time
 
@@ -52,9 +52,9 @@ In future, subscribers to http4k EE will also automatically gain access to **pla
 
 The aim of http4k EE is to provide a level of support to major releases of the toolkit through a commercial offering and strengthen the investment in the evolution of the http4k ecosystem as a whole.
 
-If your company is interested in longer-term access to http4k version 5 or want to take advantage of the peace-of-mind benefits provided by http4k EE, **please get in touch with the team to arrange a call**, either by reaching out on the Kotlin Slack instance or through our email channels at enterprise@http4k.org
+If your company is interested in longer-term access to http4k version 5 or want to take advantage of the peace-of-mind benefits provided by http4k EE, **please get in touch with the team to arrange a call**, either by reaching out on the Kotlin Slack instance or through our email channels at enterprise@http4k.org. You can also read more about the offering on the [http4k Enterprise Edition](/enterprise) page.
 
-In the meantime, the team will be busy paving the way for the next chapter in the whole http4k ecosystem. Please join us in the [Kotlin Slack](https://kotlinlang.slack.com) to discuss the upcoming changes and to provide feedback on the roadmap.
+In the meantime, the team will be busy paving the way for the next chapter in the whole http4k ecosystem. Please join us in the [Kotlin Slack](https://kotlinlang.slack.com) to discuss the upcoming changes and to provide feedback on the roadmap, 
 
 Get ready for version 6 in January!
 
