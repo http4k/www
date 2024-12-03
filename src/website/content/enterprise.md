@@ -2,7 +2,7 @@
 title: http4k Enterprise Edition
 description: It's important to us that you can rely on http4k for the long term. That's why we offer http4k EE with it;s Long-Term Support (LTS) programme.
 type: solutions
-email: enterpise@http4k.org here
+email: enterpise@http4k.org
 aliases:
     - /lts-support
 highlights:
@@ -34,7 +34,13 @@ faq:
             provide a custom build.
 ---
 
-The **http4k Enterprise Edition (EE)** subscription delivers long-term stability and support for organisations running critical production workloads using http4k technologies. The 
+The **http4k Enterprise Edition (EE)** subscription delivers long-term stability and support for organisations running critical production workloads using http4k technologies.
+
+## At a Glance
+
+{{< features >}}
+
+## In detail
 
 #### Priority Support
 Access expert guidance and **priority support** directly from the creators and maintainers of http4k. With dedicated channels, including email and Slack, you’ll get **fast resolution** to any issues or questions, backed by our deep knowledge of the http4k ecosystem. Whether it’s compatibility updates or bug fixes, our team ensures that your http4k deployment remains fully integrated with the broader Kotlin and JVM environments.
@@ -42,7 +48,7 @@ Access expert guidance and **priority support** directly from the creators and m
 #### Premium Integrations
 Get exclusive access to our **premium integrations** as they come online, built from years of successfully delivering complex systems with http4k. These expert-designed, proprietary extensions reflect real-world requirements and enterprise patterns, enhancing http4k's capabilities with thoroughly tested integrations available only through our private Maven repository.
 
-#### LTS Programme
+#### Long Term Support 
 Enjoy peace-of-mind with **Long-Term Support (LTS)** versions of http4k. Our LTS version provides 24 months of guaranteed maintenance and updates for a stable release, ensuring your projects remain secure and fully functional without needing frequent upgrades. Additionally, our priority support extends up to 24 months, meaning **http4k LTS** is your key to maintaining focus on feature delivery while ensuring your http4k applications are future-proof.
 
 Additionally, **http4k EE**  offers transparency with full access to the codebase and rapid integration of community-driven improvements. Built under a permissive Apache2 license, you can rest assured that your applications comply with industry standards while enjoying the reliability and accountability that **http4k LTS**  support provides. Get in touch to learn more about how **http4k LTS**  can stabilize your development process for the long term.

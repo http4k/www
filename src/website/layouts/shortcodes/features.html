@@ -1,0 +1,121 @@
+<style>
+    .pricing-table {
+        font-family: system-ui, -apple-system, sans-serif;
+        width: 100%;
+        max-width: 800px;
+        margin: 2rem auto;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .pricing-table th {
+        background-color: #f3f4f6;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .pricing-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .pricing-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .feature-name {
+        font-weight: 500;
+    }
+
+    .check {
+        color: #10b981;
+        font-weight: bold;
+        padding-right: 0.5em;
+    }
+
+    .x-mark {
+        color: #ef4444;
+    }
+
+    .contact-link {
+        display: block;
+        text-align: center;
+        margin: 2rem auto;
+        padding: 0.75rem 1.5rem;
+        background-color: #3b82f6;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 500;
+        width: fit-content;
+    }
+
+    .contact-link:hover {
+        background-color: #2563eb;
+    }
+
+    .edition-header {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+</style>
+<table class="pricing-table">
+    <thead>
+    <tr>
+        <th>Feature</th>
+        <th class="edition-header">Community Edition (v6)</th>
+        <th class="edition-header">Enterprise Edition (v4-5)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="feature-name">Minimum Java version</td>
+        <td>Java 21</td>
+        <td>Java 8</td>
+    </tr>
+    <tr>
+        <td class="feature-name">License</td>
+        <td><span class="check">✓</span>Apache 2</td>
+        <td><span class="check">✓</span>http4k EE Commercial</td>
+    </tr>
+    <tr>
+        <td class="feature-name">Source code access</td>
+        <td><span class="check">✓</span>http4k GitHub</td>
+        <td><span class="check">✓</span>Private LTS GitHub</td>
+    </tr>
+    <tr>
+        <td class="feature-name">Binary access</td>
+        <td><span class="check">✓</span>Maven Central</td>
+        <td><span class="check">✓</span>Private Maven Repo</td>
+    </tr>
+    <tr>
+        <td class="feature-name">Priority Updates</td>
+        <td><span class="x-mark">✕</span></td>
+        <td><span class="check">✓</span>Security patches, bug fixes</td>
+    </tr>
+    <tr>
+        <td class="feature-name">Support updates</td>
+        <td><span class="x-mark">✕</span></td>
+        <td><span class="check">✓</span> 24 months</td>
+    </tr>
+    <tr>
+        <td class="feature-name">Dedicated Support</td>
+        <td><span class="x-mark">✕</span></td>
+        <td><span class="check">✓</span>Dedicated Email, Slack</td>
+    </tr>
+    <tr>
+        <td class="feature-name">Premium modules</td>
+        <td><span class="x-mark">✕</span></td>
+        <td><span class="check">✓</span></td>
+    </tr>
+    <tr>
+        <td class="feature-name">License reporting</td>
+        <td><span class="x-mark">✕</span></td>
+        <td><span class="check">✓</span></td>
+    </tr>
+    </tbody>
+</table>
+
+{{ partial "shared/contact-us.html" }}
