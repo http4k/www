@@ -6,7 +6,7 @@
             <h1>{{ .Title }}</h1>
         </header>
         <article>
-            <h5>{{ .Params.date | time.Format "January 2006" }} / the http4k team</h5>
+            <h5 style="text-align: right;">{{ .Params.date | time.Format "January 2006" }} / the http4k team</h5>
             <div>
                 {{ .Content }}
             </div>
