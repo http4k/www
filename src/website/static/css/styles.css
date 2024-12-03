@@ -104,14 +104,14 @@
 @media (min-width: 998.98px) {
     .page-content {
         padding: 20px;
-        width: 80%;
+        width: 70%;
     }
 }
 
 @media (max-width: 998.98px) {
     .page-content {
-        padding: 20px;
-        width: 85%;
+        padding: 0.5em;
+        width: 75%;
     }
 }
 
