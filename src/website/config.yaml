@@ -148,7 +148,7 @@ menus:
       parent: solutions
       weight: 44
     - name: solutions-slack
-      title: LTS Slack
+      title: Private Slack
       url: "http://http4k.slack.com/"
       parent: solutions
       weight: 45

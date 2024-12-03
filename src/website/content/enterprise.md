@@ -6,12 +6,12 @@ email: enterpise@http4k.org here
 aliases:
     - /lts-support
 highlights:
-    -   title: Access to priority support
-        description: The http4k team are here on Slack and Email to guide you through any issues or questions.
-        icon: "/images/faq.svg"
     -   title: Up to 24 months peace of mind
         description: Guaranteed security and bug updates for the stable release channel, allowing you to focus on feature delivery.
         icon: "/images/footprint.svg"
+    -   title: Access to priority support
+        description: The http4k team are here on Slack and Email to guide you through any issues or questions.
+        icon: "/images/faq.svg"
     -   title: Source code access
         description: Full access to the LTS http4k codebase for transparency and auditing.
         icon: "/images/connections.svg"
@@ -36,15 +36,22 @@ faq:
             provide a custom build.
 ---
 
-Enjoy long-term stability and support with **http4k’s Long-Term Support (LTS)** offering, designed for organisations that rely on http4k for their critical applications. Our LTS version of http4k provides guaranteed maintenance and updates for a stable release, ensuring your projects remain secure and fully functional without needing frequent upgrades. Additionally, our priority support extends up to 24 months, meaning **http4k LTS** is your key to maintaining focus on feature delivery while ensuring your http4k applications are future-proof.
+The **http4k Enterprise Edition (EE)** subscription delivers long-term stability and support for organisations running critical production workloads using http4k technologies. The 
 
-Access expert guidance and priority support directly from the creators and maintainers of http4k. With dedicated channels, including email and Slack, you’ll get fast resolutions to any issues or questions, backed by our deep knowledge of the http4k ecosystem. Whether it’s compatibility updates or bug fixes, our team ensures that your http4k deployment remains fully integrated with the broader Kotlin and JVM environments.
+#### Priority Support
+Access expert guidance and **priority support** directly from the creators and maintainers of http4k. With dedicated channels, including email and Slack, you’ll get **fast resolution** to any issues or questions, backed by our deep knowledge of the http4k ecosystem. Whether it’s compatibility updates or bug fixes, our team ensures that your http4k deployment remains fully integrated with the broader Kotlin and JVM environments.
 
-Additionally, **http4k LTS**  offers transparency with full access to the codebase and rapid integration of community-driven improvements. Built under a permissive Apache2 license, you can rest assured that your applications comply with industry standards while enjoying the reliability and accountability that **http4k LTS**  support provides. Get in touch to learn more about how **http4k LTS**  can stabilize your development process for the long term.
+#### Premium Integrations
+Get exclusive access to our **premium integrations** as they come online, built from years of successfully delivering complex systems with http4k. These expert-designed, proprietary extensions reflect real-world requirements and enterprise patterns, enhancing http4k's capabilities with thoroughly tested integrations available only through our private Maven repository.
 
-## LTS Timeline
+#### LTS Programme
+Enjoy peace-of-mind with **Long-Term Support (LTS)** versions of http4k. Our LTS version provides 24 months of guaranteed maintenance and updates for a stable release, ensuring your projects remain secure and fully functional without needing frequent upgrades. Additionally, our priority support extends up to 24 months, meaning **http4k LTS** is your key to maintaining focus on feature delivery while ensuring your http4k applications are future-proof.
 
-The timeline for the LTS offering has been designed to strike a balance between a generous open source period and the need for us to take advantage for new language features available in the JDK. We are also commited to providing support using a predictable timeline for our LTS customers, which is synchronized with the official JDK release and support cycle of LTS versions (currently every 2 years), but offset by a 3 month window. To put that more visually, this is the timeline for current and future Java LTS releases:
+Additionally, **http4k EE**  offers transparency with full access to the codebase and rapid integration of community-driven improvements. Built under a permissive Apache2 license, you can rest assured that your applications comply with industry standards while enjoying the reliability and accountability that **http4k LTS**  support provides. Get in touch to learn more about how **http4k LTS**  can stabilize your development process for the long term.
+
+## http4k EE Timeline
+
+The timeline for http4k EE's LTS has been designed to strike a balance between a generous open source period and the need for us to take advantage for new language features available in the JDK. We are also commited to providing support using a predictable timeline for our LTS customers, which is synchronized with the official JDK release and support cycle of LTS versions (currently every 2 years), but offset by a 3 month window. To put that more visually, this is the timeline for current and future Java LTS releases:
 
 {{< timeline data="Java" >}}
 
@@ -54,4 +61,4 @@ Based on the above, the current plan is for future major http4k versions to have
 
 In the case of an intermediate major version upgrade between JDK versions, the previous major version will also immediate start a 24 month support window to ensure that customers have a smooth upgrade path. 
 
-If you have any questions about the LTS programme, or long-term support requirements outside of the above schedule, please get in touch using the below contact link and we will endeavour to assist.
+If you have any questions about the http4k EE subscription, or long-term support requirements outside of the above schedule, please get in touch using the below contact link and we will endeavour to assist.

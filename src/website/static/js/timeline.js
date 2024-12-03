@@ -1,28 +1,28 @@
 const data = {
     "Java": [
         {
-            title: "11",
+            title: "Java 11",
             segments: [
                 {start: 2023, end: 2023, type: "Public", color: "#a8d5ff"},
                 {start: 2023, end: 2023.75, type: "Commercial", color: "#ffe69c"}
             ]
         },
         {
-            title: "17",
+            title: "Java 17",
             segments: [
                 {start: 2023, end: 2024.75, type: "Public", color: "#a8d5ff"},
                 {start: 2024.75, end: 2026.75, type: "Commercial", color: "#ffe69c"}
             ]
         },
         {
-            title: "21",
+            title: "Java 21",
             segments: [
                 {start: 2023.75, end: 2026.75, type: "Public", color: "#a8d5ff"},
                 {start: 2026.75, end: 2028.75, type: "Commercial", color: "#ffe69c"}
             ]
         },
         {
-            title: "25",
+            title: "Java 25",
             segments: [
                 {start: 2026.75, end: 2029.75, type: "Public", color: "#a8d5ff"},
                 {start: 2029.75, end: 2031, type: "Commercial", color: "#ffe69c"}
@@ -31,14 +31,14 @@ const data = {
     ],
     "http4k": [
         {
-            title: "4.X (Java 8)",
+            title: "4.X (Java 8-20)",
             segments: [
                 {start: 2023, end: 2023.25, type: "Community", color: "#a8d5ff"},
                 {start: 2023.25, end: 2025.25, type: "EE / LTS", color: "#ffe69c"}
             ]
         },
         {
-            title: "5.X (Java 8)",
+            title: "5.X (Java 8-20)",
             segments: [
                 {start: 2023, end: 2025, type: "Community", color: "#a8d5ff"},
                 {start: 2025, end: 2027, type: "EE / LTS", color: "#ffe69c"}
