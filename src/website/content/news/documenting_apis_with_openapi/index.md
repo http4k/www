@@ -2,6 +2,7 @@
 title: Documenting http4k APIs with OpenApi3
 description: An overview of the OpenApi3 support available in the http4k library.
 date: 2019-05-01
+image: openapi.png
 ---
 
 This post describes **http4k** support for fully describing and securing HTTP endpoints using version 3 of the **[OpenApi]** specification, providing typesafe JSON-schema documentation for messages and automatically validating incoming HTTP traffic.

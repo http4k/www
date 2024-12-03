@@ -2,6 +2,7 @@
 title: http4k Toolbox - Guns for show, knives for a pro
 description: An introduction to the http4k Toolbox website and CLI.
 date: 2020-11-01
+image: guns.jpg
 ---
 
 <img class="imageMid" src="./guns.jpg" alt="lock stock: guns for show"/>
@@ -13,6 +14,7 @@ These tools are mostly based around code generation of some sort or another and 
 A lot of the credit for the creation of the Toolbox has to go to the amazing [Albert Latacz](https://github.com/albertlatacz), who not only created large parts of the functionality, but also investigated build and deployment options.
 
 <hr/>
+
 #### Web toolbox
 <img class="imageMid" src="./toolbox.png" alt="http4k toolbox"/>
 
@@ -21,16 +23,19 @@ The Toolbox is now the main starting point for working with http4k The main conc
 The http4k Toolbox is available @ [toolbox.http4k.org][Toolbox]
 
 <hr/>
+
 #### CLI
 <img class="imageMid" src="./cli.png" alt="toolbox CLI"/>
 
 The http4k team are massive fans of automation, so we also wanted to enable teams to use the functions of the [Toolbox] in a shell. Hence, we decided to also make a CLI binary for the Toolbox, which is available to install via both [Brew](https://brew.sh) and [SDKMan](https://sdkman.io). You can find instructions about how to install it on the [Toolbox homepage](https://toolbox.http4k.org). 
 
 <hr/>
+
 #### Toolbox functionality guide
 Where we introduce each of the functions of the [Toolbox], with a rationale and a bit of background on each.
 
 <hr/>
+
 ##### Generating a project
 <img class="imageMid" src="./project.png" alt="project generator"/>
 
@@ -45,6 +50,7 @@ As well as downloading the project, you can also browse the generated code in a 
 Try out the project generator [here](https://toolbox.http4k.org/project).
 
 <hr/>
+
 ##### OpenAPI3 Server, Client, & Models
 <img class="imageMid" src="./openapi.png" alt="Openapi"/>
 
@@ -61,6 +67,7 @@ As well as downloading the files as a ZIP archive, you can also browse the gener
 The OpenAPI generator is available [here](https://toolbox.http4k.org/openapi).
 
 <hr/>
+
 ##### Generating Data Classes from JSON, XML and YAML
 Most of the time when working with API models in http4k, you have example messages in the native format which need to be auto-marshalled into Kotlin using Jackson or one of the other supported format libraries. This results in a very boring exercise in conversion, so we wrote this [converter](https://toolbox.http4k.org/dataclass) that will generate Data Classes to support reading/writing of JSON, XML and YAML messages. For example, this JSON...
 
@@ -87,6 +94,7 @@ data class Base(val jsonRoot: JsonRoot?)
 Convert your JSON/XML/Yaml [here](https://toolbox.http4k.org/dataclass).
 
 <hr/>
+
 ##### HTTP -> HTTP message builder
 Occasionally you have the raw version of an HTTP message and want to create an identical http4k HTTP message object from it. This [tool](https://toolbox.http4k.org/http) converts a raw message to the syntax. For example: 
 
@@ -114,6 +122,7 @@ fun request(): Request = Request(Method.POST, "/example/index.html")
 Build HTTP messages from raw HTTP [here](https://toolbox.http4k.org/http).
 
 <hr/>
+
 ##### IntelliJ Live Templates
 
 One of our most favourite power features of IntelliJ is Live Templates, which allow you to add code generation macros to your IDE and activate them with a shortcut + tab. For http4k development, we got bored with typing things longhand, so decided to create a bunch of templates and share them with our favourite people (our users!). Even better, anyone can use our shortcuts in their IDE by adding a read-only "Settings Repository". 
@@ -123,6 +132,7 @@ One of our most favourite power features of IntelliJ is Live Templates, which al
 Install the http4k live templates (and save your fingers!) by following the instructions at the bottom of [this page](https://toolbox.http4k.org/).
 
 <hr/>
+
 #### Wrapping up
 We hope you'll find the various tools that we've built into the [Toolbox] useful to either get started with http4k or to make your life even more productive. As ever, let us know how we're doing, and if there are any other tools that you think might be helpful then we'd love to hear about them!
 

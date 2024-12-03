@@ -2,11 +2,13 @@
 title: http4k v4 - 17 platforms and counting...
 description: There's a new major http4k release! Read about all the new stuff the team have been working on for http4k v4.
 date: 2021-01-01
+image: backends.png
 ---
 
 Well, at last it's here - after 3 years - http4k v4! Following on from the [retrospective](/news/retrospective_v3/) that we did on version 3, we've been busy polishing, tidying up the edges, and pushing out a bunch of changes to make the project sparkle. Ready? Then let's dive into the good stuff that's been going on at http4k Towers.
 
 <hr/>
+
 #### Four digits good, three digits bad. The new http4k versioning scheme
 Ah yes - versioning - everyone's favourite topic. Part of the reason that http4k v3 has been around so long is that we've somewhat been abusing the [Semantic versioning](https://semver.org/) system, something which we've been unhappy with. Here's how it should work:
 
@@ -33,6 +35,7 @@ D = We broke something by accident. (Bug)
 As you can see, for our users we'll be concentrating on changes in numbers A (occasional) and C (standard).
 
 <hr/>
+
 #### "Platforms, Guv! Thousands of 'em!" (well, more than a few...)
 
 <img class="imageMid" src="./backends.png" alt="http4k backends"/>
@@ -57,6 +60,7 @@ class MyServerlessFunction : GoogleCloudFunction(app)
 The even better news is that testing your http4k apps locally (regardless of platform) is simple - and as ever there's no magic involved - just test them entirely in-memory, or bind them to a standard backend Server.
 
 <hr/>
+
 #### http4k Toolbox: your new Swiss Army Knife
 
 <img class="imageMid" src="./toolbox.png" alt="toolbox"/>
@@ -64,6 +68,7 @@ The even better news is that testing your http4k apps locally (regardless of pla
 As documented in the [Toolbox announcement post](/news/toolbox/), we've been busy consolidating a bunch of handy tools for generating code to work with http4k projects, and we christened this the **http4k Toolbox** and it's available in both [online](https://toolbox.http4k.org) and a CLI flavours (available from Brew and SDKMan!). From [Project Generation](https://toolbox.http4k.org/project) to our own more sophisticated [OpenAPI3 Generator](https://toolbox.http4k.org/openapi), we hope that this become an essential tool in every **http4k** developer's pocket.
 
 <hr/>
+
 #### Infinirouting
 
 <img class="imageMid" src="./routing.png" alt="http4k routing"/>
@@ -84,6 +89,7 @@ val app = routes("/{name}" bind POST to (
 So after a lot of clattering and banging of heads, we cracked it - and in doing so managed to rewrite the entire of the http4k routing layer in terms of these predicate `Routers`. It's really neat, infinitely(ish) nestable, and makes us feel just a little bit smug for getting it working.
 
 <hr/>
+
 #### Graph power
 <img class="imageMid" src="./graphql.png" alt="http4k graphql"/>
 
@@ -92,6 +98,7 @@ Traditionally, http4k has concentrated on providing routing for REST-style APIs.
 Not wanting our users to miss out on anything, we've added support for simply integrating http4k with the official Java implementation of the library, [GraphQL-Java](https://www.graphql-java.com/). This module allows you to both serve and consume GQL APIs, and as per tradition allows you to test your APIs entirely in-memory making for super-fast test suites.
 
 <hr/>
+
 #### OpenTelemetry: Monitor all the things!
 
 <img class="imageMid" src="./opentelemetry.png" alt="open telemetry"/>
@@ -104,10 +111,12 @@ It's a great project run by the CNCF and very well fits in with the [ethos](/ove
 For more docs on how to get it all working, head over to the [docs](/ecosystem/http4k/reference/opentelemetry/).
 
 <hr/>
+
 #### Upgrading & library API changes
 Like the neat little worker bunnies we are, we've also taken the opportunity to clean up the http4k source code. All previously deprecated code has been removed, leaving the codebase nice and tidy. If you are upgrading, the best idea is to first upgrade to the last v3 version (v3.285.2), deal with any existing deprecations in place, then simply upgrade again to v4.0.0.0.
 
 <hr/>
+
 #### http4k.org
 One of the things that our users feedback about was that the structure of the docs in [http4k.org](https://http4k.org) could be improved, so we've begun overhauling the site to simplify the content. Expect this to be a continual improvement thing, but on the whole the content will be organised as follows:
 
@@ -118,6 +127,7 @@ One of the things that our users feedback about was that the structure of the do
 - Additionally, the [Examples repo](https://github.com/http4k/examples) hosts fully self-contained, runnable projects that can be used as a baseline for particular features - eg. how to write and run an [app on Quarkus](https://github.com/http4k/examples/tree/master/quarkus) or use the cloudnative module to enable [typesafe configuration](https://github.com/http4k/examples/tree/master/typesafe-configuration)
 
 <hr/>
+
 #### Support & training
 
 There has been a decent amount of interest lately from our users to come to us to ask for advice about how we can help teams get the best out of http4k. In that vein, we have also been busy building training materials which we can deliver to teams either new to (or experienced in) the library, or to visit teams (currently virtually) to help them out. 
@@ -125,6 +135,7 @@ There has been a decent amount of interest lately from our users to come to us t
 If your team would also like to take advantage of our experience in delivering projects using http4k, then please visit the [support/training](/solutions/) page, reach out and we'd love to see how we can help.
 
 <hr/>
+
 #### http4k Connect - Flyweight 3rd party adapters
 
 <img class="imageMid" src="./connect.png" alt="http4k connect"/>
@@ -148,6 +159,7 @@ Mostly, the existence of the project is has been driven by 2 factors:
 It's pretty hot off the press, but will be receiving a lot of attention over the coming weeks and months, and we'll be documenting the mechanisms in both web and live talks.
 
 <hr/>
+
 #### That's all folks... (for the moment)
 
 We're pretty excited about this release and hope the library will continue to provide powerful tools to make all of our existing (and new!) users' lives easier in creating kick ass and rock solid HTTP applications.

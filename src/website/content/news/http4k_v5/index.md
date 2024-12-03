@@ -2,6 +2,7 @@
 title: http4k Platform v5 - New Servers, Loom, TracerBullet, OpenAI plugin SDK and more
 description:  There's a new major http4k release! Read about all the new things the team have been working on for http4k v5.
 date: 2023-06-01
+image: lego.png
 ---
 
 <img class="imageMid" src="./lego.png" alt="http4k lego"/>

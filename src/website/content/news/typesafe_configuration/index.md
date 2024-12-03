@@ -2,6 +2,7 @@
 title: Add typesafe 12-factor configuration to http4k apps with Environments
 description: An overview of how to configure http4k applications using the http4k-config module
 date: 2021-10-01
+image: image.png
 ---
 
 ### Intro
