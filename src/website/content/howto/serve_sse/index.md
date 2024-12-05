@@ -32,3 +32,5 @@ The simplest possible SSE handler can be mounted as a `SseConsumer` function ont
 Both SSE and Http handlers in **http4k** are routed using a similar path-based API. We combine them into a single `PolyHandler`. SSE handlers react to HTTP traffic which send an `Accept` header with `text/event-stream` value:
 
 {{< kotlin file="example_polyhandler.kt" >}}
+
+Note that if the accept header is not set, or the SSE cannot service the request, the HTTP server will be used as a fallback.
