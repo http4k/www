@@ -27,7 +27,7 @@ params:
     - "/images/social-logo.png"
 
   versions:
-    http4k: "5.38.0.0"
+    http4k: "5.39.0.0"
     connect: "5.26.0.2"
 
   favicons:
