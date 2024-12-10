@@ -2,9 +2,8 @@
 draft: true
 title: "http4k v6: Unleashing the Power of Simplicity: Unified routing, the reactive web revolution, and more!"
 description:
-date: 2025-01-1
+date: 2025-01-01
 ---
-
 
 **http4k-core** : [Breaking] Complete rewrite of the routing logic to work identically across HTTP, WS and
 SSE. [FIXME] <-- Insert breaking changes
