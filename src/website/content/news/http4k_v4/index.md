@@ -124,7 +124,7 @@ One of the things that our users feedback about was that the structure of the do
 - **Tutorials** will be step-by-step guides to getting up and running for various use-cases.
 - **How-tos** will contain extended examples of how to accomplish particular tasks. eg. provide a custom `ServerConfig` implementation. Code here will generally be complete and contain runnable examples.
 - **Module Reference** will contain descriptions of the various features in the different http4k modules. Code in the guide will be snippet-based.
-- Additionally, the [Examples repo](https://github.com/http4k/examples) hosts fully self-contained, runnable projects that can be used as a baseline for particular features - eg. how to write and run an [app on Quarkus](https://github.com/http4k/examples/tree/master/quarkus) or use the cloudnative module to enable [typesafe configuration](https://github.com/http4k/examples/tree/master/typesafe-configuration)
+- Additionally, the [Examples repo](https://github.com/http4k/examples) hosts fully self-contained, runnable projects that can be used as a baseline for particular features - eg. how to write and run an [app on Quarkus](https://github.com/http4k/examples/tree/master/quarkus) or use the http4k-config module to enable [typesafe configuration](https://github.com/http4k/examples/tree/master/typesafe-configuration)
 
 <hr/>
 
