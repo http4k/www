@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Chaos
+title: "Testing: Chaos"
 description: Feature overview of the http4k-testing-chaos module
 ---
 

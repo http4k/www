@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: XML
+title: "Format: XML"
 description: Feature overview of the modules providing XML support, including an auto-marshalling capability
 ---
 

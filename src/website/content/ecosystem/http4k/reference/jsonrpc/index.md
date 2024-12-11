@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: JSON-RPC
+title: "API: JSON-RPC"
 description: Feature overview of the http4k-api-jsonrpc module
 ---
 

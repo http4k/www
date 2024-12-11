@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Azure
+title: "Platform: Azure"
 description: Feature overview of the http4k-platform-azure module
 ---
 

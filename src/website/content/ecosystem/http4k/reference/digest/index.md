@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Digest security
+title: "Security: Digest"
 description: Feature overview of the http4k-security-digest module
 ---
 

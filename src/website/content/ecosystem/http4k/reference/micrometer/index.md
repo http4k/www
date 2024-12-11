@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Micrometer
+title: "Ops: Micrometer"
 description: Feature overview of the http4k-ops-micrometer module
 ---
 

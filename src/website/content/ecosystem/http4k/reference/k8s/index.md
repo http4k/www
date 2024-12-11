@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: K8S integrations
+title: "Platform: K8S"
 description: Feature overview of the http4k-platform-k8s module
 ---
 

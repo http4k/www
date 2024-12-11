@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: OAuth security
+title: "Security: OAuth"
 description: Feature overview of the http4k-security-oauth form module
 ---
 

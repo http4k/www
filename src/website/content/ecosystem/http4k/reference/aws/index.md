@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: AWS
+title: "Platform: AWS"
 description: Feature overview of the http4k-platform-aws module
 ---
 

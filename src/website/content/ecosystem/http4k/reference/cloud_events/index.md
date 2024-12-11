@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Cloud Events
+title: "API: CloudEvents"
 description: Feature overview of the http4k-api-cloudevents module
 ---
 

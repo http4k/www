@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: OpenTelemetry
+title: "Ops: OpenTelemetry"
 description: Feature overview of the http4k-ops-http4k-opentelemetry module
 ---
 

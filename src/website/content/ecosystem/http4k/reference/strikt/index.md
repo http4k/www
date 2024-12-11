@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Strikt
+title: "Testing: Strikt"
 description: Feature overview of the http4k-testing-strikt module
 ---
 

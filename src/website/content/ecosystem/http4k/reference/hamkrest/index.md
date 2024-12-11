@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Hamkrest
+title: "Testing: Hamkrest"
 description: Feature overview of the http4k-testing-hamkrest module
 ---
 

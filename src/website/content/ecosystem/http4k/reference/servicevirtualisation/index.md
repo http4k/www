@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Servirtium Testing
+title: "Testing: Servirtium"
 description: Feature overview of the http4k-testing-servirtium module, used for Service Virtualisation
 ---
 

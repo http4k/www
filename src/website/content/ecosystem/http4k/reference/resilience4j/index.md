@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Resilience4J
+title: "Ops: Resilience4J"
 description: Feature overview of the http4k-ops-resilience4j module
 ---
 

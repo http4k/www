@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Approval Testing
+title: "Testing: Approval"
 description: Feature overview of the http4k-testing-approval module
 ---
 

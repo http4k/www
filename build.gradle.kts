@@ -90,6 +90,7 @@ dependencies {
 
     testApi("org.http4k:http4k-platform-aws")
     testApi("org.http4k:http4k-platform-azure")
+    testApi("org.http4k:http4k-platform-gcp")
     testApi("org.http4k:http4k-platform-k8s")
 
     testApi("org.http4k:http4k-realtime-core")
@@ -241,6 +242,7 @@ dependencies {
 
     testApi("software.amazon.awssdk:s3:_")
     testApi("com.azure:azure-search-documents:_")
+    testApi("com.google.http-client:google-http-client:_")
 
     testApi("io.opentelemetry.contrib:opentelemetry-aws-xray-propagator:_")
     testApi("com.expediagroup:graphql-kotlin-schema-generator:_")

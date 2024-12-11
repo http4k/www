@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
-title: Kotest
+title: "Testing: Kotest"
 description: Feature overview of the http4k-testing-kotest module
 ---
 
