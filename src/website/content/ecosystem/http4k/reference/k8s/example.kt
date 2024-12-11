@@ -1,4 +1,4 @@
-package content.ecosystem.http4k.reference.cloud_native
+package content.ecosystem.http4k.reference.k8s
 
 import org.http4k.client.JavaHttpClient
 import org.http4k.config.Environment
