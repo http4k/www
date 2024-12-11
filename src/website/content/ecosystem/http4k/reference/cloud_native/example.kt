@@ -1,12 +1,6 @@
 package content.ecosystem.http4k.reference.cloud_native
 
 import org.http4k.client.JavaHttpClient
-import org.http4k.cloudnative.Http4kK8sServer
-import org.http4k.cloudnative.asK8sServer
-import org.http4k.cloudnative.health.Completed
-import org.http4k.cloudnative.health.Health
-import org.http4k.cloudnative.health.ReadinessCheck
-import org.http4k.cloudnative.health.ReadinessCheckResult
 import org.http4k.config.Environment
 import org.http4k.config.EnvironmentKey
 import org.http4k.config.Secret
@@ -19,6 +13,12 @@ import org.http4k.core.Uri
 import org.http4k.core.then
 import org.http4k.filter.ClientFilters
 import org.http4k.filter.DebuggingFilters
+import org.http4k.k8s.Http4kK8sServer
+import org.http4k.k8s.asK8sServer
+import org.http4k.k8s.health.Completed
+import org.http4k.k8s.health.Health
+import org.http4k.k8s.health.ReadinessCheck
+import org.http4k.k8s.health.ReadinessCheckResult
 import org.http4k.lens.Lens
 import org.http4k.lens.secret
 import org.http4k.routing.bind
