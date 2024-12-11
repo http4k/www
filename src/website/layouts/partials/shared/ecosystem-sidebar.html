@@ -9,7 +9,7 @@
             {{ range (where .Site.Data.ecosystem "title" "eq" $ecosystem) }}
 
             <li><h2><a href="/ecosystem/{{ .ref }}/">{{ $ecosystem }}</a></h2></li>
-            <li><h6>Latest version: <span class="badge text-bg-secondary">{{ index $versions .ref }}</span></h6></li>
+            <li><h6>Latest version: <span class="badge text-bg-secondary">{{ index $versions "http4k" }}</span></h6></li>
             {{ end }}
 
             <li>
