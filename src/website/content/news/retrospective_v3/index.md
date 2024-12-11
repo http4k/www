@@ -97,7 +97,7 @@ dependencies {
 
 #### Cloudy-wowdy stuff
 
-Just as in every codebase there is a package called "utils", this also happens with libraries - useful code that doesn't quite fit anywhere else, yet you just always end up needing. For http4k, these utils were about the ancillary stuff that goes around an application to make it support 12-factor ideals such as configuration and relative primitives. We didn't want to put this stuff into the `http4k-core` module as we felt it wasn't absolutely necessary (and we wanted to continue to keep the binary size of the core module down). Thus, `http4k-cloudnative` was born! The major feature of this module is loading typesafe Environmental configuration of applications, using - what else...
+Just as in every codebase there is a package called "utils", this also happens with libraries - useful code that doesn't quite fit anywhere else, yet you just always end up needing. For http4k, these utils were about the ancillary stuff that goes around an application to make it support 12-factor ideals such as configuration and relative primitives. We didn't want to put this stuff into the `http4k-core` module as we felt it wasn't absolutely necessary (and we wanted to continue to keep the binary size of the core module down). Thus, `http4k-platform-k8s` was born! The major feature of this module is loading typesafe Environmental configuration of applications, using - what else...
 
 <img class="imageMid" src="./lenses.png" alt="lenses"/>
 

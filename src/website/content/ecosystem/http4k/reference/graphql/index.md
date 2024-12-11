@@ -3,7 +3,7 @@ category: Reference
 type: ecosystem
 ecosystem: http4k Core
 title: GraphQL module
-description: Feature overview of the http4k-graphql module.
+description: Feature overview of the http4k-api-graphql module.
 ---
 
 
@@ -12,7 +12,7 @@ description: Feature overview of the http4k-graphql module.
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-graphql")
+    implementation("org.http4k:http4k-api-graphql")
 
     // for the example below you will also need this dependency...
     implementation("com.expediagroup:graphql-kotlin-schema-generator", version = "5.3.2"

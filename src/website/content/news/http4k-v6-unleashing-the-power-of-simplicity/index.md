@@ -8,7 +8,7 @@ date: 2025-01-01
 **http4k-core** : [Breaking] Complete rewrite of the routing logic to work identically across HTTP, WS and
 SSE. [FIXME] <-- Insert breaking changes
 
-- **http4k-contract** : [Breaking] withPostSecurityFilter() removed as is part of the contract DSL.
+- **http4k-api-openapi** : [Breaking] withPostSecurityFilter() removed as is part of the contract DSL.
 - sse change packages
 - sse now logs transactions
 - sse debugging

@@ -3,7 +3,7 @@ category: Reference
 type: ecosystem
 ecosystem: http4k Core
 title: Cloud Events
-description: Feature overview of the http4k-cloudevents module
+description: Feature overview of the http4k-api-cloudevents module
 ---
 
 ### Installation (Gradle)
@@ -11,7 +11,7 @@ description: Feature overview of the http4k-cloudevents module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-cloudevents")
+    implementation("org.http4k:http4k-api-cloudevents")
 }
 ```
 
@@ -21,7 +21,7 @@ http4k provides simple pluggability into the CloudEvents Java SDKs and custom ev
 
 ### Example 
 
-In this example we are using the Jackson JSONFormat which is included by default with the `http4k-cloudevents` module. If you want to also use the lenses to access typed EventData, you will also need this in your Gradle file:
+In this example we are using the Jackson JSONFormat which is included by default with the `http4k-api-cloudevents` module. If you want to also use the lenses to access typed EventData, you will also need this in your Gradle file:
 
 ```kotlin
 dependencies {

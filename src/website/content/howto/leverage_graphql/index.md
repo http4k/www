@@ -11,7 +11,7 @@ tags: [ "http4k Core" ]
 dependencies {
     {{< http4k_bom >}}
     implementation("org.http4k:http4k-core")
-    implementation("org.http4k:http4k-graphql")
+    implementation("org.http4k:http4k-api-graphql")
 }
 ```
 
