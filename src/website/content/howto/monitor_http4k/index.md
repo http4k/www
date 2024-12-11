@@ -13,7 +13,7 @@ Measuring performance of application estate is crucial in today's microservice w
 dependencies {
     {{< http4k_bom >}}
     implementation("org.http4k:http4k-core")
-    implementation("org.http4k:http4k-metrics-micrometer")
+    implementation("org.http4k:http4k-ops-micrometer")
 }
 ```
  

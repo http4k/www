@@ -23,7 +23,7 @@ But it also integrates with the contract module.
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-contract")
+    implementation("org.http4k:http4k-api-openapi")
 }
 ```
 

@@ -1,7 +1,7 @@
 ---
 layout: howto
 title: "Integrate with OpenAPI"
-description: Recipes for using the http4k-contract module to provide typesafe endpoints with automatically generated OpenAPI documentation
+description: Recipes for using the http4k-api-openapi module to provide typesafe endpoints with automatically generated OpenAPI documentation
 tags: [ "http4k Core" ]
 ---
 
@@ -19,7 +19,7 @@ This contract example shows:
 dependencies {
     {{< http4k_bom >}}
     implementation("org.http4k:http4k-core")
-    implementation("org.http4k:http4k-contract")
+    implementation("org.http4k:http4k-api-openapi")
     implementation("org.http4k:http4k-format-argo")
 }
 ```

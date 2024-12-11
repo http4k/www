@@ -3,7 +3,7 @@ category: Reference
 type: ecosystem
 ecosystem: http4k Core
 title: Micrometer
-description: Feature overview of the http4k-metrics-micrometer module
+description: Feature overview of the http4k-ops-micrometer module
 ---
 
 
@@ -12,7 +12,7 @@ description: Feature overview of the http4k-metrics-micrometer module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-metrics-micrometer")
+    implementation("org.http4k:http4k-ops-micrometer")
 }
 ```
 

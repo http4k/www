@@ -3,7 +3,7 @@ category: Reference
 type: ecosystem
 ecosystem: http4k Core
 title: AWS
-description: Feature overview of the http4k-aws module
+description: Feature overview of the http4k-platform-aws module
 ---
 
 
@@ -12,7 +12,7 @@ description: Feature overview of the http4k-aws module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-aws")
+    implementation("org.http4k:http4k-platform-aws")
 }
 ```
 

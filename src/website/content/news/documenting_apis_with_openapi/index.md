@@ -16,12 +16,12 @@ There have been various efforts to standardise these aspects, and one of the mos
 1. The OpenApi **[UI](https://http4k.org/openapi3/)** allows a very simple and developer-focused way of exploring and interacting with HTTP services from a browser environment.
 1. It is cross-platform and has good tooling support. Using **[OpenApi Generators]**, a specification document can be used to generate HTTP server stubs and working HTTP clients in a variety of languages, thus reducing integration efforts.
 
-### Typesafe HTTP contracts with http4k-contract
-http4k has supported generating version 2 of **[OpenApi]** docs since all the way back in 2017 (v1.16) via it's `http4k-contract` module, and after a couple of releases ironing out the niggles (and some amazing help from the community), the team is now happy to announce OpenApi3 support with the release of http4k version 3.179.0.
+### Typesafe HTTP contracts with http4k-api-openapi
+http4k has supported generating version 2 of **[OpenApi]** docs since all the way back in 2017 (v1.16) via it's `http4k-api-openapi` module, and after a couple of releases ironing out the niggles (and some amazing help from the community), the team is now happy to announce OpenApi3 support with the release of http4k version 3.179.0.
 
 In line with the overall **[ethos of the project](/overview/)**, http4k OpenApi support is done entirely through code and in a typesafe and refactorable way. This is somewhat of a departure from how most other libraries have implemented OpenApi (where often annotations and other compile-time magic are used) and means that in http4k the spec defined in code is the same one that is used to generate the API documentation and the same one used to validate incoming HTTP messages, meaning that it can never go stale. This focus on runtime code also allows for dynamic behaviours which would be very difficult to replicate at compile-time.
 
-Out of the box, `http4k-contract` the module now provides the following features when configured for OpenApi3:
+Out of the box, `http4k-api-openapi` the module now provides the following features when configured for OpenApi3:
 
 1. **Automatic generation of route documentation** in OpenApi v3 format, including the JSON Schema models for example incoming and outgoing messages (which arguably provide at least 50% of the value of using OpenApi).
 1. **Complete auto-validation** of the defined HTTP contract through the typesafe http4k Lens mechanism - violations are automatically detected and a BAD_REQUEST returned to the caller. This means that zero custom validation code is required to clutter up your routing layer and you can concentrate on working with meaningful domain types instead of primitives.
@@ -31,7 +31,7 @@ Out of the box, `http4k-contract` the module now provides the following features
 So, how does we do all this using the http4k API? Let's find out with a worked example. 
 
 ### 1. Your first endpoint
-After importing the `http4k-core` and `http4k-contract` dependencies into your project, we can write a new endpoint aka `ContractRoute`. The first thing to note is that we will be using a slightly different routing DSL the standard http4k one, one which provides a richer way to document endpoints - but don't worry - at it's core it utilises the same simple http4k building blocks of `HttpHandler` and `Filter`, as well as leveraging the **[http4k Lens API]** to automatically extract and convert incoming  parameters into richer domain types. As ever, routes can (and should) be written and testing independently, which aids code decomposition and reuse. 
+After importing the `http4k-core` and `http4k-api-openapi` dependencies into your project, we can write a new endpoint aka `ContractRoute`. The first thing to note is that we will be using a slightly different routing DSL the standard http4k one, one which provides a richer way to document endpoints - but don't worry - at it's core it utilises the same simple http4k building blocks of `HttpHandler` and `Filter`, as well as leveraging the **[http4k Lens API]** to automatically extract and convert incoming  parameters into richer domain types. As ever, routes can (and should) be written and testing independently, which aids code decomposition and reuse. 
 
 In this simple example, we're going to use a path with two dynamic parameters; `name` - a String, and the Integer `age` - which will be extracted and "mapped" into the constructor of a simple validated domain wrapper type. If the basic format of the path or the values for these path parameters cannot be extracted correctly, the endpoint fails to match and is skipped - this allows for several different variations of the same URI path signature to co-exist. 
 

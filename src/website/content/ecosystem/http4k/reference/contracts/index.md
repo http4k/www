@@ -3,7 +3,7 @@ category: Reference
 type: ecosystem
 ecosystem: http4k Core
 title: Contract
-description: Feature overview of the http4k-contract module
+description: Feature overview of the http4k-api-openapi module
 ---
 
 
@@ -12,13 +12,13 @@ description: Feature overview of the http4k-contract module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-contract")
+    implementation("org.http4k:http4k-api-openapi")
     implementation("org.http4k:http4k-format-<insert json lib>")
 }
 ```
 
 ### About
-The `http4k-contract` module adds a much more sophisticated routing mechanism to that available in `http4k-core`. It adds the facility 
+The `http4k-api-openapi` module adds a much more sophisticated routing mechanism to that available in `http4k-core`. It adds the facility 
 to declare server-side `Routes` in a completely typesafe way, leveraging the Lens functionality from the core. These `Routes` are combined into `Contracts`, which have the following features:
 
 - **Auto-validating** - the `Route` contract is automatically validated on each call for required-fields and type conversions, removing the requirement  for any validation code to be written by the API user. Invalid calls result in a `HTTP 400 (BAD_REQUEST)` response.     

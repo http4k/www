@@ -94,7 +94,7 @@ It's 2023, and the new hotness that everyone is talking about is AI - and who ar
 
 A little later, the team received an early access invite to the [ChatGPT plugin programme] and it immediately occured that the requirements for developing plugins were all already supported within existing http4k libraries. So we set out to develop a plugin SDK, and **http4k-connect-openai-plugin** was born.
 
-The SDK provides a simple API for developers to simply compose their plugins by supplying some config and a standard `http4k-contract` endpoints, which generate the required OpenAPI specifications. The SDK does the rest for you, providing the required OpenAI plugin manifest, and then protects the API with one of 4 security models - including the ability to "login with ChatGPT" and OAuth into your plugin.
+The SDK provides a simple API for developers to simply compose their plugins by supplying some config and a standard `http4k-api-openapi` endpoints, which generate the required OpenAPI specifications. The SDK does the rest for you, providing the required OpenAI plugin manifest, and then protects the API with one of 4 security models - including the ability to "login with ChatGPT" and OAuth into your plugin.
 
 <img class="imageMid" src="./chatgpt.png" alt="http4k openapi ChatGPT plugin"/>
 

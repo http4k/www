@@ -3,7 +3,7 @@ category: Reference
 type: ecosystem
 ecosystem: http4k Core
 title: Failsafe
-description: Feature overview of the http4k-failsafe module
+description: Feature overview of the http4k-ops-failsafe module
 ---
 
 
@@ -12,7 +12,7 @@ description: Feature overview of the http4k-failsafe module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-failsafe")
+    implementation("org.http4k:http4k-ops-failsafe")
 }
 ```
 

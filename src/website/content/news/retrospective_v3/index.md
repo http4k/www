@@ -119,7 +119,7 @@ It's no secret that the http4k team love testing - it's part of our core DNA and
 
 #### OpenAPI FTW
 
-One of the most popular and standout http4k features is the support for the OpenApi specification. Originally supporting Swagger 2 spec via the `http4k-contract` module, we rewrote the implementation to add support for much more complete (and consistent!) version 3 of specification in May 2019. The module will now generate fully compliant OpenAPI3 documentation, including full JSON Schema breakdowns for class models and taking advantage of Kotlin class features such as enums and nullability. Powered by the http4k lens API, this runtime system allows developers to avoid concerning themselves with tediously documenting API models which can easily go stale.
+One of the most popular and standout http4k features is the support for the OpenApi specification. Originally supporting Swagger 2 spec via the `http4k-api-openapi` module, we rewrote the implementation to add support for much more complete (and consistent!) version 3 of specification in May 2019. The module will now generate fully compliant OpenAPI3 documentation, including full JSON Schema breakdowns for class models and taking advantage of Kotlin class features such as enums and nullability. Powered by the http4k lens API, this runtime system allows developers to avoid concerning themselves with tediously documenting API models which can easily go stale.
 
 <img class="imageMid" src="./swagger.png" alt="swagger"/>
 

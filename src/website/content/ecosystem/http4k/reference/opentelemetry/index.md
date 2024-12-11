@@ -3,7 +3,7 @@ category: Reference
 type: ecosystem
 ecosystem: http4k Core
 title: OpenTelemetry
-description: Feature overview of the http4k-opentelemetry module
+description: Feature overview of the http4k-ops-http4k-opentelemetry module
 ---
 
 
@@ -12,7 +12,7 @@ description: Feature overview of the http4k-opentelemetry module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-opentelemetry")
+    implementation("org.http4k:http4k-ops-http4k-opentelemetry")
 }
 ```
 

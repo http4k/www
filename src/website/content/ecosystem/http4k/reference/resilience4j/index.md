@@ -3,7 +3,7 @@ category: Reference
 type: ecosystem
 ecosystem: http4k Core
 title: Resilience4J
-description: Feature overview of the http4k-resilience4j module
+description: Feature overview of the http4k-ops-resilience4j module
 ---
 
 
@@ -12,7 +12,7 @@ description: Feature overview of the http4k-resilience4j module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-resilience4j")
+    implementation("org.http4k:http4k-ops-resilience4j")
 }
 ```
 

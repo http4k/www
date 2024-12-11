@@ -42,7 +42,7 @@ Note that the FakeDynamo supports the majority of the Dynamo operations with the
     * ExecuteStatement
     * ExecuteTransaction
 
-The client APIs utilise the `http4k-aws` module for request signing, which means no dependencies on the incredibly fat Amazon-SDK JARs. This means this integration is perfect for running Serverless Lambdas where binary size is a performance factor.
+The client APIs utilise the `http4k-platform-aws` module for request signing, which means no dependencies on the incredibly fat Amazon-SDK JARs. This means this integration is perfect for running Serverless Lambdas where binary size is a performance factor.
 
 ### Typesafe Items & Keys
 Most of the http4k-connect DynamoDb API is fairly simple, but one addition which may warrant further explanation is the http4k Lens system which is layered on top provide a typesafe API to the Item/Key objects (used for getting/setting record attributes and for defining key structures). This is useful because of the [unique way](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_AttributeValue.html) in which Dynamo handles the structure of the stored items.

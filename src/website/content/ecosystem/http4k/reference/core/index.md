@@ -105,7 +105,7 @@ routes(
 ).asServer(Jetty(8000)).start()
 ```
 
-Note that the `http4k-contract` module contains a more typesafe implementation of routing functionality, with runtime-generated live documentation in OpenApi format.
+Note that the `http4k-api-openapi` module contains a more typesafe implementation of routing functionality, with runtime-generated live documentation in OpenApi format.
 
 #### Testing Routers 
 

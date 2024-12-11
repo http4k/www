@@ -3,7 +3,7 @@ category: Reference
 type: ecosystem
 ecosystem: http4k Core
 title: Azure
-description: Feature overview of the http4k-azure module
+description: Feature overview of the http4k-platform-azure module
 ---
 
 
@@ -12,7 +12,7 @@ description: Feature overview of the http4k-azure module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-azure")
+    implementation("org.http4k:http4k-platform-azure")
 }
 ```
 
