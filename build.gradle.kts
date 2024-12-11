@@ -43,9 +43,14 @@ dependencies {
     testApi(platform("dev.forkhandles:forkhandles-bom:_"))
     testApi(platform("org.junit:junit-bom:_"))
 
+    testApi("org.http4k:http4k-api-openapi")
+    testApi("org.http4k:http4k-api-cloudevents")
+    testApi("org.http4k:http4k-api-graphql")
+    testApi("org.http4k:http4k-api-jsonrpc")
+    testApi("org.http4k:http4k-api-jsonschema")
+    testApi("org.http4k:http4k-api-ui-redoc")
+    testApi("org.http4k:http4k-api-ui-swagger")
 
-    testApi("org.http4k:http4k-aws")
-    testApi("org.http4k:http4k-azure")
     testApi("org.http4k:http4k-client-apache")
     testApi("org.http4k:http4k-client-apache-async")
     testApi("org.http4k:http4k-client-apache4")
@@ -55,15 +60,10 @@ dependencies {
     testApi("org.http4k:http4k-client-jetty")
     testApi("org.http4k:http4k-client-okhttp")
     testApi("org.http4k:http4k-client-websocket")
-    testApi("org.http4k:http4k-cloudevents")
-    testApi("org.http4k:http4k-cloudnative")
+
     testApi("org.http4k:http4k-config")
-    testApi("org.http4k:http4k-contract")
-    testApi("org.http4k:http4k-contract-jsonschema")
-    testApi("org.http4k:http4k-contract-ui-redoc")
-    testApi("org.http4k:http4k-contract-ui-swagger")
     testApi("org.http4k:http4k-core")
-    testApi("org.http4k:http4k-failsafe")
+
     testApi("org.http4k:http4k-format-argo")
     testApi("org.http4k:http4k-format-core")
     testApi("org.http4k:http4k-format-dataframe")
@@ -78,18 +78,26 @@ dependencies {
     testApi("org.http4k:http4k-format-moshi")
     testApi("org.http4k:http4k-format-moshi-yaml")
     testApi("org.http4k:http4k-format-xml")
-    testApi("org.http4k:http4k-graphql")
-    testApi("org.http4k:http4k-htmx")
+
     testApi("org.http4k:http4k-incubator")
-    testApi("org.http4k:http4k-jsonrpc")
-    testApi("org.http4k:http4k-metrics-micrometer")
+
     testApi("org.http4k:http4k-multipart")
-    testApi("org.http4k:http4k-opentelemetry")
+
+    testApi("org.http4k:http4k-ops-failsafe")
+    testApi("org.http4k:http4k-ops-micrometer")
+    testApi("org.http4k:http4k-ops-resilience4j")
+    testApi("org.http4k:http4k-ops-opentelemetry")
+
+    testApi("org.http4k:http4k-platform-aws")
+    testApi("org.http4k:http4k-platform-azure")
+    testApi("org.http4k:http4k-platform-k8s")
+
     testApi("org.http4k:http4k-realtime-core")
-    testApi("org.http4k:http4k-resilience4j")
+
     testApi("org.http4k:http4k-security-core")
     testApi("org.http4k:http4k-security-digest")
     testApi("org.http4k:http4k-security-oauth")
+
     testApi("org.http4k:http4k-server-apache")
     testApi("org.http4k:http4k-server-apache4")
     testApi("org.http4k:http4k-server-helidon")
@@ -101,6 +109,7 @@ dependencies {
     testApi("org.http4k:http4k-server-ratpack")
     testApi("org.http4k:http4k-server-undertow")
     testApi("org.http4k:http4k-server-websocket")
+
     testApi("org.http4k:http4k-serverless-alibaba")
     testApi("org.http4k:http4k-serverless-azure")
     testApi("org.http4k:http4k-serverless-core")
@@ -109,6 +118,7 @@ dependencies {
     testApi("org.http4k:http4k-serverless-lambda-runtime")
     testApi("org.http4k:http4k-serverless-openwhisk")
     testApi("org.http4k:http4k-serverless-tencent")
+
     testApi("org.http4k:http4k-template-core")
     testApi("org.http4k:http4k-template-freemarker")
     testApi("org.http4k:http4k-template-handlebars")
@@ -117,6 +127,7 @@ dependencies {
     testApi("org.http4k:http4k-template-pug4j")
     testApi("org.http4k:http4k-template-rocker")
     testApi("org.http4k:http4k-template-thymeleaf")
+
     testApi("org.http4k:http4k-testing-approval")
     testApi("org.http4k:http4k-testing-chaos")
     testApi("org.http4k:http4k-testing-hamkrest")
@@ -126,6 +137,10 @@ dependencies {
     testApi("org.http4k:http4k-testing-strikt")
     testApi("org.http4k:http4k-testing-tracerbullet")
     testApi("org.http4k:http4k-testing-webdriver")
+
+    testApi("org.http4k:http4k-web-htmx")
+    testApi("org.http4k:http4k-web-datastar")
+
     testApi("org.http4k:http4k-webhook")
 
     testApi("org.http4k:http4k-connect-ai-anthropic")
