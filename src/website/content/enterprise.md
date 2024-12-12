@@ -17,13 +17,11 @@ highlights:
         icon: "/images/connections.svg"
 faq:
     -   question: "How long are LTS versions of http4k EE available for?"
-        answer: As standard, the open source http4k CE of http4k releases major versions of the ecosystem on a delayed cadence
-            which is aligned with major release dates of the JDK every 2 years. As a new major http4k CE version is released, the previous major version enters the http4k EE LTS programme for 2 years. See the schedule above for the current timeline. 
+        answer: As standard, the open source http4k CE of http4k releases major versions of the ecosystem on a delayed cadence which is aligned with major release dates of the JDK every 2 years. As a new major http4k CE version is released, the previous major version enters the http4k EE LTS programme for 2 years. See the schedule above for the current timeline.
     -   question: "How will my teams access the LTS binaries of http4k EE?"
-        answer: The LTS versions of http4k EE are hosted in a private Maven repository. To access the these assets, you will
-            need to sign up for the http4k Enterprise Subscription and will be supplied with the necessary credentials.
+        answer: The LTS versions of http4k EE are hosted in a private Maven repository. To access the these assets, you will need to sign up for the http4k Enterprise Subscription and will be supplied with the necessary credentials.
     -   question: "What types of updates are included with in the http4k EE LTS offering?"
-        answer: LTS version of http4k EE receive security and necessary bug fixes for community identified bugs. This ensures that your applications remain secure and fully functional without needing frequent upgrades.
+        answer: LTS version of http4k EE receive security and high priority bug fixes for community identified bugs. This ensures that your applications remain secure and fully functional.
     -   question: "What type of support is available for http4k EE subscribers"
         answer: After signup you will be given access to both email and Slack-based support channels. The http4k team is there
             to help you with any issues or questions you may have regarding the LTS version of http4k libraries.
@@ -49,9 +47,9 @@ Access expert guidance and **priority support** directly from the creators and m
 Get exclusive access to our **premium integrations** as they come online, built from years of successfully delivering complex systems with http4k. These expert-designed, proprietary extensions reflect real-world requirements and enterprise patterns, enhancing http4k's capabilities with thoroughly tested integrations available only through our private Maven repository.
 
 #### Long Term Support 
-Enjoy peace-of-mind with **Long-Term Support (LTS)** versions of http4k. Our LTS version provides 24 months of guaranteed maintenance and updates for a stable release, ensuring your projects remain secure and fully functional without needing frequent upgrades. Additionally, our priority support extends up to 24 months, meaning **http4k LTS** is your key to maintaining focus on feature delivery while ensuring your http4k applications are future-proof.
+Enjoy peace-of-mind with **Long-Term Support (LTS)** versions of http4k. Our LTS version provides up to 24 months of guaranteed security patches and high priority updates for a stable release, ensuring your projects remain secure and fully functional. Additionally, our priority support channel also extend up to 24 months, meaning **http4k EE LTS** is your key to maintaining focus on feature delivery while ensuring your http4k applications are future-proof.
 
-Additionally, **http4k EE**  offers transparency with full access to the codebase and rapid integration of community-driven improvements. Built under a permissive Apache2 license, you can rest assured that your applications comply with industry standards while enjoying the reliability and accountability that **http4k LTS**  support provides. Get in touch to learn more about how **http4k LTS**  can stabilize your development process for the long term.
+Additionally, **http4k EE**  offers transparency with full access to the codebase and rapid integration of community-driven improvements. Built under a permissive Apache2 license, you can rest assured that your applications comply with industry standards while enjoying the reliability and accountability that **http4k EE LTS**  support provides. Get in touch to learn more about how **http4k EE LTS**  can stabilize your development process for the long term.
 
 ## http4k EE Timeline
 

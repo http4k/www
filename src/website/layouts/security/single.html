@@ -3,10 +3,17 @@
 <div class="layout d-flex">
     <main class="page-content ms-4">
         <article>
-            <h1>{{ .File.BaseFileName }}: {{ .Title }}</h1>
-            <p class="small">{{ .Params.date | time.Format "January 1st 2006" }}</p>
+            <h1>{{ .Title }}</h1>
+            <h5> Severity: {{ .Params.severity }}</h5>
+            <h5 style="text-align: right;">{{ .Params.date | time.Format "January 2, 2006" }}</h5>
+
             {{ .Content }}
-            <div class="mt-auto d-flex justify-content-center">
+
+            <h3>References</h3>
+            <ul>
+                <li>Full GitHub Advisory: <a href="{{ .Params.advisory }}"><b>{{ .Params.advisory}}</b></a></li>
+            </ul>
+            <div class="my-5 d-flex justify-content-center">
                 <a href="../" class="btn btn-primary">All Security Advisories</a>
             </div>
         </article>
