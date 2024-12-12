@@ -22,7 +22,7 @@
                 {{ $pages := where .Site.RegularPages "Type" "eq" "security" }}
                 {{ range sort $pages "Permalink" "desc" }}
                 <div class="col-12 card p-5">
-                    <h5>{{ .File.BaseFileName }}: {{ .Title }}</h5>
+                    <h5>{{ .Title }}</h5>
                     <p><b>{{ .Params.date | time.Format "January 1st 2006" }}</b></p>
                     <p>{{ .Params.description }}</p>
                     <div class="mt-auto d-flex justify-content-end">
