@@ -2,7 +2,7 @@
 title: http4k Enterprise Edition
 description: It's important to us that you can rely on http4k for the long term. That's why we offer http4k EE with it;s Long-Term Support (LTS) programme.
 type: solutions
-email: enterpise@http4k.org
+email: enterprise@http4k.org
 aliases:
     - /lts-support
 highlights:
