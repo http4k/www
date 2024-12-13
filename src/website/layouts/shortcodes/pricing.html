@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .pricing-table {
+        font-family: 'Inter', sans-serif;
+        color: #212529;
+    }
+
+    .pricing-table .card {
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        transition: transform 0.2s ease;
+    }
+
+    .pricing-table .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .pricing-table .card.highlighted {
+        border: 2px solid #7C76BB;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .pricing-table .price {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .pricing-table .period {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+
+    .pricing-table .feature-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .pricing-table .feature-item {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f8f9fa;
+    }
+
+    .pricing-table .feature-item i {
+        color: #28a745;
+        margin-right: 0.5rem;
+    }
+
+    .pricing-table .btn-primary {
+        background-color: #7C76BB;
+        border-color: #7C76BB;
+    }
+
+    .pricing-table .btn-outline-primary {
+        color: #7C76BB;
+        border-color: #7C76BB;
+    }
+
+    .pricing-table .btn-outline-primary:hover {
+        background-color: #7C76BB;
+        color: white;
+    }
+
+    .pricing-table .footnote {
+        font-size: 0.8rem;
+        color: #6c757d;
+    }
+</style>
+
+<div class="pricing-table container py-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- http4k Community -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">http4k Community</h5>
+                    <div class="price mb-3">Free</div>
+                    <p class="card-text text-muted">For everyone</p>
+                    <ul class="feature-list mb-4">
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>All http4k Core and Connect modules</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Community support via Kotlin Slack</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Regular releases</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Apache 2.0 license</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <a href="/quickstart" class="btn btn-outline-primary w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Modules (Free) -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">http4k Pro Edition</h5>
+                    <div class="price mb-3">FreePurchase*</div>
+                    <p class="card-text text-muted">For non-commercial use & small companies</p>
+                    <ul class="feature-list mb-4">
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Everything in http4k Community</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Premium integrations & modules</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Advanced testing tools</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Community support via Kotlin Slack</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>http4k Pro license</li>
+                    </ul>
+                    <p class="footnote mb-3">*Free for non-commercial use and companies < $1M annual revenue</p>
+                    <div class="mt-auto">
+                        <a href="/pro" class="btn btn-outline-primary w-100">Coming soon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enterprise Edition -->
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">http Enterprise Edition</h5>
+                    <div class="price mb-3">Contact Us</div>
+                    <p class="card-text text-muted">For mission-critical deployments</p>
+                    <ul class="feature-list mb-4">
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Everything in Professional Edition</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Long Term Support (LTS)</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Priority email support</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Private Slack channel</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>Security notifications</li>
+                        <li class="feature-item"><i class="bi bi-check-lg"></i>License compliance reporting</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <a href="/enterprise" class="btn btn-outline-primary w-100">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -42,12 +42,12 @@ Based on the above Java timeline, the plan is for future major http4k versions t
 
 The launch feature set for http4k EE will consist of:
 
-- **24 months of LTS support** for http4k ecosystem v5, including access to both source and binary versions of the libraries, which will be accessed through private GitHub and Maven repositories. Security patches and essential bug fixes will be proactively released as required.
+- **up to 24 months of LTS support** for http4k ecosystem v5, including access to both source and binary versions of the libraries, which will be accessed through private GitHub and Maven repositories. Security patches and essential bug fixes will be proactively released as required.
 - Access to **priority support** channels (via email and dedicated [http4k Slack](https://http4k.slack.com) instance) for direct support access to http4k expertise.
 - Full **licence reporting** for all http4k modules.
 - **Discounted consultancy and training** rates delivered by core contributors to the http4k ecosystem.
 
-In future, subscribers to http4k EE will also automatically gain access to **planned premium features and integrations** as they become available which will provide further advantages to teams. These expert-designed, proprietary extensions will reflect real-world requirements and enterprise patterns built from years of successfully delivering complex systems with http4k. Watch this space!
+In future, subscribers to http4k EE will also automatically gain access to **planned http4k Pro features and integrations** as they become available which will provide further advantages to teams. These expert-designed, proprietary extensions will reflect real-world requirements and enterprise patterns built from years of successfully delivering complex systems with http4k. Watch this space!
 
 The aim of http4k EE is to provide a level of support to major releases of the toolkit through a commercial offering and strengthen the investment in the evolution of the http4k ecosystem as a whole.
 
