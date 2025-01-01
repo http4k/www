@@ -9,7 +9,7 @@ description: Feature overview of the http4k Connect Mattermost modules
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-connect-mattermost-rest")
+    implementation("org.http4k:http4k-connect-mattermost")
 }
 ```
 

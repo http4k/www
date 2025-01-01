@@ -11,33 +11,34 @@ A quick reference as to what is what with the http4k Connect modules.
 
 ## Cloud Services
 
-| Vendor     | System              | In-Memory Fake | Notes                                 |
-|------------|---------------------|----------------|---------------------------------------|
-| AWS        | AppRunner           | ✅              |                                       |
-| AWS        | CloudFront          | ✅              |                                       |
-| AWS        | Cloudwatch Logs     | ✅              |                                       |
-| AWS        | DynamoDb            | ✅              |                                       |
-| AWS        | EventBridge         | ✅              |                                       |
-| AWS        | Evidently           | ✅              |                                       |
-| AWS        | Firehose            | ✅              |                                       |
-| AWS        | IAM Identity Center | ✅              |                                       |
-| AWS        | Instance Metadata   | ✅              |                                       |
-| AWS        | KMS                 | ✅              |                                       |
-| AWS        | Lambda              | ✅              |                                       |
-| AWS        | S3                  | ✅              |                                       |
-| AWS        | Secrets Manager     | ✅              |                                       |
-| AWS        | SES                 | ✅              |                                       |
-| AWS        | SNS                 | ✅              |                                       |
-| AWS        | SQS                 | ✅              |                                       |
-| AWS        | STS                 | ✅              |                                       |
-| AWS        | Systems Manager     | ✅              |                                       |
-| GitHub     | V3 API              | ❌              | Client Shell and WebHook Signing only |
-| GitLab     | API                 | ❌              | Client Shell and WebHook Signing only |
-| Google     | Analytics GA4       | ✅              |                                       |
-| Google     | Analytics UA        | ✅              |                                       |
-| Kafka      | Rest Proxy          | ✅              |                                       |
-| Kafka      | Schema Registry     | ✅              |                                       |
-| Mattermost | WebHook             | ❌              |                                       |
+| Vendor     | System              | In-Memory Fake | Notes                                                           |
+|------------|---------------------|----------------|-----------------------------------------------------------------|
+| AWS        | AppRunner           | ✅              |                                                                 |
+| AWS        | CloudFront          | ✅              |                                                                 |
+| AWS        | Cloudwatch Logs     | ✅              |                                                                 |
+| AWS        | DynamoDb            | ✅              |                                                                 |
+| AWS        | EventBridge         | ✅              |                                                                 |
+| AWS        | Evidently           | ✅              |                                                                 |
+| AWS        | Firehose            | ✅              |                                                                 |
+| AWS        | IAM Identity Center | ✅              |                                                                 |
+| AWS        | Instance Metadata   | ✅              |                                                                 |
+| AWS        | KMS                 | ✅              |                                                                 |
+| AWS        | Lambda              | ✅              |                                                                 |
+| AWS        | S3                  | ✅              |                                                                 |
+| AWS        | Secrets Manager     | ✅              |                                                                 |
+| AWS        | SES                 | ✅              |                                                                 |
+| AWS        | SNS                 | ✅              |                                                                 |
+| AWS        | SQS                 | ✅              |                                                                 |
+| AWS        | STS                 | ✅              |                                                                 |
+| AWS        | Systems Manager     | ✅              |                                                                 |
+| GitHub     | V3 API              | ❌              | Client Shell and WebHook Signing only                           |
+| GitLab     | API                 | ❌              | Client Shell and WebHook Signing only                           |
+| Google     | Analytics GA4       | ✅              |                                                                 |
+| Google     | Analytics UA        | ✅              |                                                                 |
+| Kafka      | Rest Proxy          | ✅              |                                                                 |
+| Kafka      | Schema Registry     | ✅              |                                                                 |
+| Mattermost | WebHook             | ❌              |                                                                 |
+| Slack      | Slack               | ✅              | Minimal support for sending messages to channel and via webhook |
 
 <br/>
 <br/>
