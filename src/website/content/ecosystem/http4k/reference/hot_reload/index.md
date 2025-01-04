@@ -30,7 +30,8 @@ instance of your application (`HttpHandler` or `PolyHandler`), and using a refer
 Additionally, the `HotReloadServer` class intercepts HTML responses and injects a JavaScript `EventSource` that will 
 automatically reload a page in the browser when the server restarts.
 
-Note that by default the `HotReloadServer` will listen on port 8000 and uses the `SunHttp` server as it is both lightweight, has no dependencies, and starts incredibly quickly.
+Note that by default the `HotReloadServer` will listen on port 8000 and uses the `SunHttp` server as it is both lightweight, has no dependencies, and starts incredibly quickly. For apps requiring SSE or Websockets, we recommend Jetty as it has the most reliable behaviour. 
+Also note that some server implementations do not support hot-reloading correctly due to quirks around the stop/start loop and reloading, but as http4k decouples the HTTP runtime from the application logic, this should not cause an issue for using this functionality.
 
 #### Example
 
