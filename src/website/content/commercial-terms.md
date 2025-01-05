@@ -1,10 +1,8 @@
 ---
 draft: true
-title : "Commercial Terms of Service"
+title : "http4k Commercial Subscription Terms"
 description: "Terms of Service for Commercial http4k subscriptions"
 ---
-
-# http4k Commercial Subscription Terms
 
 By signing this agreement, you and any entity that you represent ("Customer") are unconditionally consenting to be bound by and are becoming a party to these http4k Commercial Subscription Terms ("Agreement") as of the date of Customer's first download of the Licensed Materials (the "Effective Date").
 
