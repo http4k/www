@@ -9,7 +9,16 @@
             {{ if .Params.image }}
             <img src="{{ .Params.image }}" alt="Image" class="imageMid mt-3"/>
             {{ else }}
-            <h1>{{ with .Params.Category}}{{ . }}: {{ end }}{{ .Title }}</h1>
+            <div class="d-flex">
+                <h1>
+                    {{ with .Params.Category}}{{ . }}: {{ end }}{{ .Title }}
+                </h1>
+                {{ with .Params.tier }}
+                <a href="/enterprise" class="text-decoration-none" title="Get http4k Pro modules!">
+                    <span style="transform: translateY(-50%);" class="badge ms-2 text-bg-pro hover:opacity-80 transition-opacity">{{ . }}</span>
+                </a>
+                {{ end }}
+            </div>
             {{ end }}
             <div class="mt-5">
                 {{ with .Params.remote }}

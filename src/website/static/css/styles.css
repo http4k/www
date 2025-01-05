@@ -473,3 +473,8 @@ tr:nth-child(even) {
 .text-center {
     text-align: center;
 }
+
+.text-bg-pro {
+    color: #fff !important;
+    background-color: var(--secondary-color) !important;
+}
