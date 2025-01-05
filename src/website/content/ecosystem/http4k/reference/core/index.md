@@ -22,7 +22,6 @@ Apart from Kotlin StdLib, the core module has ZERO dependencies and provides the
 
 - Immutable versions of the HTTP spec objects (Request, Response, Cookies etc).
 - HTTP handler and filter abstractions which models services as simple, composable functions.
-- Simple routing implementation, plus `HttpHandlerServlet` to enable plugging into any Servlet engine. 
 - [Lens](https://www.schoolofhaskell.com/school/to-infinity-and-beyond/pick-of-the-week/basic-lensing) mechanism for typesafe destructuring and construction of HTTP messages.
 - Typesafe Request Context operations using Lenses.
 - Abstractions for Servers, Clients, JSON Message formats, Templating, Websockets etc.
@@ -49,8 +48,6 @@ val response = handler(get)
 println(response.status)
 println(response.bodyString())
 ```
-
-To mount the `HttpHandler` in a container, the can simply be converted to a Servlet by calling ```handler.asServlet()```
 
 ### Filters
 Filters add extra processing to either the Request or Response. In http4k, they are modelled as:

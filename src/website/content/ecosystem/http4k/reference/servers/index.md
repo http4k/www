@@ -38,6 +38,9 @@ dependencies {
     // Ratpack: 
     implementation("org.http4k:http4k-server-ratpack")
 
+    // Servlet: 
+    implementation("org.http4k:http4k-server-servlet")
+
     // Undertow: 
     implementation("org.http4k:http4k-server-undertow")
 
@@ -69,6 +72,7 @@ simply passing it to the relevant `ServerConfig` implementation (in this case `J
 | Ktor Netty | ✅    | ❌          | ❌   | ❌               |                |
 | Netty      | ✅    | ❌          | ❌   | ❌               |                |
 | Ratpack    | ✅    | ❌          | ❌   | ❌               |                |
+| Servlets   | ✅    | ❌          | ❌   | ❌               |                |
 | SunHttp    | ✅    | ✅          | ✅   | ✅               | Non-production |
 | Undertow   | ✅    | ✅          | ✅   | ❌               |                |
 | Websocket  | ❌    | ✅          | ❌   | ❌               |                |
@@ -76,6 +80,9 @@ simply passing it to the relevant `ServerConfig` implementation (in this case `J
 #### Code
 
 {{< kotlin file="example_http.kt" >}}
+
+### Servlets
+To mount any `HttpHandler` in a container, you can install the `http4k-server-servlet` dependency and then simply be converted to a Servlet by calling ```handler.asServlet()```
 
 ### Customisation
 
