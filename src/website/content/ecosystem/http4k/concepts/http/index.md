@@ -64,4 +64,4 @@ interface Router {
 }
 ```
 
-A selective request handler, which attempts to match an incoming call against a bound HttpHandler. 
+A selective request handler, which attempts to match an incoming call against a bound HttpHandler. RouterMatch is a sealed class representing the various match states that can occur in this operation.
