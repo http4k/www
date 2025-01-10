@@ -45,47 +45,47 @@ allow us to take advantage of newer JVM features and optimisations in the target
 provide a performance boost for all users, and allowed us to update all of those old dependencies which were holding us
 back from adopting them.
 
-### Module/Code reorganisation
+### Module/Code reorganisation and nomenclature
 
 As http4k has grown to now over 180 modules, we've found that the existing module naming system has become a little
 unwieldy, so we took the opportunity to reorganise our thinking and the existing modules around the core conceptual
-arenas. Going forward, http4k will now be organised in 4 levels:
+arenas. Going forward, the various parts of http4k will now be referred in 4 levels:
 
 - **Level 1: Modules** - these are the individual modules or integrations, representing a single JAR file with a single
   set
   of Maven coordinates. eg. `http4k-core`, `http4k-client-apache`
-- **Level 2: Habitats** - a group of modules that represent a set of modules that all accomplish the same task with
+- **Level 2: Feature** - a group of modules that represent a set of modules that all accomplish the same task with
   different implementations, eg. `http4k-platform`, `http4k-format`, `http4k-template`.
-- **Level 3: Ecosystems** - a group of modules representing a sub project - eg. `http4k Core` or `http4k Connect`
-- **Level 4: Universe** - this is http4k in it's entirety and is represented in code by the http4k Bill-of-materials -
+- **Level 3: Project** - a grouping of features based around a common theme - eg. `http4k Core` or `http4k Connect`
+- **Level 4: Ecosystem** - this is http4k in it's entirety and is represented in code by the http4k Bill-of-materials -
   `http4k-bom`
 
 Almost all of the http4k code in unaffected by these changes apart from splitting out of some of the functionality in
-`http4k-core` which has been moved to new habitats.
+`http4k-core` which has been moved to new Feature modules.
 
 As such, we've reorganised some of the existing modules and these will need to be migrated as part of the upgrade to v6.
 Here's a list of the movements:
 
-| SOURCE MODULE - v5.X.X.X     | DESTINATION MODULE(S) - v6.X.X.X                                                   |
-|------------------------------|------------------------------------------------------------------------------------|
-| http4k-aws                   | http4k-platform-aws                                                                |
-| http4k-azure                 | http4k-platform-azure                                                              |
-| http4k-core                  | Some functionality moved to: http4k-tooling-traffic-capture, http4k-bridge-servlet |
-| http4k-connect-openai-plugin | Removed due to deprecation of the functionality in OpenAI                          |
-| http4k-cloudevents           | http4k-api-cloudevents                                                             |
-| http4k-cloudnative           | Split into http4k-config, http4k-platform-core, http4k-platform-k8s                |
-| http4k-contract              | http4k-api-openapi                                                                 |
-| http4k-contract-jsonschema   | http4k-api-jsonschema                                                              |
-| http4k-contract-ui-redoc     | http4k-api-ui-redoc                                                                |
-| http4k-contract-ui-swagger   | http4k-api-ui-swagger                                                              |
-| http4k-failsafe              | http4k-ops-failsafe                                                                |
-| http4k-gcp                   | http4k-platform-gcp                                                                |
-| http4k-graphql               | http4k-api-graphql                                                                 |
-| http4k-htmx                  | http4k-web-htmx                                                                    |
-| http4k-jsonrpc               | http4k-api-jsonrpc                                                                 |
-| http4k-metrics-micrometer    | http4k-ops-micrometer                                                              |
-| http4k-opentelemetry         | http4k-ops-opentelemetry                                                           |
-| http4k-resilience4j          | http4k-ops-resilience4j                                                            |
+| SOURCE MODULE - v5.X.X.X        | Project | Feature  | DESTINATION MODULE(S) - v6.X.X.X                                                   |
+|---------------------------------|---------|----------|------------------------------------------------------------------------------------|
+| http4k-aws                      | Core    | Platform | http4k-platform-aws                                                                |
+| http4k-azure                    | Core    | Platform | http4k-platform-azure                                                              |
+| http4k-core                     | Core    | Various  | Some functionality moved to: http4k-tooling-traffic-capture, http4k-bridge-servlet |
+| http4k-connect-ai-openai-plugin | Core    | AI       | Removed due to deprecation of the functionality in OpenAI                          |
+| http4k-cloudevents              | Core    | API      | http4k-api-cloudevents                                                             |
+| http4k-cloudnative              | Core    | Various  | Split into http4k-config, http4k-platform-core, http4k-platform-k8s                |
+| http4k-contract                 | Core    | API      | http4k-api-openapi                                                                 |
+| http4k-contract-jsonschema      | Core    | API      | http4k-api-jsonschema                                                              |
+| http4k-contract-ui-redoc        | Core    | API      | http4k-api-ui-redoc                                                                |
+| http4k-contract-ui-swagger      | Core    | API      | http4k-api-ui-swagger                                                              |
+| http4k-failsafe                 | Core    | Ops      | http4k-ops-failsafe                                                                |
+| http4k-gcp                      | Core    | Platform | http4k-platform-gcp                                                                |
+| http4k-graphql                  | Core    | API      | http4k-api-graphql                                                                 |
+| http4k-htmx                     | Core    | Web      | http4k-web-htmx                                                                    |
+| http4k-jsonrpc                  | Core    | API      | http4k-api-jsonrpc                                                                 |
+| http4k-metrics-micrometer       | Core    | Ops      | http4k-ops-micrometer                                                              |
+| http4k-opentelemetry            | Core    | Ops      | http4k-ops-opentelemetry                                                           |
+| http4k-resilience4j             | Core    | Ops      | http4k-ops-resilience4j                                                            |
 
 ### Universal protocol routing
 
@@ -110,7 +110,7 @@ Although mostly known for being backend engineers, the http4k team have always b
 Frontend development however, has gotten a bit out of hand with the complexity of the frameworks and the amount of
 JavaScript that needs to be written, so we were very interested in the rise of hypermedia frameworks such as HTMX and
 Datastar as a way to simplify the frontend and to provide an accessible, lightweight experience. As such, we've added
-support for these frameworks in http4k and homed them in a new habitat `http4k-web`. These frameworks are well worth a
+support for these frameworks in http4k and homed them in a new Features `http4k-web`. These frameworks are well worth a
 look in the way they keep a lot of server state on the backend and thus open up opportunities to unify logic whilst
 still providing a reactive experience. Of special mention are the possibilities opened up by Datastar's seamless
 SSE/HTTP fallbacks and the ability to control the flow of reactive data from the serverside. Expect more of this in the
@@ -119,11 +119,11 @@ future!
 ### Developer tooling
 
 http4k has always been a developer-first framework and we are always looking for ways to make the developer experience
-better. The new `http4k-tools` habitat is the new home for all developer tooling, and we've added a new module
+better. The new `http4k-tools` Feature is the new home for all developer tooling, and we've added a new module
 
 ### Holy Hot Reload Batman!
 
-The http4k Template habitat has supported HotReload for a while, but this only supported the templating layer. We've
+The http4k Template Feature has supported HotReload for a while, but this only supported the templating layer. We've
 made this better and you can now hot reload your entire application, including the routing layer. This is a game changer
 for using http4k with libraries like KotlinX HTML or HTMX/Datastar, where you can now see your changes in real time.
 Check it out at `http4k-tools-hotreload`.
@@ -132,9 +132,9 @@ Check it out at `http4k-tools-hotreload`.
 
 It's easy enough to start from scratch with http4k, but we know that many of you have existing codebases that you want
 to migrate to http4k. Having done this ourselves, we know that it can be a bit of a pain to get started, which is why to
-make this easier, we've added a new `http4k-bridge` habitat which provides a set of modules to help you bridge the gap
+make this easier, we've added a new `http4k-bridge` Feature which provides a set of modules to help you bridge the gap
 between http4k and other JVM technologies. This will be accompanied by a set of how-to guides which will cover the
-basics and strategies for migration. Here's a list of the initial technologies in the bridge habitat:
+basics and strategies for migration. Here's a list of the initial technologies in the Bridge Feature:
 
 - Helidon
 - Jakarta (handles Quarkus any any other Jakarta EE server)
