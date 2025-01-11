@@ -163,17 +163,46 @@ Additionally, except as expressly authorized above, Customer will not, and will 
 
 5.3 Any unpaid fees are subject to a finance charge of one percent (1.0%) per month, or the maximum permitted by law, whichever is lower, plus all expenses of collection, including reasonable attorneys’ fees. Fees under this Agreement are exclusive of all taxes, including national, state or provincial and local use, sales, value-added, property and similar taxes, if any. Customer agrees to pay such taxes (excluding US taxes based on http4k's net income) unless Customer has provided http4k with a valid exemption certificate. In the case of any withholding requirements, Customer will pay any required withholding itself and will not reduce the amount paid to http4k on account thereof.
 
-## 6. TERMINATION
+## 6. SUBSCRIPTION RENEWAL & TERMINATION
 
-6.1 This Agreement shall continue until terminated in accordance with this Section 6.
+6.1 Automatic Renewal
+Subscriptions will automatically renew for consecutive terms of equal duration to the initial Subscription Period, unless terminated as provided in Section 7 (Termination).
+
+6.2 Pricing Adjustments
+6.2.1 http4k reserves the right to adjust subscription pricing at the time of renewal.
+
+6.2.2 Price increases shall not exceed three percent (3%) per calendar year.
+
+6.2.3 http4k will provide written notice of any price increase at least forty-five (45) days prior to the renewal date.
+
+6.2.4 The new pricing will be invoiced on the renewal date.
+
+6.3 Renewal Notification
+http4k will provide written notification of the upcoming renewal, including:
+- Current subscription details
+- Applicable pricing for the upcoming renewal period
+- Any changes to subscription terms
+
+6.4 Non-Renewal
+6.4.1 Either party may terminate the subscription by providing written notice prior to the renewal date.
+
+6.4.2 Upon non-renewal:
+- Access to Licensed Materials and Private Resources will be revoked
+- Maintenance and support services will cease
+
+6.5 Dispute Resolution
+Any disputes related to renewals or pricing shall be resolved through good-faith negotiation in accordance with the dispute resolution provisions in Section 13 of this Agreement.
+
+6.7 This Agreement shall continue until terminated in accordance with this Section 6.
 - For subscribers with a Quote, either party may terminate this Agreement upon 15 days' written notice in the event that Customer has no then-current subscription.
 - For Pro edition subscribers, continuation is subject to active renewal through ongoing subscription or purchase.
 
-6.2 Customer may terminate this Agreement at any time upon written notice to http4k. Either party may terminate this Agreement immediately upon 15 days’ written notice to the other party in the event of any material breach of this Agreement (including without limitation, any breach of Section 2.2 and/or failure to pay any amounts when due hereunder) by such party where such material breach is not cured during such notice period.
+6.8 Customer may terminate this Agreement at any time upon written notice to http4k. Either party may terminate this Agreement immediately upon 15 days' written notice to the other party in the event of any material breach of this Agreement (including without limitation, any breach of Section 2.2 and/or failure to pay any amounts when due hereunder) by such party where such material breach is not cured during such notice period.
 
-6.3 Either party may terminate this Agreement, without notice, (i) upon the institution by or against the other party of insolvency, receivership or bankruptcy proceedings (provided such proceedings are not dismissed within one hundred twenty (120) days of such institution), (ii) upon the other party's making an assignment for the benefit of creditors, or (iii) upon the other party's dissolution or ceasing to do business without a successor.
+6.9 Either party may terminate this Agreement, without notice, (i) upon the institution by or against the other party of insolvency, receivership or bankruptcy proceedings (provided such proceedings are not dismissed within one hundred twenty (120) days of such institution), (ii) upon the other party's making an assignment for the benefit of creditors, or (iii) upon the other party's dissolution or ceasing to do business without a successor.
 
-6.4 Customer’s rights to the Licensed Materials, and any licenses granted hereunder, shall terminate upon any termination of this Agreement. In the event that Customer terminates this Agreement pursuant to the second sentence of Section 6.2 above, http4k will refund to Customer a pro-rated portion of pre-paid Fees for Services not actually received by Customer as of the date of such termination. The following Sections will survive any termination of this Agreement: 2 through 6 (except for Section 4.3), and 8 through 11.
+6.10 Customer's rights to the Licensed Materials, and any licenses granted hereunder, shall terminate upon any termination of this Agreement. In the event that Customer terminates this Agreement pursuant to the second sentence of Section 6.2 above, http4k will refund to Customer a pro-rated portion of pre-paid Fees for Services not actually received by Customer as of the date of such termination. The following Sections will survive any termination of this Agreement: 2 through 6 (except for Section 4.3), and 8 through 11.
+
 
 ## 7. Access to Private Resources
 
