@@ -203,7 +203,6 @@ Any disputes related to renewals or pricing shall be resolved through good-faith
 
 6.10 Customer's rights to the Licensed Materials, and any licenses granted hereunder, shall terminate upon any termination of this Agreement. In the event that Customer terminates this Agreement pursuant to the second sentence of Section 6.2 above, http4k will refund to Customer a pro-rated portion of pre-paid Fees for Services not actually received by Customer as of the date of such termination. The following Sections will survive any termination of this Agreement: 2 through 6 (except for Section 4.3), and 8 through 11.
 
-
 ## 7. Access to Private Resources
 
 7.1 Access Provision
