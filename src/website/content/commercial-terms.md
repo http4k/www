@@ -56,6 +56,10 @@ The Software and Other http4k Materials are collectively referred to herein as t
 
 "Quote" means a written agreement between http4k Ltd and Customer specifying Enterprise Edition terms, support levels, and pricing.
 
+"Access Credentials" means any credentials, tokens, keys, passwords, or access codes provided by http4k Ltd to subscribers for accessing private resources including but not limited to source code repositories, binary repositories, support systems, communication channels, and issue tracking systems.
+
+"Private Resources" means any private repositories, systems, channels, or services provided by http4k Ltd to subscribers as part of their subscription.
+
 1.1.1 Customer Modifications. Customer may modify the Licensed Materials only for its own internal business use and subject to the following conditions:
 * All modifications must comply with the terms of this Agreement
 * Customer retains ownership of any original modifications they create
@@ -171,24 +175,62 @@ Additionally, except as expressly authorized above, Customer will not, and will 
 
 6.4 Customer’s rights to the Licensed Materials, and any licenses granted hereunder, shall terminate upon any termination of this Agreement. In the event that Customer terminates this Agreement pursuant to the second sentence of Section 6.2 above, http4k will refund to Customer a pro-rated portion of pre-paid Fees for Services not actually received by Customer as of the date of such termination. The following Sections will survive any termination of this Agreement: 2 through 6 (except for Section 4.3), and 8 through 11.
 
+## 7. Access to Private Resources
 
-### 7. WARRANTY; CUSTOMER SOFTWARE SECURITY
+7.1 Access Provision
+Subscribers will be provided with Access Credentials for Private Resources based on their subscription tier. These resources may include:
+- Source code and binary repositories
+- Support systems
+- Communication channels
+- Issue tracking systems
+- Documentation and materials
+- Other subscription-specific services
+
+7.2 Credential Security Requirements
+Customer shall:
+- Keep all Access Credentials strictly confidential
+- Not share or distribute Access Credentials to any unauthorized users
+- Use Access Credentials only in accordance with these subscription terms
+- Implement reasonable security measures to prevent unauthorized access
+- Immediately notify http4k Ltd of any suspected compromise or unauthorized use
+- Ensure that any authorized users understand and comply with these security requirements
+
+7.3 Prohibited Actions
+Customer shall not:
+- Share Access Credentials outside their organization
+- Attempt to circumvent or disable any access controls
+- Use automated means to access Private Resources unless explicitly authorized
+- Publish or expose Access Credentials in any form
+- Continue using compromised Access Credentials after notification
+- Redistribute content from Private Resources except as explicitly permitted
+
+7.4 Access Term and Termination
+- Access Credentials will be provided upon commencement of subscription
+- Access will be maintained throughout the subscription period as long as account remains in good standing
+- Upon termination or expiration of subscription:
+    - All Access Credentials will be immediately revoked
+    - Customer must cease use of all Access Credentials
+    - Customer must ensure all copies of Access Credentials are destroyed
+    - Customer must remove all stored Private Resource contents from their systems where required
+    - Customer retains rights to use previously accessed resources in accordance with the Commercial License where permitted
+
+### 8. WARRANTY; CUSTOMER SOFTWARE SECURITY
 http4k represents and warrants that (i) it has all rights and licenses necessary for it to perform its obligations hereunder, consistent with the Warranty provisions in the http4k Commercial License, and (ii) it will not knowingly include, in any http4k software released to the public and provided to Customer hereunder, any computer code or other computer instructions, devices or techniques, including without limitation those known as disabling devices, trojans, or time bombs, that are intentionally designed to disrupt, disable, harm, infect, defraud, damage, or otherwise impede in any manner, the operation of a network, computer program or computer system or any component thereof, including its security or user data. This warranty applies only to unmodified Licensed Materials as provided by http4k and expressly excludes any Customer modifications made under Section 1.1.1. If, at any time, http4k fails to comply with the warranty in this Section, Customer may promptly notify http4k in writing of any such noncompliance. http4k will, within thirty (30) days of receipt of such written notification, either correct the noncompliance or provide Customer with a plan for correcting the noncompliance. If the noncompliance is not corrected or if a reasonably acceptable plan for correcting them is not established during such period, Customer may terminate this Agreement as its sole and exclusive remedy for such noncompliance.
 
-### 8. WARRANTY DISCLAIMER
+### 9. WARRANTY DISCLAIMER
 EXCEPT AS EXPRESSLY STATED HEREIN, THE LICENSED MATERIALS, SOFTWARE AND HTTP4K PROPRIETARY INFORMATION AND ANYTHING PROVIDED IN CONNECTION WITH THIS AGREEMENT ARE PROVIDED "AS-IS," WITHOUT ANY WARRANTIES OF ANY KIND. HTTP4K AND ITS LICENSORS HEREBY DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. HTTP4K SPECIFICALLY DISCLAIMS ALL WARRANTIES RELATING TO CUSTOMER MODIFICATIONS MADE UNDER SECTION 1.1.1.
 
-## 9. LIMITATION OF LIABILITY
+## 10. LIMITATION OF LIABILITY
 EXCEPT WITH RESPECT TO BREACH(ES) OF SECTION 1.1 AND/OR 2.1, IN NO EVENT WILL EITHER PARTY OR THEIR LICENSORS BE LIABLE FOR ANY INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE OF THE LICENSED MATERIALS (INCLUDING ANY CUSTOMER MODIFICATIONS MADE UNDER SECTION 1.1.1) OR ANYTHING PROVIDED IN CONNECTION WITH THIS AGREEMENT, ANY DELAY OR INABILITY TO USE THE LICENSED MATERIALS OR ANYTHING PROVIDED IN CONNECTION WITH THIS AGREEMENT OR OTHERWISE ARISING FROM THIS AGREEMENT, INCLUDING WITHOUT LIMITATION, LOSS OF REVENUE OR ANTICIPATED PROFITS OR LOST BUSINESS OR LOST SALES, WHETHER BASED IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR OTHERWISE, EVEN IF SUCH PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF DAMAGES. EXCEPT WITH RESPECT TO BREACH(ES) OF SECTION 1.1 AND/OR 2.1, THE TOTAL LIABILITY OF EACH PARTY AND ITS LICENSORS, WHETHER BASED IN CONTRACT, TORT (INCLUDING NEGLIGENCE OR STRICT LIABILITY), OR OTHERWISE, WILL NOT EXCEED, IN THE AGGREGATE, THE GREATER OF (i) ONE THOUSAND DOLLARS ($1,000), OR (ii) THE FEES PAID TO HTTP4K HEREUNDER IN ONE YEAR PERIOD ENDING ON THE DATE THAT A CLAIM OR DEMAND IS FIRST ASSERTED. THE FOREGOING LIMITATIONS WILL APPLY NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY. HTTP4K SHALL HAVE NO LIABILITY WHATSOEVER FOR ANY CLAIMS ARISING FROM OR RELATED TO CUSTOMER MODIFICATIONS MADE UNDER SECTION 1.1.1.
 
-## 10. U.S. GOVERNMENT MATTERS
+## 11. U.S. GOVERNMENT MATTERS
 Notwithstanding anything else, Customer may not provide to any person or export or re-export or allow the export or re-export of the Licensed Materials or any software or anything related thereto or any direct product thereof (collectively “Controlled Subject Matter”), in violation of any restrictions, laws or regulations of the United States Department of Commerce, the United States Department of Treasury Office of Foreign Assets Control, or any other United States or foreign agency or authority. Without limiting the foregoing Customer acknowledges and agrees that the Controlled Subject Matter will not be used or transferred or otherwise exported or re-exported to countries as to which the United States maintains an embargo (collectively, “Embargoed Countries”), or to or by a national or resident thereof, or any person or entity on the U.S. Department of Treasury’s List of Specially Designated Nationals or the U.S. Department of Commerce’s Table of Denial Orders (collectively, “Designated Nationals”). The lists of Embargoed Countries and Designated Nationals are subject to change without notice. Use of the Licensed Materials is representation and warranty that neither the User nor Host is located in, under the control of, or a national or resident of an Embargoed Country or Designated National. The Controlled Subject Matter may use or include encryption technology that is subject to licensing requirements under the U.S. Export Administration Regulations. As defined in FAR section 2.101, any software and documentation provided by http4k are “commercial items” and according to DFAR section 252.2277014(a)(1) and (5) are deemed to be “commercial computer software” and “commercial computer software documentation.” Consistent with DFAR section 227.7202 and FAR section 12.212, any use modification, reproduction, release, performance, display, or disclosure of such commercial software or commercial software documentation by the U.S. Government will be governed solely by the terms of this Agreement and will be prohibited except to the extent expressly permitted by the terms of this Agreement.
 These export compliance provisions are consistent with the Export Compliance section in the http4k Commercial License.
 
-## 11. MISCELLANEOUS
+## 12. MISCELLANEOUS
 If any provision of this Agreement is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that this Agreement will otherwise remain in full force and effect and enforceable. This Agreement is not assignable, transferable or sublicensable by either party without the other party’s prior written consent, not to be unreasonably withheld or delayed; provided that either party may transfer and/or assign this Agreement to a successor in the event of a sale of all or substantially all of its business or assets to which this Agreement relates. Both parties agree that this Agreement is the complete and exclusive statement of the mutual understanding of the parties and supersedes and cancels all previous written and oral agreements, communications and other understandings relating to the subject matter of this Agreement, and that all waivers and modifications must be in a writing signed or otherwise agreed to by each party, except as otherwise provided herein. No agency, partnership, joint venture, or employment is created as a result of this Agreement and neither party has any authority of any kind to bind the other in any respect whatsoever. In any action or proceeding to enforce rights under this Agreement, the prevailing party will be entitled to recover costs and attorneys’ fees. All notices under this Agreement will be in writing and will be deemed to have been duly given when received, if personally delivered; when receipt is electronically confirmed, if transmitted by facsimile or e-mail; and upon receipt, if sent by certified or registered mail (return receipt requested), postage prepaid. http4k will not be liable for any loss resulting from a cause over which it does not have direct control. This Agreement shall be governed by and construed in accordance with the laws agreed upon in writing between the parties. If no governing law is specified in a written agreement between the parties, any disputes shall be resolved in accordance with the laws of the jurisdiction where http4k Ltd is incorporated, without regard to its conflict of laws provisions.
 
-## 12. DATA PRIVACY
+## 13. DATA PRIVACY
 Customer shall ensure that any and all information or data, including without limitation, personal data, used by Customer in connection with the Agreement (“Customer Data”) is collected, processed, transferred and used in full compliance with Applicable Data Protection Laws (as defined below) and that it has all obtained all necessary authorizations and consents from any data subjects to process Customer Data. Customer shall adopt and maintain appropriate organizational, technical and security measures prior to any such collection, processing or transfer in order to protect against unauthorized access to or use of Customer Data. Customer shall immediately inform http4k upon becoming aware of any breach within the meaning of Applicable Data Protection Law relating to Customer Data (a “Security Incident”) and to cooperate with http4k in any investigation thereof and in the implementation of any measures reasonably required to be taken in response thereto. If required by Applicable Data Protection Laws, the parties will enter into standard contractual clauses under GDPR (as defined below) for the transfer of any Customer Data outside of the European Union. For purposes hereof: (a) “Applicable Data Protection Laws” means any applicable laws, statutes or regulations as may be amended, extended or re-enacted from time to time which relate to personal data including without limitation (i) prior to 25 May 2018, the EU Data Protection Directive 95/46/EC as transposed into EU Member State law; (ii) from and after 25 May 2018, GDPR and any EU Member State laws implementing the GDPR; and (iii) the e-Privacy Directive 2002/58/EC, as amended and as transposed into EU Member State law and any legislation replacing the e-Privacy Directive and (b) “GDPR” means the Regulation (EU) 2016/679 of the European Parliament and of the Counsel of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data. These data privacy provisions are consistent with the data protection requirements in the http4k Commercial License and applicable laws.
 
 [THE REMAINDER OF THIS PAGE INTENTIONALLY LEFT BLANK]
