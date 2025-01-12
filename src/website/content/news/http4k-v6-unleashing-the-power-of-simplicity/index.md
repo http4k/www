@@ -174,6 +174,7 @@ SSE. [FIXME] <-- Insert breaking changes
 - ws change packages
 - ws now logs transactions
 - ws debugging
+- Java SSE client
 - KMS CustomerKeySpec removed -> replaced with KeySpec
 - HttpEvent is now a subclass of ProtocolEvent
 - routing changes mean things are no longer data classes
