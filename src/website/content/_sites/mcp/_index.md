@@ -1,5 +1,5 @@
 ---
 draft: true
-title : "Home"
+title : "http4k Model Context Protocol"
 type: "product"
 ---

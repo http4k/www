@@ -1,5 +1,5 @@
 ---
 draft: true
-title : "http4k Pro Edition"
+title : "http4k Hot Reload"
 type: "product"
 ---
