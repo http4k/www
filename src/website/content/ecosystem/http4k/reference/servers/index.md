@@ -21,7 +21,7 @@ dependencies {
     implementation("org.http4k:http4k-server-jetty")
 
     // Jetty11 & Jetty11Loom: 
-    implementation("org.http4k:http4k-server-jetty")
+    implementation("org.http4k:http4k-server-jetty11")
 
     // Helidon (Loom): 
     implementation("org.http4k:http4k-server-helidon")
