@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script type="module"
+            src="https://cdn.jsdelivr.net/gh/starfederation/datastar@v1.0.0-beta.1/bundles/datastar.js"></script>
+</head>
+<body>
+<h1>http4k Datastar demo..</h1>
+<div id="toBeReplaced">Initial content</div>
+
+<h1>Methods</h1>
+<ul>
+    <li>
+        <button data-on-click="@get('/sse/rawFragment')">Replace with raw single-shot SSE</button>
+    </li>
+    <li>
+        <button data-on-click="@get('/sse/usingTemplate')">Stream with SSE (Template)</button>
+    </li>
+    <li>
+        <button data-on-click="@get('/http/rawFragment')">Replace with raw single-shot HTTP</button>
+    </li>
+    <li>
+        <button data-on-click="@get('/http/usingTemplate')">Replace with HTTP (Template)</button>
+    </li>
+</ul>
+</body>
+</html>
