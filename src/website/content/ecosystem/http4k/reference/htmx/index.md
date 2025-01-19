@@ -3,16 +3,15 @@ category: Reference
 type: ecosystem
 ecosystem: http4k Core
 title: "Web: HTMX"
-description: Feature overview of the http4k-htmx module
+description: Feature overview of the http4k-web-htmx module
 ---
-
 
 ### Installation (Gradle)
 
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-htmx")
+    implementation("org.http4k:http4k-web-htmx")
 
     implementation("org.http4k:http4k-template-handlebars") // Handlebars
 }
