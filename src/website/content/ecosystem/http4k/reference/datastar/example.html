@@ -1,0 +1,9 @@
+<div id="users">
+    <label>First Name<input type="text" data-model="firstName"/></label>
+    <label>Last Name<input type="text" data-model="lastName"/></label>
+    <label>Email<input type="text" data-model="email"/></label>
+    <div>
+        <button data-on-click="@post('/users/create')">Save</button>
+        <button data-on-click="@get('/users')">Cancel</button>
+    </div>
+</div>

@@ -8,6 +8,23 @@ description: An explanation of the core function types for dealing with Server-S
 
 **http4k** provides SSE (Server-Sent Events) support using a simple, consistent, typesafe, and testable API on supported server backends.
 
+### About SSE
+
+In SSE, interactions with a backend from the client are done via HTTP requests  - typically from an `EventSource` in the browser,
+which are replied to in the Server-Sent Event (SSE) messaging format. SSE is a simple message protocol that allows the
+server to send one or more messages to the client over a single HTTP connection - often by keeping the connection open
+to allow streaming, and is activated simply by requesting the `text/event-stream` content type from the server.
+
+An on-the-wire SSE message looks like this - a set of name/value field pairs, with each message terminated by 2
+newlines:
+
+```
+event: new content 
+data: Hello, world!
+
+```
+
+
 Sse communication consists of a few main concepts:
 
 ### SseMessage
