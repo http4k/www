@@ -108,7 +108,7 @@ Additionally, except as expressly authorized above, Customer will not, and will 
 (g) use the Licensed Materials or software other than in accordance with this Agreement and in compliance with all applicable laws and regulations (including but not limited to any privacy laws, and laws and regulations concerning intellectual property, consumer and child protection, obscenity or defamation);
 (h) use the Licensed Materials in any manner that (1) is harmful, fraudulent, deceptive, threatening, abusive, harassing, tortious, defamatory, vulgar, obscene, or libelous (including without limitation, accessing any computer, computer system, network, software, or data without authorization, breaching the security of another user or system, and/or attempting to circumvent any Host or User authentication or security process), (2) impersonates any person or entity, including without limitation any employee or representative of http4k, or (3) contains a virus, trojan horse, worm, time bomb, unsolicited bulk, commercial, or "spam" message, or other harmful computer code, file, or program (including without limitation, password guessing programs, decoders, password gatherers, keystroke loggers, cracking tools, packet sniffers, and/or encryption circumvention programs).
 
-2.2 Customer will cooperate with http4k in connection with the performance of this Agreement by making available such personnel and information as may be reasonably required, and taking such other actions as http4k may reasonably request. Customer will also cooperate with http4k in establishing a password or other procedures for verifying that only designated employees of Customer have access to any administrative functions of the Licensed Materials. Customer shall maintain during the term of this Agreement and through the end of the third year after the date on which the final payment is made under this Agreement, books, records, contracts and accounts relating to the payments due http4k under this Agreement (collectively, the "Customer Records"). http4k may, at its sole expense, upon 30 days' prior written notice to Customer and during Customer's normal business hours and subject to industry-standard confidentiality obligations, hire an independent third party auditor to audit the Customer Records only to verify the amounts payable under this Agreement. If an audit reveals underpayment, then Customer shall promptly pay the deficiency to http4k plus late fees pursuant to Section 5.2. http4k shall bear the cost of an audit unless the audit reveals underpayment by more than 5% for the audited period, in which case Customer shall promptly pay http4k for the reasonable costs of the audit.
+2.2 Customer will cooperate with http4k in connection with the performance of this Agreement by making available such personnel and information as may be reasonably required, and taking such other actions as http4k may reasonably request. Customer will also cooperate with http4k in establishing a password or other procedures for verifying that only designated employees of Customer have access to any administrative functions of the Licensed Materials. Customer shall maintain during the term of this Agreement and through the end of the third year after the date on which the final payment is made under this Agreement, books, records, contracts and accounts relating to the payments due http4k under this Agreement (collectively, the "Customer Records"). http4k may, at its sole expense, upon 30 days' prior written notice to Customer and during Customer's normal business hours and subject to industry-standard confidentiality obligations, hire an independent third party auditor to audit the Customer Records only to verify the amounts payable under this Agreement. If an audit reveals underpayment, then Customer shall promptly pay the deficiency to http4k plus late fees pursuant to Section 5. http4k shall bear the cost of an audit unless the audit reveals underpayment by more than 5% for the audited period, in which case Customer shall promptly pay http4k for the reasonable costs of the audit.
 
 2.3 Customer will be responsible for maintaining the security of Customer's account, passwords (including but not limited to administrative and User passwords and credentials for Hosts like e) and files, and for all uses of Customer account with or without Customer's knowledge or consent.
 
@@ -136,7 +136,22 @@ Additionally, except as expressly authorized above, Customer will not, and will 
 
 ## 5. PAYMENT OF FEES
 
-5.1 Unless and until http4k and Customer have executed a quote document specifically referencing this Agreement with respect to amounts due on account of the Licensed Materials (a "Quote", which is hereby incorporated by reference, if applicable), and unless Customer's subscription to (and payment with respect to) the Licensed Materials has been made on Customer's behalf by a reseller, Customer will pay http4k the applicable fees as set forth at https://http4k.org (the "Pricing") for the Licensed Materials selected and/or used by Customer (the "Fees") without any right of set-off or deduction. On each anniversary of the Effective Date, http4k will invoice Customer (or its reseller, if applicable) with respect to any and all additional Customer Hosts of the Licensed Materials beyond those for whom Customer has pre-paid, as of such date (and for whom the Fees due pursuant to such invoice will be the then-current per-year Host fee with respect to the year just ended, and the then current per-year Host fee with respect to all subsequent years, unless otherwise agreed in writing by both parties (collectively, a "True-Up")). For Customers that have pre-paid all Fees for multi-year subscriptions for Licensed Materials pursuant to a Quote, on each anniversary of the Effective Date during the term of this Agreement, (i) a new license key will be provided, and (ii) a True-Up will be conducted. All additional Hosts purchased shall be co-terminated through the end of the original Subscription period.
+5.1 License Fees
+Unless otherwise specified in an executed Quote or handled through a reseller, Customer will pay http4k the applicable fees as set forth at https://http4k.org (the "Pricing") for the Licensed Materials selected and/or used by Customer (the "Fees") without any right of set-off or deduction.
+
+5.2 Usage Monitoring and True-Up
+Customer agrees to:
+- Maintain complete and accurate records of all Host usage
+- Perform quarterly internal audits of actual Host usage against licensed quantities
+- Report any excess usage to http4k within 15 days of discovery
+- Pay for any excess usage retroactively from the date such usage began
+- Provide usage reports upon reasonable request from http4k
+
+Failure to maintain accurate records or report excess usage constitutes a material breach of this agreement.
+
+On each anniversary of the Effective Date:
+a) http4k will invoice Customer for any additional Customer Hosts beyond pre-paid quantities at the then-current rates
+b) All additional Hosts purchased shall be co-terminated through the end of the original Subscription period
 
 5.2 All payments will be made in accordance with the payment schedule and the method of payment set forth in the Pricing. If not otherwise specified, (a) http4k will invoice Customer with respect to Fees up-front, for each term of the Customer's subscription (as applicable), and (b) payments will be due within thirty (30) days of Customer's receipt of correct invoice. Except as expressly set forth in this Agreement, all Fees paid and/or due hereunder (including any prepaid amounts) are non-refundable, including without limitation if this Agreement is terminated in accordance with Section 6 below. If Customer terminates this Agreement pursuant to Section 6.2 within 45 calendar days from receipt of the initial invoice for the Licensed Materials, http4k will refund all Fees paid hereunder.
 
@@ -145,7 +160,10 @@ Additionally, except as expressly authorized above, Customer will not, and will 
 ## 6. SUBSCRIPTION RENEWAL & TERMINATION
 
 6.1 Automatic Renewal
-Subscriptions will automatically renew for consecutive terms of equal duration to the initial Subscription Period, unless terminated as provided in Section 7 (Termination).
+Subscriptions automatically renew for equal terms unless:
+- Written notice is provided 30 days before renewal date
+- Material breach has occurred
+- Either party exercises termination rights under Section 6.4
 
 6.2 Pricing Adjustments
 
@@ -228,7 +246,11 @@ Customer shall not:
 
 7.5 Technical Protection Measures
 
-7.5.1 Customer acknowledges that the Enterprise Edition materials, including LTS source code and commercially licensed components, include technical protection measures that control access
+7.5.1 Customer acknowledges that certain subscription tiers provide access to protected source code, including LTS releases, which constitute valuable trade secrets of http4k Ltd. Such source code:
+- May only be accessed by authorized personnel within your organization
+- Must not be stored in any persistent form outside of official build systems
+- Must be treated with the same level of security as your own source code
+- Access logs must be maintained and provided upon request
 
 7.5.2 Customer shall not:
 - Circumvent, remove, or tamper with any technical protection measures
