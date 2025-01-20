@@ -248,9 +248,9 @@ Customer shall not:
 
 7.5.1 Customer acknowledges that certain subscription tiers provide access to protected source code, including LTS releases, which constitute valuable trade secrets of http4k Ltd. Such source code:
 - May only be accessed by authorized personnel within your organization
-- Must not be stored in any persistent form outside of official build systems
-- Must be treated with the same level of security as your own source code
-- Access logs must be maintained and provided upon request
+- Must not be stored in any persistent form outside of approved build systems
+- Must be treated with at least the same level of security as your own source code
+- Security incidents involving protected source code must be reported within 24 hours
 
 7.5.2 Customer shall not:
 - Circumvent, remove, or tamper with any technical protection measures
