@@ -6,6 +6,8 @@ description: "Terms of Service for Commercial http4k subscriptions"
 
 By signing this agreement, you and any entity that you represent ("Customer") are unconditionally consenting to be bound by and are becoming a party to these http4k Commercial Subscription Terms ("Agreement") as of the date of Customer's first download of the Licensed Materials (the "Effective Date").
 
+This Agreement implements and defines the "valid subscription" requirement established in the http4k Commercial License. It details the subscription framework, general terms and conditions, and support services that constitute a valid subscription for commercial use of the Licensed Materials. For clarity, while the Commercial License establishes the fundamental requirement of a valid subscription for commercial use, this Agreement provides the framework for such subscriptions, with specific pricing and service details provided through Customer Quotes.
+
 This agreement governs the provision of subscriptions to http4k Pro and Enterprise Editions. All commercial use requires a valid subscription obtained through http4k's official channels. Use of http4k Pro and Enterprise Editions is governed by the http4k Commercial License (available at http4k.org/commercial-license). By obtaining or activating a subscription, you and/or your organization agree to comply with all terms of the Commercial License.
 
 By purchasing a subscription or using the Licensed Materials, you and/or your organization agree to comply with all terms of the Commercial License.
@@ -65,7 +67,7 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 - Major - included in next standard release (Major, Minor, or Patch Release)
 - Minor - included in future Major or Minor Release (unscheduled)
 
-1.2.5 Unless arranged otherwise in the quote, support is provided during UK business working days (Monday to Friday, 9AM-5PM UK time), excluding public holidays. Alternative support hours may be arranged as specified in the Quote, if applicable.
+1.2.5 Unless arranged otherwise in the quote, support is provided during UK business working days (Monday to Friday, 9AM-5PM local UK time), excluding public holidays. Alternative support hours may be arranged as specified in the Quote, if applicable.
 
 1.2.6 Investigations into support tickets that are found to be caused by third party software defects or non-observance of operating instructions will be charged at the standard hourly rate specified in the Quote.
 
@@ -76,11 +78,6 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 1.3.1 Training courses are delivered for up to 10 persons per day. For in-person training, travel and associated costs are not included in the Training fee.
 
 1.3.2 Consultancy activities are arranged on an as-needed basis.
-
-1.3.3 Commercial subscribers are eligible for discounted rates on:
-- General consultancy services
-- Bespoke feature development
-- In-person and online training courses
 
 ## 2. RESTRICTIONS AND RESPONSIBILITIES
 
@@ -228,6 +225,18 @@ Customer shall not:
 - Customer must ensure all copies of Access Credentials are destroyed
 - Customer must remove all stored Private Resource contents from their systems where required
 - Customer retains rights to use previously accessed resources in accordance with the Commercial License where permitted
+
+7.5 Technical Protection Measures
+
+7.5.1 Customer acknowledges that the Enterprise Edition materials, including LTS source code and commercially licensed components, include technical protection measures that control access
+
+7.5.2 Customer shall not:
+- Circumvent, remove, or tamper with any technical protection measures
+- Attempt to bypass or disable any license enforcement mechanisms
+- Use tools or techniques to defeat or bypass security features
+- Share or publish protected source code or components
+
+7.5.3 These obligations are in addition to the Access Credential requirements specified above.
 
 ## 8. WARRANTY; CUSTOMER SOFTWARE SECURITY
 
