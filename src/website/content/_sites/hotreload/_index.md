@@ -12,7 +12,7 @@ navigation:
         url: https://www.http4k.org/hotreload/
     -   name: pricing
         title: Pricing
-        url: https://example.com
+        url: "#pricing"
 features:
     - title: Tiny</br> footprint
       icon: supportive
@@ -30,4 +30,7 @@ features:
       icon: testability
       colour: blue
       description: Connect API Clients have been used to build high volume applications in Banking, Publishing, eCommerce & Government projects.
+pricing_table:
+    id: prctbl_1Qk8bRG47sNzv4yXy1CGLRii
+    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
 ---

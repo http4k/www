@@ -59,6 +59,11 @@
 
     .features {
         background-color: white;
+        min-height: 0;
+    }
+
+    .pricing h2 {
+        text-align: center;
     }
 </style>
 <body>
@@ -94,94 +99,11 @@
                 {{ end }}
             </div>
         </div>
-    </div>
-    <div style="padding-top: 275px" class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-11">
-                <div class="api">
-                    <div class="row align-items-center">
-                        <div class="col-lg-5 col-xl-4">
-                            <h2>More than 35 integrations</h2>
-                            <p>http4k Connect integrates with many popular Cloud and AI HTTP APIs.</p>
-                        </div>
-                        <div class="col-lg-7 offset-xl-1">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/openai.svg"
-                                                                                                      alt="openai"/>
-                                </div>
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/dynamodb.png"
-                                                                                                      alt="dynamodb"/>
-                                </div>
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/google-analytics.svg"
-                                                                                                      alt="google analytics"/>
-                                </div>
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/kms.png"
-                                                                                                      alt="kms"/></div>
 
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/sqs.png"
-                                                                                                      alt="sqs"/></div>
-
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/anthropic.png"
-                                                                                                      alt="anthropic"/>
-                                </div>
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/eventbridge.png"
-                                                                                                      alt="eventbridge"/>
-                                </div>
-
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/kafka.svg"
-                                                                                                      alt="kafka"/>
-                                </div>
-
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/gitlab.svg"
-                                                                                                      alt="gitlab"/>
-                                </div>
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/cloudwatch.png"
-                                                                                                      alt="cloudwatch"/>
-                                </div>
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/langchain.svg"
-                                                                                                      alt="langchain"/>
-                                </div>
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/firehose.svg"
-                                                                                                      alt="firehose"/>
-                                </div>
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/s3.png"
-                                                                                                      alt="s3"/></div>
-
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/mattermost.svg"
-                                                                                                      alt="mattermost"/>
-                                </div>
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/lambda.png"
-                                                                                                      alt="lambda"/>
-                                </div>
-                                <div class="col-6 col-md-3 col-lg-3 text-center integrationLogo"><img class="img-fluid"
-                                                                                                      src="/images/ollama.svg"
-                                                                                                      alt="ollama"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
-<div class="our-document">
+<div class="our-document pt-5 pb-5">
     <div class="developers-custom">
         <div class="container-fluid">
             <h2>It's simple to use and extend the built-in API Clients...</h2>
@@ -236,40 +158,20 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="learn">
-            <div class="row justify-content-center">
-                <div class="col-xs-10 col-md-8 col-lg-8 text-center">
-                    <h2>Learn from our examples</h2>
-                    <p class="lead">See how to harness the http4k Connect toolkit in your projects</p>
-                    <a class="btn btn-primary" href="https://www.http4k.org/ecosystem/connect/">Check it out</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-
-<div class="sponsors">
-    <div class="container">
+{{ if .Params.pricing_table }}
+<div class="container pt-5 pb-5" id="pricing">
+    <div class="pricing">
         <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-8 text-center">
-                <h2>Corporate sponsors</h2>
-                <p>http4k partners with selected organisations to fund and explore continued innovation around our
-                    projects.
-                    If your company is using http4k and would like to take advantage of this program,
-                    please <a href="mailto:info@http4k.org?subject=Corporate Sponsorship">get in touch</a>.
-                </p>
-                <a href="https://springernature.com"><img class="img-fluid"
-                                                          src="/images/SN_Technology_simple_black_resized.png"
-                                                          alt="Springer Nature Technology"/></a>
-                <a href="https://kotlinfoundation.org/"><img class="img-fluid" src="/images/kotlin-foundation.png"
-                                                             alt="Kotlin Foundation"/></a>
-            </div>
+            <h2>Pricing</h2>
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table pricing-table-id="prctbl_1Qk8bRG47sNzv4yXy1CGLRii"
+                                  publishable-key="pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0">
+            </stripe-pricing-table>
         </div>
     </div>
 </div>
-
-
+{{ end }}
 {{- partial "shared/footer.html" . -}}
 </body>
 </html>
