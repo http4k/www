@@ -2,6 +2,65 @@
 <html lang="en">
 {{ partial "head/head.html" . }}
 {{ partial "shared/landing_styles.html" . }}
+<style>
+    .card-custom .dash {
+        width: 46px;
+        height: 2px;
+        margin: 12px 0;
+    }
+
+    .gray-colour {
+        background-color: #f8f8f8;
+    }
+
+    .blue-colour {
+        background-color: #75d6ff;
+    }
+
+    .green-colour {
+        background-color: #b2ffa6;
+    }
+
+    .purple-colour {
+        background-color: #bd9eff;
+    }
+
+    .red-colour {
+        background-color: #FF4C4C;
+    }
+
+    .orange-colour {
+        background-color: #FF8C4C;
+    }
+
+    .yellow-colour {
+        background-color: #FFD54C;
+    }
+
+    .green-colour {
+        background-color: #4CFF74;
+    }
+
+    .blue-colour {
+        background-color: #4CAFFF;
+    }
+
+    .indigo-colour {
+        background-color: #7C4CFF;
+    }
+
+    .violet-colour {
+        background-color: #BD9EFF;
+    }
+
+    .pink-colour {
+        background-color: #FF4CA6;
+    }
+
+    .features {
+        background-color: white;
+    }
+</style>
 <body>
 <header class="landing">
     <div class="overlay"></div>
@@ -19,6 +78,23 @@
     </div>
 </header>
 <div class=".first-block">
+    <div class="features">
+        <div class="container">
+            <h2>Highlights</h2>
+            <div class="row">
+                {{ range .Params.features }}
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom">
+                        <img src="/images/{{ .icon }}.svg" alt="icon"/>
+                        <h4>{{ .title | markdownify }}</h4>
+                        <div class="dash {{ .colour }}-colour"></div>
+                        <p>{{ .description | markdownify}}</p>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
     <div style="padding-top: 275px" class="container">
         <div class="row justify-content-center">
             <div class="col-lg-11">
@@ -98,92 +174,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="features">
-        <div class="container">
-            <h2>Highlights</h2>
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
-                        <img src="/images/supportive.svg" alt="icon"/>
-                        <h4>Tiny <br/> footprint</h4>
-                        <div class="dash pink-color"></div>
-                        <p>In true http4k-style, Connect clients rely on minimal dependencies and zero reflection,
-                            perfect for lightweight and security-conscious applications.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
-                        <img src="/images/footprint.svg" alt="icon"/>
-                        <h4>Total <br/> modularisation</h4>
-                        <div class="dash violet-color"></div>
-                        <p>Extension of the clients is as simple as combining function calls or implementing a single
-                            data class with just 2 simple methods.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
-                        <img src="/images/support.svg" alt="icon"/>
-                        <h4>Kotlin-<br/> centric</h4>
-                        <div class="dash indigo-color"></div>
-                        <p>Every API Client leverages Result types and is exception-safe, so you can finally code like
-                            it's Kotlin that you're writing!</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
-                        <img src="/images/testability.svg" alt="icon"/>
-                        <h4>Battle-tested <br/> in the wild</h4>
-                        <div class="dash blue-color"></div>
-                        <p>Connect API Clients have been used to build high volume applications in Banking, Publishing,
-                            eCommerce & Government projects.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
-                        <img src="/images/support.svg" alt="icon"/>
-                        <h4>First class<br/> testability</h4>
-                        <div class="dash green-color"></div>
-                        <p>Most API Clients come with an in-memory cloud-service fake which can be used for lightning
-                            fast test suites or spun up as a server.<br><br>
-                            All fakes are chaos-enabled, so you can test what happens to your code in failure scenarios.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
-                        <img src="/images/testability.svg" alt="icon"/>
-                        <h4>Total <br/> control</h4>
-                        <div class="dash yellow-color"></div>
-                        <p>Most API Client libraries hide their HTTP client from you, stopping you from implementing
-                            observability or customisation.<br/><br/>
-                            Connect allows any http4k client module to be plugged in, so you can leverage the full power
-                            of http4k</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
-                        <img src="/images/supportive.svg" alt="icon"/>
-                        <h4>Ultimate<br/> type safety</h4>
-                        <div class="dash orange-color"></div>
-                        <p>API Clients leverage TinyTypes to provide typesafe coding and automatic
-                            serialisation.<br/><br/>
-                            Stop relying on unsafe, stringly-typed APIs.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
-                        <img src="/images/footprint.svg" alt="icon"/>
-                        <h4>Simple Key/value<br/> storage</h4>
-                        <div class="dash red-color"></div>
-                        <p>Ships with a storage abstraction for simple key-value storage, and adapters for popular
-                            backends.<br/><br/>
-                            Plugin in-memory, S3, JDBC or Redis with a single line of code!</p>
                     </div>
                 </div>
             </div>

@@ -13,4 +13,21 @@ navigation:
     -   name: pricing
         title: Pricing
         url: https://example.com
+features:
+    - title: Tiny</br> footprint
+      icon: supportive
+      colour: pink
+      description: In true http4k-style, Connect clients rely on minimal dependencies and zero reflection, perfect for lightweight and security-conscious applications.
+    - title: Total</br> modularisation
+      icon: footprint
+      colour: violet
+      description: Extension of the clients is as simple as combining function calls or implementing a single data class with just 2 simple methods.
+    - title: Kotlin-</br>centric
+      icon: support
+      colour: indigo
+      description: Every API Client leverages Result types and is exception-safe, so you can finally code like it's Kotlin that you're writing!
+    - title: Battle-tested</br> in the wild
+      icon: testability
+      colour: blue
+      description: Connect API Clients have been used to build high volume applications in Banking, Publishing, eCommerce & Government projects.
 ---
