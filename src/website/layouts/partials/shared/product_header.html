@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-xl navbar-dark">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img style="min-height: 40px;" src="{{ .Site.Params.Logo }}" alt="logo"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+                {{ range .Params.navigation }}
+                <li class="nav-item">
+                    <a class="nav-link text-white px-3" role="button" href="{{ .url }}">
+                        {{ .title }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>
