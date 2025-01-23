@@ -1,5 +1,7 @@
 ---
 draft: true
+sitemap:
+    disable: true
 title : "http4k Connect"
 type: "product"
 layout: "product"

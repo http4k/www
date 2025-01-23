@@ -1,5 +1,7 @@
 ---
 draft: true
+sitemap:
+    disable: true
 title: "http4k Hot Reload"
 type: "product"
 layout: "product"
