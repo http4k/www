@@ -92,6 +92,7 @@
         </div>
     </div>
 </header>
+{{ if .Params.pre_features_partial }}{{ partial .Params.pre_features_partial . }}{{ end }}
 <div class=".first-block">
     <div class="features">
         <div class="container">
@@ -129,10 +130,11 @@
                 {{ end }}
             </div>
         </div>
-</div>
-    {{ end }}
+    </div>
+{{ end }}
 </div>
 {{ end }}
+{{ if .Params.post_how_tos_partial }}{{ partial .Params.post_how_tos_partial . }}{{ end }}
 {{ if .Params.pricing_table }}
 <div class="container pt-5 pb-5" id="pricing">
     <div class="pricing">

@@ -8,6 +8,8 @@ layout: "product"
 tagline: Functional, modular and testable API Clients 
 description: http4k Connect is a lightweight API Client toolkit which includes libraries for connecting to popular third-party cloud services and AI backends
 docs_link: https://www.http4k.org/ecosystem/connect/
+pre_features_partial: partials/product/connect_integrations.html
+post_how_tos_partial: partials/product/connect_examples.html
 features:
     - title: Tiny</br> footprint
       icon: supportive
