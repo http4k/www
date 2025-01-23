@@ -39,4 +39,27 @@ features:
       icon: footprint
       colour: red
       description: Ships with a storage abstraction for simple key-value storage, and adapters for popular backends.</br></br>Plugin in-memory, S3, JDBC or Redis with a single line of code!
+how_tos:
+    - section: It's simple to use and extend the built-in API Clients...
+      steps:
+          - description: 1. Instantiate your API Client and use, injecting your own HTTP client for observability.
+            image: using-client.png
+            alt: Using a Connect API Client
+          - description: 2. Is your API action not supported? No problem - simply create your own by extension!
+            image: extending-client.png
+            alt: Extending a Connect API Client
+    - section: ... or modularise your own API Clients in 4 easy steps ...
+      steps:
+          - description: 1. An <b>API Action</b> is just an interface with methods for marshalling the contents of HTTP messages.
+            image: action.png
+            alt: Defining our Actions
+          - description: 2. An <b>API Client</b> is just a class with a single function and handles with the transport for the remote API.
+            image: api.png
+            alt: Defining an API action
+          - description: 3. Implement any individual Action for your API with <b>a single class</b> and a <b>extension method</b>. Compose multiple calls together without bloating your API Client!
+            image: operation.png
+            alt: Defining a custom Operation
+          - description: 4. <b>Instantiate the API Client</b> by passing in the HTTP client and other transport requirements, and call it as normal. Exceptions are trapped in the returned Result.
+            image: usage.png
+            alt: Defining an API action
 ---

@@ -107,63 +107,27 @@
 
     </div>
 </div>
-
+{{ if .Params.how_tos }}
 <div class="our-document pt-5 pb-5">
-    <div class="developers-custom">
+    {{ range .Params.how_tos }}
+    <div class="developers-custom pb-5">
         <div class="container-fluid">
-            <h2>It's simple to use and extend the built-in API Clients...</h2>
+            <h2>{{ .section }}</h2>
             <div class="row">
-                <div class="col-lg-1"></div>
+                {{ range $index, $element := .steps }}
+                {{ if (modBool $index 2)  }}<div class="col-lg-1"></div>{{end}}
                 <div class="col-lg-5 text-center">
-                    <p>1. Instantiate your API Client and use, injecting your own HTTP client for observability.</p>
-                    <img class="img-fluid" style="border-radius: 8px" src="/images/using-client.png"
-                         alt="Using a Connect API Client"/>
+                    <p>{{ $element.description | markdownify }}</p>
+                    <img class="img-fluid" style="border-radius: 8px" src="/images/{{ $element.image }}" alt="{{ $element.alt }}"/>
                 </div>
-                <div class="col-lg-5 text-center">
-                    <p>2. Is your API action not supported? No problem - simply create your own by extension!</p>
-                    <img class="img-fluid" style="border-radius: 8px" src="/images/extending-client.png"
-                         alt="Extending a Connect API Client"/>
-                </div>
-                <div class="col-lg-1"></div>
+                {{ if not (modBool $index 2)  }}<div class="col-lg-1"></div>{{end}}
+                {{ end }}
             </div>
         </div>
-    </div>
-    <div class="developers-custom">
-        <div class="container-fluid">
-            <h2>... or modularise your own API Clients in 4 easy steps ...</h2>
-            <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-5 text-center">
-                    <p>1. An <b>API Action</b> is just an interface with methods for marshalling the contents of HTTP
-                        messages.</p>
-                    <img class="img-fluid" style="border-radius: 8px" src="/images/action.png" alt="Defining our Actions"/>
-                </div>
-                <div class="col-lg-5 text-center">
-                    <p>2. An <b>API Client</b> is just a class with a single function and handles with the
-                        transport
-                        for the remote API.</p>
-                    <img class="img-fluid" style="border-radius: 8px" src="/images/api.png" alt="Defining an API action"/>
-                </div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-5 text-center">
-                    <p>3. Implement any individual Action for your API with <b>a single class</b> and a <b>extension
-                        method</b>. Compose multiple calls together without bloating your API Client!
-                    </p>
-                    <img class="img-fluid" style="border-radius: 8px" src="/images/operation.png"
-                         alt="Defining a custom Operation"/>
-                </div>
-                <div class="col-lg-5 text-center">
-                    <p>4. <b>Instantiate the API Client</b> by passing in the HTTP client and other transport
-                        requirements, and call it as normal. Exceptions are trapped in the returned Result.</p>
-                    <img class="img-fluid" style="border-radius: 8px" src="/images/usage.png"
-                         alt="Defining an API action"/>
-                </div>
-                <div class="col-lg-1"></div>
-            </div>
-        </div>
-    </div>
 </div>
+    {{ end }}
+</div>
+{{ end }}
 {{ if .Params.pricing_table }}
 <div class="container pt-5 pb-5" id="pricing">
     <div class="pricing">
