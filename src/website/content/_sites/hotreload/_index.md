@@ -7,11 +7,11 @@ type: "product"
 layout: "product"
 tagline: Save time on server restarts!
 description: http4k Hot Reload automatically restart your server after code changes, saving you time during development
-docs_link: https://www.http4k.org/hotreload/
+docs_link: https://http4k.org/ecosystem/http4k/reference/hot_reload/
 navigation:
     -   name: docs
         title: Documentation
-        url: https://www.http4k.org/hotreload/
+        url: https://http4k.org/ecosystem/http4k/reference/hot_reload/
     -   name: pricing
         title: Pricing
         url: "#pricing"
