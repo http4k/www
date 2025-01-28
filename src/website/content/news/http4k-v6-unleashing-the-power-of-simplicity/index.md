@@ -210,3 +210,22 @@ SSE. [FIXME] <-- Insert breaking changes
 5. Update your project to use the latest version of http4k v6.
 6. Deal with any breaking changes - these are detailed below.
 
+
+
+### Notes:
+
+- Move security to security core - share between SSE and HTTP
+- Debug to all protocols
+- Unify routing across all protocols
+- MCP Desktop - no reflection
+- MCP SDK - no reflection
+- Hot reload - debuggable
+- Bridge modules
+- Upgrades to all modules
+- Upgrade to java 21
+- polyhandler DSL
+- moving code out of core, bridge
+- traffic module
+- module moves
+- datastar module
+
