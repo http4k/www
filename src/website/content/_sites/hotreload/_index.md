@@ -5,6 +5,7 @@ sitemap:
 title: "http4k Hot Reload"
 type: "product"
 layout: "product"
+tier: pro
 tagline: Save time on server restarts!
 description: http4k Hot Reload automatically restart your server after code changes, saving you time during development
 docs_link: https://http4k.org/ecosystem/http4k/reference/hot_reload/
