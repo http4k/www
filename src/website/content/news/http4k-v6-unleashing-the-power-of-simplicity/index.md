@@ -221,7 +221,7 @@ SSE. [FIXME] <-- Insert breaking changes
 - Bridge modules
 - Upgrades to all modules
 - Upgrade to java 21
-- polyhandler DSL
+- Polyhandler DSL
 - moving code out of core, bridge
 - traffic module
 - module moves
@@ -231,5 +231,6 @@ SSE. [FIXME] <-- Insert breaking changes
   - MCP Desktop - no reflection
   - MCP SDK - no reflection
   - Hot reload - debuggable
+- [Breaking[ moshi - have added long
 
 
