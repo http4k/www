@@ -2,7 +2,6 @@ package content.ecosystem.http4k.reference.contracts
 
 import org.http4k.contract.ContractRoute
 import org.http4k.contract.Tag
-import org.http4k.contract.bind
 import org.http4k.contract.bindCallback
 import org.http4k.contract.contract
 import org.http4k.contract.div
@@ -29,6 +28,7 @@ import org.http4k.format.Klaxon.json
 import org.http4k.lens.Path
 import org.http4k.lens.Query
 import org.http4k.lens.int
+import org.http4k.routing.bind
 import org.http4k.routing.routes
 
 // for this example we're using Jackson - note that the auto method imported is an extension
