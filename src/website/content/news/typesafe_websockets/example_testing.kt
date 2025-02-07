@@ -7,8 +7,8 @@ import org.http4k.core.Method.GET
 import org.http4k.core.Request
 import org.http4k.core.Uri
 import org.http4k.lens.Path
+import org.http4k.routing.websocket.bind
 import org.http4k.routing.websockets
-import org.http4k.routing.ws.bind
 import org.http4k.server.Undertow
 import org.http4k.server.asServer
 import org.http4k.testing.testWsClient
@@ -24,7 +24,7 @@ val namePath = Path.of("name")
 
 // here is our websocket app - it uses dynamic path binding and lenses
 val testApp: WsHandler = websockets(
-    "/{name}" bind { req: Request ->
+    "/{name}" bind  { req: Request ->
         WsResponse { ws ->
             val name = namePath(req)
             ws.send(WsMessage("hello $name"))

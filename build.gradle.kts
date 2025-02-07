@@ -222,6 +222,8 @@ dependencies {
     implementation("org.http4k:http4k-connect-storage-redis")
     testApi("org.http4k:http4k-connect-storage-s3")
 
+    testApi("org.http4k.pro:http4k-tools-hotreload")
+
     testApi(Testing.junit.jupiter.engine)
     testApi(Testing.junit.jupiter.api)
 

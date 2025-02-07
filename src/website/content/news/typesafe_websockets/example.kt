@@ -6,10 +6,10 @@ import org.http4k.core.Response
 import org.http4k.core.Status.Companion.OK
 import org.http4k.format.Jackson.auto
 import org.http4k.lens.Path
+import org.http4k.routing.websocket.bind
 import org.http4k.routing.websockets
-import org.http4k.routing.ws.bind
 import org.http4k.server.Jetty
-import org.http4k.server.PolyHandler
+import org.http4k.core.PolyHandler
 import org.http4k.server.asServer
 import org.http4k.websocket.Websocket
 import org.http4k.websocket.WsHandler

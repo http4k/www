@@ -1,6 +1,5 @@
 package content.howto.create_a_swagger_ui
 
-import org.http4k.contract.ContractRoutingHttpHandler
 import org.http4k.contract.contract
 import org.http4k.contract.meta
 import org.http4k.contract.openapi.ApiInfo
@@ -13,8 +12,9 @@ import org.http4k.core.Response
 import org.http4k.core.Status
 import org.http4k.core.with
 import org.http4k.lens.string
+import org.http4k.routing.RoutingHttpHandler
 
-fun createContractHandler(descriptionPath: String): ContractRoutingHttpHandler {
+fun createContractHandler(descriptionPath: String): RoutingHttpHandler {
     val greetingLens = Body.string(ContentType.TEXT_PLAIN).toLens()
 
     // Define a single http route for our contract

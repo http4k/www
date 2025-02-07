@@ -7,8 +7,8 @@ import org.http4k.core.Method.GET
 import org.http4k.core.Request
 import org.http4k.core.Uri
 import org.http4k.lens.Path
+import org.http4k.routing.websocket.bind
 import org.http4k.routing.websockets
-import org.http4k.routing.ws.bind
 import org.http4k.server.Undertow
 import org.http4k.server.asServer
 import org.http4k.testing.testWsClient
