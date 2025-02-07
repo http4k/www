@@ -3,7 +3,7 @@ package content.ecosystem.http4k.reference.clients
 import org.http4k.client.WebsocketClient
 import org.http4k.core.Request
 import org.http4k.core.Uri
-import org.http4k.routing.bindWs
+import org.http4k.routing.websocket.bind
 import org.http4k.routing.websockets
 import org.http4k.server.Jetty
 import org.http4k.server.asServer
@@ -14,7 +14,7 @@ fun main() {
 
     // a standard websocket app
     val server = websockets(
-        "/bob" bindWs
+        "/bob" bind
             { _: Request ->
                 WsResponse { ws ->
                     ws.send(WsMessage("bob"))
