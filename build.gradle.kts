@@ -22,6 +22,7 @@ apply(plugin = "java")
 apply(plugin = "kotlin")
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
