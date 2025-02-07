@@ -80,7 +80,7 @@ class UserDbHandler : GraphQLWithContextHandler<String> {
 }
 
 fun App(): HttpHandler {
-    val user = RequestKey.of<String>("user")
+    val user = RequestKey.required<String>("user")
 
     return AddUserToContext(user)
         .then(routes("/graphql" bind graphQL(UserDbHandler(), user)))

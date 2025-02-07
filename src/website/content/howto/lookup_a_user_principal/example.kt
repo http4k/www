@@ -11,7 +11,7 @@ import org.http4k.lens.RequestKey
 
 fun main() {
 
-    val credentials = RequestKey.of<Credentials>("credentials")
+    val credentials = RequestKey.required<Credentials>("credentials")
 
     val app = BearerAuth(credentials) {
         if (it == "42") Credentials("user", "pass") else null
