@@ -13,7 +13,7 @@ import org.http4k.routing.routes
 import org.http4k.routing.sse
 import org.http4k.routing.sse.bind
 import org.http4k.server.Helidon
-import org.http4k.server.PolyHandler
+import org.http4k.core.PolyHandler
 import org.http4k.server.asServer
 import org.http4k.sse.SseResponse
 import org.http4k.sse.sendMergeFragments

@@ -8,7 +8,7 @@ import org.http4k.lens.Path
 import org.http4k.lens.accept
 import org.http4k.routing.sse
 import org.http4k.routing.sse.bind
-import org.http4k.server.PolyHandler
+import org.http4k.core.PolyHandler
 import org.http4k.server.Undertow
 import org.http4k.server.asServer
 import org.http4k.sse.Sse
