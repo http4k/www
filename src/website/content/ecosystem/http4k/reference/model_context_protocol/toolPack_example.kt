@@ -1,19 +1,21 @@
 package content.ecosystem.http4k.reference.model_context_protocol
 
 import org.http4k.mcp.server.capability.CapabilityPack
+import org.http4k.routing.bind
 
 // We can compose multiple different capabilities into a single pack
 fun AvengersDiaryPack(): CapabilityPack {
+    val blackPanther = DiaryTool("Black Panther")
+    val blackWidow = DiaryTool("Black Widow")
+    val captain = DiaryTool("Captain America")
+    val hawkeye = DiaryTool("Hawkeye")
+    val hulk = DiaryTool("Hulk")
+
     return CapabilityPack(
-        DiaryTool("Black Panther").capability,
-        DiaryTool("Black Widow").capability,
-        DiaryTool("Captain America").capability,
-        DiaryTool("Hawkeye").capability,
-        DiaryTool("Hulk").capability,
-        DiaryTool("Ironman").capability,
-        DiaryTool("Spiderman").capability,
-        DiaryTool("Thor").capability,
-        DiaryTool("Wanda Maximoff").capability,
-        DiaryTool("Winter Soldier").capability,
+        blackPanther.tool bind blackPanther.handler,
+        blackWidow.tool bind blackWidow.handler,
+        captain.tool bind captain.handler,
+        hawkeye.tool bind hawkeye.handler,
+        hulk.tool bind hulk.handler,
     )
 }

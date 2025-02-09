@@ -7,8 +7,6 @@ import org.http4k.mcp.ToolRequest
 import org.http4k.mcp.ToolResponse
 import org.http4k.mcp.model.Content
 import org.http4k.mcp.model.Tool
-import org.http4k.mcp.server.capability.ToolCapability
-import org.http4k.routing.bind
 import java.time.LocalDate
 
 // A tool that details a person's diary appointments.
@@ -39,9 +37,6 @@ class DiaryTool(val name: String) {
 
         ToolResponse.Ok(appointmentContent)
     }
-
-    // the binding of the tool to the handler - this is added to the MCP Server
-    val capability: ToolCapability = tool bind handler
 }
 
 // invoke/test the tool offline - just invoke it like a function

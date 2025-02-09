@@ -6,8 +6,6 @@ import org.http4k.mcp.CompletionResponse
 import org.http4k.mcp.model.Completion
 import org.http4k.mcp.model.CompletionArgument
 import org.http4k.mcp.model.Reference
-import org.http4k.mcp.server.capability.CompletionCapability
-import org.http4k.routing.bind
 
 object ProvideCompletionOptionsForPrompt {
     // the reference of the completion
@@ -22,8 +20,6 @@ object ProvideCompletionOptionsForPrompt {
         CompletionResponse(Completion(allUsers.filter { it.startsWith(prefix) }))
     }
 
-    // the binding of the completion to the handler - this is added to the MCP Server
-    val capability: CompletionCapability = reference bind handler
 }
 
 // invoke/test the completion offline - just invoke it like a function

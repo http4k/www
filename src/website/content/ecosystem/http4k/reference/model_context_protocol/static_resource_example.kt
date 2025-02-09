@@ -5,28 +5,36 @@ import org.http4k.core.Method.GET
 import org.http4k.core.Request
 import org.http4k.core.Response
 import org.http4k.core.Uri
+import org.http4k.mcp.ResourceHandler
+import org.http4k.mcp.ResourceRequest
 import org.http4k.mcp.ResourceResponse
 import org.http4k.mcp.model.Resource
 import org.http4k.mcp.model.ResourceName
-import org.http4k.mcp.server.capability.ResourceCapability
-import org.http4k.routing.bind
 import org.jsoup.Jsoup
 
-// this function provides a static resource that contains all the links from the http4k website
-fun LookupAllLinksFromWebResource(): ResourceCapability {
-    val http = JavaHttpClient()
-    return Resource.Static(Uri.of("https://http4k.org"), ResourceName.of("HTTP4K"), "description") bind {
-        val htmlPage = http(Request(GET, it.uri))
+
+object LookupAllLinksFromWebResource {
+
+    val resource = Resource.Static(Uri.of("https://http4k.org"), ResourceName.of("HTTP4K"), "description")
+
+    // this function provides a static resource that contains all the links from the http4k website
+    val handler: ResourceHandler = {
+        val htmlPage = JavaHttpClient()(Request(GET, it.uri))
 
         val links = getAllLinksFrom(htmlPage)
             .map { Resource.Content.Text(it.text(), Uri.of(it.attr("href"))) }
 
         ResourceResponse(links)
     }
+
+    private fun getAllLinksFrom(htmlPage: Response) = Jsoup.parse(htmlPage.bodyString())
+        .allElements.toList()
+        .filter { it.tagName() == "a" }
+        .filter { it.hasAttr("href") }
 }
 
-private fun getAllLinksFrom(htmlPage: Response) = Jsoup.parse(htmlPage.bodyString())
-    .allElements.toList()
-    .filter { it.tagName() == "a" }
-    .filter { it.hasAttr("href") }
-
+// invoke/test the prompt offline - just invoke it like a function
+fun main() =
+    println(
+        LookupAllLinksFromWebResource.handler(ResourceRequest(Uri.of("https://http4k.org")))
+    )

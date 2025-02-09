@@ -10,8 +10,6 @@ import org.http4k.mcp.model.Message
 import org.http4k.mcp.model.Prompt
 import org.http4k.mcp.model.PromptName
 import org.http4k.mcp.model.Role.assistant
-import org.http4k.mcp.server.capability.PromptCapability
-import org.http4k.routing.bind
 
 object GreetingPrompt {
     // arguments
@@ -29,9 +27,6 @@ object GreetingPrompt {
         }
         PromptResponse(listOf(Message(assistant, content)))
     }
-
-    // the binding of the prompt to the handler - this is added to the MCP Server
-    val capability: PromptCapability = prompt bind handler
 }
 
 // invoke/test the prompt offline - just invoke it like a function
