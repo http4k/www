@@ -19,7 +19,7 @@ fun DiaryTool(name: String): ToolCapability {
     )
     return tool bind {
         val date = arg(it)
-        val appointmentContent = calendar[date]!!.map { Content.Text("$date: $it") }
+        val appointmentContent = calendar[date]?.map { Content.Text("$date: $it") } ?: emptyList()
 
         ToolResponse.Ok(appointmentContent)
     }
