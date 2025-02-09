@@ -13,8 +13,11 @@ description: Feature overview of the http4k-mcp-sdk module
 ```kotlin
 dependencies {
     { { < http4k_bom > } }
-    implementation("org.http4k:http4k-mcp-sdk")
-    implementation("org.http4k:http4k-mcp-desktop")
+    // If you are developing an MCP enabled service (StdIO or SSE)
+    implementation("org.http4k.pro:http4k-mcp-sdk")
+    
+    // If you want to build the MCP desktop client from source
+    implementation("org.http4k.pro:http4k-mcp-desktop")
 }
 ```
 
@@ -86,6 +89,6 @@ The MCP support in http4k consists of two modules:
 
 #### Example
 
-{{< kotlin file="main.kt" >}}
+{{< kotlin file="server.kt" >}}
 
 

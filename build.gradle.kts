@@ -27,7 +27,6 @@ repositories {
 }
 
 tasks {
-
     java {
         sourceCompatibility = VERSION_21
         targetCompatibility = VERSION_21
@@ -219,10 +218,13 @@ dependencies {
     testApi("org.http4k:http4k-connect-storage-core")
     testApi("org.http4k:http4k-connect-storage-http")
     testApi("org.http4k:http4k-connect-storage-jdbc")
-    implementation("org.http4k:http4k-connect-storage-redis")
+    testApi("org.http4k:http4k-connect-storage-redis")
     testApi("org.http4k:http4k-connect-storage-s3")
 
     testApi("org.http4k.pro:http4k-tools-hotreload")
+
+    testApi("org.http4k.pro:http4k-mcp-sdk")
+    testApi("org.http4k.pro:http4k-mcp-desktop")
 
     testApi(Testing.junit.jupiter.engine)
     testApi(Testing.junit.jupiter.api)
