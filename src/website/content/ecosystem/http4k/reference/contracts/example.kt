@@ -1,8 +1,5 @@
 package content.ecosystem.http4k.reference.contracts
 
-// for this example we're using Jackson - note that the auto method imported is an extension
-// function that is defined on the Jackson instance
-
 import org.http4k.contract.ContractRoute
 import org.http4k.contract.Tag
 import org.http4k.contract.bind
@@ -33,6 +30,9 @@ import org.http4k.lens.Path
 import org.http4k.lens.Query
 import org.http4k.lens.int
 import org.http4k.routing.routes
+
+// for this example we're using Jackson - note that the auto method imported is an extension
+// function that is defined on the Jackson instance
 
 // 1. this route has no dynamic path segments and simply echoes the body back. We are also adding various metadata
 // to the route, which will be used in the OpenAPI documentation. All of the metadata is optional.
