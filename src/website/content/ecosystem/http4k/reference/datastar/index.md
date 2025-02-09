@@ -18,7 +18,7 @@ dependencies {
 
 ### About
 
-Utilities to support applications supporting [[Datastar] development. Allows you to add reactivity
+Utilities to support applications supporting [Datastar] development. Allows you to add reactivity
 to your application by using the lightweight Datastar library without the need for a heavy frontend framework.
 
 ### What is Datastar?
@@ -43,10 +43,9 @@ to allow streaming, and is activated simply by requesting the `text/event-stream
 An on-the-wire SSE message looks like this - a set of name/value field pairs, with each message terminated by 2
 newlines:
 
-```
+```text
 event: new content 
 data: Hello, world!
-
 ```
 
 Note that there is nothing inherently special about SSE - these requests and responses are just HTTP requests, and
@@ -62,7 +61,7 @@ There are 2 main types of message that you will normally send in Datastar respon
    attribute on an element in the DOM, which is then replaced with the new content. Many fragments can be sent in a
    single event, and only the events name and the fragments data are required.
 
-```
+```text
 event: datastar-merge-fragments
 data: fragments <div id="hello">Hello, world!</div>
 data: settleDuration 300
@@ -74,14 +73,13 @@ data: useViewTransition false
 2. **Merge-Signals:** This is a message that contains a set of signals (data) which is used to update the state of
    various models on the client. See the [Datastar] docs for more information on how to use these signals.
 
-```
+```text
 event:datastar-merge-signals
 data:signals {foo: {bar: 1}}
 data:onlyIfMissing false
-
 ```
 
-### Why this is useful?
+# Why this is useful?
 
 Akin to popular frameworks such as React, the fragmenting of page content allows each part of the page to be developed,
 loaded and updated independently, which leads to smaller more modular and reusable templates and better user experience.
