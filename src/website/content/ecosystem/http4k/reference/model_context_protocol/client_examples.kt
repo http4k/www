@@ -7,11 +7,18 @@ import org.http4k.core.Request
 import org.http4k.lens.int
 import org.http4k.lens.with
 import org.http4k.mcp.PromptRequest
+import org.http4k.mcp.SamplingRequest
 import org.http4k.mcp.ToolRequest
 import org.http4k.mcp.client.SseMcpClient
+import org.http4k.mcp.model.Content
+import org.http4k.mcp.model.MaxTokens
 import org.http4k.mcp.model.McpEntity
+import org.http4k.mcp.model.Message
+import org.http4k.mcp.model.ModelIdentifier
 import org.http4k.mcp.model.Prompt
 import org.http4k.mcp.model.PromptName
+import org.http4k.mcp.model.Role.assistant
+import org.http4k.mcp.model.Role.user
 import org.http4k.mcp.model.ToolName
 import org.http4k.mcp.protocol.ClientCapabilities
 import org.http4k.mcp.protocol.Version
@@ -52,4 +59,21 @@ fun main() {
                 )
             )
     )
+
+    println(
+        ">>> Sampling\n" +
+            client.sampling().sample(
+                ModelIdentifier.of("my-llm"),
+                SamplingRequest(
+                    listOf(
+                        Message(user, Content.Text("Make me a sandwich!")),
+                        Message(assistant, Content.Text("You do not have the necessary authority.")),
+                        Message(user, Content.Text("Sudo make me a sandwich!")),
+                    ), MaxTokens.of(123123)
+                )
+            ).toList()
+    )
+
+    client.close()
+    println("DONE")
 }
