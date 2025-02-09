@@ -75,5 +75,4 @@ fun main() {
     )
 
     client.close()
-    println("DONE")
 }
