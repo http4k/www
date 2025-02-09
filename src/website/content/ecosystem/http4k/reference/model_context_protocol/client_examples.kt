@@ -85,7 +85,7 @@ fun main() {
     println(
         ">>> Resource reading\n" +
             client.resources().read(
-                ResourceRequest(Uri.of("https://www.http4k.org"))
+                ResourceRequest(Uri.of("https://http4k.org"))
             )
     )
 
