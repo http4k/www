@@ -12,6 +12,7 @@ import org.http4k.mcp.server.capability.ResourceCapability
 import org.http4k.routing.bind
 import org.jsoup.Jsoup
 
+// this function provides a static resource that contains all the links from the http4k website
 fun LookupAllLinksFromWebResource(): ResourceCapability {
     val http = JavaHttpClient()
     return Resource.Static(Uri.of("https://http4k.org"), ResourceName.of("HTTP4K"), "description") bind {

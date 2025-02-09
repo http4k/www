@@ -4,12 +4,16 @@ import org.http4k.client.JavaHttpClient
 import org.http4k.core.BodyMode
 import org.http4k.core.Method.GET
 import org.http4k.core.Request
+import org.http4k.core.Uri
 import org.http4k.lens.int
 import org.http4k.lens.with
+import org.http4k.mcp.CompletionRequest
 import org.http4k.mcp.PromptRequest
+import org.http4k.mcp.ResourceRequest
 import org.http4k.mcp.SamplingRequest
 import org.http4k.mcp.ToolRequest
 import org.http4k.mcp.client.SseMcpClient
+import org.http4k.mcp.model.CompletionArgument
 import org.http4k.mcp.model.Content
 import org.http4k.mcp.model.MaxTokens
 import org.http4k.mcp.model.McpEntity
@@ -17,6 +21,7 @@ import org.http4k.mcp.model.Message
 import org.http4k.mcp.model.ModelIdentifier
 import org.http4k.mcp.model.Prompt
 import org.http4k.mcp.model.PromptName
+import org.http4k.mcp.model.Reference
 import org.http4k.mcp.model.Role.assistant
 import org.http4k.mcp.model.Role.user
 import org.http4k.mcp.model.ToolName
@@ -50,6 +55,11 @@ fun main() {
     )
 
     println(
+        ">>> Prompt list\n" +
+            client.prompts().list()
+    )
+
+    println(
         ">>> Prompt calling\n" +
             client.prompts().get(
                 PromptName.of("Greet"),
@@ -57,6 +67,25 @@ fun main() {
                     Prompt.Arg.required("name") of "David",
                     Prompt.Arg.int().optional("age") of 30
                 )
+            )
+    )
+
+    println(
+        ">>> Completions\n" +
+            client.completions().complete(
+                CompletionRequest(Reference.Prompt("Greet"), CompletionArgument("prefix", "Al"))
+            )
+    )
+
+    println(
+        ">>> Resource list\n" +
+            client.resources().list()
+    )
+
+    println(
+        ">>> Resource reading\n" +
+            client.resources().read(
+                ResourceRequest(Uri.of("https://www.http4k.org"))
             )
     )
 
