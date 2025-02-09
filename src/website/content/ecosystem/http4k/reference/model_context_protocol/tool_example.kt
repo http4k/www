@@ -12,7 +12,7 @@ import java.time.LocalDate
 // A tool that details a person's diary appointments.
 class DiaryTool(val name: String) {
 
-    // argument inputs for the tool
+    // argument inputs lenses for the tool
     val arg = Tool.Arg.localDate().required("date", "date in format yyyy-mm-dd")
 
     // the description of the tool exposed to clients

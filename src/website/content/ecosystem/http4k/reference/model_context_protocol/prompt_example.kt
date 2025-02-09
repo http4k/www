@@ -12,7 +12,8 @@ import org.http4k.mcp.model.PromptName
 import org.http4k.mcp.model.Role.assistant
 
 object GreetingPrompt {
-    // arguments
+
+    // argument lenses for the prompt
     val name = Prompt.Arg.required("name", "the name of the person to greet")
     val age = Prompt.Arg.int().optional("age", "the age of the person to greet")
 
