@@ -14,12 +14,12 @@ fun main() {
     // creates the MCP server with all of the capabilities
     val http4kMcp = mcpSse(
         ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0"), PromptsChanged),
-        DiaryTool("David"),
-        DiaryTool("Ivan"),
-        GreetingPrompt(),
+        DiaryTool("David").capability,
+        DiaryTool("Ivan").capability,
+        GreetingPrompt.capability,
         SampleFromOurLocalLlm(),
         LookupAllLinksFromWebResource(),
-        ProvideCompletionOptionsForPrompt(),
+        ProvideCompletionOptionsForPrompt.capability,
     )
 
     http4kMcp.debug().asServer(Helidon(3001)).start()

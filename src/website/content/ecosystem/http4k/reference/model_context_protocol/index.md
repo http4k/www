@@ -15,7 +15,7 @@ dependencies {
     { { < http4k_bom > } }
     // If you are developing an MCP enabled service (StdIO or SSE)
     implementation("org.http4k.pro:http4k-mcp-sdk")
-    
+
     // If you want to build the MCP desktop client from source
     implementation("org.http4k.pro:http4k-mcp-desktop")
 }
@@ -69,15 +69,7 @@ communicate with one or more "servers" providing live data to solve the problem.
 http4k provides very good support for the Model Context Protocol, and has been designed to make it easy to build your
 own MCP-compliant servers in Kotlin, using the familiar http4k methodology of simple and composable functional
 protocols. Each of the capabilities is modelled as a "binding" between a capability description and a function that
-exposes the capability. For example, the Tool capability is modelled as a function `(ToolReqeust) -> ToolResponse`, and
-can be bound to a tool definition which describes it's arguments using the http4k Lens system:
-
-```kotlin
-val date = Tool.Arg.localDate().required("date", "date in format yyyy-mm-dd")
-val tool = Tool("name", "description", date) bind { req: ToolRequest ->
-    ToolResponse.Ok(listOf(Content.Text("The date is ${date(req)}")))
-}
-```
+exposes the capability. See [Capability Types](#capability-types) for more details.
 
 The MCP support in http4k consists of two modules:
 
@@ -87,8 +79,26 @@ The MCP support in http4k consists of two modules:
 - `http4k-mcp-desktop` - A desktop client that bridges StdIO-based clients such as Claude Desktop with your own MCP
   servers operating over HTTP/SSE, either locally or remotely.
 
+#### Capability Types
+
+##### Tools
+
+Tools allow external MCP clients such as LLMs to request the server to perform bespoke functionality such as invoking an
+API. The Tool capability is modelled as a function `typealias ToolHandler = (ToolRequest) -> ToolResponse`, and can be
+bound to a tool definition which describes it's arguments using the http4k Lens system:
+
+{{< kotlin file="tool_example.kt" >}}
+
+##### Prompts
+
+Prompts allow the server to generate a prompt based on the client's inputs. The Prompt capability is modelled as a
+function `(PromptRequest) -> PromptResponse`, and can be bound to a prompt definition which describes it's arguments
+using the http4k Lens system.
+
+{{< kotlin file="prompt_example.kt" >}}
+
 #### Example
 
-{{< kotlin file="server.kt" >}}
+{{< kotlin file="server_example.kt" >}}
 
 

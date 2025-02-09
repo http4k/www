@@ -6,6 +6,7 @@ import org.http4k.core.Method.GET
 import org.http4k.core.Request
 import org.http4k.core.Uri
 import org.http4k.lens.int
+import org.http4k.lens.localDate
 import org.http4k.lens.with
 import org.http4k.mcp.CompletionRequest
 import org.http4k.mcp.PromptRequest
@@ -24,9 +25,11 @@ import org.http4k.mcp.model.PromptName
 import org.http4k.mcp.model.Reference
 import org.http4k.mcp.model.Role.assistant
 import org.http4k.mcp.model.Role.user
+import org.http4k.mcp.model.Tool
 import org.http4k.mcp.model.ToolName
 import org.http4k.mcp.protocol.ClientCapabilities
 import org.http4k.mcp.protocol.Version
+import java.time.LocalDate
 
 fun main() {
     val client = SseMcpClient(
@@ -50,7 +53,9 @@ fun main() {
         ">>> Tool calling\n" +
             client.tools().call(
                 ToolName.of("diary_for_David"),
-                ToolRequest(mapOf("date" to "2025-03-21"))
+                ToolRequest().with(
+                    Tool.Arg.localDate().required("date") of LocalDate.parse("2025-03-21")
+                )
             )
     )
 
