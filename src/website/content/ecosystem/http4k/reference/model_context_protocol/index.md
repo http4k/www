@@ -21,7 +21,7 @@ dependencies {
 }
 ```
 
-### About
+## About
 
 The [Model Context Protocol](https://modelcontextprotocol.info/) is an open standard created by Anthropic that defines
 how apps can feed information to AI language models. It creates a uniform way to link these models with various data
@@ -53,7 +53,7 @@ The MCP capabilities include:
 - **Completions:** The server provides auto-completion of options for a particular Prompt or Resource.
 - **Sampling:** One MCP entity can request an LLN completion for text or binary content from another entity.
 
-#### Example: Restaurant booking
+### Example: Restaurant booking
 
 Let's say you want to use an LLM to help you book a restaurant for you and some friends. An LLM could help coordinate
 this by checking everyone's diary for free dates, finding a restaurant that everyone likes, and then booking a table.
@@ -64,24 +64,38 @@ communicate with one or more "servers" providing live data to solve the problem.
 - **Client:** Claude Desktop
 - **Server Tools:** User diaries, Restaurant Database, Booking System
 
-### http4k ❤️ Model Context Protocol
+## http4k ❤️ Model Context Protocol
 
-http4k provides very good support for the Model Context Protocol, and has been designed to make it easy to build your
+http4k provides very good support for the **Model Context Protocol**, and has been designed to make it easy to build
+your
 own MCP-compliant servers in Kotlin, using the familiar http4k methodology of simple and composable functional
-protocols. Each of the capabilities is modelled as a "binding" between a capability description and a function that
+protocols. Each of the capabilities is modelled as a **binding** between a capability description and a function that
 exposes the capability. See [Capability Types](#capability-types) for more details.
 
-The MCP support in http4k consists of two modules:
+The MCP support in http4k consists of two modules - `http4k-mcp-sdk` and `http4k-mcp-desktop`
 
-- `http4k-mcp-sdk` - The core SDK for working with the Model Context Protocol. You can build your own MCP-compliant
-  applications using this module by plugging in capabilities into the server. The SDK provides a simple way to create
-  either SSE or StdIO servers.
-- `http4k-mcp-desktop` - A desktop client that bridges StdIO-based clients such as Claude Desktop with your own MCP
-  servers operating over HTTP/SSE, either locally or remotely.
+# http4k-mcp-sdk
 
-#### Capability Types
+The core SDK for working with the Model Context Protocol. You can build your own MCP-compliant applications using this
+module by plugging in capabilities into the server. The **http4k-mcp-sdk module** provides a simple way to create either
+**SSE**, **StdIo** or **Websocket** based servers. For StdIo-based servers, we recommend compiling your server to
+GraalVM for ease of distribution.
 
-##### Tools
+## Server Example
+
+{{< kotlin file="server_example.kt" >}}
+
+## Client Example
+
+http4k provides client classes to connect to your MCP servers via SSE or Websockets. The clients take care of the 
+initial MCP handshake and provide a simple API to send and receive messages to the capabilities, or to register for 
+notifications with an MCP server.
+
+{{< kotlin file="client_example.kt" >}}
+
+### Capability Types
+
+#### Tools
 
 Tools allow external MCP clients such as LLMs to request the server to perform bespoke functionality such as invoking an
 API. The Tool capability is modelled as a function `typealias ToolHandler = (ToolRequest) -> ToolResponse`, and can be
@@ -89,7 +103,7 @@ bound to a tool definition which describes it's arguments using the http4k Lens 
 
 {{< kotlin file="tool_example.kt" >}}
 
-##### Prompts
+#### Prompts
 
 Prompts allow the server to generate a prompt based on the client's inputs. The Prompt capability is modelled as a
 function `(PromptRequest) -> PromptResponse`, and can be bound to a prompt definition which describes it's arguments
@@ -97,8 +111,55 @@ using the http4k Lens system.
 
 {{< kotlin file="prompt_example.kt" >}}
 
-#### Example
+#### Sampling
 
-{{< kotlin file="server_example.kt" >}}
+Sampling allow either client or server to invoke a model to generate some content. The Sampling capability is modelled
+as a function `(SamplingRequest) -> SamplingResponse`, and you can pass the contents of previous interactions as the
+context to the model.
 
+{{< kotlin file="sampling_example.kt" >}}
 
+#### Resources
+
+Resources provide a way to interrogate the contents of data sources such as filesystem, database or website. The
+Resource capability is modelled as a function `(ResourceRequest) -> ResourceResponse`. Resources can be static or
+templated to provide bounds within which the client can interact with the resource.
+
+{{< kotlin file="static_resource_example.kt" >}}
+
+#### Roots
+
+Roots are provided by the client to the server and determine the base paths that the server can use to act within.
+
+# http4k-mcp-desktop
+
+A desktop client that bridges StdIo-bound desktop clients such as **Claude Desktop** with your own MCP servers operating
+over HTTP/SSE, either locally or remotely. The desktop client is a simple native application that can be downloaded from
+the http4k GitHub, or built from the http4k source.
+
+### To use mcp-desktop client with Claude Desktop:
+
+1. Download the `mcp-desktop` binary for your platform from: [https://github.com/http4k/http4k]
+2. Configure [Claude Desktop](https://claude.ai/download) to use the `mcp-desktop` binary as an MCP server with the
+   following configuration. You can find the configuration file in `claude_desktop_config.json`, or by browsing through the 
+developer settings menu. You can add as many MCP servers as you like:
+
+```json
+{
+    "mcpServers": {
+        "MyMcpServer": {
+            "command": "/<PATH TO MCP DESKTOP>/mcp-desktop",
+            "args": [
+                "--url",
+                "http://localhost:3001/sse"
+            ]
+        }
+    }
+}
+```
+
+### To build mcp-desktop from source:
+
+1. Clone the http4k repo
+2. Install a GraalVM supporting JDK
+3. Run `./gradlew :http4k-mcp-desktop:native-compile` to build the desktop client binary locally for your platform
