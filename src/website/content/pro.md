@@ -29,7 +29,7 @@ faq:
         answer: "Yes. We offer volume discounts for organisations that wish to purchase multiple Pro modules. Please contact us using the button below."
 
     -   question: "Can I use Pro modules for free?"
-        answer: "We are supportive of experimenting with http4k, so Pro modules are free for non-commercial, research and non-profit use cases."
+        answer: "We are completely supportive of experimentation with http4k technologies, so Pro modules are free for non-commercial, research and non-profit use cases."
 
 ---
 
