@@ -1,0 +1,54 @@
+{{ define "main" }}
+<div class="layout">
+    <main class="page-content">
+        <header>
+            <h1>{{ .Title }}</h1>
+        </header>
+        <article>
+            <div class="mt-4 mb-4">
+                {{ .Content }}
+            </div>
+            <hr/>
+            <div class="row row-cols-1 row-cols-md-3 mt-5 pb-4">
+                {{ range .Params.modules }}
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <div class="container h-33">
+                                <div class="row h-100 flex-column flex-md-row">
+                                    <div class="col-md-8 order-1 order-md-2">
+                                        <h5 class="card-title text-break">{{ .name }}</h5>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center order-2 order-md-1">
+                                        <img src="/images/{{ .image }}" alt="{{ .name }}" width="100%"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row h-33 mt-4">
+                                <p class="card-text text-center">{{ .description }}</p>
+                            </div>
+                            <div class="mt-auto h-33">
+                                <div class="row mt-4 mb-3">
+                                    {{ if .link }}
+                                    <a href="{{ .link }}" class="btn btn-secondary">Check it out.</a>
+                                    {{ else }}
+                                    <span class="btn btn-outline-secondary">Coming soon..</span>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </article>
+    </main>
+</div>
+
+{{ partial "shared/faq.html" . }}
+
+{{ partial "shared/contact-us.html" . }}
+
+{{ partial "shared/pipes.html" }}
+
+{{ end }}
