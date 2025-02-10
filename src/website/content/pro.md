@@ -17,8 +17,8 @@ modules:
         description: A robust transactional outbox implementation for http4k that ensures reliable message delivery with database consistency.
 faq:
     -   question: "How are http4k Pro modules different from the http4k Community modules?"
-        answer: "Pro modules are commercially licensed extensions developed specifically to solve common enterprise use cases. They are distributed under **org.http4k.pro** Maven coordinate group."
-    
+        answer: "Pro modules are commercially licensed extensions developed specifically to solve common enterprise use cases. They are distributed under **org.http4k.pro** Maven coordinate group. You can find details of the http4k Commercial License [below](#license)."
+        
     -   question: "Does this mean the Pro modules are more reliable than http4k Community?"
         answer: "No. All http4k modules share the same high quality standards and testing rigor. Pro modules provide additional enterprise-focused features rather than enhanced reliability."
             

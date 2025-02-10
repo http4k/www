@@ -151,14 +151,14 @@ menus:
       url: /training/
       parent: solutions
       weight: 45
-    - name: solutions-slack
-      title: Private Slack
-      url: "http://http4k.slack.com/"
-      parent: solutions
-      weight: 46
     - name: solutions-security
       title: Security Advisories
       url: /security/
+      parent: solutions
+      weight: 46
+    - name: solutions-slack
+      title: http4k EE Slack
+      url: "http://http4k.slack.com/"
       parent: solutions
       weight: 47
 

@@ -20,7 +20,9 @@
     </main>
 </div>
 
-{{ partial "shared/faq.html" . }}
+{{ if .Params.faq }}
+    {{ partial "shared/faq.html" . }}
+{{ end }}
 
 {{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}
 
