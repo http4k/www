@@ -1,18 +1,19 @@
 ---
 title: "http4k v6: Still the most testable web toolkit on the planet!*"
 description: http4k v6 has landed! Discover the groundbreaking features we've packed into our most powerful release yet.
-date: 2025-12-02
+date: 2025-02-01
 image: takeoff.png
 ---
 
 <img class="imageMid my-4" src="./takeoff.png" alt="http4k logo"/>
 
-As previewed in our previous post, http4k v6 is finally here 🚀! We’ve been incredibly busy planning this release for about
+As previewed in our previous post, http4k v6 is finally here 🚀! We’ve been incredibly busy planning this release for
+about
 6 months and have been exploring the best ways to expand the http4k universe to make things even better.
 
 This is going to ge a fairly long post, so here's what's coming up:
 
-- [A review of http4k v5](#a-review-of-http4k-v5)
+- [A look back at http4k v5](#a-look-back-at-http4k-v5)
     - [The first CVE: CVE-2024-12345](#the-first-cve-cve-2024-12345)
 - [What's new in http4k v6?](#whats-new-in-http4k-v6)
     - [Minimum supported Java version](#minimum-supported-java-version)
@@ -33,12 +34,16 @@ If you just want to skip straight to the part where you upgrade your codebase, t
 the [v5 to v5 Migration Guide](/howto/migrate_from_http4k_v5_to_v6) - it's got an overview of how to get started. If
 we've done our job correctly, it shouldn't be too bad!
 
-# A review of http4k v5
+# A look back at http4k v5
 
-Released at KotlinConf 2023, http4k has steadily been growing in both size and audience. The number of modules has risen
-from 127 to a massive 188 in that time. Everything from AI integrations (OpenAI, Anthropic, LangChain), to Hypermedia
-libraries ( HTMX), to transport formats (DataFrame), to templating engines (JTE) and cloud platform clients (Azure,
-GCP) - we've pretty much added modules for anything an everything!
+Released at [KotlinConf 2023](http://kotlinconf.com/2023), http4k has steadily been growing in both size and audience.
+The number of modules has risen
+from 127 to a massive 188 in that time. Everything from AI
+integrations ([OpenAI](https://openai.com/), [Anthropic](https://claude.ai),
+[LangChain4j](https://docs.langchain4j.dev/)), to Hypermedia
+libraries ([HTMX](https://htmx.org)), to transport
+formats ([Kotlin DataFrame](https://kotlin.github.io/dataframe/overview.html)), to templating engines (JTE) and cloud
+platform clients (Azure, GCP) - we've pretty much added modules for anything an everything!
 
 And with it, you can see from the below that http4k’s downloads have been on a very pleasingly upward trend. It's
 encouraged the http4k team to keep going and we decided that v6 was a good time to have a really long hard look at how
@@ -46,7 +51,7 @@ the project was structured and what we could do better.
 
 <img class="imageMid my-4" src="./maven.png" alt="http4k lego"/>
 
-#### The first CVE: CVE-2024-12345
+#### The first CVE: CVE-2024-12345/
 
 It might seem strange to celebrate your first CVE, but it’s a rite of passage for any popular open-source project and an
 excellent opportunity to learn. We were very pleased to have been able to fix the issue quickly and to have been able to
@@ -54,9 +59,9 @@ provide a fix to all users within a few hours of the issue being reported by a s
 to the efforts the team have made with http4k to ensure we provide a secure and reactive system, and the power of the
 open-source model in general.
 
-You can read about the CVE, the fix and the timeline [here](/security/CVE-2024-55875)
+You can read about the CVE, the fix and the timeline [here](/security/cve-2024-12345)
 
-We were also particularly impressed with the score of the CVE - **9.8**. Higher numbers are better, right?
+We were also particularly impressed with the score of the CVE - **9.8**. Higher numbers are better, right? 😈
 
 # What’s new in http4k v6?
 
@@ -85,7 +90,7 @@ to receive support for legacy versions through LTS releases. This approach allow
 projects and organizations requiring longer-term stability. Whether you're building new services on Java 21 or
 maintaining critical systems on older versions, we've got you covered!
 
-To find out more about http4k Enterprise Edition - head over to the [docs](/enterpise) and get in touch!
+To find out more about http4k Enterprise Edition - head over to the [docs](/enterprise) and get in touch!
 
 #### Module/Code reorganisation
 
@@ -100,7 +105,7 @@ You can find the list of movements in the [migration guide](/howto/migrate_from_
 
 <img class="imageSmall my-4" src="/images/pro.png" alt="http4k pro"/>
 
-Also new to http4k - [Pro](pro/) modules! These extensions represent our implementations of common enterprise tools and
+Also new to http4k - [Pro](/pro) modules! These extensions represent our implementations of common enterprise tools and
 patterns, built with the same unwavering commitment to testability and clean API design that has earned http4k its
 reputation, and released under the new [http4k Commercial license](/pro/#license).
 
@@ -212,5 +217,6 @@ Peace out.
 
 # /the http4k team
 
-* And yes - we're very keen to be challenged on this claim. If you can point us at a more test-focussed web toolkit, then
-  please let us know as we're always looking for ways to improve (and 😉steal ideas!).
+<br/>
+
+#####   * And yes - we're very keen to be challenged on this claim. If you can point us at a more test-focussed web toolkit, then please let us know as we're always looking for ways to improve (and steal ideas 😉!).
