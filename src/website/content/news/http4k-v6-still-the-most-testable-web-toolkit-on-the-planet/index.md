@@ -12,7 +12,22 @@ As previewed in our previous post, http4k 6 is finally here! We’ve been incred
 
 This is going to ge a fairly long post, so here's what's coming up:
 
-<insert toc/>
+- [A review of http4k v5](#a-review-of-http4k-v5)
+    - [The first CVE: CVE-2024-12345](#the-first-cve-cve-2024-12345)
+- [What's new in http4k v6?](#whats-new-in-http4k-v6)
+    - [Minimum supported Java version](#minimum-supported-java-version)
+    - [Module/Code reorganisation](#modulecode-reorganisation)
+    - [Knives for show, guns for a pro!](#knives-for-show-guns-for-a-pro)
+    - [Universal protocol routing](#universal-protocol-routing)
+    - [Multi protocol debugging](#multi-protocol-debugging)
+    - [The future of web development](#the-future-of-web-development)
+    - [Developer tooling](#developer-tooling)
+    - [Bridging the divide to http4k](#bridging-the-divide-to-http4k)
+    - [http4k-powered SSE Client](#http4k-powered-sse-client)
+    - [Full Helidon protocol support using Virtual Threads](#full-helidon-protocol-support-using-virtual-threads)
+    - [Simplified ServerConfig](#simplified-serverconfig)
+    - [And a million other small changes!](#and-a-million-other-small-changes)
+- [Wrap up](#wrap-up)
 
 If you just want to skip straight to the part where you upgrade your codebase, then check out
 the [v5 to v5 Migration Guide](/howto/migrate_from_http4k_v5_to_v6) - it's got an overview of how to get started. If
@@ -62,13 +77,15 @@ But we aren't abandoning our commitment to stability and long-term support. For 
 for older Java versions, we're announcing http4k Enterprise Edition. This offering includes Long Term Support (LTS) for
 previous Java versions, ensuring that teams running mission-critical applications on established Java platforms can
 continue to benefit from a stable API and security updates. Enterprise Edition subscribers receive access to dedicated
-support channels, priority bug fixes, and the ability to influence the roadmap of the framework, as well as
+support channels, priority bug fixes, discounts on training and consultancy from qualified http4k experts, as well as
 complimentary access to the http4k Pro modules (more of that later!).
 
 While the open source Community Edition moves forward to embrace new Java features, Enterprise subscribers will continue
 to receive support for legacy versions through LTS releases. This approach allows us to serve both forward-looking
 projects and organizations requiring longer-term stability. Whether you're building new services on Java 21 or
 maintaining critical systems on older versions, we've got you covered!
+
+To find out more about http4k Enterprise Edition - head over to the [docs](/enterpise) and get in touch!
 
 #### Module/Code reorganisation
 
@@ -139,13 +156,16 @@ better. The new `http4k-tools` namespace is the new home for all developer tooli
 `http4k-tools-traffic-capture` as the first module in this space - it allows you to capture and replay HTTP traffic
 to/from a folder structure or any other source you can think of!
 
+{{< kotlin file="traffic.kt" >}}
+
 #### Bridging the divide to http4k
 
 It's easy enough to start from scratch with http4k, but we know that many of you have existing codebases that you want
 to migrate to http4k. Having done this ourselves, we know that it can be a bit of a pain to get started, which is why to
 make this easier, we've added a new `http4k-bridge` namespace which provides a set of modules to help you bridge the gap
-between http4k and other JVM technologies. This will be accompanied by a set of how-to guides which will cover the
-basics and strategies for migration. Here's a list of the initial technologies in the Bridge namespace:
+between http4k and other JVM technologies. We have provided a set of [examples](/ecosystem/http4k/reference/bridge/)
+which cover the
+basics and strategies for migration. Here's a list of the initial technologies in the bridge namespace:
 
 - Helidon
 - Jakarta (handles Quarkus any any other Jakarta EE server)
@@ -156,10 +176,18 @@ basics and strategies for migration. Here's a list of the initial technologies i
 - Servlet (Tomcat or any other servlet container)
 - Vertx
 
-#### Full protocol support using Virtual Threads
+#### http4k-powered SSE Client
+
+Yet more SSE! Our work on the Model Context Protocol and Datastar modules led us to create a fully functioning
+Server-Sent Events
+client for http4k. It takes advantage of all the tricks that we've built up over the last few years, including automatic
+reconnection,
+tracing and security - we're pretty proud of it!
+
+#### Full Helidon protocol support using Virtual Threads
 
 We were very excited to see the release of Helidon 4.0 with support for virtual threads as a http4k v5 module, and we
-have expanded it to support SSE and WS as well. This is a game changer for the performance of reactive applications.
+have expanded it to support SSE and WS as well. This is a massive win for the performance of reactive applications.
 
 #### Simplified ServerConfig
 
@@ -169,128 +197,15 @@ each server. This should make it easier to get started with http4k and to unders
 versions of the code have been moved to examples in the http4k source code, so if you need explicit support for these
 options in Undertow Apache etc then you can still access them.
 
-## Notable breaking changes
+#### And a million other small changes!
 
-**http4k-core** : [Breaking] Complete rewrite of the routing logic to work identically across HTTP, WS and
-SSE. [FIXME] <-- Insert breaking changes
+# Wrap up
 
-- **http4k-api-openapi** : [Breaking] withPostSecurityFilter() removed as is part of the contract DSL.
-- sse change packages
-- sse now logs transactions
-- sse debugging
-- ws change packages
-- ws now logs transactions
-- ws debugging
-- Java SSE client
-- KMS CustomerKeySpec removed -> replaced with KeySpec
-- HttpEvent is now a subclass of ProtocolEvent
-- routing changes mean things are no longer data classes
-- All extraneous server configuration removed - we now support only simple examples of servers and people need to
-- Rewrite routing algorithm - unify all protocol routing
+We're really pleased to have finally gotten http4k v6 done, not just because we need a well earned rest (!), but also
+because we've got a lot more planned for the future. We can't wait to see how you'll all put these new features to work
+in your teams. From enhanced routing capabilities to our improved routing system, v6 lays the groundwork for
+the future of your favourite web toolkit.
 
+Peace out.
 
-- As per the pre-release announcement, the minimum Java version for http4k has been raised to Java 21. If your
-  organisation is interested in maintaining support for Java versions lower than 21, you may be interested to learn
-  about the Long Term Support options available under the http4k Enterprise Edition subscription. You can read more
-  about this programme [here], and feel free to reach out to the  <a href="enterprise@http4k.org">http4k team</a>.
-- The http4k routing system had been completely rewritten and unified across all supported protocols (HTTP/SSE/WS). This
-  has resulted in some small repackaging although the API should not have changed for users. Any breaks should be easily
-  fixable using the IDE.
-- For ease, `ServerConfigs` across all server-backends have been simplified, removing any extraneous setup from the
-  default configuration. The standard implementations have been designed to be duplicated and tweaked as required by end
-  users.
-- As http4k has grown to over 160 modules, we've found that the existing module naming system has become a little
-  unwieldy. To make things easier to find, we've reorganised some of them and given them better Maven co-ordinates (
-  documented below).
-- We have unified some events - notably `HttpEvent` - to be the same implementation across all protocols, which has
-  necessitated the replacement of `HttpEvent` with `ProtocolEvent`. The API is the same as before as are the names, but
-  the hierarchy is different, and the event has gained a `protocol` field to indicate what type of server request
-  caused the connection.
-
-## Suggested migration path
-
-1. Update your project to use the latest version of http4k v5.
-2. Deal with any deprecation warnings - these should all have replacements and be inlinable using your IDE.
-3. Start using the new module names from the table below. These modules are identical in functionality to the old ones,
-   but have been renamed for consistency.
-4. Build and check your project is still working as expected.
-5. Update your project to use the latest version of http4k v6.
-6. Deal with any breaking changes - these are detailed below.
-
-### Notes:
-
-- Move security to security core - share between SSE and HTTP
-- Debug to all protocols
-- Unify routing across all protocols
-- Bridge modules
-- Upgrades to all modules
-- Upgrade to java 21
-- Polyhandler DSL
-- moving code out of core, bridge
-- traffic module
-- module moves
-- datastar module
-- simplify request context
-- pro stuff
-    - MCP Desktop - no reflection
-    - MCP SDK - no reflection
-    - Hot reload - debuggable
-- [Breaking[ moshi - have added long
-
-### v6.0.0.0 (uncut)
-
-- **http4k-*** : [License update] Selected "Pro-tier" modules will start to be introduced under the new
-  http4k [commercial license](https://github.com/http4k/http4k/blob/master/pro/LICENSE). These modules remain freely
-  available for personal and academic purposes, and bear the new `org.http4k.pro` Maven coordinate group to distinguish
-  them from the open-source modules.
-- **http4k-*** : [Breaking] Minimum Java version is now 21. Java versions 8-20 support is provided through our LTS
-  programme available through the commercial version of http4k. Please see: https://www.http4k.org/enterprise/
-- **http4k-*** : [Breaking] Repackaging/splitting code into new modules coordinates. See the mapping grid below:
-
-- **http4k-*** : [Breaking] Complete rewrite of the routing logic to work identically across HTTP, WS and SSE. Mostly
-  backwards compatible, but some small may be required if you are referencing low level routing classes.
-- **http4k-*** : [Breaking] Removal of all deprecations. See the migration guide for more details.
-- **http4k-core** : [Breaking] `regex` lens now returns the entire matched string. To match groups, use `regexGroup`
-  instead.
-- **http4k-contract** : [Breaking] `withPostSecurityFilter()` removed as is part of the contract DSL.
-- **http4k-realtime-core** : [Breaking] From above, repackaging of SSE and Websocket routing and filters.
-- **http4k-connect-amazon-kms** : [Breaking] `CustomerKeySpec` removed and replaced with `KeySpec` (as per AWS
-  deprecations)
-- **http4k-server** : [Breaking] For consistency, all server configurations have been simplified to only support only
-  simple examples. Anything more convoluted should be handled by user implementations.
-- **http4k-api-contract** : [Breaking] Security implementations moved from contract to security-core. This has involved
-  repackaging them, but the APIs remain the same.
-- **http4k-api-jsonrpc** : [Breaking] Repackaging of some classes - APIs remain the same.
-- **http4k-cloudnative** : [Breaking] Code has moved to a combination of `http4k-config`, `http4k-platform-core` and
-  `http4k-platform-k8s` modules.
-- **http4k-*** : [Unlikely Break] Upgrades all dependencies to latest versions. This may involve API changes if you are
-  reliant on APIs in previous versions.
-- **http4k-format-moshi** : [Unlikely break/Enhancement] Support for `MoshiLong` as well as `MoshiInteger`. This has
-  improved the handling of longs when using the `MoshiNode` types.
-- **http4k-serverless-*** : [Unlikely break] Replacement of serverless `Context` system to use new `RequestKey`
-  mechanism.
-- **http4k-core** : [Replacement/Upgrade] `RequestContextKey` mechanism replaced with new simpler `RequestKey` lenses.
-  This obliviates the need for the old `InitializeRequestContext` mechanism and filter
-- **http4k-server-helidon** : [Fix] SSE implementation now cleans up SSE connections correctly on close.
-- **http4k-*** : [Enhancement] Unified the Events for HTTP, WS and SSE to use the same `ProtocolEvent` type for tracing
-  and logging transactions.
-- **http4k-realtime-core** : [Enhancement] Added ability to use debugging filters for both SSE and WebSockets.
-- **http4k-realtime-core** : [Enhancement] New DSL for defining Polyhandlers for routing to different types of
-  HTTP/SSE/Websocket protocols connections. Use `poly()`.
-- **http4k-realtime-core** : [Enhancement] SSE client for connecting to Server-sent events. Includes configurable
-  auto-reconnection modes.
-- **http4k-format-moshi** : [Enhancement] Support for Data4k containers for Moshi.
-- **http4k-tools-hotreload** : [New Pro module!] Work with any http4k-based application without restarting the server.
-  Includes browser reloading when working with web-based code, assets and templates. Extensible with custom rebuild
-  logic - ships with Gradle support.
-- **http4k-bridge-jakarta** : [New module!] Easy migrations from/to Jakarta-based servers.
-- **http4k-bridge-spring** : [New module!] Easy migrations from/to Spring-based servers.
-- **http4k-bridge-vertx** : [New module!] Easy migrations from/to Vertx-based servers.
-- **http4k-bridge-ktor** : [New module!] Easy migrations from/to Ktor-based servers.
-- **http4k-bridge-micronaut** : [New module!] Easy migrations from/to Micronaut-based servers.
-- **http4k-bridge-ratpack** : [New module!] Easy migrations from/to Ratpack-based servers.
-- **http4k-web-datastar** : [New module!] Deep support for the super-powerful [Datastar](https://data-star.dev)
-  Hypermedia library, which helps you build reactive web applications with the simplicity of server-side rendering and
-  the power of a full-stack SPA framework..
-- **http4k-tools-traffic-capture** : [New module!] A set of tools to help the capture and replay of traffic from any
-  HTTP server.
+# /the http4k team
