@@ -136,26 +136,31 @@ menus:
       url: /enterprise/
       parent: solutions
       weight: 42
+    - name: solutions-pro
+      title: Pro modules
+      url: /pro/
+      parent: solutions
+      weight: 43
     - name: solutions-consulting
       title: Consulting
       url: /consulting/
       parent: solutions
-      weight: 43
+      weight: 44
     - name: solutions-training
       title: Developer Training
       url: /training/
       parent: solutions
-      weight: 44
+      weight: 45
     - name: solutions-slack
       title: Private Slack
       url: "http://http4k.slack.com/"
       parent: solutions
-      weight: 45
+      weight: 46
     - name: solutions-security
       title: Security Advisories
       url: /security/
       parent: solutions
-      weight: 46
+      weight: 47
 
     - name: community
       title: Community
