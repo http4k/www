@@ -1,5 +1,5 @@
 ---
-title: "http4k v6: Still the most testable web toolkit on the planet!"
+title: "http4k v6: Still the most testable web toolkit on the planet!*"
 description: http4k v6 has landed! Discover the groundbreaking features we've packed into our most powerful release yet.
 date: 2025-12-02
 image: takeoff.png
@@ -7,7 +7,7 @@ image: takeoff.png
 
 <img class="imageMid my-4" src="./takeoff.png" alt="http4k logo"/>
 
-As previewed in our previous post, http4k 6 is finally here! We’ve been incredibly busy planning this release for about
+As previewed in our previous post, http4k v6 is finally here 🚀! We’ve been incredibly busy planning this release for about
 6 months and have been exploring the best ways to expand the http4k universe to make things even better.
 
 This is going to ge a fairly long post, so here's what's coming up:
@@ -199,6 +199,8 @@ options in Undertow Apache etc then you can still access them.
 
 #### And a million other small changes!
 
+Trust us - there are! 😊
+
 # Wrap up
 
 We're really pleased to have finally gotten http4k v6 done, not just because we need a well earned rest (!), but also
@@ -209,3 +211,6 @@ the future of your favourite web toolkit.
 Peace out.
 
 # /the http4k team
+
+* And yes - we're very keen to be challenged on this claim. If you can point us at a more test-focussed web toolkit, then
+  please let us know as we're always looking for ways to improve (and 😉steal ideas!).
