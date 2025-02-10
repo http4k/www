@@ -33,7 +33,7 @@ fun main() {
 
     val sse = sayHello.then(
         sse(
-            // we can use bindSse to bind a normal sse route (this ia an alias)
+            // we can use bindSse to bind a normal sse route (this is an alias)
             "/hello/{name}" bindSse { req ->
                 SseResponse { sse: Sse ->
                     val name = namePath(req)
@@ -50,7 +50,7 @@ fun main() {
         )
     )
 
-    // we can use bindHttp to bind a normal http route (this ia an alias)
+    // we can use bindHttp to bind a normal http route (this is an alias)
     val http = routes("{all:.+}" bindHttp GET to { req: Request ->
         Response(OK).body("hitting HTTP server: " + req.uri)
     })
