@@ -223,8 +223,9 @@ dependencies {
 
     testApi("org.http4k.pro:http4k-tools-hotreload")
 
-    testApi("org.http4k.pro:http4k-mcp-sdk")
-    testApi("org.http4k.pro:http4k-mcp-desktop")
+    // TODO: remove version when it's part of the BOM
+    testApi("org.http4k.pro:http4k-mcp-sdk:${project.properties["http4k_version"]}")
+    testApi("org.http4k.pro:http4k-mcp-desktop:${project.properties["http4k_version"]}")
 
     testApi(Testing.junit.jupiter.engine)
     testApi(Testing.junit.jupiter.api)
