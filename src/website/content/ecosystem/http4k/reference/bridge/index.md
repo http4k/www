@@ -41,7 +41,7 @@ Bridge modules provide a layer of integration with other web frameworks, allowin
 The integration allows teams to incrementally introduce http4k into existing applications, creating a path of migration from other migrations to http4k.
 
 We currently provide bridges for the following frameworks:
-- Spring
+- Spring (see [migration example](https://github.com/http4k/examples/tree/master/http4k-core/migration-spring))
 - Ktor
 - Micronaut
 - Helidon
