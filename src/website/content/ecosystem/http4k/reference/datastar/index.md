@@ -1,5 +1,4 @@
 ---
-draft: true
 category: Reference
 type: ecosystem
 ecosystem: http4k Core
