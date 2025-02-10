@@ -79,7 +79,7 @@ arenas. You can find the old
 As such, we've reorganised some of the existing modules and these will need to be migrated as part of the upgrade to v6.
 You can find the list of movements in the [migration guide](/howto/migrate_from_http4k_v5_to_v6).
 
-#### Knives for show, guns for a pro!
+#### [Knives for show, guns for a pro](https://youtu.be/UyCzZH_hFlA?si=2qKTQ5df0vE6UF23&t=27)!
 
 <img class="imageSmall my-4" src="/images/pro.png" alt="http4k pro"/>
 
@@ -97,13 +97,6 @@ Each Pro module delivers battle-tested solutions to common challenges while main
 experience - simple, compositional APIs with rock-solid testing support. These implementations embody years of the
 http4k team's real-world experience solving complex problems in production systems, packaged into modules that work
 seamlessly with the rest of http4k.
-
-#### Holy Hot Reload Batman!
-
-The http4k Template namespace has supported HotReload for a while, but this only supported the templating layer. We've
-made this better and you can now hot reload your entire application, including the routing layer. This is a game changer
-for using http4k with libraries like KotlinX HTML or HTMX/Datastar, where you can now see your changes in real time.
-Check it out at `http4k-tools-hotreload`.
 
 #### Universal protocol routing
 
