@@ -83,17 +83,27 @@ You can find the list of movements in the [migration guide](/howto/migrate_from_
 
 <img class="imageSmall my-4" src="/images/pro.png" alt="http4k pro"/>
 
-Also new to http4k - Pro modules! These extensions represent our implementations of common enterprise tools and
+Also new to http4k - [Pro](pro/) modules! These extensions represent our implementations of common enterprise tools and
 patterns, built with the same unwavering commitment to testability and clean API design that has earned http4k its
-reputation. We've currently got plans for three powerful modules: Hot Reload, which enables seamless code updates in
-running applications; a Model Context Protocol SDK, providing a complete implementation of the MCP standard for AI
-system interoperability and agent communication; and Transaction Outbox, implementing the critical outbox pattern for
-reliable message publishing in distributed systems.
+reputation, and released under the new [http4k Commercial license](/pro/#license).
+
+We've currently got plans for three powerful modules: [Hot Reload](https://hotreload.http4k.org), which launches today,
+enables seamless code updates in running applications. Coming up shortly,
+the [Model Context Protocol SDK](https://mcp.http4k.org), providing a complete implementation of the MCP standard for AI
+system interoperability and agent communication, and [Transaction Outbox]((https://outbox.http4k.org)), implementing the
+critical outbox pattern for reliable message publishing in distributed systems.
 
 Each Pro module delivers battle-tested solutions to common challenges while maintaining http4k's trademark developer
 experience - simple, compositional APIs with rock-solid testing support. These implementations embody years of the
 http4k team's real-world experience solving complex problems in production systems, packaged into modules that work
 seamlessly with the rest of http4k.
+
+#### Holy Hot Reload Batman!
+
+The http4k Template namespace has supported HotReload for a while, but this only supported the templating layer. We've
+made this better and you can now hot reload your entire application, including the routing layer. This is a game changer
+for using http4k with libraries like KotlinX HTML or HTMX/Datastar, where you can now see your changes in real time.
+Check it out at `http4k-tools-hotreload`.
 
 #### Universal protocol routing
 
@@ -135,13 +145,6 @@ http4k has always been a developer-first framework and we are always looking for
 better. The new `http4k-tools` namespace is the new home for all developer tooling modules, and we've promoted
 `http4k-tools-traffic-capture` as the first module in this space - it allows you to capture and replay HTTP traffic
 to/from a folder structure or any other source you can think of!
-
-#### Holy Hot Reload Batman!
-
-The http4k Template namespace has supported HotReload for a while, but this only supported the templating layer. We've
-made this better and you can now hot reload your entire application, including the routing layer. This is a game changer
-for using http4k with libraries like KotlinX HTML or HTMX/Datastar, where you can now see your changes in real time.
-Check it out at `http4k-tools-hotreload`.
 
 #### Bridging the divide to http4k
 
