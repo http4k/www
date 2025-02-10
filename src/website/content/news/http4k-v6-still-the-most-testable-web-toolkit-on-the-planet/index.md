@@ -112,7 +112,7 @@ application. Here's an example:
 Note that you still need the correct server backend to take advantage of all protocols. There's
 a [handy grid](ecosystem/http4k/reference/servers/#feature-support) in the docs.
 
-#### Multi protocol support
+#### Multi protocol debugging
 
 Speaking of WebSockets and SSE, http4k was lacking the same type of experience around these protocols as it had for
 HTTP. As well as the routing rewrite to unlock the power of the previously only HTTP model, we've added debugging
