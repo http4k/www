@@ -14,22 +14,22 @@ navigation:
         title: Pricing
         url: "#pricing"
 features:
-    - title: Tiny</br> footprint
-      icon: supportive
-      colour: pink
-      description: In true http4k-style, Connect clients rely on minimal dependencies and zero reflection, perfect for lightweight and security-conscious applications.
-    - title: Total</br> modularisation
-      icon: footprint
-      colour: violet
-      description: Extension of the clients is as simple as combining function calls or implementing a single data class with just 2 simple methods.
-    - title: Kotlin-</br>centric
+    - title: No more</br>stop/starts
       icon: support
       colour: indigo
-      description: Every API Client leverages Result types and is exception-safe, so you can finally code like it's Kotlin that you're writing!
-    - title: Battle-tested</br> in the wild
+      description: This tool automatically restarts the server when it detects a code change, resulting in fewer steps in your development workflow.
+    - title: Tiny</br> overhead
+      icon: supportive
+      colour: pink
+      description: All that's needed to support hot reloading is a class that provides the main application `HttpHandler`, and a dedicated `main()` function.
+    - title: Server and protocol</br> agnostic
+      icon: footprint
+      colour: violet
+      description: Hot reload works with all of the <a href="https://www.http4k.org/ecosystem/http4k/reference/servers/">servers</a> http4k can run on, no matter if you're serving HTTP, WebSockets, or SSE protocol.
+    - title: Leverage your</br> existing build tool
       icon: testability
       colour: blue
-      description: Connect API Clients have been used to build high volume applications in Banking, Publishing, eCommerce & Government projects.
+      description: Use the Gradle integration (including multi-project support) or extend it to leverage your existing building tools.
 how_tos:
     - section: Set it up in two easy steps
       steps:
