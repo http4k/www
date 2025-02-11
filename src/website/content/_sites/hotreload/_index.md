@@ -34,10 +34,10 @@ how_tos:
     - section: Set it up in two easy steps
       steps:
           - description: Step 1 - Create the factory class
-            image: using-client.png
+            image: hotreload-step1.png
             alt: Using a Connect API Client
           - description: Step 2 - Run it with the HotReloadServer
-            image: extending-client.png
+            image: hotreload-step2.png
             alt: Extending a Connect API Client
 pricing_table:
     id: prctbl_1Qk8bRG47sNzv4yXy1CGLRii
