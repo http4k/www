@@ -42,7 +42,7 @@ The integration allows teams to incrementally introduce http4k into existing app
 
 We currently provide bridges for the following frameworks:
 - Spring (see [migration example](https://github.com/http4k/examples/tree/master/http4k-core/migration-spring))
-- Ktor
+- Ktor (see [migration example](https://github.com/http4k/examples/tree/master/http4k-core/migration-ktor))
 - Micronaut
 - Helidon
 - Vertx
