@@ -35,10 +35,16 @@ features:
 how_tos:
     - section: Getting started with MCP in http4k
       steps:
-          - description: Step 1 - Define your tools and capabilities
-            image: define-tools.png
+          - description: Step 1 - Define your tools and capabilities using simple, testable functions
+            image: mcp-tool.png
             alt: Defining MCP tools
-          - description: Step 2 - Create your MCP server
-            image: create-server.png
+          - description: Step 2 - Create your MCP server by composing capabilities into a lightweight server
+            image: mcp-server.png
+            alt: Creating an MCP server
+          - description: Step 3 - Integrate your AI-powered app with Claude Desktop as a server or native binary
+            image: mcp-claude.png
+            alt: Creating an MCP server
+          - description: Step 3 - Access your MCP server from other agents using our pure Kotlin MCP Client
+            image: mcp-client.png
             alt: Creating an MCP server
 ---
