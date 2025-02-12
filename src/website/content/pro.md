@@ -4,17 +4,20 @@ type: pro
 description: "The http4k Pro modules are a set of premium features and tools designed to help engineers solve recurring problems. These modules are designed to save you time and effort when building your http4k applications and provide production-ready implementations that help teams deploy http4k applications in regulated and high-volume environments."
 modules:
     -   name: Model Context Protocol
-        #        link: https://mcp.http4k.org
+        link: https://mcp.http4k.org
         image: mcp.png
-        description: Build MCP-compliant servers to integrate Large Language Models with your data and tools using familiar http4k patterns
+        description: Build MCP-compliant servers to integrate Large Language Models with your    data and tools using familiar http4k patterns
+        available: false
     -   name: Server Hot Reload
         link: https://hotreload.http4k.org
         image: hotreload.png
+        available: true
         description: Hot Reload automatically restart your server after code changes, saving you time during development
     -   name: Transactional Outbox
-        #        link: https://outbox.http4k.org
+        link: https://outbox.http4k.org
         image: outbox.png
         description: A robust transactional outbox implementation for http4k that ensures reliable message delivery with database consistency.
+        available: false
 faq:
     -   question: "How are http4k Pro modules different from the http4k Community modules?"
         answer: "Pro modules are commercially licensed extensions developed specifically to solve common enterprise use cases. They are distributed under **org.http4k.pro** Maven coordinate group. You can find details of the http4k Commercial License [below](#license)."
