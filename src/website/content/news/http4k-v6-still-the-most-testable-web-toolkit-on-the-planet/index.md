@@ -8,8 +8,7 @@ image: takeoff.png
 <img class="imageMid my-4" src="./takeoff.png" alt="http4k logo"/>
 
 As previewed in our previous post, http4k v6 is finally here 🚀! We’ve been incredibly busy planning this release for
-about
-6 months and have been exploring the best ways to expand the http4k universe to make things even better.
+about 6 months and have been exploring the best ways to expand the http4k universe to make things even better.
 
 This is going to ge a fairly long post, so here's what's coming up:
 
@@ -18,7 +17,7 @@ This is going to ge a fairly long post, so here's what's coming up:
 - [What's new in http4k v6?](#whats-new-in-http4k-v6)
     - [Minimum supported Java version](#minimum-supported-java-version)
     - [Module/Code reorganisation](#modulecode-reorganisation)
-    - [Knives for show, guns for a pro!](#knives-for-show-guns-for-a-pro)
+    - [Introducing Pro modules: guns for show, knives for a pro](#pro-modules)
     - [Universal protocol routing](#universal-protocol-routing)
     - [Multi protocol debugging](#multi-protocol-debugging)
     - [The future of web development](#the-future-of-web-development)
@@ -101,7 +100,7 @@ arenas. You can find the old
 As such, we've reorganised some of the existing modules and these will need to be migrated as part of the upgrade to v6.
 You can find the list of movements in the [migration guide](/howto/migrate_from_http4k_v5_to_v6).
 
-#### [Knives for show, guns for a pro](https://youtu.be/UyCzZH_hFlA?si=2qKTQ5df0vE6UF23&t=27)!
+#### [Introducing Pro modules: guns for show, knives for a pro](https://youtu.be/UyCzZH_hFlA?si=2qKTQ5df0vE6UF23&t=27)! {#pro-modules}
 
 <img class="imageSmall my-4" src="/images/pro.png" alt="http4k pro"/>
 
