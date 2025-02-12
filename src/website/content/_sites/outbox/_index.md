@@ -3,7 +3,7 @@ draft: true
 sitemap:
     disable: true
 title: "http4k Transaction Outbox"
-tagline: "Reliable, distributed transaction processing for http4k"
+tagline: "Reliable, distributed transaction processing"
 layout: "product"
 type: "product"
 tier: pro
