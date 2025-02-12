@@ -16,13 +16,20 @@ navigation:
         title: Pricing
         url: "#pricing"
 features:
-how_tos:
-    - section: Getting started with Transaction Outbox in http4k
-      steps:
-          - description: Step 1 - Define your tools and capabilities
-            image: define-tools.png
-            alt: Defining MCP tools
-          - description: Step 2 - Create your MCP server
-            image: create-server.png
-            alt: Creating an MCP server
+    - title: Async</br>processing
+      icon: support
+      colour: indigo
+      description: Process HTTP requests asynchronously, freeing up your application to handle other tasks.
+    - title: Built with</br> testing in mind
+      icon: footprint
+      colour: violet
+      description: Get the same level of testability as the rest of your http4k application, with in-memory implementations and usage of `HttpHandler`.
+    - title: Handle inbound</br> and outbound requests
+      icon: supportive
+      colour: pink
+      description: Use the same mechanism to process either requests to your application or to other services.
+    - title: Out-of-the-box</br> resilience
+      icon: testability
+      colour: blue
+      description: Leverage database transactions, retries and error handling to ensure your messages are processed reliably.
 ---
