@@ -34,7 +34,7 @@ features:
       colour: blue
       description: Connect API Clients have been used to build high volume applications in Banking, Publishing, eCommerce & Government projects.
 how_tos:
-    - section: Follow these simple steps to get it working...
+    - section: Set it up in two easy steps
       steps:
           - description: Step 1 - Create the factory class
             image: using-client.png
