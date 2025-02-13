@@ -44,7 +44,7 @@ integrations ([OpenAI](https://openai.com/), [Anthropic](https://claude.ai),
 [LangChain4j](https://docs.langchain4j.dev/)), to Hypermedia
 libraries ([HTMX](https://htmx.org)), to transport
 formats ([Kotlin DataFrame](https://kotlin.github.io/dataframe/overview.html)), to templating engines (JTE) and cloud
-platform clients (Azure, GCP) - we've pretty much added modules for anything an everything!
+platform clients (Azure, GCP) - we've pretty much added modules for anything and everything!
 
 And with it, you can see from the below that http4k’s downloads have been on a very pleasingly upward trend. It's
 encouraged the http4k team to keep going and we decided that v6 was a good time to have a really long hard look at how
@@ -55,12 +55,12 @@ the project was structured and what we could do better.
 #### The first CVE: CVE-2024-12345/
 
 It might seem strange to celebrate your first CVE, but it’s a rite of passage for any popular open-source project and an
-excellent opportunity to learn. We were very pleased to have been able to fix the issue quickly and to have been able to
+excellent opportunity to learn. We were very pleased to have been able to fix the issue quickly, and to have been able to
 provide a fix to all users within a few hours of the issue being reported by a security researcher. This is a testament
 to the efforts the team have made with http4k to ensure we provide a secure and reactive system, and the power of the
 open-source model in general.
 
-You can read about the CVE, the fix and the timeline [here](/security/cve-2024-12345)
+You can read about the CVE, the fix and the timeline [here](/security/cve-2024-12345).
 
 We were also particularly impressed with the score of the CVE - **9.8**. Higher numbers are better, right? 😈
 
@@ -97,7 +97,7 @@ To find out more about http4k Enterprise Edition - head over to the [docs](/ente
 
 As http4k has grown to now over 180 modules, we've found that the existing module naming system has become a little
 unwieldy, so we took the opportunity to reorganise our thinking and the existing modules around the core conceptual
-arenas.
+arenas. You can find the old
 
 As such, we've reorganised some of the existing modules and these will need to be migrated as part of the upgrade to v6.
 You can find the list of movements in the [migration guide](/howto/migrate_from_http4k_v5_to_v6).
@@ -201,7 +201,7 @@ With a choice of 12 or so servers, the ServerConfig was getting a bit unwieldy w
 approach. We have now removed all of the options that were not strictly necessary and have provided a simple example of
 each server. This should make it easier to get started with http4k and to understand the options available. The old
 versions of the code have been moved to examples in the http4k source code, so if you need explicit support for these
-options in Undertow Apache etc then you can still access them.
+options in Undertow, Apache etc then you can still access them.
 
 #### And a million other small changes!
 
