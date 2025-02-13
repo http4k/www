@@ -133,7 +133,7 @@ application. Here's an example:
 {{< kotlin file="polyhandler.kt" >}}
 
 Note that you still need the correct server backend to take advantage of all protocols. There's
-a [handy grid](ecosystem/http4k/reference/servers/#feature-support) in the docs.
+a [handy grid](/ecosystem/http4k/reference/servers/#feature-support) in the docs.
 
 #### Multi protocol debugging
 
