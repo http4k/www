@@ -211,7 +211,7 @@ Trust us - there are! 😊
 
 We're really pleased to have finally gotten http4k v6 done, not just because we need a well earned rest (!), but also
 because we've got a lot more planned for the future. We can't wait to see how you'll all put these new features to work
-in your teams. From enhanced routing capabilities to our improved routing system, v6 lays the groundwork for
+in your teams. From enhanced routing capabilities to the multi-protocol support, v6 lays the groundwork for
 the future of your favourite web toolkit.
 
 Peace out.
