@@ -113,7 +113,7 @@ reputation, and released under the new [http4k Commercial license](/pro/#license
 We've currently got plans for three powerful modules: [Hot Reload](https://hotreload.http4k.org), which launches today,
 enables seamless code updates in running applications. Coming up shortly,
 the [Model Context Protocol SDK](https://mcp.http4k.org), providing a complete implementation of the MCP standard for AI
-system interoperability and agent communication, and [Transaction Outbox]((https://outbox.http4k.org)), implementing the
+system interoperability and agent communication, and [Transaction Outbox](https://outbox.http4k.org), implementing the
 critical outbox pattern for reliable message publishing in distributed systems.
 
 Each Pro module delivers battle-tested solutions to common challenges while maintaining http4k's trademark developer
