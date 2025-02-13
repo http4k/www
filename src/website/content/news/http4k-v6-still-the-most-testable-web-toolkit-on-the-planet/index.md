@@ -13,7 +13,7 @@ about 6 months and have been exploring the best ways to expand the http4k univer
 This is going to ge a fairly long post, so here's what's coming up:
 
 
-- [TL;DR - v5 to v5 Migration Guide](/howto/migrate_from_http4k_v5_to_v6)
+- [TL;DR - v5 to v6 Migration Guide](/howto/migrate_from_http4k_v5_to_v6)
 - [A look back at http4k v5](#a-look-back-at-http4k-v5)
     - [The first CVE: CVE-2024-12345](#the-first-cve-cve-2024-12345)
 - [What's new in http4k v6?](#whats-new-in-http4k-v6)
