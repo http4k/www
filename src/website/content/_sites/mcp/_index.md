@@ -11,9 +11,6 @@ navigation:
     -   name: docs
         title: Sign up for launch
         url: '#subscribe'
-    -   name: pricing
-        title: Pricing
-        url: "#pricing"
 features:
     - title: Simple</br>Integration
       icon: supportive
