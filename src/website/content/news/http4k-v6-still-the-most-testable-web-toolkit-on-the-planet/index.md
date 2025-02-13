@@ -12,6 +12,8 @@ about 6 months and have been exploring the best ways to expand the http4k univer
 
 This is going to ge a fairly long post, so here's what's coming up:
 
+
+- [TL;DR - v5 to v5 Migration Guide](/howto/migrate_from_http4k_v5_to_v6)
 - [A look back at http4k v5](#a-look-back-at-http4k-v5)
     - [The first CVE: CVE-2024-12345](#the-first-cve-cve-2024-12345)
 - [What's new in http4k v6?](#whats-new-in-http4k-v6)
@@ -20,7 +22,7 @@ This is going to ge a fairly long post, so here's what's coming up:
     - [Introducing Pro modules: guns for show, knives for a pro](#pro-modules)
     - [Universal protocol routing](#universal-protocol-routing)
     - [Multi protocol debugging](#multi-protocol-debugging)
-    - [The future of web development](#the-future-of-web-development)
+    - [The future of web development?](#the-future-of-web-development)
     - [Developer tooling](#developer-tooling)
     - [Bridging the divide to http4k](#bridging-the-divide-to-http4k)
     - [http4k-powered SSE Client](#http4k-powered-sse-client)
@@ -141,7 +143,7 @@ support for all protocols and consistentified the interface so all protocols are
 
 {{< kotlin file="debug.kt" >}}
 
-#### The future of web development
+#### The future of web development?
 
 Although mostly known for being backend engineers, the http4k team have always been interested in the full stack.
 Frontend development however, has gotten a bit out of hand with the complexity of the frameworks and the amount of
