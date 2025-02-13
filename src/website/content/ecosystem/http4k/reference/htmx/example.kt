@@ -8,9 +8,9 @@ import org.http4k.core.Response
 import org.http4k.core.Status.Companion.OK
 import org.http4k.core.isHtmx
 import org.http4k.core.with
-import org.http4k.routing.Router.Companion.orElse
 import org.http4k.routing.bind
 import org.http4k.routing.htmxWebjars
+import org.http4k.routing.orElse
 import org.http4k.routing.routes
 import org.http4k.server.SunHttp
 import org.http4k.server.asServer

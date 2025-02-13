@@ -2,15 +2,12 @@ package content.ecosystem.http4k.reference.contracts
 
 import org.http4k.contract.ContractRoute
 import org.http4k.contract.Tag
-import org.http4k.contract.bind
 import org.http4k.contract.bindCallback
 import org.http4k.contract.contract
 import org.http4k.contract.div
 import org.http4k.contract.meta
 import org.http4k.contract.openapi.ApiInfo
 import org.http4k.contract.openapi.v3.OpenApi3
-import org.http4k.contract.security.ApiKeySecurity
-import org.http4k.contract.security.BasicAuthSecurity
 import org.http4k.core.Body
 import org.http4k.core.ContentType.Companion.TEXT_PLAIN
 import org.http4k.core.Credentials
@@ -29,6 +26,7 @@ import org.http4k.format.Klaxon.json
 import org.http4k.lens.Path
 import org.http4k.lens.Query
 import org.http4k.lens.int
+import org.http4k.routing.bind
 import org.http4k.routing.routes
 
 // for this example we're using Jackson - note that the auto method imported is an extension
@@ -52,7 +50,7 @@ fun echo(): ContractRoute =
 // are various security instances, from Basic to APIKey to OAuth2
 fun securelyGreet(): ContractRoute =
     "/greet" / Path.of("name") meta {
-        security = BasicAuthSecurity("myrealm", Credentials("user", "password"))
+        security = org.http4k.security.BasicAuthSecurity("myrealm", Credentials("user", "password"))
     } bindContract POST to { name ->
         { _: Request ->
             Response(OK).body("hello $name")
@@ -129,7 +127,7 @@ fun routeWithCallback(): ContractRoute {
 val contract = contract {
     renderer = OpenApi3(ApiInfo("My great API", "v1.0"), Jackson)
     descriptionPath = "/openapi.json"
-    security = ApiKeySecurity(Query.required("api_key"), { it.isNotEmpty() })
+    security = org.http4k.security.ApiKeySecurity(Query.required("api_key"), { it.isNotEmpty() })
 
     routes += echo()
     routes += echoJson()

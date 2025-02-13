@@ -1,0 +1,15 @@
+<div class="my-5 py-5" style="background-color: #f8f8f8">
+    <div class="d-flex justify-content-center">
+        <div class="m-5 p-5 card-shadow" style="max-width: 70%">
+            <h1>Frequently Asked Questions</h1>
+            <ul style="list-style: circle" class="mt-5">
+                {{ range .Params.faq }}
+                <li>
+                    <h2>{{ .question | markdownify }}</h2>
+                    <p>{{ .answer | markdownify }}</p>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>

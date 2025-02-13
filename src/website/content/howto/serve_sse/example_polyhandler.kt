@@ -6,9 +6,11 @@ import org.http4k.core.Response
 import org.http4k.core.Status.Companion.OK
 import org.http4k.lens.Path
 import org.http4k.lens.accept
+import org.http4k.routing.bindHttp
+import org.http4k.routing.bindSse
+import org.http4k.routing.poly
+import org.http4k.routing.routes
 import org.http4k.routing.sse
-import org.http4k.routing.sse.bind
-import org.http4k.server.PolyHandler
 import org.http4k.server.Undertow
 import org.http4k.server.asServer
 import org.http4k.sse.Sse
@@ -31,7 +33,8 @@ fun main() {
 
     val sse = sayHello.then(
         sse(
-            "/hello/{name}" bind { req ->
+            // we can use bindSse to bind a normal sse route (this is an alias)
+            "/hello/{name}" bindSse { req ->
                 SseResponse { sse: Sse ->
                     val name = namePath(req)
                     thread {
@@ -47,9 +50,12 @@ fun main() {
         )
     )
 
-    val http = { req: Request -> Response(OK).body("hitting HTTP server: " + req.uri) }
+    // we can use bindHttp to bind a normal http route (this is an alias)
+    val http = routes("{all:.+}" bindHttp GET to { req: Request ->
+        Response(OK).body("hitting HTTP server: " + req.uri)
+    })
 
-    PolyHandler(http, sse = sse).asServer(Undertow(9000)).start()
+    poly(http, sse).asServer(Undertow(9000)).start()
 
     val httpClient = JavaHttpClient()
 

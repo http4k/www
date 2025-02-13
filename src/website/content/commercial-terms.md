@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "http4k Commercial Subscription Terms"
 description: "Terms of Service for Commercial http4k subscriptions"
 ---

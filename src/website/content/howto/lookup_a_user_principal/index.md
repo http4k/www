@@ -17,7 +17,7 @@ dependencies {
 
 When authorising requests, it is common to need to store some credentials or a user principal object to be accessible by a further Filter or the eventual HttpHandler.
 
-This can be easily achieved by combining the typesafe RequestContext functionality with one of the built-in authorisation Filters:
+This can be easily achieved by combining the typesafe `RequestKey` functionality with one of the built-in authorisation Filters:
 
 ### Code
 

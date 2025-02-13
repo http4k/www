@@ -22,11 +22,11 @@ apply(plugin = "java")
 apply(plugin = "kotlin")
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 tasks {
-
     java {
         sourceCompatibility = VERSION_21
         targetCompatibility = VERSION_21
@@ -156,7 +156,6 @@ dependencies {
     testApi("org.http4k:http4k-connect-ai-ollama-fake")
     testApi("org.http4k:http4k-connect-ai-openai")
     testApi("org.http4k:http4k-connect-ai-openai-fake")
-    testApi("org.http4k:http4k-connect-ai-openai-plugin")
     testApi("org.http4k:http4k-connect-amazon-apprunner")
     testApi("org.http4k:http4k-connect-amazon-apprunner-fake")
     testApi("org.http4k:http4k-connect-amazon-cloudfront")
@@ -214,17 +213,19 @@ dependencies {
     testApi("org.http4k:http4k-connect-kafka-schemaregistry")
     testApi("org.http4k:http4k-connect-kafka-schemaregistry-fake")
     testApi("org.http4k:http4k-connect-ksp-generator")
-    testApi("org.http4k:http4k-connect-langchain")
     testApi("org.http4k:http4k-connect-mattermost")
     testApi("org.http4k:http4k-connect-mattermost-fake")
-    testApi("org.http4k:http4k-connect-openai")
-    testApi("org.http4k:http4k-connect-openai-fake")
-    testApi("org.http4k:http4k-connect-openai-plugin")
     testApi("org.http4k:http4k-connect-storage-core")
     testApi("org.http4k:http4k-connect-storage-http")
     testApi("org.http4k:http4k-connect-storage-jdbc")
-    implementation("org.http4k:http4k-connect-storage-redis")
+    testApi("org.http4k:http4k-connect-storage-redis")
     testApi("org.http4k:http4k-connect-storage-s3")
+
+    testApi("org.http4k.pro:http4k-tools-hotreload")
+
+    // TODO: remove version when it's part of the BOM
+    testApi("org.http4k.pro:http4k-mcp-sdk:${project.properties["http4k_version"]}")
+    testApi("org.http4k.pro:http4k-mcp-desktop:${project.properties["http4k_version"]}")
 
     testApi(Testing.junit.jupiter.engine)
     testApi(Testing.junit.jupiter.api)

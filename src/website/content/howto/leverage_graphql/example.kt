@@ -11,16 +11,14 @@ import org.http4k.client.JavaHttpClient
 import org.http4k.client.asGraphQLHandler
 import org.http4k.core.Filter
 import org.http4k.core.HttpHandler
-import org.http4k.core.RequestContexts
 import org.http4k.core.Uri
 import org.http4k.core.then
 import org.http4k.core.with
-import org.http4k.filter.ServerFilters.InitialiseRequestContext
 import org.http4k.graphql.GraphQLRequest
 import org.http4k.graphql.GraphQLResponse
 import org.http4k.graphql.GraphQLWithContextHandler
-import org.http4k.lens.RequestContextKey
-import org.http4k.lens.RequestContextLens
+import org.http4k.lens.RequestKey
+import org.http4k.lens.RequestLens
 import org.http4k.routing.bind
 import org.http4k.routing.graphQL
 import org.http4k.routing.routes
@@ -82,15 +80,13 @@ class UserDbHandler : GraphQLWithContextHandler<String> {
 }
 
 fun App(): HttpHandler {
-    val contexts = RequestContexts()
-    val user = RequestContextKey.required<String>(contexts)
+    val user = RequestKey.required<String>("user")
 
-    return InitialiseRequestContext(contexts)
-        .then(AddUserToContext(user))
+    return AddUserToContext(user)
         .then(routes("/graphql" bind graphQL(UserDbHandler(), user)))
 }
 
-private fun AddUserToContext(user: RequestContextLens<String>) = Filter { next ->
+private fun AddUserToContext(user: RequestLens<String>) = Filter { next ->
     {
         next(it.with(user of it.method.toString()))
     }

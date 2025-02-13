@@ -2,6 +2,7 @@ package content.ecosystem.http4k.reference.resilience4j
 
 import io.github.resilience4j.circuitbreaker.CircuitBreaker
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig
+import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig.SlidingWindowSynchronizationStrategy.LOCK_FREE
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig.SlidingWindowType.COUNT_BASED
 import org.http4k.core.Method.GET
 import org.http4k.core.Request
@@ -26,7 +27,7 @@ fun main() {
     val circuitBreaker = CircuitBreaker.of(
         "circuit",
         CircuitBreakerConfig.custom()
-            .slidingWindow(2, 2, COUNT_BASED)
+            .slidingWindow(2, 2, COUNT_BASED, LOCK_FREE)
             .permittedNumberOfCallsInHalfOpenState(2)
             .waitDurationInOpenState(Duration.ofSeconds(1))
             .build()

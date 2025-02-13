@@ -1,18 +1,19 @@
 package content.news.typesafe_websockets
 
-import org.http4k.core.HttpHandler
+import org.http4k.core.Method.GET
 import org.http4k.core.Request
 import org.http4k.core.Response
 import org.http4k.core.Status.Companion.OK
 import org.http4k.format.Jackson.auto
 import org.http4k.lens.Path
+import org.http4k.routing.bindHttp
+import org.http4k.routing.poly
+import org.http4k.routing.routes
+import org.http4k.routing.websocket.bind
 import org.http4k.routing.websockets
-import org.http4k.routing.ws.bind
 import org.http4k.server.Jetty
-import org.http4k.server.PolyHandler
 import org.http4k.server.asServer
 import org.http4k.websocket.Websocket
-import org.http4k.websocket.WsHandler
 import org.http4k.websocket.WsMessage
 import org.http4k.websocket.WsResponse
 
@@ -28,7 +29,7 @@ fun main() {
 
     // the routing API is virtually identical to the standard http4k http routing API.
     // on connection, the bound WsConsumer is called with the Websocket instance
-    val ws: WsHandler = websockets(
+    val ws = websockets(
         "/hello" bind websockets(
             "/{name}" bind { req: Request ->
                 WsResponse { ws: Websocket ->
@@ -44,8 +45,10 @@ fun main() {
         )
     )
 
-    val http: HttpHandler = { _: Request -> Response(OK).body("hiya world") }
+    val http = routes("all:{.+}" bindHttp GET to { _: Request ->
+        Response(OK).body("hiya world")
+    })
 
-    // the poly-handler can serve both http and ws protocols.
-    PolyHandler(http, ws).asServer(Jetty(9000)).start().block()
+    // the poly-handler can serve http, sse and ws protocols.
+    poly(http, ws).asServer(Jetty(9000)).start().block()
 }

@@ -1,0 +1,63 @@
+{{ define "main" }}
+<div class="layout">
+    <main class="page-content">
+        <header>
+            <img src="/images/pro.png" class="imageMid mt-3" alt="{{ .Title }}">
+        </header>
+        <article>
+            <div class="mt-4 mb-4">
+                {{ .Content }}
+            </div>
+            <hr/>
+            <div class="row row-cols-1 row-cols-md-3 mt-5 pb-4">
+                {{ range .Params.modules }}
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <div class="container h-33">
+                                <div class="row h-100 flex-column flex-md-row">
+                                    <div class="col-md-8 order-1 order-md-2">
+                                        <h5 class="card-title text-break">{{ .name }}</h5>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-center order-2 order-md-1">
+                                        <img src="/images/{{ .image }}" alt="{{ .name }}" class="rounded" width="100%"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row h-33 mt-4">
+                                <p class="card-text text-center">{{ .description }}</p>
+                            </div>
+                            <div class="mt-auto h-33">
+                                <div class="row mt-4 mb-3">
+                                    {{ if .available }}
+                                    <a href="{{ .link }}" class="btn btn-secondary">Check it out</a>
+                                    {{ else }}
+                                    <a href="{{ .link }}" class="btn btn-secondary">Coming soon...</a>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </article>
+    </main>
+</div>
+
+{{ partial "shared/faq.html" . }}
+
+{{ partial "shared/cta-width.html" . }}
+
+<div id="license"  style="background-color: #f8f8f8">
+    <div class="d-flex justify-content-center">
+        <div class="m-5 card-shadow" style="max-width: 70%">
+            <ul class="mt-5">
+                {{ (resources.GetRemote "https://raw.githubusercontent.com/http4k/http4k/refs/heads/master/pro/LICENSE" ).Content | markdownify }}
+            </ul>
+        </div>
+    </div>
+</div>
+{{ partial "shared/pipes.html" }}
+
+{{ end }}

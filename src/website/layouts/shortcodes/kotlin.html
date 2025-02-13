@@ -6,12 +6,3 @@
 {{ else }}
 {{ errorf "File not found: %s" $filePath }}
 {{ end }}
-
-<script language="JavaScript">
-    // HIDE THE PREAMBLE
-    document.querySelectorAll('span[style*="color:#66d9ef"]').forEach(span => {
-        if (span.textContent === 'import' || span.textContent === 'package') {
-            span.closest('span[style*="display:flex"]').style.display = 'none';
-        }
-    });
-</script>
