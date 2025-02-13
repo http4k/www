@@ -97,7 +97,7 @@ To find out more about http4k Enterprise Edition - head over to the [docs](/ente
 
 As http4k has grown to now over 180 modules, we've found that the existing module naming system has become a little
 unwieldy, so we took the opportunity to reorganise our thinking and the existing modules around the core conceptual
-arenas. You can find the old
+arenas.
 
 As such, we've reorganised some of the existing modules and these will need to be migrated as part of the upgrade to v6.
 You can find the list of movements in the [migration guide](/howto/migrate_from_http4k_v5_to_v6).
