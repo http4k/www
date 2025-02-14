@@ -43,4 +43,5 @@ how_tos:
           - description: Step 3 - Access your MCP server from other agents using our pure Kotlin MCP Client
             image: mcp-client.png
             alt: Creating an MCP server
+email_form_id: c6f89bd51f
 ---
