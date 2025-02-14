@@ -12,7 +12,7 @@ description: Feature overview of the http4k-tools-hotreload module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-tools-hotreload")
+    implementation("org.http4k.pro:http4k-tools-hotreload")
 }
 ```
 
