@@ -117,11 +117,16 @@ menus:
       url: /ecosystem/connect/
       parent: ecosystem
       weight: 33
+    - name: ecosystem-pro
+      title: http4k Pro
+      url: /pro/
+      parent: ecosystem
+      weight: 34
     - name: ecosystem-changelog
       title: Changelog
       url: /ecosystem/changelog/
       parent: ecosystem
-      weight: 34
+      weight: 35
 
     - name: solutions
       title: Solutions

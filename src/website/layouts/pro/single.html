@@ -49,15 +49,6 @@
 
 {{ partial "shared/cta-width.html" . }}
 
-<div id="license"  style="background-color: #f8f8f8">
-    <div class="d-flex justify-content-center">
-        <div class="m-5 card-shadow" style="max-width: 70%">
-            <ul class="mt-5">
-                {{ (resources.GetRemote "https://raw.githubusercontent.com/http4k/http4k/refs/heads/master/pro/LICENSE" ).Content | markdownify }}
-            </ul>
-        </div>
-    </div>
-</div>
 {{ partial "shared/pipes.html" }}
 
 {{ end }}
