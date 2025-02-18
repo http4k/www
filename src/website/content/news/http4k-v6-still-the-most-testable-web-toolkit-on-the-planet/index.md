@@ -15,7 +15,7 @@ This is going to ge a fairly long post, so here's what's coming up:
 
 - [TL;DR - v5 to v6 Migration Guide](/howto/migrate_from_http4k_v5_to_v6)
 - [A look back at http4k v5](#a-look-back-at-http4k-v5)
-    - [The first CVE: CVE-2024-12345](#the-first-cve-cve-2024-12345)
+    - [The first CVE: CVE-2024-55875](#the-first-cve-cve-2024-55875)
 - [What's new in http4k v6?](#whats-new-in-http4k-v6)
     - [Minimum supported Java version](#minimum-supported-java-version)
     - [Module/Code reorganisation](#modulecode-reorganisation)
@@ -52,7 +52,7 @@ the project was structured and what we could do better.
 
 <img class="imageMid my-4" src="./maven.png" alt="http4k lego"/>
 
-#### The first CVE: CVE-2024-12345/
+#### The first CVE: CVE-2024-55875/
 
 It might seem strange to celebrate your first CVE, but it’s a rite of passage for any popular open-source project and an
 excellent opportunity to learn. We were very pleased to have been able to fix the issue quickly, and to have been able to
@@ -60,7 +60,7 @@ provide a fix to all users within a few hours of the issue being reported by a s
 to the efforts the team have made with http4k to ensure we provide a secure and reactive system, and the power of the
 open-source model in general.
 
-You can read about the CVE, the fix and the timeline [here](/security/cve-2024-12345).
+You can read about the CVE, the fix and the timeline [here](/security/cve-2024-55875).
 
 We were also particularly impressed with the score of the CVE - **9.8**. Higher numbers are better, right? 😈
 
