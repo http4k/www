@@ -227,7 +227,6 @@ dependencies {
 //    testApi("org.http4k.pro:http4k-mcp-sdk:${project.properties["http4k_version"]}")
 //    testApi("org.http4k.pro:http4k-mcp-desktop:${project.properties["http4k_version"]}")
 
-    testApi(platform("org.junit:junit-bom:_"))
     testApi("org.junit.platform:junit-platform-launcher")
     testApi("org.junit.jupiter:junit-jupiter-api")
     testApi("org.junit.jupiter:junit-jupiter-engine")
