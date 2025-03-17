@@ -70,10 +70,10 @@ simply passing it to the relevant `ServerConfig` implementation (in this case `J
 | Jetty 11   | ✅    | ✅          | ✅   | ✅               | Legacy         |
 | Ktor CIO   | ✅    | ❌          | ❌   | ❌               |                |
 | Ktor Netty | ✅    | ❌          | ❌   | ❌               |                |
-| Netty      | ✅    | ❌          | ❌   | ❌               |                |
+| Netty      | ✅    | ✅          | ❌   | ❌               |                |
 | Ratpack    | ✅    | ❌          | ❌   | ❌               |                |
 | Servlets   | ✅    | ❌          | ❌   | ❌               |                |
-| SunHttp    | ✅    | ✅          | ✅   | ✅               | Non-production |
+| SunHttp    | ✅    | ✅          | ❌   | ✅               | Non-production |
 | Undertow   | ✅    | ✅          | ✅   | ❌               |                |
 | Websocket  | ❌    | ✅          | ❌   | ❌               |                |
 
