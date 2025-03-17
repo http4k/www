@@ -67,6 +67,24 @@ Additionally, all HTTP client adapter modules allow for custom configuration of 
 ### Websocket
 http4k supplies both blocking and non-blocking Websocket clients. The former is perfect for integration testing purposes, and as it uses the same interface `WsClient` as the in-memory test client (`WsHandler.testWsClient()`) it is simple to write unit tests which can then be reused as system tests by virtue of swapping out the client.
 
+### Feature support
+
+**http4k** provides support for the following Client backends:
+
+| Server         | HTTP | WebSockets | Notes                 |  
+|----------------|------|------------|-----------------------|
+| Apache         | ✅    | ❌          |                       |
+| Apache Async   | ✅    | ❌          |                       |
+| Apache 4       | ✅    | ❌          | Legacy                |
+| Apache 4 Async | ✅    | ❌          | Legacy                |
+| Fuel           | ✅    | ❌          |                       |
+| Helidon        | ✅    | ❌          |                       |
+| Jetty          | ✅    | ✅          |                       |
+| Java           | ✅    | ❌          |                       |
+| Java 8         | ✅    | ❌          | Legacy, no cold start |
+| OkHttp         | ✅    | ✅          |                       |
+| Websocket      | ❌    | ✅          |                       |
+
 #### Code
 
 {{< kotlin file="example_websocket.kt" >}}
