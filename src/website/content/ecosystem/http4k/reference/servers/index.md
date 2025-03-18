@@ -61,21 +61,21 @@ simply passing it to the relevant `ServerConfig` implementation (in this case `J
 
 **http4k** provides support for the following Server backends:
 
-| Server     | HTTP | WebSockets | SSE | Virtual Threads | Notes          |  
-|------------|------|------------|-----|-----------------|----------------|
-| Apache     | ✅    | ❌          | ❌   | ❌               |                |
-| Apache 4   | ✅    | ❌          | ❌   | ❌               | Legacy         |
-| Helidon    | ✅    | ✅          | ✅   | ✅               |                |
-| Jetty      | ✅    | ✅          | ✅   | ✅               |                |
-| Jetty 11   | ✅    | ✅          | ✅   | ✅               | Legacy         |
-| Ktor CIO   | ✅    | ❌          | ❌   | ❌               |                |
-| Ktor Netty | ✅    | ❌          | ❌   | ❌               |                |
-| Netty      | ✅    | ✅          | ❌   | ❌               |                |
-| Ratpack    | ✅    | ❌          | ❌   | ❌               |                |
-| Servlets   | ✅    | ❌          | ❌   | ❌               |                |
-| SunHttp    | ✅    | ✅          | ❌   | ✅               | Non-production |
-| Undertow   | ✅    | ✅          | ✅   | ❌               |                |
-| Websocket  | ❌    | ✅          | ❌   | ❌               |                |
+| Server     | HTTP | WebSockets | SSE | Virtual Threads | Notes                                                                           |  
+|------------|------|------------|-----|-----------------|---------------------------------------------------------------------------------|
+| Apache     | ✅    | ❌          | ❌   | ❌               |                                                                                 |
+| Apache 4   | ✅    | ❌          | ❌   | ❌               | Legacy                                                                          |
+| Helidon    | ✅    | ✅          | ✅   | ✅               | Bug: Missing request headers. https://github.com/helidon-io/helidon/issues/9918 |
+| Jetty      | ✅    | ✅          | ✅   | ✅               |                                                                                 |
+| Jetty 11   | ✅    | ✅          | ✅   | ✅               | Legacy                                                                          |
+| Ktor CIO   | ✅    | ❌          | ❌   | ❌               |                                                                                 |
+| Ktor Netty | ✅    | ❌          | ❌   | ❌               |                                                                                 |
+| Netty      | ✅    | ✅          | ❌   | ❌               |                                                                                 |
+| Ratpack    | ✅    | ❌          | ❌   | ❌               |                                                                                 |
+| Servlets   | ✅    | ❌          | ❌   | ❌               |                                                                                 |
+| SunHttp    | ✅    | ✅          | ❌   | ✅               | Non-production                                                                  |
+| Undertow   | ✅    | ✅          | ✅   | ❌               |                                                                                 |
+| Websocket  | ❌    | ✅          | ❌   | ❌               |                                                                                 |
 
 #### Code
 
