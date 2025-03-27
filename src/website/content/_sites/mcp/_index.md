@@ -7,11 +7,11 @@ layout: "product"
 type: "product"
 tier: pro
 description: Build MCP-compliant servers to integrate Large Language Models with your data and tools using familiar http4k patterns
-docs_link: /ecosystem/http4k/reference/model_context_protocol/
+docs_link: https://http4k.org/ecosystem/http4k/reference/model_context_protocol/
 navigation:
     -   name: docs
         title: Documentation
-        url: /ecosystem/http4k/reference/model_context_protocol/
+        url: https://http4k.org/ecosystem/http4k/reference/model_context_protocol/
     -   name: pricing
         title: Pricing
         url: "#pricing"
