@@ -24,7 +24,8 @@ dependencies {
 
 The [Model Context Protocol](https://modelcontextprotocol.info/) is an open standard created by Anthropic that defines
 how apps can feed information to AI language models. It creates a uniform way to link these models with various data
-sources and tools, which streamlines the integration process.
+sources and tools, which streamlines the integration process. MCP services can be deployed in a Server or Serverless
+environment.
 
 MCP itself is based on the JSON RPC standard, which is used to communicate between the client and server. Messages are
 sent from client to server and then asynchronously from server to client. MCP defines a set of standardised capabilities
@@ -78,10 +79,18 @@ your server to GraalVM for ease of distribution.
 
 #### Server Example
 
-Servers are created bu composing capabilities into a lightweight server. The server can be started using any of the 
+Servers are created bu composing capabilities into a lightweight server. The server can be started using any of the
 http4k server backends which support SSE (see [servers](/ecosystem/http4k/reference/servers)).
 
 {{< kotlin file="server_example.kt" >}}
+
+#### Serverless Example
+
+MCP capabilities can be bound to [http4k Serverless](/ecosystem/http4k/reference/serverless) functions using the HTTP
+protocol in non-streaming mode. To activate this simply bind them into the non-streaming HTTP which is a simple
+`HttpHandler`.
+
+{{< kotlin file="serverless_example.kt" >}}
 
 ## Capabilities
 
@@ -107,6 +116,7 @@ using the http4k Lens system.
 [//]: # (### Capability: Sampling)
 
 [//]: # ()
+
 [//]: # (Sampling allows the server to invoke the client LLM model to generate some content. The Sampling capability is modelled)
 
 [//]: # (as a function `&#40;SamplingRequest&#41; -> Sequence<SamplingResponse>`, and you can pass the contents of previous interactions)
@@ -116,6 +126,7 @@ using the http4k Lens system.
 [//]: # (context to the model.)
 
 [//]: # ()
+
 [//]: # ({{< kotlin file="sampling_example.kt" >}})
 
 ### Capability: Resources
@@ -132,7 +143,8 @@ Roots are provided by the client to the server and determine the base paths that
 
 ### MCP Client
 
-http4k provides client classes to connect to your MCP servers via HTTP, SSE, JSONRPC or Websockets. The clients take care of the
+http4k provides client classes to connect to your MCP servers via HTTP, SSE, JSONRPC or Websockets. The clients take
+care of the
 initial MCP handshake and provide a simple API to send and receive messages to the capabilities, or to register for
 notifications with an MCP server.
 
@@ -146,7 +158,9 @@ the http4k GitHub, or built from the http4k source.
 
 ### To use mcp-desktop client with Claude Desktop:
 
-1. Download the `mcp-desktop` binary for your platform from: [https://github.com/http4k/mcp-desktop], or install it with brew:
+1. Download the `mcp-desktop` binary for your platform from: [https://github.com/http4k/mcp-desktop], or install it with
+   brew:
+
 ```bash
 brew tap http4k/tap
 brew install http4k-mcp-desktop
@@ -161,9 +175,10 @@ brew install http4k-mcp-desktop
 {
     "mcpServers": {
         "MyMcpServer": {
-            "command": "http4k-mcp-desktop", // or path to the binary
+            "command": "http4k-mcp-desktop",
+            // or path to the binary
             "args": [
-                "--transport", 
+                "--transport",
                 "--http-stream",
                 "--url",
                 "http://localhost:3001/mcp"
@@ -179,10 +194,10 @@ brew install http4k-mcp-desktop
 2. Install a GraalVM supporting JDK
 3. Run `./gradlew :http4k-mcp-desktop:native-compile` to build the desktop client binary locally for your platform
 
-
 [//]: # (# Example: Restaurant booking)
 
 [//]: # ()
+
 [//]: # (Let's say you want to use an LLM to help you book a restaurant for you and some friends. An LLM could help coordinate)
 
 [//]: # (this by checking everyone's diary for free dates, finding a restaurant that everyone likes, and then booking a table.)
@@ -194,6 +209,7 @@ brew install http4k-mcp-desktop
 [//]: # (communicate with one or more "servers" providing live data to solve the problem.)
 
 [//]: # ()
+
 [//]: # (- **Client:** Claude Desktop)
 
 [//]: # (- **Server Tools:** User diaries, Restaurant Database, Booking System)
