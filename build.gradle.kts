@@ -81,6 +81,8 @@ dependencies {
 
     testApi("org.http4k:http4k-incubator")
 
+    testApi("org.http4k.pro:http4k-mcp-sdk")
+
     testApi("org.http4k:http4k-multipart")
 
     testApi("org.http4k:http4k-ops-failsafe")
