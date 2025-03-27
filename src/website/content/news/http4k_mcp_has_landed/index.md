@@ -75,7 +75,7 @@ It's incredibly easy to get started with the http4k MCP SDK:
 ## Desktop Integration with Claude
 
 It's no good having a server if you can't connect it to your favourite LLM - and this is the job of the
-[http4k-mcp-desktop](httos://github.com/http4k/mcp-desktop), which allows you to connect any MCP server directly to
+[http4k-mcp-desktop](https://github.com/http4k/mcp-desktop), which allows you to connect any MCP server directly to
 Claude and other AI assistants with zero coding:
 
 ```bash
