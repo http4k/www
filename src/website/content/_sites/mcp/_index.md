@@ -27,11 +27,27 @@ features:
     - title: Flexible</br>Transport
       icon: footprint
       colour: violet
-      description: Support for HTTP Streaming, SSE, Websocket and Standard IO transports, enabling seamless integration with desktop and web-based AI applications.
+      description: Support for both stateful and stateless HTTP Streaming protocols, SSE, Websocket and Standard IO transports, enabling seamless integration with desktop and web-based AI applications.
     - title: Complete</br>Capabilities
       icon: testability
       colour: blue
       description: Full support for MCP capabilities including Prompts, Tools, Resources, Roots, Completions and Sampling, with both local and cloud-based model support.
+    - title: Testable</br>Design
+      icon: testability
+      colour: green
+      description: Build highly testable MCP services with pure functions and no side effects. Create predictable, testable, and composable AI capabilities that can be verified without running a server.
+    - title: Serverless</br>Ready
+      icon: testability
+      colour: orange
+      description: Deploy your MCP capabilities to AWS Lambda, GCP Functions, and other FaaS platforms using http4k's serverless adapters with zero code changes.
+    - title: Protocol</br>Client
+      icon: supportive
+      colour: red
+      description: Build your own AI agents with our pure Kotlin MCP protocol client. Integrate MCP capabilities directly into your applications for custom agent development and advanced AI workflows.
+    - title: Desktop</br>Client
+      icon: footprint
+      colour: yellow
+      description: Connect any MCP server to Claude and other AI assistants using the http4k-mcp-desktop client, with support for all transport modes and authentication types.
 how_tos:
     - section: Getting started with MCP in http4k
       steps:
