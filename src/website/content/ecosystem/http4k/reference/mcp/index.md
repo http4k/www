@@ -14,9 +14,6 @@ dependencies {
     { { < http4k_bom > } }
     // If you are developing an MCP enabled service (StdIO or SSE)
     implementation("org.http4k.pro:http4k-mcp-sdk")
-
-    // If you want to build the MCP desktop client from source
-    implementation("org.http4k.pro:http4k-mcp-desktop")
 }
 ```
 

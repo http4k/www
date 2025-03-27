@@ -7,10 +7,14 @@ layout: "product"
 type: "product"
 tier: pro
 description: Build MCP-compliant servers to integrate Large Language Models with your data and tools using familiar http4k patterns
+docs_link: /ecosystem/http4k/reference/model_context_protocol/
 navigation:
     -   name: docs
-        title: Sign up for launch
-        url: '#subscribe'
+        title: Documentation
+        url: /ecosystem/http4k/reference/model_context_protocol/
+    -   name: pricing
+        title: Pricing
+        url: "#pricing"
 features:
     - title: Simple</br>Integration
       icon: supportive
@@ -23,7 +27,7 @@ features:
     - title: Flexible</br>Transport
       icon: footprint
       colour: violet
-      description: Support for both Server Sent Events + HTTP and Standard IO transports, enabling seamless integration with desktop and web-based AI applications.
+      description: Support for HTTP Streaming, SSE, Websocket and Standard IO transports, enabling seamless integration with desktop and web-based AI applications.
     - title: Complete</br>Capabilities
       icon: testability
       colour: blue
@@ -43,5 +47,7 @@ how_tos:
           - description: Step 3 - Access your MCP server from other agents using our pure Kotlin MCP Client
             image: mcp-client.png
             alt: Creating an MCP server
-email_form_id: c6f89bd51f
+pricing_table:
+    id: prctbl_1R7YKvG47sNzv4yXIn3IgMCA
+    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
 ---
