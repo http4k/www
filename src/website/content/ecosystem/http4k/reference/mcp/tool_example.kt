@@ -41,9 +41,7 @@ object DiaryTool {
     fun main() = println(
         // invoke/test the tool offline - just invoke it like a function
         diaryToolHandler(
-            ToolRequest().with(
-                Tool.Arg.localDate().required("date") of LocalDate.parse("2025-03-21")
-            )
+            ToolRequest().with(Tool.Arg.localDate().required("date") of LocalDate.parse("2025-03-21"))
         )
     )
 }

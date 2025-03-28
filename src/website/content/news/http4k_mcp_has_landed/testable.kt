@@ -24,4 +24,3 @@ fun `can call a tool as a function`() {
     val response = weatherTool(request) as ToolResponse.Ok
     assertThat(response, equalTo(ToolResponse.Ok(Content.Text("Weather in London: Sunny and 25°C"))))
 }
-
