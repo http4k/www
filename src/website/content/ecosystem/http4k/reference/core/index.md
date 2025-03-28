@@ -264,8 +264,8 @@ client.received.take(2).forEach(::println)
 
 ### Request and Response toString()
 
-The HttpMessages used by http4k toString in the HTTP wire format, which it simple to capture and replay HTTP message
-streams later in a similar way to tools like [Mountebank](http://www.mbtest.org/).
+The HttpMessages used by http4k toString in the HTTP wire format, which makes it simple to capture and replay HTTP message
+streams later.
 
 ### CURL format
 
