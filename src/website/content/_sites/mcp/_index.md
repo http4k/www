@@ -63,6 +63,7 @@ how_tos:
           - description: Step 3 - Access your MCP server from other agents using our pure Kotlin MCP Client
             image: mcp-client.png
             alt: Creating an MCP server
+launch_announcement: https://http4k.org/news/http4k_mcp_has_landed/
 pricing_table:
     id: prctbl_1R7YKvG47sNzv4yXIn3IgMCA
     key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0

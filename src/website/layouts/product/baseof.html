@@ -66,7 +66,7 @@
         text-align: center;
     }
 
-    .our-document{
+    .our-document {
         min-height: 0;
     }
 
@@ -82,7 +82,9 @@
             <div class="col-md-7 col-lg-7 col-xl-6">
                 <h2 class="header mb-4">{{ .Params.tagline }}</h2>
                 <p class="mb-5">{{ .Params.description }}</p>
-                {{ if .Params.docs_link }}
+                {{ if .Params.launch_announcement }}
+                <a class="btn btn-secondary" href="{{ .Params.launch_announcement }}"> <span class="launch-spark">✦</span> Read the Launch Announcement <span class="launch-spark">✦</span></a>
+                {{ else if .Params.docs_link }}
                 <a class="btn btn-secondary" href="{{ .Params.docs_link }}">See the docs</a>
                 {{ else }}
                 <a class="btn btn-secondary" href="#subscribe">Sign up for launch</a>
@@ -120,17 +122,21 @@
             <h2>{{ .section }}</h2>
             <div class="row">
                 {{ range $index, $element := .steps }}
-                {{ if (modBool $index 2)  }}<div class="col-lg-1"></div>{{end}}
+                {{ if (modBool $index 2) }}
+                <div class="col-lg-1"></div>
+                {{end}}
                 <div class="col-lg-5 text-center">
                     <p>{{ $element.description | markdownify }}</p>
                     <img class="img-fluid" style="border-radius: 8px" src="/images/{{ $element.image }}" alt="{{ $element.alt }}"/>
                 </div>
-                {{ if not (modBool $index 2)  }}<div class="col-lg-1"></div>{{end}}
+                {{ if not (modBool $index 2) }}
+                <div class="col-lg-1"></div>
+                {{end}}
                 {{ end }}
             </div>
         </div>
     </div>
-{{ end }}
+    {{ end }}
 </div>
 {{ end }}
 {{ if .Params.post_how_tos_partial }}{{ partial .Params.post_how_tos_partial . }}{{ end }}
@@ -151,8 +157,8 @@
 {{ if eq .Params.tier "pro" }}
 <div class="container pt-5 pb-5" id="subscribe">
     <div class="row justify-content-center">
-    <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
-        </div>
+        <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
+    </div>
 </div>
 {{ end }}
 {{ end }}
