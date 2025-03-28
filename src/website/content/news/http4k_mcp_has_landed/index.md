@@ -15,9 +15,13 @@ This module represents our implementation of the [Model Context Protocol](https:
 standard that enables AI systems like Claude to interact with your data, tools, and services. And naturally, we've built
 it with the same unwavering commitment to testability that defines everything we do.
 
-The MCP SDK also supports the latest version of the MCP specification which supports stateless and stateful
+The http4k MCP SDK also supports the latest version of the [specification](https://spec.modelcontextprotocol.io/) which
+supports stateless and stateful
 connections - this is a major advancement in the abilities of the protocol and should unlock mass adoption of the
 technology - especially with the recent announcement that OpenAI will also be supporting MCP.
+
+We are also very proud to be the first JVM-based SDK to support this new version of the protocol - which the http4k team
+has been involved in feeding back into via the specification GitHub.
 
 ## TL;DR - What is MCP?
 
@@ -66,6 +70,13 @@ programmatically.
 
 {{< kotlin file="client.kt" >}}
 
+### Security
+
+The MCP spec has also importantly introduced standards for security based around OAuth2 and JWT tokens. The http4k MCP SDK provides
+simple plug-in integration with all of the security models which http4k supports - including Basic, API key and OAuth.
+
+{{< kotlin file="security.kt" >}}
+
 ## Getting Started
 
 It's incredibly easy to get started with the http4k MCP SDK:
@@ -97,6 +108,9 @@ In order to provide the best possible support for our users, we're offering the 
 as a commercially licensed module as a part of our Pro tier and is automatically included in all http4k Enterprise
 Edition subscriptions. As with all of the other Pro features, it is free to use for non-commercial, non-profit
 organisations and personal use.
+
+We're really excited to see what you build with the http4k MCP SDK. If you have any questions, feedback, then hit us up
+on GitHub or through the Kotlin Slack.
 
 The http4k team is just at the start of it's MCP journey, We're diving deeper into what really matters: making AI
 development safer, smarter, and more intuitive. Think easier security controls, more graceful ways to build autonomous
