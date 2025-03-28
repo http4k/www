@@ -43,11 +43,11 @@ features:
     - title: Protocol</br>Client
       icon: supportive
       colour: red
-      description: Build your own AI agents with our pure Kotlin MCP protocol client. Integrate MCP capabilities directly into your applications for custom agent development and advanced AI workflows.
-    - title: Desktop</br>Client
+      description: Build your own AI agents with our pure Kotlin MCP protocol clients. Integrate MCP capabilities directly into your applications for custom agent development and advanced AI workflows.
+    - title: Desktop</br>Integration
       icon: footprint
       colour: yellow
-      description: Connect any MCP server to Claude and other AI assistants using the http4k-mcp-desktop client, with support for all transport modes and authentication types.
+      description: Connect any MCP server to Claude and other AI assistants using the **http4k-mcp-desktop** client, with support for all transport modes and authentication types.
 how_tos:
     - section: Getting started with MCP in http4k
       steps:

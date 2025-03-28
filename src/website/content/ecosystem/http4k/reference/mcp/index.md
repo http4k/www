@@ -74,21 +74,6 @@ module by plugging in capabilities into the server. The **http4k-mcp-sdk module*
 **HTTP Streaming**, **SSE**, **StdIo** or **Websocket** based servers. For StdIo-based servers, we recommend compiling
 your server to GraalVM for ease of distribution.
 
-#### Server Example
-
-Servers are created bu composing capabilities into a lightweight server. The server can be started using any of the
-http4k server backends which support SSE (see [servers](/ecosystem/http4k/reference/servers)).
-
-{{< kotlin file="server_example.kt" >}}
-
-#### Serverless Example
-
-MCP capabilities can be bound to [http4k Serverless](/ecosystem/http4k/reference/serverless) functions using the HTTP
-protocol in non-streaming mode. To activate this simply bind them into the non-streaming HTTP which is a simple
-`HttpHandler`.
-
-{{< kotlin file="serverless_example.kt" >}}
-
 ## Capabilities
 
 The MCP protocol is based on a set of capabilities that can be provided by the server or client. Each capability can be
@@ -137,6 +122,34 @@ templated to provide bounds within which the client can interact with the resour
 ### Capability: Roots
 
 Roots are provided by the client to the server and determine the base paths that the server can use to act within.
+
+### Composing MCP Capabilities
+
+http4k MCP lets you combine any number of related capabilities into reusable collections using the `CapabilityPack` API. This is perfect for organizing related tools, resources, or prompts that logically belong together and shipping them as a module or library.
+
+{{< kotlin file="capability_pack_example.kt" >}}
+
+### MCP Servers
+
+Servers are created by combining the configured MCP Protocol with a set of capabilities and creating an MCP Server. The
+server can be started using any of the http4k server backends which support SSE (
+see [servers](/ecosystem/http4k/reference/servers)).
+
+{{< kotlin file="simple_server_example.kt" >}}
+
+There are a number of different ways customise the MCP protocol server to suit your needs. Features that can be configured are:
+- Security - Basic, Bearer, OAuth
+- Session validation - Ensure that the client is authenticated to access the contents of the session
+- Event Store - Store and resume MCP event streams using the SSE last-event-id header
+- Event Tracking - Assign a unique ID to each event to track the progress of the event stream
+
+#### Serverless Example
+
+MCP capabilities can be bound to [http4k Serverless](/ecosystem/http4k/reference/serverless) functions using the HTTP
+protocol in non-streaming mode. To activate this simply bind them into the non-streaming HTTP which is a simple
+`HttpHandler`.
+
+{{< kotlin file="serverless_example.kt" >}}
 
 ### MCP Client
 
