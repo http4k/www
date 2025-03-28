@@ -103,7 +103,7 @@ development safer, smarter, and more intuitive. Think easier security controls, 
 agents, and tools that just understand developers. We're not chasing buzzwords—we're creating an environment where
 innovation meets responsibility, and complexity transforms into clarity.
 
-Less vibe, more value. That's the http4k way.
+**Less vibe, more value. That's the http4k way.**
 
 Happy coding!
 
