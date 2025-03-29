@@ -9,9 +9,6 @@ import org.http4k.mcp.model.Content
 import org.http4k.mcp.model.Tool
 import org.http4k.routing.bind
 
-// Define a tool
-val description = Tool("weather", "Gets weather for a city", cityArg)
-
 val weatherTool = Tool("weather", "Gets weather for a city", cityArg) bind { req ->
     val city = cityArg(req)
     ToolResponse.Ok(Content.Text("Weather in $city: Sunny and 25°C"))
