@@ -1,8 +1,8 @@
 package content.ecosystem.http4k.reference.mcp
 
 import org.http4k.mcp.model.McpEntity
-import org.http4k.mcp.protocol.ProtocolCapability.ToolsChanged
 import org.http4k.mcp.protocol.ServerMetaData
+import org.http4k.mcp.protocol.ServerProtocolCapability.ToolsChanged
 import org.http4k.mcp.protocol.Version
 import org.http4k.routing.bind
 import org.http4k.routing.mcpHttpStreaming
