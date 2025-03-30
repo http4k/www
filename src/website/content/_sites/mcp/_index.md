@@ -59,10 +59,10 @@ how_tos:
             alt: Creating an MCP server
           - description: Step 3 - Integrate your AI-powered app with **Claude Desktop** as a server or native binary
             image: mcp-claude.png
-            alt: Creating an MCP server
+            alt: Using Claude with an MCP server
           - description: Step 4 - Access your MCP server from other agents using our **pure Kotlin MCP Client**
             image: mcp-client.png
-            alt: Creating an MCP server
+            alt: Inter-agent communication
 launch_announcement: https://http4k.org/news/http4k_mcp_has_landed/
 pricing_table:
     id: prctbl_1R7YKvG47sNzv4yXIn3IgMCA

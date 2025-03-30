@@ -37,10 +37,10 @@ how_tos:
       steps:
           - description: Step 1 - Create the factory class
             image: hotreload-step1.png
-            alt: Using a Connect API Client
+            alt: Create your factory class
           - description: Step 2 - Run it with the HotReloadServer
             image: hotreload-step2.png
-            alt: Extending a Connect API Client
+            alt: Run it with the HotReloadServer
 pricing_table:
     id: prctbl_1Qk8bRG47sNzv4yXy1CGLRii
     key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
