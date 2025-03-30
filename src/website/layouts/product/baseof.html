@@ -79,9 +79,9 @@
     {{ end }}
     <div class="container h-80 text-white">
         <div class="row align-items-center h-100">
-            <div class="col-md-7 col-lg-7 col-xl-6">
+            <div class="col-md-9 col-lg-9 col-xl-6">
                 <h2 class="header mb-4">{{ .Params.tagline }}</h2>
-                <p class="mb-5">{{ .Params.description }}</p>
+                <p class="mb-3">{{ .Params.description }}</p>
                 {{ if .Params.launch_announcement }}
                 <a class="btn btn-secondary" href="{{ .Params.launch_announcement }}"> <span class="launch-spark">✦</span> Read the Launch Announcement <span class="launch-spark">✦</span></a>
                 {{ else if .Params.docs_link }}
