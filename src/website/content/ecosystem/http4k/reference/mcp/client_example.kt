@@ -12,7 +12,6 @@ import org.http4k.mcp.PromptRequest
 import org.http4k.mcp.ResourceRequest
 import org.http4k.mcp.ToolRequest
 import org.http4k.mcp.client.http.HttpStreamingMcpClient
-import org.http4k.mcp.model.CompletionArgument
 import org.http4k.mcp.model.McpEntity
 import org.http4k.mcp.model.Prompt
 import org.http4k.mcp.model.PromptName
@@ -67,7 +66,8 @@ fun main() {
     println(
         ">>> Completions\n" +
             client.completions().complete(
-                CompletionRequest(Reference.Prompt("Greet"), CompletionArgument("prefix", "Al"))
+                Reference.Prompt("Greet"),
+                CompletionRequest("prefix", "Al")
             )
     )
 
