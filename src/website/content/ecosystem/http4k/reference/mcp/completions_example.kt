@@ -3,7 +3,6 @@ package content.ecosystem.http4k.reference.mcp
 import org.http4k.mcp.CompletionHandler
 import org.http4k.mcp.CompletionRequest
 import org.http4k.mcp.CompletionResponse
-import org.http4k.mcp.model.CompletionArgument
 import org.http4k.mcp.model.Reference
 
 // the reference of the completion
@@ -24,7 +23,7 @@ object ProvideCompletionOptionsForPrompt {
     fun main() = println(
         // invoke/test the completion offline - just invoke it like a function
         completionHandler(
-            CompletionRequest(promptReference, CompletionArgument("prefix", "Al"))
+            CompletionRequest("prefix", "Al")
         )
     )
 }
