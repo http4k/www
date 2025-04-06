@@ -166,7 +166,7 @@ A desktop client that bridges StdIo-bound desktop clients such as **Claude Deskt
 over HTTP/SSE, either locally or remotely. The desktop client is a simple native application that can be downloaded from
 the http4k GitHub, or built from the http4k source.
 
-### To use mcp-desktop client with Claude Desktop:
+### To use mcp-desktop client with clients such as Claude Desktop or Cursor:
 
 1. Download the `mcp-desktop` binary for your platform from: [https://github.com/http4k/mcp-desktop], or install it with
    brew:
@@ -179,7 +179,7 @@ brew install http4k-mcp-desktop
 2. Configure [Claude Desktop](https://claude.ai/download) to use the `mcp-desktop` binary as an MCP server with the
    following configuration. You can find the configuration file in `claude_desktop_config.json`, or by browsing through
    the
-   developer settings menu. You can add as many MCP servers as you like:
+   developer settings menu. You can add as many MCP servers as you like. Note that [Cursor](https://www.cursor.com/) users should use the `--transport http-nonstream` optio for correct integration:
 
 ```json
 {
