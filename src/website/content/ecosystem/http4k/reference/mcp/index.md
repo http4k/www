@@ -179,7 +179,7 @@ brew install http4k-mcp-desktop
 2. Configure [Claude Desktop](https://claude.ai/download) to use the `mcp-desktop` binary as an MCP server with the
    following configuration. You can find the configuration file in `claude_desktop_config.json`, or by browsing through
    the
-   developer settings menu. You can add as many MCP servers as you like. Note that [Cursor](https://www.cursor.com/) users should use the `--transport http-nonstream` optio for correct integration:
+   developer settings menu. You can add as many MCP servers as you like. Note that [Cursor](https://www.cursor.com/) users should use the `--transport http-nonstream` or `--transport jsonrpc` option for correct integration:
 
 ```json
 {
