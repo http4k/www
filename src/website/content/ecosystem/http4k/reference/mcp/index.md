@@ -11,7 +11,7 @@ description: Feature overview of the http4k-mcp-sdk module
 
 ```kotlin
 dependencies {
-    { { < http4k_bom > } }
+    {{< http4k_bom >}}
     // If you are developing an MCP enabled service (StdIO or SSE)
     implementation("org.http4k.pro:http4k-mcp-sdk")
 }
