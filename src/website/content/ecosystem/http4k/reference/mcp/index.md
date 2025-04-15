@@ -33,7 +33,7 @@ provide agentic behaviour by providing standard communications between several M
 Currently the MCP standard supports the following transports:
 
 - **HTTP Steaming:** Clients can interact with the MCP server by either a SSE connection (accepting
-  `application/event-stream`or via plain HTTP (accepting `application/json`). Stream resumption and replay is supported
+  `application/event-stream` or via plain HTTP (accepting `application/json`). Stream resumption and replay is supported
   on the SSE connection by calling GET with the `Last-Event-ID` header. All traffic is served by calling the `/mcp`
   endpoint.
 - **Server Sent Events + HTTP:** Clients initiate an SSE connection to the server (on `/sse`) which is used to send
