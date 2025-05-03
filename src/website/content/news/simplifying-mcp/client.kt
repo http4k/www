@@ -1,4 +1,4 @@
-package content.news.http4k_mcp_authorization_schema_updates
+package content.news.`simplifying-mcp`
 
 import content.news.http4k_mcp_has_landed.cityArg
 import org.http4k.client.JavaHttpClient

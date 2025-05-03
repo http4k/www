@@ -16,7 +16,7 @@ val client = HttpStreamingMcpClient(
 ).apply { start() }
 
 // Call tools programmatically
-val toolResponse = content.news.http4k_mcp_authorization_schema_updates.client.tools().call(
+val toolResponse = client.tools().call(
     ToolName.of("weather"),
     ToolRequest().with(cityArg of "London"),
 )

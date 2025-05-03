@@ -1,4 +1,4 @@
-package content.news.http4k_mcp_authorization_schema_updates
+package content.news.`simplifying-mcp`
 
 import org.http4k.core.Uri
 import org.http4k.mcp.ToolResponse
