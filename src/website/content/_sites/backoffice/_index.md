@@ -2,7 +2,7 @@
 sitemap:
     disable: true
 title: "http4k BackOffice"
-tagline: "Secure API Gateway for developers and MCP tooling tools"
+tagline: "Secure API Gateway for developers and MCP tools"
 layout: "product"
 type: "product"
 tier: pro
@@ -23,15 +23,15 @@ features:
     -   title: MCP</br>Integration
         icon: footprint
         colour: violet
-        description: Empower your APIs to be seamlessly exposed as MCP tools, enabling AI assistants to interact with your services through standard protocols.
+        description: Empower your APIs to be automatically exposed as MCP tools, enabling AI assistants to interact with your services through standard protocols.
     -   title: SSO</br>Authentication
         icon: testability
         colour: blue
-        description: Secure login handled via Single Sign-On with granular, role-based access controls for both human and AI users.
+        description: Secure user login handled via integration with your standard Single Sign-On tooling. MCP tools are authenticated using standard OAuth2 flows.
     -   title: Comprehensive</br>Auditing
         icon: testability
         colour: green
-        description: Track and log all API interactions with detailed audit trails for security and compliance requirements.
+        description: Track and log all API interactions with detailed audit trails for security and compliance requirements, extensible through custom connectors.
     -   title: CLI</br>Support
         icon: testability
         colour: yellow
@@ -50,7 +50,7 @@ how_tos:
             -   description: Step 1 - Simply add the http4k-backoffice library to your JVM project and configure with your existing OpenAPI services and customisations
                 image: placeholder.png
                 alt: Configure your Gateway
-            -   description: Step 2 - Define access controls with code-based whitelist/blacklist APIs sfor both developers and AI systems
+            -   description: Step 2 - Define access controls with code-based whitelist/blacklist APIs for both developers and AI systems
                 image: placeholder.png
                 alt: Define access controls
             -   description: Step 3 - Implement custom extensions through our simple notification auditing connector APIs
