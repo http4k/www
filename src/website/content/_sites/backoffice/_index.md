@@ -47,13 +47,13 @@ features:
 how_tos:
     -   section: Integration with your infrastructure
         steps:
-            -   description: Step 1 - Simply add the http4k-backoffice library to your JVM project and configure with your existing OpenAPI services and customisations
+            -   description: Step 1 - Simply import the http4k-backoffice library to your Kotlin project and configure manual or automatic service discovery.
                 image: placeholder.png
                 alt: Configure your Gateway
-            -   description: Step 2 - Define access controls with code-based whitelist/blacklist APIs for both developers and AI systems
+            -   description: Step 2 - Define access controls with code-based whitelist/blacklist APIs for both developers and AI systems. Total control.
                 image: placeholder.png
                 alt: Define access controls
-            -   description: Step 3 - Implement custom extensions through our simple notification auditing connector APIs
+            -   description: Step 3 - Implement custom extensions through our simple notification auditing connector APIs.
                 image: placeholder.png
                 alt: Implement extensions
             -   description: Step 4 - Deploy to your cloud environment using your standard deployment process. No SaaS, Cloud or Vendor lock-in.
