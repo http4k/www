@@ -115,9 +115,9 @@
     </div>
 </div>
 {{ if .Params.how_tos }}
-<div class="our-document pt-5 pb-5">
+<div class="our-document pt-5 pb-3">
     {{ range .Params.how_tos }}
-    <div class="developers-custom pb-5">
+    <div class="developers-custom pb-0">
         <div class="container-fluid">
             <h2>{{ .section }}</h2>
             <div class="row">
@@ -127,7 +127,9 @@
                 {{end}}
                 <div class="col-lg-5 text-center">
                     <p>{{ $element.description | markdownify }}</p>
+                    {{ if $element.image }}
                     <img class="img-fluid" style="border-radius: 8px" src="/images/{{ $element.image }}" alt="{{ $element.alt }}"/>
+                    {{ end }}
                 </div>
                 {{ if not (modBool $index 2) }}
                 <div class="col-lg-1"></div>
@@ -137,6 +139,12 @@
         </div>
     </div>
     {{ end }}
+    {{ if .Params.large_image }}
+    <div class="d-flex justify-content-center">
+        <img class="img-fluid" style=" width: 50%; border-radius: 8px" src="/images/{{ .Params.large_image }}" alt="{{ $.Params.title }}"/>
+    </div>
+    {{ end }}
+
 </div>
 {{ end }}
 {{ if .Params.post_how_tos_partial }}{{ partial .Params.post_how_tos_partial . }}{{ end }}

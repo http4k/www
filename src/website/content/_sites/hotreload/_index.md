@@ -35,10 +35,10 @@ features:
 how_tos:
     - section: Set it up in two easy steps
       steps:
-          - description: Step 1 - Create the factory class
+          - description: Step 1 - Create the **factory class**
             image: hotreload-step1.png
             alt: Create your factory class
-          - description: Step 2 - Run it with the HotReloadServer
+          - description: Step 2 - **Jus run it** with the HotReloadServer
             image: hotreload-step2.png
             alt: Run it with the HotReloadServer
 pricing_table:
