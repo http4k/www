@@ -138,7 +138,7 @@ see [servers](/ecosystem/http4k/reference/servers)).
 {{< kotlin file="simple_server_example.kt" >}}
 
 There are a number of different ways customise the MCP protocol server to suit your needs. Features that can be configured are:
-- Security - Basic, Bearer, OAuth
+- Security - Basic, Bearer, API Key or auto-discovered OAuth ([specification standard](https://modelcontextprotocol.info/specification/draft/basic/authorization))
 - Session validation - Ensure that the client is authenticated to access the contents of the session
 - Event Store - Store and resume MCP event streams using the SSE last-event-id header
 - Event Tracking - Assign a unique ID to each event to track the progress of the event stream
@@ -200,26 +200,6 @@ brew install http4k-mcp-desktop
 
 ### To build mcp-desktop from source:
 
-1. Clone the http4k repo
+1. Clone the [http4k MCP Desktop](http4k-mcp-desktop) repo
 2. Install a GraalVM supporting JDK
-3. Run `./gradlew :http4k-mcp-desktop:native-compile` to build the desktop client binary locally for your platform
-
-[//]: # (# Example: Restaurant booking)
-
-[//]: # ()
-
-[//]: # (Let's say you want to use an LLM to help you book a restaurant for you and some friends. An LLM could help coordinate)
-
-[//]: # (this by checking everyone's diary for free dates, finding a restaurant that everyone likes, and then booking a table.)
-
-[//]: # (The LLM would need to be able to communicate with some "tools" - your calendar, a restaurant database, and the booking)
-
-[//]: # (system. This is where MCP comes in. The LLM in this case would be the MCP client, and can use the protocol to)
-
-[//]: # (communicate with one or more "servers" providing live data to solve the problem.)
-
-[//]: # ()
-
-[//]: # (- **Client:** Claude Desktop)
-
-[//]: # (- **Server Tools:** User diaries, Restaurant Database, Booking System)
+3. Run `./gradlew :native-compile` to build the desktop client binary locally for your platform
