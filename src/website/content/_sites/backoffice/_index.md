@@ -1,6 +1,6 @@
 ---
 sitemap:
-    disable: true
+    url: "https://backoffice.http4k.org"
 title: "BackOffice"
 tagline: "Secure API Gateway for developers and MCP tools"
 layout: "product"
