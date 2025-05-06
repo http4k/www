@@ -3,6 +3,7 @@ sitemap:
     disable: true
 title: "http4k Hot Reload"
 type: "product"
+subdomain: hotreload
 layout: "product"
 tier: pro
 tagline: Save time on server restarts!

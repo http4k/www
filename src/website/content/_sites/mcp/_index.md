@@ -5,6 +5,7 @@ title: "http4k Model Context Protocol"
 tagline: Marry the power of AI with the simplicity of http4k
 layout: "product"
 type: "product"
+subdomain: mcp
 tier: pro
 description: Build MCP-compliant servers to integrate Large Language Models with your data and tools using familiar http4k patterns
 docs_link: https://http4k.org/ecosystem/http4k/reference/mcp/

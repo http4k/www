@@ -1,10 +1,11 @@
 ---
 sitemap:
-    url: "https://backoffice.http4k.org"
+    disable: true
 title: "BackOffice"
 tagline: "Secure API Gateway for developers and MCP tools"
 layout: "product"
 type: "product"
+subdomain: backoffice
 tier: pro
 description: "Connect developers and AI models to your OpenAPI powered services via a secure, audited gateway with MCP integration"
 navigation:

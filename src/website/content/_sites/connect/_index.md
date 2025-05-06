@@ -3,6 +3,7 @@ sitemap:
     disable: true
 title : "http4k Connect"
 type: "product"
+subdomain: connect
 layout: "product"
 tier: community
 tagline: Functional, modular and testable API Clients 

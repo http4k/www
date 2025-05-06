@@ -5,6 +5,7 @@ title: "http4k Transaction Outbox"
 tagline: "Reliable, distributed transaction processing"
 layout: "product"
 type: "product"
+subdomain: outbox
 tier: pro
 description: "Build reliable, distributed transaction processing systems using the http4k Transaction Outbox pattern"
 navigation:
