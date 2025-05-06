@@ -11,7 +11,7 @@ description: Feature overview of the http4k-mcp-sdk module
 
 ```kotlin
 dependencies {
-    {{< http4k_bom >}}
+    { { < http4k_bom > } }
     // If you are developing an MCP enabled service (StdIO/SSE/HTTP Streaming/Websocket)
     implementation("org.http4k.pro:http4k-mcp-sdk")
 }
@@ -125,23 +125,46 @@ Roots are provided by the client to the server and determine the base paths that
 
 ### Composing MCP Capabilities
 
-http4k MCP lets you combine any number of related capabilities into reusable collections using the `CapabilityPack` API. This is perfect for organizing related tools, resources, or prompts that logically belong together and shipping them as a module or library.
+http4k MCP lets you combine any number of related capabilities into reusable collections using the `CapabilityPack` API.
+This is perfect for organizing related tools, resources, or prompts that logically belong together and shipping them as
+a module or library.
 
 {{< kotlin file="capability_pack_example.kt" >}}
 
 ### MCP Servers
 
-Servers are created by combining the configured MCP Protocol with a set of capabilities and creating an MCP Server. The
-server can be started using any of the http4k server backends which support SSE (
+Servers are created by combining the configured MCP Protocol with a set of capabilities, an optional security, and a
+binding to a Server or Serverless backend. The server can be started using any of the http4k server backends which
+support SSE (
 see [servers](/ecosystem/http4k/reference/servers)).
 
-{{< kotlin file="simple_server_example.kt" >}}
+{{< kotlin file="server_streaming_example.kt" >}}
 
-There are a number of different ways customise the MCP protocol server to suit your needs. Features that can be configured are:
-- Security - Basic, Bearer, API Key or auto-discovered OAuth ([specification standard](https://modelcontextprotocol.info/specification/draft/basic/authorization))
-- Session validation - Ensure that the client is authenticated to access the contents of the session
-- Event Store - Store and resume MCP event streams using the SSE last-event-id header
-- Event Tracking - Assign a unique ID to each event to track the progress of the event stream
+Alternatively you can use any non-SSE supporting server backend and forego the SSE support in lieu of request/response
+via JSON:
+
+{{< kotlin file="server_nonstreaming_example.kt" >}}
+
+There are a number of different ways customise the MCP protocol server to suit your needs. Features that can be configured are shown below. Note that the main SDK library is designed for simplicity - and you may have to drill down one level to access some of these customisations:
+
+- Security - Basic, Bearer, API Key or auto-discovered (or custom!)
+  OAuth ([specification standard](https://modelcontextprotocol.info/specification/draft/basic/authorization))
+- Session validation (via `SessionProvider`) - Ensure that the client is authenticated to access the contents of the session
+- Event Store (via `SessionEventStore`) - Store and resume MCP event streams using the SSE last-event-id header
+- Event Tracking (via `SessionEventTracking`) - Assign a unique ID to each event to track the progress of the event stream
+- Origin validation (via `Filter` and `SseFilter`) - Protect against DNS rebinding attacks by configuring allowed origins
+
+#### Important: Protecting Against DNS Rebinding Attacks
+
+When deploying an MCP server that uses HTTP Streaming or SSE, you must implement `Origin` header validation to prevent DNS rebinding attacks. These attacks can allow malicious websites to interact with your MCP server by changing IP addresses after initial DNS
+resolution, potentially bypassing same-origin policy protections. This can be done by implementing the HTTP (`Filter`) and SSE specific (`SseFilter`) filter implementations and attaching them to the Polyhandler that is returned from the `mcpXXX()` call.
+
+[//]: # (The http4k-mcp-sdk provides protection mechanisms that can be applied to your server:)
+
+[//]: # ()
+[//]: # ({{< kotlin file="securing_against_sse_rebind.kt" >}})
+
+[//]: # ()
 
 #### Serverless Example
 
@@ -179,7 +202,8 @@ brew install http4k-mcp-desktop
 2. Configure [Claude Desktop](https://claude.ai/download) to use the `mcp-desktop` binary as an MCP server with the
    following configuration. You can find the configuration file in `claude_desktop_config.json`, or by browsing through
    the
-   developer settings menu. You can add as many MCP servers as you like. Note that [Cursor](https://www.cursor.com/) users should use the `--transport http-nonstream` or `--transport jsonrpc` option for correct integration:
+   developer settings menu. You can add as many MCP servers as you like. Note that [Cursor](https://www.cursor.com/)
+   users should use the `--transport http-nonstream` or `--transport jsonrpc` option for correct integration:
 
 ```json
 {
