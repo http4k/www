@@ -17,6 +17,7 @@ import org.http4k.mcp.model.Prompt
 import org.http4k.mcp.model.PromptName
 import org.http4k.mcp.model.Reference
 import org.http4k.mcp.model.Tool
+import org.http4k.mcp.model.localDate
 import org.http4k.mcp.protocol.Version
 import java.time.LocalDate
 

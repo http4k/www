@@ -4,6 +4,7 @@ import org.http4k.mcp.ToolResponse
 import org.http4k.mcp.model.Content
 import org.http4k.mcp.model.McpEntity
 import org.http4k.mcp.model.Tool
+import org.http4k.mcp.model.string
 import org.http4k.mcp.protocol.ServerMetaData
 import org.http4k.mcp.protocol.Version
 import org.http4k.routing.bind
@@ -13,7 +14,7 @@ import org.http4k.server.asServer
 
 fun main() {
     // 1. Define a tool
-    val cityArg = Tool.Arg.required("city", "City name")
+    val cityArg = Tool.Arg.string().required("city", "City name")
 
     val weatherTool = Tool(
         "weather",

@@ -1,12 +1,12 @@
 package content.ecosystem.http4k.reference.mcp
 
-import org.http4k.lens.localDate
 import org.http4k.lens.with
 import org.http4k.mcp.ToolHandler
 import org.http4k.mcp.ToolRequest
 import org.http4k.mcp.ToolResponse
 import org.http4k.mcp.model.Content
 import org.http4k.mcp.model.Tool
+import org.http4k.mcp.model.localDate
 import java.time.LocalDate
 
 
