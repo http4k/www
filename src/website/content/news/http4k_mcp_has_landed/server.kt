@@ -13,7 +13,7 @@ import org.http4k.server.Jetty
 import org.http4k.server.asServer
 
 fun main() {
-    // 1. Define a tool
+    // 1. Define a tool using a typesafe lens
     val cityArg = Tool.Arg.string().required("city", "City name")
 
     val weatherTool = Tool(

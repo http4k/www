@@ -10,7 +10,7 @@ import org.http4k.mcp.model.localDate
 import java.time.LocalDate
 
 
-// argument input typesafe lenses for the tool
+// tool argument inputs are typesafe lens
 val toolArg = Tool.Arg.localDate().required("date", "date in format yyyy-mm-dd")
 
 // the description of the tool exposed to clients

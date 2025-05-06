@@ -159,12 +159,9 @@ There are a number of different ways customise the MCP protocol server to suit y
 When deploying an MCP server that uses HTTP Streaming or SSE, you must implement `Origin` header validation to prevent DNS rebinding attacks. These attacks can allow malicious websites to interact with your MCP server by changing IP addresses after initial DNS
 resolution, potentially bypassing same-origin policy protections. This can be done by implementing the HTTP (`Filter`) and SSE specific (`SseFilter`) filter implementations and attaching them to the Polyhandler that is returned from the `mcpXXX()` call.
 
-[//]: # (The http4k-mcp-sdk provides protection mechanisms that can be applied to your server:)
+The http4k-mcp-sdk provides protection mechanisms that can be applied to your server:
 
-[//]: # ()
-[//]: # ({{< kotlin file="securing_against_sse_rebind.kt" >}})
-
-[//]: # ()
+{{< kotlin file="securing_against_sse_rebind.kt" >}}
 
 #### Serverless Example
 
