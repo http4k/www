@@ -1,5 +1,6 @@
 package content.news.http4k_mcp_has_landed
 
+import org.http4k.core.Uri
 import org.http4k.mcp.ToolResponse
 import org.http4k.mcp.model.Content
 import org.http4k.mcp.model.McpEntity
@@ -7,6 +8,8 @@ import org.http4k.mcp.model.Tool
 import org.http4k.mcp.model.string
 import org.http4k.mcp.protocol.ServerMetaData
 import org.http4k.mcp.protocol.Version
+import org.http4k.mcp.server.security.BearerAuthMcpSecurity
+import org.http4k.mcp.server.security.OAuthMcpSecurity
 import org.http4k.routing.bind
 import org.http4k.routing.mcpHttpStreaming
 import org.http4k.server.Jetty
@@ -25,9 +28,10 @@ fun main() {
         ToolResponse.Ok(Content.Text("Weather in $city: Sunny and 25°C"))
     }
 
-    // 2. Create an MCP server
+    // 2. Create an MCP server and select your security model
     val mcpServer = mcpHttpStreaming(
         ServerMetaData(McpEntity.of("Weather API"), Version.of("1.0.0")),
+        OAuthMcpSecurity(Uri.of("https://oauth-server")) { it == "my_oauth_token" },
         weatherTool
     )
 
