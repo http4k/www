@@ -14,8 +14,8 @@ We're excited to share a significant update to our [http4k Model Context Protoco
 ## TL;DR - What's New?
 
 - **Simplified Auth Model**: We've implemented the new draft specification that requires only resource server capabilities, eliminating the need for dual server implementation
-- **Version 6.8.0.0 Released**: Available now with these improvements. The docs can be found [here].(/ecosystem/http4k/reference/mcp/)
-- **http4k-mcp-desktop 1.5.0**: Updated desktop client to support the new auth model. Details [here](https://github.com/http4k/mcp-desktop).
+- **Version 6.8.0.0 Released**: Available now with these improvements. The docs can be found [here](/ecosystem/http4k/reference/mcp/)
+- **http4k-mcp-desktop 1.5.0**: Updated desktop client to support the new auth model. Details [here](https://github.com/http4k/mcp-desktop)
 - **Streamlined Client API**: Connecting to MCP servers is now even easier
 - **Same http4k Testability**: All our changes maintain the testability-first approach you expect
 
