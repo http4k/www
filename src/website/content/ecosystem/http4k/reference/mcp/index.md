@@ -84,7 +84,13 @@ Tools allow external MCP clients such as LLMs to request the server to perform b
 API. The Tool capability is modelled as a function `typealias ToolHandler = (ToolRequest) -> ToolResponse`, and can be
 bound to a tool definition which describes it's arguments using the http4k Lens system:
 
-{{< kotlin file="tool_example.kt" >}}
+{{< kotlin file="simple_tool_example.kt" >}}
+
+#### Complex Tools request arguments
+
+The http4k MCP SDK also supports handling of complex arguments in the request. This can be done by using the `auto()` extension function and passing an example argument instance in order that the complex JSON schema can be rendered. Note that the Kotlin Reflection JAR also needs to be present on the classpath to take advantage of this feature, or you can supply a custom instance of `ConfigurableMcpJson` (Moshi-based) to work without reflection (we recommend the use of the [Kotshi](https://github.com/ansman/kotshi) compiler plugin to generate adapters for this use-case). 
+
+{{< kotlin file="auto_tool_example.kt" >}}
 
 ### Capability: Prompts
 
