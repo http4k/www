@@ -1,7 +1,7 @@
 ---
 sitemap:
     disable: true
-title: "http4k Model Context Protocol"
+title: "http4k MCP (Model Context Protocol)"
 tagline: Marry the power of AI with the simplicity of http4k
 layout: "product"
 type: "product"
