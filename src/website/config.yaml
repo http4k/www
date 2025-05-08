@@ -27,7 +27,7 @@ params:
     - "/images/social-logo.png"
 
   versions:
-    http4k: "6.8.0.0"
+    http4k: "6.8.1.0"
 
   favicons:
     themeColor: "#FFFFFF"
