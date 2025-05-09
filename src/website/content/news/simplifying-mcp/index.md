@@ -2,36 +2,37 @@
 title: "Simplifying MCP: http4k's Updated Authentication Model - Less Code, More Power"
 description: The http4k MCP SDK has been updated to support the latest Draft OAuth specification,
     enhancing security and flexibility in AI integrations.
-date: 2025-05-01
+date: 2025-05-12
 image: oauth.png
-draft: true
 ---
 
 <img class="imageMid my-4" src="./http4k-oauth-mcp.png" alt="http4k MCP logo"/>
 
-We're excited to share a significant update to our [http4k Model Context Protocol (MCP) SDK](https://mcp.http4k.org)! 🚀 Based on community feedback and our commitment to making AI integration as frictionless as possible, we've streamlined the authentication model in our latest release.
+We're excited to share a significant update to our [http4k Model Context Protocol (MCP) SDK](https://mcp.http4k.org)! 🚀. Based on community feedback and our commitment to making AI integration as frictionless as possible, we've streamlined the authentication model in our latest release.
 
 ## TL;DR - What's New?
 
 - **Simplified Auth Model**: We've implemented the new draft specification that requires only resource server capabilities, eliminating the need for dual server implementation
 - **Version 6.9.0.0 Released**: Available now with these improvements. The docs can be found [here](/ecosystem/http4k/reference/mcp/)
 - **http4k-mcp-desktop 1.5.0**: Updated desktop client to support the new auth model. Details [here](https://github.com/http4k/mcp-desktop)
-- **Streamlined Client API**: Connecting to MCP servers is now even easier
+- **Secure Kotlin Client API**: Securely connecting to MCP servers is now even easier
 - **Same http4k Testability**: All our changes maintain the testability-first approach you expect
 
 ## Why We Made These Changes
 
-The newest (2025-3-26)  MCP authentication specification was widely considered too complicated for server creators to implement effectively as it required the MCPs to act as both an OAuth Resource and Authentication servers. The MCP community took this on board and based on feedback from our SDK users, we thoroughly agreed that a simplification was required. From the latest changes in the MCP community around the [specification](https://modelcontextprotocol.io/specification/draft/basic/authorization), we've embraced the changes in the new draft spec that dramatically reduces this complexity while maintaining robust OAuth security. Whilst these are not yet officially part of the spec, the direction of travel is clear and we believe they are sensible and will be adopted by the community.
+The newest (2025-3-26)  MCP authentication specification was widely considered too complicated for server creators to implement effectively as it required the MCPs to act as both an OAuth Resource and Authentication servers. The MCP community took this on board and based on feedback from our SDK users, we thoroughly agreed that a simplification was required. From the latest changes in the MCP community around the [specification](https://modelcontextprotocol.io/specification/draft/basic/authorization), we've embraced the changes in the new draft spec that dramatically reduces this complexity while maintaining robust OAuth security. Whilst these are not yet officially part of the spec, the direction of travel is clear and we believe they are sensible and will be quickly adopted by companies developing production-grade MCP tooling.
 
-For http4k, the developer experience has always been our north star. Along with testability, simplicity, and functional purity, we believe that working with our libraries should feel natural and frictionless. These changes reflect that ongoing commitment to putting developers first.
+At the same time, there have been a number of articles about new attack vectors exposed the MCP space, including DNS-rebinding attacks, malicious browser extensions and Tool Poisoning. We have taken these into account and have made some changes to the way we expose authentication to mitigate these risks (wherever practical for an SDK provider to do so), including making the use of no security at all a deliberate opt-in choice rather than the default. We would encourage the other SDKs authors - and especially the official MCP SDKs - to make similar changes to their APIs to keep the community safe.
+
+For http4k, the developer experience has always been our north star. Along with testability, simplicity, and functional purity, we believe that working with our libraries should feel natural and frictionless. These changes reflect that ongoing commitment to putting developers and organisational data security first.
 
 ## One-Line Server Setup
 
-Setting up an MCP server with proper authentication is now as simple as using the new simplified auth model with just one parameter addition. This small change means you can create a fully compliant MCP server with minimal ceremony - exactly how http4k should be! 
+Setting up an MCP server with proper authentication is now as simple as using the new simplified auth model with just one parameter addition. This small change means you can create a fully compliant MCP server with **OAuth** support and minimal ceremony - exactly how http4k should be! 
 
 {{< kotlin file="server.kt" >}}
 
-As before, we also have implementations for Basic, Api Key and Bearer token authentication if they are more appropriate for your use case.
+As before, we also have implementations for **Basic**, **Api Key** and **Bearer** token authentication if they are more appropriate for your use case, as well as an option to explicitly opt-in for no security at all (we don't recommend this but we have left the facility implemented).
 
 ## Improved Client API
 

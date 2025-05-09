@@ -21,6 +21,5 @@ fun main() {
         Tool("time", "Get the current time") bind {
             ToolResponse.Ok(listOf(Content.Text(Instant.now().toString())))
         }
-    )
-        .asServer(JettyLoom(3001)).start()
+    ).asServer(JettyLoom(3001)).start()
 }
