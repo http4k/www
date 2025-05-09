@@ -4,6 +4,7 @@ import org.http4k.mcp.model.McpEntity
 import org.http4k.mcp.protocol.ServerMetaData
 import org.http4k.mcp.protocol.ServerProtocolCapability.ToolsChanged
 import org.http4k.mcp.protocol.Version
+import org.http4k.mcp.server.security.NoMcpSecurity
 import org.http4k.routing.bind
 import org.http4k.routing.mcpHttpNonStreaming
 import org.http4k.server.SunHttp
@@ -13,6 +14,7 @@ fun main() {
     // this protocol version does not support SSE connections.
     val mcpServer = mcpHttpNonStreaming(
         ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0"), ToolsChanged),
+        NoMcpSecurity,
         toolDefinitionFor("David") bind diaryToolHandler,
     )
 

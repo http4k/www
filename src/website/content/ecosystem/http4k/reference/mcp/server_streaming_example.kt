@@ -17,7 +17,7 @@ fun main() {
         // give the server an identity
         ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0"), ToolsChanged),
 
-        // insert an optional security implementation
+        // insert a security implementation
         OAuthMcpSecurity(Uri.of("https://oauth-server")) { it == "my_oauth_token" },
 
         // bind server capabilities here ...

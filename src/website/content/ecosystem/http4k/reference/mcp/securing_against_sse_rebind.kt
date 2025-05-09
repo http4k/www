@@ -14,6 +14,8 @@ import org.http4k.mcp.model.McpEntity
 import org.http4k.mcp.protocol.ServerMetaData
 import org.http4k.mcp.protocol.ServerProtocolCapability.ToolsChanged
 import org.http4k.mcp.protocol.Version
+import org.http4k.mcp.server.security.BearerAuthMcpSecurity
+import org.http4k.mcp.server.security.NoMcpSecurity
 import org.http4k.mcp.server.security.OAuthMcpSecurity
 import org.http4k.routing.bind
 import org.http4k.routing.mcpHttpStreaming
@@ -23,6 +25,7 @@ import org.http4k.server.asServer
 fun main() {
     val mcpServer = mcpHttpStreaming(
         ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0"), ToolsChanged),
+        BearerAuthMcpSecurity { it == "my_bearer_token" },
         toolDefinitionFor("David") bind diaryToolHandler,
     )
 
