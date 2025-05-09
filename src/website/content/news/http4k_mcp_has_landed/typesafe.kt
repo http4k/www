@@ -4,7 +4,12 @@ import org.http4k.mcp.model.Tool
 import org.http4k.mcp.model.int
 import org.http4k.mcp.model.localDate
 import org.http4k.mcp.model.string
+import org.http4k.mcp.util.McpJson.auto
 
 val cityArg = Tool.Arg.string().required("city", "City name")
 val temperatureArg = Tool.Arg.int().required("temperature", "Temperature in Celsius")
 val dateArg = Tool.Arg.localDate().required("date", "Date in yyyy-MM-dd format")
+
+data class Human(val name: String, val age: Int)
+
+val complexArg = Tool.Arg.auto(Human("David", 21)).required("human dev")

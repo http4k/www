@@ -58,7 +58,7 @@ Standard IO. This means you can run your MCP server anywhere - from cloud platfo
 ### Type-safe Tooling
 
 Our implementation leverages http4k's powerful Lens system to provide type-safe tool definitions and capability
-bindings. This gives you compile-time safety when defining your AI integrations.
+bindings, including simple and complex arguments. This gives you compile-time safety when defining your AI integrations.
 
 {{< kotlin file="typesafe.kt" >}}
 
