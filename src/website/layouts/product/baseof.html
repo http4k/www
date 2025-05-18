@@ -66,6 +66,10 @@
         text-align: center;
     }
 
+    .license h2 {
+        text-align: center;
+    }
+
     .our-document {
         min-height: 0;
     }
@@ -148,26 +152,29 @@
 </div>
 {{ end }}
 {{ if .Params.post_how_tos_partial }}{{ partial .Params.post_how_tos_partial . }}{{ end }}
+
 {{ if .Params.pricing_table }}
 <div class="container pt-5 pb-5" id="pricing">
+    <div class="license pb-5">
+        <div class="row justify-content-center">
+            <h2>License</h2>
+            <span style="text-align: center"><b>{{ .Params.title }}</b> is available under the <a href="/commercial-license"><b>http4k Commercial License</b></a>. Free usage is granted for non-commercial, non-profit, and research activities.</span>
+        </div>
+    </div>
     <div class="pricing">
         <div class="row justify-content-center">
             <h2>Pricing*</h2>
-            <span style="text-align: center">All <a href="/pro">http4k Pro</a> modules are also <b>included</b> as a part of the <a href="/enterprise">http4k Enterprise Edition</a> subscription.</span>
-
             <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
             <stripe-pricing-table pricing-table-id="{{ .Params.pricing_table.id }}"
                                   publishable-key="{{ .Params.pricing_table.key }}">
             </stripe-pricing-table>
-            <span style="text-align: center">*Free usage is granted for non-commercial, non-profit, and research activities under the <a href="/commercial-license">http4k Commercial License</a>.</span>
+            <br/>
+            <span style="text-align: center">*All <a href="/pro"><b>http4k Pro</b></a> modules are also <b>automatically included</b> as a part of the http4k Enterprise Edition subscription. Please see <a href="/enterprise"><b>here</b></a> for details.</span>
         </div>
     </div>
 </div>
 {{ else }}
 {{ if eq .Params.tier "pro" }}
-<div class="row justify-content-center">
-    <span style="text-align: center">Use of all <a href="/pro">http4k Pro</a> modules is included as a part of the <a href="/enterprise">http4k Enterprise Edition</a> subscription.</span>
-</div>
 <div class="container pt-5 pb-5" id="subscribe">
     <div class="row justify-content-center">
         <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
