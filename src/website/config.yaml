@@ -142,7 +142,7 @@ menus:
       parent: solutions
       weight: 42
     - name: solutions-pro
-      title: http4k Pro modules
+      title: http4k Pro
       url: /pro/
       parent: solutions
       weight: 43

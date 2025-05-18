@@ -16,6 +16,12 @@ navigation:
     -   name: pricing
         title: Pricing
         url: "#pricing"
+    -   name: http4k Pro
+        title: http4k Pro
+        url: /pro
+    -   name: http4k Enterprise Edition
+        title: http4k Enterprise Edition
+        url: /enterprise
 features:
     - title: Simple</br>Integration
       icon: supportive

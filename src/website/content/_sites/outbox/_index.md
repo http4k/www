@@ -12,6 +12,12 @@ navigation:
     -   name: docs
         title: Sign up for launch
         url: '#subscribe'
+    -   name: http4k Pro
+        title: http4k Pro
+        url: /pro
+    -   name: http4k Enterprise Edition
+        title: http4k Enterprise Edition
+        url: /enterprise
 features:
     - title: Async</br>processing
       icon: support
