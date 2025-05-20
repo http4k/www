@@ -38,7 +38,7 @@ features:
     - title: Complete</br>Capabilities
       icon: testability
       colour: blue
-      description: Full support for MCP capabilities including Prompts, Tools, Resources, Roots, Completions and Sampling, with both local and cloud-based model support.
+      description: Full support for offical and Draft MCP capabilities including Prompts, Tools, Resources, Roots, Completions and Sampling, with both local and cloud-based model support.
     - title: Testable</br>Design
       icon: testability
       colour: green
