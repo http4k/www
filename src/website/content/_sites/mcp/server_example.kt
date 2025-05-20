@@ -30,8 +30,6 @@ fun main() {
     mcpServer.asServer(JettyLoom(3002)).start()
 }
 
-data class WeatherReport(val temperature: Int, val outlook: String)
-
 fun liveWeatherTool(): ToolCapability {
     val city = Tool.Arg.string().required("city")
     val report = Tool.Output.auto(WeatherReport(100, "Sunny")).toLens()
@@ -42,6 +40,8 @@ fun liveWeatherTool(): ToolCapability {
         ToolResponse.Ok().with(report of WeatherReport(100, "Sunny in ${city(request)}"))
     }
 }
+
+data class WeatherReport(val temperature: Int, val outlook: String)
 
 
 fun loadFromFileSystem(): ToolCapability = TODO()
