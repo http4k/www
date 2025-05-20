@@ -138,10 +138,7 @@ a module or library.
 
 ### MCP Servers
 
-Servers are created by combining the configured MCP Protocol with a set of capabilities, an optional security, and a
-binding to a Server or Serverless backend. The server can be started using any of the http4k server backends which
-support SSE (
-see [servers](/ecosystem/http4k/reference/servers)).
+Servers are created by combining the configured MCP Protocol with a set of capabilities, an optional security, and a binding to a Server or Serverless backend. The server can be started using any of the http4k server backends which support SSE ( see [servers](/ecosystem/http4k/reference/servers)).
 
 {{< kotlin file="server_streaming_example.kt" >}}
 
