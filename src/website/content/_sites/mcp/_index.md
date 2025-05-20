@@ -26,31 +26,31 @@ features:
     - title: Simple</br>Integration
       icon: supportive
       colour: pink
-      description: Build secure MCP-compliant servers using familiar http4k patterns. Seamlessly connect AI models with your existing systems and data sources.
+      description: Build **secure MCP-compliant servers** using familiar http4k patterns. Seamlessly connect AI models with your existing systems and data sources.
     - title: Type-safe</br>Tooling
       icon: support
       colour: indigo
-      description: Create robust AI integrations using http4k's powerful Lens system for type-safe tool definitions and capability bindings with compile-time safety.
+      description: Create robust AI integrations using http4k's powerful Lens system for **type-safe tool definitions** and capability bindings with compile-time safety.
     - title: Flexible</br>Transport
       icon: footprint
       colour: violet
-      description: Support for both stateful and stateless HTTP Streaming protocols, SSE, Websocket and Standard IO transports, enabling seamless integration with desktop and web-based AI applications.
+      description: Support for both stateful and stateless **HTTP Streaming** protocols, SSE, Websocket and Standard IO transports, enabling seamless integration with desktop and web-based AI applications.
     - title: Complete</br>Capabilities
       icon: testability
       colour: blue
-      description: Full support for Official and Draft MCP capabilities including Prompts, Tools, Resources, Roots, Completions and Sampling, with both local and cloud-based model support.
+      description: Full support for **Official** and **Draft** MCP capabilities including Prompts, Tools, Resources, Roots, Completions and Sampling, with both local and cloud-based model support.
     - title: Testable</br>Design
       icon: testability
       colour: green
-      description: Build highly testable MCP services with pure functions and no side effects. Create predictable, testable, and composable AI capabilities that can be verified without running a server.
+      description: Build **highly testable** MCP services with pure functions and no side effects. Create predictable, testable, and composable AI capabilities that can be verified without running a server.
     - title: Serverless</br>Ready
       icon: testability
       colour: orange
-      description: Deploy your MCP capabilities to AWS Lambda, GCP Functions, and other FaaS platforms using http4k's serverless adapters with zero code changes.
+      description: Deploy your MCP capabilities to AWS Lambda, GCP Functions, and other FaaS platforms using http4k's serverless adapters with **zero code changes**.
     - title: Protocol</br>Client
       icon: supportive
       colour: red
-      description: Build your own AI agents with our pure Kotlin MCP protocol clients. Integrate MCP capabilities directly into your applications for custom agent development and advanced AI workflows.
+      description: Build your own **AI agents** with our pure Kotlin MCP protocol clients. Integrate MCP capabilities directly into your applications for custom agent development and advanced AI workflows.
     - title: Desktop</br>Integration
       icon: footprint
       colour: yellow
