@@ -38,11 +38,11 @@ features:
     - title: Complete</br>Capabilities
       icon: testability
       colour: blue
-      description: Full support for offical and Draft MCP capabilities including Prompts, Tools, Resources, Roots, Completions and Sampling, with both local and cloud-based model support.
+      description: Full support for Official and Draft MCP capabilities including Prompts, Tools, Resources, Roots, Completions and Sampling, with both local and cloud-based model support.
     - title: Testable</br>Design
       icon: testability
       colour: green
-      description: Build highly testable MCP services with pure functions and no side effects. Create predictable, servuce testable, and composable AI capabilities that can be verified without running a server.
+      description: Build highly testable MCP services with pure functions and no side effects. Create predictable, testable, and composable AI capabilities that can be verified without running a server.
     - title: Serverless</br>Ready
       icon: testability
       colour: orange
