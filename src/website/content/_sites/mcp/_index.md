@@ -58,7 +58,7 @@ features:
 how_tos:
     - section: Getting started with MCP in http4k
       steps:
-          - description: Step 1 - Define your tools and capabilities using **simple**, **testable** functions
+          - description: Step 1 - Define typesafe MCP tools and capabilities using **simple**, **testable** functions
             image: mcp-tool.png
             alt: Defining MCP tools
           - description: Step 2 - Create your MCP server by **composing capabilities** and **security** into a **lightweight** server
