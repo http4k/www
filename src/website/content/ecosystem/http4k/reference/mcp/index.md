@@ -82,7 +82,7 @@ installed separately into the server, and the client can interact with the serve
 
 Tools allow external MCP clients such as LLMs to request the server to perform bespoke functionality such as invoking an
 API. The Tool capability is modelled as a function `typealias ToolHandler = (ToolRequest) -> ToolResponse`, and can be
-bound to a tool definition which describes it's arguments using the http4k Lens system:
+bound to a tool definition which describes it's arguments and outputs using the http4k Lens system:
 
 {{< kotlin file="simple_tool_example.kt" >}}
 
