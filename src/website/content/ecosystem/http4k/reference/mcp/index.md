@@ -12,7 +12,12 @@ description: Feature overview of the http4k-mcp-sdk module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
+    
+    // for general MCP development
     implementation("org.http4k.pro:http4k-mcp-sdk")
+
+    // if you just want to connect to an MCP server
+    implementation("org.http4k.pro:http4k-mcp-client")
 }
 ```
 
