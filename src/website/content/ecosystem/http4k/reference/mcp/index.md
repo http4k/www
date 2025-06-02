@@ -228,6 +228,6 @@ brew install http4k-mcp-desktop
 
 ### To build mcp-desktop from source:
 
-1. Clone the [http4k MCP Desktop](http4k-mcp-desktop) repo
+1. Clone the [http4k MCP Desktop](https://github.com/http4k/mcp-desktop) repo
 2. Install a GraalVM supporting JDK
 3. Run `./gradlew :native-compile` to build the desktop client binary locally for your platform
