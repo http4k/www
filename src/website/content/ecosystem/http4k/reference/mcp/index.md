@@ -4,7 +4,7 @@ type: ecosystem
 tier: pro
 ecosystem: http4k Core
 title: "AI: MCP SDK"
-description: Feature overview of the http4k-mcp-sdk module
+description: Feature overview of the http4k-ai-mcp-sdk module
 ---
 
 ### Installation (Gradle)
@@ -14,10 +14,10 @@ dependencies {
     {{< http4k_bom >}}
     
     // for general MCP development
-    implementation("org.http4k.pro:http4k-mcp-sdk")
+    implementation("org.http4k.pro:http4k-ai-mcp-sdk")
 
     // if you just want to connect to an MCP server
-    implementation("org.http4k.pro:http4k-mcp-client")
+    implementation("org.http4k.pro:http4k-ai-mcp-client")
 }
 ```
 
@@ -67,14 +67,14 @@ your own MCP-compliant servers in Kotlin, using the familiar http4k methodology 
 protocols. Each of the capabilities is modelled as a **binding** between a capability description and a function that
 exposes the capability. See [Capability Types](#capability-types) for more details.
 
-The MCP support in http4k consists of two parts - the `http4k-mcp-sdk` and
+The MCP support in http4k consists of two parts - the `http4k-ai-mcp-sdk` and
 the [http4k-mcp-desktop](https://github.com/http4k/mcp-desktop) application which is used to connect the MCP server to
 a desktop client such as **Claude Desktop**.
 
-# SDK: http4k-mcp-sdk
+# SDK: http4k-ai-mcp-sdk
 
 The core SDK for working with the Model Context Protocol. You can build your own MCP-compliant applications using this
-module by plugging in capabilities into the server. The **http4k-mcp-sdk module** provides a simple way to create either
+module by plugging in capabilities into the server. The **http4k-ai-mcp-sdk module** provides a simple way to create either
 **HTTP Streaming**, **SSE**, **StdIo** or **Websocket** based servers. For StdIo-based servers, we recommend compiling
 your server to GraalVM for ease of distribution.
 
@@ -166,7 +166,7 @@ There are a number of different ways customise the MCP protocol server to suit y
 When deploying an MCP server that uses HTTP Streaming or SSE, you must implement `Origin` header validation to prevent DNS rebinding attacks. These attacks can allow malicious websites to interact with your MCP server by changing IP addresses after initial DNS
 resolution, potentially bypassing same-origin policy protections. This can be done by implementing the HTTP (`Filter`) and SSE specific (`SseFilter`) filter implementations and attaching them to the Polyhandler that is returned from the `mcpXXX()` call.
 
-The http4k-mcp-sdk provides protection mechanisms that can be applied to your server:
+The http4k-ai-mcp-sdk provides protection mechanisms that can be applied to your server:
 
 {{< kotlin file="securing_against_sse_rebind.kt" >}}
 
