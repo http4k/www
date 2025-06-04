@@ -1,15 +1,15 @@
 package content.ecosystem.http4k.reference.mcp
 
-import org.http4k.connect.model.Role.Companion.Assistant
+import org.http4k.ai.model.Role.Companion.Assistant
 import org.http4k.lens.int
 import org.http4k.lens.with
-import org.http4k.mcp.PromptHandler
-import org.http4k.mcp.PromptRequest
-import org.http4k.mcp.PromptResponse
-import org.http4k.mcp.model.Content
-import org.http4k.mcp.model.Message
-import org.http4k.mcp.model.Prompt
-import org.http4k.mcp.model.PromptName
+import org.http4k.ai.mcp.PromptHandler
+import org.http4k.ai.mcp.PromptRequest
+import org.http4k.ai.mcp.PromptResponse
+import org.http4k.ai.mcp.model.Content
+import org.http4k.ai.mcp.model.Message
+import org.http4k.ai.mcp.model.Prompt
+import org.http4k.ai.mcp.model.PromptName
 
 // argument lenses for the prompt
 val name = Prompt.Arg.required("name", "the name of the person to greet")

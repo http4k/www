@@ -3,10 +3,10 @@ package content.news.http4k_mcp_has_landed
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
 import org.http4k.lens.with
-import org.http4k.mcp.ToolRequest
-import org.http4k.mcp.ToolResponse
-import org.http4k.mcp.model.Content
-import org.http4k.mcp.model.Tool
+import org.http4k.ai.mcp.ToolRequest
+import org.http4k.ai.mcp.ToolResponse
+import org.http4k.ai.mcp.model.Content
+import org.http4k.ai.mcp.model.Tool
 import org.http4k.routing.bind
 
 val weatherTool = Tool("weather", "Gets weather for a city", cityArg) bind { req ->

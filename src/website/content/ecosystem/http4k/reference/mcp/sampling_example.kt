@@ -1,18 +1,18 @@
 //package content.ecosystem.http4k.reference.model_context_protocol
 //
-//import org.http4k.mcp.IncomingSamplingHandler
-//import org.http4k.mcp.SamplingRequest
-//import org.http4k.mcp.SamplingResponse
-//import org.http4k.mcp.model.Content
-//import org.http4k.mcp.model.MaxTokens
-//import org.http4k.mcp.model.Message
-//import org.http4k.mcp.model.ModelIdentifier
-//import org.http4k.mcp.model.ModelPreferences
-//import org.http4k.mcp.model.ModelScore
-//import org.http4k.mcp.model.ModelSelector
-//import org.http4k.mcp.model.Role.assistant
-//import org.http4k.mcp.model.Role.user
-//import org.http4k.mcp.model.StopReason
+//import org.http4k.ai.mcp.IncomingSamplingHandler
+//import org.http4k.ai.mcp.SamplingRequest
+//import org.http4k.ai.mcp.SamplingResponse
+//import org.http4k.ai.mcp.model.Content
+//import org.http4k.ai.mcp.model.MaxTokens
+//import org.http4k.ai.mcp.model.Message
+//import org.http4k.ai.mcp.model.ModelIdentifier
+//import org.http4k.ai.mcp.model.ModelPreferences
+//import org.http4k.ai.mcp.model.ModelScore
+//import org.http4k.ai.mcp.model.ModelSelector
+//import org.http4k.ai.mcp.model.Role.assistant
+//import org.http4k.ai.mcp.model.Role.user
+//import org.http4k.ai.mcp.model.StopReason
 //
 //object SampleFromOurLocalLlm {
 //

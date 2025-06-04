@@ -1,10 +1,10 @@
 package content.news.http4k_mcp_has_landed
 
-import org.http4k.mcp.model.Tool
-import org.http4k.mcp.model.int
-import org.http4k.mcp.model.localDate
-import org.http4k.mcp.model.string
-import org.http4k.mcp.util.McpJson.auto
+import org.http4k.ai.mcp.model.Tool
+import org.http4k.ai.mcp.model.int
+import org.http4k.ai.mcp.model.localDate
+import org.http4k.ai.mcp.model.string
+import org.http4k.ai.mcp.util.McpJson.auto
 
 val cityArg = Tool.Arg.string().required("city", "City name")
 val temperatureArg = Tool.Arg.int().required("temperature", "Temperature in Celsius")

@@ -1,11 +1,11 @@
 package content.news.http4k_mcp_has_landed
 
 import org.http4k.core.Credentials
-import org.http4k.mcp.model.McpEntity
-import org.http4k.mcp.protocol.ServerMetaData
-import org.http4k.mcp.protocol.Version
-import org.http4k.mcp.server.security.BasicAuthMcpSecurity
-import org.http4k.mcp.server.security.BearerAuthMcpSecurity
+import org.http4k.ai.mcp.model.McpEntity
+import org.http4k.ai.mcp.protocol.ServerMetaData
+import org.http4k.ai.mcp.protocol.Version
+import org.http4k.ai.mcp.server.security.BasicAuthMcpSecurity
+import org.http4k.ai.mcp.server.security.BearerAuthMcpSecurity
 import org.http4k.routing.mcpHttpStreaming
 import org.http4k.routing.mcpWebsocket
 

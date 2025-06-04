@@ -1,9 +1,9 @@
 package content.ecosystem.http4k.reference.mcp
 
-import org.http4k.mcp.CompletionHandler
-import org.http4k.mcp.CompletionRequest
-import org.http4k.mcp.CompletionResponse
-import org.http4k.mcp.model.Reference
+import org.http4k.ai.mcp.CompletionHandler
+import org.http4k.ai.mcp.CompletionRequest
+import org.http4k.ai.mcp.CompletionResponse
+import org.http4k.ai.mcp.model.Reference
 
 // the reference of the completion
 val promptReference = Reference.Prompt("Greet")

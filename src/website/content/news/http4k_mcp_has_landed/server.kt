@@ -1,15 +1,15 @@
 package content.news.http4k_mcp_has_landed
 
 import org.http4k.core.Uri
-import org.http4k.mcp.ToolResponse
-import org.http4k.mcp.model.Content
-import org.http4k.mcp.model.McpEntity
-import org.http4k.mcp.model.Tool
-import org.http4k.mcp.model.string
-import org.http4k.mcp.protocol.ServerMetaData
-import org.http4k.mcp.protocol.Version
-import org.http4k.mcp.server.security.BearerAuthMcpSecurity
-import org.http4k.mcp.server.security.OAuthMcpSecurity
+import org.http4k.ai.mcp.ToolResponse
+import org.http4k.ai.mcp.model.Content
+import org.http4k.ai.mcp.model.McpEntity
+import org.http4k.ai.mcp.model.Tool
+import org.http4k.ai.mcp.model.string
+import org.http4k.ai.mcp.protocol.ServerMetaData
+import org.http4k.ai.mcp.protocol.Version
+import org.http4k.ai.mcp.server.security.BearerAuthMcpSecurity
+import org.http4k.ai.mcp.server.security.OAuthMcpSecurity
 import org.http4k.routing.bind
 import org.http4k.routing.mcpHttpStreaming
 import org.http4k.server.Jetty

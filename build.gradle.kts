@@ -240,7 +240,7 @@ dependencies {
     testApi("dev.forkhandles:mock4k")
 
     testApi("software.amazon.awssdk:s3:_")
-    testApi("com.azure:azure-search-documents:_")
+//    testApi("com.azure:azure-search-documents:_")
     testApi("com.google.http-client:google-http-client:_")
 
     testApi("io.opentelemetry.contrib:opentelemetry-aws-xray-propagator:_")

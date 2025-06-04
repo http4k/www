@@ -1,24 +1,24 @@
 package content.ecosystem.http4k.reference.mcp
 
 import org.http4k.client.JavaHttpClient
-import org.http4k.connect.model.ToolName
+import org.http4k.ai.model.ToolName
 import org.http4k.core.BodyMode
 import org.http4k.core.Uri
 import org.http4k.lens.int
 import org.http4k.lens.localDate
 import org.http4k.lens.with
-import org.http4k.mcp.CompletionRequest
-import org.http4k.mcp.PromptRequest
-import org.http4k.mcp.ResourceRequest
-import org.http4k.mcp.ToolRequest
-import org.http4k.mcp.client.http.HttpStreamingMcpClient
-import org.http4k.mcp.model.McpEntity
-import org.http4k.mcp.model.Prompt
-import org.http4k.mcp.model.PromptName
-import org.http4k.mcp.model.Reference
-import org.http4k.mcp.model.Tool
-import org.http4k.mcp.model.localDate
-import org.http4k.mcp.protocol.Version
+import org.http4k.ai.mcp.CompletionRequest
+import org.http4k.ai.mcp.PromptRequest
+import org.http4k.ai.mcp.ResourceRequest
+import org.http4k.ai.mcp.ToolRequest
+import org.http4k.ai.mcp.client.http.HttpStreamingMcpClient
+import org.http4k.ai.mcp.model.McpEntity
+import org.http4k.ai.mcp.model.Prompt
+import org.http4k.ai.mcp.model.PromptName
+import org.http4k.ai.mcp.model.Reference
+import org.http4k.ai.mcp.model.Tool
+import org.http4k.ai.mcp.model.localDate
+import org.http4k.ai.mcp.protocol.Version
 import java.time.LocalDate
 
 fun main() {
