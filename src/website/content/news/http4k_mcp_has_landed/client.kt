@@ -1,6 +1,6 @@
 package content.news.http4k_mcp_has_landed
 
-    import org.http4k.ai.model.ToolName
+import org.http4k.ai.model.ToolName
 import org.http4k.core.Uri
 import org.http4k.lens.with
 import org.http4k.ai.mcp.ToolRequest
