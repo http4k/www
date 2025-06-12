@@ -6,9 +6,8 @@ title: LLM Models
 description: An overview of the LLM generation concepts in http4k AI.
 ---
 
-The http4k AI/LLM module provides a **unified, type-safe API** for interacting with various Large Language Models (LLMs)
-and AI services. Rather than dealing with vendor-specific APIs, you get consistent interfaces that work across different
-providers.
+http4k AI provides a **unified, type-safe and functional API** for interacting with various Large Language Models (LLMs)
+and AI services. Rather than dealing with vendor-specific APIs, you get consistent interfaces that work across different providers. As with all things http4k, the focus is on simplicity, composability, and functional programming principles, rather than complex abstractions and magic.
 
 ## Core Interfaces
 
