@@ -2,7 +2,7 @@
 type: ecosystem
 category: Concept
 ecosystem: http4k AI
-title: Tools
+title: Using Tools
 description: An overview of the how LLMss use Tools to gather data and effect change.
 ---
 
