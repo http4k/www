@@ -82,6 +82,9 @@ dependencies {
     testApi("org.http4k:http4k-incubator")
 
     testApi("org.http4k.pro:http4k-ai-mcp-sdk")
+    testApi("org.http4k:http4k-ai-llm")
+    testApi("org.http4k:http4k-ai-llm-openai")
+    testApi("org.http4k:http4k-ai-llm-anthropic")
 
     testApi("org.http4k:http4k-multipart")
 
