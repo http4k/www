@@ -1,26 +1,43 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Connect
-title: "AI: OpenAI"
-description: Feature overview of the http4k Connect OpenAI modules
+ecosystem: http4k AI
+title: "OpenAI"
+description: Feature overview of the http4k AI OpenAI modules
 ---
 
 ### Installation
 
+
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
+
+    // for the OpenAI LLM client
+    implementation("org.http4k:http4k-ai-llm-openai")
+
+    // for the low-level OpenAI API client
     implementation("org.http4k:http4k-connect-ai-openai")
+
+    // for the FakeOpenAI server
     implementation("org.http4k:http4k-connect-ai-openai-fake")
 }
 ```
 
-The http4k-connect OpenAI integration provides:
-- OpenAI API Client
-- FakeOpenAI server which can be used as testing harness
+The http4k-ai OpenAI integrations provide:
 
-## OpenAI API connector
+- OpenAI LLM adapter
+- Low-level OpenAI API Client
+- FakeOpenAI server which can be used as testing harness for the API Client
+
+## OpenAI LLM adapter
+
+The OpenAI LLM adapter converts the http4k LLM interface into the OpenAI API, allowing you to swap out
+the underlying LLM provider without changing your application code.
+
+It also allows pluggable support for any OpenAI-compatible model provider, such as Azure OpenAI or GitHubModels.
+
+## Low-level OpenAI API connector
 
 The OpenAI connector provides the following Actions:
 

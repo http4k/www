@@ -1,9 +1,11 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Connect
-title: "AI: Azure"
-description: Feature overview of the http4k Connect Azure AI modules
+ecosystem: http4k AI
+title: "Azure"
+description: Feature overview of the http4k AI Azure AI modules
+aliases:
+    - /ecosystem/http4k/reference/azure/
 ---
 
 
@@ -12,15 +14,22 @@ description: Feature overview of the http4k Connect Azure AI modules
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
+
+    // for the AnthropicAI LLM client
+    implementation("org.http4k:http4k-ai-llm-azure")
+
+    // for the low-level Azure API client
     implementation("org.http4k:http4k-connect-ai-azure")
+
+    // for the FakeAzure server
     implementation("org.http4k:http4k-connect-ai-azure-fake")
 }
 ```
 
-The http4k-connect AzureAI integration provides:
+The http4k-ai AzureAI integration provides:
 
-- AzureAI API Client
-- Compatibility with GitHub Models for testing, so you can use a GitHubToken instead of a deployed Azure model. Note that some endpoints are not available in GitHubModels APIs.
+- Low-level AzureAI API Client
+- Compatibility with GitHubModels for testing, so you can use a GitHubToken instead of a deployed Azure model. Note that some endpoints are not available in GitHubModels APIs.
 - FakeAzureAI server which can be used as testing harness for the API Client 
 
 ## AzureAI API connector

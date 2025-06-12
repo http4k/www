@@ -1,9 +1,9 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Connect
-title: "AI: Ollama"
-description: Feature overview of the http4k Connect Ollama modules
+ecosystem: http4k AI
+title: "Ollama"
+description: Feature overview of the http4k AI Ollama modules
 ---
 
 ### Installation
@@ -11,13 +11,20 @@ description: Feature overview of the http4k Connect Ollama modules
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
+
+    // for the Ollama LLM client
+    implementation("org.http4k:http4k-ai-llm-ollama")
+
+    // for the low-level Ollama API client
     implementation("org.http4k:http4k-connect-ai-ollama")
+
+    // for the FakeOllama server
     implementation("org.http4k:http4k-connect-ai-ollama-fake")
 }
 ```
 
-The http4k-connect Ollama integration provides:
-- Ollama API Client
+The http4k-ai Ollama integration provides:
+- Low-level Ollama API Client
 - FakeOllama server which can be used as testing harness 
 
 ## Ollama API connector

@@ -1,23 +1,33 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Connect
-title: "AI: LMStudio"
-description: Feature overview of the http4k Connect LMStudio modules
+ecosystem: http4k AI
+title: "LMStudio"
+description: Feature overview of the http4k AI LMStudio modules
+aliases:
+    - /ecosystem/http4k/reference/lmstudio/
 ---
 ### Installation
 
 ```kotlin
 dependencies {
+
     {{< http4k_bom >}}
+
+    // for the LMStudio LLM client
+    implementation("org.http4k:http4k-ai-llm-lmstudio")
+
+    // for the low-level LMStudio API client
     implementation("org.http4k:http4k-connect-ai-lmstudio")
+
+    // for the FakeLMStudio server
     implementation("org.http4k:http4k-connect-ai-lmstudio-fake")
 }
 ```
 
-The http4k-connect LmStudio integration provides:
+The http4k-ai LmStudio integration provides:
 
-- LmStudio API Client
+- Low-level LmStudio API Client
 - FakeLmStudio server which can be used as testing harness for either API Client
 
 ## LmStudio API connector

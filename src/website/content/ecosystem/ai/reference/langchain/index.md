@@ -1,9 +1,11 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Connect
-title: "AI: LangChain"
-description: Feature overview of the http4k Connect LangChain module
+ecosystem: http4k AI
+title: "LangChain"
+description: Feature overview of the http4k AI LangChain module
+aliases:
+    - /ecosystem/http4k/reference/langchain/
 ---
 
 ### Installation
@@ -11,10 +13,11 @@ description: Feature overview of the http4k Connect LangChain module
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
+
+    // for the LangChain4j model adapters
     implementation("org.http4k:http4k-connect-ai-langchain")
 }
 ```
-
 
 LangChain4J is a versatile library that simplifies the creation and management of language processing workflows., It provides many integrations but does not allow for using http4k clients or http4k-connect clients. This module gives you some of these integrations by providing LangChain model adapters.
 

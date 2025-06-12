@@ -1,9 +1,11 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Connect
-title: "AI: Anthropic"
-description: Feature overview of the http4k Connect Anthropic AI modules
+ecosystem: http4k AI
+title: "Anthropic"
+description: Feature overview of the http4k AI Anthropic modules
+aliases:
+    - /ecosystem/http4k/reference/anthropic/
 ---
 
 ### Installation
@@ -11,17 +13,30 @@ description: Feature overview of the http4k Connect Anthropic AI modules
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
+
+    // for the AnthropicAI LLM client
+    implementation("org.http4k:http4k-ai-llm-anthropic")
+
+    // for the low-level AnthropicAI API client
     implementation("org.http4k:http4k-connect-ai-anthropic")
+
+    // for the FakeAnthropicAI server
     implementation("org.http4k:http4k-connect-ai-anthropic-fake")
 }
 ```
 
-The http4k-connect AnthropicAI integration provides:
+The http4k-ai AnthropicAI integrations provide:
 
-- AnthropicAI API Client
+- AnthropicAI LLM adapter
+- Low-level AnthropicAI API Client
 - FakeAnthropicAI server which can be used as testing harness for the API Client 
 
-## AnthropicAI API connector
+## AnthropicAI LLM adapter
+
+The AnthropicAI LLM adapter converts the http4k LLM interface into the AnthropicAI API, allowing you to swap out 
+the underlying LLM provider without changing your application code.
+
+## Low-level AnthropicAI API connector
 
 The AnthropicAI connector provides the following Actions:
 
@@ -47,7 +62,7 @@ The Fake server endpoints are secured with a API key header, but the value is no
 
 By default, a random LoremIpsum generator creates message completion responses for the Fake. This behaviour can be
 overridden to generate custom response formats (eg. structured responses) if required. To do so, create instances of
-the `MessageCompletionGenerator` interface and return as appropriate.
+the `MessageContentGenerator` interface and return as appropriate.
 
 ### Default Fake port: 18909
 
