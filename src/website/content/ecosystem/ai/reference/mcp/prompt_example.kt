@@ -1,4 +1,4 @@
-package content.ecosystem.http4k.reference.mcp
+package content.ecosystem.ai.reference.mcp
 
 import org.http4k.ai.mcp.PromptHandler
 import org.http4k.ai.mcp.PromptRequest

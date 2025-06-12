@@ -35,6 +35,8 @@ The http4k-ai OpenAI integrations provide:
 The OpenAI LLM adapter converts the http4k LLM interface into the OpenAI API, allowing you to swap out
 the underlying LLM provider without changing your application code.
 
+{{< kotlin file="using_models.kt" >}}
+
 It also allows pluggable support for any OpenAI-compatible model provider, such as Azure OpenAI or GitHubModels.
 
 ## Low-level OpenAI API connector

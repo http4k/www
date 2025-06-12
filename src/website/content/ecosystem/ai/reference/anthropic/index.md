@@ -36,6 +36,8 @@ The http4k-ai AnthropicAI integrations provide:
 The AnthropicAI LLM adapter converts the http4k LLM interface into the AnthropicAI API, allowing you to swap out 
 the underlying LLM provider without changing your application code.
 
+{{< kotlin file="using_models.kt" >}}
+
 ## Low-level AnthropicAI API connector
 
 The AnthropicAI connector provides the following Actions:
