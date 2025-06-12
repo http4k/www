@@ -1,22 +1,19 @@
 package content.ecosystem.http4k.reference.mcp
 
+import org.http4k.ai.mcp.model.McpEntity
+import org.http4k.ai.mcp.protocol.ServerMetaData
+import org.http4k.ai.mcp.protocol.ServerProtocolCapability.ToolsChanged
+import org.http4k.ai.mcp.protocol.Version
+import org.http4k.ai.mcp.server.security.BearerAuthMcpSecurity
 import org.http4k.core.Method.DELETE
 import org.http4k.core.Method.GET
 import org.http4k.core.Method.POST
-import org.http4k.core.Uri
 import org.http4k.core.then
 import org.http4k.filter.AnyOf
 import org.http4k.filter.CorsAndRebindProtection
 import org.http4k.filter.CorsPolicy
 import org.http4k.filter.OriginPolicy
 import org.http4k.filter.ServerFilters
-import org.http4k.ai.mcp.model.McpEntity
-import org.http4k.ai.mcp.protocol.ServerMetaData
-import org.http4k.ai.mcp.protocol.ServerProtocolCapability.ToolsChanged
-import org.http4k.ai.mcp.protocol.Version
-import org.http4k.ai.mcp.server.security.BearerAuthMcpSecurity
-import org.http4k.ai.mcp.server.security.NoMcpSecurity
-import org.http4k.ai.mcp.server.security.OAuthMcpSecurity
 import org.http4k.routing.bind
 import org.http4k.routing.mcpHttpStreaming
 import org.http4k.server.Helidon

@@ -112,21 +112,26 @@ menus:
       url: /ecosystem/http4k/
       parent: ecosystem
       weight: 32
+    - name: ecosystem-ai
+      title: http4k AI
+      url: /ecosystem/ai/
+      parent: ecosystem
+      weight: 33
     - name: ecosystem-connect
       title: http4k Connect
       url: /ecosystem/connect/
       parent: ecosystem
-      weight: 33
+      weight: 34
     - name: ecosystem-pro
       title: http4k Pro
       url: /pro/
       parent: ecosystem
-      weight: 34
+      weight: 35
     - name: ecosystem-changelog
       title: Changelog
       url: /ecosystem/changelog/
       parent: ecosystem
-      weight: 35
+      weight: 36
 
     - name: solutions
       title: Solutions

@@ -1,9 +1,9 @@
 package content.ecosystem.http4k.reference.mcp
 
-import org.http4k.lens.with
 import org.http4k.ai.mcp.ToolResponse
 import org.http4k.ai.mcp.model.Tool
 import org.http4k.ai.mcp.util.McpJson.auto
+import org.http4k.lens.with
 import org.http4k.routing.bind
 
 // a complex response object

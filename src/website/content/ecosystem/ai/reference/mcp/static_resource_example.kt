@@ -1,15 +1,15 @@
 package content.ecosystem.http4k.reference.mcp
 
-import org.http4k.client.JavaHttpClient
-import org.http4k.core.Method.GET
-import org.http4k.core.Request
-import org.http4k.core.Response
-import org.http4k.core.Uri
 import org.http4k.ai.mcp.ResourceHandler
 import org.http4k.ai.mcp.ResourceRequest
 import org.http4k.ai.mcp.ResourceResponse
 import org.http4k.ai.mcp.model.Resource
 import org.http4k.ai.mcp.model.ResourceName
+import org.http4k.client.JavaHttpClient
+import org.http4k.core.Method.GET
+import org.http4k.core.Request
+import org.http4k.core.Response
+import org.http4k.core.Uri
 import org.jsoup.Jsoup
 
 

@@ -7,7 +7,7 @@
         <article>
             <img class="mb-3 sideToggle" src="/images/exchange-icon.svg" width="20" alt="" srcset=""/>
             {{ if .Params.image }}
-            <img src="{{ .Params.image }}" alt="Image" class="imageMid mt-3"/>
+            <img src="{{ .Params.image }}" alt="Image" class="imageSmall mt-3"/>
             {{ else }}
             <div class="d-flex">
                 <h1>
@@ -30,8 +30,10 @@
             {{ end }}
 
             <div class="mt-5">
+                {{ if .Params.remote }}
                 {{ with .Params.remote }}
                 {{ (resources.GetRemote .).Content | markdownify }}
+                {{ end }}
                 {{ end }}
 
                 {{ .Content }}

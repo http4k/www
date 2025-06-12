@@ -1,11 +1,11 @@
 package content.ecosystem.http4k.reference.mcp
 
-import org.http4k.core.Uri
 import org.http4k.ai.mcp.model.McpEntity
 import org.http4k.ai.mcp.protocol.ServerMetaData
 import org.http4k.ai.mcp.protocol.ServerProtocolCapability.ToolsChanged
 import org.http4k.ai.mcp.protocol.Version
 import org.http4k.ai.mcp.server.security.OAuthMcpSecurity
+import org.http4k.core.Uri
 import org.http4k.routing.bind
 import org.http4k.routing.mcpHttpStreaming
 import org.http4k.server.Helidon

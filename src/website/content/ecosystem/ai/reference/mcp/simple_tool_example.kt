@@ -1,12 +1,12 @@
 package content.ecosystem.http4k.reference.mcp
 
-import org.http4k.lens.with
 import org.http4k.ai.mcp.ToolHandler
 import org.http4k.ai.mcp.ToolRequest
 import org.http4k.ai.mcp.ToolResponse
 import org.http4k.ai.mcp.model.Content
 import org.http4k.ai.mcp.model.Tool
 import org.http4k.ai.mcp.model.localDate
+import org.http4k.lens.with
 import java.time.LocalDate
 
 // tool argument inputs are typesafe lens

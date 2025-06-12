@@ -8,11 +8,11 @@ type: "product"
 subdomain: mcp
 tier: pro
 description: Build secure MCP-compliant servers to integrate Large Language Models with your data and tools using familiar http4k patterns
-docs_link: https://http4k.org/ecosystem/http4k/reference/mcp/
+docs_link: https://http4k.org/ecosystem/ai/reference/mcp/
 navigation:
     -   name: docs
         title: Documentation
-        url: https://http4k.org/ecosystem/http4k/reference/mcp/
+        url: https://http4k.org/ecosystem/ai/reference/mcp/
     -   name: pricing
         title: Pricing
         url: "#pricing"
