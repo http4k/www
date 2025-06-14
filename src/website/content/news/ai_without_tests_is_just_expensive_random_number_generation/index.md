@@ -3,11 +3,12 @@ draft: true
 title: "http4k AI - Because AI Without Tests is Just Expensive Random Number Generation"
 description: "Introducing http4k AI: the first JVM ecosystem that treats AI providers as what they really are – testable HTTP APIs with predictable contracts."
 date: 2025-06-14
+image: circuit.webp
 ---
 
-<br/>
+<img class="imageMid my-4" src="./circuit.webp" alt="http4k logo"/>
 
-**TL;DR:** Due to interest in our existing AI integrations, we've spun off **[http4k AI](/ecosystem/ai)** as its own dedicated ecosystem. v6.14.0.0 (available today) includes a universal LLM API, unified tool model, 5 LLM provider shims, our industry-first MCP SDK with Elicitation support, and LangChain4j integration. We're going hard on AI because the demand is undeniable.
+**TL;DR:** Due to significant interest in our existing AI integrations, we've spun off **[http4k AI](/ecosystem/ai)** as its own dedicated ecosystem. v6.14.0.0 (available today) includes a universal LLM API, unified tool model, 5 LLM provider shims, our industry-first MCP SDK with Elicitation support, and LangChain4j integration. We're going hard on AI because the demand is undeniable.
 
 ---
 
@@ -17,9 +18,9 @@ Since early 2024, we've been quietly building AI integrations within **[http4k-c
 
 The numbers (and our users!) told the story: our AI modules became the fastest-growing part of http4k-connect. So we made a decision. AI deserves its own ecosystem.
 
-## Why http4k AI Exists
+## Why http4k AI?
 
-As is (sadly) normal on the JVM, AI frameworks are heavyweight, opinionated monsters that hide HTTP details and make testing and observability a nightmare. They force you into vendor lock-in patterns or require real API calls during development – burning tokens and creating unpredictable tests.
+As is (sadly) normal, JVM AI frameworks are mostly heavyweight, opinionated monsters that hide HTTP details and make testing and observability a nightmare. They force you into vendor lock-in patterns or require real API calls during development – burning tokens and creating unpredictable tests.
 
 We're building the opposite: lightweight, functional, testable AI tooling that treats AI providers as what they are – HTTP APIs with predictable contracts.
 
@@ -35,9 +36,9 @@ Local and remote tools use identical interfaces. Your LLM can call a local funct
 We currently are shipping support for the following model families, using a combination of Chat and Image generation models:
 - OpenAI (including GPT-4 and beyond)
 - Anthropic (Claude family)
-- Azure OpenAI
 - GitHub Models
 - Google Gemini
+- Azure (OpenAI-compatible)
 
 All with identical interfaces. All with Fake implementations. All testable offline.
 
@@ -46,7 +47,7 @@ We recognise that we can't cover all bases up front, so we're providing support 
 
 ## Model Context Protocol: The Crown Jewel
 
-Our [Pro-tier MCP suite](https://mcp.http4k.org) was the **first JVM MCP SDK released** to implement the latest 2026-03-26 specification including the updated OAuth security model. And we're not just trailing behind, we're front-running new features as they get added and releasing them into the wild on a weekly basis.
+Our [Pro-tier MCP suite](https://mcp.http4k.org) was the **first JVM MCP SDK released** to implement the latest 2025-03-26 specification including the updated OAuth security model. And we're not just trailing behind, we're implementing new features as they land and releasing them into the wild on a weekly basis.
 
 ### What is MCP?
 The Model Context Protocol, introduced by Anthropic in November 2024, standardizes how AI systems access external data sources and tools. It's becoming the de-facto standard for AI-application integration.
@@ -59,17 +60,17 @@ The Model Context Protocol, introduced by Anthropic in November 2024, standardiz
 - **Full client support**: Build custom agents programmatically
 
 ### Draft Features & Elicitation Support
-We're also implementing draft MCP features including OAuth security for protected resources and elicitation capabilities. Elicitation is something we're super excited about - it allows dynamic user interfaces presented through the client – your MCP tools can request additional input from users when needed, creating interactive AI experiences.
+We're also implementing draft MCP features including OAuth security for protected resources and elicitation capabilities. Elicitation is something we're very excited about - it allows dynamic user interfaces presented through the client – your MCP tools can request additional input from users when needed, creating interactive AI experiences.
 
 ## The Roadmap: Going All In
 
-With the interest (and amount of fun we're having!) we're dedicating serious resources to this ecosystem. Here's what's we're cooking up next:
+The response to the AI modules has been strong enough that we've found ourselves dedicating significant engineering time to this ecosystem. Here's what's next:
 
 ### 1. Google's Agent2Agent Protocol
-Google announced A2A (Agent2Agent) in April 2025 – an open protocol for AI agents to communicate with each other across different frameworks. We'll be giving the spec the http4k treatment, naturally with full testability.
+Google announced A2A (Agent2Agent) in April 2025 – an open protocol for AI agents to communicate with each other across different frameworks. A2A complements MCP by handling agent-to-agent communication while MCP handles agent-to-tool integration. We'll be giving the spec the http4k treatment, naturally with full testability.
 
 ### 2. MCP Evolution
-We're staying on the bleeding edge of MCP development, implementing draft features as they're integrated into the spec for those adventurous teams who want to say on the cutting edge. Expect us to be first with new capabilities as the protocol evolves.
+We're staying on the bleeding edge of MCP development, implementing draft features as they're integrated into the spec for those adventurous teams who want to stay on the cutting edge. Expect us to be first with new capabilities as the protocol evolves.
 
 ### 3. Custom Graphical LLM Clients
 A framework for building your own customized chat clients that interface with MCP and local tools. Want your own ChatGPT? Build it. Includes elicitation support for dynamic UIs and fine-grained tool consumption controls.
@@ -93,10 +94,12 @@ AI is eating software development, but most AI tooling ignores basic engineering
 
 ## Available Now
 
-http4k AI launches today with v6.14.0.0 - still the most testable HTTP toolkit on the planet! The basic AI integrations are open source. Advanced features like MCP are available in our [Pro tier](/pro) which will always be free for non-profit and and non-commercial use.
+http4k AI is available now with v6.14.0.0. The basic AI integrations are open source. Advanced features like MCP are available in our [Pro tier](/pro) which remains free for non-profit and non-commercial use.
 
 This isn't about jumping on the AI hype train. This is about recognizing that AI integration is becoming as fundamental as database connectivity or HTTP handling. And when something becomes fundamental, it needs to be done right.
 
 The future of AI development is functional, testable, and observable. Welcome to [http4k AI](/ecosystem/ai).
 
-/peace out
+/happy coding!
+
+#### // the http4k team
