@@ -66,7 +66,7 @@ We're also implementing draft MCP features including OAuth security for protecte
 
 The response to the AI modules has been strong enough that we've found ourselves dedicating significant engineering time to this ecosystem. Here's what's next:
 
-### 1. Google's Agent2Agent Protocol
+### 1. Google's A2A Protocol
 Google announced A2A (Agent2Agent) in April 2025 – an open protocol for AI agents to communicate with each other across different frameworks. A2A complements MCP by handling agent-to-agent communication while MCP handles agent-to-tool integration. We'll be giving the spec the http4k treatment, naturally with full testability.
 
 ### 2. MCP Evolution
