@@ -1,16 +1,16 @@
 package content.ecosystem.ai.reference.github
 
-import org.http4k.ai.llm.chat.AnthropicAI
 import org.http4k.ai.llm.chat.Chat
 import org.http4k.ai.llm.chat.ChatRequest
+import org.http4k.ai.llm.chat.GitHubModels
 import org.http4k.ai.llm.model.Message
 import org.http4k.ai.llm.model.ModelParams
 import org.http4k.ai.llm.tools.LLMTool
+import org.http4k.ai.model.ApiKey
 import org.http4k.client.JavaHttpClient
-import org.http4k.connect.anthropic.AnthropicIApiKey
 import org.http4k.connect.anthropic.AnthropicModels
 
-val llm = Chat.AnthropicAI(AnthropicIApiKey.of("api-key"), JavaHttpClient())
+val llm = Chat.GitHubModels(ApiKey.of("api-key"), JavaHttpClient())
 
 val request = ChatRequest(
     Message.User("What's the weather like in London?"),

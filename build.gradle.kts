@@ -82,9 +82,13 @@ dependencies {
     testApi("org.http4k:http4k-incubator")
 
     testApi("org.http4k.pro:http4k-ai-mcp-sdk")
-    testApi("org.http4k:http4k-ai-llm")
-    testApi("org.http4k:http4k-ai-llm-openai")
+    testApi("org.http4k:http4k-ai-langchain4j")
+    testApi("org.http4k:http4k-ai-llm-core")
     testApi("org.http4k:http4k-ai-llm-anthropic")
+    testApi("org.http4k:http4k-ai-llm-azure")
+    testApi("org.http4k:http4k-ai-llm-gemini")
+    testApi("org.http4k:http4k-ai-llm-github")
+    testApi("org.http4k:http4k-ai-llm-openai")
 
     testApi("org.http4k:http4k-multipart")
 
@@ -153,7 +157,6 @@ dependencies {
     testApi("org.http4k:http4k-connect-ai-anthropic-fake")
     testApi("org.http4k:http4k-connect-ai-azure")
     testApi("org.http4k:http4k-connect-ai-azure-fake")
-    testApi("org.http4k:http4k-connect-ai-langchain")
     testApi("org.http4k:http4k-connect-ai-lmstudio")
     testApi("org.http4k:http4k-connect-ai-lmstudio-fake")
     testApi("org.http4k:http4k-connect-ai-ollama")
