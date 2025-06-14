@@ -50,7 +50,7 @@ We recognise that we can't cover all bases up front, so we're providing support 
 Our [Pro-tier MCP suite](https://mcp.http4k.org) was the **first JVM MCP SDK released** to implement the latest 2025-03-26 specification including the updated OAuth security model. And we're not just trailing behind, we're implementing new features as they land and releasing them into the wild on a weekly basis.
 
 ### What is MCP?
-The Model Context Protocol, introduced by Anthropic in November 2024, standardizes how AI systems access external data sources and tools. It's becoming the de-facto standard for AI-application integration.
+The Model Context Protocol, introduced by Anthropic in November 2024, standardises how AI systems access external data sources and tools. It's becoming the de-facto standard for AI-application integration.
 
 ### http4k MCP Goes Beyond
 - **Latest spec support**: Stateless and stateful connections, OAuth security
@@ -96,7 +96,7 @@ We want [http4k AI](/ecosystem/ai) to bring these principles to AI development:
 
 http4k AI is available now with v6.14.0.0. The basic AI integrations are open source. Advanced features like MCP are available in our [Pro tier](/pro) which remains free for non-profit and non-commercial use.
 
-This isn't about jumping on the AI hype train. This is about recognizing that AI integration is becoming as fundamental as database connectivity or HTTP handling. And when something becomes fundamental, it needs to be done right.
+This isn't about jumping on the AI hype train. This is about recognising that AI integration is becoming as fundamental as database connectivity or HTTP handling. And when something becomes fundamental, it needs to be done right.
 
 The future of AI development is functional, testable, and observable. Welcome to [http4k AI](/ecosystem/ai).
 
