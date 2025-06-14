@@ -14,7 +14,7 @@ image: circuit.webp
 
 <br/>
 
-Since early 2024, we've been quietly building AI integrations within **[http4k-connect](https://connect.http4k.org)**. What started as LLM API adapters and Fake LLM implementations for testing has now turned into something much bigger. It's become clear that - despite what the hype-train drivers will tell you - **there has never been a more important time for testable, observable code**. Well - **[Team http4k](/company)** is happy to step up - and we're building AI tooling that doesn't sacrifice engineering principles for buzzword compliance.
+Since early 2024, we've been quietly building AI integrations within **[http4k-connect](https://connect.http4k.org)**. What started as LLM API adapters and Fake LLM implementations for testing has exploded into our fastest-growing module family. The response from our users has been clear, despite what the hype-train drivers will tell you - **there has never been a more important time for testable, observable code**. Well - **[Team http4k](/company)** is happy to step up - and we're building AI tooling that doesn't sacrifice engineering principles for buzzword compliance.
 
 The numbers (and our users!) told the story: our AI modules became the fastest-growing part of http4k-connect. So we made a decision. AI deserves its own ecosystem.
 
