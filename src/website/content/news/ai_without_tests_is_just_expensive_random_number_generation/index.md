@@ -30,7 +30,7 @@ We're building the opposite: lightweight, functional, testable AI tooling that t
 One consistent interface across all providers. Build once, swap providers without code changes. Every integration includes comprehensive Fake implementations for deterministic testing using the existing http4k-connect fakes – no API costs, no network dependencies, no surprises.
 
 ### 2. Unified Tool Model
-Local and remote tools use identical interfaces. Your LLM can call a local function or a remote API through the same mechanism. No special handling, no vendor-specific patterns.
+Local and remote tools use identical interfaces. Your LLM can call a local function or a remote API through the same mechanism. No special handling, no vendor-specific patterns. http4k brings automatic tool schema generation and tool invocation to the table, allowing you to define your tools in a type-safe way and invoke them seamlessly from your LLMs.
 
 ### 3. LLM Provider Shims
 We currently are shipping support for the following model families, using a combination of Chat and Image generation models:
