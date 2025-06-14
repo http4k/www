@@ -72,8 +72,8 @@ Google announced A2A (Agent2Agent) in April 2025 – an open protocol for AI age
 ### 2. MCP Evolution
 We're staying on the bleeding edge of MCP development, implementing draft features as they're integrated into the spec for those adventurous teams who want to stay on the cutting edge. Expect us to be first with new capabilities as the protocol evolves.
 
-### 3. Custom Graphical LLM Clients
-A framework for building your own customized chat clients that interface with MCP and local tools. Want your own ChatGPT? Build it. Includes elicitation support for dynamic UIs and fine-grained tool consumption controls.
+### 3. Build Your Own AI Chat Interface
+Framework for building tailored LLM chat clients that connect to MCP servers and local tools. Want your own ChatGPT? You can build it. Includes elicitation support for dynamic UIs and precise control over tool usage.
 
 ### 4. More LLM Models
 Expanding provider support based on demand. The beauty of our architecture is that adding new providers is straightforward – they're just HTTP APIs with different contracts.
