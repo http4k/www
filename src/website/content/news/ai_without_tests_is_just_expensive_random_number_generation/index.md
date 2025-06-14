@@ -19,7 +19,7 @@ The numbers (and our users!) told the story: our AI modules became the fastest-g
 
 ## Why http4k AI?
 
-As is (sadly) normal, JVM AI frameworks are mostly heavyweight, opinionated monsters that hide HTTP details and make testing and observability a nightmare. They force you into vendor lock-in patterns or require real API calls during development – burning tokens and creating unpredictable tests.
+As is (sadly) normal, AI frameworks are mostly heavyweight, opinionated monsters that hide HTTP details and make testing and observability a nightmare. They force you into vendor lock-in patterns or require real API calls during development – burning tokens and creating unpredictable tests.
 
 We're building the opposite: lightweight, functional, testable AI tooling that treats AI providers as what they are – HTTP APIs with predictable contracts.
 
