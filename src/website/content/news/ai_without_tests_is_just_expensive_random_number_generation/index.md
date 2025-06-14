@@ -33,7 +33,7 @@ One consistent interface across all providers. Build once, swap providers withou
 Local and remote tools use identical interfaces. Your LLM can call a local function or a remote API through the same mechanism. No special handling, no vendor-specific patterns. http4k brings automatic tool schema generation and tool invocation to the table, allowing you to define your tools in a type-safe way and invoke them seamlessly from your LLMs.
 
 ### 3. LLM Provider Shims
-We currently are shipping support for the following model families, using a combination of Chat and Image generation models:
+We currently are shipping support for the following model families, using a combination of Chat and Image generation models to integrate into the universal LLM API:
 - OpenAI (including GPT-4 and beyond)
 - Anthropic (Claude family)
 - GitHub Models
