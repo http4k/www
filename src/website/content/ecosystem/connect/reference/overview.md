@@ -2,7 +2,7 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k Connect
-title: Module Overview
+title: Overview
 description: Overview of the http4k Connect modules
 weight: -1
 ---
@@ -49,7 +49,6 @@ A quick reference as to what is what with the http4k Connect modules.
 |-------------|----------|----------------|------------------------------------------------------------|
 | AnthropicAI | API      | ✅              | Includes content generators                                |
 | AzureAI     | API      | ✅              | Includes content generators and GitHubModels compatibility |
-| LangChain4J | Adapters | ❌              | Adapters to be plugged into LangChains                     |
 | LM Studio   | API      | ✅              |                                                            |
 | Ollama      | API      | ✅              | Includes content generators and image generation           |
 | Open AI     | API      | ✅              | Includes content generators and image generation           |

@@ -1,21 +1,21 @@
-package content.ecosystem.ai.reference.openai
+package content.ecosystem.ai.reference.azure
 
-import org.http4k.ai.llm.OpenAIApi
+import org.http4k.ai.llm.chat.AnthropicAI
 import org.http4k.ai.llm.chat.Chat
 import org.http4k.ai.llm.chat.ChatRequest
-import org.http4k.ai.llm.chat.OpenAI
 import org.http4k.ai.llm.model.Message
 import org.http4k.ai.llm.model.ModelParams
 import org.http4k.ai.llm.tools.LLMTool
 import org.http4k.client.JavaHttpClient
-import org.http4k.connect.openai.OpenAIModels
+import org.http4k.connect.anthropic.AnthropicIApiKey
+import org.http4k.connect.anthropic.AnthropicModels
 
-val llm = Chat.OpenAI(OpenAIApi.ApiKey.of("api-key"), JavaHttpClient())
+val llm = Chat.AnthropicAI(AnthropicIApiKey.of("api-key"), JavaHttpClient())
 
 val request = ChatRequest(
     Message.User("What's the weather like in London?"),
     params = ModelParams(
-        modelName = OpenAIModels.GPT4,
+        modelName = AnthropicModels.Claude_Sonnet_3_7,
         tools = listOf(
             LLMTool(
                 name = "get_weather",

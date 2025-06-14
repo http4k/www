@@ -7,7 +7,7 @@ date: 2025-06-14
 
 <br/>
 
-**TL;DR:** Due to interest in our existing AI integrations, we've spun off **[http4k AI](/ecosystem/ai)** as its own dedicated ecosystem. v6.13.0.0 includes a universal LLM API, unified tool model, 5 LLM provider shims, our industry-first MCP SDK with Elicitation support, and LangChain4j integration. We're going hard on AI because the demand is undeniable.
+**TL;DR:** Due to interest in our existing AI integrations, we've spun off **[http4k AI](/ecosystem/ai)** as its own dedicated ecosystem. v6.14.0.0 (available today) includes a universal LLM API, unified tool model, 5 LLM provider shims, our industry-first MCP SDK with Elicitation support, and LangChain4j integration. We're going hard on AI because the demand is undeniable.
 
 ---
 
@@ -93,7 +93,7 @@ AI is eating software development, but most AI tooling ignores basic engineering
 
 ## Available Now
 
-http4k AI launches with v6.13.0.0 - still the most testable HTTP toolkit on the planet! The basic AI integrations are open source. Advanced features like MCP are available in our [Pro tier](/pro) which will always be free for non-profit and and non-commercial use.
+http4k AI launches today with v6.14.0.0 - still the most testable HTTP toolkit on the planet! The basic AI integrations are open source. Advanced features like MCP are available in our [Pro tier](/pro) which will always be free for non-profit and and non-commercial use.
 
 This isn't about jumping on the AI hype train. This is about recognizing that AI integration is becoming as fundamental as database connectivity or HTTP handling. And when something becomes fundamental, it needs to be done right.
 

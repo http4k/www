@@ -2,8 +2,8 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k AI
-title: "Azure"
-description: Feature overview of the http4k AI Azure AI modules
+title: "AzureAI"
+description: Feature overview of the http4k AI Azure modules
 aliases:
     - /ecosystem/http4k/reference/azure/
 ---
@@ -15,24 +15,30 @@ aliases:
 dependencies {
     {{< http4k_bom >}}
 
-    // for the AnthropicAI LLM client
+    // for the Universal LLM adapter (uses the OpenAI fake)
     implementation("org.http4k:http4k-ai-llm-azure")
+    implementation("org.http4k:http4k-connect-openai-fake")
 
     // for the low-level Azure API client
     implementation("org.http4k:http4k-connect-ai-azure")
-
-    // for the FakeAzure server
     implementation("org.http4k:http4k-connect-ai-azure-fake")
 }
 ```
 
 The http4k-ai AzureAI integration provides:
 
+- Universal LLM adapter for AzureAI and AzureGitHubModels
 - Low-level AzureAI API Client
-- Compatibility with GitHubModels for testing, so you can use a GitHubToken instead of a deployed Azure model. Note that some endpoints are not available in GitHubModels APIs.
+- Compatibility with GitHubModels for testing, so you can use a GitHub ApiKey instead of a deployed Azure model. Note that some endpoints are not available in GitHubModels APIs.
 - FakeAzureAI server which can be used as testing harness for the API Client 
 
-## AzureAI API connector
+## Universal LLM adapter
+
+The Universal LLM adapter converts the http4k LLM interface into the underlying API, allowing you to swap out providers without changing your application code.
+
+{{< kotlin file="universal_adapter.kt" >}}
+
+## Low-level API Client
 
 The AzureAI connector provides the following Actions:
 

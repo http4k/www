@@ -49,3 +49,6 @@ regulated environments.
 
 With Pro modules, teams can confidently deploy http4k applications that meet strict compliance
 requirements while maintaining the performance demands of modern cloud workloads.
+
+Pro modules are available to license standalone or are automatically included
+as a part of the <a href="/enterprise">http4k Enterprise Edition</a>.</p>

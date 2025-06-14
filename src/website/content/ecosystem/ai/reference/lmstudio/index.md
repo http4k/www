@@ -14,9 +14,6 @@ dependencies {
 
     {{< http4k_bom >}}
 
-    // for the LMStudio LLM client
-    implementation("org.http4k:http4k-ai-llm-lmstudio")
-
     // for the low-level LMStudio API client
     implementation("org.http4k:http4k-connect-ai-lmstudio")
 
@@ -27,10 +24,10 @@ dependencies {
 
 The http4k-ai LmStudio integration provides:
 
-- Low-level LmStudio API Client
+- Low-level API Client
 - FakeLmStudio server which can be used as testing harness for either API Client
 
-## LmStudio API connector
+## Low-level API Client
 
 The LmStudio connector provides the following Actions:
 

@@ -12,9 +12,6 @@ description: Feature overview of the http4k AI Ollama modules
 dependencies {
     {{< http4k_bom >}}
 
-    // for the Ollama LLM client
-    implementation("org.http4k:http4k-ai-llm-ollama")
-
     // for the low-level Ollama API client
     implementation("org.http4k:http4k-connect-ai-ollama")
 
@@ -24,10 +21,11 @@ dependencies {
 ```
 
 The http4k-ai Ollama integration provides:
-- Low-level Ollama API Client
+
+- Low-level API Client
 - FakeOllama server which can be used as testing harness 
 
-## Ollama API connector
+## Low-level API Client
 
 The Ollama connector provides the following Actions:
 

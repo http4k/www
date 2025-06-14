@@ -2,8 +2,8 @@
 category: Reference
 type: ecosystem
 ecosystem: http4k AI
-title: "LangChain"
-description: Feature overview of the http4k AI LangChain module
+title: "LangChain4J"
+description: Feature overview of the http4k AI LangChain4J module
 aliases:
     - /ecosystem/http4k/reference/langchain/
 ---

@@ -14,7 +14,7 @@ aliases:
 dependencies {
     {{< http4k_bom >}}
 
-    // for the AnthropicAI LLM client
+    // for the Universal LLM adapter
     implementation("org.http4k:http4k-ai-llm-anthropic")
 
     // for the low-level AnthropicAI API client
@@ -27,18 +27,17 @@ dependencies {
 
 The http4k-ai AnthropicAI integrations provide:
 
-- AnthropicAI LLM adapter
-- Low-level AnthropicAI API Client
+- Universal LLM adapter
+- Low-level API Client
 - FakeAnthropicAI server which can be used as testing harness for the API Client 
 
-## AnthropicAI LLM adapter
+## Universal LLM adapter
 
-The AnthropicAI LLM adapter converts the http4k LLM interface into the AnthropicAI API, allowing you to swap out 
-the underlying LLM provider without changing your application code.
+The Universal LLM adapter converts the http4k LLM interface into the underlying API, allowing you to swap out providers without changing your application code.
 
-{{< kotlin file="using_models.kt" >}}
+{{< kotlin file="universal_adapter.kt" >}}
 
-## Low-level AnthropicAI API connector
+## Low-level API Client
 
 The AnthropicAI connector provides the following Actions:
 

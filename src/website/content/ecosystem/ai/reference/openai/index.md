@@ -8,12 +8,11 @@ description: Feature overview of the http4k AI OpenAI modules
 
 ### Installation
 
-
 ```kotlin
 dependencies {
-    {{< http4k_bom >}}
+    { { < http4k_bom > } }
 
-    // for the OpenAI LLM client
+    // for the Universal LLM adapter
     implementation("org.http4k:http4k-ai-llm-openai")
 
     // for the low-level OpenAI API client
@@ -26,20 +25,20 @@ dependencies {
 
 The http4k-ai OpenAI integrations provide:
 
-- OpenAI LLM adapter
-- Low-level OpenAI API Client
+- Universal LLM adapter
+- Low-level API Client
 - FakeOpenAI server which can be used as testing harness for the API Client
 
-## OpenAI LLM adapter
+## Universal LLM adapter
 
-The OpenAI LLM adapter converts the http4k LLM interface into the OpenAI API, allowing you to swap out
-the underlying LLM provider without changing your application code.
+The Universal LLM adapter converts the http4k LLM interface into the underlying API, allowing you to swap out providers
+without changing your application code.
 
-{{< kotlin file="using_models.kt" >}}
+{{< kotlin file="universal_adapter.kt" >}}
 
-It also allows pluggable support for any OpenAI-compatible model provider, such as Azure OpenAI or GitHubModels.
+It also allows pluggable support for any OpenAI-compatible model provider by implementing the `OpenAICompatibleClient` interface.
 
-## Low-level OpenAI API connector
+## Low-level API Client
 
 The OpenAI connector provides the following Actions:
 
@@ -73,7 +72,8 @@ fun main() {
 }
 ```
 
-Other examples can be found [here](https://github.com/http4k/http4k-connect/tree/master/ai/openai/fake/src/examples/kotlin).
+Other examples can be
+found [here](https://github.com/http4k/http4k-connect/tree/master/ai/openai/fake/src/examples/kotlin).
 
 ## Fake OpenAI Server
 
