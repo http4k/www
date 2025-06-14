@@ -85,8 +85,8 @@ Comprehensive tooling for building and testing autonomous agents. Because if you
 
 AI is eating software development, but most AI tooling ignores basic engineering principles. Testability, observability, and predictable behavior aren't nice-to-haves – they're requirements for production systems.
 
-[http4k AI](/ecosystem/ai) brings these principles to AI development:
-- **Testable**: Everything has Fake implementations
+We want [http4k AI](/ecosystem/ai) to bring these principles to AI development:
+- **Testable**: Providers have Fake implementations and should be testable with pure unit tests
 - **Observable**: Full access to HTTP layer for debugging
 - **Predictable**: Pure functions, immutable data
 - **Vendor-neutral**: Consistent interfaces across providers
