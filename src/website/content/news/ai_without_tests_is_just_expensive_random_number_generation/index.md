@@ -43,7 +43,7 @@ We currently are shipping support for the following model families, using a comb
 All with identical interfaces. All with Fake implementations. All testable offline.
 
 ### 4. LangChain4j Integration
-We recognise that we can't cover all bases up front, so we're providing support for plugging testable, observable http4k clients into any LangChain4j-compatible AI model, embedding, or vector store. The key words here are **testable** and **observable** – you can see exactly what's happening and the HTTP clients will fit right into both your production and testing standard http4k client stacks.
+We recognise that we can't cover all bases up front, so we're providing support for plugging testable, observable http4k clients into any LangChain4j-compatible AI model, embedding, or vector store. The key words here are **testable** and **observable** – you should be able to see exactly what's happening and the HTTP clients will fit right into both your production and testing standard http4k client stacks.
 
 ## Model Context Protocol: The Crown Jewel
 
