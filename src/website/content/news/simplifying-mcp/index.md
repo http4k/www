@@ -59,7 +59,7 @@ The latest version of http4k supporting these changes is available now through M
 
 We're committed to evolving the http4k MCP SDK alongside the official specification. Our focus will always remain on making AI integration simpler, more secure, and more testable - without compromise. We will continue to aim to implement the latest (and sensible!) specification changes as soon as possible so our users can take advantage of them, and maintaining our position as first-to-market with a production-ready MCP SDK for the JVM ecosystem.
 
-As always, the http4k MCP SDK is included in our [Pro tier](https://www.http4k.org/pro/) and all [Enterprise Edition subscriptions](https://www.http4k.org/enterprise/), with free use for non-commercial, non-profit organizations and personal projects.
+As always, the http4k MCP SDK is included in our [Pro tier](https://www.http4k.org/pro/) and all [Enterprise Edition subscriptions](https://www.http4k.org/enterprise/), with free use for personal projects, non-profit organizations, non-commercial research, and qualifying small businesses (see our [commercial license](/commercial-license/) for exact terms).
 
 We'd love to hear how you're using these improvements! Reach out on GitHub or the Kotlin Slack with your feedback and questions.
 

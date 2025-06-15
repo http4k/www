@@ -106,8 +106,8 @@ Deploy your MCP capabilities to AWS Lambda, GCP Functions, and other FaaS platfo
 
 In order to provide the best possible support for our users, we're offering the [http4k MCP SDK](https://mcp.http4k.org)
 as a commercially licensed module as a part of our Pro tier and is automatically included in all http4k Enterprise
-Edition subscriptions. As with all of the other Pro features, it is free to use for non-commercial, non-profit
-organisations and personal use.
+Edition subscriptions. As with all of the other Pro features, it is free to use for personal use, non-profit
+organisations, non-commercial research, and qualifying small businesses (see our [commercial license](/commercial-license/) for exact terms).
 
 We're really excited to see what you build with the http4k MCP SDK. If you have any questions, feedback, then hit us up
 on GitHub or through the Kotlin Slack.

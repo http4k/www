@@ -86,12 +86,18 @@ a) Non-Commercial Usage:
 - Personal projects, academic research, education, and non-profit organizations may use the Software freely
 - Attribution is required in any resulting work or publication
 
-b) Pro Edition Usage:
-- Required for any commercial use
+b) Small Business Usage:
+- Organizations with Annual Recurring Revenue (ARR) under $1,000,000 USD may use the Software without a paid subscription
+- Must provide attribution in any resulting work or publication
+- Must provide annual self-certification of revenue status if requested
+- Must obtain a commercial subscription within 60 days of exceeding $1,000,000 ARR
+
+c) Pro Edition Usage:
+- Required for commercial use by organizations with ARR of $1,000,000 USD or more
 - Must maintain a valid Pro Edition subscription obtained through http4k's official channels
 - Includes standard support services and updates
 
-c) Enterprise Edition Usage:
+d) Enterprise Edition Usage:
 - Includes all Pro Edition features plus enhanced support options
 - Must maintain a valid Enterprise subscription as specified in Quote
 - Includes additional services as detailed in the Quote
