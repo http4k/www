@@ -15,16 +15,16 @@ image: circuit.webp
 
 ## Why We Built http4k AI
 
-Since early 2024, we've been building AI integrations within **[http4k-connect](https://connect.http4k.org)** - LLM API adapters and fake implementations following the same patterns as modules targeting AWS and friends.  While we were building, we became convinced that the JVM AI landscape has a testing problem: existing libraries force you to choose between expensive API calls during development or writing your own mocks from scratch.
+Since early 2024, we've been building AI integrations within **[http4k-connect](https://connect.http4k.org)** - LLM API adapters and fake implementations following the same patterns as modules targeting AWS and friends. While we were building, we became convinced that the JVM AI landscape has a testing problem: while there are "AI mocks" that allow you to test your code at a high level, they don't let you test the actual AI interactions your code is making, or what happens when the LLM inevitably fails.
 
-Our users noticed immediately. These became our fastest-growing modules, with feedback like "Finally, AI integrations that actually work in tests." The message was clear: AI tooling needed the http4k treatment.
+Our users noticed immediately. These became our fastest-growing modules, with feedback along the lines of "Finally, AI integrations that actually work in all my tests." The message was clear: AI tooling needed the http4k treatment.
 
 Just like with the http4k core that we built in 2017, we're building what we wish existed: lightweight, functional AI tooling that brings determinism and transparency to the chaos of LLM behaviour. 
 
 ## What's In The Box
 
 ### 1. Universal, Testable LLM API
-A Kotlin-native API that doesn't feel like a Java port. Sure, you create OpenAI and Anthropic adapters differently, but once you have them, all chat calls work identically. The real win: http4k's pluggable HTTP clients slot right into your existing stack - tracing, logging, observability, all there. Plus fakes with content generators so you can test realistic AI workflows without burning a penny on tokens.
+A Kotlin-native API that doesn't feel like a Java port. Sure, you create OpenAI and Anthropic adapters differently, but once you have them, all chat calls work identically. The real win: http4k's pluggable HTTP clients that slot right into your existing stack - tracing, logging, observability - all there. Plus fakes with AI content generators so you can test realistic AI workflows without burning a penny on tokens.
 
 ### 2. Unified Tool Model
 Your LLM can call a local function or hit a remote API through identical interfaces. No vendor-specific tool handling, no special cases. http4k's lens system generates typesafe tool schemas automatically.
@@ -40,28 +40,30 @@ Released just 2 days after it landed, our [Pro-tier MCP suite](https://mcp.http4
 
 We've built comprehensive MCP capabilities that go well beyond basic compliance with the spec:
 
-- **Latest spec support**: Streaming HTTP, resumable sessions, and stateless MCP that allows deployment to Serverless platforms with zero code changes
+- **Latest spec support**: Streaming HTTP, resumable sessions, sampling, and stateless MCP that allows deployment to Serverless platforms with zero code changes
 - **Zero-compromise testability**: Test MCP integrations with pure unit tests
 - **Type-safe tooling**: Leverages http4k's Lens system for compile-time safety
 - **Flexible transport**: HTTP streaming, SSE, WebSockets, Standard IO
 - **Full client support**: Build custom agents programmatically
 
-For those that want to stay on the bleeding edge, http4k MCP also implements up-to-date draft MCP features including revised OAuth security model for protected resources and elicitation capabilities. Elicitation is something we're very excited about - it allows dynamic user interfaces presented through the client. Your MCP tools can request additional input from users when needed, creating interactive AI experiences.
+For those that want to stay on the bleeding edge, http4k MCP also implements up-to-date draft MCP features including Tool Output schemas, the revised OAuth security model for protected resources, and elicitation capabilities. Elicitation is something we're very excited about - it allows dynamic user interfaces presented through the client. Your MCP tools can request additional input from users when needed, creating interactive AI experiences. Expect a demo soon
 
 ## What's Next
 
-### Intelligent Tool Orchestration (Pro Module)
-Automatic tool calling system that lets you plug in any combination of MCP servers, local functions, and remote APIs. Define your tools, start a chat session, and the LLM automatically decides when and how to call them based on user input. Think "ChatGPT with custom tools" but with full http4k testability - mock the LLM responses, verify tool calls, test complex multi-tool workflows in pure unit tests.
+[Team http4k](/company) is just getting started. Here's what we're working on next:
+
+### Intelligent Tool Orchestration
+Automatic tool calling system that lets you plug in any combination of MCP servers, local functions, and remote APIs. Define your tools, start a chat session, and the LLM automatically decides when and how to call them based on user input. Think "ChatGPT with custom tools" but with full e2e http4k testability - fake custom LLM responses and tool calls, or test complex multi-tool workflows in pure unit tests.
 
 ### Google's A2A Protocol
 Google recently announced A2A (Agent2Agent) – an open protocol for AI agents to communicate with each other across different frameworks. A2A complements MCP by handling agent-to-agent communication while MCP handles agent-to-tool integration. We'll be implementing A2A with the same testability and observability principles.
 
 ### Expanding Provider Support
-Adding new LLM providers based on user demand. Our architecture makes new providers straightforward to add while maintaining the universal interface.
+We're adding new LLM providers based on user demand. Our architecture makes new providers straightforward to add while maintaining the universal interface. And hey - if you want to contribute a new provider, our [contribution guide](/contributing) is ready to help you get started.
 
 ## Available Now
 
-http4k AI ships today with v6.14.0.0. Like most of http4k, these modules join our 180+ open source integrations. The advanced features (MCP, upcoming tool orchestration) live in [Pro](/pro), but we've got news about that below.
+http4k AI ships today with v6.14.0.0. Like most of http4k, the base modules join our 180+ open source integrations. The advanced features (MCP, upcoming tool orchestration) live in our [Pro-tier](/pro), but we've got news about that below.
 
 Ready to build testable AI? **[http4k.org/ecosystem/ai](/ecosystem/ai)**
 
