@@ -1,6 +1,6 @@
 ---
 title: "http4k AI - Because AI Without Tests is Just Expensive Random Number Generation"
-description: "Introducing http4k AI: the first JVM ecosystem that treats AI providers how they should be – testable HTTP APIs with mockable interfaces. Plus: updated commercial license terms to support small business."
+description: "http4k AI brings deterministic, testable AI integrations to the JVM - comprehensive fakes, universal APIs, zero token costs in tests. Built on 8 years and 50+ million downloads. Plus: updated commercial license terms to support small business."
 date: 2025-06-14
 image: circuit.webp
 ---
