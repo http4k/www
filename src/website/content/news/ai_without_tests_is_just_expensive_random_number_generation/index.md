@@ -15,7 +15,7 @@ image: circuit.webp
 
 ## Why We Built http4k AI
 
-Since early 2024, we've been building AI integrations within **[http4k-connect](https://connect.http4k.org)** - LLM API adapters and fake implementations following the same patterns as modules targeting AWS and friends. While we were building, we became convinced that the JVM AI landscape has a testing problem: while there are "AI mocks" that allow you to test your code by replacing the model entirely, they don't let you test the actual AI interactions your code is making, or what happens when the LLM inevitably fails.
+Since early 2024, we've been building AI integrations within **[http4k-connect](https://connect.http4k.org)** - LLM API adapters and fake implementations following the same patterns as modules targeting AWS and friends. While we were building, we became convinced that the JVM AI landscape has a testing problem: while there are "AI mocks" that allow you to test your code by replacing the model entirely, they don't let you test the actual AI interactions your code is making, simulate realistic failure modes, or generate consistent multimedia content for testing workflows.
 
 Our users noticed immediately. These became our fastest-growing modules, with feedback along the lines of "Finally, AI integrations that actually work in all my tests." The message was clear: AI tooling needed the http4k treatment.
 
@@ -28,7 +28,7 @@ Based on feedback from our community, we've adjusted the Java version requiremen
 ## What's In The Box
 
 ### 1. Universal, Testable LLM API
-A Kotlin-native API that doesn't feel like a Java port. Sure, you create OpenAI and Anthropic adapters differently, but once you have them, all chat calls work identically. The real win: http4k's pluggable HTTP clients that slot right into your existing stack - tracing, logging, observability - all there. Plus fakes with AI content generators so you can test realistic AI workflows without burning a penny on tokens.
+A Kotlin-native API that doesn't feel like a Java port. Sure, you create OpenAI and Anthropic adapters differently, but once you have them, all chat calls work identically. The real win: http4k's pluggable HTTP clients that slot right into your existing stack - tracing, logging, observability - all there. Plus comprehensive fakes that generate realistic text, images, and structured data - perfect for testing failure scenarios like rate limits, malformed responses, or content moderation blocks. Test complete AI workflows including multimedia generation completely in-memory without burning tokens or depending on external services.
 
 ### 2. Unified Tool Model
 Your LLM can call a local function or hit a remote API through identical interfaces. No vendor-specific tool handling, no special cases. http4k's lens system generates typesafe tool schemas automatically.
