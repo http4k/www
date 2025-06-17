@@ -7,7 +7,7 @@ image: circuit.webp
 
 <img class="imageMid my-4" src="./circuit.webp" alt="http4k logo"/>
 
-**TL;DR:** We're launching **[http4k AI](/ecosystem/ai)** - a dedicated ecosystem for building testable, observable AI integrations on the JVM, backed by 8 years of experience and 50+ million downloads. v6.14.0.0 ships today with universal LLM APIs, comprehensive fakes, MCP SDK, and support for 5 major providers. **Plus:** Updated [commercial license](/commercial-license/) now supports qualifying small businesses (under $1M ARR) with free Pro access.
+**TL;DR:** We're launching **[http4k AI](/ecosystem/ai)** - a dedicated ecosystem for building testable, observable AI integrations on the JVM, backed by 8 years of experience and 50+ million downloads. v6.15.0.0 ships today with universal LLM APIs, comprehensive fakes, MCP SDK, and support for 5 major providers. **Plus:** Updated [commercial license](/commercial-license/) now supports qualifying small businesses (under $1M ARR) with free Pro access.
 
 ---
 
@@ -15,11 +15,15 @@ image: circuit.webp
 
 ## Why We Built http4k AI
 
-Since early 2024, we've been building AI integrations within **[http4k-connect](https://connect.http4k.org)** - LLM API adapters and fake implementations following the same patterns as modules targeting AWS and friends. While we were building, we became convinced that the JVM AI landscape has a testing problem: while there are "AI mocks" that allow you to test your code at a high level, they don't let you test the actual AI interactions your code is making, or what happens when the LLM inevitably fails.
+Since early 2024, we've been building AI integrations within **[http4k-connect](https://connect.http4k.org)** - LLM API adapters and fake implementations following the same patterns as modules targeting AWS and friends. While we were building, we became convinced that the JVM AI landscape has a testing problem: while there are "AI mocks" that allow you to test your code by replacing the model entirely, they don't let you test the actual AI interactions your code is making, or what happens when the LLM inevitably fails.
 
 Our users noticed immediately. These became our fastest-growing modules, with feedback along the lines of "Finally, AI integrations that actually work in all my tests." The message was clear: AI tooling needed the http4k treatment.
 
-Just like with the http4k core that we built in 2017, we're building what we wish existed: lightweight, functional AI tooling that brings determinism and transparency to the chaos of LLM behaviour. 
+Just like with the http4k core that we built in 2017, we're building what we wish existed: lightweight, functional AI tooling that brings determinism and transparency to the chaos of LLM behaviour.
+
+## Listening to Our Users
+
+Based on feedback from our community, we've adjusted the Java version requirement for http4k v6 from Java 21 back to Java 17. While we're excited about the latest Java features, we heard loud and clear that many teams aren't ready to make that jump yet - especially when experimenting with new AI capabilities. http4k AI v6.15.0.0 now supports Java 17+, making it accessible to more teams who want to build testable AI integrations today.
 
 ## What's In The Box
 
@@ -63,7 +67,7 @@ We're adding new LLM providers based on user demand. Our architecture makes new 
 
 ## Available Now
 
-http4k AI ships today with v6.14.0.0. Like most of http4k, the base modules join our 180+ open source integrations. The advanced features (MCP, upcoming tool orchestration) live in our [Pro-tier](/pro), but we've got news about that below.
+http4k AI ships today with v6.15.0.0. Like most of http4k, the base modules join our 180+ open source integrations. The advanced features (MCP, upcoming tool orchestration) live in our [Pro-tier](/pro), but we've got news about that below.
 
 Ready to build testable AI? **[http4k.org/ecosystem/ai](/ecosystem/ai)**
 
