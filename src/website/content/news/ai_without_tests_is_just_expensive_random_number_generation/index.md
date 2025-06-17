@@ -7,7 +7,7 @@ image: circuit.webp
 
 <img class="imageMid my-4" src="./circuit.webp" alt="http4k logo"/>
 
-**TL;DR:** We're launching **[http4k AI](/ecosystem/ai)** - a dedicated ecosystem for building testable, observable AI integrations on the JVM, backed by 8 years of experience and 50+ million downloads. v6.14.0.0 ships today with universal LLM APIs, comprehensive fakes, MCP SDK with industry-first Elicitation capabilities, and 5 major provider integrations. **Plus:** Updated [commercial license](/commercial-license/) now supports qualifying small businesses (under $1M ARR) with free Pro access.
+**TL;DR:** We're launching **[http4k AI](/ecosystem/ai)** - a dedicated ecosystem for building testable, observable AI integrations on the JVM, backed by 8 years of experience and 50+ million downloads. v6.14.0.0 ships today with universal LLM APIs, comprehensive fakes, MCP SDK with bleeding-edge Elicitation capabilities, and 5 major provider integrations. **Plus:** Updated [commercial license](/commercial-license/) now supports qualifying small businesses (under $1M ARR) with free Pro access.
 
 ---
 
@@ -46,7 +46,7 @@ We've built comprehensive MCP capabilities that go well beyond basic compliance 
 - **Flexible transport**: HTTP streaming, SSE, WebSockets, Standard IO
 - **Full client support**: Build custom agents programmatically
 
-For those that want to stay on the bleeding edge, http4k MCP also implements up-to-date draft MCP features including Tool Output schemas, the revised OAuth security model for protected resources, and elicitation capabilities. Elicitation is something we're very excited about - it allows dynamic user interfaces presented through the client. Your MCP tools can request additional input from users when needed, creating interactive AI experiences. Expect a demo soon.
+For those that want to stay on the bleeding edge, http4k MCP also implements up-to-date draft MCP features including Tool Output schemas, the revised OAuth security model for protected resources, and Elicitation capabilities. Elicitation is something we're very excited about - it allows dynamic user interfaces presented through the client. Your MCP tools can request additional input from users when needed, creating interactive AI experiences. Expect a demo soon!
 
 ## What's Next
 
