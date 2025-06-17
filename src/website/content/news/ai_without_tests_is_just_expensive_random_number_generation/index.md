@@ -24,8 +24,7 @@ Just like with the http4k core that we built in 2017, we're building what we wis
 ## What's In The Box
 
 ### 1. Universal, Testable LLM API
-
-A Kotlin-native API that doesn't feel like a Java port. Sure, you create OpenAI and Anthropic adapters differently, but once you have them, all chat calls work identically. The real win: http4k's pluggable HTTP clients that slot right into your existing stack - tracing, logging, observability - all there via standard http4k Filters and Events. Plus comprehensive fakes that can generate realistic text, images, or structured data - perfect for testing failure scenarios like rate limits, malformed responses, or content moderation blocks. Test complete AI workflows including multimedia generation and chat memory persistence completely in-memory without burning tokens or depending on external services.
+A universal, Kotlin-native API that doesn't feel like a Java port. Sure, you create OpenAI and Anthropic adapters differently, but once you have them, all LLM calls work identically. The real win: http4k's pluggable HTTP clients that slot right into your existing stack - tracing, logging, observability - all there via standard http4k Filters and Events. Plus comprehensive fakes that can generate realistic text, images, or structured data - perfect for testing failure scenarios like rate limits, malformed responses, or content moderation blocks. Test complete AI workflows including multimedia generation and chat memory persistence completely in-memory without burning tokens or depending on external services.
 
 ### 2. Unified Tool Model
 Your LLM can call a local function or hit a remote API through identical interfaces. No vendor-specific tool handling, no special cases. http4k's lens system generates typesafe tool schemas automatically.
@@ -67,26 +66,24 @@ http4k AI currently supports the core LLM primitives: Chat/Streaming Chat, Image
 
 ## Available Now
 
-http4k AI ships today with v6.14.0.0. Like most of http4k, the base modules join our 180+ open source integrations. The advanced features (MCP, upcoming tool orchestration) live in our [Pro-tier](/pro), but we've got news about that below.
+http4k AI ships today with [v6.14.0.0](https://github.com/http4k/http4k/releases/tag/6.14.0.0). Like most of http4k, the base modules join our 180+ open source integrations. The advanced features (MCP, upcoming tool orchestration) live in our [Pro-tier](/pro), but we've got news about that below.
 
 Ready to build testable AI? **[Get going!](/ecosystem/ai)**
 
 ## Supporting Smaller Teams
 
-Here's some good news: we've updated our [commercial license](/commercial-license/) so qualifying small businesses (under $1M ARR) get free access to Pro modules, just like personal users and non-profits.
+Here's some other good news: we've updated our [commercial license](/commercial-license/) so qualifying small businesses (under $1M ARR) get free access to Pro modules, just like personal users and non-profits.
 
-Why? Because the best innovations often come from scrappy teams who don't have enterprise budgets yet. We want http4k's simplicity and rock-solid testing capabilities in the hands of people building cool stuff, not just those with big wallets.
+Why? Because the best innovations often come from scrappy teams building the future. We want http4k's advanced capabilities accessible to innovators and builders, regardless of their current scale or funding stage.
 
 Advanced MCP, tool orchestration, and future Pro features are now free for smaller teams. Go build something awesome.
 
 ## We Want to Hear From You
 
-We'd love to showcase how teams are using http4k AI in their work! Whether you're building intelligent agents, integrating LLMs into existing systems, or creating innovative MCP tools, we want to hear your story.
+We'd love to showcase how teams are using http4k in their work! Whether you're building website, APIs, intelligent agents, integrating LLMs into existing systems, or creating innovative MCP tools, we want to hear your story.
 
-Get in touch at [contact@http4k.org](mailto:contact@http4k.org) or find us on the [Kotlin Slack](https://slack.http4k.org) to tell us how http4k AI is helping you succeed with smaller, simpler, testable, and observable code. Your experience could inspire others and help us continue building tools that matter.
+Get in touch at [contact@http4k.org](mailto:contact@http4k.org) or find us on the [Kotlin Slack](https://kotlinlang.slack.com) to tell us how http4k AI is helping you succeed with smaller, simpler, testable, and observable code. Your experience could inspire others and help us continue building tools that matter.
 
-The future of AI development is functional, testable, and observable. Welcome to [http4k AI](/ecosystem/ai).
-
-/happy coding!
+The future of AI development is functional, testable, and observable. Welcome to **[http4k AI](/ecosystem/ai)**.
 
 #### // the http4k team
