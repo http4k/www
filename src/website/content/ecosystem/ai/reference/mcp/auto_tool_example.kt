@@ -14,6 +14,7 @@ val libDescription = Tool.Arg
     .auto(MavenJar("org.http4k", "http4k-ai-mcp-sdk", 6))
     .required("the maven dependency")
 
+// the auto() method is imported from McpJson (requires Kotlin Reflect)
 val nextVersion = Tool.Output.auto(MavenJar("org.http4k", "http4k-ai-mcp-sdk", 6)).toLens()
 
 val getNextVersion = Tool(

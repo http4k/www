@@ -1,11 +1,13 @@
 package content.ecosystem.ai.reference.mcp
 
+import org.http4k.ai.mcp.ToolFilter
 import org.http4k.ai.mcp.ToolHandler
 import org.http4k.ai.mcp.ToolRequest
 import org.http4k.ai.mcp.ToolResponse
 import org.http4k.ai.mcp.model.Content
 import org.http4k.ai.mcp.model.Tool
 import org.http4k.ai.mcp.model.localDate
+import org.http4k.ai.mcp.then
 import org.http4k.lens.with
 import java.time.LocalDate
 
@@ -35,11 +37,21 @@ val diaryToolHandler: ToolHandler = {
     ToolResponse.Ok(appointmentContent)
 }
 
+// use a Filter to perform logging/tracing/metrics
+val loggingTool = ToolFilter { next ->
+    {
+        println("Called with: $it")
+        val response = next(it)
+        println("Result was: $it")
+        response
+    }
+}.then(diaryToolHandler)
+
 object DiaryTool {
     @JvmStatic
     fun main() = println(
         // invoke/test the tool offline - just invoke it like a function
-        diaryToolHandler(
+        loggingTool(
             ToolRequest().with(Tool.Arg.localDate().required("date") of LocalDate.parse("2025-03-21"))
         )
     )

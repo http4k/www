@@ -1,10 +1,12 @@
 package content.ecosystem.ai.reference.mcp
 
+import org.http4k.ai.mcp.ResourceFilter
 import org.http4k.ai.mcp.ResourceHandler
 import org.http4k.ai.mcp.ResourceRequest
 import org.http4k.ai.mcp.ResourceResponse
 import org.http4k.ai.mcp.model.Resource
 import org.http4k.ai.mcp.model.ResourceName
+import org.http4k.ai.mcp.then
 import org.http4k.client.JavaHttpClient
 import org.http4k.core.Method.GET
 import org.http4k.core.Request
@@ -25,6 +27,17 @@ val getLinksResourceHandler: ResourceHandler = {
     ResourceResponse(links)
 }
 
+// use a Filter to perform logging/tracing/metrics
+val loggingResource = ResourceFilter { next ->
+    {
+        println("Called with: $it")
+        val response = next(it)
+        println("Result was: $it")
+        response
+    }
+}.then(getLinksResourceHandler)
+
+
 private fun getAllLinksFrom(htmlPage: Response) = Jsoup.parse(htmlPage.bodyString())
     .allElements.toList()
     .filter { it.tagName() == "a" }
@@ -34,6 +47,6 @@ object LookupAllLinksFromWebResource {
     @JvmStatic
     fun main() = println(
         // invoke/test the prompt offline - just invoke it like a function
-        getLinksResourceHandler(ResourceRequest(Uri.of("https://http4k.org")))
+        loggingResource(ResourceRequest(Uri.of("https://http4k.org")))
     )
 }

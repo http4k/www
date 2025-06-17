@@ -1,5 +1,7 @@
 package content.ecosystem.ai.reference.mcp
 
+import org.http4k.ai.mcp.CompletionFilter
+import org.http4k.ai.mcp.PromptFilter
 import org.http4k.ai.mcp.PromptHandler
 import org.http4k.ai.mcp.PromptRequest
 import org.http4k.ai.mcp.PromptResponse
@@ -7,6 +9,7 @@ import org.http4k.ai.mcp.model.Content
 import org.http4k.ai.mcp.model.Message
 import org.http4k.ai.mcp.model.Prompt
 import org.http4k.ai.mcp.model.PromptName
+import org.http4k.ai.mcp.then
 import org.http4k.ai.model.Role.Companion.Assistant
 import org.http4k.lens.int
 import org.http4k.lens.with
@@ -28,12 +31,22 @@ val greetingPromptHandler: PromptHandler = { req: PromptRequest ->
     PromptResponse(listOf(Message(Assistant, content)))
 }
 
+// use a Filter to perform logging/tracing/metrics
+val loggingPrompt = PromptFilter { next ->
+    {
+        println("Called with: $it")
+        val response = next(it)
+        println("Result was: $it")
+        response
+    }
+}.then(greetingPromptHandler)
+
 
 object GreetPersonPrompt {
     @JvmStatic
     fun main() = println(
         // invoke/test the prompt offline - just invoke it like a function
-        greetingPromptHandler(
+        loggingPrompt(
             PromptRequest().with(
                 name of "David",
                 age of 30

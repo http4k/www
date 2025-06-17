@@ -67,7 +67,7 @@ The MCP capabilities include:
 http4k provides very good support for the **Model Context Protocol**, and has been designed to make it easy to build
 your own MCP-compliant servers in Kotlin, using the familiar http4k methodology of simple and composable functional
 protocols. Each of the capabilities is modelled as a **binding** between a capability description and a function that
-exposes the capability. See [Capability Types](#capability-types) for more details.
+exposes the capability. See [Capability Types](#capabilities) for more details.
 
 The MCP support in http4k consists of two parts - the `http4k-ai-mcp-sdk` and
 the [http4k-mcp-desktop](https://github.com/http4k/mcp-desktop) application which is used to connect the MCP server to
@@ -80,7 +80,7 @@ module by plugging in capabilities into the server. The **http4k-ai-mcp-sdk modu
 **HTTP Streaming**, **SSE**, **StdIo** or **Websocket** based servers. For StdIo-based servers, we recommend compiling
 your server to GraalVM for ease of distribution.
 
-## Capabilities
+## Capability Types
 
 The MCP protocol is based on a set of capabilities that can be provided by the server or client. Each capability can be
 installed separately into the server, and the client can interact with the server using these capabilities.
@@ -88,21 +88,29 @@ installed separately into the server, and the client can interact with the serve
 ### Capability: Tools
 
 Tools allow external MCP clients such as LLMs to request the server to perform bespoke functionality such as invoking an
-API. The Tool capability is modelled as a function `typealias ToolHandler = (ToolRequest) -> ToolResponse`, and can be
+API. The Tool capability is modelled as a function `typealias ToolHandler = (ToolRequest) -> ToolResponse`, filtered with a `ToolFilter`, and can be
 bound to a tool definition which describes it's arguments and outputs using the http4k Lens system:
 
 {{< kotlin file="simple_tool_example.kt" >}}
 
 #### Complex Tools request arguments
 
-The http4k MCP SDK also supports handling of complex arguments in the request. This can be done by using the `auto()` extension function and passing an example argument instance in order that the complex JSON schema can be rendered. Note that the Kotlin Reflection JAR also needs to be present on the classpath to take advantage of this feature, or you can supply a custom instance of `ConfigurableMcpJson` (Moshi-based) to work without reflection (we recommend the use of the [Kotshi](https://github.com/ansman/kotshi) compiler plugin to generate adapters for this use-case). 
+The http4k MCP SDK also supports handling of complex arguments in the request (and response - MCP draft). This can be done by using the `auto()` extension function and passing an example argument instance in order that the complex JSON schema can be rendered. Note that the Kotlin Reflection JAR also needs to be present on the classpath to take advantage of this feature, or you can supply a custom instance of `ConfigurableMcpJson` (Moshi-based) to work without reflection (we recommend the use of the [Kotshi](https://github.com/ansman/kotshi) compiler plugin to generate adapters for this use-case). 
 
 {{< kotlin file="auto_tool_example.kt" >}}
+
+### Capability: Completions
+
+Completions give the server to standard autocomplete abilities based on partial input from a client. The Completion capability is modelled as a
+function `typealias CompletionHandler = (CompletionRequest) -> CompletionResponse`,  filtered with a `CompletionFilter`,, and can be bound to a prompt definition which describes it's arguments
+using the http4k Lens system.
+
+{{< kotlin file="completion_example.kt" >}}
 
 ### Capability: Prompts
 
 Prompts allow the server to generate a prompt based on the client's inputs. The Prompt capability is modelled as a
-function `(PromptRequest) -> PromptResponse`, and can be bound to a prompt definition which describes it's arguments
+function `typealias PromptHandler = (PromptRequest) -> PromptResponse`,  filtered with a `PromptFilter`,, and can be bound to a prompt definition which describes it's arguments
 using the http4k Lens system.
 
 {{< kotlin file="prompt_example.kt" >}}
@@ -126,8 +134,7 @@ using the http4k Lens system.
 ### Capability: Resources
 
 Resources provide a way to interrogate the contents of data sources such as filesystem, database or website. The
-Resource capability is modelled as a function `(ResourceRequest) -> ResourceResponse`. Resources can be static or
-templated to provide bounds within which the client can interact with the resource.
+Resource capability is modelled as a function `typealias ResourceHandler = (ResourceRequest) -> ResourceResponse`, filtered with a `ResourceFilter`. Resources can be static or templated to provide bounds within which the client can interact with the resource.
 
 {{< kotlin file="static_resource_example.kt" >}}
 
