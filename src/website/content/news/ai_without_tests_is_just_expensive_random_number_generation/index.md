@@ -50,7 +50,7 @@ We've built comprehensive MCP capabilities that go well beyond basic compliance 
 - **Flexible transport**: HTTP streaming, SSE, WebSockets, Standard IO
 - **Full client support**: Build custom agents programmatically
 
-For those that want to stay on the bleeding edge, http4k MCP also implements up-to-date draft MCP features including Tool Output schemas, the revised OAuth security model for protected resources, and elicitation capabilities. Elicitation is something we're very excited about - it allows dynamic user interfaces presented through the client. Your MCP tools can request additional input from users when needed, creating interactive AI experiences. Expect a demo soon
+For those that want to stay on the bleeding edge, http4k MCP also implements up-to-date draft MCP features including Tool Output schemas, the revised OAuth security model for protected resources, and elicitation capabilities. Elicitation is something we're very excited about - it allows dynamic user interfaces presented through the client. Your MCP tools can request additional input from users when needed, creating interactive AI experiences. Expect a demo soon.
 
 ## What's Next
 
