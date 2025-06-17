@@ -15,9 +15,9 @@ image: circuit.webp
 
 ## Why We Built http4k AI
 
-Since [mid-2023](https://github.com/http4k/http4k-connect/releases/tag/3.39.1.0), we've been building AI integrations into **[http4k-connect](https://connect.http4k.org)** - LLM API adapters and fake implementations following the same patterns as modules targeting AWS and friends. While we were building, we became convinced that the JVM AI landscape has a testing problem: while there are "AI mocks" that allow you to test your code by replacing the model entirely, they don't let you test the actual AI interactions your code is making, simulate realistic failure modes, or generate consistent multimedia content for testing workflows.
+Since [mid 2023](https://github.com/http4k/http4k-connect/releases/tag/3.39.1.0), we've been building AI integrations into **[http4k-connect](https://connect.http4k.org)** - LLM API adapters and fake implementations following the same patterns as modules targeting AWS and friends. While we were building, we became convinced that the JVM AI landscape has a testing problem: while there are "AI mocks" that allow you to test your code by replacing the model entirely, they don't let you test the actual AI interactions your code is making, simulate realistic failure modes, or generate consistent multimedia content for testing workflows.
 
-Our users noticed immediately. These became our fastest-growing modules, with feedback along the lines of "Finally, AI integrations that actually work in all my tests." The message was clear: AI tooling needed the http4k treatment.
+Our users noticed immediately. These became our most asked about Connect modules, with common feedback along the lines of "Finally, AI integrations that actually work in all my tests." The message was clear: AI tooling needed the http4k treatment.
 
 Just like with the http4k core that we built in 2017, we're building what we wish existed: lightweight, functional AI tooling that brings determinism and transparency to the chaos of LLM behaviour.
 
