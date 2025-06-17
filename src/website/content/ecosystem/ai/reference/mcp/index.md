@@ -169,7 +169,7 @@ Note that in order for this to work, a `ProgressToken` must be present in the re
 operation being progressed.
 
 {{< kotlin file="sampling_example.kt" >}}
-
+    
 ### Client Capability: Elicitation
 
 Elicitation allow the server to request additional information from the user in order to complete a task, by rendering a

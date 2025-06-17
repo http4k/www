@@ -7,10 +7,7 @@ import org.http4k.ai.mcp.ResourceRequest
 import org.http4k.ai.mcp.SamplingResponse
 import org.http4k.ai.mcp.ToolRequest
 import org.http4k.ai.mcp.client.http.HttpStreamingMcpClient
-import org.http4k.ai.mcp.model.Content
 import org.http4k.ai.mcp.model.Content.Text
-import org.http4k.ai.mcp.model.Elicitation
-import org.http4k.ai.mcp.model.ElicitationAction
 import org.http4k.ai.mcp.model.ElicitationAction.accept
 import org.http4k.ai.mcp.model.McpEntity
 import org.http4k.ai.mcp.model.Prompt
@@ -18,7 +15,6 @@ import org.http4k.ai.mcp.model.PromptName
 import org.http4k.ai.mcp.model.Reference
 import org.http4k.ai.mcp.model.Tool
 import org.http4k.ai.mcp.model.localDate
-import org.http4k.ai.mcp.model.string
 import org.http4k.ai.mcp.protocol.Version
 import org.http4k.ai.model.ModelName
 import org.http4k.ai.model.Role
@@ -97,7 +93,6 @@ fun main() {
         println(">>> Sampled: $it")
         sequenceOf(SamplingResponse(ModelName.of("gpt-4"), Role.Assistant, Text("Sampled: $it")))
     }
-
 
     client.elicitations().onElicitation {
         println(">>> Elicitation: $it")
