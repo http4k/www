@@ -1,17 +1,27 @@
 package content.ecosystem.ai.reference.mcp
 
 import org.http4k.ai.mcp.CompletionRequest
+import org.http4k.ai.mcp.ElicitationResponse
 import org.http4k.ai.mcp.PromptRequest
 import org.http4k.ai.mcp.ResourceRequest
+import org.http4k.ai.mcp.SamplingResponse
 import org.http4k.ai.mcp.ToolRequest
 import org.http4k.ai.mcp.client.http.HttpStreamingMcpClient
+import org.http4k.ai.mcp.model.Content
+import org.http4k.ai.mcp.model.Content.Text
+import org.http4k.ai.mcp.model.Elicitation
+import org.http4k.ai.mcp.model.ElicitationAction
+import org.http4k.ai.mcp.model.ElicitationAction.accept
 import org.http4k.ai.mcp.model.McpEntity
 import org.http4k.ai.mcp.model.Prompt
 import org.http4k.ai.mcp.model.PromptName
 import org.http4k.ai.mcp.model.Reference
 import org.http4k.ai.mcp.model.Tool
 import org.http4k.ai.mcp.model.localDate
+import org.http4k.ai.mcp.model.string
 import org.http4k.ai.mcp.protocol.Version
+import org.http4k.ai.model.ModelName
+import org.http4k.ai.model.Role
 import org.http4k.ai.model.ToolName
 import org.http4k.client.JavaHttpClient
 import org.http4k.core.BodyMode
@@ -82,6 +92,17 @@ fun main() {
                 ResourceRequest(Uri.of("https://http4k.org"))
             )
     )
+
+    client.sampling().onSampled {
+        println(">>> Sampled: $it")
+        sequenceOf(SamplingResponse(ModelName.of("gpt-4"), Role.Assistant, Text("Sampled: $it")))
+    }
+
+
+    client.elicitations().onElicitation {
+        println(">>> Elicitation: $it")
+        ElicitationResponse(accept).with(userName of "David", userAge of 30)
+    }
 
     client.close()
 }
