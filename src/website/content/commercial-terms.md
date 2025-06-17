@@ -83,7 +83,7 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 2.1 This Software is governed by this Commercial License. Usage is permitted under one of the following conditions:
 
 a) Non-Commercial Usage:
-- Personal projects, academic research, education, and non-profit organizations may use the Software freely
+- Personal projects, research, education, and non-profit organizations may use the Software freely
 - Attribution is required in any resulting work or publication
 
 b) Small Business Usage:
