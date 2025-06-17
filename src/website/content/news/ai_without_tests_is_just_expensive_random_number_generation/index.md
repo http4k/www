@@ -7,7 +7,7 @@ image: circuit.webp
 
 <img class="imageMid my-4" src="./circuit.webp" alt="http4k logo"/>
 
-**TL;DR:** We're launching **[http4k AI](/ecosystem/ai)** - a dedicated ecosystem for building testable, observable AI integrations on the JVM, backed by 8 years of experience and 50+ million downloads. **[v6.14.0.0](https://github.com/http4k/http4k/releases/tag/6.14.0.0)** is available today with universal LLM APIs, comprehensive fakes, MCP SDK with bleeding-edge Elicitation capabilities, and 5 major provider integrations. **Plus:** Updated **[commercial license](/commercial-license/)** now supports qualifying small businesses (under $1M ARR) with free Pro access.
+**TL;DR:** We're launching **[http4k AI](/ecosystem/ai)** - a dedicated ecosystem for building testable, observable AI integrations on the JVM. Built on the foundation of http4k's 8-year track record and 50 million downloads, **[v6.14.0.0](https://github.com/http4k/http4k/releases/tag/6.14.0.0)** ships today with universal LLM APIs, comprehensive fakes, MCP SDK with bleeding-edge Elicitation capabilities, and 5 major provider integrations. **Plus:** Our updated **[commercial license](/commercial-license/)** now supports qualifying small businesses (under $1M ARR) with free Pro access.
 
 ---
 
