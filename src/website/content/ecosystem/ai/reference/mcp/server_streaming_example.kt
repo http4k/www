@@ -18,7 +18,7 @@ fun main() {
         ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0"), ToolsChanged),
 
         // insert a security implementation
-        OAuthMcpSecurity(Uri.of("https://oauth-server")) { it == "my_oauth_token" },
+        OAuthMcpSecurity(Uri.of("https://oauth-server"), Uri.of("https://mcp-server/mcp")) { it == "my_oauth_token" },
 
         // bind server capabilities here ...
         toolDefinitionFor("David") bind diaryToolHandler,

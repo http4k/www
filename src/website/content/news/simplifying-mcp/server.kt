@@ -17,7 +17,7 @@ import java.time.Instant
 fun main() {
     mcpHttpStreaming(
         ServerMetaData(McpEntity.of("foo"), Version.of("bar")),
-        OAuthMcpSecurity(Uri.of("https://oauth-server")) { it == "my_oauth_token" },
+        OAuthMcpSecurity(Uri.of("https://oauth-server"), Uri.of("https://mcp-server/mcp")) { it == "my_oauth_token" },
         Tool("time", "Get the current time") bind {
             ToolResponse.Ok(listOf(Content.Text(Instant.now().toString())))
         }

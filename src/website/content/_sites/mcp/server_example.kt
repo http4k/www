@@ -21,7 +21,7 @@ import org.http4k.server.asServer
 fun main() {
     val mcpServer = mcpHttpStreaming(
         ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0")),
-        OAuthMcpSecurity(Uri.of("https://oauth-server")) { it == "my_oauth_token" },
+        OAuthMcpSecurity(Uri.of("https://oauth-server"), Uri.of("https://mcp-server/mcp")) { it == "my_oauth_token" },
         liveWeatherTool(),
         loadFromFileSystem(),
         searchWebsite()

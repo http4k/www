@@ -31,7 +31,7 @@ fun main() {
     // 2. Create an MCP server and select your security model
     val mcpServer = mcpHttpStreaming(
         ServerMetaData(McpEntity.of("Weather API"), Version.of("1.0.0")),
-        OAuthMcpSecurity(Uri.of("https://oauth-server")) { it == "my_oauth_token" },
+        OAuthMcpSecurity(Uri.of("https://oauth-server"), Uri.of("https://mcp-server/mcp")) { it == "my_oauth_token" },
         weatherTool
     )
 
