@@ -167,6 +167,8 @@ dependencies {
     testApi("org.http4k:http4k-connect-amazon-apprunner-fake")
     testApi("org.http4k:http4k-connect-amazon-cloudfront")
     testApi("org.http4k:http4k-connect-amazon-cloudfront-fake")
+    testApi("org.http4k:http4k-connect-amazon-cloudwatch")
+    testApi("org.http4k:http4k-connect-amazon-cloudwatch-fake")
     testApi("org.http4k:http4k-connect-amazon-cloudwatchlogs")
     testApi("org.http4k:http4k-connect-amazon-cloudwatchlogs-fake")
     testApi("org.http4k:http4k-connect-amazon-cognito")
