@@ -86,7 +86,7 @@ Here is an example:
 {{< kotlin file="gcf/example.kt" >}}
 
 If you are using gradle, gcloud can't deploy the function directly from the project, you must build the fat jar first.
-Applying this plugin [shadow jar](https://imperceptiblethoughts.com/shadow/) will provide you with appropriate gradle task to build the fat jar.
+Applying this plugin [shadow jar](https://gradleup.com/shadow/) will provide you with appropriate gradle task to build the fat jar.
 
 After building, and having your jar as the only file in the `libs/` folder you can deploy the function from the parent folder with : 
 
@@ -128,7 +128,7 @@ In order to achieve this in http4k, only a single interface `AppLoader` needs to
 
 {{< kotlin file="openwhisk/example.kt" >}}
 
-Packaging of the app should be done using [ShadowJar](https://imperceptiblethoughts.com/shadow/) and then an action created with the `wsk` CLI:
+Packaging of the app should be done using [ShadowJar](https://gradleup.com/shadow/) and then an action created with the `wsk` CLI:
 
 ```
 wsk -i action create myFunctionName myApp.jar --main org.http4k.example.MyFunctionClass --web true
