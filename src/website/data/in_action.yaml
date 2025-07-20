@@ -1,4 +1,29 @@
 talks:
+    - title: "Full Stream Ahead: Breaking the Protocol Barrier with http4k"
+      link: https://www.youtube.com/watch?v=vewgb-vyJME
+      thumbnail: https://i3.ytimg.com/vi/vewgb-vyJME/maxresdefault.jpg
+      date: 2025-05-23
+      extra_links:
+          - title: "slides"
+            link: https://speakerdeck.com/daviddenton/full-stream-ahead-breaking-the-protocol-barrier-with-http4k
+          - title: "code"
+            link: https://github.com/http4k/full-stream-ahead
+    - title: "Functional Intelligence: Agents, MCP and the end of the Web(?)"
+      link: https://www.youtube.com/watch?v=JCk338gTObY
+      thumbnail: https://i3.ytimg.com/vi/JCk338gTObY/maxresdefault.jpg
+      date: 2025-04-17
+      extra_links:
+          - title: "slides"
+            link: https://speakerdeck.com/daviddenton/functional-intelligence-agents-mcp-and-the-end-of-the-web-6724cd3d-4221-46ed-8f17-1c2a7da0613e
+          - title: "code"
+            link: https://github.com/http4k/functional-intelligence
+    - title: "Build a REST API with Kotlin and Http4k"
+      link: https://www.youtube.com/playlist?list=PLjea9qMgiQ2O1PpPYXK9EfxJeBM2zgBoT
+      thumbnail: https://i3.ytimg.com/vi/nHVeMEbZYKI/maxresdefault.jpg
+      date: 2025-03-13
+      extra_links:
+          - title: "code"
+            link: https://github.com/oharaandrew314/intro-to-http4k
     - title: "Exploring the Testing Hyperpyramid with Kotlin & http4k @KotlinConf"
       link: https://www.youtube.com/watch?v=CrslqbMbaD8
       thumbnail: https://i3.ytimg.com/vi/CrslqbMbaD8/maxresdefault.jpg
