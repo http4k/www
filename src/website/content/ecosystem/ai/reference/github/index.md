@@ -14,7 +14,7 @@ dependencies {
 
     // for the Universal LLM adapter (uses the OpenAI fake)
     implementation("org.http4k:http4k-ai-llm-github")
-    implementation("org.http4k:http4k-connect-openai-fake")
+    implementation("org.http4k:http4k-connect-ai-openai-fake")
 }
 ```
 

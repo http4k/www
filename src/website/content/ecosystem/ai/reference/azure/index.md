@@ -17,7 +17,7 @@ dependencies {
 
     // for the Universal LLM adapter (uses the OpenAI fake)
     implementation("org.http4k:http4k-ai-llm-azure")
-    implementation("org.http4k:http4k-connect-openai-fake")
+    implementation("org.http4k:http4k-connect-ai-openai-fake")
 
     // for the low-level Azure API client
     implementation("org.http4k:http4k-connect-ai-azure")
