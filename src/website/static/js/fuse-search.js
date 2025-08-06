@@ -12,10 +12,18 @@
             searchData = await response.json();
             
             const options = {
-                keys: ['title', 'content', 'tags'],
-                threshold: 0.3,
+                keys: [
+                    { name: 'title', weight: 0.4 },
+                    { name: 'content', weight: 0.3 },
+                    { name: 'section', weight: 0.2 },
+                    { name: 'tags', weight: 0.1 }
+                ],
+                threshold: 0.4,
                 includeScore: true,
-                includeMatches: true
+                includeMatches: true,
+                minMatchCharLength: 2,
+                shouldSort: true,
+                findAllMatches: true
             };
             
             fuseInstance = new Fuse(searchData, options);
@@ -83,7 +91,22 @@
             }
 
             const results = fuseInstance.search(query, { limit: 15 });
-            displayResults(results, searchResults);
+            
+            // Sort results by date if available (newest first), then by search relevance
+            const sortedResults = results.sort((a, b) => {
+                const dateA = a.item.lastmod || a.item.date;
+                const dateB = b.item.lastmod || b.item.date;
+                
+                if (dateA && dateB) {
+                    const comparison = new Date(dateB) - new Date(dateA);
+                    if (comparison !== 0) return comparison;
+                }
+                
+                // If dates are equal or missing, sort by search score (lower is better in Fuse.js)
+                return a.score - b.score;
+            });
+            
+            displayResults(sortedResults, searchResults);
         }
 
         // Header search input should open overlay on click/focus

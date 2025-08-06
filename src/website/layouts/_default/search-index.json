@@ -14,6 +14,8 @@
     "content" $description
     "tags" .Params.tags
     "section" .Section
+    "date" (.Date.Format "2006-01-02")
+    "lastmod" (.Lastmod.Format "2006-01-02")
   -}}
   {{- $searchData = $searchData | append $item -}}
 {{- end -}}
