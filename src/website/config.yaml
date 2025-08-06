@@ -232,4 +232,9 @@ outputFormats:
     mediaType: application/xml
     isPlainText: true
     notAlternative: true
+  searchindex:
+    baseName: "search-index"
+    mediaType: application/json
+    isPlainText: true
+    notAlternative: true
 

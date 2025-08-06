@@ -1,0 +1,235 @@
+/* Fuse.js Search Styles */
+
+.search-container {
+    position: relative;
+    width: 250px;
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    color: #6c757d;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.search-container input {
+    padding-left: 40px;
+    padding-right: 80px;
+}
+
+.search-container input::placeholder {
+    color: #999;
+}
+
+.search-container input[readonly] {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.search-container input[readonly]:hover {
+    background-color: #e9ecef;
+    border-color: #007bff;
+}
+
+.search-shortcut {
+    position: absolute;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    pointer-events: none;
+}
+
+.search-shortcut-key {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 11px;
+    color: #666;
+    font-weight: 500;
+    min-width: 20px;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.search-results {
+    margin-top: 20px;
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.search-result-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border: 1px solid #e9ecef;
+    height: fit-content;
+}
+
+.search-result-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #007bff;
+}
+
+.search-result-link {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 8px;
+}
+
+.search-result-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.search-result-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.search-result-content {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.2em;
+}
+
+.search-results-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.search-results-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.search-results-count {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 4px;
+}
+
+.search-result-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 8px;
+}
+
+.search-result-section {
+    background: #e9ecef;
+    color: #495057;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.search-match-score {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.search-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+
+.search-overlay {
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1200px;
+    height: 80vh;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    z-index: 1001;
+    display: none;
+    padding: 24px;
+}
+
+.search-overlay.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-overlay .search-input-wrapper {
+    width: 100%;
+}
+
+.search-overlay input {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 16px 16px 16px 50px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    outline: none;
+}
+
+.search-overlay input::placeholder {
+    color: #999;
+}
+
+.search-overlay input:focus {
+    border-color: #007bff;
+}
+
+.search-overlay .search-icon {
+    left: 16px;
+    width: 20px;
+    height: 20px;
+}
+
+.search-overlay-hint {
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.search-overlay-header {
+    flex-shrink: 0;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,20 @@
+{{- $pages := where .Site.RegularPages "Section" "!=" "" -}}
+{{- $searchData := slice -}}
+{{- range $pages -}}
+  {{- $description := .Description -}}
+  {{- if not $description -}}
+    {{- $description = .Summary -}}
+  {{- end -}}
+  {{- if not $description -}}
+    {{- $description = (.Plain | truncate 200 | safeJS) -}}
+  {{- end -}}
+  {{- $item := dict 
+    "title" .Title
+    "url" .RelPermalink
+    "content" $description
+    "tags" .Params.tags
+    "section" .Section
+  -}}
+  {{- $searchData = $searchData | append $item -}}
+{{- end -}}
+{{ $searchData | jsonify }}
