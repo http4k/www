@@ -15,6 +15,7 @@ A quick reference as to what is what with the http4k Connect modules.
 |------------|---------------------|----------------|-----------------------------------------------------------------|
 | AWS        | AppRunner           | ✅              |                                                                 |
 | AWS        | CloudFront          | ✅              |                                                                 |
+| AWS        | CloudWatch          | ✅              |                                                                 |
 | AWS        | Cloudwatch Logs     | ✅              |                                                                 |
 | AWS        | DynamoDb            | ✅              |                                                                 |
 | AWS        | EventBridge         | ✅              |                                                                 |
