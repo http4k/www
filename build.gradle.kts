@@ -239,7 +239,7 @@ dependencies {
 
     testApi("dev.zacsweers.moshix:moshi-metadata-reflect:_")
     testApi("se.ansman.kotshi:api:_")
-//        kspTest("se.ansman.kotshi:compiler:_")
+    kspTest("se.ansman.kotshi:compiler:_")
 
     testApi("io.opentelemetry:opentelemetry-sdk-testing:_")
 
