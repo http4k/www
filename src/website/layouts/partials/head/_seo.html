@@ -1,3 +1,7 @@
+{{/* Google Analytics 4 - using Hugo's built-in template */}}
+{{ template "_internal/google_analytics.html" . }}
+
+{{/* Fathom Analytics */}}
 {{ with .Site.Params.FathomAnalytics }}
   {{ if and (not hugo.IsServer) .Enabled }}
     <!-- Fathom - beautiful, simple website analytics -->

@@ -4,6 +4,8 @@ publishDir: "../../build/www"
 
 title: "http4k"
 
+googleAnalytics: "G-YSM9QLBYXY"
+
 summaryLength: 20
 
 markup:
