@@ -52,9 +52,9 @@ check +args="":
     rm -rf src/website/public
     ./gradlew check
 
-# run the entire build
-versions +args="":
-    ./gradlew refreshVersions
+# update verions
+versions:
+    ./gradlew versionCatalogUpdate
 
 # run the entire build
 rerun +args="":
