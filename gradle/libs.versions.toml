@@ -1,0 +1,287 @@
+[versions]
+kotlin = "2.2.10"
+ksp = "2.2.10-2.0.2"
+junit = "5.13.4"
+forkhandles-bom = "2.22.4.0"
+opentelemetry-sdk-testing = "1.53.0"
+aws-lambda-java-events = "3.16.1"
+azure-search-documents = "11.8.0-beta.7"
+graphql-kotlin-schema-generator = "8.8.1"
+moshi-metadata-reflect = "0.31.0"
+opentelemetry-aws-xray-propagator = "1.49.0-alpha"
+jakarta-servlet-api = "6.1.0"
+javax-servlet-api = "4.0.1"
+kotshi-api = "4.0.0"
+kotshi-compiler = "4.0.0"
+amazon-s3 = "2.32.30"
+google-http-client = "2.0.0"
+
+[libraries]
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
+forkhandles-bom = { module = "dev.forkhandles:forkhandles-bom", version.ref = "forkhandles-bom" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+http4k-api-openapi = { module = "org.http4k:http4k-api-openapi" }
+http4k-api-cloudevents = { module = "org.http4k:http4k-api-cloudevents" }
+http4k-api-graphql = { module = "org.http4k:http4k-api-graphql" }
+http4k-api-jsonrpc = { module = "org.http4k:http4k-api-jsonrpc" }
+http4k-api-jsonschema = { module = "org.http4k:http4k-api-jsonschema" }
+http4k-api-ui-redoc = { module = "org.http4k:http4k-api-ui-redoc" }
+http4k-api-ui-swagger = { module = "org.http4k:http4k-api-ui-swagger" }
+http4k-client-apache = { module = "org.http4k:http4k-client-apache" }
+http4k-client-apache-async = { module = "org.http4k:http4k-client-apache-async" }
+http4k-client-apache4 = { module = "org.http4k:http4k-client-apache4" }
+http4k-client-apache4-async = { module = "org.http4k:http4k-client-apache4-async" }
+http4k-client-fuel = { module = "org.http4k:http4k-client-fuel" }
+http4k-client-helidon = { module = "org.http4k:http4k-client-helidon" }
+http4k-client-jetty = { module = "org.http4k:http4k-client-jetty" }
+http4k-client-okhttp = { module = "org.http4k:http4k-client-okhttp" }
+http4k-client-websocket = { module = "org.http4k:http4k-client-websocket" }
+http4k-config = { module = "org.http4k:http4k-config" }
+http4k-core = { module = "org.http4k:http4k-core" }
+http4k-format-argo = { module = "org.http4k:http4k-format-argo" }
+http4k-format-core = { module = "org.http4k:http4k-format-core" }
+http4k-format-dataframe = { module = "org.http4k:http4k-format-dataframe" }
+http4k-format-gson = { module = "org.http4k:http4k-format-gson" }
+http4k-format-jackson = { module = "org.http4k:http4k-format-jackson" }
+http4k-format-jackson-csv = { module = "org.http4k:http4k-format-jackson-csv" }
+http4k-format-jackson-xml = { module = "org.http4k:http4k-format-jackson-xml" }
+http4k-format-jackson-yaml = { module = "org.http4k:http4k-format-jackson-yaml" }
+http4k-format-klaxon = { module = "org.http4k:http4k-format-klaxon" }
+http4k-format-kondor-json = { module = "org.http4k:http4k-format-kondor-json" }
+http4k-format-kotlinx-serialization = { module = "org.http4k:http4k-format-kotlinx-serialization" }
+http4k-format-moshi = { module = "org.http4k:http4k-format-moshi" }
+http4k-format-moshi-yaml = { module = "org.http4k:http4k-format-moshi-yaml" }
+http4k-format-xml = { module = "org.http4k:http4k-format-xml" }
+http4k-incubator = { module = "org.http4k:http4k-incubator" }
+http4k-ai-mcp-sdk = { module = "org.http4k.pro:http4k-ai-mcp-sdk" }
+http4k-ai-langchain4j = { module = "org.http4k:http4k-ai-langchain4j" }
+http4k-ai-llm-core = { module = "org.http4k:http4k-ai-llm-core" }
+http4k-ai-llm-anthropic = { module = "org.http4k:http4k-ai-llm-anthropic" }
+http4k-ai-llm-azure = { module = "org.http4k:http4k-ai-llm-azure" }
+http4k-ai-llm-gemini = { module = "org.http4k:http4k-ai-llm-gemini" }
+http4k-ai-llm-github = { module = "org.http4k:http4k-ai-llm-github" }
+http4k-ai-llm-openai = { module = "org.http4k:http4k-ai-llm-openai" }
+http4k-multipart = { module = "org.http4k:http4k-multipart" }
+http4k-ops-failsafe = { module = "org.http4k:http4k-ops-failsafe" }
+http4k-ops-micrometer = { module = "org.http4k:http4k-ops-micrometer" }
+http4k-ops-resilience4j = { module = "org.http4k:http4k-ops-resilience4j" }
+http4k-ops-opentelemetry = { module = "org.http4k:http4k-ops-opentelemetry" }
+http4k-platform-aws = { module = "org.http4k:http4k-platform-aws" }
+http4k-platform-azure = { module = "org.http4k:http4k-platform-azure" }
+http4k-platform-gcp = { module = "org.http4k:http4k-platform-gcp" }
+http4k-platform-k8s = { module = "org.http4k:http4k-platform-k8s" }
+http4k-realtime-core = { module = "org.http4k:http4k-realtime-core" }
+http4k-security-core = { module = "org.http4k:http4k-security-core" }
+http4k-security-digest = { module = "org.http4k:http4k-security-digest" }
+http4k-security-oauth = { module = "org.http4k:http4k-security-oauth" }
+http4k-server-apache = { module = "org.http4k:http4k-server-apache" }
+http4k-server-apache4 = { module = "org.http4k:http4k-server-apache4" }
+http4k-server-helidon = { module = "org.http4k:http4k-server-helidon" }
+http4k-server-jetty = { module = "org.http4k:http4k-server-jetty" }
+http4k-server-jetty11 = { module = "org.http4k:http4k-server-jetty11" }
+http4k-server-ktorcio = { module = "org.http4k:http4k-server-ktorcio" }
+http4k-server-ktornetty = { module = "org.http4k:http4k-server-ktornetty" }
+http4k-server-netty = { module = "org.http4k:http4k-server-netty" }
+http4k-server-ratpack = { module = "org.http4k:http4k-server-ratpack" }
+http4k-server-undertow = { module = "org.http4k:http4k-server-undertow" }
+http4k-server-websocket = { module = "org.http4k:http4k-server-websocket" }
+http4k-serverless-alibaba = { module = "org.http4k:http4k-serverless-alibaba" }
+http4k-serverless-azure = { module = "org.http4k:http4k-serverless-azure" }
+http4k-serverless-core = { module = "org.http4k:http4k-serverless-core" }
+http4k-serverless-gcf = { module = "org.http4k:http4k-serverless-gcf" }
+http4k-serverless-lambda = { module = "org.http4k:http4k-serverless-lambda" }
+http4k-serverless-lambda-runtime = { module = "org.http4k:http4k-serverless-lambda-runtime" }
+http4k-serverless-openwhisk = { module = "org.http4k:http4k-serverless-openwhisk" }
+http4k-serverless-tencent = { module = "org.http4k:http4k-serverless-tencent" }
+http4k-template-core = { module = "org.http4k:http4k-template-core" }
+http4k-template-freemarker = { module = "org.http4k:http4k-template-freemarker" }
+http4k-template-handlebars = { module = "org.http4k:http4k-template-handlebars" }
+http4k-template-jte = { module = "org.http4k:http4k-template-jte" }
+http4k-template-pebble = { module = "org.http4k:http4k-template-pebble" }
+http4k-template-pug4j = { module = "org.http4k:http4k-template-pug4j" }
+http4k-template-rocker = { module = "org.http4k:http4k-template-rocker" }
+http4k-template-thymeleaf = { module = "org.http4k:http4k-template-thymeleaf" }
+http4k-testing-approval = { module = "org.http4k:http4k-testing-approval" }
+http4k-testing-chaos = { module = "org.http4k:http4k-testing-chaos" }
+http4k-testing-hamkrest = { module = "org.http4k:http4k-testing-hamkrest" }
+http4k-testing-kotest = { module = "org.http4k:http4k-testing-kotest" }
+http4k-testing-playwright = { module = "org.http4k:http4k-testing-playwright" }
+http4k-testing-servirtium = { module = "org.http4k:http4k-testing-servirtium" }
+http4k-testing-strikt = { module = "org.http4k:http4k-testing-strikt" }
+http4k-testing-tracerbullet = { module = "org.http4k:http4k-testing-tracerbullet" }
+http4k-testing-webdriver = { module = "org.http4k:http4k-testing-webdriver" }
+http4k-web-htmx = { module = "org.http4k:http4k-web-htmx" }
+http4k-web-datastar = { module = "org.http4k:http4k-web-datastar" }
+http4k-webhook = { module = "org.http4k:http4k-webhook" }
+http4k-connect-ai-anthropic = { module = "org.http4k:http4k-connect-ai-anthropic" }
+http4k-connect-ai-anthropic-fake = { module = "org.http4k:http4k-connect-ai-anthropic-fake" }
+http4k-connect-ai-azure = { module = "org.http4k:http4k-connect-ai-azure" }
+http4k-connect-ai-azure-fake = { module = "org.http4k:http4k-connect-ai-azure-fake" }
+http4k-connect-ai-lmstudio = { module = "org.http4k:http4k-connect-ai-lmstudio" }
+http4k-connect-ai-lmstudio-fake = { module = "org.http4k:http4k-connect-ai-lmstudio-fake" }
+http4k-connect-ai-ollama = { module = "org.http4k:http4k-connect-ai-ollama" }
+http4k-connect-ai-ollama-fake = { module = "org.http4k:http4k-connect-ai-ollama-fake" }
+http4k-connect-ai-openai = { module = "org.http4k:http4k-connect-ai-openai" }
+http4k-connect-ai-openai-fake = { module = "org.http4k:http4k-connect-ai-openai-fake" }
+http4k-connect-amazon-apprunner = { module = "org.http4k:http4k-connect-amazon-apprunner" }
+http4k-connect-amazon-apprunner-fake = { module = "org.http4k:http4k-connect-amazon-apprunner-fake" }
+http4k-connect-amazon-cloudfront = { module = "org.http4k:http4k-connect-amazon-cloudfront" }
+http4k-connect-amazon-cloudfront-fake = { module = "org.http4k:http4k-connect-amazon-cloudfront-fake" }
+http4k-connect-amazon-cloudwatchlogs = { module = "org.http4k:http4k-connect-amazon-cloudwatchlogs" }
+http4k-connect-amazon-cloudwatchlogs-fake = { module = "org.http4k:http4k-connect-amazon-cloudwatchlogs-fake" }
+http4k-connect-amazon-cognito = { module = "org.http4k:http4k-connect-amazon-cognito" }
+http4k-connect-amazon-cognito-fake = { module = "org.http4k:http4k-connect-amazon-cognito-fake" }
+http4k-connect-amazon-containercredentials = { module = "org.http4k:http4k-connect-amazon-containercredentials" }
+http4k-connect-amazon-containercredentials-fake = { module = "org.http4k:http4k-connect-amazon-containercredentials-fake" }
+http4k-connect-amazon-core = { module = "org.http4k:http4k-connect-amazon-core" }
+http4k-connect-amazon-dynamodb = { module = "org.http4k:http4k-connect-amazon-dynamodb" }
+http4k-connect-amazon-dynamodb-fake = { module = "org.http4k:http4k-connect-amazon-dynamodb-fake" }
+http4k-connect-amazon-eventbridge = { module = "org.http4k:http4k-connect-amazon-eventbridge" }
+http4k-connect-amazon-eventbridge-fake = { module = "org.http4k:http4k-connect-amazon-eventbridge-fake" }
+http4k-connect-amazon-evidently = { module = "org.http4k:http4k-connect-amazon-evidently" }
+http4k-connect-amazon-evidently-fake = { module = "org.http4k:http4k-connect-amazon-evidently-fake" }
+http4k-connect-amazon-firehose = { module = "org.http4k:http4k-connect-amazon-firehose" }
+http4k-connect-amazon-firehose-fake = { module = "org.http4k:http4k-connect-amazon-firehose-fake" }
+http4k-connect-amazon-iamidentitycenter = { module = "org.http4k:http4k-connect-amazon-iamidentitycenter" }
+http4k-connect-amazon-iamidentitycenter-fake = { module = "org.http4k:http4k-connect-amazon-iamidentitycenter-fake" }
+http4k-connect-amazon-instancemetadata = { module = "org.http4k:http4k-connect-amazon-instancemetadata" }
+http4k-connect-amazon-instancemetadata-fake = { module = "org.http4k:http4k-connect-amazon-instancemetadata-fake" }
+http4k-connect-amazon-kms = { module = "org.http4k:http4k-connect-amazon-kms" }
+http4k-connect-amazon-kms-fake = { module = "org.http4k:http4k-connect-amazon-kms-fake" }
+http4k-connect-amazon-lambda = { module = "org.http4k:http4k-connect-amazon-lambda" }
+http4k-connect-amazon-lambda-fake = { module = "org.http4k:http4k-connect-amazon-lambda-fake" }
+http4k-connect-amazon-s3 = { module = "org.http4k:http4k-connect-amazon-s3" }
+http4k-connect-amazon-s3-fake = { module = "org.http4k:http4k-connect-amazon-s3-fake" }
+http4k-connect-amazon-secretsmanager = { module = "org.http4k:http4k-connect-amazon-secretsmanager" }
+http4k-connect-amazon-secretsmanager-fake = { module = "org.http4k:http4k-connect-amazon-secretsmanager-fake" }
+http4k-connect-amazon-ses = { module = "org.http4k:http4k-connect-amazon-ses" }
+http4k-connect-amazon-ses-fake = { module = "org.http4k:http4k-connect-amazon-ses-fake" }
+http4k-connect-amazon-sns = { module = "org.http4k:http4k-connect-amazon-sns" }
+http4k-connect-amazon-sns-fake = { module = "org.http4k:http4k-connect-amazon-sns-fake" }
+http4k-connect-amazon-sqs = { module = "org.http4k:http4k-connect-amazon-sqs" }
+http4k-connect-amazon-sqs-fake = { module = "org.http4k:http4k-connect-amazon-sqs-fake" }
+http4k-connect-amazon-sts = { module = "org.http4k:http4k-connect-amazon-sts" }
+http4k-connect-amazon-sts-fake = { module = "org.http4k:http4k-connect-amazon-sts-fake" }
+http4k-connect-amazon-systemsmanager = { module = "org.http4k:http4k-connect-amazon-systemsmanager" }
+http4k-connect-amazon-systemsmanager-fake = { module = "org.http4k:http4k-connect-amazon-systemsmanager-fake" }
+http4k-connect-core = { module = "org.http4k:http4k-connect-core" }
+http4k-connect-core-fake = { module = "org.http4k:http4k-connect-core-fake" }
+http4k-connect-github = { module = "org.http4k:http4k-connect-github" }
+http4k-connect-github-fake = { module = "org.http4k:http4k-connect-github-fake" }
+http4k-connect-gitlab = { module = "org.http4k:http4k-connect-gitlab" }
+http4k-connect-gitlab-fake = { module = "org.http4k:http4k-connect-gitlab-fake" }
+http4k-connect-google-analytics-core = { module = "org.http4k:http4k-connect-google-analytics-core" }
+http4k-connect-google-analytics-ga4 = { module = "org.http4k:http4k-connect-google-analytics-ga4" }
+http4k-connect-google-analytics-ga4-fake = { module = "org.http4k:http4k-connect-google-analytics-ga4-fake" }
+http4k-connect-google-analytics-ua = { module = "org.http4k:http4k-connect-google-analytics-ua" }
+http4k-connect-google-analytics-ua-fake = { module = "org.http4k:http4k-connect-google-analytics-ua-fake" }
+http4k-connect-kafka-rest = { module = "org.http4k:http4k-connect-kafka-rest" }
+http4k-connect-kafka-rest-fake = { module = "org.http4k:http4k-connect-kafka-rest-fake" }
+http4k-connect-kafka-schemaregistry = { module = "org.http4k:http4k-connect-kafka-schemaregistry" }
+http4k-connect-kafka-schemaregistry-fake = { module = "org.http4k:http4k-connect-kafka-schemaregistry-fake" }
+http4k-connect-ksp-generator = { module = "org.http4k:http4k-connect-ksp-generator" }
+http4k-connect-mattermost = { module = "org.http4k:http4k-connect-mattermost" }
+http4k-connect-mattermost-fake = { module = "org.http4k:http4k-connect-mattermost-fake" }
+http4k-connect-storage-core = { module = "org.http4k:http4k-connect-storage-core" }
+http4k-connect-storage-http = { module = "org.http4k:http4k-connect-storage-http" }
+http4k-connect-storage-jdbc = { module = "org.http4k:http4k-connect-storage-jdbc" }
+http4k-connect-storage-redis = { module = "org.http4k:http4k-connect-storage-redis" }
+http4k-connect-storage-s3 = { module = "org.http4k:http4k-connect-storage-s3" }
+http4k-tools-hotreload = { module = "org.http4k.pro:http4k-tools-hotreload" }
+javax-servlet-api = { module = "javax.servlet:javax.servlet-api", version.ref = "javax-servlet-api" }
+jakarta-servlet-api = { module = "jakarta.servlet:jakarta.servlet-api", version.ref = "jakarta-servlet-api" }
+
+moshi-metadata-reflect = { module = "dev.zacsweers.moshix:moshi-metadata-reflect", version.ref = "moshi-metadata-reflect" }
+kotshi-api = { module = "se.ansman.kotshi:api", version.ref = "kotshi-api" }
+kotshi-compiler = { module = "se.ansman.kotshi:compiler", version.ref = "kotshi-compiler" }
+
+opentelemetry-sdk-testing = { module = "io.opentelemetry:opentelemetry-sdk-testing", version.ref = "opentelemetry-sdk-testing" }
+
+mock4k = { module = "dev.forkhandles:mock4k" }
+
+amazon-s3 = { module = "software.amazon.awssdk:s3", version.ref = "amazon-s3" }
+azure-search-documents = { module = "com.azure:azure-search-documents", version.ref = "azure-search-documents" }
+
+google-http-client = { module = "com.google.http-client:google-http-client", version.ref = "google-http-client" }
+
+opentelemetry-aws-xray-propagator = { module = "io.opentelemetry.contrib:opentelemetry-aws-xray-propagator", version.ref = "opentelemetry-aws-xray-propagator" }
+graphql-kotlin-schema-generator = { module = "com.expediagroup:graphql-kotlin-schema-generator", version.ref = "graphql-kotlin-schema-generator" }
+aws-lambda-java-events = { module = "com.amazonaws:aws-lambda-java-events", version.ref = "aws-lambda-java-events" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+[bundles]
+http4k-api = [
+    "http4k-api-openapi",
+    "http4k-api-cloudevents", 
+    "http4k-api-graphql",
+    "http4k-api-jsonrpc",
+    "http4k-api-jsonschema",
+    "http4k-api-ui-redoc",
+    "http4k-api-ui-swagger"
+]
+
+http4k-clients = [
+    "http4k-client-apache",
+    "http4k-client-apache-async",
+    "http4k-client-apache4",
+    "http4k-client-apache4-async",
+    "http4k-client-fuel",
+    "http4k-client-helidon",
+    "http4k-client-jetty",
+    "http4k-client-okhttp",
+    "http4k-client-websocket"
+]
+
+http4k-formats = [
+    "http4k-format-argo",
+    "http4k-format-core",
+    "http4k-format-dataframe",
+    "http4k-format-gson",
+    "http4k-format-jackson",
+    "http4k-format-jackson-csv",
+    "http4k-format-jackson-xml",
+    "http4k-format-jackson-yaml",
+    "http4k-format-klaxon",
+    "http4k-format-kondor-json",
+    "http4k-format-kotlinx-serialization",
+    "http4k-format-moshi",
+    "http4k-format-moshi-yaml",
+    "http4k-format-xml"
+]
+
+http4k-servers = [
+    "http4k-server-apache",
+    "http4k-server-apache4",
+    "http4k-server-helidon",
+    "http4k-server-jetty",
+    "http4k-server-jetty11",
+    "http4k-server-ktorcio",
+    "http4k-server-ktornetty",
+    "http4k-server-netty",
+    "http4k-server-ratpack",
+    "http4k-server-undertow",
+    "http4k-server-websocket"
+]
+
+http4k-testing = [
+    "http4k-testing-approval",
+    "http4k-testing-chaos",
+    "http4k-testing-hamkrest",
+    "http4k-testing-kotest",
+    "http4k-testing-playwright",
+    "http4k-testing-servirtium",
+    "http4k-testing-strikt",
+    "http4k-testing-tracerbullet",
+    "http4k-testing-webdriver"
+]
+
+junit = [
+    "junit-platform-launcher",
+    "junit-jupiter-api", 
+    "junit-jupiter-engine"
+]
