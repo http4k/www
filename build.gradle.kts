@@ -123,6 +123,8 @@ dependencies {
     testApi(libs.http4k.connect.amazon.apprunner.fake)
     testApi(libs.http4k.connect.amazon.cloudfront)
     testApi(libs.http4k.connect.amazon.cloudfront.fake)
+    testApi(libs.http4k.connect.amazon.cloudwatch)
+    testApi(libs.http4k.connect.amazon.cloudwatch.fake)
     testApi(libs.http4k.connect.amazon.cloudwatchlogs)
     testApi(libs.http4k.connect.amazon.cloudwatchlogs.fake)
     testApi(libs.http4k.connect.amazon.cognito)
@@ -183,6 +185,7 @@ dependencies {
     testApi(libs.http4k.connect.storage.jdbc)
     testApi(libs.http4k.connect.storage.redis)
     testApi(libs.http4k.connect.storage.s3)
+
 
     testApi(libs.http4k.tools.hotreload)
 
