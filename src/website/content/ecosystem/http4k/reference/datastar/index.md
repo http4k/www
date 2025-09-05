@@ -55,25 +55,25 @@ supported by several http4k server implementations, including Jetty, Undertow an
 
 There are 2 main types of message that you will normally send in Datastar responses, although there are more supported:
 
-1. **Merge-Fragment:** This is a message that contains a fragment of HTML which is to be merged into the DOM at a
-   specific location, given the set merging strategy (or "mode"). This is done by using the `data-merge-fragment`
-   attribute on an element in the DOM, which is then replaced with the new content. Many fragments can be sent in a
-   single event, and only the events name and the fragments data are required.
+1. **Patch-Elements:** This is a message that contains an HTML element which is to be merged into the DOM at a
+   specific location, given the set merging strategy (or "mode"). This is done by using the `data-patch-elements`
+   attribute on an element in the DOM, which is then replaced with the new content. Many elements can be sent in a
+   single event, and only the events name and the elements data are required.
 
 ```text
-event: datastar-merge-fragments
-data: fragments <div id="hello">Hello, world!</div>
+event: datastar-patch-elements
+data: elements <div id="hello">Hello, world!</div>
 data: settleDuration 300
 data: mergeMode morph
 data: useViewTransition false
 
 ```
 
-2. **Merge-Signals:** This is a message that contains a set of signals (data) which is used to update the state of
+2. **Patch-Signals:** This is a message that contains a set of signals (data) which is used to update the state of
    various models on the client. See the [Datastar] docs for more information on how to use these signals.
 
 ```text
-event:datastar-merge-signals
+event:datastar-patch-signals
 data:signals {foo: {bar: 1}}
 data:onlyIfMissing false
 ```
@@ -87,7 +87,7 @@ But it doesn't stop there...
 Datastar allows you to essentially decide the reactivity dynamically on the backend without the need to make any
 client-side changes -
 as far as the browser is concerned, it's just requesting everything in a consistent way and by merging HTML/data from
-the response as it receives it. The server can decide how to respond to these requests - be it individual fragments, or
+the response as it receives it. The server can decide how to respond to these requests - be it individual elements, or
 as a stream of updates.
 
 Additionally - the tools inside Datastar allow you to recreate the vast majority of the single-page application (SPA)
