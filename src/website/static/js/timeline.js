@@ -54,7 +54,7 @@ const data = {
         {
             title: "7.X (Java 25)",
             segments: [
-                {start: 2027, end: 2029, type: "Community", color: "#a8d5ff"},
+                {start: 2026, end: 2029, type: "Community", color: "#a8d5ff"},
                 {start: 2029, end: 2031, type: "EE / LTS", color: "#ffe69c"}
             ]
         }
