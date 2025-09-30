@@ -22,6 +22,9 @@ dependencies {
     // Handlebars: 
     implementation("org.http4k:http4k-template-handlebars")
     
+    // HTML Flow: 
+    implementation("org.http4k:http4k-template-htmlflow")
+    
     // Pug4j: 
     implementation("org.http4k:http4k-template-pug4j")
     
