@@ -1,0 +1,28 @@
+name: Upgrade http4k
+'on':
+  repository_dispatch:
+    types:
+    - http4k-release
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v5.0.0
+    - name: Configure git and upgrade
+      run: |-
+        git config --local user.name "github-actions"
+        git config --local user.email "github-actions@github.com"
+        ./upgrade_http4k.sh ${{ github.event.client_payload.version }}
+        git add .
+        git commit -am "Upgrade http4k"
+      shell: bash
+    - name: Push changes
+      run: git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      shell: bash
+    - name: Trigger release
+      uses: peter-evans/repository-dispatch@v3.0.0
+      with:
+        event-type: release

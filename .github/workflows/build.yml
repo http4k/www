@@ -1,0 +1,45 @@
+name: Build and Deploy
+'on':
+  push:
+    branches:
+    - master
+  repository_dispatch:
+    types:
+    - release
+  schedule:
+  - cron: 0 0,6,12,18 * * *
+jobs:
+  release-site:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v5.0.0
+      with:
+        fetch-depth: 0
+    - name: Setup Java
+      uses: actions/setup-java@v5.0.0
+      with:
+        java-version: '21'
+        distribution: temurin
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4.4.2
+    - name: Build
+      timeout-minutes: 25
+      run: ./gradlew check
+      shell: bash
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3.0.0
+      with:
+        hugo-version: 0.148.1
+        extended: 'true'
+    - name: Build Site
+      run: hugo --minify -s src/website
+      shell: bash
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v4.0.0
+      with:
+        personal_token: ${{ secrets.TOOLBOX_REPO_TOKEN }}
+        external_repository: http4k/http4k.github.io
+        publish_branch: master
+        publish_dir: build/www
+        cname: www.http4k.org

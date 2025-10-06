@@ -1,6 +1,7 @@
 import org.gradle.api.JavaVersion.VERSION_21
 
 plugins {
+    alias(libs.plugins.typeflows)
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.ksp)
     alias(libs.plugins.version.catalog.update)
@@ -40,6 +41,11 @@ tasks {
 }
 
 dependencies {
+
+    typeflowsApi(libs.typeflows.github)
+    typeflowsApi(libs.typeflows.github.marketplace)
+    typeflowsApi(libs.http4k.standards)
+
     testApi(platform("org.http4k:http4k-bom:${project.properties["http4k_version"]}"))
     testApi(platform(libs.forkhandles.bom))
     testApi(platform(libs.junit.bom))

@@ -15,6 +15,8 @@ ksp = "2.2.20-2.0.3"
 moshi-metadata-reflect = "0.32.0"
 opentelemetry-aws-xray-propagator = "1.50.0-alpha"
 opentelemetry-sdk-testing = "1.54.1"
+typeflows = "0.24.0-beta"
+http4k-standards = "1.0.1.0"
 version-catalog-update = "1.0.1"
 
 [libraries]
@@ -24,6 +26,7 @@ azure-search-documents = { module = "com.azure:azure-search-documents", version.
 forkhandles-bom = { module = "dev.forkhandles:forkhandles-bom", version.ref = "forkhandles-bom" }
 google-http-client = { module = "com.google.http-client:google-http-client", version.ref = "google-http-client" }
 graphql-kotlin-schema-generator = { module = "com.expediagroup:graphql-kotlin-schema-generator", version.ref = "graphql-kotlin-schema-generator" }
+http4k-standards = { module = "org.http4k.standards:typeflows", version.ref = "http4k-standards" }
 http4k-ai-langchain4j = { module = "org.http4k:http4k-ai-langchain4j" }
 http4k-ai-llm-anthropic = { module = "org.http4k:http4k-ai-llm-anthropic" }
 http4k-ai-llm-azure = { module = "org.http4k:http4k-ai-llm-azure" }
@@ -208,11 +211,14 @@ mock4k = { module = "dev.forkhandles:mock4k" }
 moshi-metadata-reflect = { module = "dev.zacsweers.moshix:moshi-metadata-reflect", version.ref = "moshi-metadata-reflect" }
 opentelemetry-aws-xray-propagator = { module = "io.opentelemetry.contrib:opentelemetry-aws-xray-propagator", version.ref = "opentelemetry-aws-xray-propagator" }
 opentelemetry-sdk-testing = { module = "io.opentelemetry:opentelemetry-sdk-testing", version.ref = "opentelemetry-sdk-testing" }
+typeflows-github = { module = "io.typeflows:typeflows-github", version.ref = "typeflows" }
+typeflows-github-marketplace = { module = "io.typeflows:typeflows-github-marketplace", version.ref = "typeflows" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 powerAssert = { id = "org.jetbrains.kotlin.plugin.power-assert", version.ref = "kotlin" }
+typeflows = { id = "io.typeflows", version.ref = "typeflows" }
 version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "version-catalog-update" }
 
 [bundles]
