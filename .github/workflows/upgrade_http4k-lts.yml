@@ -25,6 +25,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       shell: bash
     - name: Trigger LTS release
-      uses: peter-evans/repository-dispatch@v3.0.0
+      uses: peter-evans/repository-dispatch@v4.0.0
       with:
         event-type: lts-release
