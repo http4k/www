@@ -32,11 +32,8 @@ flowchart TD
     step3["Step 3: Push changes<br/>💻 bash"]
     style step3 fill:#f3e5f5,stroke:#7b1fa2
     step2 --> step3
-    step4["Step 4: Trigger LTS release"]
-    style step4 fill:#f8f9fa,stroke:#495057
-    action4["🎬 peter-evans<br/>repository-dispatch<br/><br/>📝 Inputs:<br/>• event-type: lts-release"]
-    style action4 fill:#e1f5fe,stroke:#0277bd
-    step4 -.-> action4
+    step4["Step 4: Trigger LTS release<br/>💻 bash"]
+    style step4 fill:#f3e5f5,stroke:#7b1fa2
     step3 --> step4
 ```
 

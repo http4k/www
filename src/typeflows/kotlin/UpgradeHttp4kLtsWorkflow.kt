@@ -1,8 +1,9 @@
 import io.typeflows.github.workflow.Job
 import io.typeflows.github.workflow.RunsOn
+import io.typeflows.github.workflow.Secrets
 import io.typeflows.github.workflow.Workflow
 import io.typeflows.github.workflow.step.RunCommand
-import io.typeflows.github.workflow.step.UseAction
+import io.typeflows.github.workflow.step.SendRepositoryDispatch
 import io.typeflows.github.workflow.step.marketplace.Checkout
 import io.typeflows.github.workflow.trigger.RepositoryDispatch
 import io.typeflows.util.Builder
@@ -28,12 +29,11 @@ class UpgradeHttp4kLtsWorkflow : Builder<Workflow> {
             steps += RunCommand("git push", "Push changes") {
                 env["GITHUB_TOKEN"] = $$"${{ secrets.GITHUB_TOKEN }}"
             }
-            steps += UseAction(
-                "peter-evans/repository-dispatch@v3.0.0",
-                "Trigger LTS release"
-            ) {
-                with += mapOf("event-type" to "lts-release")
-            }
+            steps += SendRepositoryDispatch(
+                "lts-release",
+                Secrets.GITHUB_TOKEN,
+                name = "Trigger LTS release"
+            )
         }
     }
 }

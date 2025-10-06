@@ -15,6 +15,8 @@ flowchart LR
     schedule -->|"0 0,6,12,18 * * *"|buildltsyml
     upgradehttp4kyml --> repositorydispatchgithubrepository
     repositorydispatchgithubrepository -->|"release"|buildyml
+    upgradehttp4kltsyml --> repositorydispatchgithubrepository
+    repositorydispatchgithubrepository -->|"lts-release"|buildltsyml
 ```
 
 ## Workflows
