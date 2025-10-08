@@ -1,22 +1,22 @@
 [versions]
-amazon-s3 = "2.35.0"
+amazon-s3 = "2.35.2"
 aws-lambda-java-events = "3.16.1"
 azure-search-documents = "11.8.0-beta.8"
 forkhandles-bom = "2.22.5.0"
 google-http-client = "2.0.1"
 graphql-kotlin-schema-generator = "8.8.1"
+http4k-standards = "1.1.0.0"
 jakarta-servlet-api = "6.1.0"
 javax-servlet-api = "4.0.1"
 junit = "6.0.0"
 kotlin = "2.2.20"
 kotshi-api = "4.0.0"
 kotshi-compiler = "4.0.0"
-ksp = "2.2.20-2.0.3"
+ksp = "2.2.20-2.0.4"
 moshi-metadata-reflect = "0.32.0"
 opentelemetry-aws-xray-propagator = "1.50.0-alpha"
 opentelemetry-sdk-testing = "1.54.1"
-typeflows = "0.24.0-beta"
-http4k-standards = "1.0.1.0"
+typeflows = "0.26.0-beta"
 version-catalog-update = "1.0.1"
 
 [libraries]
@@ -26,7 +26,6 @@ azure-search-documents = { module = "com.azure:azure-search-documents", version.
 forkhandles-bom = { module = "dev.forkhandles:forkhandles-bom", version.ref = "forkhandles-bom" }
 google-http-client = { module = "com.google.http-client:google-http-client", version.ref = "google-http-client" }
 graphql-kotlin-schema-generator = { module = "com.expediagroup:graphql-kotlin-schema-generator", version.ref = "graphql-kotlin-schema-generator" }
-http4k-standards = { module = "org.http4k.standards:typeflows", version.ref = "http4k-standards" }
 http4k-ai-langchain4j = { module = "org.http4k:http4k-ai-langchain4j" }
 http4k-ai-llm-anthropic = { module = "org.http4k:http4k-ai-llm-anthropic" }
 http4k-ai-llm-azure = { module = "org.http4k:http4k-ai-llm-azure" }
@@ -176,6 +175,7 @@ http4k-serverless-lambda = { module = "org.http4k:http4k-serverless-lambda" }
 http4k-serverless-lambda-runtime = { module = "org.http4k:http4k-serverless-lambda-runtime" }
 http4k-serverless-openwhisk = { module = "org.http4k:http4k-serverless-openwhisk" }
 http4k-serverless-tencent = { module = "org.http4k:http4k-serverless-tencent" }
+http4k-standards = { module = "org.http4k.standards:typeflows", version.ref = "http4k-standards" }
 http4k-template-core = { module = "org.http4k:http4k-template-core" }
 http4k-template-freemarker = { module = "org.http4k:http4k-template-freemarker" }
 http4k-template-handlebars = { module = "org.http4k:http4k-template-handlebars" }
