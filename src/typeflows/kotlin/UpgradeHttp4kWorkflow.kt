@@ -22,10 +22,13 @@ class UpgradeHttp4kWorkflow : Builder<Workflow> {
                 ./upgrade_http4k.sh ${{ github.event.client_payload.version }}
                 git add .
                 git commit -am "Upgrade http4k"
-            """.trimIndent(), "Configure git and upgrade"
-            )
-            steps += RunCommand("git push", "Push changes") {
-                env["GITHUB_TOKEN"] = $$"${{ secrets.GITHUB_TOKEN }}"
+            """.trimIndent()
+            ) {
+                name = "Configure git and upgrade"
+            }
+            steps += RunCommand("git push") {
+                name = "Push changes"
+                env["GITHUB_TOKEN"] = Secrets.GITHUB_TOKEN
             }
             steps += SendRepositoryDispatch("release", Secrets.GITHUB_TOKEN)
         }

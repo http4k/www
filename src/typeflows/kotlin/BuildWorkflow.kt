@@ -5,8 +5,9 @@ import io.typeflows.github.workflow.Workflow
 import io.typeflows.github.workflow.step.RunCommand
 import io.typeflows.github.workflow.step.UseAction
 import io.typeflows.github.workflow.step.marketplace.Checkout
-import io.typeflows.github.workflow.step.marketplace.JavaDistribution
-import io.typeflows.github.workflow.step.marketplace.JavaVersion
+import io.typeflows.github.workflow.step.marketplace.JavaDistribution.Temurin
+import io.typeflows.github.workflow.step.marketplace.JavaVersion.V21
+import io.typeflows.github.workflow.step.marketplace.SetupGradle
 import io.typeflows.github.workflow.step.marketplace.SetupJava
 import io.typeflows.github.workflow.trigger.Branches
 import io.typeflows.github.workflow.trigger.Push
@@ -29,19 +30,26 @@ class BuildWorkflow : Builder<Workflow> {
             steps += Checkout {
                 fetchDepth = 0
             }
-            steps += SetupJava(JavaDistribution.Temurin, JavaVersion.V21, "Setup Java")
-            steps += UseAction("gradle/actions/setup-gradle@v4.4.2", "Setup Gradle")
-            steps += RunCommand("./gradlew check", "Build") {
+            steps += SetupJava(Temurin, V21)
+            steps += SetupGradle {
+                gradleVersion = "9.0.0"
+            }
+            steps += RunCommand("./gradlew check") {
+                name = "Build"
                 timeoutMinutes = 25
             }
-            steps += UseAction("peaceiris/actions-hugo@v3.0.0", "Setup Hugo") {
+            steps += UseAction("peaceiris/actions-hugo@v3.0.0") {
+                name = "Setup Hugo"
                 with += mapOf(
                     "hugo-version" to "0.148.1",
                     "extended" to "true"
                 )
             }
-            steps += RunCommand("hugo --minify -s src/website", "Build Site")
-            steps += UseAction("peaceiris/actions-gh-pages@v4.0.0", "Deploy") {
+            steps += RunCommand("hugo --minify -s src/website") {
+                name = "Build Site"
+            }
+            steps += UseAction("peaceiris/actions-gh-pages@v4.0.0") {
+                name = "Deploy"
                 with += mapOf(
                     "personal_token" to $$"${{ secrets.TOOLBOX_REPO_TOKEN }}",
                     "external_repository" to "http4k/http4k.github.io",

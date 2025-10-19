@@ -38,7 +38,7 @@ flowchart TD
     step1 --> step2
     step3["Step 3: Setup Gradle"]
     style step3 fill:#f8f9fa,stroke:#495057
-    action3["🎬 gradle<br/>actions/setup-gradle"]
+    action3["🎬 gradle<br/>actions/setup-gradle<br/><br/>📝 Inputs:<br/>• gradle-version: 9.0.0"]
     style action3 fill:#e1f5fe,stroke:#0277bd
     step3 -.-> action3
     step2 --> step3
