@@ -15,7 +15,7 @@ val llm = Chat.GitHubModels(ApiKey.of("api-key"), JavaHttpClient())
 val request = ChatRequest(
     Message.User("What's the weather like in London?"),
     params = ModelParams(
-        modelName = AnthropicModels.Claude_Sonnet_3_7,
+        modelName = AnthropicModels.Claude_Sonnet_4_5,
         tools = listOf(
             LLMTool(
                 name = "get_weather",

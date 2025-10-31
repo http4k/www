@@ -8,14 +8,14 @@ import org.http4k.ai.llm.model.ModelParams
 import org.http4k.ai.llm.tools.LLMTool
 import org.http4k.ai.model.ApiKey
 import org.http4k.client.JavaHttpClient
-import org.http4k.connect.anthropic.AnthropicModels
+import org.http4k.connect.anthropic.AnthropicModels.Claude_Sonnet_4_5
 
 val llm = Chat.AnthropicAI(ApiKey.of("api-key"), JavaHttpClient())
 
 val request = ChatRequest(
     Message.User("What's the weather like in London?"),
     params = ModelParams(
-        modelName = AnthropicModels.Claude_Sonnet_3_7,
+        modelName = Claude_Sonnet_4_5,
         tools = listOf(
             LLMTool(
                 name = "get_weather",
