@@ -58,4 +58,16 @@ dependencies {
 
 {{< kotlin file="example.kt" >}}
 
-For the typesafe contract-style routing, refer to [this](/howto/integrate_with_openapi/) recipe instead,
+For the typesafe contract-style routing, refer to [this](/howto/integrate_with_openapi/) recipe instead.
+
+
+### Serving Static Content - Security Note
+
+When using `ResourceLoader.Classpath()` to serve static resources in production, be aware that requests for non-existent files can cause unbounded growth in the JVM's internal ClassLoader cache. This can be exploited to cause memory exhaustion. While it's technically possible to implement workarounds such as pre-loading resources or custom caching strategies, the complexity and potential side effects make these approaches impractical for a general-purpose core library.
+
+**For production deployments**, we recommend:
+- Using `ResourceLoader.Directory()` instead of `Classpath()`
+- Deploying behind a reverse proxy (nginx, Apache, CDN) that handles static assets
+- Implementing rate limiting or a WAF to protect against malicious request patterns
+
+`ResourceLoader.Classpath()` is best suited for development and simple use cases where the application is not directly exposed to untrusted traffic.
