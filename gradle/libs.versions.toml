@@ -18,6 +18,7 @@ opentelemetry-aws-xray-propagator = "1.51.0-alpha"
 opentelemetry-sdk-testing = "1.56.0"
 typeflows = "0.31.0-beta"
 version-catalog-update = "1.0.1"
+redis-jedis = '6.1.0'
 
 [libraries]
 amazon-s3 = { module = "software.amazon.awssdk:s3", version.ref = "amazon-s3" }
@@ -211,6 +212,7 @@ mock4k = { module = "dev.forkhandles:mock4k" }
 moshi-metadata-reflect = { module = "dev.zacsweers.moshix:moshi-metadata-reflect", version.ref = "moshi-metadata-reflect" }
 opentelemetry-aws-xray-propagator = { module = "io.opentelemetry.contrib:opentelemetry-aws-xray-propagator", version.ref = "opentelemetry-aws-xray-propagator" }
 opentelemetry-sdk-testing = { module = "io.opentelemetry:opentelemetry-sdk-testing", version.ref = "opentelemetry-sdk-testing" }
+redis-jedis = { module = "redis.clients:jedis", version.ref = "redis-jedis"}
 typeflows-github = { module = "io.typeflows:typeflows-github", version.ref = "typeflows" }
 typeflows-github-marketplace = { module = "io.typeflows:typeflows-github-marketplace", version.ref = "typeflows" }
 

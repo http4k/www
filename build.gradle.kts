@@ -89,6 +89,7 @@ dependencies {
     testApi(libs.opentelemetry.aws.xray.propagator)
     testApi(libs.graphql.kotlin.schema.generator)
     testApi(libs.aws.lambda.java.events)
+    testApi(libs.redis.jedis)
 }
 
 sourceSets {
