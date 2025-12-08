@@ -7,7 +7,7 @@ tags: [ "http4k Core" ]
 
 This example shows how to both serve an application HttpHandler using an embedded HTTP server and to query it using an HTTP client. All server-backend implementations are launched in an identical manner (in 1LOC) using implementations of the `ServerConfig` interface - and a base implementation of this interface is provided for each server backend.
 
-Alternatively, any http4k application can be mounted into any Servlet container using the `asServlet()` extension method. This is the mechanism used in the Jetty11 implementation. for this, you need to add the `http4k-server-servlet` dependency.
+Alternatively, any http4k application can be mounted into any Servlet container using the `asServlet()` extension method. This is the mechanism used in the Jetty11 implementation. for this, you need to add the `http4k-bridge-servlet` dependency.
 
 ### Gradle setup
 
