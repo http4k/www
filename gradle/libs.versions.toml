@@ -142,6 +142,7 @@ http4k-format-kondor-json = { module = "org.http4k:http4k-format-kondor-json" }
 http4k-format-kotlinx-serialization = { module = "org.http4k:http4k-format-kotlinx-serialization" }
 http4k-format-moshi = { module = "org.http4k:http4k-format-moshi" }
 http4k-format-moshi-yaml = { module = "org.http4k:http4k-format-moshi-yaml" }
+http4k-format-toon = { module = "org.http4k:http4k-format-toon" }
 http4k-format-xml = { module = "org.http4k:http4k-format-xml" }
 http4k-incubator = { module = "org.http4k:http4k-incubator" }
 http4k-multipart = { module = "org.http4k:http4k-multipart" }
@@ -352,6 +353,7 @@ http4k-formats = [
     "http4k-format-kotlinx-serialization",
     "http4k-format-moshi",
     "http4k-format-moshi-yaml",
+    "http4k-format-toon",
     "http4k-format-xml",
 ]
 http4k-ops = [
