@@ -33,9 +33,9 @@ fun main() {
 //    content-type: text/toon; charset=utf-8
 //
 //    subject: hello
-//    from:
+//      from:
 //    value: bob@git.com
-//    to:
+//      to:
 //    value: sue@git.com
 
     // to extract the body from the message apply the lens - this also works with Response
