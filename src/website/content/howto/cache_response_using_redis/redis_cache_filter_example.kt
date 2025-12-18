@@ -1,5 +1,6 @@
 package content.howto.cache_response_using_redis
 
+import io.micrometer.core.instrument.MockClock.clock
 import org.http4k.config.Environment
 import org.http4k.config.EnvironmentKey
 import org.http4k.core.Filter
@@ -25,7 +26,7 @@ import org.http4k.server.Jetty
 import org.http4k.server.asServer
 import redis.clients.jedis.HostAndPort
 import redis.clients.jedis.Protocol
-import redis.clients.jedis.UnifiedJedis
+import redis.clients.jedis.RedisClient
 import redis.clients.jedis.commands.JedisCommands
 import redis.clients.jedis.exceptions.JedisConnectionException
 import java.net.SocketTimeoutException
@@ -110,7 +111,7 @@ fun main() {
 
     val environment = Environment.JVM_PROPERTIES overrides Environment.ENV
 
-    val redis = UnifiedJedis(HostAndPort(redisHost(environment), redisPort(environment)))
+    val redis = RedisClient.create(HostAndPort(redisHost(environment), redisPort(environment)))
 
     val clock = Clock.systemUTC()
 

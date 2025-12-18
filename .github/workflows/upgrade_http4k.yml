@@ -1,5 +1,5 @@
 name: Upgrade http4k
-'on':
+on:
   repository_dispatch:
     types:
     - http4k-release
