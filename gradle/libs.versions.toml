@@ -95,6 +95,8 @@ http4k-connect-amazon-s3 = { module = "org.http4k:http4k-connect-amazon-s3" }
 http4k-connect-amazon-s3-fake = { module = "org.http4k:http4k-connect-amazon-s3-fake" }
 http4k-connect-amazon-secretsmanager = { module = "org.http4k:http4k-connect-amazon-secretsmanager" }
 http4k-connect-amazon-secretsmanager-fake = { module = "org.http4k:http4k-connect-amazon-secretsmanager-fake" }
+http4k-connect-amazon-scheduler = { module = "org.http4k:http4k-connect-amazon-scheduler" }
+http4k-connect-amazon-scheduler-fake = { module = "org.http4k:http4k-connect-amazon-scheduler-fake" }
 http4k-connect-amazon-ses = { module = "org.http4k:http4k-connect-amazon-ses" }
 http4k-connect-amazon-ses-fake = { module = "org.http4k:http4k-connect-amazon-ses-fake" }
 http4k-connect-amazon-sns = { module = "org.http4k:http4k-connect-amazon-sns" }
@@ -299,6 +301,8 @@ http4k-connect-amazon = [
     "http4k-connect-amazon-lambda-fake",
     "http4k-connect-amazon-s3",
     "http4k-connect-amazon-s3-fake",
+    "http4k-connect-amazon-scheduler",
+    "http4k-connect-amazon-scheduler-fake",
     "http4k-connect-amazon-secretsmanager",
     "http4k-connect-amazon-secretsmanager-fake",
     "http4k-connect-amazon-ses",
