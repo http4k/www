@@ -160,7 +160,7 @@
     <div class="license pb-5">
         <div class="row justify-content-center">
             <h2>License</h2>
-            <span style="text-align: center"><b>{{ .Params.title }}</b> is available under the <a href="/commercial-license"><b>http4k Commercial License</b></a>. Free usage is granted for qualifying small businesses (<$1m ARR), non-commercial, non-profit, and research activities.</span>
+            <span style="text-align: center"><b>{{ .Params.title }}</b> is available under the <a href="{{ "/commercial-license" | absURL }}"><b>http4k Commercial License</b></a>. Free usage is granted for qualifying small businesses (<$1m ARR), non-commercial, non-profit, and research activities.</span>
         </div>
     </div>
     <div class="pricing">
@@ -171,7 +171,7 @@
                                   publishable-key="{{ .Params.pricing_table.key }}">
             </stripe-pricing-table>
             <br/>
-            <span style="text-align: center">*All <a href="/pro"><b>http4k Pro</b></a> modules are also <b>automatically included</b> as a part of the http4k Enterprise Edition subscription. Please see <a href="/enterprise"><b>here</b></a> for details.</span>
+            <span style="text-align: center">*All <a href="{{ "/pro" | absURL }}"><b>http4k Pro</b></a> modules are also <b>automatically included</b> as a part of the http4k Enterprise Edition subscription. Please see <a href="{{ "/enterprise" | absURL }}"><b>here</b></a> for details.</span>
         </div>
     </div>
 </div>
