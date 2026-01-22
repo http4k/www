@@ -15,13 +15,12 @@ navigation:
         url: https://http4k.org/ecosystem/http4k/reference/hot_reload/
     -   name: pricing
         title: Pricing
-        url: "#pricing"
     -   name: http4k Pro
         title: http4k Pro
-        url: /pro
+        url: https://http4k.org/pro
     -   name: http4k Enterprise Edition
         title: http4k Enterprise Edition
-        url: /enterprise
+        url: https://http4k.org/enterprise
 features:
     - title: No more</br>stop/starts
       icon: support
