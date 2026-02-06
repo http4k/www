@@ -3,7 +3,7 @@
   img: "/images/support.svg"
   alt: "Enterprise Edition"
   link: "/enterprise/"
-  text: "Ensure production stability"
+  text: "Ensure prod stability"
 - title: "Solve"
   description: "We've designed http4k to be simple to work with, but getting **professional advice** about effectively using it from specialist experts can 🚀 your projects."
   d2escription: "Get the most out of your http4k applications by getting"

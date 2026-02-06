@@ -2,10 +2,10 @@
 <!-- features-->
 <div class="developers-custom">
     <div class="container-fluid">
-        <h2>HTTP as a Function</h2>
+        <h2 class="reveal">HTTP as a Function</h2>
         <div class="row">
-            <div class="col-md-6 text-center">
-                <img class="img-fluid" style="border-radius: 8px" src="/images/server.png"
+            <div class="col-md-6 text-center reveal-left">
+                <img class="img-fluid img-zoom" style="border-radius: 8px" src="/images/server.png"
                      alt="Creating a server with http4k"/>
                 <p>An http4k server is just a regular function that gets invoked with a Request and returns a Response.
                     </br></br>
@@ -13,8 +13,8 @@
                     Undertow, Ktor, Ratpack or Helidon.
                 </p>
             </div>
-            <div class="col-md-6 text-center">
-                <img class="img-fluid" style="border-radius: 8px" src="/images/client.png"
+            <div class="col-md-6 text-center reveal-right">
+                <img class="img-fluid img-zoom" style="border-radius: 8px" src="/images/client.png"
                      alt="Creating a client with http4k"/>
                 <p>An http4k client is just a regular function that you invoke with a Request and receives a Response.
                     </br></br>
@@ -28,10 +28,10 @@
 </div>
 <div class="features">
     <div class="container">
-        <h2>Highlights</h2>
-        <div class="row">
+        <h2 class="reveal">Highlights</h2>
+        <div class="row stagger-children">
             <div class="col-md-6 col-lg-3">
-                <div class="card-custom"><img src="/images/footprint.svg" alt="footprint"/>
+                <div class="card-custom feature-card hover-lift"><img src="/images/footprint.svg" alt="footprint"/>
                     <h4>Tiny <br/> footprint</h4>
                     <div class="dash blue-color">
 
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="card-custom"><img src="/images/extendable.svg" alt="extendable"/>
+                <div class="card-custom feature-card hover-lift"><img src="/images/extendable.svg" alt="extendable"/>
                     <h4>Highly <br/> extendable</h4>
                     <div class="dash purple-color">
 
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="card-custom"><img src="/images/testability.svg" alt="testability"/>
+                <div class="card-custom feature-card hover-lift"><img src="/images/testability.svg" alt="testability"/>
                     <h4>First class<br/> testability</h4>
                     <div class="dash secondary-color">
 
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="card-custom"><img src="/images/supportive.svg" alt="supportive"/>
+                <div class="card-custom feature-card hover-lift"><img src="/images/supportive.svg" alt="supportive"/>
                     <h4>Battle-tested <br/> in the wild</h4>
                     <div class="dash green-color">
 
@@ -91,13 +91,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10">
-            <div class="api">
+            <div class="api reveal-scale">
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-xl-4">
                         <h2>More than 100 integrations</h2>
                         <p>http4k integrates with many tools, libraries and APIs for building Cloud-Native
                             applications.</p>
-                        <a class="btn btn-primary" href="/ecosystem/">Check it out</a>
+                        <a class="btn btn-primary ripple" href="/ecosystem/">Check it out</a>
                     </div>
                     <div class="col-lg-7 offset-xl-1 col-lg-7 offset-xl-1">
                         {{ range .Site.Data.modules }}
@@ -115,7 +115,7 @@
         </div>
         <div>
             <div class="container">
-                <div class="row justify-content-center mt-2">
+                <div class="row justify-content-center mt-2 reveal">
                     <div class="col-md-8 col-lg-8 text-center">
                         <h2>Corporate partners</h2>
                         <p>
