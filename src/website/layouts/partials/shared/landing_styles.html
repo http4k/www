@@ -133,6 +133,16 @@
         text-align: center;
     }
 
+    .features .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .features .row > [class*="col-"] {
+        display: flex;
+        margin-bottom: 24px;
+    }
+
     .card-custom {
         padding: 24px;
         background: #ffffff;
@@ -142,6 +152,7 @@
         position: relative;
         z-index: 1;
         isolation: isolate;
+        height: 100%;
     }
 
     .card-custom img {

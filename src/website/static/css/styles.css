@@ -292,20 +292,27 @@ a {
     transition: all var(--transition-smooth);
     border: 1px solid rgba(0, 0, 0, 0.04);
     height: 100%;
+}
+
+.card-shadow.cta-card {
     display: flex;
     flex-direction: column;
 }
 
-.card-shadow > .container {
+.card-shadow.cta-card > .container {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.card-shadow > .container > .row.px-4 {
+.card-shadow.cta-card > .container > .row.px-4 {
     margin-top: auto;
     padding-top: 1rem;
     padding-bottom: 10px;
+}
+
+.card-shadow.cta-card p {
+    margin-bottom: 0;
 }
 
 .card-shadow:hover {
@@ -371,7 +378,7 @@ a {
 }
 
 .card-shadow p {
-    margin-bottom: 0;
+    margin-bottom: 2rem;
 }
 
 .card-shadow .see-more {
