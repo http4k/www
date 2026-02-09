@@ -11,6 +11,7 @@ import org.http4k.ai.mcp.SamplingResponse
 import org.http4k.ai.mcp.ToolHandler
 import org.http4k.ai.mcp.ToolResponse.Error
 import org.http4k.ai.mcp.ToolResponse.Ok
+import org.http4k.ai.mcp.model.Content
 import org.http4k.ai.mcp.model.Content.Text
 import org.http4k.ai.mcp.model.Message
 import org.http4k.ai.model.MaxTokens
@@ -26,12 +27,11 @@ val roastingToolWithSampling: ToolHandler = { req ->
         .allValues()
         .map { responses: List<SamplingResponse> ->
             // collect the text from each response
-            responses.joinToString("") { msg ->
-                when (val content = msg.content) {
-                    is Text -> content.text
-                    else -> error("")
-                }
-            }
+            responses
+                .filterIsInstance<SamplingResponse.Ok>()
+                .flatMap { it.content }
+                .filterIsInstance<Content.Text>()
+                .joinToString("")
         }
 
     when (allContent) {

@@ -3,6 +3,7 @@ package content.ecosystem.ai.reference.mcp
 import dev.forkhandles.result4k.map
 import dev.forkhandles.result4k.recover
 import org.http4k.ai.mcp.ElicitationRequest
+import org.http4k.ai.mcp.ElicitationResponse
 import org.http4k.ai.mcp.ToolHandler
 import org.http4k.ai.mcp.ToolResponse.Error
 import org.http4k.ai.mcp.ToolResponse.Ok
@@ -19,14 +20,18 @@ val userAge =
     Elicitation.int().required("age", "How old are you?", "The user's age", Elicitation.Metadata.integer.Min(18))
 
 val greetingToolWithElicitation: ToolHandler = { req ->
-    val request = ElicitationRequest("Please fill in your details", userName, userAge)
+    val request = ElicitationRequest.Form("Please fill in your details", userName, userAge)
 
     // at this point, the client will render
     req.client.elicit(request)
         .map {
-            when (it.action) {
-                accept -> Ok("hello ${(userAge(it))}, when you are twice your age you will be ${2 * userAge(it)}!")
-                else -> Ok("hello stranger!")
+            when (it) {
+                is ElicitationResponse.Ok -> when (it.action) {
+                    accept -> Ok("hello ${(userAge(it))}, when you are twice your age you will be ${2 * userAge(it)}!")
+                    else -> Ok("hello stranger!")
+                }
+
+                is ElicitationResponse.Task -> error("not supported in this example")
             }
         }
         .recover { Error(-1, "error: $it") }

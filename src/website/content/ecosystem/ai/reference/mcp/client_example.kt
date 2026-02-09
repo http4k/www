@@ -21,6 +21,7 @@ import org.http4k.ai.model.Role
 import org.http4k.ai.model.ToolName
 import org.http4k.client.JavaHttpClient
 import org.http4k.core.BodyMode
+import org.http4k.core.BodyMode.*
 import org.http4k.core.Uri
 import org.http4k.lens.int
 import org.http4k.lens.with
@@ -30,7 +31,7 @@ fun main() {
     val client = HttpStreamingMcpClient(
         McpEntity.of("http4k MCP Client"), Version.of("1.0.0"),
         Uri.of("http://localhost:3001/mcp"),
-        JavaHttpClient(responseBodyMode = BodyMode.Stream)
+        JavaHttpClient(responseBodyMode = Stream)
     )
 
     println(
@@ -91,12 +92,12 @@ fun main() {
 
     client.sampling().onSampled {
         println(">>> Sampled: $it")
-        sequenceOf(SamplingResponse(ModelName.of("gpt-4"), Role.Assistant, Text("Sampled: $it")))
+        sequenceOf(SamplingResponse.Ok(ModelName.of("gpt-4"), Role.Assistant, listOf(Text("Sampled: $it"))))
     }
 
     client.elicitations().onElicitation {
         println(">>> Elicitation: $it")
-        ElicitationResponse(accept).with(userName of "David", userAge of 30)
+        ElicitationResponse.Ok(accept).with(userName of "David", userAge of 30)
     }
 
     client.close()
