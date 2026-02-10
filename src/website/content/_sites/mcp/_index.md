@@ -26,23 +26,27 @@ features:
     - title: Simple</br>Integration
       icon: supportive
       colour: pink
-      description: Build **secure MCP-compliant servers** using familiar http4k patterns. Seamlessly connect AI models with your existing systems and data sources.
+      description: Build **secure MCP-compliant servers** using familiar http4k patterns with full support for **MCP 2025-11-25 + Draft** protocols. Seamlessly connect AI models with your existing systems and data sources.
     - title: Type-safe</br>Tooling
       icon: support
       colour: indigo
       description: Create robust AI integrations using http4k's powerful Lens system for **type-safe tool definitions** and capability bindings with compile-time safety.
-    - title: Flexible</br>Transport
-      icon: footprint
-      colour: violet
-      description: Support for both stateful and stateless **HTTP Streaming** protocols, SSE, Websocket and Standard IO transports, enabling seamless integration with desktop and web-based AI applications.
-    - title: Complete</br>Capabilities
-      icon: testability
-      colour: blue
-      description: Full support for **Official** and **Draft** MCP capabilities including structured Tools Output, Protected Resource OAuth and Elicitations, with both local and cloud-based model support.
     - title: Testable</br>Design
       icon: testability
       colour: green
-      description: Build **highly testable** MCP services with pure functions and no side effects. Create predictable, testable, and composable AI capabilities that can be verified without running a server.
+      description: Build **highly testable** MCP services with **pure functions** and no side effects. Test Tools, Resources, and MCP Apps without running a server—predictable, testable, and **composable** using reusable capability modules.
+    - title: Complete</br>Capabilities
+      icon: footprint
+      colour: blue
+      description: Full support for **Resources** (filesystem, database, web content), **Tasks** (long-running operations with progress), **Sampling** (LLM completions), **Elicitation** (structured data collection), and more.
+    - title: MCP</br>Apps
+      icon: supportive
+      colour: violet
+      description: Build **server-rendered UI components** with the **MCP Apps 2026-01-26** protocol. Create interactive dashboards, forms, and visualizations that display directly in Claude Desktop and other MCP clients—all fully **testable**.
+    - title: Flexible</br>Transport
+      icon: footprint
+      colour: cyan
+      description: Support for **HTTP Streaming**, SSE, WebSocket, JSON-RPC, and Standard IO transports. Seamless integration with desktop and web-based AI applications using stateful or stateless protocols.
     - title: Serverless</br>Ready
       icon: testability
       colour: orange
@@ -51,20 +55,16 @@ features:
       icon: supportive
       colour: red
       description: Build your own **AI agents** with our pure Kotlin MCP protocol clients. Integrate MCP capabilities directly into your applications for custom agent development and advanced AI workflows.
-    - title: Desktop</br>Integration
-      icon: footprint
-      colour: yellow
-      description: Connect any MCP server to Claude and other AI assistants using the **http4k-mcp-desktop** client, with support for all transport modes and authentication types.
 how_tos:
     - section: Getting started with MCP in http4k
       steps:
           - description: Step 1 - Define **typesafe** MCP tools and capabilities using **simple**, **testable** functions
             image: mcp-tool.png
             alt: Defining MCP tools
-          - description: Step 2 - Create your MCP server by **composing capabilities** and **security** into a **lightweight** server
+          - description: Step 2 - Integrate MCP by **composing capabilities**, with **Capability Packs**, add **security** into a **lightweight** server
             image: mcp-server.png
             alt: Creating an MCP server
-          - description: Step 3 - Integrate your AI-powered app with **Claude Desktop** as a server or native binary
+          - description: Step 3 - Simply your AI-powered MCP Server or App  with **Claude Desktop** as a server or native binary
             image: mcp-claude.png
             alt: Using Claude with an MCP server
           - description: Step 4 - Access your MCP server from other agents using our **pure Kotlin MCP Client**
