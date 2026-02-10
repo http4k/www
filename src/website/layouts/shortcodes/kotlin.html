@@ -2,7 +2,13 @@
 {{ $filePath := printf "%s/%s" .Page.Path $file }}
 
 {{ with readFile $filePath }}
-{{ highlight . "kotlin" }}
+<div class="code-example">
+    <div class="code-example-header">
+        <span class="code-example-lang">Kotlin</span>
+        <span class="code-example-file">{{ $file }}</span>
+    </div>
+    {{ highlight . "kotlin" }}
+</div>
 {{ else }}
 {{ errorf "File not found: %s" $filePath }}
 {{ end }}

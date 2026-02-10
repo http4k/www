@@ -1186,3 +1186,208 @@ tr:hover {
         transform: none;
     }
 }
+
+/* ========================================
+   Universal Content Enhancements
+   ======================================== */
+
+/* Improved code blocks across all pages */
+.page-content .highlight {
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    margin: 1.5rem 0;
+    overflow: hidden;
+    transition: box-shadow var(--transition-smooth);
+}
+
+.page-content .highlight:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.page-content .highlight pre {
+    margin: 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+/* Better inline code styling */
+.page-content code {
+    background-color: rgba(97, 192, 255, 0.1);
+    color: #1a8ad4;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Don't style code inside highlighted blocks */
+.page-content .highlight code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+    font-weight: normal;
+}
+
+/* Enhanced tables site-wide */
+.page-content table {
+    margin: 2rem 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    background-color: white;
+}
+
+.page-content table th {
+    background: linear-gradient(135deg, #61C0FF 0%, #2096F3 100%);
+    color: white;
+    padding: 0.875rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    border: none;
+}
+
+.page-content table td {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.page-content table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.page-content table tbody tr:hover td {
+    background-color: rgba(97, 192, 255, 0.05);
+}
+
+/* Better link styling with hover effects */
+.page-content a:not(.btn):not(.card-shadow a) {
+    color: #0a53be;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all var(--transition-fast);
+}
+
+.page-content a:not(.btn):not(.card-shadow a):hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color-light);
+}
+
+/* Better heading spacing and visual hierarchy */
+.page-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    color: var(--primary-color-dark);
+    font-weight: 600;
+}
+
+.page-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.page-content h4 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.875rem;
+    color: #444;
+    font-weight: 600;
+}
+
+/* Improved paragraph spacing */
+.page-content p {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+}
+
+/* Better list styling */
+.page-content ul,
+.page-content ol {
+    margin: 1.25rem 0;
+    padding-left: 1.75rem;
+}
+
+.page-content ul li,
+.page-content ol li {
+    margin: 0.5rem 0;
+    line-height: 1.7;
+}
+
+/* Subtle image improvements */
+.page-content img {
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Blockquote styling */
+.page-content blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    background-color: rgba(97, 192, 255, 0.05);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.page-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Horizontal rules */
+.page-content hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color-light), transparent);
+    margin: 2rem 0;
+}
+
+/* Code example wrapper (for shortcodes like {{< kotlin >}}) */
+.code-example {
+    margin: 1.5rem 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: box-shadow var(--transition-smooth);
+}
+
+.code-example:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.code-example-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 1.25rem;
+    background: linear-gradient(135deg, rgba(97, 192, 255, 0.08) 0%, rgba(32, 150, 243, 0.08) 100%);
+    border-bottom: 1px solid rgba(97, 192, 255, 0.15);
+}
+
+.code-example-lang {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.625rem;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.code-example-file {
+    font-size: 0.8rem;
+    color: #666;
+    font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.code-example .highlight {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
