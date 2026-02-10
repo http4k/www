@@ -26,6 +26,10 @@ dependencies {
 }
 ```
 
+### Try it out!
+
+Want to see http4k MCP in action? Visit the [http4k Toolbox](https://toolbox.http4k.org) where you can download and install a fully working MCP app that integrates directly with Claude Desktop and other MCP clients.
+
 ## About
 
 The [Model Context Protocol](https://modelcontextprotocol.info/) is an open standard created by Anthropic that defines
@@ -66,6 +70,13 @@ The MCP capabilities include:
 - **Sampling:** An MCP server can request an LLN completion for text or binary content a connected Client.
 - **Elicitation:** The server can request additional information from the user by rendering dynamic forms based on a supplied schema.
 - **Tasks:** The server can create and manage long-running asynchronous operations with progress tracking.
+
+### Supported Protocol Versions
+
+| Protocol | Version            | Description |
+|----------|--------------------|-------------|
+| **MCP** | 2025-11-25 + Draft | Core protocol with Tasks, Elicitation, and Sampling support |
+| **MCP Apps** | 2026-01-26         | Server-rendered UI components for Claude Desktop and other MCP clients |
 
 ## http4k ❤️ Model Context Protocol
 
