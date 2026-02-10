@@ -10,14 +10,17 @@ import org.http4k.routing.mcpHttpNonStreaming
 import org.http4k.server.SunHttp
 import org.http4k.server.asServer
 
-fun main() {
-    // this protocol version does not support SSE connections.
-    val mcpServer = mcpHttpNonStreaming(
-        ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0"), ToolsChanged),
-        NoMcpSecurity,
-        toolDefinitionFor("David") bind diaryToolHandler,
-    )
+object ServerNonstreamingExample {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        // this protocol version does not support SSE connections.
+        val mcpServer = mcpHttpNonStreaming(
+            ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0"), ToolsChanged),
+            NoMcpSecurity,
+            toolDefinitionFor("David") bind diaryToolHandler,
+        )
 
-    // simply start it up on any server you like!
-    mcpServer.asServer(SunHttp(3002)).start()
+        // simply start it up on any server you like!
+        mcpServer.asServer(SunHttp(3002)).start()
+    }
 }

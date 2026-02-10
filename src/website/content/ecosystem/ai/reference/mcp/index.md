@@ -18,8 +18,11 @@ dependencies {
     // for general MCP server development
     implementation("org.http4k.pro:http4k-ai-mcp-sdk")
 
-    // if you just want to connect to an MCP server
+    // if you want to connect to an MCP server
     implementation("org.http4k.pro:http4k-ai-mcp-client")
+
+    // if you want to test MCP servers or MCP Apps
+    implementation("org.http4k.pro:http4k-ai-mcp-testing")
 }
 ```
 
@@ -61,6 +64,8 @@ The MCP capabilities include:
 - **Roots:** the client supplies a list of file roots to the server which can be used to resolve file paths.
 - **Completions:** The server provides auto-completion of options for a particular Prompt or Resource.
 - **Sampling:** An MCP server can request an LLN completion for text or binary content a connected Client.
+- **Elicitation:** The server can request additional information from the user by rendering dynamic forms based on a supplied schema.
+- **Tasks:** The server can create and manage long-running asynchronous operations with progress tracking.
 
 ## http4k ❤️ Model Context Protocol
 
@@ -111,11 +116,42 @@ use-case).
 
 {{< kotlin file="auto_tool_example.kt" >}}
 
+#### Tool Argument Types Reference
+
+The `Tool.Arg` object provides type-safe builders for all common argument types:
+
+| Type | Builder | Description |
+|------|---------|-------------|
+| `String` | `Tool.Arg.string()` | Basic string |
+| `String` | `Tool.Arg.nonEmptyString()` | Non-empty string |
+| `String` | `Tool.Arg.nonBlankString()` | Non-blank string |
+| `Boolean` | `Tool.Arg.boolean()` | Boolean |
+| `Int` | `Tool.Arg.int()` | Integer |
+| `Long` | `Tool.Arg.long()` | Long integer |
+| `Double` | `Tool.Arg.double()` | Floating point |
+| `Float` | `Tool.Arg.float()` | Float |
+| `UUID` | `Tool.Arg.uuid()` | UUID |
+| `URI` | `Tool.Arg.uri()` | URI |
+| `Instant` | `Tool.Arg.instant()` | Timestamp |
+| `Duration` | `Tool.Arg.duration()` | Duration |
+| `Period` | `Tool.Arg.period()` | Period |
+| `LocalDate` | `Tool.Arg.localDate()` | Date (ISO format) |
+| `LocalTime` | `Tool.Arg.localTime()` | Time |
+| `ZonedDateTime` | `Tool.Arg.zonedDateTime()` | Zoned datetime |
+| `OffsetDateTime` | `Tool.Arg.offsetDateTime()` | Offset datetime |
+| `YearMonth` | `Tool.Arg.yearMonth()` | Year-month |
+| `ZoneId` | `Tool.Arg.zoneId()` | Timezone |
+| `Locale` | `Tool.Arg.locale()` | Locale |
+| `Enum<T>` | `Tool.Arg.enum<T>()` | Enum values |
+| `Value<T>` | `Tool.Arg.value(factory)` | values4k types |
+| `Regex` | `Tool.Arg.regexObject()` | Regex pattern |
+| `Base64` | `Tool.Arg.base64()` | Base64 encoded |
+
 ### Server Capability: Completions
 
 Completions give the server to standard autocomplete abilities based on partial input from a client. The Completion
 capability is modelled as a
-function `typealias CompletionHandler = (CompletionRequest) -> CompletionResponse`, filtered with a `CompletionFilter`,,
+function `typealias CompletionHandler = (CompletionRequest) -> CompletionResponse`, filtered with a `CompletionFilter`,
 and can be bound to a prompt definition which describes it's arguments
 using the http4k Lens system.
 
@@ -124,7 +160,7 @@ using the http4k Lens system.
 ### Server Capability: Prompts
 
 Prompts allow the server to generate a prompt based on the client's inputs. The Prompt capability is modelled as a
-function `typealias PromptHandler = (PromptRequest) -> PromptResponse`, filtered with a `PromptFilter`,, and can be
+function `typealias PromptHandler = (PromptRequest) -> PromptResponse`, filtered with a `PromptFilter`, and can be
 bound to a prompt definition which describes it's arguments
 using the http4k Lens system.
 
@@ -154,6 +190,18 @@ filtered with a `ResourceFilter`. Resources can be static or templated to provid
 interact with the resource.
 
 {{< kotlin file="static_resource_example.kt" >}}
+
+#### Templated Resources
+
+Resources can also be templated using RFC 6570 URI templates, allowing clients to access resources matching a pattern:
+
+{{< kotlin file="templated_resource_example.kt" >}}
+
+#### Directory Resources
+
+For file-based resources, http4k provides `DirectoryResources` which automatically exposes a directory as browsable resources:
+
+{{< kotlin file="directory_resources_example.kt" >}}
 
 ### Server Capability: Reporting Progress
 
@@ -189,6 +237,24 @@ This is perfect for organizing related tools, resources, or prompts that logical
 a module or library.
 
 {{< kotlin file="capability_pack_example.kt" >}}
+
+### MCP Apps: Server-Rendered UI
+
+MCP Apps combine Tool and Resource capabilities to enable server-rendered UI components. When an LLM calls the tool, the client displays the HTML content from the associated resource. This is useful for interactive dashboards, forms, and visualisations.
+
+{{< kotlin file="mcp_app_example.kt" >}}
+
+MCP Apps support metadata for security and permissions:
+
+- **Content Security Policy (CSP)** - Control allowed domains for connections, resources, and frames
+- **Permissions** - Request camera, microphone, geolocation, or clipboard access
+- **Visibility** - Control whether the app is visible to the model, the app UI, or both
+
+### MCP Apps Host
+
+The `McpAppsHost` provides a local HTTP server for testing and running multiple MCP apps. It creates endpoints for listing apps, reading resources, and calling tools.
+
+{{< kotlin file="mcp_apps_host_example.kt" >}}
 
 ### MCP Servers
 
@@ -238,6 +304,18 @@ protocol in non-streaming mode. To activate this simply bind them into the non-s
 
 {{< kotlin file="serverless_example.kt" >}}
 
+### Alternative Transports
+
+In addition to HTTP streaming, http4k MCP supports WebSocket and JSON-RPC transports:
+
+#### WebSocket Server
+
+{{< kotlin file="websocket_server_example.kt" >}}
+
+#### JSON-RPC Server
+
+{{< kotlin file="jsonrpc_server_example.kt" >}}
+
 ### MCP Client
 
 http4k provides client classes to connect to your MCP servers via HTTP, SSE, JSONRPC or Websockets. The clients take
@@ -246,6 +324,16 @@ initial MCP handshake and provide a simple API to send and receive messages to t
 notifications with an MCP server.
 
 {{< kotlin file="client_example.kt" >}}
+
+### Testing MCP Servers
+
+http4k provides an in-memory test client for testing MCP servers without network overhead. Use the `testMcpClient()` extension on any `PolyHandler` to create a test client.
+
+{{< kotlin file="testing_example.kt" >}}
+
+For more control, use `McpClientFactory` which provides two modes:
+- `McpClientFactory.Test(polyHandler)` - In-memory client for unit tests
+- `McpClientFactory.Http(serverUri)` - HTTP client for integration tests
 
 # [http4k-mcp-desktop](https://github.com/http4k/mcp-desktop)
 
