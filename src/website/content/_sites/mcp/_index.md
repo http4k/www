@@ -38,11 +38,11 @@ features:
     - title: Complete</br>Capabilities
       icon: footprint
       colour: blue
-      description: Full support for **Resources** (filesystem, database, web content), **Tasks** (long-running operations with progress), **Sampling** (LLM completions), **Elicitation** (structured data collection), and more.
+      description: Full support for **Prompts**, **Resources** (filesystem, database, web content), **Tasks** (long-running operations with progress), **Sampling** (LLM completions), **Elicitation** (dynamic UI data collection), and more.
     - title: MCP</br>Apps
       icon: supportive
       colour: violet
-      description: Build **server-rendered UI components** with the **MCP Apps 2026-01-26** protocol. Create interactive dashboards, forms, and visualizations that display directly in Claude Desktop and other MCP clients—all fully **testable**.
+      description: Build **server-rendered UI components** with the **MCP Apps 2026-01-26** protocol. Create interactive dashboards, forms, and visualizations that display directly in Claude Desktop and other MCP clients. All fully **testable**.
     - title: Flexible</br>Transport
       icon: footprint
       colour: cyan
@@ -70,6 +70,7 @@ how_tos:
           - description: Step 4 - Access your MCP server from other agents using our **pure Kotlin MCP Client**
             image: mcp-client.png
             alt: Inter-agent communication
+      cta: Ready to build? Start experimenting with MCP Servers and Apps at the [http4k toolbox](https://toolbox.http4k.org)
 launch_announcement: https://http4k.org/news/http4k_mcp_has_landed/
 pricing_table:
     id: prctbl_1R7YKvG47sNzv4yXIn3IgMCA

@@ -142,6 +142,22 @@
                 {{end}}
                 {{ end }}
             </div>
+            {{ if .cta }}
+            <div class="row pt-5 pb-3 justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="card-custom" style="padding: 40px;">
+                        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                            <div class="pb-3 pb-md-0 pr-md-3 flex-shrink-0">
+                                <img src="/news/http4k_mcp_has_landed/http4k-mcp.png" alt="http4k MCP logo" style="height: 60px; display: block; margin: 0;"/>
+                            </div>
+                            <div>
+                                <p style="font-size: 1.2em; margin: 0; line-height: 1.5; text-align: center;">{{ .cta | markdownify }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
         </div>
     </div>
     {{ end }}
