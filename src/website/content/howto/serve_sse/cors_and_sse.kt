@@ -8,7 +8,7 @@ import org.http4k.filter.AnyOf
 import org.http4k.filter.CorsAndRebindProtection
 import org.http4k.filter.CorsPolicy
 import org.http4k.filter.OriginPolicy
-import org.http4k.filter.ServerFilters
+import org.http4k.filter.PolyFilters
 import org.http4k.routing.poly
 import org.http4k.routing.sse
 import org.http4k.routing.sse.bind
@@ -31,7 +31,7 @@ fun main() {
         listOf("allowed-header"), listOf(GET, POST, DELETE)
     )
 
-    ServerFilters.CorsAndRebindProtection(corsPolicy)
+    PolyFilters.CorsAndRebindProtection(corsPolicy)
         .then(sseServer)
         .asServer(Helidon(3002)).start()
 }

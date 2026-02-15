@@ -36,6 +36,6 @@ val roastingToolWithSampling: ToolHandler = { req ->
 
     when (allContent) {
         is Success<String> -> Ok(listOf(Text(allContent.value)))
-        is Failure<McpError> -> Error(-1, "Failure sampling: ${allContent.reason}")
+        is Failure<McpError> -> Error("Failure sampling: ${allContent.reason}")
     }
 }
