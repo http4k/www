@@ -1134,16 +1134,28 @@ body {
 }
 
 /* Code Block Copy Button Animation */
+@keyframes copy-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
 .copy-button {
-    transition: all var(--transition-fast);
+    transition: transform var(--transition-fast);
+}
+
+.highlight:hover .copy-button {
+    animation: copy-pulse 0.8s ease-in-out 2;
+    animation-fill-mode: forwards;
 }
 
 .copy-button:hover {
     transform: scale(1.1);
+    animation: none !important;
 }
 
 .copy-button:active {
     transform: scale(0.95);
+    animation: none !important;
 }
 
 /* Accordion Smooth Open */

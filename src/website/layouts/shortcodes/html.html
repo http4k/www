@@ -1,0 +1,14 @@
+{{ $file := .Get "file" }}
+{{ $filePath := printf "%s/%s" .Page.Path $file }}
+
+{{ with readFile $filePath }}
+<div class="code-example">
+    <div class="code-example-header">
+        <span class="code-example-lang">HTML</span>
+        <span class="code-example-file">{{ $file }}</span>
+    </div>
+    {{ highlight . "html" }}
+</div>
+{{ else }}
+{{ errorf "File not found: %s" $filePath }}
+{{ end }}

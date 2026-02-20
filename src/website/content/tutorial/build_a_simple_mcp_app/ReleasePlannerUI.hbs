@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GitHub Release Planner</title>
+    <link href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-3">
+<h2>GitHub Release Planner</h2>
+
+<div class="mb-3">
+    <label for="repo" class="form-label">Repository</label>
+    <div class="input-group">
+        <input type="text" class="form-control" id="repo" value="http4k/http4k">
+        <button class="btn btn-outline-primary" id="fetchBtn">Fetch Issues</button>
+        <button class="btn btn-primary" id="saveBtn">Save Selection</button>
+    </div>
+</div>
+
+<div id="loading" class="d-none text-muted mb-3">Loading issues...</div>
+
+<div id="issuesList" class="d-none mb-3">
+    <label class="form-label">Select issues for this release:</label>
+    <select multiple id="issues" class="form-select" size="12"></select>
+</div>
+
+<div id="status" class="mt-3 d-none"></div>
+
+<script type="module">
+    import {App} from 'https://unpkg.com/@modelcontextprotocol/ext-apps@1.0.1/dist/src/app-with-deps.js';
+
+    const app = new App({name: 'GitHub Release Planner', version: '1.0.0'});
+    const appReady = app.connect();
+
+    const $ = id => document.getElementById(id);
+    const show = (...ids) => ids.forEach(id => $(id).classList.remove('d-none'));
+    const hide = (...ids) => ids.forEach(id => $(id).classList.add('d-none'));
+
+    function showStatus(message, type) {
+        const s = $('status');
+        s.className = 'mt-3 alert alert-' + type;
+        s.textContent = message;
+        show('status');
+    }
+
+    $('fetchBtn').addEventListener('click', async () => {
+        const repo = $('repo').value.trim();
+        if (!repo) return;
+
+        show('loading');
+        hide('issuesList', 'status');
+        $('issues').innerHTML = '';
+
+        try {
+            const res = await fetch('https://api.github.com/repos/' + repo + '/issues?state=open&per_page=30');
+            if (!res.ok) throw new Error('GitHub API returned ' + res.status);
+            const items = await res.json();
+
+            items.forEach(item => {
+                const opt = document.createElement('option');
+                opt.value = item.number;
+                opt.textContent = (item.pull_request ? 'PR' : 'Issue') + ' #' + item.number + ' - ' + item.title;
+                $('issues').appendChild(opt);
+            });
+
+            hide('loading');
+            show('issuesList');
+            if (items.length === 0) showStatus('No open issues found.', 'info');
+        } catch (e) {
+            hide('loading');
+            showStatus('Error fetching issues: ' + e.message, 'danger');
+        }
+    });
+
+    $('saveBtn').addEventListener('click', async () => {
+        const repo = $('repo').value.trim();
+        const issues = [...$('issues').selectedOptions].map(o => parseInt(o.value));
+
+        if (issues.length === 0) return showStatus('Please select at least one issue.', 'warning');
+
+        try {
+            await appReady;
+            const result = await app.callServerTool({
+                name: 'save_release_selection',
+                arguments: {repo, issues}
+            });
+            showStatus(result.content[0].text, 'success');
+        } catch (e) {
+            showStatus('Error saving selection: ' + e.message, 'danger');
+        }
+    });
+</script>
+</body>
+</html>
