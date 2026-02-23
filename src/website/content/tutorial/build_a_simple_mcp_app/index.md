@@ -200,6 +200,27 @@ This uses the `http4k-ai-mcp-testing` dependency we added in step 1.
 Run this and open `http://localhost:10000` in your browser. You will see the Release Planner UI rendered in the test host. You can fetch issues, select them,
 and save — all going through the full MCP protocol stack.
 
+# 11. Connect to Claude Desktop
+
+Claude Desktop connects to remote MCP servers via **Settings > Connectors**. Since it requires HTTPS, the simplest way to expose your local server is with a [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/):
+
+```bash
+npx cloudflared tunnel --url http://localhost:9000
+```
+
+This prints a public URL like `https://xxx-yyy-zzz.trycloudflare.com`.
+
+Then:
+
+1. Start the MCP server (`GithubReleasePlannerMain.kt`)
+2. Start the Cloudflare tunnel
+3. In Claude Desktop, go to **Settings > Connectors** and add a new connector with the tunnel URL (appending `/mcp` — e.g. `https://xxx-yyy-zzz.trycloudflare.com/mcp`)
+4. Ask Claude to show the release planner — it will call the `show_release_planner` tool and render the UI inline
+5. Use the UI to fetch issues and save a selection (using the `save_release_selection` tool)
+6. Outside of the MCP App UI in the chat, ask Claude about the selection — it will call `get_release_selection` to read and return the selection. This proves how state can be written and read from the MCP server.
+
+> **Note:** The tunnel URL changes every time you restart `cloudflared`, so you'll need to update the connector each time.
+
 # Recap
 
 | Piece        | File                          | Role                                                        |
