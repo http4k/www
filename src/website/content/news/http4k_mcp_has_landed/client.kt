@@ -10,9 +10,9 @@ import org.http4k.ai.mcp.protocol.Version
 
 // Create an MCP client
 val client = HttpStreamingMcpClient(
+    Uri.of("http://localhost:3000/sse"),
     McpEntity.of("My Client"),
     Version.of("1.0.0"),
-    Uri.of("http://localhost:3000/sse"),
 ).apply { start() }
 
 // Call tools programmatically

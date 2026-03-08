@@ -31,8 +31,8 @@ object ClientExample {
     @JvmStatic
     fun main(args: Array<String>) {
         val client = HttpStreamingMcpClient(
-            McpEntity.of("http4k MCP Client"), Version.of("1.0.0"),
             Uri.of("http://localhost:3001/mcp"),
+            McpEntity.of("http4k MCP Client"), Version.of("1.0.0"),
             JavaHttpClient(responseBodyMode = Stream)
         )
 

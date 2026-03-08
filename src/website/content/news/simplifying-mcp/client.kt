@@ -19,8 +19,9 @@ val autoDiscoveryHttp = ClientFilters.DiscoveredMcpOAuth(clientCredentials)
     .then(JavaHttpClient())
 
 // Create an MCP client
-val client = HttpStreamingMcpClient(McpEntity.of("My Client"), Version.of("1.0.0"),
+val client = HttpStreamingMcpClient(
     Uri.of("http://localhost:3000/mcp"),
+    McpEntity.of("My Client"), Version.of("1.0.0"),
     autoDiscoveryHttp
 ).apply { start() }
 

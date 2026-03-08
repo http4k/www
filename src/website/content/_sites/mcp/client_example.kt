@@ -10,8 +10,8 @@ import org.http4k.ai.mcp.protocol.Version
 fun main() {
 
     val mcpClient = HttpStreamingMcpClient(
-        McpEntity.of("http4k mcp client"), Version.of("1.0.0"),
         Uri.of("http://localhost:3001/mcp"),
+        McpEntity.of("http4k mcp client"), Version.of("1.0.0"),
     )
 
     mcpClient.start()
