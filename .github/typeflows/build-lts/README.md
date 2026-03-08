@@ -56,7 +56,7 @@ flowchart TD
     step5 --> step6
     step7["Step 7: Deploy"]
     style step7 fill:#f8f9fa,stroke:#495057
-    action7["🎬 peaceiris<br/>actions-gh-pages<br/><br/>📝 Inputs:<br/>• personal_token: ${{ secrets.TOOLBOX_REPO_TOKEN...<br/>• external_repository: http4k/lts.http4k.org<br/>• publish_branch: master<br/>• publish_dir: build/www<br/>• cname: lts.http4k.org"]
+    action7["🎬 peaceiris<br/>actions-gh-pages<br/><br/>📝 Inputs:<br/>• personal_token: ${{ secrets.TOOLBOX_REPO_TOKEN...<br/>• external_repository: http4k/lts.http4k.org<br/>• publish_branch: master<br/>• publish_dir: build/www<br/>• cname: lts.http4k.org<br/>• force_orphan: true"]
     style action7 fill:#e1f5fe,stroke:#0277bd
     step7 -.-> action7
     step6 --> step7

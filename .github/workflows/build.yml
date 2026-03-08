@@ -45,4 +45,4 @@ jobs:
         publish_branch: master
         publish_dir: build/www
         cname: www.http4k.org
-        force_orphan: true
+        force_orphan: 'true'

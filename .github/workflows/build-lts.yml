@@ -46,3 +46,4 @@ jobs:
         publish_branch: master
         publish_dir: build/www
         cname: lts.http4k.org
+        force_orphan: 'true'

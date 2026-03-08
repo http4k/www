@@ -55,7 +55,8 @@ class BuildWorkflow : Builder<Workflow> {
                     "external_repository" to "http4k/http4k.github.io",
                     "publish_branch" to "master",
                     "publish_dir" to "build/www",
-                    "cname" to "www.http4k.org"
+                    "cname" to "www.http4k.org",
+                    "force_orphan" to "true"
                 )
             }
         }

@@ -56,7 +56,8 @@ class BuildLtsWorkflow : Builder<Workflow> {
                     "external_repository" to "http4k/lts.http4k.org",
                     "publish_branch" to "master",
                     "publish_dir" to "build/www",
-                    "cname" to "lts.http4k.org"
+                    "cname" to "lts.http4k.org",
+                    "force_orphan" to "true"
                 )
             }
         }
