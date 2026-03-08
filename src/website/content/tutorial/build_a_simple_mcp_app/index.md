@@ -4,8 +4,8 @@ description: A step-by-step guide to building an interactive MCP App with http4k
 weight: 5
 ---
 
-This tutorial walks through building **GitHub Release Planner** — an MCP App that displays an interactive UI inside an MCP host (like Claude Desktop), fetches
-issues from the GitHub API, and lets users select issues for a release.
+This tutorial walks through building **Repo Health Checker** — an MCP App that displays an interactive UI inside an MCP host (like Claude Desktop), fetches
+health metrics from the GitHub API, and lets users select metrics and a focus mode for analysis.
 
 We'll use the [http4k MCP SDK](https://mcp.http4k.org) — a Kotlin-first MCP implementation that stays up to date with the latest protocol spec, embraces functional simplicity over annotation magic, and is totally testable from top to bottom. It also has first-class support for MCP Apps, which most other MCP SDKs don't offer yet.
 
@@ -13,6 +13,7 @@ By the end you will have:
 
 - A Handlebars-based UI that runs inside the MCP host
 - Two MCP tools — one visible only to the UI, one visible only to the model
+- An MCP prompt that provides structured analysis instructions to the model
 - A streaming MCP server wired together by composing MCP Capabilities
 - A local test harness for development
 
@@ -83,8 +84,7 @@ dependencies {
     implementation("org.http4k:http4k-ai-mcp-sdk")
     implementation("org.http4k:http4k-server-jetty")
     implementation("org.http4k:http4k-template-handlebars")
-
-    testImplementation("org.http4k:http4k-ai-mcp-testing")
+    implementation("org.http4k:http4k-ai-mcp-testing")
 }
 ```
 
@@ -92,50 +92,57 @@ You can delete all of the pre-existing content in the source directories.
 
 # 2. Domain model
 
-Start with a simple data class to hold the user's selection, and a `ViewModel` for the Handlebars template:
+Start with an enum for the analysis focus mode, a data class to hold the user's selection, and a `ViewModel` for the Handlebars template:
 
 {{< kotlin file="model.kt" >}}
 
-`ViewModel` is an http4k interface that Handlebars uses to resolve the template by class name — `ReleasePlannerUI` maps to `ReleasePlannerUI.hbs`.
+- `AnalysisFocus` defines three focus modes — contributor, dependency, and benchmarking — which weight the health analysis differently.
+- `RepoHealthSelection` captures a repo name, a map of selected metric names to their values, and the chosen focus mode.
+- `HealthChecker` is a `ViewModel` — the http4k interface that Handlebars uses to resolve the template by class name (`HealthChecker` maps to `HealthChecker.hbs`).
 
 # 3. Save tool (UI → server)
 
-This tool is called **from the UI** when the user clicks "Save Selection". Because it should only be callable by the app (not by the LLM), we set
+This tool is called **from the UI** when the user clicks "Save". Because it should only be callable by the app (not by the LLM), we set
 `visibility = app`. This means the host hides this tool from the model's tool list and only makes it available to the embedded app iframe via
 `callServerTool()`.
 
-{{< kotlin file="SaveReleaseSelectionTool.kt" >}}
+{{< kotlin file="SaveHealthSelectionTool.kt" >}}
 
 Key points:
 
-- **`Tool.Arg` DSL** — `string()`, `int()`, `.multi`, `.required()` build a typed schema for the tool's arguments.
+- **`Tool.Arg` DSL** — `string()`, `enum<>()`, `.required()` build a typed schema for the tool's arguments. The `enum<AnalysisFocus>()` arg type automatically generates a schema with the valid enum values.
 - **`visibility = app`** — the host shows this tool to the embedded app only; the LLM cannot call it.
-- **`bind`** — connects the `Tool` definition to a handler lambda. The `args` parameter is a typesafe map extracted using the arg lenses (`repo(args)`,
-  `issues(args)`).
-- The `save` callback is a closure — no global state, no framework magic.
+- **`Moshi.asA<Map<String, String>>()`** — the metrics are passed as a JSON-encoded string from the UI and parsed server-side using Moshi. This is why we need the `http4k-format-moshi` dependency.
+- **`bind`** — connects the `Tool` definition to a handler lambda. The `it` parameter is a typesafe map extracted using the arg lenses (`repo(it)`,
+  `metrics(it)`, `focus(it)`).
+- The `selections` map is a closure — no global state, no framework magic.
 
 # 4. Get tool (model-only)
 
-This tool lets the LLM read the current selection. It has `visibility = model` so the UI cannot call it — only the model can. This is the default for normal MCP
+This tool lets the LLM read the saved selection for a given repo. It has `visibility = model` so the UI cannot call it — only the model can. This is the default for normal MCP
 tools, but we set it explicitly here since we're in an MCP App context where both visibilities exist.
 
-{{< kotlin file="GetReleaseSelectionTool.kt" >}}
+{{< kotlin file="GetHealthSelectionTool.kt" >}}
 
-No args needed here — the tool just reads the closure state and formats it as text for the model.
+The tool takes a `repo` argument so the model can query for a specific repository's saved metrics. If no selection exists for that repo, it returns a helpful message prompting the user to open the health checker UI.
 
 # 5. HTML UI
 
-Create the Handlebars template at `src/main/resources/ReleasePlannerUI.hbs`. This is standard HTML that uses the [MCP App SDK](https://www.npmjs.com/package/@modelcontextprotocol/ext-apps) to call back to the server. You can put it in `src/main/resources`:
+Create the Handlebars template at `src/main/resources/HealthChecker.hbs`. This is standard HTML that uses the [MCP App SDK](https://www.npmjs.com/package/@modelcontextprotocol/ext-apps) to call back to the server. You can put it in `src/main/resources`:
 
-{{< html file="ReleasePlannerUI.hbs" >}}
+{{< html file="HealthChecker.hbs" >}}
 
-The important bit is the [MCP App SDK](https://www.npmjs.com/package/@modelcontextprotocol/ext-apps) integration:
+The UI displays eight metric cards (stars, open issues, forks, open PRs, days since commit, days since release, repo age, total releases) and three focus mode buttons (contributor, dependency, benchmarking). Users enter a repo name, fetch metrics from the GitHub API, select the cards they want analysed, pick a focus, and save.
+
+Key implementation details:
 
 1. **`new App(...).connect()`** — establishes a message channel between the embedded iframe and the MCP host.
-2. **`app.callServerTool(...)`** — calls our `save_release_selection` tool on the MCP server, through the host. This is how the UI communicates back to the
+2. **`app.callServerTool(...)`** — calls our `save_health_selection` tool on the MCP server, through the host. This is how the UI communicates back to the
    server — it goes through the MCP protocol, not a direct HTTP call.
+3. **Multiple GitHub API endpoints** — the UI fetches from `/repos`, `/pulls`, `/commits`, and `/releases` in parallel to gather all metrics.
+4. **Link header parsing** — total releases are extracted from GitHub's pagination `Link` header rather than fetching all pages.
 
-The GitHub API call (`fetch`) is a direct browser request — this works because we declare the appropriate Content Security Policy domains in the next step.
+The GitHub API calls (`fetch`) are direct browser requests — this works because we declare the appropriate Content Security Policy domains in the next step.
 
 # 6. UI renderer
 
@@ -147,44 +154,61 @@ The GitHub API call (`fetch`) is a direct browser request — this works because
 This is the core pattern of an MCP App: a tool triggers display, a resource provides content. `RenderMcpApp` also declares CSP metadata so the host knows which
 external domains the UI needs:
 
-{{< kotlin file="RenderReleasePlanner.kt" >}}
+{{< kotlin file="HealthCheckerUi.kt" >}}
 
 - **`resourceDomains`** — domains the UI can load stylesheets/scripts from (Bootstrap CSS, MCP App SDK JS).
 - **`connectDomains`** — domains the UI can make fetch requests to (GitHub API, unpkg for ES module imports).
-- The trailing lambda `{ templates(ReleasePlannerUI()) }` renders the Handlebars template to an HTML string.
+- The function takes a `TemplateRenderer` parameter — this is the compiled Handlebars renderer, injected from the app composition step.
+- The trailing lambda `{ templates(HealthChecker()) }` renders the Handlebars template to an HTML string.
 
-# 7. App composition
+Note that `RenderMcpApp` returns a `CapabilityPack` (not a single `ServerCapability`) because it bundles both a tool and a resource.
+
+# 7. Prompt capability
+
+The `AnalyseRepoHealth` prompt provides structured instructions to the model for analysing a repo's health metrics. This is the third MCP capability type we use — after tools and resources (via MCP Apps).
+
+{{< kotlin file="AnalyseRepoHealth.kt" >}}
+
+Key points:
+
+- **`Prompt.Arg` DSL** — similar to `Tool.Arg`, this defines typed arguments for the prompt. Here we take the repo name so the prompt can reference it.
+- **`PromptResponse`** — returns a message with a role (`Role.User`) and content. The model receives this as a user message containing detailed scoring instructions.
+- **Structured analysis** — the prompt defines focus mode weightings, scoring thresholds for each metric, and an output format. This gives the model consistent, repeatable instructions rather than relying on ad-hoc prompting.
+
+When a user selects this prompt in Claude Desktop, the model receives the full scoring rubric and knows to call `get_health_selection` to retrieve the saved metrics.
+
+# 8. App composition
 
 A `CapabilityPack` is a container that groups multiple `ServerCapability` instances into a single unit. It enables modularity — you can compose an app from independent capability packs and combine them freely.
 
-Here we combine the UI renderer (itself a pack of tool + resource), the save tool, and the get tool. The closure pattern is idiomatic http4k — capabilities
+Here we combine the UI renderer (itself a pack of tool + resource), the save tool, the get tool, and the prompt capability. The closure pattern is idiomatic http4k — capabilities
 share state through captured variables, no DI container needed:
 
-{{< kotlin file="GitHubReleasePlannerApp.kt" >}}
+{{< kotlin file="RepoHealthCheckerApp.kt" >}}
 
-The `var releaseSelection` is captured by both tool closures. When the UI saves a selection, the model can immediately read it. No database, no DI framework —
-just a closure. (This in-memory approach is fine for a tutorial; in production you'd persist state to a database or external store.)
+The `selections` map is captured by both tool closures. When the UI saves a selection, the model can immediately read it. The `templates` renderer is passed to `HealthCheckerUi` so it can render the Handlebars template. No database, no DI framework — just closures. (This in-memory approach is fine for a tutorial; in production you'd persist state to a database or external store.)
 
-# 8. MCP server
+# 9. MCP server
 
 This is where the three parts of an MCP server come together: server identity, security, and capabilities. `mcpHttpStreaming` composes them into a
 `PolyHandler` — http4k's type for services that speak multiple protocol types (here HTTP + SSE for the streaming transport):
 
-{{< kotlin file="GitHubReleasePlanner.kt" >}}
+{{< kotlin file="RepoHealthChecker.kt" >}}
 
+- **`PolyFilters.CatchAll()`** — a filter that catches any unhandled exceptions and returns a 500 response instead of crashing the server. This wraps the entire MCP handler for robustness.
 - **`mcpHttpStreaming`** — creates a `PolyHandler` that speaks
   the [MCP Streamable HTTP transport](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports) (HTTP for requests, SSE for server-pushed
   events).
 - **`withExtensions(McpApps)`** — advertises MCP Apps support in the server metadata so the host knows to look for app resources.
 - **`NoMcpSecurity`** — no auth for local development. Replace with real security for production.
 
-# 9. Main entry point
+# 10. Main entry point
 
-{{< kotlin file="GithubReleasePlannerMain.kt" >}}
+{{< kotlin file="RepoHealthCheckerMain.kt" >}}
 
 Run this and your MCP server is listening on `http://localhost:9000`.
 
-# 10. Local test harness
+# 11. Local test harness
 
 In production, an MCP App renders inside a host like Claude Desktop. During development you don't want to restart Claude Desktop every time you change a
 template or tweak a tool — you need a faster feedback loop.
@@ -197,10 +221,9 @@ This uses the `http4k-ai-mcp-testing` dependency we added in step 1.
 
 {{< kotlin file="RunMcpAppAndHost.kt" >}}
 
-Run this and open `http://localhost:10000` in your browser. You will see the Release Planner UI rendered in the test host. You can fetch issues, select them,
-and save — all going through the full MCP protocol stack.
+Run this and open `http://localhost:10000` in your browser. You will see the Health Checker UI rendered in the test host. You can fetch metrics, select cards, pick a focus mode, and save — all going through the full MCP protocol stack.
 
-# 11. Connect to Claude Desktop
+# 12. Connect to Claude Desktop
 
 Claude Desktop connects to remote MCP servers via **Settings > Connectors**. Since it requires HTTPS, the simplest way to expose your local server is with a [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/):
 
@@ -212,25 +235,26 @@ This prints a public URL like `https://xxx-yyy-zzz.trycloudflare.com`.
 
 Then:
 
-1. Start the MCP server (`GithubReleasePlannerMain.kt`)
+1. Start the MCP server (`RepoHealthCheckerMain.kt`)
 2. Start the Cloudflare tunnel
-3. In Claude Desktop, go to **Settings > Connectors** and add a new connector with the tunnel URL (appending `/mcp` — e.g. `https://xxx-yyy-zzz.trycloudflare.com/mcp`)
-4. Ask Claude to show the release planner — it will call the `show_release_planner` tool and render the UI inline
-5. Use the UI to fetch issues and save a selection (using the `save_release_selection` tool)
-6. Outside of the MCP App UI in the chat, ask Claude about the selection — it will call `get_release_selection` to read and return the selection. This proves how state can be written and read from the MCP server.
+3. In Claude Desktop, go to **Settings > Connectors** and add a new connector with the tunnel URL (appending `/mcp` — e.g. `https://xxx-yyy-zzz.trycloudflare.com/mcp`). 
+4. Start a new chat and ask Claude to analyse a Github repo: "Let's analyse a github repo using the analyser tool"
+5. Use the UI to fetch metrics for a repo, select the cards you want analysed, pick a focus mode, and save (using the `save_health_selection` tool)
+6. Outside of the MCP App UI in the chat, select the prompt `analyse_repo_health` from the Claude connectors prompt list, and input the name of the repo you just saved. It will call the `get_health_selection` tool to retrieve the saved metrics and then perform the analysis.
 
 > **Note:** The tunnel URL changes every time you restart `cloudflared`, so you'll need to update the connector each time.
 
 # Recap
 
-| Piece        | File                          | Role                                                        |
-|--------------|-------------------------------|-------------------------------------------------------------|
-| Domain model | `GitHubReleasePlannerApp.kt`  | `ReleaseSelection` data class, `ReleasePlannerUI` ViewModel |
-| Save tool    | `SaveReleaseSelectionTool.kt` | UI → server (visibility: `app`)                             |
-| Get tool     | `GetReleaseSelectionTool.kt`  | Model reads state (visibility: `model`)                     |
-| HTML UI      | `ReleasePlannerUI.hbs`        | Handlebars template with MCP App SDK                        |
-| Renderer     | `RenderReleasePlanner.kt`     | Registers UI as MCP App resource with CSP                   |
-| Composition  | `GitHubReleasePlannerApp.kt`  | `CapabilityPack` wiring with closure state                  |
-| MCP server   | `GitHubReleasePlanner.kt`     | Streaming HTTP transport                                    |
-| Entry point  | `GithubReleasePlannerMain.kt` | `main()`                                                    |
-| Test harness | `RunMcpAppAndHost.kt`         | `McpAppsHost` for local browser testing                     |
+| Piece            | File                         | Role                                                           |
+|------------------|------------------------------|----------------------------------------------------------------|
+| Domain model     | `model.kt`                   | `AnalysisFocus` enum, `RepoHealthSelection` data class, `HealthChecker` ViewModel |
+| Save tool        | `SaveHealthSelectionTool.kt` | UI → server (visibility: `app`)                                |
+| Get tool         | `GetHealthSelectionTool.kt`  | Model reads state (visibility: `model`)                        |
+| HTML UI          | `HealthChecker.hbs`          | Handlebars template with metric cards, focus selector, MCP App SDK |
+| Renderer         | `HealthCheckerUi.kt`         | Registers UI as MCP App resource with CSP                      |
+| Composition      | `RepoHealthCheckerApp.kt`    | `CapabilityPack` wiring with closure state                     |
+| Prompt           | `AnalyseRepoHealth.kt`       | Structured analysis instructions for the model                 |
+| MCP server       | `RepoHealthChecker.kt`       | Streaming HTTP transport with CatchAll filter                  |
+| Entry point      | `RepoHealthCheckerMain.kt`   | `main()`                                                       |
+| Test harness     | `RunMcpAppAndHost.kt`        | `McpAppsHost` for local browser testing                        |

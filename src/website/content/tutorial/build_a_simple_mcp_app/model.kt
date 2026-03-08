@@ -2,6 +2,10 @@ package content.tutorial.build_a_simple_mcp_app
 
 import org.http4k.template.ViewModel
 
-data class ReleaseSelection(val repo: String, val issues: List<Int>)
+enum class AnalysisFocus {
+    contributor, dependency, benchmarking
+}
 
-class ReleasePlannerUI : ViewModel
+data class RepoHealthSelection(val repo: String, val metrics: Map<String, String>, val focus: AnalysisFocus)
+
+class HealthChecker : ViewModel

@@ -4,7 +4,7 @@ import org.http4k.server.Jetty
 import org.http4k.server.asServer
 
 fun main() {
-    val server = GithubReleasePlanner().asServer(Jetty(9000)).start()
+    val server = RepoHealthChecker().asServer(Jetty(9000)).start()
 
     println("Server started on " + server.port())
 }

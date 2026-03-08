@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Repo Health Checker</title>
+    <link href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .metric-card { cursor: pointer; transition: all 0.2s; user-select: none; }
+        .metric-card.selected { border-color: #0d6efd !important; background-color: #e7f1ff; }
+        .metric-card .value { font-size: 1.5rem; font-weight: bold; }
+        .focus-btn { flex: 1; }
+        .focus-btn.active { background-color: #0d6efd; color: white; border-color: #0d6efd; }
+    </style>
+</head>
+<body class="p-3" style="max-width: 600px;">
+<h2>Repo Health Checker</h2>
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" id="repo" placeholder="owner/repo">
+    <button class="btn btn-primary" id="fetchBtn">Fetch</button>
+</div>
+
+<div id="metrics" class="row g-2 mb-3" style="display: none;"></div>
+
+<div id="focusSelector" class="d-flex gap-2 mb-3" style="display: none !important;">
+    <button class="btn btn-outline-secondary focus-btn" data-focus="contributor">I want to contribute</button>
+    <button class="btn btn-outline-secondary focus-btn" data-focus="dependency">Evaluating as dependency</button>
+    <button class="btn btn-outline-secondary focus-btn" data-focus="benchmarking">General health check</button>
+</div>
+
+<button class="btn btn-success w-100 mb-3" id="analyseBtn" style="display: none;" disabled>Save</button>
+
+<div id="status" class="mt-2 text-muted"></div>
+
+<script type="module">
+    import {App} from 'https://unpkg.com/@modelcontextprotocol/ext-apps@1.0.1/dist/src/app-with-deps.js';
+
+    const METRICS = [
+        {key: 'stars', label: 'Stars'},
+        {key: 'open_issues', label: 'Open Issues'},
+        {key: 'forks', label: 'Forks'},
+        {key: 'open_prs', label: 'Open PRs'},
+        {key: 'days_since_last_commit', label: 'Days Since Commit'},
+        {key: 'days_since_last_release', label: 'Days Since Release'},
+        {key: 'repo_age_days', label: 'Repo Age (days)'},
+        {key: 'total_releases', label: 'Total Releases'}
+    ];
+
+    const app = new App({name: 'Repo Health Checker', version: '1.0.0'});
+    await app.connect();
+
+    const status = document.getElementById('status');
+    const metricsDiv = document.getElementById('metrics');
+    const focusSelector = document.getElementById('focusSelector');
+    const analyseBtn = document.getElementById('analyseBtn');
+    let selectedFocus = null;
+
+    function el(tag, className, attrs) {
+        const e = document.createElement(tag);
+        e.className = className;
+        Object.entries(attrs || {}).forEach(function(kv) { e.setAttribute(kv[0], kv[1]); });
+        return e;
+    }
+
+    METRICS.forEach(function(m) {
+        const col = el('div', 'col-3');
+        const card = el('div', 'card metric-card p-2 text-center', {'data-metric': m.key});
+        const label = el('div', 'text-muted small');
+        label.textContent = m.label;
+        const value = el('div', 'value', {id: 'val-' + m.key});
+        value.textContent = '-';
+        card.append(label, value);
+        col.appendChild(card);
+        metricsDiv.appendChild(col);
+    });
+
+    function daysSince(dateStr) {
+        if (!dateStr) return 'N/A';
+        return Math.floor((Date.now() - new Date(dateStr).getTime()) / (1000 * 60 * 60 * 24)).toString();
+    }
+
+    function updateAnalyseButton() {
+        analyseBtn.disabled = !(document.querySelectorAll('.metric-card.selected').length > 0 && selectedFocus);
+    }
+
+    document.querySelectorAll('.metric-card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('selected');
+            updateAnalyseButton();
+        });
+    });
+
+    document.querySelectorAll('.focus-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.focus-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedFocus = btn.dataset.focus;
+            updateAnalyseButton();
+        });
+    });
+
+    document.getElementById('fetchBtn').addEventListener('click', async () => {
+        const repo = document.getElementById('repo').value.trim();
+        if (!repo) return;
+
+        status.textContent = 'Fetching metrics...';
+
+        try {
+            const base = 'https://api.github.com/repos/' + repo;
+            const [repoData, prsData, commitsData, releasesResp] = await Promise.all([
+                fetch(base).then(r => r.json()),
+                fetch(base + '/pulls?state=open&per_page=1').then(r => r.json()),
+                fetch(base + '/commits?per_page=1').then(r => r.json()),
+                fetch(base + '/releases?per_page=1')
+            ]);
+            const releasesData = await releasesResp.json();
+
+            const lastCommitDate = commitsData?.[0]?.commit?.committer?.date;
+            const lastReleaseDate = releasesData?.[0]?.published_at;
+
+            const linkHeader = releasesResp.headers.get('link') || '';
+            const lastPart = linkHeader.split(',').filter(function(p) { return /rel=.last/.test(p); })[0];
+            const lastMatch = lastPart && lastPart.match(/&page=(\d+)/);
+            const totalReleases = lastMatch ? parseInt(lastMatch[1]) : (Array.isArray(releasesData) ? releasesData.length : 0);
+
+            const values = {
+                stars: (repoData.stargazers_count ?? '-').toString(),
+                open_issues: (repoData.open_issues_count ?? '-').toString(),
+                forks: (repoData.forks_count ?? '-').toString(),
+                open_prs: Array.isArray(prsData) ? prsData.length.toString() : '0',
+                days_since_last_commit: daysSince(lastCommitDate),
+                days_since_last_release: daysSince(lastReleaseDate),
+                repo_age_days: daysSince(repoData.created_at),
+                total_releases: totalReleases.toString()
+            };
+
+            METRICS.forEach(function(m) {
+                document.getElementById('val-' + m.key).textContent = values[m.key];
+            });
+
+            document.querySelector('.focus-btn').click();
+
+            metricsDiv.style.display = '';
+            focusSelector.style.cssText = '';
+            analyseBtn.style.display = '';
+            status.textContent = 'Select metrics, pick a focus, then click Save.';
+        } catch (e) {
+            status.textContent = 'Error: ' + e.message;
+        }
+    });
+
+    analyseBtn.addEventListener('click', async () => {
+        const repo = document.getElementById('repo').value.trim();
+        const selected = {};
+
+        document.querySelectorAll('.metric-card.selected').forEach(card => {
+            const value = card.querySelector('.value').textContent;
+            if (value !== '-') selected[card.dataset.metric] = value;
+        });
+
+        status.textContent = 'Saving selection...';
+
+        await app.callServerTool({
+            name: 'save_health_selection',
+            arguments: {repo, metrics: JSON.stringify(selected), focus: selectedFocus}
+        });
+
+        status.textContent = 'Done. Ask Claude for your health report!';
+    });
+</script>
+</body>
+</html>

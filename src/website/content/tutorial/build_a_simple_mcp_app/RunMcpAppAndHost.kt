@@ -8,11 +8,11 @@ import org.http4k.server.SunHttp
 import org.http4k.server.asServer
 
 fun main() {
-    val server = GithubReleasePlanner().asServer(Jetty(0)).start()
+    val server = RepoHealthChecker().asServer(Jetty(9000)).start()
 
-    val host = McpAppsHost(
-        McpClientFactory.Http(Uri.of("http://localhost:${server.port()}/mcp"))
-    ).asServer(SunHttp(10000)).start()
+    val client = McpClientFactory.Http(Uri.of("http://localhost:${server.port()}/mcp"))
+
+    val host = McpAppsHost(client).asServer(SunHttp(10000)).start()
 
     println("MCP Apps Host running on http://localhost:${host.port()}")
 }
