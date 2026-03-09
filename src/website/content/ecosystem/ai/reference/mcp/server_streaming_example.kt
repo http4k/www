@@ -7,7 +7,7 @@ import org.http4k.ai.mcp.protocol.Version
 import org.http4k.ai.mcp.server.security.OAuthMcpSecurity
 import org.http4k.core.Uri
 import org.http4k.routing.bind
-import org.http4k.routing.mcpHttpStreaming
+import org.http4k.routing.mcp
 import org.http4k.server.Helidon
 import org.http4k.server.asServer
 
@@ -15,7 +15,7 @@ object ServerStreamingExample {
     @JvmStatic
     fun main(args: Array<String>) {
         // call the correct protocol method here - there are 5 to choose from!
-        val mcpServer = mcpHttpStreaming(
+        val mcpServer = mcp(
             // give the server an identity
             ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0"), ToolsChanged),
 

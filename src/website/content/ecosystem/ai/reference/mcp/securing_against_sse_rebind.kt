@@ -16,12 +16,12 @@ import org.http4k.filter.OriginPolicy
 import org.http4k.filter.PolyFilters
 import org.http4k.filter.ServerFilters
 import org.http4k.routing.bind
-import org.http4k.routing.mcpHttpStreaming
+import org.http4k.routing.mcp
 import org.http4k.server.Helidon
 import org.http4k.server.asServer
 
 fun main() {
-    val mcpServer = mcpHttpStreaming(
+    val mcpServer = mcp(
         ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0"), ToolsChanged),
         BearerAuthMcpSecurity { it == "my_bearer_token" },
         toolDefinitionFor("David") bind diaryToolHandler,

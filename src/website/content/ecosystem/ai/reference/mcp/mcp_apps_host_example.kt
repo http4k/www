@@ -8,7 +8,7 @@ import org.http4k.ai.mcp.server.capability.extension.RenderMcpApp
 import org.http4k.ai.mcp.server.security.NoMcpSecurity
 import org.http4k.ai.mcp.testing.McpClientFactory
 import org.http4k.core.Uri
-import org.http4k.routing.mcpHttpStreaming
+import org.http4k.routing.mcp
 import org.http4k.server.Helidon
 import org.http4k.server.asServer
 
@@ -16,7 +16,7 @@ object McpAppsHostExample {
     @JvmStatic
     fun main(args: Array<String>) {
         // Create MCP app servers
-        val dashboardApp = mcpHttpStreaming(
+        val dashboardApp = mcp(
             ServerMetaData("Dashboard", "1.0.0").withExtensions(McpApps),
             NoMcpSecurity,
             RenderMcpApp("show_dashboard", "Show dashboard", Uri.of("ui://dash")) {
@@ -24,7 +24,7 @@ object McpAppsHostExample {
             }
         )
 
-        val settingsApp = mcpHttpStreaming(
+        val settingsApp = mcp(
             ServerMetaData("Settings", "1.0.0").withExtensions(McpApps),
             NoMcpSecurity,
             RenderMcpApp("show_settings", "Show settings", Uri.of("ui://settings")) {

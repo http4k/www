@@ -11,7 +11,7 @@ import org.http4k.ai.mcp.protocol.withExtensions
 import org.http4k.ai.mcp.server.capability.extension.RenderMcpApp
 import org.http4k.ai.mcp.server.security.NoMcpSecurity
 import org.http4k.core.Uri
-import org.http4k.routing.mcpHttpStreaming
+import org.http4k.routing.mcp
 import org.http4k.server.Helidon
 import org.http4k.server.asServer
 
@@ -41,7 +41,7 @@ object McpAppExample {
         }
 
         // Create the MCP server with Apps extension enabled
-        val server = mcpHttpStreaming(
+        val server = mcp(
             ServerMetaData("Dashboard App", "1.0.0").withExtensions(McpApps),
             NoMcpSecurity,
             dashboardApp

@@ -15,7 +15,7 @@ import org.http4k.ai.model.ToolName
 import org.http4k.core.Uri
 import org.http4k.lens.with
 import org.http4k.routing.bind
-import org.http4k.routing.mcpHttpStreaming
+import org.http4k.routing.mcp
 
 object TestingExample {
     @JvmStatic
@@ -23,7 +23,7 @@ object TestingExample {
         val nameLens = Tool.Arg.string().required("name")
 
         // Create your MCP server
-        val mcpServer = mcpHttpStreaming(
+        val mcpServer = mcp(
             ServerMetaData("Test Server", "1.0.0"),
             NoMcpSecurity,
             Tool("greet", "Greet someone", nameLens) bind { request ->

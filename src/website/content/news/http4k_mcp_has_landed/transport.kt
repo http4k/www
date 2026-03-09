@@ -6,11 +6,11 @@ import org.http4k.ai.mcp.protocol.ServerMetaData
 import org.http4k.ai.mcp.protocol.Version
 import org.http4k.ai.mcp.server.security.BasicAuthMcpSecurity
 import org.http4k.ai.mcp.server.security.BearerAuthMcpSecurity
-import org.http4k.routing.mcpHttpStreaming
+import org.http4k.routing.mcp
 import org.http4k.routing.mcpWebsocket
 
 // Use the standard Streamable HTTP transport
-val mcpServer = mcpHttpStreaming(
+val mcpServer = mcp(
     ServerMetaData(McpEntity.of("My MCP Server"), Version.of("1.0.0")),
     BasicAuthMcpSecurity("realm") { it == Credentials("user", "password") },
     weatherTool

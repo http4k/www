@@ -11,7 +11,7 @@ import org.http4k.ai.mcp.protocol.Version
 import org.http4k.ai.mcp.server.security.BearerAuthMcpSecurity
 import org.http4k.ai.mcp.server.security.OAuthMcpSecurity
 import org.http4k.routing.bind
-import org.http4k.routing.mcpHttpStreaming
+import org.http4k.routing.mcp
 import org.http4k.server.Jetty
 import org.http4k.server.asServer
 
@@ -29,7 +29,7 @@ fun main() {
     }
 
     // 2. Create an MCP server and select your security model
-    val mcpServer = mcpHttpStreaming(
+    val mcpServer = mcp(
         ServerMetaData(McpEntity.of("Weather API"), Version.of("1.0.0")),
         OAuthMcpSecurity(Uri.of("https://oauth-server"), Uri.of("https://mcp-server/mcp")) { it == "my_oauth_token" },
         weatherTool

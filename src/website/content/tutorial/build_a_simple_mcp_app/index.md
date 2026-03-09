@@ -73,7 +73,7 @@ Use the [http4k Toolbox](https://toolbox.http4k.org) to generate a project with 
 - HTTP server backend - **Jetty** - MCP server backend with support for SSE
 - Templating library - **Handlebars** - HTML templating engine
 - http4k AI integrations - **Model Context Protocol SDK**  - MCP SDK and MCP App SDK dependencies
-- Testing & Tooling - **Testing utilities for the MCP SDK** — local test harness for MCP Apps
+- Testing & Tooling - **MCP SDK Testing utilities** — local test harness for MCP Apps
 
 Finish the Wizard and download the generated project. Your `build.gradle.kts` will include:
 
@@ -190,13 +190,13 @@ The `selections` map is captured by both tool closures. When the UI saves a sele
 
 # 9. MCP server
 
-This is where the three parts of an MCP server come together: server identity, security, and capabilities. `mcpHttpStreaming` composes them into a
+This is where the three parts of an MCP server come together: server identity, security, and capabilities. `mcp` composes them into a
 `PolyHandler` — http4k's type for services that speak multiple protocol types (here HTTP + SSE for the streaming transport):
 
 {{< kotlin file="RepoHealthChecker.kt" >}}
 
 - **`PolyFilters.CatchAll()`** — a filter that catches any unhandled exceptions and returns a 500 response instead of crashing the server. This wraps the entire MCP handler for robustness.
-- **`mcpHttpStreaming`** — creates a `PolyHandler` that speaks
+- **`mcp`** — creates a `PolyHandler` that speaks
   the [MCP Streamable HTTP transport](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports) (HTTP for requests, SSE for server-pushed
   events).
 - **`withExtensions(McpApps)`** — advertises MCP Apps support in the server metadata so the host knows to look for app resources.
