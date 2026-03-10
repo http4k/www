@@ -62,7 +62,7 @@ how_tos:
             image: mcp-tool.png
             alt: Defining MCP tools
           - description: Step 2 - Integrate MCP by **composing capabilities**, with **Capability Packs**, add **security** into a **lightweight** server
-            image: mcp-server.png
+            image: mcp_server.webp
             alt: Creating an MCP server
           - description: Step 3 - Integrate your AI-powered MCP Server or MCP App with **Claude Desktop** as a standard MCP connector 
             image: mcp_app.webp
