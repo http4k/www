@@ -30,11 +30,11 @@ features:
     - title: Type-safe</br>Tooling
       icon: support
       colour: indigo
-      description: http4k's powerful Lens system for **type-safe tool definitions** and capability bindings with **compile-time safety**.
+      description: "http4k's powerful Lens system for **type-safe tool definitions** and capability bindings with **compile-time safety**."
     - title: Testable</br>Design
       icon: testability
       colour: green
-      description: **Pure functions**, no side effects. Test Tools, Resources, and MCP Apps fully **in-memory** — no network, no ports, no flaky CI.
+      description: "**Pure functions**, no side effects. Test Tools, Resources, and MCP Apps fully **in-memory** — no network, no ports, no flaky CI."
     - title: Complete</br>Capabilities
       icon: footprint
       colour: blue
@@ -42,15 +42,15 @@ features:
     - title: MCP</br>Apps
       icon: supportive
       colour: violet
-      description: **Server-rendered UI components** with the **MCP Apps** protocol. Dashboards, forms, and visualizations directly in MCP clients. Fully **testable**.
+      description: "**Server-rendered UI components** with the **MCP Apps** protocol. Dashboards, forms, and visualizations directly in MCP clients. Fully **testable**."
     - title: Flexible</br>Transport
       icon: footprint
       colour: cyan
-      description: **HTTP Streaming**, SSE, WebSocket, JSON-RPC, and Standard IO transports. Stateful or stateless protocols for desktop and web clients.
+      description: "**HTTP Streaming**, SSE, WebSocket, JSON-RPC, and Standard IO transports. Stateful or stateless protocols for desktop and web clients."
     - title: Built-in</br>Observability
       icon: testability
       colour: orange
-      description: **OpenTelemetry MCP Semantic Conventions** support. Plug into Jaeger, Honeycomb, Datadog — with zero custom instrumentation.
+      description: "**OpenTelemetry MCP Semantic Conventions** support. Plug into Jaeger, Honeycomb, Datadog — with zero custom instrumentation."
     - title: Protocol</br>Client
       icon: supportive
       colour: red
