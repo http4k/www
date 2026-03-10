@@ -35,6 +35,9 @@ fun main() {
 
 
 
+
+
+
 fun liveWeatherTool(): ToolCapability {
     val city = Tool.Arg.string().required("city")
     val report = Tool.Output.auto(WeatherReport(100, "Sunny")).toLens()
