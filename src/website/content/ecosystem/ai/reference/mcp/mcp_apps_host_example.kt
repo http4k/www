@@ -14,7 +14,7 @@ import org.http4k.server.asServer
 
 object McpAppsHostExample {
     @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         // Create MCP app servers
         val dashboardApp = mcp(
             ServerMetaData("Dashboard", "1.0.0").withExtensions(McpApps),

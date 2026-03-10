@@ -13,7 +13,7 @@ import org.http4k.server.asServer
 
 object ServerStreamingExample {
     @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         // call the correct protocol method here - there are 5 to choose from!
         val mcpServer = mcp(
             // give the server an identity

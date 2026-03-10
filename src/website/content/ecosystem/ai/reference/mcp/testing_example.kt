@@ -19,7 +19,7 @@ import org.http4k.routing.mcp
 
 object TestingExample {
     @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         val nameLens = Tool.Arg.string().required("name")
 
         // Create your MCP server

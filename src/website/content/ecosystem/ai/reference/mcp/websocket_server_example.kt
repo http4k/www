@@ -12,7 +12,7 @@ import org.http4k.server.asServer
 
 object WebsocketServerExample {
     @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         // Create a WebSocket-based MCP server
         // Provides full-duplex communication over a single connection
         val server = mcpWebsocket(

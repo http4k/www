@@ -17,7 +17,7 @@ import org.http4k.server.asServer
 
 object McpAppExample {
     @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         // Create an MCP App that renders a dashboard UI
         val dashboardApp = RenderMcpApp(
             name = "show_dashboard",

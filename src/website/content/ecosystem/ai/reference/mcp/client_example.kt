@@ -29,7 +29,7 @@ import java.time.LocalDate
 
 object ClientExample {
     @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         val client = HttpStreamingMcpClient(
             Uri.of("http://localhost:3001/mcp"),
             McpEntity.of("http4k MCP Client"), Version.of("1.0.0"),

@@ -12,7 +12,7 @@ import org.http4k.server.asServer
 
 object ServerNonstreamingExample {
     @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         // this protocol version does not support SSE connections.
         val mcpServer = mcpHttpNonStreaming(
             ServerMetaData(McpEntity.of("http4k MCP Server"), Version.of("1.0.0"), ToolsChanged),

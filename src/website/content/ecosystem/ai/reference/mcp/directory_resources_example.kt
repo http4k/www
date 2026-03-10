@@ -7,7 +7,7 @@ import java.io.File
 
 object DirectoryResourcesExample {
     @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         // Expose a directory as browsable MCP resources
         // DirectoryResources implements the Resources interface
         val recursiveResources = DirectoryResources(

@@ -12,7 +12,7 @@ import org.http4k.server.asServer
 
 object JsonrpcServerExample {
     @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         // Create a pure JSON-RPC based MCP server
         // Accepts standard JSON-RPC 2.0 messages
         val server = mcpJsonRpc(
