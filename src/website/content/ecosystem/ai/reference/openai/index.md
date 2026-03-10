@@ -10,7 +10,7 @@ description: Feature overview of the http4k AI OpenAI modules
 
 ```kotlin
 dependencies {
-    { { < http4k_bom > } }
+    {{< http4k_bom >}}
 
     // for the Universal LLM adapter
     implementation("org.http4k:http4k-ai-llm-openai")

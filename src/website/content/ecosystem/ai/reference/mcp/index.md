@@ -13,7 +13,7 @@ aliases:
 
 ```kotlin
 dependencies {
-    { { < http4k_bom > } }
+    {{< http4k_bom >}}
 
     // for general MCP server development
     implementation("org.http4k.pro:http4k-ai-mcp-sdk")
