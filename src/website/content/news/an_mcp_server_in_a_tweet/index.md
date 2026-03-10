@@ -13,7 +13,7 @@ You can turn any MCP Capability - a Tool, a Resource, a Prompt - into a working,
 
 That's always been http4k's pitch, and now we've brought the party trick to MCP - any Capability can become a server with the same minimal code.
 
-Yes, it's a contrived example - there's no security, no observability, no structure. But it's also a working MCP server that gives Claude something it's historically been famously bad at: telling the time. 
+Yes, it's a contrived example - there's no security, no observability, no structure. But it's also a working MCP server that hands your LLM one of the essential tools it needs to function: knowing what time it is. And with zero dependencies, no reflection, and no classpath scanning, it won't eat your RAM while it's at it - which matters when every AI workload on your cluster is fighting for memory.
 
 But with **v6.33.0.0**, the MCP story has grown well beyond party tricks. There's a *lot* of new goodness, so grab something warm and settle in.
 
@@ -29,7 +29,7 @@ But with **v6.33.0.0**, the MCP story has grown well beyond party tricks. There'
 
 ## The Spec, The Whole Spec, and Nothing But The Spec
 
-The 2025-11-25 MCP specification brought a raft of cool new new capabilities: Tasks, Elicitations, Sampling upgrades, and expanded Tool support. http4k now supports the lot.
+The 2025-11-25 MCP specification brought a raft of cool new capabilities: Tasks, Elicitations, Sampling upgrades, and expanded Tool support. http4k now supports the lot.
 
 We've also implemented draft spec features - including structured content in tool responses - because we want you to not have to wait for a committee to finish their minutes before they can ship. OAuth auth with resource metadata is now properly supported too, bringing the security model in line with how the rest of the industry does things.
 
@@ -45,7 +45,7 @@ An MCP App combines Tools and Resources under the hood, but http4k wraps the wir
 
 {{< kotlin file="mcp_app.kt" >}}
 
-We've written a full tutorial to get you started: **[Build a Simple MCP App](https://www.http4k.org/tutorial/build_a_simple_mcp_app/)**. And if you'd rather skip the reading and get straight to code, [Toolbox](https://toolbox.http4k.org) can generate a complete MCP Server or App project for you in about a minute - or even longer if you actually want to read the full list of http4k modules.
+We've written a full tutorial to get you started: **[Build a Simple MCP App](https://www.http4k.org/tutorial/build_a_simple_mcp_app/)**. Want to see one running? Just add [this](https://demo.http4k.org/mcp-sdk/mcp) custom connector to Claude. And if you'd rather skip the reading and get straight to code, [Toolbox](https://toolbox.http4k.org) can generate a complete MCP Server or App project for you in about a minute - or even longer if you actually want to read the full list of http4k modules.
 
 ## Test MCP Like You Mean It
 
@@ -72,6 +72,8 @@ We believe that http4k's MCP SDK is the most complete, most testable, and most s
 Our MCP libraries are included in the http4k [Pro tier](https://http4k.org/pro/) and all [Enterprise Edition subscriptions](https://www.http4k.org/enterprise/), with free use for personal projects, non-profit organisations, non-commercial research, and qualifying small businesses (see our [commercial license](/commercial-license/) for exact terms).
 
 Questions? Feedback? War stories? Find us on GitHub or the [Kotlin Slack](https://kotlinlang.slack.com). We'd love to hear what you're building.
+
+And if you want to hear about the functional design behind the MCP SDK, we'll be talking about it at [KotlinConf 2026](https://kotlinconf.com) in Munich - see you there!
 
 Happy coding!
 
