@@ -41,6 +41,8 @@ If you ask us (and literally nobody does!) [MCP Apps](https://modelcontextprotoc
 
 This is a genuine innovation for building rich agent experiences. No more describing a table in markdown and hoping the LLM formats it correctly - you can just get your MCP server to render it as intended without the user leaving the chat.
 
+<img class="imageMid my-4" src="./mcp_app.webp" alt="An MCP App running inside Claude"/>
+
 An MCP App combines Tools and Resources under the hood, but http4k wraps the wiring into a single `RenderMcpApp` Capability - so building one is just as concise as any other server:
 
 {{< kotlin file="mcp_app.kt" >}}
