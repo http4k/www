@@ -86,6 +86,7 @@
             <div class="col-md-9 col-lg-9 col-xl-6">
                 <h2 class="header mb-4">{{ .Params.tagline }}</h2>
                 <p class="mb-3">{{ .Params.description }}</p>
+                <div class="d-flex flex-wrap gap-2 mt-3">
                 {{ if .Params.launch_announcement }}
                 <a class="btn btn-secondary" href="{{ .Params.launch_announcement }}"> <span class="launch-spark">✦</span> Read the Launch Announcement <span class="launch-spark">✦</span></a>
                 {{ else if .Params.docs_link }}
@@ -93,6 +94,7 @@
                 {{ else }}
                 <a class="btn btn-secondary" href="#subscribe">Sign up for launch</a>
                 {{ end }}
+                </div>
             </div>
         </div>
     </div>
