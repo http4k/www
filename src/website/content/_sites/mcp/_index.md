@@ -26,35 +26,35 @@ features:
     - title: Simple</br>Integration
       icon: supportive
       colour: pink
-      description: Build **secure MCP-compliant servers** using familiar http4k patterns with full support for **MCP 2025-11-25 + Draft** protocols. Seamlessly connect AI models with your existing systems and data sources.
+      description: Familiar http4k patterns with **MCP 2025-11-25 + Draft** protocols, **OAuth with Resource Metadata**, and passing **MCP conformance tests**.
     - title: Type-safe</br>Tooling
       icon: support
       colour: indigo
-      description: Create robust AI integrations using http4k's powerful Lens system for **type-safe tool definitions** and capability bindings with compile-time safety.
+      description: http4k's powerful Lens system for **type-safe tool definitions** and capability bindings with **compile-time safety**.
     - title: Testable</br>Design
       icon: testability
       colour: green
-      description: Build **highly testable** MCP services with **pure functions** and no side effects. Test Tools, Resources, and MCP Apps without running a server—predictable, testable, and **composable** using reusable capability modules.
+      description: **Pure functions**, no side effects. Test Tools, Resources, and MCP Apps fully **in-memory** — no network, no ports, no flaky CI.
     - title: Complete</br>Capabilities
       icon: footprint
       colour: blue
-      description: Full support for **Prompts**, **Resources** (filesystem, database, web content), **Tasks** (long-running operations with progress), **Sampling** (LLM completions), **Elicitation** (dynamic UI data collection), and more.
+      description: Full support for **Prompts**, **Resources**, **Tasks**, **Sampling**, **Elicitation**, and more — everything in the MCP spec.
     - title: MCP</br>Apps
       icon: supportive
       colour: violet
-      description: Build **server-rendered UI components** with the **MCP Apps 2026-01-26** protocol. Create interactive dashboards, forms, and visualizations that display directly in Claude Desktop and other MCP clients. All fully **testable**.
+      description: **Server-rendered UI components** with the **MCP Apps** protocol. Dashboards, forms, and visualizations directly in MCP clients. Fully **testable**.
     - title: Flexible</br>Transport
       icon: footprint
       colour: cyan
-      description: Support for **HTTP Streaming**, SSE, WebSocket, JSON-RPC, and Standard IO transports. Seamless integration with desktop and web-based AI applications using stateful or stateless protocols.
-    - title: Serverless</br>Ready
+      description: **HTTP Streaming**, SSE, WebSocket, JSON-RPC, and Standard IO transports. Stateful or stateless protocols for desktop and web clients.
+    - title: Built-in</br>Observability
       icon: testability
       colour: orange
-      description: Deploy your MCP capabilities to AWS Lambda, GCP Functions, and other FaaS platforms using http4k's serverless adapters with **zero code changes**.
+      description: **OpenTelemetry MCP Semantic Conventions** support. Plug into Jaeger, Honeycomb, Datadog — with zero custom instrumentation.
     - title: Protocol</br>Client
       icon: supportive
       colour: red
-      description: Build your own **AI agents** with our pure Kotlin MCP protocol clients. Integrate MCP capabilities directly into your applications for custom agent development and advanced AI workflows.
+      description: Build your own **AI agents** with pure Kotlin MCP protocol clients. Custom agent development and advanced AI workflows.
 how_tos:
     - section: Getting started with MCP in http4k
       steps:
