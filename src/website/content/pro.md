@@ -15,7 +15,7 @@ modules:
     available: true
   - name: Server Hot Reload
     link: https://hotreload.http4k.org
-    image: hotreload.png
+    image: hotreload.webp
     available: true
     description: Hot Reload automatically restart your server after code changes, saving you time during development
   - name: Transactional Outbox
