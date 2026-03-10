@@ -68,7 +68,7 @@ how_tos:
             image: mcp_app.webp
             alt: Using Claude with an MCP server
           - description: Step 4 - Access your MCP server from other agents using our **pure Kotlin MCP Client**
-            image: mcp-client.png
+            image: mcp_client.webp
             alt: Inter-agent communication
       cta: Ready to build? Start experimenting with MCP Servers and Apps at the [http4k toolbox](https://toolbox.http4k.org)
 pricing_table:
