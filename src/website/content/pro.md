@@ -6,7 +6,7 @@ modules:
   - name: Model Context Protocol
     link: https://mcp.http4k.org
     image: mcp.png
-    description: Build MCP-compliant servers to integrate Large Language Models with your  data and tools using familiar http4k patterns
+    description: Build MCP servers and MCP Apps to integrate Large Language Models with your data and tools using familiar testable http4k patterns
     available: true
   - name: Server Hot Reload
     link: https://hotreload.http4k.org
