@@ -73,16 +73,7 @@ However, for S3 bucket operations you either need to use a specific pre-configur
 like `http://<bucket-name>.s3.localhost.localstack.cloud:4566`, or you configure the `S3Bucket` to always 
 perform path-style requests like this:
 
-```kotlin
-val s3Bucket = S3Bucket.Http(
-    bucketName = bucketName, 
-    bucketRegion = region,
-    credentialsProvider = { credentials },
-    overrideEndpoint = Uri.of("http://localhost:4566"),
-    forcePathStyle = true // always use path-style requests
-)
-```
-
+{{< kotlin file="example.kt" >}}
 ### Pre-Signed Requests
 
 Http4k supports pre-signed requests with the generic `AwsRequestPreSigner` class.

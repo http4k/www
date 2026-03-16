@@ -25,5 +25,5 @@ fun main() {
 
     // all operations return a Result monad of the API type
     val result: Result<Unit, RemoteFailure> = client
-        .createInvalidation(DistributionId.of("a-distribution-id"), listOf("/path"), 1, nextInt())
+        .createInvalidation(DistributionId.of("a-distribution-id"), "/path")
 }

@@ -38,20 +38,7 @@ The Instance Metadata Service also offers a `CredentialsProvider`.
 If the application is running inside an Amazon EC2 environment,
 this provider can authorize AWS requests using credentials from the instance profile.
 
-```kotlin
-fun main() {
-    // build a credentials provider that will attempt to load AWS credentials from the EC2's instance profile
-    val credentialsProvider = CredentialsProvider.Ec2InstanceProfile()
-
-    // build a client that will authorize requests with the instance profile credentials
-    val sns = SNS.Http(Region.US_EAST_1, credentialsProvider)
-
-    // send a request
-    val topics = sns.listTopics()
-    println(topics)
-}
-```
-
+{{< kotlin file="example.kt" >}}
 :warning: The `Ec2InstanceProfile` provider should always be last in the chain,
 since it will time out if not in an Amazon EC2 environment.
 
