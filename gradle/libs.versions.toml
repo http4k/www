@@ -1,5 +1,5 @@
 [versions]
-amazon-s3 = "2.42.8"
+amazon-s3 = "2.42.13"
 aws-lambda-java-events = "3.16.1"
 azure-search-documents = "11.8.1"
 forkhandles-bom = "2.25.3.0"
@@ -9,14 +9,14 @@ http4k-standards = "1.4.0.0"
 jakarta-servlet-api = "6.1.0"
 javax-servlet-api = "4.0.1"
 junit = "6.0.3"
-kotlin = "2.3.10"
+kotlin = "2.3.20"
 kotshi-api = "4.0.0"
 kotshi-compiler = "4.0.0"
 ksp = "2.3.6"
-moshi-metadata-reflect = "0.34.4"
+moshi-metadata-reflect = "0.34.5"
 opentelemetry-aws-xray-propagator = "1.54.0-alpha"
 opentelemetry-sdk-testing = "1.60.1"
-redis-jedis = "7.3.0"
+redis-jedis = "7.4.0"
 typeflows = "0.32.0-beta"
 version-catalog-update = "1.1.0"
 
@@ -126,13 +126,13 @@ http4k-connect-kafka-schemaregistry-fake = { module = "org.http4k:http4k-connect
 http4k-connect-ksp-generator = { module = "org.http4k:http4k-connect-ksp-generator" }
 http4k-connect-mattermost = { module = "org.http4k:http4k-connect-mattermost" }
 http4k-connect-mattermost-fake = { module = "org.http4k:http4k-connect-mattermost-fake" }
-http4k-connect-x402 = { module = "org.http4k:http4k-connect-x402" }
-http4k-connect-x402-fake = { module = "org.http4k:http4k-connect-x402-fake" }
 http4k-connect-storage-core = { module = "org.http4k:http4k-connect-storage-core" }
 http4k-connect-storage-http = { module = "org.http4k:http4k-connect-storage-http" }
 http4k-connect-storage-jdbc = { module = "org.http4k:http4k-connect-storage-jdbc" }
 http4k-connect-storage-redis = { module = "org.http4k:http4k-connect-storage-redis" }
 http4k-connect-storage-s3 = { module = "org.http4k:http4k-connect-storage-s3" }
+http4k-connect-x402 = { module = "org.http4k:http4k-connect-x402" }
+http4k-connect-x402-fake = { module = "org.http4k:http4k-connect-x402-fake" }
 http4k-core = { module = "org.http4k:http4k-core" }
 http4k-format-argo = { module = "org.http4k:http4k-format-argo" }
 http4k-format-core = { module = "org.http4k:http4k-format-core" }
@@ -206,8 +206,8 @@ http4k-tools-hotreload = { module = "org.http4k.pro:http4k-tools-hotreload" }
 http4k-tools-trafficcapture = { module = "org.http4k:http4k-tools-traffic-capture" }
 http4k-web-datastar = { module = "org.http4k:http4k-web-datastar" }
 http4k-web-htmx = { module = "org.http4k:http4k-web-htmx" }
-http4k-wiretap = { module = "org.http4k.pro:http4k-wiretap" }
 http4k-webhook = { module = "org.http4k:http4k-webhook" }
+http4k-wiretap = { module = "org.http4k.pro:http4k-wiretap" }
 jakarta-servlet-api = { module = "jakarta.servlet:jakarta.servlet-api", version.ref = "jakarta-servlet-api" }
 javax-servlet-api = { module = "javax.servlet:javax.servlet-api", version.ref = "javax-servlet-api" }
 junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
@@ -368,6 +368,13 @@ http4k-formats = [
     "http4k-format-toon",
     "http4k-format-xml",
 ]
+http4k-misc = [
+    "http4k-config",
+    "http4k-incubator",
+    "http4k-multipart",
+    "http4k-webhook",
+    "http4k-wiretap",
+]
 http4k-ops = [
     "http4k-ops-failsafe",
     "http4k-ops-micrometer",
@@ -431,22 +438,13 @@ http4k-testing = [
     "http4k-testing-tracerbullet",
     "http4k-testing-webdriver",
 ]
+http4k-tools = [
+    "http4k-tools-hotreload",
+    "http4k-tools-trafficcapture",
+]
 http4k-web = [
     "http4k-web-datastar",
     "http4k-web-htmx",
-]
-
-http4k-misc = [
-    "http4k-config",
-    "http4k-incubator",
-    "http4k-multipart",
-    "http4k-webhook",
-    "http4k-wiretap",
-]
-
-http4k-tools = [
-    "http4k-tools-trafficcapture",
-    "http4k-tools-hotreload",
 ]
 junit = [
     "junit-jupiter-api",
