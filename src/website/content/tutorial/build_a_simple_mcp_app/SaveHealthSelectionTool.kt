@@ -9,7 +9,9 @@ import org.http4k.ai.mcp.model.apps.McpAppVisibility.app
 import org.http4k.ai.mcp.model.enum
 import org.http4k.ai.mcp.model.string
 import org.http4k.ai.mcp.server.capability.ToolCapability
+import org.http4k.ai.mcp.util.auto
 import org.http4k.format.Moshi
+import org.http4k.lens.MetaKey
 import org.http4k.routing.bind
 
 fun SaveHealthSelectionTool(selections: MutableMap<String, RepoHealthSelection>): ToolCapability {
@@ -21,7 +23,7 @@ fun SaveHealthSelectionTool(selections: MutableMap<String, RepoHealthSelection>)
         name = "save_health_selection",
         description = "Save the selected repo health metrics for Claude to analyse",
         repo, metrics, focus,
-        meta = Meta(ui = McpAppMeta(visibility = listOf(app)))
+        meta = Meta(MetaKey.auto(McpAppMeta).toLens() of McpAppMeta(visibility = listOf(app)))
     ) bind {
         val repoName = repo(it)
         val metricsMap = Moshi.asA<Map<String, String>>(metrics(it))

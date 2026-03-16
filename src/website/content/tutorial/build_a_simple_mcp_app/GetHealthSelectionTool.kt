@@ -8,6 +8,8 @@ import org.http4k.ai.mcp.model.apps.McpAppMeta
 import org.http4k.ai.mcp.model.apps.McpAppVisibility.model
 import org.http4k.ai.mcp.model.string
 import org.http4k.ai.mcp.server.capability.ToolCapability
+import org.http4k.ai.mcp.util.auto
+import org.http4k.lens.MetaKey
 import org.http4k.routing.bind
 
 fun GetHealthSelectionTool(selections: MutableMap<String, RepoHealthSelection>): ToolCapability {
@@ -17,7 +19,7 @@ fun GetHealthSelectionTool(selections: MutableMap<String, RepoHealthSelection>):
         name = "get_health_selection",
         description = "Get the repo health metrics selected by the user.",
         repo,
-        meta = Meta(ui = McpAppMeta(visibility = listOf(model)))
+        meta = Meta(MetaKey.auto(McpAppMeta).toLens() of McpAppMeta(visibility = listOf(model)))
     ) bind { args ->
         val repoName = repo(args)
         val current = selections[repoName]
