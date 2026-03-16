@@ -26,7 +26,7 @@ features:
     - title: Simple</br>Integration
       icon: supportive
       colour: pink
-      description: Familiar http4k patterns with **MCP 2025-11-25 + Draft** protocols, **OAuth with Resource Metadata**, and passing **MCP conformance tests**.
+      description: Familiar http4k patterns with **MCP 2025-11-25 + Draft** protocols, **OAuth with Resource Metadata**, **x402 payments**, and passing **MCP conformance tests**.
     - title: Type-safe</br>Tooling
       icon: support
       colour: indigo
