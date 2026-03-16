@@ -36,6 +36,7 @@ http4k-ai-llm-github = { module = "org.http4k:http4k-ai-llm-github" }
 http4k-ai-llm-openai = { module = "org.http4k:http4k-ai-llm-openai" }
 http4k-ai-mcp-sdk = { module = "org.http4k.pro:http4k-ai-mcp-sdk" }
 http4k-ai-mcp-testing = { module = "org.http4k.pro:http4k-ai-mcp-testing" }
+http4k-ai-mcp-x402 = { module = "org.http4k.pro:http4k-ai-mcp-x402" }
 http4k-api-cloudevents = { module = "org.http4k:http4k-api-cloudevents" }
 http4k-api-graphql = { module = "org.http4k:http4k-api-graphql" }
 http4k-api-jsonrpc = { module = "org.http4k:http4k-api-jsonrpc" }
@@ -159,7 +160,6 @@ http4k-platform-aws = { module = "org.http4k:http4k-platform-aws" }
 http4k-platform-azure = { module = "org.http4k:http4k-platform-azure" }
 http4k-platform-gcp = { module = "org.http4k:http4k-platform-gcp" }
 http4k-platform-k8s = { module = "org.http4k:http4k-platform-k8s" }
-http4k-realtime-core = { module = "org.http4k:http4k-realtime-core" }
 http4k-security-core = { module = "org.http4k:http4k-security-core" }
 http4k-security-digest = { module = "org.http4k:http4k-security-digest" }
 http4k-security-oauth = { module = "org.http4k:http4k-security-oauth" }
@@ -242,6 +242,7 @@ http4k-ai = [
     "http4k-ai-llm-openai",
     "http4k-ai-mcp-sdk",
     "http4k-ai-mcp-testing",
+    "http4k-ai-mcp-x402",
 ]
 http4k-api = [
     "http4k-api-cloudevents",

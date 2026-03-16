@@ -23,6 +23,9 @@ dependencies {
 
     // if you want to test MCP servers or MCP Apps
     implementation("org.http4k.pro:http4k-ai-mcp-testing")
+
+    // for x402 payment-protected MCP tools
+    implementation("org.http4k.pro:http4k-ai-mcp-x402")
 }
 ```
 
@@ -248,6 +251,19 @@ This is perfect for organizing related tools, resources, or prompts that logical
 a module or library.
 
 {{< kotlin file="capability_pack_example.kt" >}}
+
+### x402 Payment-Protected Tools
+
+The `http4k-ai-mcp-x402` module integrates the [x402 protocol](/ecosystem/connect/reference/x402/) with MCP, allowing you to require cryptocurrency payments for individual tool calls. Payment information is exchanged via the MCP `_meta` field on tool requests and responses.
+
+The module provides two filters:
+
+- **`X402ToolFilter`** - A `ToolFilter` that wraps individual tools with payment requirements. Payment payloads are sent in `_meta["x402/payment"]` and settlement receipts are returned in `_meta["x402/payment-response"]`. Returns structured `PaymentRequired` errors when payment is missing or invalid.
+- **`McpFilters.X402PaymentRequired`** - A lower-level `McpFilter` that operates on raw MCP JSON-RPC requests for protocol-level payment gating.
+
+Both filters use a `PaymentCheck` function to determine whether a request is `Free` or `Required`, allowing you to mix free and paid tools in the same server:
+
+{{< kotlin file="x402_tool_example.kt" >}}
 
 ### MCP Apps: Server-Rendered UI
 
