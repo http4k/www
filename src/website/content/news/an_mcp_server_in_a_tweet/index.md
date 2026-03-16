@@ -1,7 +1,7 @@
 ---
 title: "An MCP Server That Fits in a Tweet (and MCP Apps That Don't Need To)"
 description: "http4k MCP SDK hits the 2025-11-25 spec, adds MCP Apps, OpenTelemetry, and a testing module - all with the testability you'd expect."
-date: 2026-03-10
+date: 2026-03-16
 image: image.webp
 ---
 
@@ -15,7 +15,7 @@ That's always been http4k's pitch, and now we've brought the party trick to MCP 
 
 Yes, it's a contrived example - there's no security, no observability, no structure. But it's also a working MCP server that hands your LLM one of the essential tools it needs to function: knowing what time it is. And with zero dependencies, no reflection, and no classpath scanning, it won't eat your RAM while it's at it - which matters when every AI workload on your cluster is fighting for memory.
 
-But with **v6.33.0.0**, the MCP story has grown well beyond party tricks. There's a *lot* of new goodness, so grab something warm and settle in.
+But with **v6.35.0.0**, the MCP story has grown well beyond party tricks. There's a *lot* of new goodness, so grab something warm and settle in.
 
 ## TL;DR - What's New?
 
@@ -24,6 +24,7 @@ But with **v6.33.0.0**, the MCP story has grown well beyond party tricks. There'
 - **http4k-ai-mcp-testing** module with `McpAppsHost` for local testing MCP Apps without Claude or NPX
 - **OpenTelemetry MCP Semantic Conventions support** (v1.38.0) - proper observability for your MCP servers
 - **OAuth with Resource Metadata** - the auth model the spec should have had from the start
+- **x402 Payment-Protected Tools** - monetise individual MCP tool calls with cryptocurrency payments via the x402 protocol
 - The **http4k Toolbox** now generates MCP server and MCP App projects - [toolbox.http4k.org](https://toolbox.http4k.org)
 - **Passing MCP conformance tests** - we don't consider spec compliance optional
 
@@ -66,6 +67,20 @@ And as a bonus for the keen amongst you, `McpAppsHost` gives you a pure Kotlin h
 ## See Everything with OpenTelemetry
 
 MCP servers that you can't observe are MCP servers you can't trust. We've added support for the [OpenTelemetry MCP Semantic Conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/mcp/), giving you proper server-side OTel convention spans just by plugging in a standardised `McpFilter` which will capture OTel traces across your MCP interactions, so your existing observability stack - Jaeger, Honeycomb, Datadog, whatever you fancy - just works. No custom instrumentation required.
+
+## Monetise Your Tools with x402
+
+So you've built a beautifully tested, fully observable MCP server. Now - and we realise this is a radical concept - what if you could actually get *paid* for it?
+
+The **`http4k-ai-mcp-x402`** module integrates the [x402 protocol](/ecosystem/connect/reference/x402/) with MCP, letting you require cryptocurrency payments for individual tool calls. Wrap any tool with `X402ToolFilter` and it'll demand payment before executing - no invoicing platform, no subscription management, no "please enter your credit card" forms. Just cryptographic proof that someone paid you, verified and settled before the tool runs.
+
+The best part? You can mix free and paid tools in the same server. Give away the appetisers, charge for the main course. Payment payloads flow through MCP's `_meta` fields, so everything stays within the protocol - no side channels, no out-of-band handshakes.
+
+Here's what mixing free and paid tools looks like in practice:
+
+{{< kotlin file="x402_tools.kt" >}}
+
+It's early days for the x402 ecosystem, but we think tool-level monetisation is going to matter a lot as MCP matures. And when it does, you'll already be ready.
 
 ## Ship It
 
