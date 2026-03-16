@@ -30,25 +30,7 @@ The [Instance Metadata Service](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 
 ### Example usage
 
-```kotlin
-const val USE_REAL_CLIENT = false
-
-fun main() {
-    // we can connect to the real service or the fake (drop in replacement)
-    val http: HttpHandler = if (USE_REAL_CLIENT) JavaHttpClient() else FakeInstanceMetadataService()
-
-    // create a client
-    val client = InstanceMetadataService.Http(http.debug())
-
-    // get local ip address
-    val localIp = client.getLocalIpv4()
-    println(localIp)
-
-    // get identity document
-    val identityDocument = client.getInstanceIdentityDocument()
-    println(identityDocument)
-}
-```
+{{< kotlin file="example.kt" >}}
 
 ### Credentials Provider
 

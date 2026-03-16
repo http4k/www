@@ -39,22 +39,7 @@ performance factor.
 
 ### Example usage
 
-```kotlin
-const val USE_REAL_CLIENT = false
-
-val http: HttpHandler = if (USE_REAL_CLIENT) JavaHttpClient() else FakeCloudWatch()
-
-// create a client
-val cloudWatch =
-    CloudWatch.Http(Region.US_EAST_1, { AwsCredentials("accessKeyId", "secretKey") }, http.debug())
-
-// all operations return a Result monad of the API type
-val result: Result<Metrics, RemoteFailure> = cloudWatch.listMetrics(
-    Namespace.of("foobar")
-)
-
-println(result)
-```
+{{< kotlin file="example.kt" >}}
 
 ### Default Fake port: 57564
 

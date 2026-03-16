@@ -29,31 +29,7 @@ The KMS connector provides the following Actions:
 
 ### Example usage
 
-```kotlin
-const val USE_REAL_CLIENT = false
-
-fun main() {
-    // we can connect to the real service or the fake (drop in replacement)
-    val http: HttpHandler = if(USE_REAL_CLIENT) JavaHttpClient() else FakeKMS()
-
-    // create a client
-    val client = KMS.Http(Region.of("us-east-1"), { AwsCredentials("accessKeyId", "secretKey") }, http.debug())
-
-    // all operations return a Result monad of the API type
-    val createdKeyResult: Result<KeyCreated, RemoteFailure> = client.createKey(ECC_NIST_P384, ENCRYPT_DECRYPT)
-    val key: KeyCreated = createdKeyResult.valueOrNull()!!
-    println(key)
-
-    // we can encrypt some text...
-    val encrypted: Encrypted = client.encrypt(keyId = key.KeyMetadata.KeyId, Base64Blob.encoded("hello"))
-        .valueOrNull()!!
-    println(encrypted.CiphertextBlob.decoded())
-
-    // and decrypt it again!
-    val decrypted: Decrypted = client.decrypt(keyId = key.KeyMetadata.KeyId, encrypted.CiphertextBlob).valueOrNull()!!
-    println(decrypted.Plaintext.decoded())
-}
-```
+{{< kotlin file="example.kt" >}}
 
 The client APIs utilise the `http4k-platform-aws` module for request signing, which means no dependencies on the incredibly fat
 Amazon-SDK JARs. This means this integration is perfect for running Serverless Lambdas where binary size is a

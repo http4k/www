@@ -26,24 +26,7 @@ performance factor.
 
 ### Example usage
 
-```kotlin
-const val USE_REAL_CLIENT = false
-
-fun main() {
-    val region = Region.of("us-east-1")
-    val roleArn = ARN.of("arn:aws:sts:us-east-1:000000000001:role:myrole")
-
-    // we can connect to the real service or the fake (drop in replacement)
-    val http: HttpHandler = if (USE_REAL_CLIENT) JavaHttpClient() else FakeSTS()
-
-    // create a client
-    val client = STS.Http(region, { AwsCredentials("accessKeyId", "secretKey") }, http.debug())
-
-    // all operations return a Result monad of the API type
-    val assumeRoleResult: Result<AssumedRole, RemoteFailure> = client.assumeRole(roleArn, "sessionId")
-    println(assumeRoleResult)
-}
-```
+{{< kotlin file="example.kt" >}}
 
 ### Default Fake port: 20434
 

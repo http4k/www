@@ -40,35 +40,7 @@ The S3 connector consists of 2 interfaces:
 
 ### Example usage
 
-```kotlin
-const val USE_REAL_CLIENT = false
-
-fun main() {
-    // we can connect to the real service or the fake (drop in replacement)
-    val http: HttpHandler = if (USE_REAL_CLIENT) JavaHttpClient() else FakeS3()
-
-    val bucketName = BucketName.of("foobar")
-    val bucketKey = BucketKey.of("keyName")
-    val region = Region.of("us-east-1")
-
-    // create global and bucket level clients
-    val s3 = S3.Http({ AwsCredentials("accessKeyId", "secretKey") }, http.debug())
-    val s3Bucket = S3Bucket.Http(bucketName, region, { AwsCredentials("accessKeyId", "secretKey") }, http.debug())
-
-    // all operations return a Result monad of the API type
-    val createResult: Result<Unit, RemoteFailure> = s3.createBucket(bucketName, region)
-    createResult.valueOrNull()!!
-
-    // we can store some content in the bucket...
-    val putResult: Result<Unit, RemoteFailure> = s3Bucket.putObject(bucketKey, "hellothere".byteInputStream())
-    putResult.valueOrNull()!!
-
-    // and get back the content which we stored
-    val getResult: Result<InputStream?, RemoteFailure> = s3Bucket.get(bucketKey)
-    val content: InputStream = getResult.valueOrNull()!!
-    println(content.reader().readText())
-}
-```
+{{< kotlin file="example.kt" >}}
 
 The client APIs utilise the `http4k-platform-aws` module for request signing, which means no dependencies on the incredibly fat
 Amazon-SDK JARs. This means this integration is perfect for running Serverless Lambdas where binary size is a

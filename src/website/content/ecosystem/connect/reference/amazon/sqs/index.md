@@ -31,31 +31,7 @@ performance factor.
 
 ### Example usage
 
-```kotlin
-const val USE_REAL_CLIENT = false
-
-fun main() {
-    val region = Region.of("us-east-1")
-    val queueName = QueueName.of("myqueue")
-    val queueArn = ARN.of(SQS.awsService, region, AwsAccount.of("000000001"), queueName)
-
-    // we can connect to the real service or the fake (drop in replacement)
-    val http: HttpHandler = if (USE_REAL_CLIENT) JavaHttpClient() else FakeSQS()
-
-    // create a client
-    val client = SQS.Http(region, { AwsCredentials("accessKeyId", "secretKey") }, http.debug())
-
-    // all operations return a Result monad of the API type
-    val createdQueueResult: Result<CreatedQueue, RemoteFailure> = client.createQueue(queueName, emptyMap(), emptyMap())
-    println(createdQueueResult.valueOrNull()!!)
-
-    // send a message
-    println(client.sendMessage(queueArn, "hello"))
-
-    // and receive it..
-    println(client.receiveMessage(queueArn))
-}
-```
+{{< kotlin file="example.kt" >}}
 
 Note that the FakeSQS is only suitable for very simple scenarios (testing and deployment for single consumer only) and
 does NOT implement real SQS semantics such as VisibilityTimeout or maximum number of retrieved messages (it delivers all

@@ -30,23 +30,7 @@ performance factor.
 
 ### Example usage
 
-```kotlin
-const val USE_REAL_CLIENT = false
-
-val http: HttpHandler = if (USE_REAL_CLIENT) JavaHttpClient() else FakeCloudWatchLogs()
-
-// creatxe a client
-val cloudWatchLogs =
-    CloudWatchLogs.Http(Region.US_EAST_1, { AwsCredentials("accessKeyId", "secretKey") }, http.debug())
-
-val result: Result<PutLogEventsResponse, RemoteFailure> = cloudWatchLogs.putLogEvents(
-    LogGroupName.of("foobar"),
-    LogStreamName.of("stream"),
-    emptyList()
-)
-
-println(result)
-```
+{{< kotlin file="example.kt" >}}
 
 ### Default Fake port: 56514
 
