@@ -119,6 +119,4 @@ since it will time out if not in an Amazon EC2 environment.
 
 To start:
 
-```kotlin
-FakeInstanceMetadataService().start()
-```
+{{< kotlin file="fake.kt" >}}

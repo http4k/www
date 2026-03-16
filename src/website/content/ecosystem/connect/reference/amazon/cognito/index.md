@@ -56,6 +56,4 @@ used to sign the JWTs.
 
 To start:
 
-```kotlin
-FakeCloudFront().start()
-```
+{{< kotlin file="fake.kt" >}}

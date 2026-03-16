@@ -73,6 +73,4 @@ performance factor.
 
 To start:
 
-```kotlin
-FakeEvidently().start()
-```
+{{< kotlin file="fake.kt" >}}

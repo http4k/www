@@ -34,6 +34,4 @@ performance factor.
 
 To start:
 
-```kotlin
-FakeScheduler().start()
-```
+{{< kotlin file="fake.kt" >}}

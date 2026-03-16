@@ -96,6 +96,4 @@ the `ChatCompletionGenerator` interface and return as appropriate.
 
 To start:
 
-```kotlin
-FakeAzureAI().start()
-```
+{{< kotlin file="fake.kt" >}}

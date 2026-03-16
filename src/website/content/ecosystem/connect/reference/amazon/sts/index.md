@@ -49,6 +49,4 @@ fun main() {
 
 To start:
 
-```kotlin
-FakeSTS().start()
-```
+{{< kotlin file="fake.kt" >}}

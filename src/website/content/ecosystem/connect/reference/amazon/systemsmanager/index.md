@@ -54,6 +54,4 @@ performance factor.
 
 To start:
 
-```kotlin
-FakeSecretsManager().start()
-```
+{{< kotlin file="fake.kt" >}}

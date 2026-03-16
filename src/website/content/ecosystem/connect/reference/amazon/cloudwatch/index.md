@@ -60,6 +60,4 @@ println(result)
 
 To start:
 
-```kotlin
-FakeCloudWatch().start()
-```
+{{< kotlin file="fake.kt" >}}

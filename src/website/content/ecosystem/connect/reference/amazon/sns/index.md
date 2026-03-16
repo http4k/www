@@ -33,6 +33,4 @@ performance factor.
 
 To start:
 
-```kotlin
-FakeSNS().start()
-```
+{{< kotlin file="fake.kt" >}}

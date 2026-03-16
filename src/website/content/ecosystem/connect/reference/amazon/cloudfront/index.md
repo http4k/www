@@ -46,6 +46,4 @@ fun main() {
 
 To start:
 
-```kotlin
-FakeCloudFront().start()
-```
+{{< kotlin file="fake.kt" >}}

@@ -54,6 +54,4 @@ fun main() {
 
 To start:
 
-```kotlin
-FakeMattermost().start()
-```
+{{< kotlin file="fake.kt" >}}

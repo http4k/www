@@ -166,6 +166,4 @@ to.
 
 To start:
 
-```kotlin
-FakeKafkaRest().start()
-```
+{{< kotlin file="fake.kt" >}}

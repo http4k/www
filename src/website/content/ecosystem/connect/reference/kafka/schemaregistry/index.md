@@ -29,6 +29,4 @@ The Fake provides the above actions.
 ### Default Fake port: 41466
 To start:
 
-```kotlin
-FakeSchemaRegistry().start()
-```
+{{< kotlin file="fake.kt" >}}

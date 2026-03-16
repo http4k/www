@@ -69,6 +69,4 @@ the `MessageContentGenerator` interface and return as appropriate.
 
 To start:
 
-```kotlin
-FakeAnthropicAI().start()
-```
+{{< kotlin file="fake.kt" >}}

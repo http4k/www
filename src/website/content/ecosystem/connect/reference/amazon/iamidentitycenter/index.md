@@ -28,9 +28,7 @@ Actions:
 
 To start:
 
-```kotlin
-FakeOIDC().start()
-```
+{{< kotlin file="fake_oidc.kt" >}}
 
 ## SSO
 
@@ -41,9 +39,7 @@ Actions:
 
 To start:
 
-```kotlin
-FakeSSO().start()
-```
+{{< kotlin file="fake_sso.kt" >}}
 
 ## Interactive CLI login
 

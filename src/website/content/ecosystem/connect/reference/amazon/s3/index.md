@@ -91,9 +91,7 @@ requests.
 - Global: default port: 26467
 - Bucket: default port: 42628
 
-```kotlin
-FakeS3().start()
-```
+{{< kotlin file="fake.kt" >}}
 
 ### Connecting to a local S3 emulator
 

@@ -31,6 +31,4 @@ The client APIs utilise the `http4k-platform-aws` module for request signing, wh
 ### Default Fake port: 30879
 
 To start:
-```kotlin
-FakeFirehose().start()
-```
+{{< kotlin file="fake.kt" >}}

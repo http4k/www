@@ -29,6 +29,4 @@ performance factor.
 
 To start:
 
-```kotlin
-FakeSES().start()
-```
+{{< kotlin file="fake.kt" >}}

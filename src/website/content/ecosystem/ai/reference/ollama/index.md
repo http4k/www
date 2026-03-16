@@ -81,6 +81,4 @@ the `ChatCompletionGenerator` interface and return as appropriate.
 
 To start:
 
-```kotlin
-FakeOllama().start()
-```
+{{< kotlin file="fake.kt" >}}

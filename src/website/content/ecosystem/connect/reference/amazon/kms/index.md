@@ -66,6 +66,4 @@ a trivially simple (and fast) reversible algorithm which simulates this function
 
 To start:
 
-```kotlin
-FakeKMS().start()
-```
+{{< kotlin file="fake.kt" >}}

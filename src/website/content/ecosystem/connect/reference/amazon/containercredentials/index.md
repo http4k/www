@@ -27,6 +27,4 @@ performance factor.
 
 To start:
 
-```kotlin
-FakeContainerCredentials().start()
-```
+{{< kotlin file="fake.kt" >}}

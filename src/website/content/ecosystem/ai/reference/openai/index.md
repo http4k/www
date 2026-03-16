@@ -105,6 +105,4 @@ the `ChatCompletionGenerator` interface and return as appropriate.
 
 To start:
 
-```kotlin
-FakeOpenAI().start()
-```
+{{< kotlin file="fake.kt" >}}

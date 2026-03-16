@@ -50,6 +50,4 @@ performance factor.
 
 To start:
 
-```kotlin
-FakeAppRunner().start()
-```
+{{< kotlin file="fake.kt" >}}
