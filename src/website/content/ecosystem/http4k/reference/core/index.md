@@ -69,21 +69,7 @@ Filters are designed to simply compose together (using `then()`) , creating reus
 be applied to any `HttpHandler`.
 For example, to add Basic Auth and latency reporting to a service:
 
-```kotlin
-val handler = { _: Request -> Response(OK) }
-
-val myFilter = Filter { next: HttpHandler ->
-    { request: Request ->
-        val start = System.currentTimeMillis()
-        val response = next(request)
-        val latency = System.currentTimeMillis() - start
-        println("I took $latency ms")
-        response
-    }
-}
-val latencyAndBasicAuth: Filter = ServerFilters.BasicAuth("my realm", "user", "password").then(myFilter)
-val app: HttpHandler = latencyAndBasicAuth.then(handler)
-```
+{{< kotlin file="filters.kt" >}}
 
 The `http4k-core` module comes with a set of handy Filters for application to both Server and Client `HttpHandlers`,
 covering common things like:
@@ -109,14 +95,7 @@ Create a Router using routes() to bind a static or dynamic path to either an Htt
 These Routers can be nested infinitely deep and http4k will search for a matching route using a depth-first search
 algorithm, before falling back finally to a 404:
 
-```kotlin
-routes(
-    "/hello" bind routes(
-        "/{name:.*}" bind GET to { request: Request -> Response(OK).body("Hello, ${request.path("name")}!") }
-    ),
-    "/fail" bind POST to { request: Request -> Response(INTERNAL_SERVER_ERROR) }
-).asServer(Jetty(8000)).start()
-```
+{{< kotlin file="routing.kt" >}}
 
 Note that the `http4k-api-openapi` module contains a more typesafe implementation of routing functionality, with
 runtime-generated live documentation in OpenApi format.
