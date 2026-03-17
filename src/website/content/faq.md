@@ -52,11 +52,7 @@ If you're running http4k in production and would like to be listed on the site a
 **A.** With binary attachments, you need to turn ensure that the pre-flight validation does not eat the stream. You can 
 do this by instruction http4k to ignore the incoming body for validation purposes:
 
-```kotlin
-routes += "/api/document-upload" meta {
-    preFlightExtraction = PreFlightExtraction.IgnoreBody
-} bindContract POST to { req -> Response(OK) }
-```
+{{< kotlin file="binary_upload.kt" >}}
 
 ### Serverless 
 **Q. When using AWS Lambda, I get an "method is invalid" error when testing my lambda.**

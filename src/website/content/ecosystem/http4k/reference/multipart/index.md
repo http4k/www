@@ -26,8 +26,4 @@ See the [how-to guides](/howto/use_multipart_forms/) for example use.
 
 With binary attachments, you need to turn ensure that the pre-flight validation does not eat the stream. This is possible by instructing http4k to ignore the incoming body for validation purposes:
 
-```kotlin
-routes += "/api/document-upload" meta {
-    preFlightExtraction = PreFlightExtraction.IgnoreBody
-} bindContract POST to { req -> Response(OK) }
-```
+{{< kotlin file="binary_upload.kt" >}}
