@@ -19,15 +19,7 @@ The Slack connector provides the following Actions:
 
 ### Example usage
 
-```kotlin
-val message = SlackMessage("message", channel = ChannelId.of("channel"))
-val slack = Slack.Http({ SlackToken.of("my slack token") })
-slack.chatPostMessage(message)
-
-val webhooks = SlackWebhook.Http(Uri.of("https://hooks.slack.com/services/some/webhook/path"))
-slackWebhooks.webhookPostMessage(message)
-
-```
+{{< kotlin file="example.kt" >}}
 
 ### Default Fake port: 23660
 
