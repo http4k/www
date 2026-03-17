@@ -9,27 +9,8 @@ It is very easy to implement your own clients to follow the pattern. For the sys
 
 1. Depend on the `http4k-connect-core` artifact
 2. Add an Action interface and implementation:
-```kotlin
-interface MySystemAction<R> : Action<R>
-
-data class Echo(val value: String) : MySystemAction<Echoed> {
-    override fun toRequest() = Request(GET, "echo").body(value)
-    override fun toResult(response: Response) = Echoed(response.bodyString())
-}
-
-data class Echoed(val value: String)
-```
+{{< kotlin file="action.kt" >}}
 3. Add your client interface and HTTP implementation:
-```kotlin
-interface MySystem {
-    operator fun <R : Any> invoke(action: MySystemAction<R>): R
-
-    companion object
-}
-
-fun MySystem.Companion.Http(http: HttpHandler) = object : MySystem {
-    override fun <R : Any> invoke(action: MySystemAction<R>) = action.toResult(http(action.toRequest()))
-}
-```
+{{< kotlin file="client.kt" >}}
 
 See also the guide on using KSP to generate extension functions for your clients!
