@@ -4,8 +4,8 @@ import org.http4k.connect.amazon.CredentialsProvider
 import org.http4k.connect.amazon.core.model.AwsAccount
 import org.http4k.connect.amazon.core.model.Region
 import org.http4k.connect.amazon.iamidentitycenter.SSO
-import org.http4k.connect.amazon.iamidentitycenter.SSOProfile
-import org.http4k.connect.amazon.sts.model.RoleName
+import org.http4k.connect.amazon.iamidentitycenter.model.RoleName
+import org.http4k.connect.amazon.iamidentitycenter.model.SSOProfile
 import org.http4k.core.Uri
 
 val provider = CredentialsProvider.SSO(
