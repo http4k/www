@@ -1,15 +1,12 @@
 package content.ecosystem.connect.reference.kafka.rest
 
-import org.http4k.connect.kafka.rest.model.PartitionId
-import org.http4k.connect.kafka.rest.model.Record
-import org.http4k.connect.kafka.rest.model.Records
-import java.util.UUID
+import org.http4k.connect.kafka.rest.v2.model.Records
 
-//Records.Avro(
-//    listOf(
+val a = Records.Avro(
+    listOf(
 //        Record(
 //            RandomEvent(UUID.nameUUIDFromBytes(it.toByteArray())),
 //            RandomEvent(UUID(0, 0), PartitionId.of(123))
 //        )
-//    )
-//)
+    )
+)
