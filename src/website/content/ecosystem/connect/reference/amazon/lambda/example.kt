@@ -1,5 +1,5 @@
-package content.ecosystem.connect.reference.amazon.lambda
-
+import com.amazonaws.services.lambda.runtime.Context
+import com.amazonaws.services.lambda.runtime.events.ScheduledEvent
 import dev.forkhandles.result4k.Result
 import org.http4k.aws.AwsCredentials
 import org.http4k.client.JavaHttpClient
@@ -8,28 +8,27 @@ import org.http4k.connect.amazon.core.model.Region
 import org.http4k.connect.amazon.lambda.FakeLambda
 import org.http4k.connect.amazon.lambda.Http
 import org.http4k.connect.amazon.lambda.Lambda
-import org.http4k.connect.amazon.lambda.invokeFunction
+import org.http4k.connect.amazon.lambda.action.invokeFunction
 import org.http4k.connect.amazon.lambda.model.FunctionName
 import org.http4k.core.HttpHandler
-import org.http4k.core.Request
-import org.http4k.core.Response
-import org.http4k.core.Status.Companion.OK
 import org.http4k.filter.debug
 import org.http4k.format.Moshi
+import org.http4k.serverless.FnHandler
+import org.http4k.serverless.FnLoader
+
+data class Resp(val value: String)
 
 const val USE_REAL_CLIENT = false
 
-data class Req(val value: String)
-data class Resp(val value: String)
-
 fun main() {
-    val deployedLambda = FunctionName("http4kLambda")
+    val deployedLambda = FunctionName.of("http4kLambda")
 
     val fakeLambda = FakeLambda(
-        deployedLambda to { req: Request ->
-            val request = Moshi.asA<Req>(req.bodyString())
-            Response(OK)
-                .body(Moshi.asFormatString(Resp(request.value)))
+        FnLoader {
+            FnHandler { e: ScheduledEvent, ctx: Context ->
+                println(e.toString())
+                e.toString()
+            }
         }
     )
 
@@ -40,6 +39,12 @@ fun main() {
     val client = Lambda.Http(Region.of("us-east-1"), { AwsCredentials("accessKeyId", "secretKey") }, http.debug())
 
     // all operations return a Result monad of the API type
-    val invokeResult: Result<Resp, RemoteFailure> = client(InvokeFunction(deployedLambda, Req("hello"), Moshi))
+    val invokeResult: Result<Resp, RemoteFailure> = client.invokeFunction(
+        deployedLambda,
+        ScheduledEvent().apply {
+            account = "awsAccount"
+        }, Moshi
+    )
     println(invokeResult)
 }
+

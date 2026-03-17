@@ -6,9 +6,9 @@ import org.http4k.connect.amazon.core.model.Region
 import org.http4k.connect.amazon.dynamodb.DynamoDb
 import org.http4k.connect.amazon.dynamodb.FakeDynamoDb
 import org.http4k.connect.amazon.dynamodb.Http
+import org.http4k.connect.amazon.dynamodb.mapper.tableMapper
 import org.http4k.connect.amazon.dynamodb.model.Attribute
 import org.http4k.connect.amazon.dynamodb.model.TableName
-import org.http4k.connect.amazon.dynamodb.model.uuid
 import org.http4k.filter.debug
 import java.util.UUID
 

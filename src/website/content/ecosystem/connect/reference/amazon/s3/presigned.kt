@@ -2,9 +2,9 @@ package content.ecosystem.connect.reference.amazon.s3
 
 import org.http4k.aws.AwsCredentials
 import org.http4k.connect.amazon.core.model.Region
-import org.http4k.connect.amazon.s3.S3BucketPreSigner
 import org.http4k.connect.amazon.s3.model.BucketKey
 import org.http4k.connect.amazon.s3.model.BucketName
+import org.http4k.connect.amazon.s3.model.S3BucketPreSigner
 import java.time.Duration
 
 fun main() {
