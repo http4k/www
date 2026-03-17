@@ -30,9 +30,7 @@ server backends (see above). SSE communication consists of 3 main concepts:
 
 The simplest possible SSE handler can be mounted as a `SseConsumer` function onto a server with:
 
-```kotlin
-{ sse: Sse -> sse.send(SseMessage.Data("hello")) }.asServer(Undertow(9000)).start()
-```
+{{< kotlin file="sse_server.kt" >}}
 
 ### Mixing HTTP and SSE services
 
