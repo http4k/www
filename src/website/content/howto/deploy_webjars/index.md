@@ -23,9 +23,7 @@ http://localhost:8080/webjars/swagger-ui/3.43.0/index.html
 
 http4k integrates this functionality into the core library and ships with the `webJars()` router plugin to activate. As the plugin is just an `HttpHandler`, the simplest example is just to launch WebJars directly as a Server:
 
-```kotlin
-webJars().asServer(SunHttp(8080)).start()
-```
+{{< kotlin file="webjars_server.kt" >}}
 
 ... or a more standard use-case is to mix it into your application routing as in the example below:
 
