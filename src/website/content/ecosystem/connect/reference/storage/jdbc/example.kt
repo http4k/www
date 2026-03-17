@@ -14,7 +14,7 @@ val ds = HikariDataSource(
         jdbcUrl = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1"
     })
 
-val storage = Storage.Jdbc(ds, "mytable", Moshi)
+val storage = Storage.Jdbc<AnEntity>(ds, "mytable", Moshi)
 
 val store = run {
     storage["myKey"] = AnEntity("hello")

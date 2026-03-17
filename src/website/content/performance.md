@@ -13,11 +13,7 @@ project, which assesses frameworks over a series of realistic tests.
 For this benchmark, no customisation or performance tuning of the underlying servers is done - the default application 
 HttpHandler is used which is then plugged into each custom backend, as below:
 
-```kotlin
-fun main() {
-    Http4kBenchmarkServer(PostgresDatabase()).start(Undertow(9000))
-}
-```
+{{< kotlin file="benchmark.kt" >}}
 
 Command-line JVM options, however, were tuned for the test to take advantage of various JVM features.
 
