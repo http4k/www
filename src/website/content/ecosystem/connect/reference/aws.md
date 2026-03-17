@@ -19,9 +19,7 @@ Authing into AWS services is possible with a few different mechanisms based on t
 - AWS_SESSION_TOKEN
 
 This is the default mechanism, so no special action is required:
-```kotlin
-val sqs = SQS.Http()
-```
+{{< kotlin file="static_auth.kt" >}}
 
 #### STS authorisation uses:
 - AWS_REGION
@@ -30,9 +28,7 @@ val sqs = SQS.Http()
 - AWS_SESSION_TOKEN
 
 This auth method uses the STS `AssumeRole` action to retrieve the rotating credentials from STS using auth from the environmental variables. This requires overriding the credentials provider used when constructing the client:
-```kotlin
-val sqs = SQS.Http(credentialsProvider = CredentialsProvider.STS())
-```
+{{< kotlin file="sts_auth.kt" >}}
 
 #### STS WebIdentity authorisation uses:
 - AWS_ROLE_ARN
@@ -40,6 +36,4 @@ val sqs = SQS.Http(credentialsProvider = CredentialsProvider.STS())
 
 This auth method uses the STS `AssumeRoleWithWebIdentity` action to retrieve the rotating credentials from STS using the Web Identity JWT from the file path contained in the env variable. This requires overriding the credentials provider used when constructing the client:
 
-```kotlin
-val sqs = SQS.Http(credentialsProvider = CredentialsProvider.STSWebIdentity())
-```
+{{< kotlin file="sts_web_identity_auth.kt" >}}

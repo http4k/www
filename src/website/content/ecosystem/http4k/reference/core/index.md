@@ -48,14 +48,7 @@ nil. Here is the simplest example - note that we don't need any special infrastr
 neither do we
 need to launch a real HTTP container to exercise it:
 
-```kotlin
-val handler = { request: Request -> Response(OK).body("Hello, ${request.query("name")}!") }
-val get = Request(Method.GET, "/").query("name", "John Doe")
-val response = handler(get)
-
-println(response.status)
-println(response.bodyString())
-```
+{{< kotlin file="httphandlers.kt" >}}
 
 ### Filters
 
@@ -251,9 +244,6 @@ streams later.
 Creates `curl` command for a given request - this is useful to include in audit logs so exact requests can be replayed
 if required:
 
-```kotlin
-val curl = Request(POST, "http://httpbin.org/post").body(listOf("foo" to "bar").toBody()).toCurl()
-// curl -X POST --data "foo=bar" "http://httpbin.org/post"
-```
+{{< kotlin file="curl_format.kt" >}}
 
 [http4k]: https://http4k.org
