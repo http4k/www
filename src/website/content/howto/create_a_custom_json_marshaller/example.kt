@@ -30,9 +30,7 @@ object MyJackson : ConfigurableJackson(
 
 data class PublicType(val value: String)
 data class SecretType(val value: String) {
-    override fun toString(): String {
-        return "****"
-    }
+    override fun toString() = "****"
 }
 
 data class MyType(val public: PublicType, val hidden: SecretType)
