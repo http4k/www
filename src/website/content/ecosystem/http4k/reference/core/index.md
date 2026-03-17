@@ -164,65 +164,17 @@ of 3 main concepts:
 The routing aspect of Websockets is done using a very similar API to the standard HTTP routing for HTTP messages and
 dynamic parts of the upgrade request are available when constructing a websocket instance:
 
-```kotlin
-
-import java.nio.file.Pathdata
-
-class Wrapper(val value: String)
-
-val body = WsMessage.string().map(::Wrapper, Wrapper::value).toLens()
-
-val nameLens = Path.of("name")
-
-val ws: WsHandler = websockets(
-    "/hello" bind websockets(
-        "/{name}" bind { req: Request ->
-            WsResponse { ws: Websocket ->
-                val name = nameLens(req)
-                ws.send(WsMessage("hello $name"))
-                ws.onMessage {
-                    val received = body(it)
-                    ws.send(body(received))
-                }
-                ws.onClose {
-                    println("closed")
-                }
-            }
-        }
-    )
-)
-```
+{{< kotlin file="websocket_example.kt" >}}
 
 A `WsHandler` can be combined with an `HttpHandler` into a `PolyHandler` (using the `poly()` DSL) and then mounted into
 a supported backend server using `asServer()`:
 
-```kotlin
-val app = poly(
-    routes(
-        "/" bind { r: Request -> Response(OK) }
-    ),
-    websockets(
-        "/ws" bind { req: Request ->
-            WsResponse { ws: Websocket ->
-                ws.send(WsMessage("hello!"))
-            }
-        }
-    )
-)
-app.asServer(Jetty(9000)).start()
-```
+{{< kotlin file="websocket_poly.kt" >}}
 
 Alternatively, the `WsHandler` can be also converted to a synchronous `WsClient` - this allows testing to be done
 completely offline, which allows for super-fast tests:
 
-```kotlin
-val client = app.testWsClient(Request(Method.GET, "ws://localhost:9000/hello/bob"))!!
-
-client.send(WsMessage("1"))
-client.close(Status(200, "bob"))
-
-client.received.take(2).forEach(::println)
-```
+{{< kotlin file="websocket_testing.kt" >}}
 
 ### Request and Response toString()
 
