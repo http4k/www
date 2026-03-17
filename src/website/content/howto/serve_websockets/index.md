@@ -26,9 +26,7 @@ dependencies {
 
 ### Websocket as a Function
 The simplest possible Websocket can be mounted as a `WsConsumer` function onto a server with:
-```kotlin
-{ ws: Websocket -> ws.send(WsMessage("hello")) }.asServer(Jetty(9000)).start()
-```
+{{< kotlin file="ws_example.kt" >}}
 
 ### Mixing HTTP and Websocket services 
 Both Websockets and Http handlers in **http4k** are routed using a similar path-based API. We combine them into a single `PolyHandler` which can handle both `http://` and `ws://`, and then convert to a Server as usual:
