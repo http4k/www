@@ -69,34 +69,16 @@ val extracted: AnObject = lens(item)
 
 #### Example
 Given that a record in Dynamo will have many typed values, we first define a set of attributes which are relevant for the case in question. These methods construct Lenses which can be used to inject or extract typed values safely:
-```kotlin
-val attrS = Attribute.string().optional("theNull")
-val attrBool = Attribute.boolean().required("theBool")
-val attrN = Attribute.int().optional("theNum")
-val attrI = Attribute.instant().required("theInstant")
-val attrM = Attribute.map().required("theMap")
-```
+{{< kotlin file="attributes_example.kt" >}}
 
 To construct an Item or Key to send to Dynamo, we can bind the values at the same time:
-```kotlin
-val item = Item(
-    attrS of "hello",
-    attrN of null,
-    attrM of Item(attrI of Instant.now())
-)
-```
+{{< kotlin file="item_construction.kt" >}}
 
 To deconstruct an Item or Key to send to Dynamo, we simply apply the attributes as functions to the container:
-```kotlin
-val string: String? = attrS(item)
-val boolean: Boolean = attrBool(item)
-val instant: Instant = attrI(attrM(item))
-```
+{{< kotlin file="item_deconstruction.kt" >}}
 
 On missing or invalid value, an exception is thrown. To counter this we can use the built in Result4k monad marshalling: 
-```kotlin
-val boolean: Result<Boolean, LensFailure> = attrBool.asResult()(item)
-```
+{{< kotlin file="result_marshalling.kt" >}}
 
 It is also possible to `map()` lenses to provide marshalling into your own types.
 
@@ -196,41 +178,4 @@ filterExpression {
 
 ### General example usage of API Client
 
-```kotlin
-// we can connect to the real service
-val http: HttpHandler = JavaHttpClient()
-
-// create a client
-val client = DynamoDb.Http(Region.of("us-east-1"), { AwsCredentials("accessKeyId", "secretKey") }, http.debug())
-
-val table = TableName.of("myTable")
-
-// we can bind values to the attributes
-client.putItem(
-    table,
-    Item = mapOf(
-        attrS to "foobar",
-        attrBool to true,
-        attrB to Base64Blob.encode("foo"),
-        attrBS to setOf(Base64Blob.encode("bar")),
-        attrN to 123,
-        attrNS to setOf(123, 12.34),
-        attrL to listOf(
-            List(listOf(AttributeValue.Str("foo"))),
-            Num(123),
-            Null()
-        ),
-        attrM to mapOf(attrS to "foo", attrBool to false),
-        attrSS to setOf("345", "567"),
-        attrNL to null
-    )
-)
-
-// lookup an item from the database
-val item = client.getItem(table, key = mapOf(attrS to "hello")).valueOrNull()!!.item!!
-val str: String? = attrS(item)
-
-// all operations return a Result monad of the API type
-val deleteResult: Result<TableDescriptionResponse, RemoteFailure> = client.deleteTable(table)
-println(deleteResult)
-```
+{{< kotlin file="general_usage.kt" >}}
