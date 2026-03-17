@@ -85,11 +85,7 @@ Most of the time when working with API models in http4k, you have example messag
 
 ... results in these Data Classes:
 
-```kotlin
-data class JsonRoot(val child: List<String>?, val num: Number?)
-
-data class Base(val jsonRoot: JsonRoot?)
-```
+{{< kotlin file="data_classes.kt" >}}
 
 Convert your JSON/XML/Yaml [here](https://toolbox.http4k.org/dataclass).
 
@@ -109,15 +105,7 @@ hello from http4k
 
 ... results in this HTTP message builder code:
 
-```kotlin
-fun request(): Request = Request(Method.POST, "/example/index.html")
-	.query("query1", "abc")
-	.query("query2", "def")
-	.header("Host", "toolbox.http4k.org")
-	.header("Accept", "image/gif, image/jpeg, */*")
-	.header("Content-Type", "text/plain")
-	.body("""hello from http4k""")
-```
+{{< kotlin file="http_message.kt" >}}
 
 Build HTTP messages from raw HTTP [here](https://toolbox.http4k.org/http).
 
