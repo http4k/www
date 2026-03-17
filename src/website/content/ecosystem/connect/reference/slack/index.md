@@ -33,6 +33,4 @@ slackWebhooks.webhookPostMessage(message)
 
 To start:
 
-```kotlin
-FakeSlack().start()
-```****
+{{< kotlin file="fake.kt" >}}
