@@ -139,23 +139,13 @@ used during development and the Classpath strategy is used to serve assets in pr
 usually based on a "devmode" flag when constructing your app". **Note** that you should avoid setting the Classpath
 value to the root because otherwise it will serve anything from your classpath (including Java class files!)!:
 
-```kotlin
-routes(
-    "/static" bind static(Classpath("/org/http4k/some/package/name")),
-    "/hotreload" bind static(Directory("path/to/static/dir/goes/here"))
-)
-```
+{{< kotlin file="static_assets.kt" >}}
 
 ### Single Page Apps
 
 These can be easily activated as below, and default to serving from `/public` package:
 
-```kotlin
-routes(
-    "/reference/api" bind { Response(OK).body("some api content") },
-    singlePageApp()
-)
-```
+{{< kotlin file="single_page_app.kt" >}}
 
 ### Typesafe Websockets.
 
