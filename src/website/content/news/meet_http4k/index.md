@@ -54,20 +54,10 @@ typealias HttpHandler = (Request) -> Response
 ```
 Below is a entire http4k application that echoes the request body back in the response. It only relies on the `http4k-core` 
 module, which itself has zero dependencies:
-```kotlin
-val app = { request: Request -> Response(OK).body(request.body) }
-val server = app.asServer(SunHttp(8000)).start()
-```
+{{< kotlin file="echo_app.kt" >}}
 The `Request` and `Response` objects in there are immutable data classes/POKOs, so testing the app requires absolutely no 
 extra infrastructure - just call the function, it's as easy as:
-```kotlin
-class AppTest {
-    @Test
-    fun `echoes request body`() {
-        assertThat(app(Request(POST, "/").body("hello")), equalTo(Response(OK).body("hello")))
-    }
-}
-```
+{{< kotlin file="echo_test.kt" >}}
 To plug it into a different Server-backend, just depend on the relevant module (Jetty, Undertow, Netty, Apache (httpcore), 
 Ktor CIO, Ktor Netty, and SunHttp are available) and change the call to `asServer()`.
 
@@ -79,33 +69,14 @@ interface Filter : (HttpHandler) -> HttpHandler
 For API conciseness and discoverability reasons this is modelled as an Interface and not a [Typealias] - it also has a 
 couple of Kotlin [extension methods] to allow you to compose 
 `Filters` with `HttpHandlers` and other `Filters`:
-```kotlin
-val setContentType = Filter { next ->
-        { request -> next(request).header("Content-Type", "text/plain") }
-    }
-val repeatBody = Filter { next ->
-        { request -> next(request.body(request.bodyString() + request.bodyString())) }
-    }
-val composedFilter: Filter = repeatBody.then(setContentType)
-val decoratedApp: HttpHandler = composedFilter.then(app)
-```
+{{< kotlin file="filter_example.kt" >}}
 Filters are also trivial to test independently, because they are generally just stateless functions.
 
 #### Routing
 http4k's nestable routing looks a lot like every other Sinatra-style framework these 
 days, and allows for infinitely nesting `HttpHandlers` - this just exposes another `HttpHandler` so you can easily extract, 
 test and reuse sets of routes as easily as you could with one:
-```kotlin
-val app: HttpHandler = routes(
-    "/app" bind GET to decoratedApp,
-    "/other" bind routes(
-        "/delete" bind DELETE to { _: Request -> Response(OK) },
-        "/post/{name}" bind POST to { request: Request -> 
-            Response(OK).body("you POSTed to ${request.path("name")}") 
-        }
-    )
-)
-```
+{{< kotlin file="routing_example.kt" >}}
 
 And that it - those functions are everything you need to know to write a simple http4k application. The `http4k-core` 
 module rocks in at about 700kb, and has zero dependencies (other than the Kotlin language itself). Additionally, everything 
@@ -123,31 +94,19 @@ just in case you've forgotten:
 typealias HttpHandler = (Request) -> Response
 ```
 What does that mean in practice? Well - for one thing, it's less for your brain to learn  because you already know the API:
-```kotlin
-val client: HttpHandler = ApacheClient()
-val response: Response = client(Request(GET, "http://server/path"))
-```
+{{< kotlin file="symmetric_client.kt" >}}
 For another, it means that since clients are *just function*s you can easily stub them for testing, and since applications 
 and clients are interchangeable, they can be plugged together in memory without putting them on the network - which makes 
 testing insanely fast:
 
-```kotlin
-fun MyApp1(): HttpHandler = { Response(OK) }
-fun MyApp2(app1: HttpHandler): HttpHandler = { app1(it) }
-
-val app1: HttpHandler = MyApp1()
-val app2: HttpHandler = MyApp2(app1)
-```
+{{< kotlin file="symmetric_apps.kt" >}}
 http4k provides a HTTP client adapters for both [Apache] and [OkHttp], 
 all with streaming support.
 
 ### Claim C. Typesafe HTTP with Lenses
 The immutable http4k model for HTTP objects contains all the usual suspect methods for getting values from the messages. 
 For instance, if we are expecting a search parameter with a query containing a page number:
-```kotlin
-val request = Request(GET, "http://server/search?page=123")
-val page: Int = request.query("page")!!.toInt
-```
+{{< kotlin file="typesafe_request.kt" >}}
 ...but we also want to ensure that the expected values are both present and valid, since the above example will fail if 
 either of those things is not true. For this purpose, we can use a [Lens] to enforce the expected HTTP contract.
 
@@ -159,42 +118,23 @@ A Lens is a bi-directional entity which can be used to either *get* or *set* a p
 http4k provides a DSL to configure these lenses to target particular parts of the message, whilst at the same time 
 specifying the requirement for those parts (i.e. mandatory or optional) and the type. For the above example, we could use 
 the `Query` Lens builder and then `invoke()` the Lens on the message to extract the target value:
-```kotlin
-val pageLens = Query.int().required("page")
-val page: Int = pageLens(Request(GET, "http://server/search?page=123"))
-```
+{{< kotlin file="lens_basics.kt" >}}
 If the query parameter is missing or not an Int, the lens extraction operation will fail. There are similar Lens builder 
 functions for all parts of the HTTP message (`Header`, `Path`, `Body`, `FormField` etc..), and functions for all common 
 JVM primitive types. They are all completely typesafe - there is no reflection or magic going on - just marshalling of 
 the various entities (in this case String to Int conversion).
 
 In the case of failure, we need to apply a Filter to detect the errors and convert them to a BAD_REQUEST response:
-```kotlin
-val queryName = Query.string().required("name")
-val app: HttpHandler = routes(
-      "/post" bind POST to { request: Request -> Response(OK).body(queryName(request)) }
-    )
-
-val app = ServerFilters.CatchLensFailure.then(handler)(Request(GET, "/hello/2000-01-01?myCustomType=someValue"))
-```
+{{< kotlin file="lens_catchfailure.kt" >}}
 
 Lenses can also be applied with a correctly typed value (via `invoke()`) to set it *onto* a target object - and as HTTP 
 messages in http4k are immutable, this results in a copy of the modified message:
-```kotlin
-val pageSizeLens = Header.int().required("page")
-val page: Response = pageLens(Response(OK), 123)
-// or apply multiple lenses using with()
-val updated: Request = Request(GET, "/foo").with(pageLens of 123, pageSizeLens of 10)
-```
+{{< kotlin file="lens_set.kt" >}}
 
 Securely extracting JDK primitives from HTTP messages is great, but we really want to avoid primitives entirely and go 
 straight to domain types. During construction of Lens, the builders allow mapping to occur so we can leverage Kotlin data 
 classes. This works for both get and set operations:
-```kotlin
-data class MyDate(val value: LocalDate)
-val dateQuery = Query.localDate().map(::MyDate, MyDate::value).required("date")
-val myDate: MyDate = dateQuery(Request(GET, "http://server/search?date=2000-01-01"))
-```
+{{< kotlin file="lens_map.kt" >}}
 
 #### Lensing HTTP bodies with Data classes
 Some of the supported message libraries (eg. GSON, Jackson, Moshi, XML) provide the mechanism to automatically marshall 
@@ -202,14 +142,7 @@ data objects to/from JSON and XML using reflection (oops - looks like we broke o
 we're not doing it ;) !). This behaviour is supported in http4k Lenses through the use of the `auto()` method, which 
 will marshall objects to/from HTTP messages:
 
-```kotlin
-data class Email(val value: String)
-data class Message(val subject: String, val from: Email, val to: Email)
-
-val messageLens = Body.auto<Message>().toLens()
-val body = """{"subject":"hello","from":{"value":"bob@git.com"},"to":{"value":"sue@git.com"}}"""
-val message: Message = messageLens(Request(GET, "/").body(body))
-```
+{{< kotlin file="auto_marshalling.kt" >}}
 
 This mechanism works for all incoming and outgoing JSON and XML Requests and Responses. To assist with developing whilst 
 using this type of auto-marshalling, we have created a [tool](https://toolbox.http4k.org/dataclass) to automatically 
@@ -226,15 +159,7 @@ the `HttpHandler` which is adapted to the API of the `ApiGatewayProxyRequest/Api
 is AWS, there is a fair amount of configuration required to make this possible, but the only http4k specific config is to set the function execution to call `org.http4k.MyLambdaFunction`
 
 Here's a simple example:
-```kotlin
-object TweetEcho : AppLoader {
-    override fun invoke(env: Map<String, String>): HttpHandler = {
-        Response(OK).body(it.bodyString().take(140))
-    }
-}
-
-class MyLambdaFunction : ApiGatewayV2LambdaFunction(TweetEcho)
-```
+{{< kotlin file="serverless.kt" >}}
 Since http4k is very dependency-light, full binary uploads of these AWS Lambdas tend to be very small - and by utilising 
 [Proguard] we've seen the size of a Lambda UberJar go as small as 150kb.
 
