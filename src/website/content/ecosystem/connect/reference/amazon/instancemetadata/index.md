@@ -49,36 +49,7 @@ The Instance Metadata Service also offers a `RegionProvider`.
 If the application is running inside an Amazon EC2 environment,
 this provider can detect the current AWS region.
 
-```kotlin
-fun main() {
-    // we can connect to the real service or the fake (drop in replacement)
-    val imdsHttp: HttpHandler = if (USE_REAL_CLIENT) JavaHttpClient() else FakeInstanceMetadataService()
-    val snsHttp: HttpHandler = if (USE_REAL_CLIENT) JavaHttpClient() else FakeSNS()
-
-    /*
-     * Build a RegionProvider chain with the following steps:
-     * 1. Try to get region from AWS_REGION environment variable
-     * 2. Try to get region from profile credentials file
-     * 3. Try to get region from EC2 Instance Metadata Service
-     */
-    val regionProviderChain = RegionProvider.Environment(Environment.ENV) orElse
-        RegionProvider.Profile(Environment.ENV) orElse
-        RegionProvider.Ec2InstanceProfile(imdsHttp)
-
-    // Invoking the chain will return a region if one was found
-    val optionalRegion: Region? = regionProviderChain()
-    println(optionalRegion)
-
-    // orElseThrow will return a region or throw an exception if onr was not found
-    val region: Region = regionProviderChain.orElseThrow()
-    println(region)
-
-    // create and use an Amazon client with the resolved region
-    val sns = SNS.Http(region, { fakeAwsCredentials }, snsHttp)
-    val topics = sns.listTopics()
-    println(topics)
-}
-```
+{{< kotlin file="region_provider.kt" >}}
 
 :warning: The `Ec2InstanceProfile` provider should always be last in the chain,
 since it will time out if not in an Amazon EC2 environment.

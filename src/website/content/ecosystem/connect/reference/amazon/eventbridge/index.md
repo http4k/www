@@ -21,10 +21,6 @@ The EventBridge connector provides the following Actions:
      *  DescribeEventBus
      *  PutEvents
 
-### Example usage
-```kotlin
-```
-
 The client APIs utilise the `http4k-platform-aws` module for request signing, which means no dependencies on the incredibly fat Amazon-SDK JARs. This means this integration is perfect for running Serverless Lambdas where binary size is a performance factor.
 
 ### Default Fake port: 13577
