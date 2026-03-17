@@ -67,9 +67,9 @@ class WebsocketUnitTest : WebsocketContract() {
 // it starts a server and connects to the websocket over the network
 class WebsocketServerTest : WebsocketContract() {
     override fun client() =
-        WebsocketClient.blocking(Uri.of("ws://localhost:8000/bob"))
+        WebsocketClient.blocking(Uri.of("ws://localhost:54632/bob"))
 
-    private val server = testApp.asServer(Undertow(8000))
+    private val server = testApp.asServer(Undertow(54632))
 
     @BeforeEach
     fun before() {
