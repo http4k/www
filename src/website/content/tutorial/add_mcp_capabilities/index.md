@@ -2,6 +2,7 @@
 title: Add MCP Capabilities
 description: Add typed tool arguments, resources, prompts, and in-memory testing to an http4k MCP server
 weight: 6
+series: Building with MCP
 ---
 
 In [Create an MCP Server](/tutorial/create_an_mcp_server/) we built a working MCP server with a single tool. Now we'll add the full range of MCP capabilities: a tool with typed arguments, a resource, and a prompt. Then we'll test the whole thing in-memory — no network, no running server, no squinting at Claude's output.

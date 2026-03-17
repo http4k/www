@@ -1,11 +1,9 @@
 ---
 title: "TDDing http4k Part 4: Adding an external dependency"
 description: A step-by-step guide to TDDing a simple http4k application
+weight: 4
+series: TDDing http4k
 ---
-
-- [Part 1: Building a walking skeleton](../part1/)
-- [Part 2: Adding an endpoint](../part2/)
-- [Part 3: Adding another endpoint](../part3/)
 
 At this point, the separation of the layers starts to become clear:
 - The server layer is responsible for taking external configuration and instantiating the app layer.

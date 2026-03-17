@@ -1,6 +1,8 @@
 ---
 title: "TDDing http4k Part 1: Building a walking skeleton"
 description: A step-by-step guide to TDDing a simple http4k application
+weight: 1
+series: TDDing http4k
 ---
 
 Until we have an application that can be deployed, we cannot create any business value. The Walking Skeleton
@@ -21,6 +23,4 @@ documentation, and checking in a high-level way that the business endpoints are 
 
 {{< kotlin file="project.kt" >}}
 
-- [Part 2: Adding an endpoint](../part2/)
-- [Part 3: Adding another endpoint](../part3/)
-- [Part 4: Adding an external dependency](../part4/)
+Next: [Part 2: Adding an endpoint](/tutorial/tdding_http4k/part2/)

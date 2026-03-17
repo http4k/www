@@ -1,7 +1,8 @@
 ---
 title: Building an MCP App with http4k
 description: A step-by-step guide to building an interactive MCP App with http4k
-weight: 5
+weight: 7
+series: Building with MCP
 ---
 
 This tutorial walks through building **Repo Health Checker** — an MCP App that displays an interactive UI inside an MCP host (like Claude Desktop), fetches

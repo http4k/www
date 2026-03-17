@@ -2,6 +2,7 @@
 title: Your first http4k app
 description: A step-by-step guide creating your first running http4k app
 weight: 1
+series: Getting Started
 ---
 
 Welcome to the world of http4k! In this guide, we'll run you through the steps required to get up and running with your first Kotlin server application. We'll generate the project, make some requests to it and then build it into a runnable application. By the end, you'll have a fully working app built packaged and tested using the Gradle build tool.
@@ -109,4 +110,4 @@ You have successfully:
 
 To see a similar application, you can check out the complete [Hello World](https://github.com/http4k/examples/tree/master/hello-world) app from the [http4k Examples repo](https://github.com/http4k/examples/)
 
-**(Ready for more? Let's move on to [deploying your http4k app as a Serverless Lambda to AWS](/tutorial/serverless_http4k_with_aws_lambda/))**
+Next: [Serverless http4k with AWS Lambda](/tutorial/serverless_http4k_with_aws_lambda/)

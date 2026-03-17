@@ -2,6 +2,7 @@
 title: Create an MCP Server in 2 Lines of Code
 description: Build a working MCP server with http4k in just a few lines of Kotlin
 weight: 5
+series: Building with MCP
 ---
 
 This tutorial gets you from zero to a working MCP server in a few lines of Kotlin. We'll build a clock tool that any MCP host (like Claude Desktop) can call, and we'll do it with almost no ceremony. If you want to add more capabilities and testing, continue to [Add MCP Capabilities](/tutorial/add_mcp_capabilities/). For building interactive UIs inside the host, see [Build an MCP App](/tutorial/build_a_simple_mcp_app/).

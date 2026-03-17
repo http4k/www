@@ -2,6 +2,7 @@
 title: Going native with Graal on AWS Lambda
 description: A step-by-step guide to compiling http4k apps with GraalVM for AWS Lambda
 weight: 4
+series: Getting Started
 ---
 
 In this guide, we'll run you through the steps required to get an http4k application deployed and running on AWS Lambda with GraalVM and available to call over the internet using AWS ApiGateway. If you're not familiar with the http4k concepts for HTTP and Serverless apps, then we advise you read them [here](/ecosystem/http4k/concepts/http/) and [here](/ecosystem/http4k/concepts/serverless/). To make an app you can follow the [Your first http4k app] tutorial. Then follow the steps in the [Serverless http4k with AWS Lambda] tutorial before tackling this guide.

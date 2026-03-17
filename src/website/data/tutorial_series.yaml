@@ -1,0 +1,8 @@
+- name: Getting Started
+  description: From your first http4k app through to serverless deployment on AWS Lambda with both standard JVM and GraalVM native runtimes.
+
+- name: TDDing http4k
+  description: A multi-part walkthrough of building an http4k application test-first, covering endpoint design, routing, and external dependencies.
+
+- name: Building with MCP
+  description: Build MCP servers and interactive MCP Apps with http4k's Kotlin-first Model Context Protocol SDK.
