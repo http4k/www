@@ -14,29 +14,7 @@ The module naming scheme for API Clients is:
 
 Action classes are responsible for constructing the HTTP requests and unmarshalling their responses into the http4k-connect types. There are lots of common actions built-in, but you can provide your own by simply implementing the relevant Action interface. The recommended pattern in http4k-connect is to use a Result monad type (we use Result4k) to represent the result type, but you can use anything to suit your programming model.
 
-```kotlin
-// Generic system interface
-interface Example {
-   operator fun <R : Any> invoke(request: ExampleAction<R>): Result<R, RemoteFailure>
-}
-
-// System-specific action
-interface ExampleAction<R> : Action<Result<R, RemoteFailure>>
-
-// Action and response classes
-data class Echo(val value: String) : ExampleAction<Echoed>
-data class Echoed(val value: String)
-
-// Traditional function helpers
-fun Example.echo(value: String): Result<Echoed, RemoteFailure> = this(Echo(value))
-```
+{{< kotlin file="system_interface.kt" >}}
 
 ### Example usage
-```kotlin
-// constructing and using the clients
-val example = Example.Http(httpHandler)
-
-val echoed: Result<Echoed, RemoteFailure> = example.echo("hello world")
-// or...
-val alsoEchoed: Result<Echoed, RemoteFailure> = example(Echo("hello world"))
-```
+{{< kotlin file="example_usage.kt" >}}

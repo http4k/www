@@ -45,13 +45,4 @@ To start:
 
 The module provides a CredentialsProvider to do interactive login to
 
-```kotlin
-val provider = CredentialsProvider.SSO(
-    SSOProfile(
-        AwsAccount.of("01234567890"),
-        RoleName.of("hello"),
-        Region.US_EAST_1,
-        Uri.of("http://foobar"),
-    )
-)
-```
+{{< kotlin file="interactive_login.kt" >}}

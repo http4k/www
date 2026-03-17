@@ -54,23 +54,7 @@ this is perfect for deploying to a Serverless function.
 
 ### Example usage
 
-```kotlin
-const val USE_REAL_CLIENT = false
-
-fun main() {
-    // we can connect to the real service or the fake (drop in replacement)
-    val http: HttpHandler = if (USE_REAL_CLIENT) JavaHttpClient() else FakeOpenAI()
-
-    // create a client
-    val client = OpenAI.Http(OpenAIToken.of("foobar"), http.debug())
-
-    // all operations return a Result monad of the API type
-    val result: Result<Models, RemoteFailure> = client
-        .getModels()
-
-    println(result)
-}
-```
+{{< kotlin file="example.kt" >}}
 
 Other examples can be
 found [here](https://github.com/http4k/http4k-connect/tree/master/ai/openai/fake/src/examples/kotlin).

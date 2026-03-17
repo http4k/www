@@ -54,21 +54,7 @@ this is perfect for deploying to a Serverless function.
 
 ### Example usage
 
-```kotlin
-    // create a client
-val client = AzureAI.Http(
-    AzureAIApiKey.of("foobar"),
-    AzureHost.of("myHost"), Region.of("us-east-1"),
-    http.debug()
-)
-
-// all operations return a Result monad of the API type
-val result: Result<Sequence<CompletionResponse>, RemoteFailure> = client
-    .chatCompletion(ModelName.of("Meta-Llama-3.1-70B-Instruct"), listOf(Message.User("good afternoon"))), 1000, true)
-
-println(result.orThrow().toList())
-}
-```
+{{< kotlin file="example.kt" >}}
 
 Other examples can be found [here](https://github.com/http4k/http4k-connect/tree/master/ai/azure/fake/src/examples/kotlin).
 
