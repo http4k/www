@@ -49,13 +49,7 @@ When http4k v3 was released, we only supported 3 JVM Server backends and 1 Serve
 ```
 
 Switching between all platforms is super easy - just plug the standard `HttpHandler` into the the relevant http4k module class with a single line of code. Serverless modules all require just one more line, plus configuring the Serverless platform to call the relevant function. Here's examples for both:
-```kotlin
-val app: HttpHandler = { req: Request -> Response(OK).body("hello world!") }
-
-val jvmApp = app.asServer(Netty(8080)).start()
-
-class MyServerlessFunction : GoogleCloudFunction(app)
-```
+{{< kotlin file="platforms.kt" >}}
 
 The even better news is that testing your http4k apps locally (regardless of platform) is simple - and as ever there's no magic involved - just test them entirely in-memory, or bind them to a standard backend Server.
 
@@ -77,14 +71,7 @@ The v3 routing scheme was pretty good as you could bind routes on static or dyna
 
 > **"Match the `/name` path, but only when the `host` header is `http4k.org`. Then add 2 submatches, one where there is a query parameter named `queryName`, the other where the body is > 50 bytes long."**
 
-```kotlin
-val app = routes("/{name}" bind POST to (
-    header("host") { it == "http4k.org" } bind routes(
-        queries("queryName") bind { Response(OK).body("i had a query") },
-        body { body: String -> body.length > 50 } bind { Response(OK).body("I was long") }
-    ))
-)
-```
+{{< kotlin file="infinirouting.kt" >}}
 
 So after a lot of clattering and banging of heads, we cracked it - and in doing so managed to rewrite the entire of the http4k routing layer in terms of these predicate `Routers`. It's really neat, infinitely(ish) nestable, and makes us feel just a little bit smug for getting it working.
 
