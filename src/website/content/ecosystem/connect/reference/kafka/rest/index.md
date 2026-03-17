@@ -50,33 +50,20 @@ The following formats of Kafka records are supported currently. Partition keys a
 All keys and messages will be auto-marshalled to JSON using the standard Moshi instance (which supports most common JDK
 types):
 
-```kotlin
-Records.Json(listOf(Record("123", "value", PartitionId.of(123))))
-```
+{{< kotlin file="records_json_v2.kt" >}}
 
 ### AVRO
 
 Support for `GenericContainer` classes (auto-generated from schema). The Key and Value schemas will be extracted from
 the Key and Value and sent with the message automatically.
 
-```kotlin
-Records.Avro(
-    listOf(
-        Record(
-            RandomEvent(UUID.nameUUIDFromBytes(it.toByteArray())),
-            RandomEvent(UUID(0, 0), PartitionId.of(123))
-        )
-    )
-)
-```
+{{< kotlin file="records_avro.kt" >}}
 
 ### Binary
 
 Record contents are specified using Base64 type for wire transport:
 
-```kotlin
-Records.Binary(listOf(Record(Base64Blob.encode("123"), Base64Blob.encode("456"), PartitionId.of(123))))
-```
+{{< kotlin file="records_binary_v2.kt" >}}
 
 ## Notes on message production
 
@@ -85,13 +72,7 @@ Messages can be sent to the broker with or without PartitionIds. If you want to 
 strategies
 come out of the box.
 
-```kotlin
-val kafkaRest = KafkaRest.Http(
-    Credentials("user", "password"), Uri.of("http://restproxy"), JavaHttpClient()
-)
-
-kafkaRest.produceMessages(Topic.of("topic"), Records.Json(listOf(Record("123", ""))), ::RoundRobinRecordPartitioner)
-```
+{{< kotlin file="produce_v2.kt" >}}
 
 To keep things simple with respect to partition allocation and rebalancing, the above code will fetch the available
 partitions on each send to the REST proxy using the `/topics/$topic/partitions` call. This is obviously not very
@@ -116,17 +97,13 @@ The following formats of Kafka records are supported currently. Partition keys a
 All keys and messages will be auto-marshalled to JSON using the standard Moshi instance (which supports most common JDK
 types):
 
-```kotlin
-Record(Json(mapOf("key" to "value")))
-```
+{{< kotlin file="records_json_v3.kt" >}}
 
 ### Binary
 
 Record contents are specified using Base64 type for wire transport:
 
-```kotlin
-Record(Binary(Base64Blob.encode("foo1")))
-```
+{{< kotlin file="records_binary_v3.kt" >}}
 
 ## Notes on message production
 
@@ -135,18 +112,7 @@ Messages can be sent to the broker with or without PartitionIds. If you want to 
 strategies
 come out of the box.
 
-```kotlin
-val kafkaRest = KafkaRest.Http(
-    Credentials("user", "password"), Uri.of("http://restproxy"), JavaHttpClient()
-)
-
-kafkaRest.produceRecordsWithPartitions(
-    topic,
-    clusterId,
-    listOf(Record(Binary(Base64Blob.encode("foo1"))),),
-    ::RoundRobinRecordPartitioner
-)
-```
+{{< kotlin file="produce_v3.kt" >}}
 
 To keep things simple with respect to partition allocation and rebalancing, the above code will fetch the available
 partitions on each send to the REST proxy using the `/kafka/v3/clusters/$id/topics/$topic/partitions` call. This is
