@@ -79,32 +79,4 @@ perform path-style requests like this:
 Http4k supports pre-signed requests with the generic `AwsRequestPreSigner` class.
 However, `http4k-connect` provides a simplified interface for common S3 Bucket operations with the `S3BucketPresigner`.
 
-```kotlin
-fun main() {    
-    // create pre-signer
-    val preSigner = S3BucketPreSigner(
-        bucketName = BucketName.of("foobar"),
-        region = Region.of("us-east-1"),
-        credentials = AwsCredentials("accessKeyId", "secretKey")
-    )
-
-    val key = BucketKey.of("keyName")
-    
-    // create a pre-signed PUT
-    val put = preSigner.put(
-        key = key,
-        duration = Duration.ofMinutes(5), // how long the URL is valid for
-        headers = listOf("content-type" to "application.json")  // add optional signed headers
-    )
-    println(put.uri)
-    
-    // create a pre-signed GET
-    val get = preSigner.get(
-        key = key,
-        duration = Duration.ofMinutes(5)
-    )
-    println(get)
-
-    // share these URIs to your clients so they can perform the operations without credentials
-}
-```
+{{< kotlin file="presigned.kt" >}}
