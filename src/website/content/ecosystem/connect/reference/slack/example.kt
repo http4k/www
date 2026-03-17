@@ -3,9 +3,11 @@ package content.ecosystem.connect.reference.slack
 import org.http4k.connect.slack.Http
 import org.http4k.connect.slack.Slack
 import org.http4k.connect.slack.SlackWebhook
+import org.http4k.connect.slack.chatPostMessage
 import org.http4k.connect.slack.model.ChannelId
 import org.http4k.connect.slack.model.SlackMessage
 import org.http4k.connect.slack.model.SlackToken
+import org.http4k.connect.slack.webhookPostMessage
 import org.http4k.core.Uri
 
 val message = SlackMessage("message", channel = ChannelId.of("channel"))

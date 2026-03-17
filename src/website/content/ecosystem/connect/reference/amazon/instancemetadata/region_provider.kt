@@ -3,8 +3,11 @@ package content.ecosystem.connect.reference.amazon.instancemetadata
 import org.http4k.aws.AwsCredentials
 import org.http4k.client.JavaHttpClient
 import org.http4k.config.Environment
+import org.http4k.connect.amazon.Environment
+import org.http4k.connect.amazon.Profile
 import org.http4k.connect.amazon.RegionProvider
 import org.http4k.connect.amazon.core.model.Region
+import org.http4k.connect.amazon.instancemetadata.Ec2InstanceProfile
 import org.http4k.connect.amazon.instancemetadata.FakeInstanceMetadataService
 import org.http4k.connect.amazon.sns.FakeSNS
 import org.http4k.connect.amazon.sns.Http

@@ -1,9 +1,11 @@
 package content.ecosystem.http4k.reference.core
 
+import org.http4k.core.Method.GET
 import org.http4k.core.Request
 import org.http4k.core.Response
 import org.http4k.core.Status.Companion.OK
 import org.http4k.routing.bind
+import org.http4k.routing.bindWs
 import org.http4k.routing.poly
 import org.http4k.routing.routes
 import org.http4k.routing.websockets
@@ -15,10 +17,10 @@ import org.http4k.websocket.WsResponse
 
 val polyApp = poly(
     routes(
-        "/" bind { r: Request -> Response(OK) }
+        "/" bind GET to { r: Request -> Response(OK) }
     ),
     websockets(
-        "/ws" bind { req: Request ->
+        "/ws" bindWs { req: Request ->
             WsResponse { ws: Websocket ->
                 ws.send(WsMessage("hello!"))
             }

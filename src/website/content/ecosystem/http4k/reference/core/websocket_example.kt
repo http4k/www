@@ -2,7 +2,8 @@ package content.ecosystem.http4k.reference.core
 
 import org.http4k.core.Request
 import org.http4k.lens.Path
-import org.http4k.routing.bind
+import org.http4k.lens.string
+import org.http4k.routing.websocket.bind
 import org.http4k.routing.websockets
 import org.http4k.websocket.Websocket
 import org.http4k.websocket.WsHandler
