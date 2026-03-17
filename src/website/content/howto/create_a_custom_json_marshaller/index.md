@@ -33,16 +33,11 @@ different purposes - for example we may wish to hide the values of some fields i
 MicroTypes (aka Tiny Types) are popular in Kotlin providing type-safety throughout a codebase, ensuring amongst other things that method 
 parameters are not accidentally permuted. An example of a simple microtype might be:
 
-```kotlin
-data class CustomerName(val value: String)
-data class Customer(val name: CustomerName)
-```
+{{< kotlin file="microtype.kt" >}}
 
 Using the standard mapper, a `Customer` "Bob", would be represented as the json
 
-```kotlin
-Customer(name = CustomerName("Bob"))
-```
+{{< kotlin file="microtype_usage.kt" >}}
 
 ```json
 {
@@ -65,34 +60,15 @@ schemes for the other supported JSON libraries
 
 1. Use the http4k `ConfigurableJackson` to get a base configuration
 
-```kotlin
-object MyJackson : ConfigurableJackson(
-    // to be filled in
-) 
-```
+{{< kotlin file="jackson_skeleton.kt" >}}
 
 2. Modify it to meet your needs, registering type adapters for your types
 
-```kotlin
-object MyJackson : ConfigurableJackson(
-    KotlinModule.Builder.Build()              // register kotlin types
-        .asConfigurable()
-        .withStandardMappings()               // http4k out-of-the box extras
-        .text(::CustomerName, CustomerName::value)    // here is the registration of custom type
-        // .text(...) - repeat the registration for each type
-        .done()
-        .deactivateDefaultTyping()  // other Jackson config...
-        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-)
-```
+{{< kotlin file="jackson_config.kt" >}}
 
 3. Reference this configuration in your code - particularly where using the `Body.auto<xxx>` pattern
 
-```kotlin
-import content.`how-to`.create_a_custom_json_marshaller.MyJackson.auto
-
-val lens = Body.auto<Customer>().toLens()  // ... continue as before
-```
+{{< kotlin file="jackson_usage.kt" >}}
 
 ### Example - Representing MicroTypes using Values4k as Strings in JSON
 
@@ -103,26 +79,11 @@ object extends ValueFactory - this will be referenced in the type adapter later.
 also provides a number of convenience methods `CustomerName.of()`, `parse()`, `unwrap()`, and a mechanism
 to validate the format of strings - very convenient to ensure that values are semantically valid throughout the entire system.
 
-```kotlin
-class CustomerName(value: String) : StringValue(value) {
-    companion object : StringValueFactory<CustomerName>(::CustomerName)
-}
-```
+{{< kotlin file="values4k_type.kt" >}}
 
 Then, define a `ConfigurableJackson` (Moshi...) with a type adaptor for your type
 
-```kotlin
-object MyJackson : ConfigurableJackson(
-    KotlinModule.Builder.Build()
-        .asConfigurable()
-        .withStandardMappings()
-        .value(CustomerName) // this references the CustomerName companion object
-        // .value(...) - repeat the registration for each type
-        .done()
-        .deactivateDefaultTyping()  // other Jackson config...
-        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-)
-```
+{{< kotlin file="values4k_jackson.kt" >}}
 
 A full worked example is shown below.
 
