@@ -1,4 +1,4 @@
-package content.howto.`pimp-your-clients-with-ksp`
+package content.howto.pimp_your_clients_with_ksp
 
 import dev.forkhandles.result4k.Result
 import dev.forkhandles.result4k.Success
