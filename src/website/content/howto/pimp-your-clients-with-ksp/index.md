@@ -13,31 +13,11 @@ those extensions manually and maintain the API of the client appears to contain 
 
 1 - Define your base Action (and interface) using the http4k base class and tag it with the Http4kConnectAction annotation:
 
-```kotlin
-interface APIAction<R> : Action<Result<R, RemoteFailure>>
-
-@Http4kConnectAction
-data class Reverse(val value: String) : APIAction<String> {
-    override fun toRequest() = Request(POST, "/reverse").body(value)
-
-    override fun toResult(response: Response): Result<String, RemoteFailure> =
-        Success(response.bodyString())
-}
-
-```
+{{< kotlin file="action.kt" >}}
 
 2 - Define your API Client, tagging it with the Http4kConnectClient annotation:
 
-```kotlin
-@Http4kConnectClient
-class API(rawHttp: HttpHandler) {
-    private val transport = SetBaseUriFrom(Uri.of("https://api.com"))
-        .then(rawHttp)
-
-    operator fun <R> invoke(action: APIAction<R>): Result<R, RemoteFailure> =
-        action.toResult(transport(action.toRequest()))
-}
-```
+{{< kotlin file="client.kt" >}}
 
 3 - Install KSP into Gradle, apply it, and create a KSP configuration using the http4k-connect KSP plugin in your module:
 
@@ -57,14 +37,8 @@ dependencies {
 
 4 - And that's it! When Gradle runs, the following extension function will be generated:
 
-```kotlin
-fun API.reverse(value: String) = this(Reverse(value))
-```
+{{< kotlin file="generated.kt" >}}
 
 ... which allows anyone to call it as if it was a standard method:
 
-```kotlin
-val api = API(JavaHttpClient())
-
-val result: Result<String, RemoteFailure> = api.reverse("hello")
-```
+{{< kotlin file="usage.kt" >}}
