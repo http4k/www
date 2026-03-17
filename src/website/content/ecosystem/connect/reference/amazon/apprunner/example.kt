@@ -14,10 +14,7 @@ import org.http4k.filter.debug
 const val USE_REAL_CLIENT = false
 
 fun main() {
-    val deployedLambda = FunctionName("http4kLambda")
-
-    val fakeAppRunner = FakeAppRunner(
-    )
+    val fakeAppRunner = FakeAppRunner()
 
     // we can connect to the real service or the fake (drop in replacement)
     val http: HttpHandler = if (USE_REAL_CLIENT) JavaHttpClient() else fakeAppRunner
