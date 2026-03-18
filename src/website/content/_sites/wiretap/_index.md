@@ -1,7 +1,6 @@
 ---
 sitemap:
     disable: true
-draft: true
 title: "http4k Wiretap"
 tagline: "http4k Wiretap: See everything. Break anything."
 layout: "product"
