@@ -41,9 +41,15 @@ modules:
     available: false
   - name: BackOffice
     link: https://backoffice.http4k.org
-    image: backoffice-focussed.png
+    image: backoffice.webp
     description: Secure & audited API Gateway for developers and MCP tools to connect to your OpenAPI-powered services
-    prompt: "A modern, minimalist illustration representing a secure API gateway and backoffice administration tool. Show a stylized shield or gatehouse shape with multiple API endpoint paths converging through it, with a lock or key motif suggesting audited access control and authorization. Use a cool-to-warm gradient palette (deep charcoal/gunmetal transitioning to warm orange/bronze) to convey security and administrative authority. Clean vector style, rounded shapes, subtle depth with soft shadows. No text. Square format, suitable for a product page hero or feature image."
+    prompt: "A clean isometric illustration of a minimalist shield with several thin API pathway lines converging through a small gateway opening at its centre. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: false
+  - name: Agent2Agent
+    link: https://a2a.http4k.org
+    image: a2a.webp
+    description: Build interoperable AI agent systems with Google's A2A protocol — Agent Cards, Tasks, Streaming, and Push Notifications using testable http4k patterns
+    prompt: "A clean isometric illustration of two AI agent figures exchanging messages across a bridge, with task cards and notification icons flowing between them. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
     available: false
 
 faq:
@@ -72,6 +78,8 @@ regulated environments.
 
 With Pro modules, teams can confidently deploy http4k applications that meet strict compliance
 requirements while maintaining the performance demands of modern cloud workloads.
+
+The library of Pro modules is regularly growing — check back often for new additions.
 
 Pro modules are available to license standalone or are automatically included
 as a part of the <a href="/enterprise">http4k Enterprise Edition</a>.</p>
