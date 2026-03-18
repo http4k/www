@@ -6,6 +6,7 @@ tagline: Marry the power of AI with the simplicity of http4k
 layout: "product"
 type: "product"
 subdomain: mcp
+cta_image: http4k-mcp.webp
 tier: pro
 description: Build secure MCP-compliant servers to integrate Large Language Models with your data and tools using familiar http4k patterns
 docs_link: https://http4k.org/ecosystem/ai/reference/mcp/

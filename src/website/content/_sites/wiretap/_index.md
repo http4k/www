@@ -11,11 +11,14 @@ tier: pro
 description: "One line to add, one port to connect. Full visibility into traffic, traces, chaos testing, and MCP — with a browser UI and an AI-ready MCP server built in."
 navigation:
     -   name: docs
-        title: Documentation
-        url: https://http4k.org/ecosystem/core/reference/wiretap
-    -   name: pricing
-        title: Pricing
-        url: "#pricing"
+        title: Sign up for launch
+        url: a'#subscribe'
+#    -   name: docs
+#        title: Documentation
+#        url: https://toolbox.http4k.org/ecosystem/http4k/reference/wiretap
+#    -   name: pricing
+#        title: Pricing
+#        url: "#pricing"
     -   name: http4k Pro
         title: http4k Pro
         url: https://http4k.org/pro
@@ -59,17 +62,16 @@ how_tos:
     -   section: Add a control panel to your http4k app
         steps:
             -   description: Step 1 - Wrap your **HttpHandler** with **Wiretap** — a single function call adds the full control panel to your app.
-                image: step1.png
+#                image: step1.png
                 alt: Wrap your app with Wiretap
             -   description: Step 2 - Start your server as normal — your app and the Wiretap console share **one port**, no extra infrastructure needed.
-                image: step2.png
+#                image: step2.png
                 alt: Start the server
             -   description: Step 3 - Open **/__wiretap** in your browser for the full control panel — traffic, traces, chaos, client, and more.
-                image: step3.png
+#                image: step3.png
                 alt: Open the browser UI
             -   description: Step 4 - Connect **Claude** or any MCP client to **/_wiretap/mcp** for AI-assisted debugging and testing.
-                image: step4.png
+#                image: step4.png
                 alt: Connect an MCP client
-        cta: https://http4k.org/ecosystem/core/reference/wiretap
 email_form_id: 8b025c558c
 ---
