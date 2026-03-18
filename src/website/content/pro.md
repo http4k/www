@@ -82,4 +82,4 @@ requirements while maintaining the performance demands of modern cloud workloads
 The library of Pro modules is regularly growing — check back often for new additions.
 
 Pro modules are available to license standalone or are automatically included
-as a part of the <a href="/enterprise">http4k Enterprise Edition</a>.</p>
+as a part of the <a href="/enterprise">http4k Enterprise Edition</a>. We also offer custom licensing terms to suit your organisation's needs — get in touch using the button below.</p>
