@@ -5,23 +5,45 @@ description: "The http4k Pro modules are a set of premium features and tools des
 modules:
   - name: Model Context Protocol
     link: https://mcp.http4k.org
-    image: mcp.png
+    image: mcp.webp
     description: Build MCP servers and MCP Apps to integrate Large Language Models with your data and tools using familiar testable http4k patterns
+    prompt: "A clean isometric illustration of a minimalist server room with a glowing neural network node connected to simple data blocks via thin lines. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
     available: true
   - name: Server Hot Reload
     link: https://hotreload.http4k.org
     image: hotreload.webp
     available: true
-    description: Hot Reload automatically restart your server after code changes, saving you time during development
+    description: Hot Reload automatically restarts your server after code changes, saving you time during development
+    prompt: "A clean isometric illustration of a minimalist laptop with a circular refresh arrow hovering above the screen, beside a small code editor window. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+  - name: X402 Payments
+    link: https://http4k.org/ecosystem/connect/reference/x402/
+    image: x402.webp
+    description: HTTP 402-based payment protocol enabling machine-to-machine commerce with automatic micropayment negotiation
+    prompt: "A clean isometric illustration of two minimalist server towers exchanging a small coin token across a bridge or conduit between them. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: true
+  - name: Machine Payments Protocol
+    link: https://http4k.org/ecosystem/connect/reference/mpp/
+    image: mpp.webp
+    description: Scalable machine-to-machine payment infrastructure for automated digital commerce between services
+    prompt: "A clean isometric illustration of a network of small connected nodes with tiny currency symbols flowing along the paths between them, set on a simple grid surface. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: true
+  - name: Wiretap
+    link: https://wiretap.http4k.org
+    image: wiretap.webp
+    description: HTTP and MCP traffic inspection and debugging tool for monitoring, recording, and replaying requests in your http4k applications
+    prompt: "A clean isometric illustration of a magnifying glass hovering over flowing data streams or network cables, with small request/response packet shapes visible through the lens. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: false
   - name: Transactional Outbox
     link: https://outbox.http4k.org
     image: outbox.webp
     description: A robust transactional outbox implementation for http4k that ensures reliable message delivery with database consistency.
+    prompt: "A clean isometric illustration of a minimalist database cylinder with small envelopes queued in an orderly line flowing outward into a delivery chute. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
     available: false
   - name: BackOffice
     link: https://backoffice.http4k.org
     image: backoffice-focussed.png
     description: Secure & audited API Gateway for developers and MCP tools to connect to your OpenAPI-powered services
+    prompt: "A modern, minimalist illustration representing a secure API gateway and backoffice administration tool. Show a stylized shield or gatehouse shape with multiple API endpoint paths converging through it, with a lock or key motif suggesting audited access control and authorization. Use a cool-to-warm gradient palette (deep charcoal/gunmetal transitioning to warm orange/bronze) to convey security and administrative authority. Clean vector style, rounded shapes, subtle depth with soft shadows. No text. Square format, suitable for a product page hero or feature image."
     available: false
 
 faq:
