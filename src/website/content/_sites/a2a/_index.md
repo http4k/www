@@ -7,7 +7,6 @@ layout: "product"
 type: "product"
 subdomain: a2a
 tier: pro
-draft: true
 description: Full A2A protocol support for building interoperable multi-agent systems. Agent Cards, Tasks, Streaming, Push Notifications — all testable, all type-safe.
 docs_link: https://http4k.org/ecosystem/ai/reference/a2a/
 navigation:
