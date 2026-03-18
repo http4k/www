@@ -26,6 +26,9 @@ dependencies {
 
     // for x402 payment-protected MCP tools
     implementation("org.http4k.pro:http4k-ai-mcp-x402")
+
+    // for MPP payment-protected MCP tools
+    implementation("org.http4k.pro:http4k-ai-mcp-mpp")
 }
 ```
 
@@ -264,6 +267,25 @@ The module provides two filters:
 Both filters use a `PaymentCheck` function to determine whether a request is `Free` or `Required`, allowing you to mix free and paid tools in the same server:
 
 {{< kotlin file="x402_tool_example.kt" >}}
+
+### MPP Payment-Protected MCP
+
+The `http4k-ai-mcp-mpp` module integrates the [Machine Payments Protocol (MPP)](/ecosystem/connect/reference/mpp/) with MCP, allowing you to require payments for MCP interactions. Unlike x402, MPP has no facilitator — you implement `MppVerifier` directly. Payment credentials are exchanged via the MCP `_meta` field on requests and responses.
+
+The module provides two filters:
+
+- **`MppToolFilter`** - A `ToolFilter` that wraps individual tools with payment challenges. Credentials are sent in `_meta["org.paymentauth/credential"]` and receipts are returned in `_meta["org.paymentauth/receipt"]`. Returns structured errors with challenges when payment is missing or invalid.
+- **`McpFilters.MppPaymentRequired`** - A lower-level `McpFilter` that operates on raw MCP JSON-RPC requests, enabling payment gating on any MCP resource — tools, prompts, resources, or any other server capability.
+
+Both filters use an `MppPaymentCheck` function to determine whether a request is `Free` or `Required`, allowing you to mix free and paid capabilities in the same server.
+
+Use `MppToolFilter` to protect individual tools:
+
+{{< kotlin file="mpp_tool_example.kt" >}}
+
+Use `McpFilters.MppPaymentRequired` to gate all MCP requests at the protocol level — tools, prompts, resources, and any other capability:
+
+{{< kotlin file="mpp_mcp_filter_example.kt" >}}
 
 ### MCP Apps: Server-Rendered UI
 

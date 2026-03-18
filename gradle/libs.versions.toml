@@ -36,6 +36,7 @@ http4k-ai-llm-github = { module = "org.http4k:http4k-ai-llm-github" }
 http4k-ai-llm-openai = { module = "org.http4k:http4k-ai-llm-openai" }
 http4k-ai-mcp-sdk = { module = "org.http4k.pro:http4k-ai-mcp-sdk" }
 http4k-ai-mcp-testing = { module = "org.http4k.pro:http4k-ai-mcp-testing" }
+http4k-ai-mcp-mpp = { module = "org.http4k.pro:http4k-ai-mcp-mpp" }
 http4k-ai-mcp-x402 = { module = "org.http4k.pro:http4k-ai-mcp-x402" }
 http4k-api-cloudevents = { module = "org.http4k:http4k-api-cloudevents" }
 http4k-api-graphql = { module = "org.http4k:http4k-api-graphql" }
@@ -243,9 +244,9 @@ http4k-ai = [
     "http4k-ai-llm-gemini",
     "http4k-ai-llm-github",
     "http4k-ai-llm-openai",
+    "http4k-ai-mcp-mpp",
     "http4k-ai-mcp-sdk",
     "http4k-ai-mcp-testing",
-    "http4k-ai-mcp-x402",
     "http4k-ai-mcp-x402",
 ]
 http4k-api = [
