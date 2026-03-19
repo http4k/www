@@ -134,8 +134,9 @@ http4k-connect-storage-http = { module = "org.http4k:http4k-connect-storage-http
 http4k-connect-storage-jdbc = { module = "org.http4k:http4k-connect-storage-jdbc" }
 http4k-connect-storage-redis = { module = "org.http4k:http4k-connect-storage-redis" }
 http4k-connect-storage-s3 = { module = "org.http4k:http4k-connect-storage-s3" }
-http4k-connect-x402 = { module = "org.http4k:http4k-connect-x402" }
-http4k-connect-x402-fake = { module = "org.http4k:http4k-connect-x402-fake" }
+http4k-connect-mpp = { module = "org.http4k.pro:http4k-connect-mpp" }
+http4k-connect-x402 = { module = "org.http4k.pro:http4k-connect-x402" }
+http4k-connect-x402-fake = { module = "org.http4k.pro:http4k-connect-x402-fake" }
 http4k-core = { module = "org.http4k:http4k-core" }
 http4k-format-argo = { module = "org.http4k:http4k-format-argo" }
 http4k-format-core = { module = "org.http4k:http4k-format-core" }
@@ -245,6 +246,7 @@ http4k-ai = [
     "http4k-ai-mcp-sdk",
     "http4k-ai-mcp-testing",
     "http4k-ai-mcp-x402",
+    "http4k-ai-mcp-x402",
 ]
 http4k-api = [
     "http4k-api-cloudevents",
@@ -344,6 +346,7 @@ http4k-connect-other = [
     "http4k-connect-ksp-generator",
     "http4k-connect-mattermost",
     "http4k-connect-mattermost-fake",
+    "http4k-connect-mpp",
     "http4k-connect-slack",
     "http4k-connect-slack-fake",
     "http4k-connect-x402",
