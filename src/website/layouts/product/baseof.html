@@ -185,16 +185,21 @@
     </div>
     <div class="pricing">
         <div class="row justify-content-center">
-            <h2>Pricing*</h2>
+            <h2>Pricing</h2>
             <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
             <stripe-pricing-table pricing-table-id="{{ .Params.pricing_table.id }}"
                                   publishable-key="{{ .Params.pricing_table.key }}">
             </stripe-pricing-table>
-            <br/>
-            <span style="text-align: center">*All <a href="{{ "/pro" | absURL }}"><b>http4k Pro</b></a> modules are also <b>automatically included</b> as a part of the http4k Enterprise Edition subscription. Please see <a href="{{ "/enterprise" | absURL }}"><b>here</b></a> for details.</span>
+        </div>
+    </div>
+    <div class="text-center mt-5 pt-4 pb-3">
+        <div class="row justify-content-center">
+            <p>All <a href="{{ "/pro" | absURL }}"><b>http4k Pro</b></a> modules are also <b>automatically included</b> as part of the <a href="{{ "/enterprise" | absURL }}"><b>Enterprise Edition</b></a>. Need multiple developer seats, team licensing, or custom terms? Get in touch and we'll find the right fit — whether that's volume licensing for individual Pro modules or our full Enterprise Edition with LTS support and priority access to all Pro modules.</p>
         </div>
     </div>
 </div>
+
+{{ partial "shared/cta-width.html" . }}
 {{ else }}
 {{ if eq .Params.tier "pro" }}
 <div class="container pt-5 pb-5" id="subscribe">
