@@ -57,6 +57,10 @@
         background-color: #FF4CA6;
     }
 
+    .cyan-colour {
+        background-color: #4CCAFF;
+    }
+
     .features {
         background-color: white;
         min-height: 0;
@@ -85,7 +89,7 @@
         <div class="row align-items-center h-100">
             <div class="col-md-9 col-lg-9 col-xl-6">
                 <h2 class="header mb-4">{{ .Params.tagline }}</h2>
-                <p class="mb-3">{{ .Params.description }}</p>
+                <p class="mb-3">{{ .Params.description | markdownify }}</p>
                 <div class="d-flex flex-wrap gap-2 mt-3">
                 {{ if .Params.launch_announcement }}
                 <a class="btn btn-secondary" href="{{ .Params.launch_announcement }}"> <span class="launch-spark">✦</span> Read the Launch Announcement <span class="launch-spark">✦</span></a>
@@ -122,6 +126,7 @@
 
     </div>
 </div>
+{{ if .Params.post_features_partial }}{{ partial .Params.post_features_partial . }}{{ end }}
 {{ if .Params.how_tos }}
 <div class="our-document pt-5 pb-3">
     {{ range .Params.how_tos }}

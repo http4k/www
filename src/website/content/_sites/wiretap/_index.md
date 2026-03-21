@@ -2,12 +2,12 @@
 sitemap:
     disable: true
 title: "http4k Wiretap"
-tagline: "http4k Wiretap: See everything. Break anything."
+tagline: "See everything. From your tests to production."
 layout: "product"
 type: "product"
 subdomain: wiretap
 tier: pro
-description: "One line to add, one port to connect. Full visibility into traffic, traces, chaos testing, and MCP — with a browser UI and an AI-ready MCP server built in."
+description: "**Wiretap Intercept** captures OpenTelemetry traces, logs, and events from every test with rich HTML reports. **Wiretap Console** gives you real-time traffic monitoring, chaos engineering, and MCP debugging in your running app."
 navigation:
     -   name: docs
         title: Sign up for launch
@@ -25,52 +25,54 @@ navigation:
         title: http4k Enterprise Edition
         url: https://http4k.org/enterprise
 features:
-    -   title: Traffic</br>Monitor
+    -   title: Intercept:</br>ZeroConfig
         icon: supportive
-        colour: pink
-        description: Real-time HTTP traffic capture with filtering, named views, and live SSE streaming. See every request and response flowing through your app.
-    -   title: Chaos</br>Engineering
+        colour: green
+        description: "@ExtendWith(Intercept::class) on any test class. Traces, events, logs, and baggage captured and visualised in Gantt-style HTML reports on failure. No collector, no server, no setup."
+    -   title: Intercept:</br>InMemory
+        icon: testability
+        colour: blue
+        description: "@RegisterExtension for instrumented HTTP clients, full traffic capture, built-in chaos engine for injecting failures into downstream calls, and auto-generated Mermaid sequence diagrams across multiple services. All in-process, no ports, full speed."
+    -   title: Intercept:</br>Reports
         icon: support
         colour: indigo
-        description: Inject failures, latency, and error responses into inbound and outbound traffic. Test your app's resilience without changing a line of code.
-    -   title: OpenTelemetry</br>Traces
-        icon: testability
-        colour: green
-        description: Gantt chart trace visualisation with deep linking to captured traffic. Follow requests across service boundaries.
-    -   title: HTTP</br>Client
-        icon: footprint
-        colour: blue
-        description: Built-in request builder for inbound and outbound testing. Fire requests at your app or upstream services directly from the console.
-    -   title: MCP</br>Panel
+        description: "Self-contained HTML with Gantt trace timelines, Mermaid sequence diagrams, HTTP transaction detail with one-click cURL copy, and captured stdout/stderr. Share, archive, attach to tickets."
+    -   title: Wiretap:</br>TrafficMonitor
         icon: supportive
+        colour: pink
+        description: "Real-time HTTP traffic capture with filtering, named views, and Request replay. See every request and response flowing through your app."
+    -   title: Wiretap:</br>ChaosEngineering
+        icon: support
         colour: violet
-        description: Browse and interact with your app's MCP tools, prompts, and resources. Inspect and invoke MCP capabilities from the browser.
-    -   title: AI-Ready</br>MCP Server
-        icon: footprint
-        colour: cyan
-        description: Every Wiretap feature exposed as MCP tools at /_wiretap/mcp. Connect Claude or any MCP client for AI-assisted debugging.
-    -   title: Home</br>Dashboard
+        description: "Inject failures, latency, and error responses into inbound and outbound traffic. Test resilience without changing code."
+    -   title: Wiretap:</br>OpenTelemetryTraces
         icon: testability
         colour: orange
-        description: Live stats, latency distribution, traffic timelines, and JVM metrics. A single view of your application's health and activity.
-    -   title: OpenAPI</br>Explorer
-        icon: supportive
+        description: "Gantt chart trace visualisation with deep linking to captured traffic. Follow requests across service boundaries."
+    -   title: Wiretap:</br>MCPPanel
+        icon: footprint
+        colour: cyan
+        description: "A pure Kotlin MCP Inspector replacement built into your app. Browse and invoke tools, prompts, and resources. Host and render MCP Apps with interactive UI. Plus every Wiretap feature exposed as MCP tools at /_wiretap/mcp for AI-assisted debugging."
+    -   title: Wiretap:</br>Dashboard & API
+        icon: footprint
         colour: red
-        description: Embedded Swagger UI for your app's API spec. Browse endpoints, try operations, and validate responses without leaving the console.
+        description: "Home dashboard with live stats, latency distribution, and JVM metrics. Built-in HTTP client and embedded Swagger UI for your OpenAPI spec."
 how_tos:
-    -   section: Add a control panel to your http4k app
+    -   section: Get started with http4k Wiretap
         steps:
-            -   description: Step 1 - Wrap your **HttpHandler** with **Wiretap** — a single function call adds the full control panel to your app.
+            -   description: Step 1 - **@ExtendWith(Intercept::class)** on any test class — OpenTelemetry data captured automatically, Gantt-style HTML report on failure.
 #                image: step1.png
-                alt: Wrap your app with Wiretap
-            -   description: Step 2 - Start your server as normal — your app and the Wiretap console share **one port**, no extra infrastructure needed.
+                alt: Add Intercept to your tests
+            -   description: Step 2 - **@RegisterExtension** with your app factory — full in-memory HTTP testing with traffic capture and multi-service sequence diagrams.
 #                image: step2.png
-                alt: Start the server
-            -   description: Step 3 - Open **/__wiretap** in your browser for the full control panel — traffic, traces, chaos, client, and more.
+                alt: Register extension for in-memory testing
+            -   description: Step 3 - Wrap your **HttpHandler** with **Wiretap()** — one function call adds the full console to your running app on the same port.
 #                image: step3.png
-                alt: Open the browser UI
-            -   description: Step 4 - Connect **Claude** or any MCP client to **/_wiretap/mcp** for AI-assisted debugging and testing.
+                alt: Wrap your app with Wiretap
+            -   description: Step 4 - Connect **Claude** or any MCP client to **/_wiretap/mcp** for AI-assisted debugging and chaos testing.
 #                image: step4.png
                 alt: Connect an MCP client
+pre_features_partial: product/wiretap_hero_image.html
+post_features_partial: product/wiretap_screenshots.html
 email_form_id: 8b025c558c
 ---
