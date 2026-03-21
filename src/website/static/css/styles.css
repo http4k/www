@@ -1336,7 +1336,8 @@ tr:hover {
     height: auto;
 }
 
-.page-content img.imageMid {
+.page-content img.imageMid,
+.page-content img.imageSmall {
     box-shadow: none;
     border-radius: 0;
 }
