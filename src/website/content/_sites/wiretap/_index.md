@@ -35,7 +35,7 @@ features:
         colour: indigo
         description: "**Self-contained HTML** with Gantt trace timelines, Mermaid sequence diagrams, HTTP transaction detail with one-click cURL copy, and captured stdout/stderr. **Share**, **archive**, **attach** to tickets."
     -   title: Wiretap:</br>TrafficMonitor
-        icon: supportive
+        icon: footprint
         colour: pink
         description: "**Real-time HTTP traffic capture** with filtering, named views, and Request replay. **See every request and response** flowing through your app."
     -   title: Wiretap:</br>OpenTelemetry
@@ -43,15 +43,15 @@ features:
         colour: orange
         description: "Gantt chart trace visualisation with deep linking to captured traffic. Follow requests across service boundaries."
     -   title: Wiretap:</br>MCPPanel
-        icon: footprint
+        icon: support
         colour: cyan
         description: "A **pure Kotlin** MCP Inspector replacement built into your app. **Browse and invoke** tools, prompts, and resources. **Host and render MCP Apps** with interactive UI. Plus every Wiretap feature **exposed as MCP tools** at /_wiretap/mcp for AI-assisted debugging."
     -   title: Wiretap:</br>ChaosEngine
-        icon: support
+        icon: footprint
         colour: violet
         description: "Inject **failures**, **latency**, and **error responses** into inbound and outbound traffic. Test resilience **without changing code**."
     -   title: Wiretap:</br>Dashboard & OpenAPI
-        icon: footprint
+        icon: supportive
         colour: red
         description: "Home dashboard with **live stats**, **latency distribution**, and JVM metrics. **Built-in HTTP client** and embedded **Swagger UI** for your OpenAPI spec."
 how_tos:
