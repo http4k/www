@@ -73,6 +73,9 @@ how_tos:
             alt: Inter-agent communication
       cta: Ready to build? Start experimenting with MCP Servers and Apps at the [http4k toolbox](https://toolbox.http4k.org)
 pricing_table:
-    id: prctbl_1R7YKvG47sNzv4yXIn3IgMCA
+    id: prctbl_1TDPvYG47sNzv4yXs9cSnAlN
     key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
+#pricing_table:
+#    id: prctbl_1TDPHHG47sNzv4yXrGfqiRrV
+#    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
 ---

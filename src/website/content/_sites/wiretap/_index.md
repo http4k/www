@@ -72,4 +72,7 @@ how_tos:
 pre_features_partial: product/wiretap_hero_image.html
 post_features_partial: product/wiretap_screenshots.html
 email_form_id: 8b025c558c
+#pricing_table:
+#    id: prctbl_1TDPBkG47sNzv4yX1N2tTzB6
+#    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
 ---

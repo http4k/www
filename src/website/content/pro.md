@@ -51,7 +51,17 @@ modules:
     description: Build interoperable AI agent systems with Google's A2A protocol — Agent Cards, Tasks, Streaming, and Push Notifications using testable http4k patterns
     prompt: "A clean isometric illustration of two AI agent figures exchanging messages across a bridge, with task cards and notification icons flowing between them. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
     available: false
-
+packs:
+  - name: Agent Pack
+    link: https://agents.http4k.org
+    image: agents.webp
+    prompt: "A clean isometric illustration of four interconnected modules arranged in a diamond pattern on a floating platform: a glowing neural network node
+  (MCP), two small robots linked by a bridge exchanging task cards (A2A), a magnifying glass over data streams (Wiretap), and two server towers exchanging a coin token (X402/MPP) — all connected by thin luminous lines converging to a central hub. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+  - name: Machine Payments Pack
+    link: https://payments.http4k.org
+    image: payments.webp
+    prompt: "A clean isometric illustration of two interconnected modules on a floating platform: a pair of minimalist server towers exchanging a small coin token across a bridge (X402), alongside a network of small connected nodes with tiny currency symbols flowing along paths between them on a simple grid (MPP)
+   — both linked by thin luminous lines converging to a central payment hub. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
 faq:
   - question: "How are http4k Pro modules different from the http4k Community modules?"
     answer: "Pro modules are commercially licensed extensions developed specifically to solve common enterprise use cases. They are distributed under **org.http4k.pro** Maven coordinate group. You can find details of the http4k Commercial License [here](/commercial-license/)."

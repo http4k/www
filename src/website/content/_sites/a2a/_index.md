@@ -1,8 +1,8 @@
 ---
 sitemap:
     disable: true
-title: "http4k A2A (Agent-to-Agent Protocol)"
-tagline: "http4k Agent2Agent: Interoperable agents, testable by design"
+title: "http4k A2A (Agent2Agent Protocol)"
+tagline: "Interoperable agents, testable by design"
 layout: "product"
 type: "product"
 subdomain: a2a
@@ -64,4 +64,7 @@ how_tos:
 #            image: step4.png
             alt: Connect to agents
 email_form_id: 8b025c558c
+pricing_table:
+    id: prctbl_1TDPEkG47sNzv4yXvKv1muVF
+    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
 ---
