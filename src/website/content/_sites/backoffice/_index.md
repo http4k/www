@@ -9,9 +9,6 @@ subdomain: backoffice
 tier: pro
 description: "Connect developers and AI models to your OpenAPI powered services via a secure, audited gateway with MCP integration"
 navigation:
-    -   name: docs
-        title: Sign up for launch
-        url: a'#subscribe'
     -   name: http4k Pro
         title: http4k Pro
         url: https://http4k.org/pro

@@ -9,9 +9,6 @@ subdomain: wiretap
 tier: pro
 description: "**Wiretap Intercept** captures OpenTelemetry traces, logs, and events from every test with rich HTML reports. **Wiretap Console** gives you real-time traffic monitoring, chaos engineering, and MCP debugging in your running app."
 navigation:
-    -   name: docs
-        title: Sign up for launch
-        url: a'#subscribe'
 #    -   name: docs
 #        title: Documentation
 #        url: https://toolbox.http4k.org/ecosystem/http4k/reference/wiretap
