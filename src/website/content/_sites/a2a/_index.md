@@ -64,7 +64,7 @@ how_tos:
 #            image: step4.png
             alt: Connect to agents
 email_form_id: 8b025c558c
-pricing_table:
-    id: prctbl_1TDPEkG47sNzv4yXvKv1muVF
-    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
+#pricing_table:
+#    id: prctbl_1TDPEkG47sNzv4yXvKv1muVF
+#    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
 ---
