@@ -25,23 +25,23 @@ features:
     -   title: Intercept:</br>ZeroConfig
         icon: supportive
         colour: green
-        description: "@ExtendWith(Intercept::class) on any test class. Traces, events, logs, and baggage captured and visualised in Gantt-style HTML reports on failure. No collector, no server, no setup."
+        description: "**@ExtendWith(Intercept::class)** on any test class. Traces, events, logs, and baggage **captured and visualised** in Gantt-style HTML reports on failure. No collector, no server, no setup."
     -   title: Intercept:</br>InMemory
         icon: testability
         colour: blue
-        description: "@RegisterExtension for instrumented HTTP clients, full traffic capture, built-in chaos engine for injecting failures into downstream calls, and auto-generated Mermaid sequence diagrams across multiple services. All in-process, no ports, full speed."
+        description: "**@RegisterExtension** for instrumented HTTP clients, full traffic capture, built-in **Chaos Engine** for injecting failure into downstream calls, and auto-generated **Mermaid sequence diagrams** across multiple services. All in-process, no ports, full speed."
     -   title: Intercept:</br>Reports
         icon: support
         colour: indigo
-        description: "Self-contained HTML with Gantt trace timelines, Mermaid sequence diagrams, HTTP transaction detail with one-click cURL copy, and captured stdout/stderr. Share, archive, attach to tickets."
+        description: "**Self-contained HTML** with Gantt trace timelines, Mermaid sequence diagrams, HTTP transaction detail with one-click cURL copy, and captured stdout/stderr. **Share**, **archive**, **attach** to tickets."
     -   title: Wiretap:</br>TrafficMonitor
         icon: supportive
         colour: pink
-        description: "Real-time HTTP traffic capture with filtering, named views, and Request replay. See every request and response flowing through your app."
+        description: "**Real-time HTTP traffic capture** with filtering, named views, and Request replay. **See every request and response** flowing through your app."
     -   title: Wiretap:</br>ChaosEngineering
         icon: support
         colour: violet
-        description: "Inject failures, latency, and error responses into inbound and outbound traffic. Test resilience without changing code."
+        description: "Inject **failures**, **latency**, and **error responses** into inbound and outbound traffic. Test resilience **without changing code**."
     -   title: Wiretap:</br>OpenTelemetryTraces
         icon: testability
         colour: orange
@@ -49,11 +49,11 @@ features:
     -   title: Wiretap:</br>MCPPanel
         icon: footprint
         colour: cyan
-        description: "A pure Kotlin MCP Inspector replacement built into your app. Browse and invoke tools, prompts, and resources. Host and render MCP Apps with interactive UI. Plus every Wiretap feature exposed as MCP tools at /_wiretap/mcp for AI-assisted debugging."
+        description: "A **pure Kotlin** MCP Inspector replacement built into your app. **Browse and invoke** tools, prompts, and resources. **Host and render MCP Apps** with interactive UI. Plus every Wiretap feature **exposed as MCP tools** at /_wiretap/mcp for AI-assisted debugging."
     -   title: Wiretap:</br>Dashboard & API
         icon: footprint
         colour: red
-        description: "Home dashboard with live stats, latency distribution, and JVM metrics. Built-in HTTP client and embedded Swagger UI for your OpenAPI spec."
+        description: "Home dashboard with **live stats**, **latency distribution**, and JVM metrics. **Built-in HTTP client** and embedded **Swagger UI** for your OpenAPI spec."
 how_tos:
     -   section: Get started with http4k Wiretap
         steps:
