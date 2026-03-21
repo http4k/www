@@ -69,7 +69,7 @@ how_tos:
             -   description: Step 3 - Wrap your **HttpHandler** with **Wiretap()** — one function call adds the full console to your running app on the same port.
 #                image: step3.png
                 alt: Wrap your app with Wiretap
-            -   description: Step 4 - Connect **Claude** or any MCP client to **/_wiretap/mcp** for AI-assisted debugging and chaos testing.
+            -   description: Step 4 - Connect **Claude Code** or any MCP client to **/_wiretap/mcp** for AI-assisted debugging and chaos testing.
 #                image: step4.png
                 alt: Connect an MCP client
 pre_features_partial: product/wiretap_hero_image.html
