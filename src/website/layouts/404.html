@@ -1,24 +1,44 @@
 {{ define "main" }}
-<div class="layout">
-    <main class="page-content">
-        <header>
-            <h1>//404</h1>
-        </header>
-        <p>
-        <p>You seem to have taken a wrong turn! <a href="/">Let's get you back on track!</a>.</p>
-        <p>
-            Note that we have recently redesigned the site so a lot of the old links may be broken,
-            especially from Google results (which will be reindexed at their leisure).
-            Everything is still here though - here are some helpful hints to help you find what you might be looking for:
-        </p>
-        <ul>
-            <li>Guides under <code>/guide/*</code> are now <a href="/howto/">here</a></li>
-            <li>The http4k reference  <code>/reference/*</code> is now <a href="/ecosystem/http4k/">here</a></li>
-            <li>Tutorials  <code>/tutorials/*</code> are now <a href="/tutorial/">here</a></li>
-        </ul>
-        <img src="/images/404.webp" class="border-radius-34" alt="404" width="50%"/>
-        </article>
-    </main>
+<style>
+    .hero-404 {
+        min-height: 400px;
+        padding: 80px 0 140px;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        background: url("/images/pipes-hero.svg"), linear-gradient(135deg, #59aff5 0%, #2096F3 50%, #61C0FF 100%);
+        background-size: cover, 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: relative;
+        margin-top: -1px;
+    }
+
+    @media (max-width: 991.98px) {
+        .hero-404 {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+            padding: 60px 0 100px;
+        }
+    }
+</style>
+
+<div class="hero-404 text-white text-center d-flex align-items-center justify-content-center">
+    <div>
+        <h1 style="font-size: 8em; font-weight: 900; line-height: 1; margin-bottom: 0.1em;">404</h1>
+        <p style="font-size: 1.4em; opacity: 0.9;">This page has gone missing.</p>
+    </div>
 </div>
+
+<div class="container" style="max-width: 600px; margin-top: -80px; position: relative; z-index: 10;">
+    <div class="card-shadow reveal-scale text-center" style="padding: 40px; border-radius: 20px; background: white;">
+        <img src="/images/404.webp" class="border-radius-34 mb-4" alt="Page not found" style="max-width: 280px; width: 100%;"/>
+        <p style="font-size: 1.1em; margin-bottom: 1.5em;">
+            Looks like this pipe got disconnected. Let's get you back on track.
+        </p>
+        <a class="btn btn-primary btn-lg" href="/">Back to safety</a>
+    </div>
+</div>
+
+<div style="padding-bottom: 80px;"></div>
 
 {{ end }}
