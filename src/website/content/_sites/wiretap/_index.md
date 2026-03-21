@@ -45,7 +45,7 @@ features:
     -   title: Wiretap:</br>MCPPanel
         icon: support
         colour: cyan
-        description: "A **pure Kotlin** MCP Inspector replacement built into your app. **Browse and invoke** tools, prompts, and resources. **Host and render MCP Apps** with interactive UI. Plus every Wiretap feature **exposed as MCP tools** at /_wiretap/mcp for AI-assisted debugging."
+        description: "A **pure Kotlin** MCP Inspector replacement built into your app. **Browse and invoke** tools, prompts, and resources. **Host and render MCP Apps** with interactive UI. Plus every Wiretap feature **exposed as MCP tools** for AI-assisted debugging."
     -   title: Wiretap:</br>ChaosEngine
         icon: footprint
         colour: violet
