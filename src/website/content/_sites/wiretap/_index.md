@@ -61,16 +61,16 @@ how_tos:
     -   section: Get started with http4k Wiretap
         steps:
             -   description: Step 1 - **@ExtendWith(Intercept::class)** on any test class — OpenTelemetry data captured automatically, Gantt-style HTML report on failure.
-#                image: step1.png
+                image: wiretap-intercept.webp
                 alt: Add Intercept to your tests
             -   description: Step 2 - **@RegisterExtension** with your app factory — full in-memory HTTP testing with traffic capture and multi-service sequence diagrams.
-#                image: step2.png
+                image: wiretap-traffic.webp
                 alt: Register extension for in-memory testing
             -   description: Step 3 - Wrap your **HttpHandler** with **Wiretap()** — one function call adds the full console to your running app on the same port.
-#                image: step3.png
+                image: wiretap-launch.webp
                 alt: Wrap your app with Wiretap
             -   description: Step 4 - Connect **Claude Code** or any MCP client to **/_wiretap/mcp** for AI-assisted debugging and chaos testing.
-#                image: step4.png
+                image: wiretap-claude.webp
                 alt: Connect an MCP client
 pre_features_partial: product/wiretap_hero_image.html
 post_features_partial: product/wiretap_screenshots.html
