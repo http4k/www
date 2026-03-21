@@ -17,35 +17,35 @@ navigation:
         url: https://http4k.org/enterprise
 features:
     - title: Complete</br>Protocol
-      icon: supportive
+      icon: testability
       colour: blue
       description: "Full **A2A spec** support: **Agent Cards**, **Tasks**, **Messages**, **Artifacts**, **Streaming**, **Push Notifications**, and **multi-turn conversations**."
     - title: Testable</br>Design
-      icon: testability
+      icon: supportive
       colour: green
       description: "**Pure functions**, no side effects. Test agent interactions fully **in-memory** — no network, no ports, no flaky CI."
     - title: Type-safe</br>Tooling
-      icon: support
+      icon: footprint
       colour: indigo
       description: "http4k's powerful Lens system for **type-safe Agent Cards**, **Skills**, and **Task definitions** with **compile-time safety**."
     - title: Agent</br>Discovery
-      icon: supportive
+      icon: support
       colour: violet
       description: "**Agent Cards** for capability advertisement and discovery. Agents publish **skills**, **auth requirements**, and **supported content types**."
     - title: Task</br>Lifecycle
-      icon: testability
+      icon: footprint
       colour: orange
       description: "Full task state management: **submitted**, **working**, **input-required**, **completed**, **failed**, **canceled**. Long-running agent collaboration built in."
     - title: Streaming
-      icon: footprint
+      icon: support
       colour: pink
       description: "Real-time **SSE streaming** for large outputs and continuous updates. Progressive task results without polling."
     - title: Push</br>Notifications
-      icon: footprint
+      icon: supportive
       colour: cyan
       description: "**Webhook-based notifications** for task status changes. Agents stay informed without long-polling."
     - title: Protocol</br>Client
-      icon: supportive
+      icon: testability
       colour: red
       description: "Pure Kotlin **A2A client** for building custom agent systems. Connect to any **A2A-compliant agent** from your http4k application."
 how_tos:

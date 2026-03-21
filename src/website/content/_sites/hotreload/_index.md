@@ -23,7 +23,7 @@ navigation:
         url: https://http4k.org/enterprise
 features:
     - title: No more</br>stop/starts
-      icon: support
+      icon: testability
       colour: indigo
       description: This tool automatically restarts the server when it detects a code change, resulting in fewer steps in your development workflow.
     - title: Tiny</br> overhead
@@ -35,7 +35,7 @@ features:
       colour: violet
       description: Hot reload works with all of the <a href="https://www.http4k.org/ecosystem/http4k/reference/servers/">servers</a> http4k can run on, no matter if you're serving HTTP, WebSockets, or SSE protocol.
     - title: Leverage your</br> existing build tool
-      icon: testability
+      icon: support
       colour: blue
       description: Use the Gradle integration (including multi-project support) or extend it to leverage your existing building tools.
 how_tos:

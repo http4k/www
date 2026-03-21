@@ -25,35 +25,35 @@ navigation:
         url: https://http4k.org/enterprise
 features:
     - title: Complete</br>Protocol
-      icon: supportive
+      icon: testability
       colour: blue
       description: "**MCP 2025-11-25 + Draft** protocols with **OAuth & Resource Metadata**, passing **MCP conformance tests**. Full support for **Tools**, **Prompts**, **Resources**, **Tasks**, **Sampling**, **Elicitation**, and more."
     - title: Testable</br>Design
-      icon: testability
+      icon: supportive
       colour: green
       description: "**Pure functions**, no side effects. Test Tools, Resources, and MCP Apps fully **in-memory** — no network, no ports, no flaky CI."
     - title: Type-safe</br>Tooling
-      icon: support
+      icon: footprint
       colour: indigo
       description: "http4k's powerful Lens system for **type-safe tool definitions** and capability bindings with **compile-time safety**."
     - title: MCP</br>Apps
-      icon: supportive
+      icon: support
       colour: violet
       description: "**Server-rendered UI components** with the **MCP Apps** protocol. Dashboards, forms, and visualizations directly in MCP clients. Fully **testable**."
     - title: Built-in</br>Observability
-      icon: testability
+      icon: footprint
       colour: orange
       description: "**OpenTelemetry MCP Semantic Conventions** support. Plug into Jaeger, Honeycomb, Datadog — with zero custom instrumentation."
     - title: Machine</br>Payments
-      icon: footprint
+      icon: support
       colour: pink
       description: "Payment-gated MCP tools and resources with **x402** and **Machine Payments Protocol (MPP)**. Protocol-level and tool-level payment filters for automated machine-to-machine commerce."
     - title: Flexible</br>Transport
-      icon: footprint
+      icon: supportive
       colour: cyan
       description: "**HTTP Streaming**, SSE, WebSocket, JSON-RPC, and Standard IO transports. Stateful or stateless protocols for desktop and web clients."
     - title: Protocol</br>Client
-      icon: supportive
+      icon: testability
       colour: red
       description: Build your own **AI agents** with pure Kotlin MCP protocol clients. Custom agent development and advanced AI workflows.
 how_tos:

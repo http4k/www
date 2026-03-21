@@ -19,19 +19,19 @@ navigation:
         url: https://http4k.org/enterprise
 features:
     - title: Async</br>processing
-      icon: support
+      icon: testability
       colour: indigo
       description: Process HTTP requests asynchronously, freeing up your application to handle other tasks.
     - title: Built with</br> testing in mind
-      icon: footprint
+      icon: supportive
       colour: violet
       description: Get the same level of testability as the rest of your http4k application, with in-memory implementations and usage of `HttpHandler`.
     - title: Handle inbound</br> and outbound requests
-      icon: supportive
+      icon: footprint
       colour: pink
       description: Use the same mechanism to process either requests to your application or to other services.
     - title: Out-of-the-box</br> resilience
-      icon: testability
+      icon: support
       colour: blue
       description: Leverage database transactions, retries and error handling to ensure your messages are processed reliably.
 email_form_id: 8b025c558c
