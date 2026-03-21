@@ -1336,6 +1336,11 @@ tr:hover {
     height: auto;
 }
 
+.page-content img.imageMid {
+    box-shadow: none;
+    border-radius: 0;
+}
+
 /* Blockquote styling */
 .page-content blockquote {
     border-left: 4px solid var(--primary-color);
