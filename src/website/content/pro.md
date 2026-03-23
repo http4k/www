@@ -3,12 +3,6 @@ title: http4k Pro modules
 type: pro
 description: "The http4k Pro modules are a set of premium features and tools designed to help engineers solve recurring problems. These modules are designed to save you time and effort when building your http4k applications and provide production-ready implementations that help teams deploy http4k applications in regulated and high-volume environments."
 modules:
-  - name: Model Context Protocol
-    link: https://mcp.http4k.org
-    image: mcp.webp
-    description: Build MCP servers and MCP Apps to integrate Large Language Models with your data and tools using familiar testable http4k patterns
-    prompt: "A clean isometric illustration of a minimalist server room with a glowing neural network node connected to simple data blocks via thin lines. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-    available: true
   - name: X402 Payments
     link: https://payments.http4k.org
     image: x402.webp
@@ -27,6 +21,12 @@ modules:
     available: true
     description: Hot Reload automatically restarts your server after code changes, saving you time during development
     prompt: "A clean isometric illustration of a minimalist laptop with a circular refresh arrow hovering above the screen, beside a small code editor window. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+  - name: Model Context Protocol
+    link: https://mcp.http4k.org
+    image: mcp.webp
+    description: Build MCP servers and MCP Apps to integrate Large Language Models with your data and tools using familiar testable http4k patterns
+    prompt: "A clean isometric illustration of a minimalist server room with a glowing neural network node connected to simple data blocks via thin lines. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: false
   - name: Wiretap
     link: https://wiretap.http4k.org
     image: wiretap.webp

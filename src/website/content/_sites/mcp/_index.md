@@ -14,9 +14,9 @@ navigation:
     -   name: docs
         title: Documentation
         url: https://http4k.org/ecosystem/ai/reference/mcp/
-    -   name: pricing
-        title: Pricing
-        url: "#pricing"
+#    -   name: pricing
+#        title: Pricing
+#        url: "#pricing"
     -   name: http4k Pro
         title: http4k Pro
         url: https://http4k.org/pro
@@ -72,10 +72,8 @@ how_tos:
             image: mcp_client.webp
             alt: Inter-agent communication
       cta: Ready to build? Start experimenting with MCP Servers and Apps at the [http4k toolbox](https://toolbox.http4k.org)
-pricing_table:
-    id: prctbl_1TDPvYG47sNzv4yXs9cSnAlN
-    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
+email_form_id: 8b025c558c
 #pricing_table:
-#    id: prctbl_1TDPHHG47sNzv4yXrGfqiRrV
+#    id: prctbl_1TDPvYG47sNzv4yXs9cSnAlN
 #    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
 ---
