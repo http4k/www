@@ -48,6 +48,6 @@ how_tos:
             image: hotreload-step2.png
             alt: Run it with the HotReloadServer
 pricing_table:
-    id: prctbl_1Qk8bRG47sNzv4yXy1CGLRii
+    id: prctbl_1TEEK2G47sNzv4yXswGXeFeT
     key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
 ---
