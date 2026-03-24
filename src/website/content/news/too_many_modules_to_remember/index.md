@@ -1,6 +1,6 @@
 ---
-title: "We missed shipping our 200th module. Guess we were too busy building the next four!"
-description: "Somewhere between module #199 and #204, http4k quietly sailed past 200. No cake, no fanfare - just another Tuesday release."
+title: "We Forgot to Ship Our 200th Module. What Do You Do When There's Too Many to Remember?"
+description: "Somewhere between module #199 and #205, http4k quietly sailed past 200. No cake, no fanfare - just another Tuesday release. So we taught an AI to remember it all for you."
 date: 2026-03-17
 draft: true
 image: image.webp
@@ -10,7 +10,7 @@ image: image.webp
 
 We missed it. Sorry. Our bad.
 
-Somewhere between module 199 and 204, http4k quietly sailed past 200 modules. No cake, no countdown, no confetti cannon - just another weekly release. By the time anyone thought to check, we were already at 204 and we're already working on the next one.
+Somewhere between module 199 and 205, http4k quietly sailed past 200 modules. No cake, no countdown, no confetti cannon - just another weekly release. By the time anyone thought to check, we were already at 205 and we're already working on the next one.
 
 That's rather on-brand for us, if we're honest. Not really ones for fanfare.
 
@@ -24,13 +24,13 @@ Let's put this in perspective - here's how the http4k ecosystem has grown over t
 - 2021: v4. 69 modules, featured in the ThoughtWorks Radar
 - 2023: v5. 127 modules, Loom support, TracerBullet, and our first AI module
 - 2025: v6. 180+ modules, Pro tier, bridge modules, and the MCP SDK
-- 2026: (today). 204 modules (oops, we missed 200)
+- 2026: (today). 205 modules (oops, we missed 200)
 
 842 releases of `http4k-core` since v0.21.0 first landed on Maven Central back in May 2017 - plus another 263 releases of `http4k-connect` before it was merged into the monorepo. Nearly nine years of consistent weekly shipping will do that.
 
-## The Shape of 204 Modules
+## The Shape of 205 Modules
 
-We're not going to list all 204. Life's too short and I we'd be worried if you wanted us to. But here's the shape of the ecosystem - a sense of where those modules live:
+We're not going to list all 205. Life's too short and I we'd be worried if you wanted us to. But here's the shape of the ecosystem - a sense of where those modules live:
 
 - **Core & Platform** - the foundational building blocks, lenses, routing, and the patterns everything else builds on
 - **Servers** - twelve backends from Apache to Helidon to Undertow, including virtual thread support
@@ -47,19 +47,29 @@ We're not going to list all 204. Life's too short and I we'd be worried if you w
 
 People like to call it a framework (we hate that word!). We think it's more of an ecosystem. And every single piece of it follows the same functional patterns we established on day one.
 
-## 204 Modules, One Set of Rules
+## 205 Modules, One Set of Rules
 
-Here's the thing most people don't quite believe until they try it: module 204 works exactly like module 1.
+Here's the thing most people don't quite believe until they try it: module 205 works exactly like module 1.
 
-No special cases. No "well, for *this* integration you need to start a container." No annotations that secretly do twelve things. No classpath scanning. No enforced reflection. The 204th module follows the same rules as the first - it's just a function, it composes with everything else, and you can test it without a network.
+No special cases. No "well, for *this* integration you need to start a container." No annotations that secretly do twelve things. No classpath scanning. No enforced reflection. The 205th module follows the same rules as the first - it's just a function, it composes with everything else, and you can test it without a network.
 
 And it's not an accident - it's a design constraint we've maintained for nine years, across every module, through 6 major versions. When you can test your server, your MCP, your AWS client, your WebSocket handler, and your serverless function all in-memory with the same simple patterns - everything else seems just hilariously overcomplicated and slow.
 
 ## The AI Chapter
 
-The jump from 180 to 204 tells its own story. A significant chunk of those new modules live in the AI and MCP space - OpenAI, Anthropic, LangChain4j, and the MCP SDK that now covers the full 2025-11-25 spec plus now the first MCP Apps support on the JVM. You can expect A2A support in the future, along with a few other surprises.
+The jump from 180 to 205 tells its own story. A significant chunk of those new modules live in the AI and MCP space - OpenAI, Anthropic, LangChain4j, and the MCP SDK that now covers the full 2025-11-25 spec plus now the first MCP Apps support on the JVM. You can expect A2A support in the future, along with a few other surprises.
 
 And this wasn't a pivot. We started as an HTTP toolkit because HTTP is the universal transport layer. AI systems communicate over HTTP. MCP runs over HTTP. It turns out that if you build a really solid foundation for HTTP, everything that travels over it can just compose from the parts - including the stuff that didn't exist when you started.
+
+## Teaching Your AI to Speak http4k
+
+And speaking of AI - we've gone one step further. With 200+ modules, even the most seasoned http4k developer occasionally forgets which module does what (we certainly do). So we built [http4k Agent Skills](https://github.com/http4k/agent-skills) - a plugin for Claude Code that teaches your LLM assistant how to work with the entire http4k ecosystem.
+
+Install it, and Claude Code automatically detects which http4k modules your project uses by scanning your build files, then loads only the relevant reference material. No manual configuration, no "please read the docs at..." prompts, no hallucinated APIs that don't exist. Just contextual, accurate guidance across all 200+ modules - servers, clients, formats, testing, serverless, AI, MCP, the lot.
+
+It's the kind of thing that only works when your toolkit has consistent patterns across every module. If module 205 worked differently from module 1, no amount of AI could paper over the inconsistency. But when everything follows the same functional rules? An LLM can actually be useful.
+
+We dogfood this ourselves (naturally), and it's already saving us time. Give it a try and let us know what you think.
 
 ## Community
 
