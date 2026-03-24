@@ -194,23 +194,28 @@ menus:
       weight: 53
 
     - name: toolbox
-      title: Toolbox
+      title: Tooling
       weight: 60
     - name: tools-web
-      title: Web
+      title: Toolbox (Web)
       url: https://toolbox.http4k.org/
       parent: toolbox
       weight: 61
-    - name: toolbox-intellij
-      title: IntelliJ
-      url: https://plugins.jetbrains.com/plugin/25243-http4k-toolbox
+    - name: tools-claude
+      title: LLM Agent Skills
+      url: https://github.com/http4k/agent-skills
       parent: toolbox
       weight: 62
-    - name: tools-cli
-      title: CLI
-      url: https://toolbox.http4k.org/
+    - name: toolbox-intellij
+      title: IntelliJ Plugin
+      url: https://plugins.jetbrains.com/plugin/25243-http4k-toolbox
       parent: toolbox
       weight: 63
+    - name: tools-cli
+      title: Toolbox CLI
+      url: https://toolbox.http4k.org/
+      parent: toolbox
+      weight: 64
   legal:
     - name: "Privacy policy"
       url: /privacy-policy/
