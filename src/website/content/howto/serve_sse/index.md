@@ -18,13 +18,13 @@ dependencies {
 **http4k** provides SSE (Server Sent Events) support using a simple, consistent, typesafe, and testable API on supported
 server backends (see above). SSE communication consists of 3 main concepts:
 
-1. `SseHandler` - represented as a typealias: `SseHandler =  (Request) -> SseConsumer`. This is responsible for matching
+1. `SseHandler` - represented as a typealias: `SseHandler =  (Request) -> SseResponse`. This is responsible for matching
    an HTTP request to an SSE handler.
 1. `SseConsumer` - represented as a typealias: `SseConsumer = (Sse) -> Unit`. This function is called on connection of a
    Sse and allow the API user to receive to events coming from the connected SSE handler.
 1. `SseMessage` - a message which is sent from the SSE handler SseMessages are immutable data classes.
-1. `SseFilter` - represented as a interface: `SseFilter = (SseConsumer) -> SseConsumer`. This allows for the decoration
-   of `SseConsumers` to add pre or post matching behaviour in the same way as a standard `Filter`.
+1. `SseFilter` - represented as a interface: `SseFilter = (SseHandler) -> SseHandler`. This allows for the decoration
+   of `SseHandlers` to add pre or post matching behaviour in the same way as a standard `Filter`.
 
 ### SSE as a Function
 
@@ -42,7 +42,7 @@ Both SSE and Http handlers in **http4k** are routed using a similar path-based A
 Note that if the accept header is not set, or the SSE cannot service the request, the HTTP server will be used as a
 fallback.
 
-### CORs protection for SSE
+### CORS protection for SSE
 
 CORS (Cross-Origin Resource Sharing) is a security feature implemented by web browsers to prevent malicious websites
 from making requests to a different domain than the one that served the web page. When using SSE, you should 
