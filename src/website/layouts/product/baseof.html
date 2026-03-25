@@ -213,7 +213,14 @@
 {{ else }}
 {{ if eq .Params.tier "pro" }}
 <div class="container pt-5 pb-5" id="subscribe">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center text-center" style="max-width: 700px; margin: 0 auto;">
+        {{ if .Params.early_access }}
+        <h2>Get early access</h2>
+        <p>This module is available through our early access program — fully tested and production-ready. Sign up below for general availability updates, or <a href="mailto:solutions@http4k.org"><b>get in touch</b></a> to join the EAP.</p>
+        {{ else }}
+        <h2>Stay in the loop</h2>
+        <p>This module is coming soon. Sign up below to be the first to know when it launches.</p>
+        {{ end }}
         <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
     </div>
 </div>

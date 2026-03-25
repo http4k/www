@@ -22,6 +22,8 @@
                             <div class="mt-auto pt-3">
                                 {{ if .available }}
                                 <a href="{{ .link }}" class="btn btn-secondary w-100">See more</a>
+                                {{ else if .early_access }}
+                                <a href="{{ .link }}" class="btn btn-secondary w-100">Early access</a>
                                 {{ else }}
                                 <a href="{{ .link }}" class="btn btn-secondary w-100">Coming soon...</a>
                                 {{ end }}

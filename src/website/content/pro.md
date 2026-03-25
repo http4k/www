@@ -27,6 +27,7 @@ modules:
     description: Build MCP servers and MCP Apps to integrate Large Language Models with your data and tools using familiar testable http4k patterns
     prompt: "A clean isometric illustration of a minimalist server room with a glowing neural network node connected to simple data blocks via thin lines. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
     available: false
+    early_access: true
   - name: Wiretap
     link: https://wiretap.http4k.org
     image: wiretap.webp
@@ -89,7 +90,7 @@ regulated environments.
 With Pro modules, teams can confidently deploy http4k applications that meet strict compliance
 requirements while maintaining the performance demands of modern cloud workloads.
 
-The library of Pro modules is regularly growing — check back often for new additions.
+The library of Pro modules is regularly growing. Some modules are available for early access — fully tested and production-ready. Sign up for updates on their product pages or [get in touch](mailto:solutions@http4k.org) to talk to us about getting started.
 
 Pro modules are available to license standalone or are automatically included
 as a part of the <a href="/enterprise">http4k Enterprise Edition</a>. We also offer custom licensing terms to suit your organisation's needs — get in touch using the button below.</p>
