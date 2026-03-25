@@ -5,6 +5,7 @@ title: "http4k Wiretap"
 tagline: "See everything. From your tests to production."
 layout: "product"
 type: "product"
+early_access: true
 subdomain: wiretap
 tier: pro
 description: "**Wiretap Intercept** captures OpenTelemetry traces, logs, and events from every test with rich HTML reports. **Wiretap Console** gives you real-time traffic monitoring, chaos engineering, and MCP debugging in your running app."
