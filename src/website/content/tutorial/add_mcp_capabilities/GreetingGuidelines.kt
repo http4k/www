@@ -7,7 +7,7 @@ import org.http4k.core.Uri
 import org.http4k.routing.bind
 
 val guidelines = Resource.Static("greeting://guidelines", "Greeting style guide") bind {
-    ResourceResponse(
+    ResourceResponse.Ok(
         Text(
             "Always greet warmly. Use the person's name. Keep it under 20 words.",
             Uri.of("greeting://guidelines")

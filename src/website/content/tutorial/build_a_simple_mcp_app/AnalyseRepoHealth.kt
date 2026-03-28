@@ -16,7 +16,7 @@ fun AnalyseRepoHealth(): PromptCapability {
         repo
     ) bind { req ->
         val repoName = repo(req)
-        PromptResponse(
+        PromptResponse.Ok(
             Role.User, """
 You are a GitHub repository health analyst. Analyse **$repoName** using the focus mode and metrics from the most recent get_health_selection tool response to produce a health report.
 

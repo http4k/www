@@ -30,7 +30,7 @@ object TestingExample {
                 ToolResponse.Ok(Text("Hello, ${nameLens(request)}!"))
             },
             Resource.Static("file://readme", "readme", "The readme") bind { req ->
-                ResourceResponse(Resource.Content.Text("# Welcome", req.uri))
+                ResourceResponse.Ok(Resource.Content.Text("# Welcome", req.uri))
             }
         )
 

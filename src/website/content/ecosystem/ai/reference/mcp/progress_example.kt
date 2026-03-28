@@ -9,5 +9,5 @@ val progress: CompletionHandler = { req ->
     val allUsers = listOf("Alice", "Alex", "Albert", "Bob", "Charlie", "David")
     val prefix = req.argument.value
 
-    CompletionResponse(allUsers.filter { it.startsWith(prefix) })
+    CompletionResponse.Ok(allUsers.filter { it.startsWith(prefix) })
 }

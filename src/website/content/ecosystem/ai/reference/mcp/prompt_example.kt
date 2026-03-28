@@ -28,7 +28,7 @@ val greetingPromptHandler: PromptHandler = { req: PromptRequest ->
         null -> Content.Text("Hello, ${name(req)}!")
         else -> Content.Text("Hello, ${name(req)}! How is req being ${age(req)}?")
     }
-    PromptResponse(listOf(Message(Assistant, content)))
+    PromptResponse.Ok(listOf(Message(Assistant, content)))
 }
 
 // use a Filter to perform logging/tracing/metrics

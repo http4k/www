@@ -19,7 +19,7 @@ val templatedFileResourceHandler: ResourceHandler = { request ->
     val file = File("/data", path)
 
     when {
-        file.exists() && file.isFile -> ResourceResponse(
+        file.exists() && file.isFile -> ResourceResponse.Ok(
             Resource.Content.Text(file.readText(), request.uri)
         )
 

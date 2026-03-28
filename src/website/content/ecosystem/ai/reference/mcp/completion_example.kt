@@ -16,7 +16,7 @@ val completionHandler: CompletionHandler = {
     val allUsers = listOf("Alice", "Alex", "Albert", "Bob", "Charlie", "David")
     val prefix = it.argument.value
 
-    CompletionResponse(allUsers.filter { it.startsWith(prefix) })
+    CompletionResponse.Ok(allUsers.filter { it.startsWith(prefix) })
 }
 
 // use a Filter to perform logging/tracing/metrics

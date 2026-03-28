@@ -30,7 +30,7 @@ val roastingToolWithSampling: ToolHandler = { req ->
             responses
                 .filterIsInstance<SamplingResponse.Ok>()
                 .flatMap { it.content }
-                .filterIsInstance<Content.Text>()
+                .filterIsInstance<Text>()
                 .joinToString("")
         }
 

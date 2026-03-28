@@ -9,7 +9,7 @@ import org.http4k.routing.bind
 val personName = Prompt.Arg.string().required("name", "Person to greet")
 
 val greetingPrompt = Prompt("formal_greeting", "Generate a formal greeting", personName) bind {
-    PromptResponse(
+    PromptResponse.Ok(
         Role.User,
         "Write a formal greeting for ${personName(it)}. " +
             "Read the greeting://guidelines resource first, then call the greet tool."

@@ -31,7 +31,7 @@ val greetingToolWithElicitation: ToolHandler = { req ->
                     else -> Ok("hello stranger!")
                 }
 
-                is ElicitationResponse.Task -> error("not supported in this example")
+                else -> error("not supported in this example")
             }
         }
         .recover { Error("error: $it") }

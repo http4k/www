@@ -24,7 +24,7 @@ val getLinksResourceHandler: ResourceHandler = {
     val links = getAllLinksFrom(htmlPage)
         .map { Resource.Content.Text(it.text(), Uri.of(it.attr("href"))) }
 
-    ResourceResponse(links)
+    ResourceResponse.Ok(links)
 }
 
 // use a Filter to perform logging/tracing/metrics
