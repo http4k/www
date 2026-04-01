@@ -11,7 +11,7 @@ highlights:
         description: Stay ahead of compliance requirements with machine-readable Software Bills of Materials for every module, ready for audit and vulnerability scanning out of the box.
         icon: "/images/connections.svg"
     -   title: Signed & Verified
-        description: Every provenance artifact is signed with our cosign key and delivered exclusively through the authenticated http4k Enterprise Repository at maven.http4k.org.
+        description: Every provenance artifact is signed with our cosign key and delivered exclusively through the authenticated http4k Enterprise Repository.
         icon: "/images/faq.svg"
 faq:
     -   question: "How do I get access to the http4k Enterprise Repository?"
@@ -23,7 +23,7 @@ faq:
     -   question: "Are community (org.http4k) artifacts also covered?"
         answer: Yes. Both community (org.http4k) and pro (org.http4k.pro) artifacts published to the http4k Enterprise Repository include full provenance, SBOMs, and cosign signatures.
     -   question: "Is provenance data available on Maven Central?"
-        answer: No. Provenance artifacts are available exclusively through the http4k Enterprise Repository at maven.http4k.org, ensuring this data remains accessible only to subscribers.
+        answer: No. Provenance artifacts are available exclusively through the http4k Enterprise Repository at [maven.http4k.org](https://maven.http4k.org), ensuring this data remains accessible only to subscribers.
 ---
 
 As part of the **http4k Enterprise Edition**, every http4k artifact is published with cryptographically signed provenance, complete dependency transparency, and verified build attestations — giving your organisation the supply chain assurance it needs to ship with confidence.
@@ -61,7 +61,7 @@ maven.http4k.org/releases/org/http4k/http4k-core/0.0.0.0/
 
 ## http4k Enterprise Repository
 
-All http4k Enterprise Edition artifacts are available through **maven.http4k.org**. Access credentials are included with your http4k Enterprise Edition subscription.
+All http4k Enterprise Edition artifacts are available through **[maven.http4k.org](https://maven.http4k.org)**. Access credentials are included with your http4k Enterprise Edition subscription.
 
 #### Gradle Configuration
 
@@ -164,7 +164,7 @@ The `--insecure-ignore-tlog` flag is required because http4k uses private signin
 
 #### Gradle Dependency Verification
 
-Gradle has built-in support for verifying dependency checksums without any extra tooling. To pin SHA-256 checksums for all dependencies (including http4k artifacts from maven.http4k.org):
+Gradle has built-in support for verifying dependency checksums without any extra tooling. To pin SHA-256 checksums for all dependencies (including http4k artifacts from [maven.http4k.org](https://maven.http4k.org)):
 
 ```bash
 ./gradlew --write-verification-metadata sha256
@@ -183,18 +183,3 @@ Each provenance attestation follows the [in-toto Statement v1](https://in-toto.i
 - The **build invocation ID** for full traceability
 - **SHA-256 digests** of all subject artifacts
 
-## Regulatory Compliance
-
-The supply chain security artifacts included with http4k Enterprise Edition help your organisation meet the requirements of key regulatory standards and frameworks:
-
-#### EU Cyber Resilience Act (CRA)
-The CRA requires manufacturers of software products sold in the EU to provide machine-readable SBOMs and demonstrate secure development practices. http4k's CycloneDX SBOMs and SLSA provenance directly support compliance with these obligations for any product built on http4k.
-
-#### US Executive Order 14028
-EO 14028 on Improving the Nation's Cybersecurity requires SBOMs for all software sold to the US federal government. Organisations supplying software to US government agencies can use http4k's SBOMs to satisfy this requirement for the http4k dependency chain.
-
-#### NIST Secure Software Development Framework (SSDF)
-The NIST SSDF recommends that organisations produce and consume provenance information and SBOMs as part of secure software development. http4k's SLSA L2 provenance and signed SBOMs align with SSDF practices PS.3 (protect software integrity) and PW.4 (verify third-party components).
-
-#### PCI DSS 4.0
-PCI DSS 4.0 strengthens software supply chain requirements for organisations processing payment data. http4k's signed provenance and dependency transparency help meet requirements around third-party software inventory and integrity verification.
