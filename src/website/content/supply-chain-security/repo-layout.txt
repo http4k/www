@@ -1,9 +1,10 @@
-maven.http4k.org/releases/org/http4k/http4k-core/0.0.0.0/
+maven.http4k.org/org/http4k/http4k-core/0.0.0.0/
     http4k-core-0.0.0.0.jar
     http4k-core-0.0.0.0.pom
     http4k-core-0.0.0.0-sources.jar
-    http4k-core-0.0.0.0.jar.sigstore.json
-    http4k-core-0.0.0.0-sbom.json
-    http4k-core-0.0.0.0-sbom.json.sigstore.json
-    http4k-core-0.0.0.0.provenance.json
-    http4k-core-0.0.0.0.provenance.json.sigstore.json
+    http4k-core-0.0.0.0-javadoc.jar
+    http4k-core-0.0.0.0-cyclonedx.json             (CycloneDX SBOM)
+    http4k-core-0.0.0.0-cyclonedx-sigstore.json    (signed SBOM)
+    http4k-core-0.0.0.0-jar-sigstore.json          (signed JAR)
+    http4k-core-0.0.0.0-provenance.json            (SLSA provenance)
+    http4k-core-0.0.0.0-provenance-sigstore.json   (signed provenance)

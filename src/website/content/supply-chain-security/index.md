@@ -32,16 +32,16 @@ With increasing regulatory pressure from the **EU Cyber Resilience Act (CRA)**, 
 
 ## What Gets Published
 
-For every module in the http4k Enterprise Repository, the following provenance artifacts are published alongside the standard JARs and POMs:
+For every module in the http4k Enterprise Repository, the following provenance artifacts are published as classified Maven artifacts alongside the standard JARs and POMs. They can be resolved via standard Maven coordinates, e.g. `org.http4k:http4k-core:6.39.0.0:cyclonedx@json`.
 
-<table class="table" style="max-width: 80%">
-<thead><tr><th>File</th><th>Description</th></tr></thead>
+<table class="table" style="max-width: 90%">
+<thead><tr><th>Classifier</th><th>File</th><th>Description</th></tr></thead>
 <tbody>
-<tr><td><code>{artifact}.jar.sigstore.json</code></td><td>Cosign signature bundle for the JAR</td></tr>
-<tr><td><code>{artifact}-sbom.json</code></td><td>CycloneDX SBOM listing all dependencies</td></tr>
-<tr><td><code>{artifact}-sbom.json.sigstore.json</code></td><td>Cosign signature bundle for the SBOM</td></tr>
-<tr><td><code>{artifact}.provenance.json</code></td><td>SLSA Build L2 provenance attestation (in-toto v1)</td></tr>
-<tr><td><code>{artifact}.provenance.json.sigstore.json</code></td><td>Cosign signature bundle for the provenance</td></tr>
+<tr><td><code>cyclonedx</code></td><td><code>{artifact}-cyclonedx.json</code></td><td>CycloneDX SBOM listing all dependencies</td></tr>
+<tr><td><code>cyclonedx-sigstore</code></td><td><code>{artifact}-cyclonedx-sigstore.json</code></td><td>Cosign signature bundle for the SBOM</td></tr>
+<tr><td><code>jar-sigstore</code></td><td><code>{artifact}-jar-sigstore.json</code></td><td>Cosign signature bundle for the JAR</td></tr>
+<tr><td><code>provenance</code></td><td><code>{artifact}-provenance.json</code></td><td>SLSA Build L2 provenance attestation (in-toto v1)</td></tr>
+<tr><td><code>provenance-sigstore</code></td><td><code>{artifact}-provenance-sigstore.json</code></td><td>Cosign signature bundle for the provenance</td></tr>
 </tbody>
 </table>
 
@@ -50,6 +50,15 @@ For every module in the http4k Enterprise Repository, the following provenance a
 For `org.http4k:http4k-core:0.0.0.0`:
 
 {{< shell file="repo-layout.txt" >}}
+
+## SLSA Provenance Format
+
+Each provenance attestation follows the [in-toto Statement v1](https://in-toto.io/Statement/v1) specification with a [SLSA Provenance v1](https://slsa.dev/provenance/v1) predicate. The attestation links each artifact to:
+
+- The **exact git commit** that produced it
+- The **GitHub Actions workflow** that built it
+- The **build invocation ID** for full traceability
+- **SHA-256 digests** of all subject artifacts
 
 ## http4k Enterprise Repository
 
@@ -120,15 +129,6 @@ Gradle has built-in support for verifying dependency checksums without any extra
 This generates a `gradle/verification-metadata.xml` file containing the expected checksums for every dependency. Gradle will then verify these checksums on every build, failing if any artifact has been tampered with.
 
 Once generated, commit `verification-metadata.xml` to your repository. Future builds will automatically verify all downloaded artifacts match the pinned checksums. When upgrading http4k versions, re-run the command to update the checksums.
-
-## SLSA Provenance Format
-
-Each provenance attestation follows the [in-toto Statement v1](https://in-toto.io/Statement/v1) specification with a [SLSA Provenance v1](https://slsa.dev/provenance/v1) predicate. The attestation links each artifact to:
-
-- The **exact git commit** that produced it
-- The **GitHub Actions workflow** that built it
-- The **build invocation ID** for full traceability
-- **SHA-256 digests** of all subject artifacts
 
 ## Verification Script
 

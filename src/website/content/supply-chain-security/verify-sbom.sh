@@ -1,4 +1,4 @@
-cosign verify-blob http4k-core-0.0.0.0-sbom.json \
+cosign verify-blob http4k-core-0.0.0.0-cyclonedx.json \
     --key cosign.pub \
-    --bundle http4k-core-0.0.0.0-sbom.json.sigstore.json \
+    --bundle http4k-core-0.0.0.0-cyclonedx-sigstore.json \
     --private-infrastructure

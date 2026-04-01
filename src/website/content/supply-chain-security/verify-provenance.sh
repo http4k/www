@@ -31,11 +31,11 @@ FILES=(
     "${ARTIFACT}-${VERSION}.pom"
     "${ARTIFACT}-${VERSION}-sources.jar"
     "${ARTIFACT}-${VERSION}-javadoc.jar"
-    "${ARTIFACT}-${VERSION}.jar.sigstore.json"
-    "${ARTIFACT}-${VERSION}-sbom.json"
-    "${ARTIFACT}-${VERSION}-sbom.json.sigstore.json"
-    "${ARTIFACT}-${VERSION}.provenance.json"
-    "${ARTIFACT}-${VERSION}.provenance.json.sigstore.json"
+    "${ARTIFACT}-${VERSION}-jar-sigstore.json"
+    "${ARTIFACT}-${VERSION}-cyclonedx.json"
+    "${ARTIFACT}-${VERSION}-cyclonedx-sigstore.json"
+    "${ARTIFACT}-${VERSION}-provenance.json"
+    "${ARTIFACT}-${VERSION}-provenance-sigstore.json"
 )
 
 for f in "${FILES[@]}"; do
@@ -56,11 +56,11 @@ FAIL=0
 
 verify() {
     local file="$1"
-    local bundle="${file}.sigstore.json"
+    local bundle="$2"
     local name=$(basename "$file")
 
     if [ ! -f "$bundle" ]; then
-        echo "  SKIP: $name (no .sigstore.json bundle)"
+        echo "  SKIP: $name (no sigstore bundle)"
         return
     fi
 
@@ -76,32 +76,27 @@ verify() {
     fi
 }
 
-echo "=== Verifying JAR signatures ==="
-for jar in "$WORKDIR"/*.jar; do
-    [ -f "$jar" ] || continue
-    verify "$jar"
-done
+PREFIX="$WORKDIR/${ARTIFACT}-${VERSION}"
+
+echo "=== Verifying JAR signature ==="
+verify "${PREFIX}.jar" "${PREFIX}-jar-sigstore.json"
 echo ""
 
 echo "=== Verifying SBOM ==="
-for sbom in "$WORKDIR"/*-sbom.json; do
-    [ -f "$sbom" ] || continue
-    verify "$sbom"
-done
+verify "${PREFIX}-cyclonedx.json" "${PREFIX}-cyclonedx-sigstore.json"
 echo ""
 
 echo "=== Verifying provenance ==="
-for prov in "$WORKDIR"/*.provenance.json; do
-    [ -f "$prov" ] || continue
-    verify "$prov"
-
+verify "${PREFIX}-provenance.json" "${PREFIX}-provenance-sigstore.json"
+PROV="${PREFIX}-provenance.json"
+if [ -f "$PROV" ]; then
     echo ""
     echo "  Provenance content:"
-    jq '.subject[] | "    \(.name): sha256:\(.digest.sha256)"' -r "$prov"
+    jq '.subject[] | "    \(.name): sha256:\(.digest.sha256)"' -r "$PROV"
     echo ""
-    echo "  Git commit: $(jq -r '.predicate.buildDefinition.resolvedDependencies[0].digest.gitCommit' "$prov")"
-    echo "  Build ID:   $(jq -r '.predicate.runDetails.metadata.invocationId' "$prov")"
-done
+    echo "  Git commit: $(jq -r '.predicate.buildDefinition.resolvedDependencies[0].digest.gitCommit' "$PROV")"
+    echo "  Build ID:   $(jq -r '.predicate.runDetails.metadata.invocationId' "$PROV")"
+fi
 echo ""
 
 echo "=== Results: $PASS passed, $FAIL failed ==="
