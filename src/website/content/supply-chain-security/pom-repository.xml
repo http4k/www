@@ -1,0 +1,6 @@
+<repositories>
+    <repository>
+        <id>http4k</id>
+        <url>https://maven.http4k.org</url>
+    </repository>
+</repositories>

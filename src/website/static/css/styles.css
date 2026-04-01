@@ -188,6 +188,7 @@
     .page-content {
         padding: 20px;
         width: 70%;
+        margin: 0 auto;
     }
 }
 
@@ -1242,7 +1243,8 @@ tr:hover {
 
 /* Enhanced tables site-wide */
 .page-content table {
-    margin: 2rem 0;
+    margin: 2rem auto;
+    width: fit-content;
     border-collapse: separate;
     border-spacing: 0;
     border-radius: var(--radius-sm);

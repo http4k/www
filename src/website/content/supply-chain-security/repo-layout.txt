@@ -1,0 +1,9 @@
+maven.http4k.org/releases/org/http4k/http4k-core/0.0.0.0/
+    http4k-core-0.0.0.0.jar
+    http4k-core-0.0.0.0.pom
+    http4k-core-0.0.0.0-sources.jar
+    http4k-core-0.0.0.0.jar.sigstore.json
+    http4k-core-0.0.0.0-sbom.json
+    http4k-core-0.0.0.0-sbom.json.sigstore.json
+    http4k-core-0.0.0.0.provenance.json
+    http4k-core-0.0.0.0.provenance.json.sigstore.json

@@ -1,6 +1,6 @@
 <style>
     @media (max-width: 998.98px) {
-        .pricing-table {
+        .features-table {
             font-family: system-ui, -apple-system, sans-serif;
             width: 95%;
             max-width: 95%;
@@ -13,7 +13,7 @@
     }
 
     @media (min-width: 998.98px) {
-        .pricing-table {
+        .features-table {
             font-family: system-ui, -apple-system, sans-serif;
             width: 75%;
             max-width: 75%;
@@ -25,18 +25,18 @@
         }
     }
 
-    .pricing-table th {
+    .features-table th {
         background-color: #f3f4f6;
         padding: 1rem;
         text-align: left;
     }
 
-    .pricing-table td {
+    .features-table td {
         padding: 1rem;
         border-bottom: 1px solid #e5e7eb;
     }
 
-    .pricing-table tr:last-child td {
+    .features-table tr:last-child td {
         border-bottom: none;
     }
 
@@ -59,7 +59,7 @@
         font-weight: 600;
     }
 </style>
-<table class="pricing-table">
+<table class="features-table">
     <thead>
     <tr>
         <th>Feature</th>
@@ -80,8 +80,8 @@
     </tr>
     <tr>
         <td class="feature-name">Supported http4k versions</td>
-        <td>v6.X+</td>
-        <td>v4.X+</td>
+        <td>v6.x+</td>
+        <td>v4.x+. v5.x+</td>
     </tr>
     <tr>
         <td class="feature-name">Source code access</td>
@@ -122,6 +122,11 @@
         <td class="feature-name">License reporting</td>
         <td><span class="x-mark">✕</span></td>
         <td><span class="check">✓</span>Per release</td>
+    </tr>
+    <tr>
+        <td class="feature-name">Supply chain security</td>
+        <td><span class="x-mark">✕</span></td>
+        <td><span class="check">✓</span>SLSA L2, SBOMs, cosign</td>
     </tr>
 
     </tbody>
