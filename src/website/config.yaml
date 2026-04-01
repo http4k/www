@@ -168,11 +168,16 @@ menus:
       url: /security/
       parent: solutions
       weight: 46
+    - name: solutions-supply-chain
+      title: Supply Chain Security
+      url: /supply-chain-security/
+      parent: solutions
+      weight: 47
     - name: solutions-slack
       title: http4k EE Slack
       url: "http://http4k.slack.com/"
       parent: solutions
-      weight: 47
+      weight: 48
 
     - name: community
       title: Community
