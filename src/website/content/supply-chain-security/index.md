@@ -66,7 +66,7 @@ All http4k Enterprise Edition artifacts are available through **[maven.http4k.or
 
 #### Gradle Configuration
 
-{{< shell file="gradle-repository.sh" >}}
+{{< kotlin file="gradle-repository.kts" >}}
 
 Add your credentials to `~/.gradle/gradle.properties`:
 
@@ -104,7 +104,33 @@ For Sonatype Nexus, add a proxy repository:
 
 ## Verifying Artifacts
 
-All provenance artifacts can be verified using [cosign](https://docs.sigstore.dev/cosign/overview/). Download the http4k public key from [https://http4k.org/cosign.pub](https://http4k.org/cosign.pub).
+#### http4k Gradle Verification Plugin
+
+The easiest way to verify http4k artifact signatures is with the **http4k Verification Plugin**. Add it to your build and every http4k dependency is automatically verified before compilation — no CLI tools required.
+
+Apply the plugin in your `build.gradle.kts`:
+
+{{< kotlin file="verify-plugin.kts" >}}
+
+That's it. The plugin automatically downloads the http4k public key, resolves sigstore bundles for all http4k dependencies, and verifies every signature. If any artifact has been tampered with, the build fails.
+
+Run it explicitly with:
+
+{{< shell file="verify-plugin-run.sh" >}}
+
+Example output:
+
+{{< shell file="verify-plugin-output.txt" >}}
+
+Optional configuration:
+
+{{< kotlin file="verify-plugin-config.kts" >}}
+
+The plugin is available from the http4k Enterprise Repository at [maven.http4k.org](https://maven.http4k.org). If the Enterprise Repository is not configured, the plugin will detect this and provide guidance.
+
+#### Manual Verification with cosign
+
+All provenance artifacts can also be verified manually using [cosign](https://docs.sigstore.dev/cosign/overview/). Download the http4k public key from [https://http4k.org/cosign.pub](https://http4k.org/cosign.pub).
 
 #### Verify a JAR
 
@@ -130,11 +156,4 @@ This generates a `gradle/verification-metadata.xml` file containing the expected
 
 Once generated, commit `verification-metadata.xml` to your repository. Future builds will automatically verify all downloaded artifacts match the pinned checksums. When upgrading http4k versions, re-run the command to update the checksums.
 
-## Verification Script
-
-We provide a ready-to-use script that downloads and verifies all provenance artifacts for any http4k module. Download the [http4k public key](https://http4k.org/cosign.pub), save the script below, and run:
-
-{{< shell file="run-verify-provenance.sh" >}}
-
-{{< shell file="verify-provenance.sh" >}}
 

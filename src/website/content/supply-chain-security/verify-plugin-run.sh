@@ -1,0 +1,1 @@
+./gradlew verifyHttp4kDependencies
