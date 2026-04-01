@@ -66,7 +66,7 @@ All http4k Enterprise Edition artifacts are available through **[maven.http4k.or
 
 #### Gradle Configuration
 
-{{< kotlinscript file="gradle-repository.kt" >}}
+{{< shell file="gradle-repository.sh" >}}
 
 Add your credentials to `~/.gradle/gradle.properties`:
 
