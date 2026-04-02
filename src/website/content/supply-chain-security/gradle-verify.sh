@@ -1,1 +1,1 @@
-./gradlew --write-verification-metadata sha256
+./gradlew --write-verification-metadata sha256,pgp

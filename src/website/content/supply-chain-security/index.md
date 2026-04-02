@@ -152,8 +152,10 @@ Gradle has built-in support for verifying dependency checksums without any extra
 
 {{< shell file="gradle-verify.sh" >}}
 
-This generates a `gradle/verification-metadata.xml` file containing the expected checksums for every dependency. Gradle will then verify these checksums on every build, failing if any artifact has been tampered with.
+This generates a `gradle/verification-metadata.xml` file containing the expected checksums for every dependency:
 
-Once generated, commit `verification-metadata.xml` to your repository. Future builds will automatically verify all downloaded artifacts match the pinned checksums. When upgrading http4k versions, re-run the command to update the checksums.
+{{< xml file="verification-metadata-example.xml" >}}
+
+Gradle will verify these checksums on every build, failing if any artifact has been tampered with. Commit `verification-metadata.xml` to your repository. When upgrading http4k versions, re-run the command to update the checksums.
 
 
