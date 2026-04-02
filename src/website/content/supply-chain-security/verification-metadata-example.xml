@@ -9,11 +9,11 @@
         <verify-signatures>true</verify-signatures>
     </configuration>
     <components>
-        <component group="org.http4k" name="http4k-core" version="6.40.0.0">
-            <artifact name="http4k-core-6.40.0.0.jar">
+        <component group="org.http4k" name="http4k-core" version="0.0.0.0">
+            <artifact name="http4k-core-0.0.0.0.jar">
                 <sha256 value="4396c4e8542e8180fc7d967c0d8ca3e4a1b800b74e1b92b0336b869b565c5fac"/>
             </artifact>
-            <artifact name="http4k-core-6.40.0.0.pom">
+            <artifact name="http4k-core-0.0.0.0.pom">
                 <sha256 value="a7f2b3c1d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1"/>
             </artifact>
         </component>
