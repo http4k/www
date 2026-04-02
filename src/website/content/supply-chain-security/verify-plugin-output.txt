@@ -1,6 +1,6 @@
 Downloading public key from https://http4k.org/cosign.pub
 Verifying 3 http4k module(s)...
-  org.http4k:http4k-core:6.40.0.0              jar ✓   sbom ✓   provenance ✓   license ✓
-  org.http4k:http4k-format-jackson:6.40.0.0    jar ✓   sbom ✓   provenance ✓   license ✓
-  org.http4k:http4k-server-undertow:6.40.0.0   jar ✓   sbom ✓   provenance ✓   license ✓
+  org.http4k:http4k-core:0.0.0.0              jar ✓   sbom ✓   provenance ✓   license ✓
+  org.http4k:http4k-format-jackson:0.0.0.0    jar ✓   sbom ✓   provenance ✓   license ✓
+  org.http4k:http4k-server-undertow:0.0.0.0   jar ✓   sbom ✓   provenance ✓   license ✓
 Verified: 3 modules, 12 signatures
