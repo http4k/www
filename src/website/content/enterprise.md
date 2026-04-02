@@ -1,6 +1,6 @@
 ---
 title: http4k Enterprise Edition
-description: It's important to us that you can rely on http4k for the long term. That's why we offer http4k EE with it;s Long-Term Support (LTS) programme.
+description: Long-term stability, supply chain security, priority support, and Pro modules — everything your organisation needs to run http4k in production with confidence.
 type: solutions
 email: enterprise@http4k.org
 aliases:
@@ -23,7 +23,7 @@ faq:
         answer: As standard, the open source http4k CE of http4k releases major versions of the ecosystem on a delayed cadence which is aligned with major release dates of the JDK every 2 years. As a new major http4k CE version is released, the previous major version enters the http4k EE LTS programme for 2 years. See the schedule above for the current timeline.
     -   question: "How will my teams access the LTS binaries of http4k EE?"
         answer: The LTS versions of http4k EE are hosted in the http4k Enterprise Repository at **[maven.http4k.org](https://maven.http4k.org)**. To access these assets, you will need to sign up for the http4k Enterprise Subscription and will be supplied with the necessary credentials.
-    -   question: "What types of updates are included with in the http4k EE LTS offering?"
+    -   question: "What types of updates are included within the http4k EE LTS offering?"
         answer: LTS version of http4k EE receive security and high priority bug fixes for community identified bugs. This ensures that your applications remain secure and fully functional.
     -   question: "What type of support is available for http4k EE subscribers"
         answer: After signup you will be given access to both email and Slack-based support channels. The http4k team is there
@@ -59,7 +59,7 @@ Additionally, **http4k EE**  offers transparency with full access to the codebas
 
 ## http4k EE Timeline
 
-The timeline for http4k EE's LTS has been designed to strike a balance between a generous open source period and the need for us to take advantage for new language features available in the JDK. We are also commited to providing support using a predictable timeline for our LTS customers, which is synchronized with the official JDK release and support cycle of LTS versions (currently every 2 years), but offset by a 3 month window. To put that more visually, this is the timeline for current and future Java LTS releases:
+The timeline for http4k EE's LTS has been designed to strike a balance between a generous open source period and the need for us to take advantage for new language features available in the JDK. We are also committed to providing support using a predictable timeline for our LTS customers, which is synchronized with the official JDK release and support cycle of LTS versions (currently every 2 years), but offset by a 3 month window. To put that more visually, this is the timeline for current and future Java LTS releases:
 
 {{< timeline data="Java" >}}
 
@@ -67,6 +67,6 @@ Based on the above, the current plan is for future major http4k versions to have
 
 {{< timeline data="http4k" >}}
 
-In the case of an intermediate major version upgrade between JDK versions, the previous major version will also immediate start a 24 month support window to ensure that customers have a smooth upgrade path. 
+In the case of an intermediate major version upgrade between JDK versions, the previous major version will also immediately start a 24 month support window to ensure that customers have a smooth upgrade path. 
 
 If you have any questions about the http4k EE subscription, or long-term support requirements outside of the above schedule, please get in touch using the below contact link and we will endeavour to assist.

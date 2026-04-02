@@ -22,13 +22,13 @@ faq:
         answer: The cosign public key is available at https://http4k.org/cosign.pub. This key is used to verify all .sigstore.json bundles.
     -   question: "Are community (org.http4k) artifacts also covered?"
         answer: Yes. Both community (org.http4k) and pro (org.http4k.pro) artifacts published to the http4k Enterprise Repository include full provenance, SBOMs, and cosign signatures.
-    -   question: "Is provenance data available on Maven Central?"
-        answer: No. Provenance artifacts are available exclusively through the http4k Enterprise Repository at **[maven.http4k.org](https://maven.http4k.org)**, ensuring this data remains accessible only to subscribers.
+    -   question: "Where are provenance artifacts published?"
+        answer: All provenance artifacts — SBOMs, signed JARs, license reports, and SLSA attestations — are delivered through the http4k Enterprise Repository at **[maven.http4k.org](https://maven.http4k.org)** as part of your Enterprise Edition subscription.
 ---
 
 As part of the **http4k Enterprise Edition**, every http4k artifact is published with cryptographically signed provenance, complete dependency transparency, and verified build attestations — giving your organisation the supply chain assurance it needs to ship with confidence.
 
-With increasing regulatory pressure from the **EU Cyber Resilience Act (CRA)**, **US Executive Order 14028**, **NIST SSDF**, and **PCI DSS 4.0**, organisations need to demonstrate full visibility into their software supply chain. http4k delivers this out of the box — every build produces **SLSA Level 2 provenance** linking artifacts to the exact source commit and CI pipeline, **CycloneDX SBOMs** detailing all transitive dependencies, and **cosign signatures** with trusted timestamps from the Sigstore Timestamp Authority. All provenance artifacts are published exclusively through the http4k Enterprise Repository at **[maven.http4k.org](https://maven.http4k.org)**, ensuring this data remains accessible only to subscribers.
+With increasing regulatory pressure from the **EU Cyber Resilience Act (CRA)**, **US Executive Order 14028**, **NIST SSDF**, and **PCI DSS 4.0**, organisations need to demonstrate full visibility into their software supply chain. http4k delivers this out of the box — every build produces **SLSA Level 2 provenance** linking artifacts to the exact source commit and CI pipeline, **CycloneDX SBOMs** detailing all transitive dependencies, and **cosign signatures** with trusted timestamps from the Sigstore Timestamp Authority. All provenance artifacts are delivered through the http4k Enterprise Repository at **[maven.http4k.org](https://maven.http4k.org)** as part of your Enterprise Edition subscription.
 
 ## What Gets Published
 
