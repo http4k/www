@@ -40,6 +40,8 @@ For every module in the http4k Enterprise Repository, the following provenance a
 <tr><td><code>cyclonedx</code></td><td><code>{artifact}-cyclonedx.json</code></td><td>CycloneDX SBOM listing all dependencies</td></tr>
 <tr><td><code>cyclonedx-sigstore</code></td><td><code>{artifact}-cyclonedx-sigstore.json</code></td><td>Cosign signature bundle for the SBOM</td></tr>
 <tr><td><code>jar-sigstore</code></td><td><code>{artifact}-jar-sigstore.json</code></td><td>Cosign signature bundle for the JAR</td></tr>
+<tr><td><code>license-report</code></td><td><code>{artifact}-license-report.json</code></td><td>Curated license compliance report for all dependencies</td></tr>
+<tr><td><code>license-report-sigstore</code></td><td><code>{artifact}-license-report-sigstore.json</code></td><td>Cosign signature bundle for the license report</td></tr>
 <tr><td><code>provenance</code></td><td><code>{artifact}-provenance.json</code></td><td>SLSA Build L2 provenance attestation (in-toto v1)</td></tr>
 <tr><td><code>provenance-sigstore</code></td><td><code>{artifact}-provenance-sigstore.json</code></td><td>Cosign signature bundle for the provenance</td></tr>
 </tbody>
@@ -50,6 +52,12 @@ For every module in the http4k Enterprise Repository, the following provenance a
 For `org.http4k:http4k-core:0.0.0.0`:
 
 {{< shell file="repo-layout.txt" >}}
+
+## License Compliance
+
+Every http4k module includes a **signed license compliance report** listing the licenses of all transitive dependencies, checked against http4k's curated approved license list. This gives your legal and compliance teams immediate visibility into the licensing of every component in your dependency tree.
+
+Each report is a JSON file resolvable via Maven coordinates — e.g. `org.http4k:http4k-core:6.40.0.0:license-report@json` — and is signed with the same cosign key as all other provenance artifacts. The report covers the specific module's transitive dependencies, so you get exactly the license information relevant to the http4k modules you actually use.
 
 ## SLSA Provenance Format
 
