@@ -58,7 +58,10 @@ how_tos:
     -   section: "One line. That's it."
         steps:
             -   description: "**Step 1** — Apply the http4k Verify plugin to your build. Every http4k dependency is now verified before compilation."
+                image: verify-install.webp
+#                image: verify-install.webp
                 alt: Apply the plugin
             -   description: "**Step 2** — On first build, all artifact signatures are verified and cached. Subsequent builds have zero overhead."
+                image: verify-run.webp
                 alt: Verification output
 ---
