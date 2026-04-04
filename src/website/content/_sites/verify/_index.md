@@ -17,7 +17,7 @@ navigation:
         url: https://http4k.org/supply-chain-security/#http4k-gradle-verification-plugin
     -   name: http4k Pro
         title: http4k Pro
-        url: https://http4k.org/pro
+        url: "https://http4k.org/pro"
     -   name: http4k Enterprise Edition
         title: http4k Enterprise Edition
         url: https://http4k.org/enterprise
