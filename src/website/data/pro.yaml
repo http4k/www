@@ -17,6 +17,12 @@ modules:
     available: true
     description: Hot Reload automatically restarts your server after code changes, saving you time during development
     prompt: "A clean isometric illustration of a minimalist laptop with a circular refresh arrow hovering above the screen, beside a small code editor window. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+  - name: Verify
+    link: https://verify.http4k.org
+    image: verify.webp
+    description: Automatic build-time verification of http4k artifact signatures, SBOMs, SLSA provenance, and license reports
+    prompt: "A clean isometric illustration of a minimalist shield with a checkmark badge hovering above a stack of software artifacts (JARs), with thin verification lines connecting each artifact to the shield. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: true
   - name: Model Context Protocol
     link: https://mcp.http4k.org
     image: mcp.webp
@@ -27,7 +33,7 @@ modules:
   - name: Wiretap
     link: https://wiretap.http4k.org
     image: wiretap.webp
-    description: HTTP and MCP traffic inspection and debugging tool for monitoring, recording, and replaying requests in your http4k applications
+    description: OpenTelemetry trace capture and HTML test reports with Wiretap Intercept, plus real-time traffic monitoring, chaos engineering, and MCP debugging with Wiretap Console
     prompt: "A clean isometric illustration of a magnifying glass hovering over flowing data streams or network cables, with small request/response packet shapes visible through the lens. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
     available: false
     early_access: true
