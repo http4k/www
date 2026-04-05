@@ -1,0 +1,15 @@
+build/http4k-verify/
+    cosign.pub
+    verification-report.json
+    org.http4k/
+        http4k-core/0.0.0.0/
+            http4k-core-0.0.0.0.jar.sha256
+            http4k-core-0.0.0.0-jar-sigstore.json
+            http4k-core-0.0.0.0-cyclonedx.json
+            http4k-core-0.0.0.0-cyclonedx-sigstore.json
+            http4k-core-0.0.0.0-provenance.json
+            http4k-core-0.0.0.0-provenance-sigstore.json
+            http4k-core-0.0.0.0-license-report.json
+            http4k-core-0.0.0.0-license-report-sigstore.json
+        http4k-format-jackson/0.0.0.0/
+            ...

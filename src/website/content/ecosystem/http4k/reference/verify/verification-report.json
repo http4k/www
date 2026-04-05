@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-04-05T14:30:00Z",
+  "public_key_fingerprint": "sha256:a1b2c3d4e5f6...",
+  "modules": [
+    {
+      "group": "org.http4k",
+      "module": "http4k-core",
+      "version": "0.0.0.0",
+      "jar_sha256": "e3b0c44298fc1c14...",
+      "jar": { "bundle": "org.http4k/http4k-core/0.0.0.0/http4k-core-0.0.0.0-jar-sigstore.json", "verification": "passed" },
+      "sbom": { "file": "org.http4k/http4k-core/0.0.0.0/http4k-core-0.0.0.0-cyclonedx.json", "bundle": "org.http4k/http4k-core/0.0.0.0/http4k-core-0.0.0.0-cyclonedx-sigstore.json", "verification": "passed" },
+      "provenance": { "file": "org.http4k/http4k-core/0.0.0.0/http4k-core-0.0.0.0-provenance.json", "bundle": "org.http4k/http4k-core/0.0.0.0/http4k-core-0.0.0.0-provenance-sigstore.json", "verification": "passed" },
+      "license": { "file": "org.http4k/http4k-core/0.0.0.0/http4k-core-0.0.0.0-license-report.json", "bundle": "org.http4k/http4k-core/0.0.0.0/http4k-core-0.0.0.0-license-report-sigstore.json", "verification": "passed" }
+    }
+  ]
+}

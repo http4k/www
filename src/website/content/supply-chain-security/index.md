@@ -32,7 +32,7 @@ With increasing regulatory pressure from the **EU Cyber Resilience Act (CRA)**, 
 
 ## What Gets Published
 
-For every module in the http4k Enterprise Repository, the following provenance artifacts are published as classified Maven artifacts alongside the standard JARs and POMs. They can be resolved via standard Maven coordinates, e.g. `org.http4k:http4k-core:6.39.0.0:cyclonedx@json`.
+For every module in the http4k Enterprise Repository, the following provenance artifacts are published as classified Maven artifacts alongside the standard JARs and POMs. They can be resolved via standard Maven coordinates, e.g. `org.http4k:http4k-core:0.0.0.0:cyclonedx@json`.
 
 <table class="table" style="max-width: 90%">
 <thead><tr><th>Classifier</th><th>File</th><th>Description</th></tr></thead>
@@ -120,58 +120,8 @@ For Sonatype Nexus, add a proxy repository:
 
 ## Verifying Artifacts
 
-#### http4k Gradle Verification Plugin
+The **[http4k Verify](/ecosystem/http4k/reference/verify/)** plugin provides automatic build-time verification of all http4k artifact signatures. It exports all verification artifacts (SBOMs, provenance, license reports, sigstore bundles) to your project directory for independent inspection, and generates a JSON attestation report as proof that your http4k dependencies were validated.
 
-The easiest way to verify http4k artifact signatures is with the **http4k Verification Plugin**. Add it to your build and every http4k dependency is automatically verified before compilation — no CLI tools required.
-
-Apply the plugin in your `build.gradle.kts`:
-
-{{< kotlin file="verify-plugin.kts" >}}
-
-That's it. The plugin automatically downloads the http4k public key, resolves sigstore bundles for all http4k dependencies, and verifies every signature. If any artifact has been tampered with, the build fails. Verification results are cached locally — subsequent builds have zero overhead until dependencies change.
-
-Run it explicitly with:
-
-{{< shell file="verify-plugin-run.sh" >}}
-
-Example output (uncached):
-
-{{< shell file="verify-plugin-output.txt" >}}
-
-Optional configuration:
-
-{{< kotlin file="verify-plugin-config.kts" >}}
-
-The plugin is available from the http4k Enterprise Repository at **[maven.http4k.org](https://maven.http4k.org)**. If the Enterprise Repository is not configured, the plugin will detect this and provide guidance.
-
-#### Manual Verification with cosign
-
-All provenance artifacts can also be verified manually using [cosign](https://docs.sigstore.dev/cosign/overview/). Download the http4k public key from [https://http4k.org/cosign.pub](https://http4k.org/cosign.pub).
-
-#### Verify a JAR
-
-{{< shell file="verify-jar.sh" >}}
-
-#### Verify an SBOM
-
-{{< shell file="verify-sbom.sh" >}}
-
-#### Verify Provenance
-
-{{< shell file="verify-provenance-example.sh" >}}
-
-The `--private-infrastructure` flag tells cosign to skip public transparency log verification, which is expected for privately distributed artifacts. All signatures include trusted timestamps from the Sigstore Timestamp Authority.
-
-#### Gradle Dependency Verification
-
-Gradle has built-in support for verifying dependency checksums without any extra tooling. To pin SHA-256 checksums for all dependencies (including http4k artifacts from **[maven.http4k.org](https://maven.http4k.org)**):
-
-{{< shell file="gradle-verify.sh" >}}
-
-This generates a `gradle/verification-metadata.xml` file containing the expected checksums for every dependency:
-
-{{< xml file="verification-metadata-example.xml" >}}
-
-Gradle will verify these checksums on every build, failing if any artifact has been tampered with. Commit `verification-metadata.xml` to your repository. When upgrading http4k versions, re-run the command to update the checksums.
+See the [http4k Verify reference documentation](/ecosystem/http4k/reference/verify/) for full setup, configuration, and usage details — including manual verification with cosign and Gradle's built-in dependency verification.
 
 
