@@ -75,6 +75,14 @@ The report includes:
 
 This report can be included in your compliance documentation, audit trails, or CI/CD pipeline artifacts as evidence that your http4k dependencies were validated.
 
+### Clearing the Verification Cache
+
+Verification results are cached locally so that subsequent builds have zero overhead. To force re-verification of all artifacts (e.g. after rotating the public key), clear the cache:
+
+```shell
+./gradlew clearHttp4kVerificationCache
+```
+
 ### Manual Verification with cosign
 
 All verification artifacts can also be verified manually using [cosign](https://docs.sigstore.dev/cosign/overview/). Download the http4k public key from [https://http4k.org/cosign.pub](https://http4k.org/cosign.pub), or use the `cosign.pub` file exported by the plugin.
