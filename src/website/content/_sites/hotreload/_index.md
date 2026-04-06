@@ -33,7 +33,7 @@ features:
     - title: Server and protocol</br> agnostic
       icon: footprint
       colour: violet
-      description: Hot reload works with all of the <a href="https://www.http4k.org/ecosystem/http4k/reference/servers/">servers</a> http4k can run on, no matter if you're serving HTTP, WebSockets, or SSE protocol.
+      description: Hot reload works with all of the <a href="https://http4k.org/ecosystem/http4k/reference/servers/">servers</a> http4k can run on, no matter if you're serving HTTP, WebSockets, or SSE protocol.
     - title: Leverage your</br> existing build tool
       icon: support
       colour: blue

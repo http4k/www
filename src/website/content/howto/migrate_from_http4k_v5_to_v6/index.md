@@ -26,7 +26,7 @@ The migration from v5 to v6 is a **A** release, which means that there are break
 method:
 
 1. Look carefully at the list of breaking changes between your current version and the latest http4k version in the
-   [CHANGELOG](https://www.http4k.org/ecosystem/changelog/) so you have some scope of the task.
+   [CHANGELOG](https://http4k.org/ecosystem/changelog/) so you have some scope of the task.
 2. Ensure that your code is covered by tests, run your build!
 3. Upgrade your minimum Java version to 21, as per the new minimum Java version. If you still require access to security
    upgrades for Java 8-20 support, please see details of our LTS programme available

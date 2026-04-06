@@ -11,13 +11,13 @@ description: "Add payment gates to any HTTP endpoint or MCP tool with X402 and M
 navigation:
     -   name: X402 Docs
         title: MPP Docs
-        url: https://www.http4k.org/ecosystem/connect/reference/x402/
+        url: https://http4k.org/ecosystem/connect/reference/x402/
     -   name: x402 Docs
         title: x402 Docs
-        url: https://www.http4k.org/ecosystem/connect/reference/mpp/
+        url: https://http4k.org/ecosystem/connect/reference/mpp/
     -   name: MCP SDK
         title: MCP SDK Docs
-        url: https://www.http4k.org/ecosystem/ai/reference/mcp/
+        url: https://http4k.org/ecosystem/ai/reference/mcp/
     -   name: http4k Pro
         title: http4k Pro
         url: https://http4k.org/pro

@@ -11,7 +11,7 @@ http4k Connect is a lightweight API Client toolkit which includes libraries for 
 services and AI backends using [http4k](https://http4k.org) compatible APIs, along with Fake implementations for usage
 during local testing. These are all underpinned by a variation on the
 uniform [Server as a Function](https://monkey.org/~marius/funsrv.pdf) model powered by the `HttpHandler` interface
-exposed by [http4k Core](https://www.http4k.org/ecosystem/http4k/), so you can:
+exposed by [http4k Core](https://http4k.org/ecosystem/http4k/), so you can:
 
 1. Take advantage of the simple and powerful SaaF model and APIs used in http4k.
 1. Plug everything together completely in-memory and take advantage of this powerful model.

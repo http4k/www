@@ -7,7 +7,7 @@ weight: 2
 image : "/images/logo-ai.png"
 ---
 
-http4k AI is a lightweight AI integration toolkit which provides simplified adapters for connecting to popular LLM providers and AI services using [http4k](https://http4k.org) compatible APIs, along with comprehensive Fake implementations for deterministic testing. These are all underpinned by the uniform [Server as a Function](https://monkey.org/~marius/funsrv.pdf) model powered by the `HttpHandler` interface exposed by [http4k Core](https://www.http4k.org/ecosystem/http4k/), so you can:
+http4k AI is a lightweight AI integration toolkit which provides simplified adapters for connecting to popular LLM providers and AI services using [http4k](https://http4k.org) compatible APIs, along with comprehensive Fake implementations for deterministic testing. These are all underpinned by the uniform [Server as a Function](https://monkey.org/~marius/funsrv.pdf) model powered by the `HttpHandler` interface exposed by [http4k Core](https://http4k.org/ecosystem/http4k/), so you can:
 
 1. Build AI-powered applications using http4k's proven functional design patterns.
 2. Test AI integrations completely offline with predictable, deterministic behavior.

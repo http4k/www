@@ -47,7 +47,7 @@ An MCP App combines Tools and Resources under the hood, but http4k wraps the wir
 
 {{< kotlin file="mcp_app.kt" >}}
 
-We've written a full tutorial to get you started: **[Build a Simple MCP App](https://www.http4k.org/tutorial/build_a_simple_mcp_app/)**. Want to see one running? Just add [this](https://demo.http4k.org/mcp-sdk/mcp) custom connector to Claude. And if you'd rather skip the reading and get straight to code, [Toolbox](https://toolbox.http4k.org) can generate a complete MCP Server or App project for you in about a minute - or even longer if you actually want to read the full list of http4k modules.
+We've written a full tutorial to get you started: **[Build a Simple MCP App](/tutorial/build_a_simple_mcp_app/)**. Want to see one running? Just add [this](/mcp-sdk/mcp) custom connector to Claude. And if you'd rather skip the reading and get straight to code, [Toolbox](https://toolbox.http4k.org) can generate a complete MCP Server or App project for you in about a minute - or even longer if you actually want to read the full list of http4k modules.
 
 ## Test MCP Like You Mean It
 
@@ -71,7 +71,7 @@ MCP servers that you can't observe are MCP servers you can't trust. We've added 
 
 We believe that http4k's MCP SDK is the most complete, most testable, and most spec-current MCP implementation on the JVM. And that's not marketing - it's just what happens when you spend every week shipping spec updates while maintaining the engineering standards your users expect. And our first users are us!
 
-Our MCP libraries are included in the http4k [Pro tier](https://http4k.org/pro/) and all [Enterprise Edition subscriptions](https://www.http4k.org/enterprise/), with free use for personal projects, non-profit organisations, non-commercial research, and qualifying small businesses (see our [commercial license](/commercial-license/) for exact terms).
+Our MCP libraries are included in the http4k [Pro tier](/pro/) and all [Enterprise Edition subscriptions](/enterprise/), with free use for personal projects, non-profit organisations, non-commercial research, and qualifying small businesses (see our [commercial license](/commercial-license/) for exact terms).
 
 Questions? Feedback? War stories? Find us on GitHub or the [Kotlin Slack](https://kotlinlang.slack.com). We'd love to hear what you're building.
 
