@@ -6,6 +6,7 @@ tagline: "Everything you need to build, debug, and monetise AI agents on the JVM
 layout: "product"
 type: "product"
 subdomain: agents
+draft: true
 tier: pro
 description: "The complete http4k toolkit for AI agent systems. MCP servers and Apps, A2A agent interop, machine payments, and full observability — all testable in-memory with familiar http4k patterns."
 navigation:

@@ -7,7 +7,7 @@ aliases:
     - /lts-support
 highlights:
     -   title: Up to 24 months peace of mind
-        description: Guaranteed security and bug updates for the stable release channel, allowing you to focus on feature delivery.
+        description: Guaranteed security and bug updates for the LTS stable release channel, allowing you to focus on feature delivery.
         icon: "/images/footprint.svg"
     -   title: Access to priority support
         description: The http4k team are here on Slack and Email to guide you through any issues or questions.
@@ -15,8 +15,14 @@ highlights:
     -   title: Source code access
         description: Full access to the LTS editions of the http4k codebase for transparency and auditing.
         icon: "/images/connections.svg"
+    -   title: License reporting
+        description: Signed, per-module license reports delivered with every artifact — ready for audit and regulatory review.
+        icon: "/images/supportive.svg"
     -   title: Supply chain security
         description: SLSA Level 2 provenance, signed SBOMs, and cosign signatures for every artifact — compliance-ready out of the box.
+        icon: "/images/extendable.svg"
+    -   title: Pro modules
+        description: A growing collection of commercially licensed, battle-tested modules built from real-world enterprise delivery.
         icon: "/images/footprint.svg"
 faq:
     -   question: "How long are LTS versions of http4k EE available for?"
@@ -47,10 +53,10 @@ The **http4k Enterprise Edition (EE)** subscription delivers long-term stability
 Access expert guidance and **priority support** directly from the creators and maintainers of http4k. With dedicated channels, including email and Slack, you’ll get **fast resolution** to any issues or questions, backed by our deep knowledge of the http4k ecosystem. Whether it’s compatibility updates or bug fixes, our team ensures that your http4k deployment remains fully integrated with the broader Kotlin and JVM environments.
 
 #### Pro Modules
-Get access to our **Pro modules** as they come online, built from years of successfully delivering complex systems with http4k. These expert-designed, proprietary extensions reflect real-world requirements and enterprise patterns, enhancing http4k's capabilities with thoroughly tested integrations available exclusively through the http4k Enterprise Repository.
+A growing collection of commercially licensed, battle-tested modules built from years of successfully delivering complex systems with http4k. These expert-designed extensions reflect real-world requirements and enterprise patterns, available from Maven Central. [See what's available](/pro).
 
 #### Supply Chain Security
-Ship with confidence knowing every http4k artifact comes with **SLSA Level 2 provenance**, **CycloneDX SBOMs**, **signed license compliance reports**, and **cosign signatures** — all delivered through the http4k Enterprise Repository at **[maven.http4k.org](https://maven.http4k.org)**. For organisations with enhanced compliance requirements, **optional SLSA Level 3** provenance is available on request. Whether you need to satisfy **EU CRA** requirements, **US federal SBOM mandates** (EO 14028), **NIST SSDF**, or **PCI DSS 4.0** supply chain requirements, http4k has you covered. [Learn more](/supply-chain-security/).
+Ship with confidence knowing every http4k artifact comes with **SLSA Level 2 provenance**, **CycloneDX SBOMs**, **signed license compliance reports**, and **cosign signatures**. For organisations with enhanced compliance requirements, **optional SLSA Level 3** provenance is available on request. Whether you need to satisfy **EU CRA** requirements, **US federal SBOM mandates** (EO 14028), **NIST SSDF**, or **PCI DSS 4.0** supply chain requirements, http4k has you covered. [Learn more](/supply-chain-security/).
 
 #### Long Term Support
 Enjoy peace-of-mind with **Long-Term Support (LTS)** versions of http4k. Our LTS version provides up to 24 months of guaranteed security patches and high priority updates for a stable release, ensuring your projects remain secure and fully functional. Additionally, our priority support channel also extend up to 24 months, meaning **http4k EE LTS** is your key to maintaining focus on feature delivery while ensuring your http4k applications are future-proof.

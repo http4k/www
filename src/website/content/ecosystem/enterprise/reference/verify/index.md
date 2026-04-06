@@ -1,9 +1,9 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Core
+ecosystem: http4k Enterprise
 tier: pro
-title: "Tools: Verify"
+title: "Verify"
 description: Gradle plugin for automatic verification of http4k artifact signatures, with exported artifacts and attestation reports
 ---
 
@@ -21,7 +21,9 @@ plugins {
 
 The plugin automatically downloads the http4k public key, resolves sigstore bundles for all http4k dependencies, and verifies every signature. If any artifact has been tampered with, the build fails. Verification results are cached locally — subsequent builds have zero overhead until dependencies change.
 
-### Configuration
+### (Optional) Configuration
+
+The plugin works out of the box with no configuration required, but if you want to customize the plugin, you can configure it in `build.gradle.kts`:
 
 {{< kotlin file="verify-plugin-config.kts" >}}
 
@@ -34,6 +36,14 @@ Run verification explicitly with:
 Example output:
 
 {{< shell file="verify-plugin-output.txt" >}}
+
+### When Verification Fails
+
+If any artifact has been tampered with or a signature does not match, the plugin reports the failure and stops the build:
+
+{{< shell file="verify-plugin-failure.txt" >}}
+
+Each failed check is marked with **✗** and a `FAIL` line showing the reason. The build will fail with a `GradleException` by default. To continue the build despite failures (e.g. for CI reporting), set `failOnError` to `false` in the plugin configuration.
 
 ### Exported Artifacts
 
@@ -103,7 +113,7 @@ The `--private-infrastructure` flag tells cosign to skip public transparency log
 
 ### Gradle Dependency Verification
 
-Gradle has built-in support for verifying dependency checksums without any extra tooling. To pin SHA-256 checksums for all dependencies (including http4k artifacts from **[maven.http4k.org](https://maven.http4k.org)**):
+Gradle also has built-in support for verifying dependency checksums without any extra tooling. To pin SHA-256 checksums for all dependencies (including http4k artifacts from **[maven.http4k.org](https://maven.http4k.org)**):
 
 {{< shell file="gradle-verify.sh" >}}
 

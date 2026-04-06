@@ -7,14 +7,14 @@ layout: "product"
 type: "product"
 subdomain: verify
 tier: pro
-docs_link: /ecosystem/http4k/reference/verify/
+docs_link: /ecosystem/enterprise/reference/verify/
 cta_label: "Included with Enterprise Edition"
 ee_included: "Get automated supply chain verification for every http4k dependency — giving your security team the assurance they need, with zero developer overhead."
 description: "**http4k Verify** ensures the integrity of every http4k dependency in your build — automatically, before your code compiles."
 navigation:
     -   name: docs
         title: Documentation
-        url: https://http4k.org/ecosystem/http4k/reference/verify/
+        url: https://http4k.org/ecosystem/enterprise/reference/verify/
     -   name: http4k Pro
         title: http4k Pro
         url: "https://http4k.org/pro"
@@ -59,7 +59,6 @@ how_tos:
         steps:
             -   description: "**Step 1** — Apply the http4k Verify plugin to your build. Every http4k dependency is now verified before compilation."
                 image: verify-install.webp
-#                image: verify-install.webp
                 alt: Apply the plugin
             -   description: "**Step 2** — On first build, all artifact signatures are verified and cached. Subsequent builds have zero overhead."
                 image: verify-run.webp

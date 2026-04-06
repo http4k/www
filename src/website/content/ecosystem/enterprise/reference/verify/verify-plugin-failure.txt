@@ -1,0 +1,14 @@
+Downloading public key from https://http4k.org/cosign.pub
+Verifying 3 http4k module(s)...
+  org.http4k:http4k-core:0.0.0.0              jar ✗   sbom ✓   provenance ✓   license ✓
+    FAIL: jar — Artifact digest mismatch — file may have been tampered with
+  org.http4k:http4k-format-jackson:0.0.0.0    jar ✓   sbom ✓   provenance ✓   license ✓
+  org.http4k:http4k-server-undertow:0.0.0.0   jar ✓   sbom ✓   provenance ✓   license ✓
+Verified: 3 modules, 11 signatures, 1 failed
+Verification artifacts exported to build/http4k-verify
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':verifyHttp4kDependencies'.
+> http4k artifact verification failed for 1 signature(s)

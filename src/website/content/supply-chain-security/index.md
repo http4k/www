@@ -10,9 +10,9 @@ highlights:
     -   title: CycloneDX SBOMs
         description: Stay ahead of compliance requirements with machine-readable Software Bills of Materials for every module, ready for audit and vulnerability scanning out of the box.
         icon: "/images/connections.svg"
-    -   title: Signed & Verified
-        description: Every provenance artifact is signed with our cosign key and delivered exclusively through the authenticated http4k Enterprise Repository.
-        icon: "/images/faq.svg"
+    -   title: License Compliance
+        description: Signed, per-module license reports delivered with every artifact — ready for audit and regulatory review.
+        icon: "/images/supportive.svg"
 faq:
     -   question: "How do I get access to the http4k Enterprise Repository?"
         answer: Repository credentials are included with your http4k Enterprise Edition subscription. Contact enterprise@http4k.org to get started.
@@ -28,36 +28,30 @@ faq:
 
 As part of the **http4k Enterprise Edition**, every http4k artifact is published with cryptographically signed provenance, complete dependency transparency, and verified build attestations — giving your organisation the supply chain assurance it needs to ship with confidence.
 
-With increasing regulatory pressure from the **EU Cyber Resilience Act (CRA)**, **US Executive Order 14028**, **NIST SSDF**, and **PCI DSS 4.0**, organisations need to demonstrate full visibility into their software supply chain. http4k delivers this out of the box — every build produces **SLSA Level 2 provenance** linking artifacts to the exact source commit and CI pipeline, **CycloneDX SBOMs** detailing all transitive dependencies, and **cosign signatures** with trusted timestamps from the Sigstore Timestamp Authority. All provenance artifacts are delivered through the http4k Enterprise Repository at **[maven.http4k.org](https://maven.http4k.org)** as part of your Enterprise Edition subscription.
+With increasing regulatory pressure from the **EU Cyber Resilience Act (CRA)**, **US Executive Order 14028**, **NIST SSDF**, and **PCI DSS 4.0**, organisations need to demonstrate full visibility into their software supply chain. http4k delivers this out of the box — every build produces **SLSA Level 2 provenance** linking artifacts to the exact source commit and CI pipeline, **CycloneDX SBOMs** detailing all transitive dependencies, and **cosign signatures** with trusted timestamps from the Sigstore Timestamp Authority.
 
 ## What Gets Published
 
-For every module in the http4k Enterprise Repository, the following provenance artifacts are published as classified Maven artifacts alongside the standard JARs and POMs. They can be resolved via standard Maven coordinates, e.g. `org.http4k:http4k-core:0.0.0.0:cyclonedx@json`.
+For every http4k module, the following provenance artifacts are published as classified Maven artifacts alongside the standard JARs and POMs:
 
 <table class="table" style="max-width: 90%">
-<thead><tr><th>Classifier</th><th>File</th><th>Description</th></tr></thead>
+<thead><tr><th>Artifact</th><th>Description</th></tr></thead>
 <tbody>
-<tr><td><code>cyclonedx</code></td><td><code>{artifact}-cyclonedx.json</code></td><td>CycloneDX SBOM listing all dependencies</td></tr>
-<tr><td><code>cyclonedx-sigstore</code></td><td><code>{artifact}-cyclonedx-sigstore.json</code></td><td>Cosign signature bundle for the SBOM</td></tr>
-<tr><td><code>jar-sigstore</code></td><td><code>{artifact}-jar-sigstore.json</code></td><td>Cosign signature bundle for the JAR</td></tr>
-<tr><td><code>license-report</code></td><td><code>{artifact}-license-report.json</code></td><td>Curated license compliance report for all dependencies</td></tr>
-<tr><td><code>license-report-sigstore</code></td><td><code>{artifact}-license-report-sigstore.json</code></td><td>Cosign signature bundle for the license report</td></tr>
-<tr><td><code>provenance</code></td><td><code>{artifact}-provenance.json</code></td><td>SLSA Build L2 provenance attestation (in-toto v1)</td></tr>
-<tr><td><code>provenance-sigstore</code></td><td><code>{artifact}-provenance-sigstore.json</code></td><td>Cosign signature bundle for the provenance</td></tr>
+<tr><td><strong>CycloneDX SBOM</strong></td><td>Machine-readable bill of materials listing all transitive dependencies</td></tr>
+<tr><td><strong>JAR signature</strong></td><td>Cosign signature bundle for the compiled JAR</td></tr>
+<tr><td><strong>License report</strong></td><td>Curated license compliance report for all dependencies</td></tr>
+<tr><td><strong>SLSA provenance</strong></td><td>Build L2 provenance attestation linking artifact to source commit and CI pipeline</td></tr>
+<tr><td><strong>Cosign bundles</strong></td><td>Sigstore signature bundle for each of the above, with trusted timestamps</td></tr>
 </tbody>
 </table>
 
-#### Example: Repository Layout
-
-For `org.http4k:http4k-core:0.0.0.0`:
-
-{{< shell file="repo-layout.txt" >}}
+See the [Enterprise Repository reference](/ecosystem/enterprise/reference/repository/) for Maven coordinates, repository layout, and setup guides.
 
 ## License Compliance
 
 Every http4k module includes a **signed license compliance report** listing the licenses of all transitive dependencies, checked against http4k's curated approved license list. This gives your legal and compliance teams immediate visibility into the licensing of every component in your dependency tree.
 
-Each report is a JSON file resolvable via Maven coordinates — e.g. `org.http4k:http4k-core:0.0.0.0:license-report@json` — and is signed with the same cosign key as all other provenance artifacts. The report covers the specific module's transitive dependencies, so you get exactly the license information relevant to the http4k modules you actually use.
+Each report is signed with the same cosign key as all other provenance artifacts, and covers the specific module's transitive dependencies — so you get exactly the license information relevant to the http4k modules you actually use.
 
 ## SLSA Provenance Format
 
@@ -76,52 +70,10 @@ SLSA Level 3 adds **build platform isolation guarantees** — artifacts are buil
 
 To discuss SLSA Level 3 provenance for your organisation, [contact us](mailto:enterprise@http4k.org).
 
-## http4k Enterprise Repository
-
-All http4k Enterprise Edition artifacts are available through **[maven.http4k.org](https://maven.http4k.org)**. Access credentials are included with your http4k Enterprise Edition subscription.
-
-#### Gradle Configuration
-
-{{< kotlin file="gradle-repository.kts" >}}
-
-Add your credentials to `~/.gradle/gradle.properties`:
-
-{{< shell file="gradle-credentials.properties" >}}
-
-#### Maven Configuration
-
-Add the repository to your `pom.xml`:
-
-{{< xml file="pom-repository.xml" >}}
-
-And credentials to `~/.m2/settings.xml`:
-
-{{< xml file="settings-credentials.xml" >}}
-
-#### Artifactory Configuration
-
-If your organisation uses Artifactory as a repository manager, add **[maven.http4k.org](https://maven.http4k.org)** as a remote repository:
-
-1. Navigate to **Administration > Repositories > Remote**
-2. Click **New Remote Repository** and select **Maven**
-3. Set the **URL** to `https://maven.http4k.org`
-4. Under **Advanced**, configure **Username** and **Password** with your http4k credentials
-5. Save and add the remote repository to your virtual repository resolution order
-
-#### Nexus Configuration
-
-For Sonatype Nexus, add a proxy repository:
-
-1. Navigate to **Repository > Repositories > Create repository**
-2. Select **maven2 (proxy)**
-3. Set the **Remote storage URL** to `https://maven.http4k.org`
-4. Under **HTTP > Authentication**, enter your http4k credentials
-5. Add the proxy repository to your maven-public group
-
 ## Verifying Artifacts
 
-The **[http4k Verify](/ecosystem/http4k/reference/verify/)** plugin provides automatic build-time verification of all http4k artifact signatures. It exports all verification artifacts (SBOMs, provenance, license reports, sigstore bundles) to your project directory for independent inspection, and generates a JSON attestation report as proof that your http4k dependencies were validated.
+The **[http4k Verify](/ecosystem/enterprise/reference/verify/)** plugin provides automatic build-time verification of all http4k artifact signatures. It exports all verification artifacts (SBOMs, provenance, license reports, sigstore bundles) to your project directory for independent inspection, and generates a JSON attestation report as proof that your http4k dependencies were validated.
 
-See the [http4k Verify reference documentation](/ecosystem/http4k/reference/verify/) for full setup, configuration, and usage details — including manual verification with cosign and Gradle's built-in dependency verification.
+See the [http4k Verify reference documentation](/ecosystem/enterprise/reference/verify/) for full setup, configuration, and usage details — including manual verification with cosign and Gradle's built-in dependency verification.
 
 

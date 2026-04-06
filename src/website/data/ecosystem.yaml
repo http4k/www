@@ -10,3 +10,11 @@
   description: http4k Connect is designed to facilitate seamless **integration with external systems and services** from the client viewpoint. It is optimised for zero-reflection, ideal for native and serverless use. It ships with in-memory fakes for testing without Docker and keeps dependencies minimal for small binary sizes.
   image: "/images/logo-connect.png"
   ref: connect
+- title: http4k Pro
+  description: Enterprise-ready capabilities for teams building scalable, mission-critical applications. Commercially licensed extensions enabling enhanced security, monitoring, and reliability features. Pro modules are available to license standalone or are automatically included as part of the **[http4k Enterprise Edition](/enterprise)**.
+  image: "/images/pro.png"
+  url: /pro
+- title: http4k Enterprise
+  description: All Pro modules, **Long-Term Support** releases, and **supply chain security tooling** — for organisations that need verified dependencies, compliance evidence, and the assurance that every http4k artifact is signed, traceable, and auditable.
+  image: "/images/logo-enterprise.webp"
+  ref: enterprise

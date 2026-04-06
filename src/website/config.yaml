@@ -129,11 +129,16 @@ menus:
       url: /pro/
       parent: ecosystem
       weight: 35
+    - name: ecosystem-enterprise
+      title: http4k Enterprise
+      url: /ecosystem/enterprise/
+      parent: ecosystem
+      weight: 36
     - name: ecosystem-changelog
       title: Changelog
       url: /ecosystem/changelog/
       parent: ecosystem
-      weight: 36
+      weight: 37
 
     - name: solutions
       title: Solutions
