@@ -77,6 +77,7 @@ A JSON verification report is always generated at `build/http4k-verify/verificat
 The report includes:
 
 - **`timestamp`** — When verification was performed
+- **`plugin`** — Version and SHA-256 hash of the verify plugin JAR that performed the verification
 - **`modules`** — For each http4k dependency:
     - GAV coordinates (group, module, version)
     - SHA-256 hash of the JAR
@@ -129,3 +130,5 @@ This generates a `gradle/verification-metadata.xml` file containing the expected
 {{< xml file="verification-metadata-example.xml" >}}
 
 Gradle will verify these checksums on every build, failing if any artifact has been tampered with. Commit `verification-metadata.xml` to your repository. When upgrading http4k versions, re-run the command to update the checksums.
+
+This is also the recommended way to verify the http4k Verify plugin itself. The plugin records its own version and JAR hash in the verification report, but for maximum assurance, pinning the plugin's SHA-256 in `verification-metadata.xml` ensures Gradle verifies the plugin before it even loads.
