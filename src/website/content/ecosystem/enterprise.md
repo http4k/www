@@ -4,7 +4,7 @@ description: About the http4k Enterprise ecosystem.
 ecosystem: http4k Enterprise
 type: ecosystem
 weight: 4
-image: "/images/enterprise.webp"
+image: "/images/logo-enterprise.webp"
 ---
 
 The http4k Enterprise ecosystem provides the infrastructure and tooling that organisations need to use http4k with confidence in regulated and security-conscious environments. It covers authenticated repository access, build-time artifact verification, and supply chain security — ensuring that every http4k dependency in your build is traceable, signed, and verified.
