@@ -1,5 +1,5 @@
 build/http4k-verify/
-    cosign.pub
+    cosign-keys.json
     verification-report.json
     org.http4k/
         http4k-core/0.0.0.0/

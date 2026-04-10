@@ -19,7 +19,7 @@ plugins {
 }
 ```
 
-The plugin automatically downloads the http4k public key, resolves sigstore bundles for all http4k dependencies, and verifies every signature. If any artifact has been tampered with, the build fails. Verification results are cached locally — subsequent builds have zero overhead until dependencies change.
+The plugin automatically downloads the http4k [signing key list](https://http4k.org/.well-known/cosign-keys.json), resolves sigstore bundles for all http4k dependencies, and verifies every signature using the correct key for each artifact. If any artifact has been tampered with, the build fails. Verification results are cached locally — subsequent builds have zero overhead until dependencies change.
 
 ### (Optional) Configuration
 
@@ -61,7 +61,8 @@ For each http4k module, the following are exported:
 - **`-provenance-sigstore.json`** — Cosign signature bundle for the provenance
 - **`-license-report.json`** — Curated license compliance report
 - **`-license-report-sigstore.json`** — Cosign signature bundle for the license report
-- **`cosign.pub`** — The public key used for verification
+- **`cosign-keys.json`** — The key list used for verification (multi-key mode)
+- **`cosign.pub`** — The public key used for verification (single-key mode only)
 
 You can use these exported files to independently verify any artifact with cosign:
 
@@ -76,10 +77,10 @@ A JSON verification report is always generated at `build/http4k-verify/verificat
 The report includes:
 
 - **`timestamp`** — When verification was performed
-- **`public_key_fingerprint`** — SHA-256 fingerprint of the public key used
 - **`modules`** — For each http4k dependency:
     - GAV coordinates (group, module, version)
     - SHA-256 hash of the JAR
+    - **`signing_key_fingerprint`** — Fingerprint of the key that signed this module's artifacts
     - Verification result for each artifact type (`passed`, `failed`, or `not_available`)
     - Relative paths to all exported artifact and bundle files
 
@@ -93,9 +94,15 @@ Verification results are cached locally so that subsequent builds have zero over
 ./gradlew clearHttp4kVerificationCache
 ```
 
+### Key Rotation
+
+The plugin supports key rotation via the [signing key list](https://http4k.org/.well-known/cosign-keys.json) — a JSON document listing all currently valid signing keys with their fingerprints and validity windows. Each artifact's provenance includes the fingerprint of the signing key, which the plugin uses to select the correct key for verification.
+
+When http4k rotates signing keys, a new key is added to the key list and the old key is marked as `retired`. Artifacts signed with the old key continue to verify correctly because the old key remains in the list.
+
 ### Manual Verification with cosign
 
-All verification artifacts can also be verified manually using [cosign](https://docs.sigstore.dev/cosign/overview/). Download the http4k public key from [https://http4k.org/cosign.pub](https://http4k.org/cosign.pub), or use the `cosign.pub` file exported by the plugin.
+All verification artifacts can also be verified manually using [Cosign](https://docs.sigstore.dev/cosign/overview/). Download the http4k public key from the [signing key list](https://http4k.org/.well-known/cosign-keys.json), or use the `cosign.pub` file exported by the plugin.
 
 #### Verify a JAR
 

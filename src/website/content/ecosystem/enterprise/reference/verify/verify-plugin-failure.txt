@@ -1,4 +1,4 @@
-Downloading public key from https://http4k.org/cosign.pub
+Downloading key list from https://http4k.org/.well-known/cosign-keys.json
 Verifying 3 http4k module(s)...
   org.http4k:http4k-core:0.0.0.0              jar ✗   sbom ✓   provenance ✓   license ✓
     FAIL: jar — Artifact digest mismatch — file may have been tampered with

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "keys": [
+    {
+      "kid": "http4k-artefacts-2026-03-31",
+      "fingerprint": "sha256:2841234f0c9fa04c5efdf0e55f5f45afe37445f3689d831d7d2c440b2d15af60",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE0GYgEG1WB5xJcDvRYyFCWd5oXbKh\nLFYcmSjKGdLCHWVUFJbHnhr9GZ8v18BFaUWRPzhFKkWxDOeNxnKth/84Cg==\n-----END PUBLIC KEY-----",
+      "validFrom": "2026-03-31T00:00:00Z",
+      "status": "active"
+    }
+  ]
+}

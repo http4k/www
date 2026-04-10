@@ -19,7 +19,7 @@ faq:
     -   question: "What SLSA level do http4k artifacts achieve?"
         answer: All artifacts achieve SLSA Build Level 2 as standard. SLSA Level 3 provenance with build platform isolation is available on request for customers with enhanced compliance requirements.
     -   question: "Where do I get the public key for verification?"
-        answer: The cosign public key is available at https://http4k.org/cosign.pub. This key is used to verify all .sigstore.json bundles.
+        answer: The http4k signing keys are published at https://http4k.org/.well-known/cosign-keys.json. The http4k Verify plugin downloads this automatically. For manual verification, extract the public key from the key list document.
     -   question: "Are community (org.http4k) artifacts also covered?"
         answer: Yes. Both community (org.http4k) and pro (org.http4k.pro) artifacts published to the http4k Enterprise Repository include full provenance, SBOMs, and cosign signatures.
     -   question: "Where are provenance artifacts published?"
