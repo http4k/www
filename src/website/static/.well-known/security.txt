@@ -1,0 +1,10 @@
+# security.txt for http4k.org
+# https://securitytxt.org/ | RFC 9116
+# Deploy at: https://www.http4k.org/.well-known/security.txt
+
+Contact: mailto:security@http4k.org
+Contact: https://github.com/http4k/http4k/security/advisories
+Expires: 2027-09-10T23:59:59Z
+Policy: https://www.http4k.org/cvd-policy
+Preferred-Languages: en
+Canonical: https://www.http4k.org/.well-known/security.txt

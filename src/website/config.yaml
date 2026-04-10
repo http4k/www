@@ -178,11 +178,16 @@ menus:
       url: /supply-chain-security/
       parent: solutions
       weight: 47
+    - name: solutions-cvd-policy
+      title: CVD Policy
+      url: /cvd-policy/
+      parent: solutions
+      weight: 48
     - name: solutions-slack
       title: http4k EE Slack
       url: "http://http4k.slack.com/"
       parent: solutions
-      weight: 48
+      weight: 49
 
     - name: community
       title: Community
