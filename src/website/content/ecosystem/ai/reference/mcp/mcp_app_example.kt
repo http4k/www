@@ -1,5 +1,6 @@
 package content.ecosystem.ai.reference.mcp
 
+import org.http4k.ai.mcp.ResourceRequest
 import org.http4k.ai.mcp.model.Domain
 import org.http4k.ai.mcp.model.apps.Csp
 import org.http4k.ai.mcp.model.apps.McpAppResourceMeta
@@ -22,13 +23,13 @@ object McpAppExample {
         val dashboardApp = RenderMcpApp(
             name = "show_dashboard",
             description = "Display the analytics dashboard",
-            uri = Uri.of("ui://dashboard"),
+            uiUri = Uri.of("ui://dashboard"),
             meta = McpAppResourceMeta(
                 csp = Csp(connectDomains = listOf(Domain.of("https://api.example.com"))),
                 prefersBorder = true
             ),
-            visibility = listOf(model, app)
-        ) { request ->
+            toolVisibility = listOf(model, app)
+        ) { request: ResourceRequest ->
             // Return HTML content based on the request
             """
             <html>

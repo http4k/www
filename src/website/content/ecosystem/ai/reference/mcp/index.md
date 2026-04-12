@@ -428,3 +428,39 @@ brew install http4k-mcp-desktop
 1. Clone the [http4k MCP Desktop](https://github.com/http4k/mcp-desktop) repo
 2. Install a GraalVM supporting JDK
 3. Run `./gradlew :native-compile` to build the desktop client binary locally for your platform
+
+## OpenTelemetry Span Modifiers
+
+MCP servers can be instrumented with OpenTelemetry tracing via `McpFilters.OpenTelemetryTracing`. Span names follow [OTel semantic conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/mcp/):
+- `tools/call show_ui` — method + tool name
+- `prompts/get my-prompt` — method + prompt name
+- `resources/read` — method only (URIs are high-cardinality)
+- `tools/list`, `prompts/list` — method only
+
+### Default Span Modifiers
+
+Included in `defaultMcpOtelSpanModifiers` and active by default:
+
+| Modifier | Attributes Set |
+|----------|---------------|
+| `CallToolSpanModifiers` | `gen_ai.tool.name`, `gen_ai.operation.name` |
+| `GetPromptSpanModifiers` | `gen_ai.prompt.name`, `gen_ai.operation.name` |
+| `ReadResourceSpanModifiers` | `mcp.resource.uri`, `gen_ai.operation.name` |
+| `CompletionSpanModifiers` | `mcp.completion.ref`, `gen_ai.operation.name` |
+
+### Opt-In Detail Modifiers
+
+Capture MCP request arguments and response payloads as span attributes. These may contain sensitive data — add them explicitly:
+
+{{< kotlin file="example_detail_modifiers.kt" >}}
+
+| Modifier | Request Attribute | Response Attribute |
+|----------|------------------|-------------------|
+| `CallToolDetailSpanModifiers` | `gen_ai.tool.call.arguments` | `gen_ai.tool.call.result` |
+| `GetPromptDetailSpanModifiers` | `gen_ai.prompt.arguments` | `gen_ai.prompt.result` |
+| `CompletionDetailSpanModifiers` | `gen_ai.completion.arguments` | `gen_ai.completion.result` |
+| `ReadResourceDetailSpanModifiers` | — | `gen_ai.resource.result` |
+
+`gen_ai.tool.call.*` follows the official OTel spec. `gen_ai.prompt.*`, `gen_ai.completion.*`, and `gen_ai.resource.*` are http4k custom conventions.
+
+When detail modifiers are enabled, [Wiretap Living Test Documents](/ecosystem/http4k/reference/wiretap/#living-test-document) will include the MCP payloads in the generated markdown.

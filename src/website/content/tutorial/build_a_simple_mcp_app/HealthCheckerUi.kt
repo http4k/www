@@ -11,7 +11,7 @@ import org.http4k.template.TemplateRenderer
 fun HealthCheckerUi(templates: TemplateRenderer): CapabilityPack = RenderMcpApp(
     name = "show_repo_health_checker",
     description = "Display the repo health checker UI",
-    uri = Uri.of("ui://repo-health-checker"),
+    uiUri = Uri.of("ui://repo-health-checker"),
     meta = McpAppResourceMeta(
         csp = Csp(
             connectDomains = listOf(Domain.of("https://unpkg.com"), Domain.of("https://api.github.com")),
