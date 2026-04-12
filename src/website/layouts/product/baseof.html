@@ -100,9 +100,11 @@
                 {{ if .Params.launch_announcement }}
                 <a class="btn btn-secondary" href="{{ .Params.launch_announcement }}"> <span class="launch-spark">✦</span> Read the Launch Announcement <span class="launch-spark">✦</span></a>
                 {{ else if .Params.docs_link }}
-                <a class="btn btn-secondary" href="{{ .Params.docs_link }}">{{ with .Params.cta_label }}{{ . }}{{ else }}See more{{ end }}</a>
+                <a class="btn btn-secondary" href="{{ .Params.docs_link }}">{{ with .Params.cta_label }}{{ . }}{{ else }}See the docs{{ end }}</a>
+                {{ else if .Params.early_access }}
+                <a class="btn btn-secondary" href="#subscribe">Sign up for Early Access</a>
                 {{ else }}
-                <a class="btn btn-secondary" href="#subscribe">Sign up for launch</a>
+                <a class="btn btn-secondary" href="#subscribe">Get launch notifications</a>
                 {{ end }}
                 </div>
             </div>
@@ -220,8 +222,8 @@
         <p>{{ .Params.ee_included }}</p>
         <a class="btn btn-secondary mt-3" href="https://http4k.org/enterprise/"><b>Learn about Enterprise Edition</b></a>
         {{ else if .Params.early_access }}
-        <h2>Get early access</h2>
-        <p>This module is available through our early access program — fully tested and production-ready. Sign up below for general availability updates, or <a href="mailto:solutions@http4k.org"><b>get in touch</b></a> to join the EAP.</p>
+        <h2>Get Early Access</h2>
+        <p>This module is available through our Early Access Program — fully tested and production-ready. Sign up below for general availability updates, or <a href="mailto:solutions@http4k.org"><b>get in touch</b></a> to join the EAP.</p>
         <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
         {{ else if .Params.email_form_id }}
         <h2>Stay in the loop</h2>

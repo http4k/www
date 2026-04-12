@@ -13,9 +13,9 @@ navigation:
     -   name: docs
         title: Documentation
         url: https://http4k.org/ecosystem/http4k/reference/wiretap/
-    -   name: pricing
-        title: Pricing
-        url: "#pricing"
+#    -   name: pricing
+#        title: Pricing
+#        url: "#pricing"
     -   name: http4k Pro
         title: http4k Pro
         url: https://http4k.org/pro
@@ -73,7 +73,7 @@ how_tos:
 pre_features_partial: product/wiretap_hero_image.html
 post_features_partial: product/wiretap_screenshots.html
 email_form_id: 8b025c558c
-pricing_table:
-    id: prctbl_1TDPBkG47sNzv4yX1N2tTzB6
-    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
+#pricing_table:
+#    id: prctbl_1TDPBkG47sNzv4yX1N2tTzB6
+#    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
 ---
