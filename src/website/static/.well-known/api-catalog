@@ -1,0 +1,29 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.http4k.org/",
+      "service-desc": [
+        {
+          "href": "https://www.http4k.org/api/",
+          "type": "text/html"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://www.http4k.org/ecosystem/",
+          "type": "text/html"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://www.http4k.org/sitemap.xml",
+          "type": "application/xml"
+        },
+        {
+          "href": "https://www.http4k.org/search-index.json",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}
