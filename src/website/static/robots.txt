@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://http4k.org/sitemap.xml

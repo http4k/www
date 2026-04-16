@@ -248,6 +248,12 @@ taxonomies:
   news: "news"
   howto: "howto"
 
+outputs:
+  home:
+    - HTML
+    - sitemap
+    - searchindex
+
 outputFormats:
   sitemap:
     baseName: "sitemap"
