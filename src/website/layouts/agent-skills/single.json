@@ -1,0 +1,14 @@
+{{- $skills := slice -}}
+{{- range .Site.Data.agent_skills -}}
+  {{- $skill := dict
+    "name" .name
+    "type" .type
+    "description" .description
+    "url" .url
+  -}}
+  {{- with resources.GetRemote .url -}}
+    {{- $skill = merge $skill (dict "digest" (printf "sha256:%s" (crypto.SHA256 .Content))) -}}
+  {{- end -}}
+  {{- $skills = $skills | append $skill -}}
+{{- end -}}
+{{- dict "$schema" "https://schemas.agentskills.io/discovery/0.2.0/schema.json" "skills" $skills | jsonify (dict "indent" "  ") -}}
