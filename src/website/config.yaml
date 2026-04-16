@@ -253,8 +253,21 @@ outputs:
     - HTML
     - sitemap
     - searchindex
+    - markdown
+  page:
+    - HTML
+    - markdown
+  section:
+    - HTML
+    - markdown
 
 outputFormats:
+  markdown:
+    baseName: "index"
+    mediaType: text/markdown
+    isPlainText: true
+    notAlternative: true
+    path: _md
   sitemap:
     baseName: "sitemap"
     mediaType: application/xml
