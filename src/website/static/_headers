@@ -4,8 +4,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
 
-/
-  Link: </sitemap.xml>; rel="describedby"; type="application/xml"
-  Link: </search-index.json>; rel="describedby"; type="application/json"
-  Link: </ecosystem/>; rel="service-doc"
 
