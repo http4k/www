@@ -231,6 +231,11 @@ menus:
       url: https://toolbox.http4k.org/
       parent: toolbox
       weight: 64
+    - name: tools-cosign
+      title: Public Signing Keys
+      url: /.well-known/cosign-keys.json
+      parent: toolbox
+      weight: 65
   legal:
     - name: "Privacy policy"
       url: /privacy-policy/
