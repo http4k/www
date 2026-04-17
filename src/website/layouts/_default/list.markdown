@@ -1,7 +1,7 @@
 {{ define "main" }}
 # {{ .Title }}
 
-{{ .RawContent }}
+{{ .RenderShortcodes }}
 {{ range .Pages }}
 - [{{ .Title }}]({{ .RelPermalink }})
 {{ end }}
