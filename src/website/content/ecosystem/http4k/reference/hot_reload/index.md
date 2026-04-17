@@ -2,7 +2,9 @@
 category: Reference
 type: ecosystem
 tier: pro
-ecosystem: http4k Core
+ecosystem:
+  - http4k Core
+  - http4k Enterprise
 title: "Tools: Hot Reload"
 description: Feature overview of the http4k-tools-hotreload module
 ---

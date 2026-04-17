@@ -2,7 +2,9 @@
 category: Reference
 type: ecosystem
 tier: pro
-ecosystem: http4k AI
+ecosystem:
+  - http4k AI
+  - http4k Enterprise
 title: "MCP SDK"
 description: Feature overview of the http4k-ai-mcp-sdk module
 aliases:

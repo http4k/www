@@ -47,3 +47,4 @@ For Sonatype Nexus, add a proxy repository:
 3. Set the **Remote storage URL** to `https://maven.http4k.org`
 4. Under **HTTP > Authentication**, enter your http4k credentials
 5. Add the proxy repository to your maven-public group
+

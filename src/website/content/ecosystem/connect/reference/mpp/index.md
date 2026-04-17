@@ -1,7 +1,9 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Connect
+ecosystem:
+  - http4k Connect
+  - http4k Enterprise
 title: Machine Payments Protocol
 tier: pro
 description: Feature overview of the http4k Connect MPP modules

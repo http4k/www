@@ -1,7 +1,9 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Core
+ecosystem:
+  - http4k Core
+  - http4k Enterprise
 tier: pro
 title: "Wiretap"
 description: See everything. Capture OpenTelemetry traces from tests with rich reports, monitor live traffic, and debug MCP servers.

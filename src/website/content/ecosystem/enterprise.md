@@ -15,4 +15,6 @@ The http4k Enterprise ecosystem provides the infrastructure and tooling that org
 
 - **[Verify Plugin](/ecosystem/enterprise/reference/verify/)** — Gradle plugin for automatic build-time verification of all http4k artifact signatures. Exports verification artifacts for independent inspection and generates attestation reports.
 
+- **[All Pro modules](/pro/)** — Enterprise-grade modules for AI agent integration, observability, machine-to-machine payments, and developer tooling.
+
 Access credentials are included with your [http4k Enterprise Edition](/enterprise/) subscription.
