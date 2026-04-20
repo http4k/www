@@ -1,10 +1,10 @@
 [versions]
-amazon-s3 = "2.42.33"
+amazon-s3 = "2.42.36"
 aws-lambda-java-events = "3.16.1"
 azure-search-documents = "11.8.1"
 forkhandles-bom = "2.25.4.0"
 google-http-client = "2.1.0"
-graphql-kotlin-schema-generator = "9.1.0"
+graphql-kotlin-schema-generator = "9.2.0"
 http4k-standards = "1.4.0.0"
 jakarta-servlet-api = "6.1.0"
 javax-servlet-api = "4.0.1"
