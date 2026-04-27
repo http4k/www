@@ -31,7 +31,7 @@ Think of it as having an http4k master on your team. Your AI agent doesn't just 
 
 We've published the skills index at a well-known URL following Cloudflare's open discovery protocol:
 
-[https://www.http4k.org/.well-known/agent-skills/index.json](https://www.http4k.org/.well-known/agent-skills/index.json)
+[https://http4k.org/.well-known/agent-skills/index.json](https://http4k.org/.well-known/agent-skills/index.json)
 
 This means any AI agent or tool that understands the [Agent Skills discovery schema](https://agentskills.io/) can find and load http4k's skills automatically - no hardcoded integrations required. It's the same philosophy we apply to everything in http4k: composable, standards-based, and zero magic.
 
