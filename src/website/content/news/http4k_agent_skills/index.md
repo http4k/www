@@ -45,11 +45,22 @@ That consistency is what makes a single skill file genuinely useful across the e
 
 ## Get Started
 
-If you're using Claude Code you can add the plugin directly using the http4k plugin marketplace:
+### Claude Code
+
+Add the plugin directly using the http4k plugin marketplace:
 
 ```
 /plugin marketplace add http4k/agent-skills
 /plugin install http4k
+```
+
+### OpenCode
+
+Clone the skill into your project's `.opencode/skills/` directory:
+
+```bash
+git clone https://github.com/http4k/agent-skills.git /tmp/http4k-agent-skills
+cp -r /tmp/http4k-agent-skills/plugins/http4k/skills/http4k-development .opencode/skills/http4k-development
 ```
 
 That's it. Next time you're working on an http4k project, your agent will have the context it needs. No configuration, no ceremony.
