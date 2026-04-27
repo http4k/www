@@ -51,7 +51,7 @@ Add the plugin directly using the http4k plugin marketplace:
 
 ```
 /plugin marketplace add http4k/agent-skills
-/plugin install http4k
+ /plugin install http4k
 ```
 
 ### OpenCode
