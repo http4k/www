@@ -1,4 +1,4 @@
 - name: http4k-development
   type: skill-md
   description: "Patterns and API usage examples for all 200+ http4k modules"
-  url: "https://raw.githubusercontent.com/http4k/agent-skills/master/plugins/http4k/skills/http4k-development/SKILL.md"
+  path: "plugins/http4k/skills/http4k-development/SKILL.md"
