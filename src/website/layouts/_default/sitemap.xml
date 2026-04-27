@@ -8,6 +8,16 @@
     </url>
     {{ end }}
 
+    <url>
+        <loc>{{ .Site.BaseURL }}.well-known/cosign-keys.json</loc>
+    </url>
+    <url>
+        <loc>{{ .Site.BaseURL }}.well-known/api-catalog.json</loc>
+    </url>
+    <url>
+        <loc>{{ .Site.BaseURL }}.well-known/security.txt</loc>
+    </url>
+
     {{ range where .Site.AllPages "Sitemap.Disable" "ne" true }}
     {{- if .Permalink -}}
     <url>
