@@ -41,7 +41,7 @@ As more tools adopt the protocol, your http4k knowledge travels with you - regar
 
 This is the kind of thing that only works when your toolkit has genuine consistency. If every module followed different conventions, no skill file could cover it. But http4k's 205 modules all follow the same functional patterns we established on day one - the same compositional approach, the same testing model, the same way of wiring things together.
 
-That consistency is what makes a single skill file genuinely useful across the entire http4k ecosystems. One set of patterns, every modules, zero special cases.
+That consistency is what makes a single skill file genuinely useful across the entire http4k ecosystems. One set of patterns, every module, zero special cases.
 
 ## Get Started
 
