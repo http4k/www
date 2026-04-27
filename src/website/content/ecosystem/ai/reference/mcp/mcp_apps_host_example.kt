@@ -1,6 +1,7 @@
 package content.ecosystem.ai.reference.mcp
 
 import org.http4k.ai.mcp.apps.McpAppsHost
+import org.http4k.ai.mcp.model.apps.McpAppResourceMeta
 import org.http4k.ai.mcp.model.apps.McpApps
 import org.http4k.ai.mcp.protocol.ServerMetaData
 import org.http4k.ai.mcp.protocol.withExtensions
@@ -19,7 +20,12 @@ object McpAppsHostExample {
         val dashboardApp = mcp(
             ServerMetaData("Dashboard", "1.0.0").withExtensions(McpApps),
             NoMcpSecurity,
-            RenderMcpApp("show_dashboard", "Show dashboard", Uri.of("ui://dash")) {
+            RenderMcpApp(
+                "show_dashboard",
+                "Show dashboard",
+                Uri.of("ui://dash"),
+                McpAppResourceMeta()
+            ) {
                 "<h1>Dashboard</h1>"
             }
         )
@@ -27,7 +33,12 @@ object McpAppsHostExample {
         val settingsApp = mcp(
             ServerMetaData("Settings", "1.0.0").withExtensions(McpApps),
             NoMcpSecurity,
-            RenderMcpApp("show_settings", "Show settings", Uri.of("ui://settings")) {
+            RenderMcpApp(
+                "show_settings",
+                "Show settings",
+                Uri.of("ui://settings"),
+                McpAppResourceMeta()
+            ) {
                 "<h1>Settings</h1>"
             }
         )
