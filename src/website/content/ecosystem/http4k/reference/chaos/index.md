@@ -33,6 +33,7 @@ A **Behaviour** applies the failure mode to the HTTP call. This could involve bl
 |Latency|Adds random latency to a call between the min and max durations|`{"type":"latency","min":"PT0.1S","max":"PT0.3S"}`|
 |ThrowException|Throws an uncaught Exception with the supplied message|`{"type":"throw","message":"foo"}`|
 |ReturnStatus|Returns an HTTP response with the specified HTTP status code|`{"type":"status","status":404}`|
+|ReturnResponse|Returns an HTTP response with the specified response. `body` and `headers` are optional|`{"type":"response","status":500,"body":"a-body","headers":{"x-name":"value","x-other": "value2"}}`|
 |NoBody|Completes the call normally, but strips the body content from the response|`{"type":"body"}`|
 |EatMemory|Forces an OOM exception|`{"type":"memory"}`|
 |KillProcess|Kills the Java process with a 1 error code|`{"type":"kill"}`|
