@@ -1,12 +1,14 @@
+{{- $version := .Site.Params.versions.http4k -}}
 {{- $skills := slice -}}
 {{- range .Site.Data.agent_skills -}}
+  {{- $url := printf "https://raw.githubusercontent.com/http4k/agent-skills/%s/%s" $version .path -}}
   {{- $skill := dict
     "name" .name
     "type" .type
     "description" .description
-    "url" .url
+    "url" $url
   -}}
-  {{- with resources.GetRemote .url -}}
+  {{- with resources.GetRemote $url -}}
     {{- $skill = merge $skill (dict "digest" (printf "sha256:%s" (crypto.SHA256 .Content))) -}}
   {{- end -}}
   {{- $skills = $skills | append $skill -}}

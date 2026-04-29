@@ -23,6 +23,7 @@ class McpTest {
     // McpClient is injected — connects to the MCP server under test
     @Test
     fun `can list tools via MCP`(mcpClient: McpClient) {
+        mcpClient.start()
         val tools = mcpClient.tools().list().coerce<List<McpTool>>()
         assertThat(tools.size, greaterThan(0))
     }

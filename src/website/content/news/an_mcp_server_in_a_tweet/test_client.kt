@@ -28,7 +28,7 @@ class McpServerTest {
 
     @Test
     fun `can call a tool on the server`() {
-        val client = mcpServer.testMcpClient()
+        val client = mcpServer.testMcpClient().apply { start() }
 
         val tools = client.tools().list()
             .onFailure { error("") }

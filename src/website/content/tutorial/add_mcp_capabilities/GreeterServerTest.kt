@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test
 
 class GreeterServerTest {
 
-    private val client = GreeterServer().testMcpClient()
+    private val client = GreeterServer().testMcpClient().apply { start() }
 
     @Test
     fun `lists all tools`() {
