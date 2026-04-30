@@ -148,6 +148,11 @@ menus:
       url: /solutions/
       parent: solutions
       weight: 41
+    - name: solutions-company
+      title: Company
+      url: /company/
+      parent: solutions
+      weight: 41
     - name: solutions-enterprise
       title: Enterprise Edition
       url: /enterprise/
