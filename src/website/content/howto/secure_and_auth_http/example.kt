@@ -22,6 +22,7 @@ import org.http4k.security.ExpiringCredentials
 import org.http4k.security.RefreshCredentials
 import org.http4k.security.Refreshing
 import org.http4k.security.oauth.client.OAuthClientCredentials
+import org.http4k.security.oauth.client.OAuthRefreshToken
 import org.http4k.security.oauth.client.RefreshingOAuthToken
 import org.http4k.security.oauth.format.OAuthMoshi.auto
 import org.http4k.server.Http4kServer
@@ -83,11 +84,10 @@ fun main() {
     val clientCredentials = Credentials("id", "secret")
 
     val refreshingOAuthClient = ClientFilters.RefreshingOAuthToken(
-        oauthCredentials = clientCredentials,
         tokenUri = Uri.of("/oauth"),
         backend = baseHttp,
-        oAuthFlowFilter = ClientFilters.OAuthClientCredentials(clientCredentials),
-        gracePeriod = Duration.ofSeconds(1)
+        oAuthFlowFilter = ClientFilters.OAuthClientCredentials(clientCredentials, emptyList()),
+        oAuthRefreshFilter = { ClientFilters.OAuthRefreshToken(clientCredentials, it, emptyList()) },
     ).then(baseHttp)
 
     repeat(10) {
