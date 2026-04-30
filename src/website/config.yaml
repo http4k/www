@@ -66,6 +66,11 @@ menus:
       url: /showcase/
       parent: about
       weight: 13
+    - name: about-company
+      title: Company
+      url: /company/
+      parent: about
+      weight: 14
 
     - name: learn
       title: Learn
@@ -146,11 +151,6 @@ menus:
     - name: solutions-overview
       title: Overview
       url: /solutions/
-      parent: solutions
-      weight: 41
-    - name: solutions-company
-      title: Company
-      url: /company/
       parent: solutions
       weight: 41
     - name: solutions-enterprise
