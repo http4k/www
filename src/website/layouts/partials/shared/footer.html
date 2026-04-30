@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row pb-3 text-start text-xl-start">
             <div class="col-md-6 col-lg-3" style="width: 200px">
-                <a class="p-0" href="https://http4k.org">
+                <a class="p-0" href="{{ .Site.BaseURL }}">
                     <img src="{{ .Site.Params.LogoSvg }}" alt="logo" width="50%"/>
                 </a>
                 <p></p>
@@ -17,7 +17,7 @@
                 <h5>{{ .Title }}</h5>
                 <ul class="list-unstyled">
                     {{ range .Children }}
-                    <li><a class="small text-white text-decoration-none" href="{{ .URL }}">{{ .Title }}</a></li>
+                    <li><a class="small text-white text-decoration-none" href="{{ .URL | absURL }}">{{ .Title }}</a></li>
                     {{ end }}
                 </ul>
             </div>
@@ -25,7 +25,7 @@
             <div class="col-xs-6 col-md">
                 <h5>Company</h5>
                 <ul class="list-unstyled">
-                    <li><a class="small text-white text-decoration-none" href="/company/">About</a></li>
+                    <li><a class="small text-white text-decoration-none" href="{{ "/company/" | absURL }}">About</a></li>
                     <li><a class="small text-white text-decoration-none" href="mailto:info@http4k.org">Contact</a></li>
                     <li><a class="small text-white text-decoration-none" href="https://www.linkedin.com/company/http4k">LinkedIn</a></li>
                     <li><a class="small text-white text-decoration-none" href="https://x.com/http4k">X</a></li>
@@ -38,14 +38,14 @@
             <p class="small text-white text-decoration-none">
                 © {{ now.Format "2006" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;&nbsp;
                 {{ range .Site.Menus.legal }}
-                |&nbsp;&nbsp;&nbsp;<a class="text-white text-decoration-none" href="{{ .URL }}">{{ .Name }}</a>&nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;<a class="text-white text-decoration-none" href="{{ .URL | absURL }}">{{ .Name }}</a>&nbsp;&nbsp;&nbsp;
                 {{ end }}
             </p>
         </div>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-<script src="/js/fuse-search.js"></script>
-<script src="/js/footer.js"></script>
+<script src="{{ "/js/fuse-search.js" | absURL }}"></script>
+<script src="{{ "/js/footer.js" | absURL }}"></script>
 
 <img src="https://static.scarf.sh/a.png?x-pxid=e1c296ba-34c0-4342-8d2c-3a023d5dcec3" alt="scarf"/>

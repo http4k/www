@@ -59,9 +59,11 @@ Add the plugin directly using the http4k plugin marketplace:
 Clone the skill into your project's `.opencode/skills/` directory:
 
 ```bash
-git clone https://github.com/http4k/agent-skills.git /tmp/http4k-agent-skills
+git clone --branch <http4k version> --depth 1 https://github.com/http4k/agent-skills.git /tmp/http4k-agent-skills
 cp -r /tmp/http4k-agent-skills/plugins/http4k/skills/http4k-development .opencode/skills/http4k-development
 ```
+
+To update when a new http4k version drops, re-run the command with the new version tag.
 
 That's it. Next time you're working on an http4k project, your agent will have the context it needs. No configuration, no ceremony.
 
