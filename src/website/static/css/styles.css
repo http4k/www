@@ -207,9 +207,9 @@
 
     .headshot {
         border-radius: 34px;
+        width: 20rem;
         height: 20rem;
-        max-width: 100%;
-        object-fit: contain;
+        object-fit: cover;
         margin-bottom: 20px;
     }
 }
@@ -243,6 +243,64 @@
     margin-right: auto;
     width: 30%;
     height: auto;
+}
+
+section.contact-map {
+    width: 100%;
+}
+
+section.contact-map div.map {
+    position: relative;
+    aspect-ratio: 2.25;
+    width: 100%;
+    background-position: center calc(50% + 2rem);
+    background-repeat: repeat;
+    background-size: cover;
+    padding: 3rem 0;
+    border-radius: 0;
+}
+
+section.contact-map div.map::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url('/images/marker.svg') center center / auto 4rem no-repeat;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: block;
+    filter: contrast(0.7) sepia(1) hue-rotate(160deg) !important;
+}
+
+section.contact-map .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0);
+}
+
+section.contact-map div.map > .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+section.contact-map div.map > .container > div {
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 2;
+    min-width: 22rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 55rem) {
+    section.contact-map div.map > .container {
+        justify-content: center;
+    }
 }
 
 footer {
