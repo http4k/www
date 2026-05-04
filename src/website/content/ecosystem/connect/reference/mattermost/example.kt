@@ -1,3 +1,5 @@
+package ecosystem.connect.reference.mattermost
+
 import dev.forkhandles.result4k.Result
 import org.http4k.client.JavaHttpClient
 import org.http4k.connect.RemoteFailure

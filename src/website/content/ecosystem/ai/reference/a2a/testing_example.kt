@@ -1,3 +1,5 @@
+package content.ecosystem.ai.reference.a2a
+
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
 import dev.forkhandles.result4k.Success

@@ -1,3 +1,5 @@
+package ecosystem.http4k.reference.hot_reload
+
 import content.ecosystem.http4k.reference.hot_reload.MyApp
 
 import org.http4k.core.HttpHandler

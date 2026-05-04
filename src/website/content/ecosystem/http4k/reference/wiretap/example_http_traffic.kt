@@ -1,3 +1,5 @@
+package ecosystem.http4k.reference.wiretap
+
 import com.natpryce.hamkrest.assertion.assertThat
 import com.natpryce.hamkrest.equalTo
 import org.http4k.core.HttpHandler

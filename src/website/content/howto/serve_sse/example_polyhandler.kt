@@ -1,3 +1,5 @@
+package howto.serve_sse
+
 import org.http4k.client.JavaHttpClient
 import org.http4k.core.ContentType
 import org.http4k.core.Method.GET

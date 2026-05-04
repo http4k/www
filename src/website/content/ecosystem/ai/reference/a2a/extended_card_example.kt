@@ -1,3 +1,5 @@
+package content.ecosystem.ai.reference.a2a
+
 import org.http4k.ai.a2a.model.AgentCapabilities
 import org.http4k.ai.a2a.model.AgentCard
 import org.http4k.ai.a2a.model.AgentCardProvider

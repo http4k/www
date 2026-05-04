@@ -1,3 +1,5 @@
+package ecosystem.connect.concepts.pattern.post
+
 import content.ecosystem.connect.concepts.pattern.UserDetails
 import content.ecosystem.connect.concepts.pattern.post.GitHubApi
 import content.ecosystem.connect.concepts.pattern.post.gitHub

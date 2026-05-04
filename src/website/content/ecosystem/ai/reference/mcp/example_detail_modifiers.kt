@@ -1,3 +1,5 @@
+package ecosystem.ai.reference.mcp
+
 import io.opentelemetry.api.GlobalOpenTelemetry
 import org.http4k.filter.CallToolDetailSpanModifiers
 import org.http4k.filter.CompletionDetailSpanModifiers

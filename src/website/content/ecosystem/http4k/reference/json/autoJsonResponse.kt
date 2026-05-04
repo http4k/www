@@ -1,3 +1,5 @@
+package ecosystem.http4k.reference.json
+
 import kotlinx.serialization.Serializable
 import org.http4k.core.Body
 import org.http4k.core.HttpHandler

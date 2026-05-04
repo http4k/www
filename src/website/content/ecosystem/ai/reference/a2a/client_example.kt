@@ -1,3 +1,5 @@
+package content.ecosystem.ai.reference.a2a
+
 import dev.forkhandles.result4k.valueOrNull
 import org.http4k.ai.a2a.client.HttpA2AClient
 import org.http4k.ai.a2a.client.RestA2AClient

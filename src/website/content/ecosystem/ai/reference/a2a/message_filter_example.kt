@@ -1,3 +1,6 @@
+package content.ecosystem.ai.reference.a2a
+
+import content._sites.a2a.handler
 import org.http4k.ai.a2a.MessageFilter
 import org.http4k.ai.a2a.model.AgentCard
 import org.http4k.ai.a2a.model.Version
