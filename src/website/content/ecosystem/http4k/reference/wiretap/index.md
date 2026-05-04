@@ -68,6 +68,24 @@ Intercept injects test parameters based on their type:
 
 {{< kotlin file="example_mcp.kt" >}}
 
+**`A2AClient`** — connects to an A2A agent under test:
+
+{{< kotlin file="example_a2a.kt" >}}
+
+### Protocol-Specific Extension Interceptors
+
+For convenience, Intercept provides dedicated factory methods for MCP and A2A servers:
+
+**`Intercept.mcp`** — synonym for `Intercept.poly`, for MCP servers that return a `PolyHandler`.
+
+**`Intercept.mcpCapabilities`** — intercept individual MCP capabilities without building a full server:
+
+{{< kotlin file="example_mcp_capabilities.kt" >}}
+
+**`Intercept.a2a`** — intercept an A2A JSON-RPC server with an injected `A2AClient`:
+
+{{< kotlin file="example_a2a.kt" >}}
+
 ### RenderMode
 
 - `RenderMode.OnFailure` (default) — generate reports only when tests fail

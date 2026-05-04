@@ -31,7 +31,7 @@ features:
     - title: Agent</br>Discovery
       icon: support
       colour: violet
-      description: "**Agent Cards** for capability advertisement and discovery. **Extended Agent Cards** for authenticated access. Publish **skills**, **security schemes**, and **supported content types**."
+      description: "**Agent Cards** for capability advertisement and discovery. **Extended Agent Cards** for authenticated access. Publish **skills**, **security schemes**, and **JWS signatures** for card integrity."
     - title: Task</br>Lifecycle
       icon: support
       colour: orange
@@ -39,11 +39,11 @@ features:
     - title: Streaming
       icon: footprint
       colour: pink
-      description: "Real-time **SSE streaming** for large outputs and continuous updates. Progressive task results without polling."
+      description: "Real-time **SSE streaming** for large outputs and continuous updates. **Subscribe to task updates** for live status changes. Progressive results without polling."
     - title: Multi-tenancy
       icon: supportive
       colour: indigo
-      description: "First-class **tenant isolation** across tasks, storage, and routing. Build **multi-tenant agent platforms** with tenant-scoped **Agent Cards** and **protocol endpoints**."
+      description: "First-class **tenant isolation** across tasks, storage, and routing. Build **multi-tenant agent platforms** with tenant-scoped **task storage** and **protocol endpoints**."
     - title: Wiretap</br>Integration
       icon: testability
       colour: cyan
