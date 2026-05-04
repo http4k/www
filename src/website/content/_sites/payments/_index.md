@@ -8,6 +8,7 @@ type: "product"
 subdomain: payments
 tier: pro
 description: "Add payment gates to any HTTP endpoint or MCP tool with X402 and Machine Payments Protocol. Client and server filters, route-level security, testable fakes, and MCP integration — all with familiar http4k patterns."
+docs_link: https://www.http4k.org/ecosystem/enterprise
 navigation:
     -   name: X402 Docs
         title: MPP Docs

@@ -10,6 +10,12 @@ tier: pro
 description: Full A2A protocol support for building interoperable multi-agent systems. JSON-RPC and REST bindings, Agent Cards, Tasks, Streaming, Multi-tenancy — all testable, all type-safe.
 docs_link: https://http4k.org/ecosystem/ai/reference/a2a/
 navigation:
+    -   name: docs
+        title: Documentation
+        url: https://http4k.org/ecosystem/ai/reference/a2a/
+    -   name: pricing
+        title: Pricing
+        url: "#pricing"
     -   name: http4k Pro
         title: http4k Pro
         url: https://http4k.org/pro

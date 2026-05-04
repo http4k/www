@@ -15,9 +15,9 @@ navigation:
     -   name: docs
         title: Documentation
         url: https://http4k.org/ecosystem/ai/reference/mcp/
-#    -   name: pricing
-#        title: Pricing
-#        url: "#pricing"
+    -   name: pricing
+        title: Pricing
+        url: "#pricing"
     -   name: http4k Pro
         title: http4k Pro
         url: https://http4k.org/pro

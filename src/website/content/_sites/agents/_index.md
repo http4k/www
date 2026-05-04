@@ -8,8 +8,20 @@ type: "product"
 subdomain: agents
 tier: pro
 description: "The complete http4k toolkit for AI agent systems. MCP servers and Apps, A2A agent interop, machine payments, and full observability — all testable in-memory with familiar http4k patterns."
-docs_link: https://http4k.org/ecosystem/ai/
+docs_link: https://www.http4k.org/ecosystem/enterprise
 navigation:
+    -   name: mcp
+        title: MCP
+        url: https://mcp.http4k.org/
+    -   name: payments
+        title: Payments
+        url: https://payments.http4k.org/
+    -   name: wiretap
+        title: Wiretap
+        url: https://wiretap.http4k.org/
+    -   name: pricing
+        title: Pricing
+        url: "#pricing"
     -   name: http4k Pro
         title: http4k Pro
         url: https://http4k.org/pro
