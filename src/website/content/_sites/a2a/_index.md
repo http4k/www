@@ -57,9 +57,9 @@ how_tos:
           - description: "Step 2 - Handle tasks and messages with **pure**, **testable** functions"
             kotlin_file: step2.kt
             alt: Handle tasks
-          - description: "Step 3 - Compose into an **A2A server** with **streaming** and **push notifications**"
+          - description: "Step 3 - Test **in-memory** — no server, no ports, no flaky CI"
             kotlin_file: step3.kt
-            alt: Compose A2A server
+            alt: Test in-memory
           - description: "Step 4 - Connect to other agents using the **pure Kotlin A2A Client**"
             kotlin_file: step4.kt
             alt: Connect to agents
