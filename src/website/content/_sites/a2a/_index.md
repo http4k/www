@@ -47,7 +47,7 @@ features:
     - title: Wiretap</br>Integration
       icon: testability
       colour: cyan
-      description: "Built-in **Wiretap** support for capturing and inspecting **A2A traffic**. Debug agent interactions with full **request/response visibility** and **OpenTelemetry tracing**."
+      description: "Built-in **Wiretap** support for A2A servers. **Intercept** JUnit extension. **Wiretap Console** for live **traffic monitoring** and **OpenTelemetry tracing** across agent interactions."
 how_tos:
     - section: Getting started with Agent2Agent in http4k
       steps:
