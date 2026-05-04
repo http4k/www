@@ -54,14 +54,18 @@ how_tos:
           - description: "Step 1 - Define agent capabilities with **type-safe Agent Cards** and **Skills**"
             kotlin_file: step1.kt
             alt: Define Agent Cards
+            image: a2a-step1.webp
           - description: "Step 2 - Handle tasks and messages with **pure**, **testable** functions"
             kotlin_file: step2.kt
             alt: Handle tasks
+            image: a2a-step2.webp
           - description: "Step 3 - Test **in-memory** — no server, no ports, no flaky CI"
             kotlin_file: step3.kt
             alt: Test in-memory
+            image: a2a-step3.webp
           - description: "Step 4 - Connect to other agents using the **pure Kotlin A2A Client**"
             kotlin_file: step4.kt
+            image: a2a-step4.webp
             alt: Connect to agents
 email_form_id: 8b025c558c
 #pricing_table:
