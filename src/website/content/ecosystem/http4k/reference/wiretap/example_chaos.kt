@@ -11,7 +11,7 @@ import org.http4k.core.Response
 import org.http4k.core.Status.Companion.INTERNAL_SERVER_ERROR
 import org.http4k.core.Status.Companion.OK
 import org.http4k.wiretap.junit.Intercept
-import org.http4k.wiretap.junit.RenderMode
+import org.http4k.wiretap.junit.RenderMode.Always
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
 
@@ -19,7 +19,7 @@ class ChaosTest {
 
     @RegisterExtension
     @JvmField
-    val intercept = Intercept(RenderMode.Always) {
+    val intercept = Intercept.http(Always) {
         MyApp(http { Response(OK).body("downstream") }, otel("my-service"))
     }
 

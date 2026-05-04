@@ -23,7 +23,7 @@ class MyAppTest {
 
     @RegisterExtension
     @JvmField
-    val intercept = Intercept {
+    val intercept = Intercept.http {
         // http() wraps an outbound client with traffic recording and OTel tracing
         val next = http { Response(OK).body("from downstream") }
 

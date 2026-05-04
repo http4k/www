@@ -7,7 +7,7 @@ layout: "product"
 type: "product"
 subdomain: a2a
 tier: pro
-description: Full A2A protocol support for building interoperable multi-agent systems. Agent Cards, Tasks, Streaming, Push Notifications — all testable, all type-safe.
+description: Full A2A protocol support for building interoperable multi-agent systems. JSON-RPC and REST bindings, Agent Cards, Tasks, Streaming, Multi-tenancy — all testable, all type-safe.
 navigation:
     -   name: http4k Pro
         title: http4k Pro
@@ -19,35 +19,35 @@ features:
     - title: Complete</br>Protocol
       icon: testability
       colour: blue
-      description: "Full **A2A spec** support: **Agent Cards**, **Tasks**, **Messages**, **Artifacts**, **Streaming**, **Push Notifications**, and **multi-turn conversations**."
-    - title: Testable</br>Design
+      description: "Full **A2A spec** support with both **JSON-RPC** and **REST** protocol bindings. **Agent Cards**, **Tasks**, **Messages**, **Artifacts**, **Streaming**, **Push Notifications**, and **multi-turn conversations** — all from a single server definition."
+    - title: Protocol</br>Clients
       icon: supportive
+      colour: red
+      description: "Type-safe **A2A clients** for both **JSON-RPC** and **REST** bindings. Connect to any **A2A-compliant agent** with full support for **streaming**, **task management**, and **push notification configuration**."
+    - title: Testable</br>Design
+      icon: footprint
       colour: green
       description: "**Pure functions**, no side effects. Test agent interactions fully **in-memory** — no network, no ports, no flaky CI."
-    - title: Type-safe</br>Tooling
-      icon: footprint
-      colour: indigo
-      description: "http4k's powerful Lens system for **type-safe Agent Cards**, **Skills**, and **Task definitions** with **compile-time safety**."
     - title: Agent</br>Discovery
       icon: support
       colour: violet
-      description: "**Agent Cards** for capability advertisement and discovery. Agents publish **skills**, **auth requirements**, and **supported content types**."
+      description: "**Agent Cards** for capability advertisement and discovery. **Extended Agent Cards** for authenticated access. Publish **skills**, **security schemes**, and **supported content types**."
     - title: Task</br>Lifecycle
-      icon: footprint
-      colour: orange
-      description: "Full task state management: **submitted**, **working**, **input-required**, **completed**, **failed**, **canceled**. Long-running agent collaboration built in."
-    - title: Streaming
       icon: support
+      colour: orange
+      description: "Full task state management with **pagination** and **filtering**. **Push notifications** via webhooks for status changes. Long-running agent collaboration built in."
+    - title: Streaming
+      icon: footprint
       colour: pink
       description: "Real-time **SSE streaming** for large outputs and continuous updates. Progressive task results without polling."
-    - title: Push</br>Notifications
+    - title: Multi-tenancy
       icon: supportive
-      colour: cyan
-      description: "**Webhook-based notifications** for task status changes. Agents stay informed without long-polling."
-    - title: Protocol</br>Client
+      colour: indigo
+      description: "First-class **tenant isolation** across tasks, storage, and routing. Build **multi-tenant agent platforms** with tenant-scoped **Agent Cards** and **protocol endpoints**."
+    - title: Wiretap</br>Integration
       icon: testability
-      colour: red
-      description: "Pure Kotlin **A2A client** for building custom agent systems. Connect to any **A2A-compliant agent** from your http4k application."
+      colour: cyan
+      description: "Built-in **Wiretap** support for capturing and inspecting **A2A traffic**. Debug agent interactions with full **request/response visibility** and **OpenTelemetry tracing**."
 how_tos:
     - section: Getting started with Agent2Agent in http4k
       steps:

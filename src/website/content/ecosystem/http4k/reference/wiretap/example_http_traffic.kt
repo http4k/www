@@ -21,7 +21,7 @@ class HttpTrafficTest {
     // Captures all HTTP traffic through the app
     @RegisterExtension
     @JvmField
-    val intercept = Intercept(RenderMode.Always) { app }
+    val intercept = Intercept.http(RenderMode.Always) { app }
 
     @Test
     fun `requests are captured`(http: HttpHandler) {
