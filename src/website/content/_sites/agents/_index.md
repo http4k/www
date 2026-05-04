@@ -6,9 +6,9 @@ tagline: "Everything you need to build, debug, and monetise AI agents on the JVM
 layout: "product"
 type: "product"
 subdomain: agents
-draft: true
 tier: pro
 description: "The complete http4k toolkit for AI agent systems. MCP servers and Apps, A2A agent interop, machine payments, and full observability — all testable in-memory with familiar http4k patterns."
+docs_link: https://http4k.org/ecosystem/ai/
 navigation:
     -   name: http4k Pro
         title: http4k Pro
@@ -60,7 +60,6 @@ how_tos:
                 alt: Compose and deploy
             -   description: "Connect agents via **A2A** for multi-agent collaboration. Gate premium tools with **X402/MPP** payments. Debug with **Claude** via Wiretap's MCP server."
                 alt: Connect and monetise
-email_form_id: 8b025c558c
 pricing_table:
     id: prctbl_1TDP7sG47sNzv4yXlmeptCzt
     key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
