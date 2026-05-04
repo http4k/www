@@ -7,6 +7,7 @@ import org.http4k.ai.a2a.model.MessageId
 import org.http4k.ai.a2a.model.Part.Text
 import org.http4k.routing.a2aJsonRpc
 
+
 val server = a2aJsonRpc(agentCard, handler)
 val testClient = server.testA2AJsonRpcClient()
 val response = testClient.message(
