@@ -6,3 +6,6 @@
 
 - name: Building with MCP
   description: Build MCP servers and interactive MCP Apps with http4k's Kotlin-first Model Context Protocol SDK.
+
+- name: Building A2A Agents
+  description: Build Agent2Agent agents with http4k's type-safe A2A SDK for inter-agent communication and task streaming.
