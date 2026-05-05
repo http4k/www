@@ -12,8 +12,8 @@ description: Feature overview of the http4k Connect X402 modules
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k:http4k-connect-x402")
-    implementation("org.http4k:http4k-connect-x402-fake")
+    implementation("org.http4k.pro:http4k-connect-x402")
+    implementation("org.http4k.pro:http4k-connect-x402-fake")
 }
 ```
 
