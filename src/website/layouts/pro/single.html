@@ -20,10 +20,10 @@
                             <h5 class="card-title">{{ .name }}</h5>
                             <p class="card-text small">{{ .description }}</p>
                             <div class="mt-auto pt-3">
-                                {{ if .available }}
-                                <a href="{{ .link }}" class="btn btn-secondary w-100">See more</a>
-                                {{ else if .early_access }}
+                                {{ if .early_access }}
                                 <a href="{{ .link }}" class="btn btn-secondary w-100">Get Early Access</a>
+                                {{ else if .available }}
+                                <a href="{{ .link }}" class="btn btn-secondary w-100">See more</a>
                                 {{ else }}
                                 <a href="{{ .link }}" class="btn btn-secondary w-100">Coming soon...</a>
                                 {{ end }}
@@ -39,7 +39,7 @@
 
 <div class="text-center my-5 py-5" style="background-color: #f8f8f8">
     <div class="container" style="max-width: 700px">
-        <h2>Need multiple developer seats, team licensing, or custom terms?</h2>
+        <h2>Need bulk developer seats, team licensing, or custom terms?</h2>
         <p class="mt-3">Get in touch and we'll find the right fit — whether that's volume licensing for individual Pro modules or our full <a href="/enterprise">Enterprise Edition</a> with LTS support and priority access to all Pro modules.</p>
     </div>
 </div>
