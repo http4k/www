@@ -18,13 +18,13 @@ fun main() {
     )
 
     // The MessageHandler is a simple function (MessageRequest) -> MessageResponse
-    val server = a2aJsonRpc(agentCard, { request ->
+    val server = a2aJsonRpc(agentCard) { req ->
         Message(
             messageId = MessageId.random(),
             role = ROLE_AGENT,
             parts = listOf(Part.Text("Hello from My Agent!"))
         )
-    })
+    }
 
     // For REST protocol binding, use a2aRest() instead:
     // val server = a2aRest(agentCard) { request -> ... }

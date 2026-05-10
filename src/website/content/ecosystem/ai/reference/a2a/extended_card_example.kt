@@ -27,7 +27,7 @@ val extendedCard = standardCard.copy(
 )
 
 // AgentCardProvider serves both standard and extended cards
-val agentCardServer = a2aJsonRpc(AgentCardProvider(standardCard, extendedCard), messageHandler = {
+val agentCardServer = a2aJsonRpc(messageHandler = {
     // handle messages...
     TODO()
-})
+}, cards = AgentCardProvider(standardCard, extendedCard))

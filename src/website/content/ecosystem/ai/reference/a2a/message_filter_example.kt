@@ -31,5 +31,5 @@ val handler = logging.then(auth).then { request ->
 
 val serverWithFilter = a2aJsonRpc(
     AgentCard("Filtered Agent", Version.of("1.0.0"), "With filters"),
-    handler
+    messageHandler = handler
 )
