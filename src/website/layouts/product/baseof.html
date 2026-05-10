@@ -83,6 +83,65 @@
         min-height: 0;
     }
 
+    .download-stack {
+        width: 100%;
+    }
+
+    .download-stack__panel {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 32px;
+        text-align: center;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        border-radius: var(--radius-lg, 20px);
+    }
+
+    .download-stack__icon {
+        font-size: 3rem;
+        line-height: 1;
+        margin-bottom: 16px;
+        animation: download-stack-pop 0.6s ease-out;
+    }
+
+    @keyframes download-stack-pop {
+        0% { transform: scale(0); opacity: 0; }
+        60% { transform: scale(1.2); opacity: 1; }
+        100% { transform: scale(1); }
+    }
+
+    .download-stack__panel h2 {
+        margin-bottom: 12px;
+    }
+
+    .download-stack__lead {
+        max-width: 520px;
+        margin-bottom: 12px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .download-stack__panel .btn {
+        padding: 14px 32px;
+        font-weight: 600;
+        font-size: 1.05rem;
+    }
+
+    .download-stack__hint {
+        margin-top: 16px;
+        margin-bottom: 0;
+        color: #6c757d;
+    }
+
+    .download-stack[data-state="downloaded"] .download-stack__panel {
+        display: flex;
+    }
+
+    .download-stack[data-state="downloaded"] .download-stack__form {
+        display: none;
+    }
+
 </style>
 <body>
 <header class="landing">
@@ -103,8 +162,9 @@
                 <a class="btn btn-secondary" href="{{ .Params.docs_link }}">{{ with .Params.cta_label }}{{ . }}{{ else }}See the docs{{ end }}</a>
                 {{ else if .Params.early_access }}
                 <a class="btn btn-secondary" href="#subscribe">Sign up for Early Access</a>
+                {{ else if .Params.download_form_id }}
                 {{ else }}
-                <a class="btn btn-secondary" href="#subscribe">Get launch notifications</a>
+                    <a class="btn btn-secondary" href="#subscribe">Get launch notifications</a>
                 {{ end }}
                 </div>
             </div>
@@ -232,13 +292,39 @@
         <p>This module is coming soon. Sign up below to be the first to know when it launches.</p>
         <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
         {{ else if .Params.download_form_id }}
-        <a href="#download"></a>
-        <script async data-uid="{{ .Params.download_form_id }}" src="https://http4k.kit.com/{{ .Params.download_form_id }}/index.js"></script>
+        <div id="download" class="download-stack card-custom" data-download-stack>
+            <div class="download-stack__panel">
+                <div class="download-stack__icon">🎁</div>
+                <h2>Thanks for downloading!</h2>
+                <p class="download-stack__lead">The demo is a fully-formed <b>Gradle project</b> — just unzip and open it directly in IntelliJ IDEA (or your IDE of choice) to start exploring the code from the talk.</p>
+                <a class="btn btn-secondary btn-lg" href="https://toolbox.http4k.org/demo.zip">Download</a>
+            </div>
+            <div class="download-stack__form">
+                <script async data-uid="{{ .Params.download_form_id }}" src="https://http4k.kit.com/{{ .Params.download_form_id }}/index.js"></script>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var params = new URLSearchParams(window.location.search);
+                if (!params.has('download')) return;
+                var stack = document.querySelector('[data-download-stack]');
+                if (!stack) return;
+                stack.dataset.state = 'downloaded';
+                var link = stack.querySelector('.download-stack__panel a.btn');
+                if (link) {
+                    var iframe = document.createElement('iframe');
+                    iframe.style.display = 'none';
+                    iframe.src = link.href;
+                    document.body.appendChild(iframe);
+                }
+            })();
+        </script>
         {{ end }}
     </div>
 </div>
 {{ end }}
 {{ end }}
+{{ partial "shared/pipes.html" }}
 {{- partial "shared/footer.html" . -}}
 </body>
 </html>
