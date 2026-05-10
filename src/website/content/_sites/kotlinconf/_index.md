@@ -25,4 +25,5 @@ navigation:
         title: http4k Pro
         url: https://http4k.org/pro
 download_form_id: ea8648ada4
+download_link: https://toolbox.http4k.org/stack/dD1BQU1BYUFESUFTMEQ2QVBwQkxNRkZ3JmM9SGVsbG9Xb3JsZCZwPWNvbS5leGFtcGxl
 ---

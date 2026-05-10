@@ -297,7 +297,7 @@
                 <div class="download-stack__icon">🎁</div>
                 <h2>Thanks for downloading!</h2>
                 <p class="download-stack__lead">The demo is a fully-formed <b>Gradle project</b> — just unzip and open it directly in IntelliJ IDEA (or your IDE of choice) to start exploring the code from the talk.</p>
-                <a class="btn btn-secondary btn-lg" href="https://toolbox.http4k.org/demo.zip">Download</a>
+                <a class="btn btn-secondary btn-lg" href="{{ .Params.download_link }}">Download</a>
             </div>
             <div class="download-stack__form">
                 <script async data-uid="{{ .Params.download_form_id }}" src="https://http4k.kit.com/{{ .Params.download_form_id }}/index.js"></script>
@@ -305,14 +305,14 @@
         </div>
         <script>
             (function () {
-                var params = new URLSearchParams(window.location.search);
+                const params = new URLSearchParams(window.location.search);
                 if (!params.has('download')) return;
-                var stack = document.querySelector('[data-download-stack]');
+                const stack = document.querySelector('[data-download-stack]');
                 if (!stack) return;
                 stack.dataset.state = 'downloaded';
-                var link = stack.querySelector('.download-stack__panel a.btn');
+                const link = stack.querySelector('.download-stack__panel a.btn');
                 if (link) {
-                    var iframe = document.createElement('iframe');
+                    const iframe = document.createElement('iframe');
                     iframe.style.display = 'none';
                     iframe.src = link.href;
                     document.body.appendChild(iframe);
