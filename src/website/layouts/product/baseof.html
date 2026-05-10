@@ -114,6 +114,7 @@
 
 
 {{ if .Params.pre_features_partial }}{{ partial .Params.pre_features_partial . }}{{ end }}
+{{ if .Params.features }}
 <div class=".first-block">
     <div class="features">
         <div class="container">
@@ -134,6 +135,7 @@
 
     </div>
 </div>
+{{ end }}
 {{ if .Params.post_features_partial }}{{ partial .Params.post_features_partial . }}{{ end }}
 {{ if .Params.how_tos }}
 <div class="our-document pt-5 pb-3">
@@ -229,6 +231,9 @@
         <h2>Stay in the loop</h2>
         <p>This module is coming soon. Sign up below to be the first to know when it launches.</p>
         <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
+        {{ else if .Params.download_form_id }}
+        <a href="#download"></a>
+        <script async data-uid="{{ .Params.download_form_id }}" src="https://http4k.kit.com/{{ .Params.download_form_id }}/index.js"></script>
         {{ end }}
     </div>
 </div>
