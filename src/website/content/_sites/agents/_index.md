@@ -72,8 +72,8 @@ how_tos:
                 alt: Compose and deploy
             -   description: "Connect agents via **A2A** for multi-agent collaboration. Gate premium tools with **X402/MPP** payments. Debug with **Claude** via Wiretap's MCP server."
                 alt: Connect and monetise
-email_form_id: 8b025c558c
-#pricing_table:
-#    id: prctbl_1TDP7sG47sNzv4yXlmeptCzt
-#    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
+#email_form_id: 8b025c558c
+pricing_table:
+    id: prctbl_1TDP7sG47sNzv4yXlmeptCzt
+    key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0
 ---
