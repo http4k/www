@@ -30,7 +30,7 @@ features:
     - title: Agent</br>Connectivity
       icon: supportive
       colour: red
-      description: "Type-safe **A2A clients** for both **JSON-RPC** and **REST** bindings. Plug your agent straight into **Claude Desktop**, **Cursor**, or any MCP client via the built-in bridge - zero integration code."
+      description: "Type-safe **A2A clients** for both **JSON-RPC** and **REST** bindings. Plug your agent straight into **Claude Desktop**, **Cursor**, or any MCP client via the provided bridge."
     - title: Testable</br>Design
       icon: footprint
       colour: green

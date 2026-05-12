@@ -48,7 +48,7 @@ features:
     -   title: Agent</br>Connectivity
         icon: support
         colour: pink
-        description: "**MCP** and **A2A clients** with full streaming support. Plug any **A2A agent** straight into **Claude Desktop**, **Cursor**, or any MCP client via the built-in bridge - zero integration code. Test **in-memory** with no network, no ports, no flaky CI."
+        description: "**MCP** and **A2A clients** with full streaming support. Plug any **A2A agent** straight into **Claude Desktop**, **Cursor**, or any MCP client via the provided bridge. Test **in-memory** with no network, no ports, no flaky CI."
     -   title: Multi-Transport
         icon: footprint
         colour: indigo

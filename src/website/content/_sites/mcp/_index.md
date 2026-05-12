@@ -56,7 +56,7 @@ features:
     - title: Agent</br>Connectivity
       icon: testability
       colour: red
-      description: "Build your own **AI agents** with pure Kotlin MCP protocol clients. Plug any **A2A agent** straight into **Claude Desktop**, **Cursor**, or any MCP client via the built-in bridge - zero integration code."
+      description: "Build your own **AI agents** with pure Kotlin MCP protocol clients. Plug any **A2A agent** straight into **Claude Desktop**, **Cursor**, or any MCP client via the provided bridge."
 how_tos:
     - section: Getting started with MCP in http4k
       steps:
