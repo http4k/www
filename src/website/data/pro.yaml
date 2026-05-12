@@ -28,15 +28,13 @@ modules:
     image: mcp.webp
     description: Build MCP servers and MCP Apps to integrate Large Language Models with your data and tools using familiar testable http4k patterns
     prompt: "A clean isometric illustration of a minimalist server room with a glowing neural network node connected to simple data blocks via thin lines. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-    available: false
-    early_access: true
+    available: true
   - name: Agent2Agent
     link: https://a2a.http4k.org
     image: a2a.webp
     description: Build interoperable AI agent systems with Google's A2A protocol — Agent Cards, Tasks, Streaming, and Push Notifications using testable http4k patterns
     prompt: "A clean isometric illustration of two AI agent figures exchanging messages across a bridge, with task cards and notification icons flowing between them. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-    available: false
-    early_access: true
+    available: true
   - name: Wiretap
     link: https://wiretap.http4k.org
     image: wiretap.webp
