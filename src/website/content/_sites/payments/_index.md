@@ -7,7 +7,7 @@ layout: "product"
 type: "product"
 subdomain: payments
 tier: pro
-description: "Add payment gates to any HTTP endpoint or MCP tool with X402 and Machine Payments Protocol. Client and server filters, route-level security, testable fakes, and MCP integration — all with familiar http4k patterns."
+description: "Add payment gates to any HTTP endpoint or MCP tool with X402 and Machine Payments Protocol. Client and server filters, route-level security, testable fakes, and MCP integration - all with familiar http4k patterns."
 docs_link: https://www.http4k.org/ecosystem/enterprise
 navigation:
     -   name: X402 Docs
@@ -33,7 +33,7 @@ features:
     -   title: Machine</br>Payments Protocol
         icon: supportive
         colour: green
-        description: "Flexible payment protocol with **pluggable payment methods**. No facilitator needed — implement **MppSigner** and **MppVerifier** directly for any provider including **Stripe** and **crypto**."
+        description: "Flexible payment protocol with **pluggable payment methods**. No facilitator needed - implement **MppSigner** and **MppVerifier** directly for any provider including **Stripe** and **crypto**."
     -   title: MCP</br>Integration
         icon: footprint
         colour: indigo
@@ -41,11 +41,11 @@ features:
     -   title: Client</br>Filters
         icon: support
         colour: violet
-        description: "Automatic **402 handling** for both X402 and MPP. Your HTTP client detects payment-required responses, **signs the challenge**, and **retries** — transparent to your application code."
+        description: "Automatic **402 handling** for both X402 and MPP. Your HTTP client detects payment-required responses, **signs the challenge**, and **retries** - transparent to your application code."
     -   title: Server</br>Filters
         icon: footprint
         colour: orange
-        description: "**Protect any endpoint** with payment requirements. Verify and settle payments before allowing access. One filter wrapping your handler — **no changes to business logic**."
+        description: "**Protect any endpoint** with payment requirements. Verify and settle payments before allowing access. One filter wrapping your handler - **no changes to business logic**."
     -   title: Route</br>Security
         icon: support
         colour: pink
@@ -61,7 +61,7 @@ features:
 how_tos:
     -   section: Getting started with Internet Payments
         steps:
-            -   description: "Add the X402 or MPP dependency. **Protect a server endpoint** with a payment filter — one line wrapping your handler."
+            -   description: "Add the X402 or MPP dependency. **Protect a server endpoint** with a payment filter - one line wrapping your handler."
                 alt: Add payment filter
             -   description: "Add the **client filter** to automatically handle 402 responses. Your client signs payment challenges and **retries transparently**."
                 alt: Add client filter

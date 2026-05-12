@@ -23,7 +23,7 @@ class ChaosTest {
         MyApp(http { Response(OK).body("downstream") }, otel("my-service"))
     }
 
-    // ChaosEngine is injected — controls failure injection on outbound calls
+    // ChaosEngine is injected - controls failure injection on outbound calls
     @Test
     fun `outbound calls fail when chaos is enabled`(http: HttpHandler, chaos: ChaosEngine) {
         chaos.enable(ReturnStatus(INTERNAL_SERVER_ERROR))

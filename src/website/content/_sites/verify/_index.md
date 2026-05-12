@@ -9,8 +9,8 @@ subdomain: verify
 tier: pro
 docs_link: https://http4k.org/ecosystem/enterprise/reference/verify/
 cta_label: "Included with Enterprise Edition"
-ee_included: "Get automated supply chain verification for every http4k dependency — giving your security team the assurance they need, with zero developer overhead."
-description: "**http4k Verify** ensures the integrity of every http4k dependency in your build — automatically, before your code compiles."
+ee_included: "Get automated supply chain verification for every http4k dependency - giving your security team the assurance they need, with zero developer overhead."
+description: "**http4k Verify** ensures the integrity of every http4k dependency in your build - automatically, before your code compiles."
 navigation:
     -   name: docs
         title: Documentation
@@ -33,7 +33,7 @@ features:
     -   title: Full<br/>Coverage
         icon: support
         colour: indigo
-        description: "Covers all **200+ http4k modules** — verifies **JARs**, **CycloneDX SBOMs**, **SLSA provenance attestations**, and **license compliance reports** for every dependency."
+        description: "Covers all **200+ http4k modules** - verifies **JARs**, **CycloneDX SBOMs**, **SLSA provenance attestations**, and **license compliance reports** for every dependency."
     -   title: Enterprise</br>Ready
         icon: supportive
         colour: orange
@@ -57,10 +57,10 @@ features:
 how_tos:
     -   section: "One line. That's it."
         steps:
-            -   description: "**Step 1** — Apply the http4k Verify plugin to your build. Every http4k dependency is now verified before compilation."
+            -   description: "**Step 1** - Apply the http4k Verify plugin to your build. Every http4k dependency is now verified before compilation."
                 image: verify-install.webp
                 alt: Apply the plugin
-            -   description: "**Step 2** — On first build, all artifact signatures are verified and cached. Subsequent builds have zero overhead."
+            -   description: "**Step 2** - On first build, all artifact signatures are verified and cached. Subsequent builds have zero overhead."
                 image: verify-run.webp
                 alt: Verification output
 ---

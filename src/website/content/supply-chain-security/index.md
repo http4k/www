@@ -11,7 +11,7 @@ highlights:
         description: Stay ahead of compliance requirements with machine-readable Software Bills of Materials for every module, ready for audit and vulnerability scanning out of the box.
         icon: "/images/connections.svg"
     -   title: License Compliance
-        description: Signed, per-module license reports delivered with every artifact — ready for audit and regulatory review.
+        description: Signed, per-module license reports delivered with every artifact - ready for audit and regulatory review.
         icon: "/images/supportive.svg"
 faq:
     -   question: "How do I get access to the http4k Enterprise Repository?"
@@ -23,12 +23,12 @@ faq:
     -   question: "Are community (org.http4k) artifacts also covered?"
         answer: Yes. Both community (org.http4k) and pro (org.http4k.pro) artifacts published to the http4k Enterprise Repository include full provenance, SBOMs, and cosign signatures.
     -   question: "Where are provenance artifacts published?"
-        answer: All provenance artifacts — SBOMs, signed JARs, license reports, and SLSA attestations — are delivered through the http4k Enterprise Repository at **[maven.http4k.org](https://maven.http4k.org)** as part of your Enterprise Edition subscription.
+        answer: All provenance artifacts - SBOMs, signed JARs, license reports, and SLSA attestations - are delivered through the http4k Enterprise Repository at **[maven.http4k.org](https://maven.http4k.org)** as part of your Enterprise Edition subscription.
 ---
 
-As part of the **http4k Enterprise Edition**, every http4k artifact is published with cryptographically signed provenance, complete dependency transparency, and verified build attestations — giving your organisation the supply chain assurance it needs to ship with confidence.
+As part of the **http4k Enterprise Edition**, every http4k artifact is published with cryptographically signed provenance, complete dependency transparency, and verified build attestations - giving your organisation the supply chain assurance it needs to ship with confidence.
 
-With increasing regulatory pressure from the **EU Cyber Resilience Act (CRA)**, **US Executive Order 14028**, **NIST SSDF**, and **PCI DSS 4.0**, organisations need to demonstrate full visibility into their software supply chain. http4k delivers this out of the box — every build produces **SLSA Level 2 provenance** linking artifacts to the exact source commit and CI pipeline, **CycloneDX SBOMs** detailing all transitive dependencies, and **cosign signatures** with trusted timestamps from the Sigstore Timestamp Authority.
+With increasing regulatory pressure from the **EU Cyber Resilience Act (CRA)**, **US Executive Order 14028**, **NIST SSDF**, and **PCI DSS 4.0**, organisations need to demonstrate full visibility into their software supply chain. http4k delivers this out of the box - every build produces **SLSA Level 2 provenance** linking artifacts to the exact source commit and CI pipeline, **CycloneDX SBOMs** detailing all transitive dependencies, and **cosign signatures** with trusted timestamps from the Sigstore Timestamp Authority.
 
 ## What Gets Published
 
@@ -51,7 +51,7 @@ See the [Enterprise Repository reference](/ecosystem/enterprise/reference/reposi
 
 Every http4k module includes a **signed license compliance report** listing the licenses of all transitive dependencies, checked against http4k's curated approved license list. This gives your legal and compliance teams immediate visibility into the licensing of every component in your dependency tree.
 
-Each report is signed with the same cosign key as all other provenance artifacts, and covers the specific module's transitive dependencies — so you get exactly the license information relevant to the http4k modules you actually use.
+Each report is signed with the same cosign key as all other provenance artifacts, and covers the specific module's transitive dependencies - so you get exactly the license information relevant to the http4k modules you actually use.
 
 ## SLSA Provenance Format
 
@@ -66,7 +66,7 @@ Each provenance attestation follows the [in-toto Statement v1](https://in-toto.i
 
 All http4k Enterprise Edition artifacts are published with **SLSA Level 2** provenance as standard. For organisations with enhanced compliance requirements, we also offer **SLSA Level 3** provenance on a per-customer basis.
 
-SLSA Level 3 adds **build platform isolation guarantees** — artifacts are built on hardened, tamper-resistant CI infrastructure where the build process is fully isolated and cannot be influenced by project maintainers or external actors. This provides the highest level of supply chain assurance available.
+SLSA Level 3 adds **build platform isolation guarantees** - artifacts are built on hardened, tamper-resistant CI infrastructure where the build process is fully isolated and cannot be influenced by project maintainers or external actors. This provides the highest level of supply chain assurance available.
 
 To discuss SLSA Level 3 provenance for your organisation, [contact us](mailto:enterprise@http4k.org).
 
@@ -74,6 +74,6 @@ To discuss SLSA Level 3 provenance for your organisation, [contact us](mailto:en
 
 The **[http4k Verify](/ecosystem/enterprise/reference/verify/)** plugin provides automatic build-time verification of all http4k artifact signatures. It exports all verification artifacts (SBOMs, provenance, license reports, sigstore bundles) to your project directory for independent inspection, and generates a JSON attestation report as proof that your http4k dependencies were validated.
 
-See the [http4k Verify reference documentation](/ecosystem/enterprise/reference/verify/) for full setup, configuration, and usage details — including manual verification with cosign and Gradle's built-in dependency verification.
+See the [http4k Verify reference documentation](/ecosystem/enterprise/reference/verify/) for full setup, configuration, and usage details - including manual verification with cosign and Gradle's built-in dependency verification.
 
 

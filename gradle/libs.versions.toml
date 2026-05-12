@@ -38,6 +38,7 @@ http4k-ai-a2a-client = { module = "org.http4k.pro:http4k-ai-a2a-client" }
 http4k-ai-a2a-sdk = { module = "org.http4k.pro:http4k-ai-a2a-sdk" }
 http4k-ai-mcp-mpp = { module = "org.http4k.pro:http4k-ai-mcp-mpp" }
 http4k-ai-mcp-sdk = { module = "org.http4k.pro:http4k-ai-mcp-sdk" }
+http4k-ai-mcp-a2a-bridge = { module = "org.http4k.pro:http4k-ai-mcp-a2a-bridge" }
 http4k-ai-mcp-testing = { module = "org.http4k.pro:http4k-ai-mcp-testing" }
 http4k-ai-mcp-x402 = { module = "org.http4k.pro:http4k-ai-mcp-x402" }
 http4k-api-cloudevents = { module = "org.http4k:http4k-api-cloudevents" }
@@ -249,6 +250,7 @@ http4k-ai = [
     "http4k-ai-mcp-mpp",
     "http4k-ai-a2a-client",
     "http4k-ai-a2a-sdk",
+    "http4k-ai-mcp-a2a-bridge",
     "http4k-ai-mcp-sdk",
     "http4k-ai-mcp-testing",
     "http4k-ai-mcp-x402",

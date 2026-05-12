@@ -13,11 +13,11 @@ description: See everything. Capture OpenTelemetry traces from tests with rich r
 
 When something goes wrong in a distributed system, the hardest part is understanding what actually happened. Which services were called? What did the requests and responses look like? Where did the time go? Where did the error originate?
 
-**http4k Wiretap** answers these questions by capturing everything — OpenTelemetry traces, HTTP traffic, logs, and events — and presenting it in rich, shareable reports. It has two components:
+**http4k Wiretap** answers these questions by capturing everything - OpenTelemetry traces, HTTP traffic, logs, and events - and presenting it in rich, shareable reports. It has two components:
 
-**[Intercept](#intercept-junit-extension)** is a JUnit extension that instruments your tests. Add one annotation and every test automatically captures traces, traffic, and console output. On failure (or always, if you prefer), Wiretap generates a self-contained HTML report with trace timelines, sequence diagrams, interaction topology, error isolation, and critical path analysis. It also produces a [Living Test Document](#living-test-document) — a markdown specification of what your test actually exercised, with HTTP request/response contracts you can commit to your repo.
+**[Intercept](#intercept-junit-extension)** is a JUnit extension that instruments your tests. Add one annotation and every test automatically captures traces, traffic, and console output. On failure (or always, if you prefer), Wiretap generates a self-contained HTML report with trace timelines, sequence diagrams, interaction topology, error isolation, and critical path analysis. It also produces a [Living Test Document](#living-test-document) - a markdown specification of what your test actually exercised, with HTTP request/response contracts you can commit to your repo.
 
-**[Wiretap Console](#wiretap-console)** is a pure Kotlin reverse proxy that sits in front of your running application. All traffic flows through it and is captured automatically. The console UI is served at `/_wiretap/` on the same port — real-time traffic monitoring, OpenTelemetry trace visualisation, chaos engineering, MCP debugging, and an embedded HTTP client. Every feature is also available as [MCP tools](#mcp-tools) at `/_wiretap/mcp` for AI-assisted debugging.
+**[Wiretap Console](#wiretap-console)** is a pure Kotlin reverse proxy that sits in front of your running application. All traffic flows through it and is captured automatically. The console UI is served at `/_wiretap/` on the same port - real-time traffic monitoring, OpenTelemetry trace visualisation, chaos engineering, MCP debugging, and an embedded HTTP client. Every feature is also available as [MCP tools](#mcp-tools) at `/_wiretap/mcp` for AI-assisted debugging.
 
 ### Installation
 
@@ -49,10 +49,10 @@ For apps that make outbound HTTP calls, instrument the client with `http()` and 
 {{< kotlin file="example_registered.kt" >}}
 
 The `Context` receiver provides:
-- `http()` — wraps an outbound HTTP client with traffic recording and OTel tracing
-- `otel(serviceName)` — creates an OpenTelemetry instance that records to the trace store
-- `clock()` — deterministic clock
-- `random()` — deterministic random
+- `http()` - wraps an outbound HTTP client with traffic recording and OTel tracing
+- `otel(serviceName)` - creates an OpenTelemetry instance that records to the trace store
+- `clock()` - deterministic clock
+- `random()` - deterministic random
 
 By default, `GlobalOpenTelemetry` is used for trace capture. Use `otel()` for explicit control.
 
@@ -60,15 +60,15 @@ By default, `GlobalOpenTelemetry` is used for trace capture. Use `otel()` for ex
 
 Intercept injects test parameters based on their type:
 
-**`ChaosEngine`** — controls failure injection on outbound calls:
+**`ChaosEngine`** - controls failure injection on outbound calls:
 
 {{< kotlin file="example_chaos.kt" >}}
 
-**`McpClient`** — connects to an MCP server under test (use `Intercept.poly` for `PolyHandler` apps):
+**`McpClient`** - connects to an MCP server under test (use `Intercept.poly` for `PolyHandler` apps):
 
 {{< kotlin file="example_mcp.kt" >}}
 
-**`A2AClient`** — connects to an A2A agent under test:
+**`A2AClient`** - connects to an A2A agent under test:
 
 {{< kotlin file="example_a2a.kt" >}}
 
@@ -76,21 +76,21 @@ Intercept injects test parameters based on their type:
 
 For convenience, Intercept provides dedicated factory methods for MCP and A2A servers:
 
-**`Intercept.mcp`** — synonym for `Intercept.poly`, for MCP servers that return a `PolyHandler`.
+**`Intercept.mcp`** - synonym for `Intercept.poly`, for MCP servers that return a `PolyHandler`.
 
-**`Intercept.mcpCapabilities`** — intercept individual MCP capabilities without building a full server:
+**`Intercept.mcpCapabilities`** - intercept individual MCP capabilities without building a full server:
 
 {{< kotlin file="example_mcp_capabilities.kt" >}}
 
-**`Intercept.a2a`** — intercept an A2A JSON-RPC server with an injected `A2AClient`:
+**`Intercept.a2a`** - intercept an A2A JSON-RPC server with an injected `A2AClient`:
 
 {{< kotlin file="example_a2a.kt" >}}
 
 ### RenderMode
 
-- `RenderMode.OnFailure` (default) — generate reports only when tests fail
-- `RenderMode.Always` — generate reports for every test
-- `RenderMode.Never` — disable report generation
+- `RenderMode.OnFailure` (default) - generate reports only when tests fail
+- `RenderMode.Always` - generate reports for every test
+- `RenderMode.Never` - disable report generation
 
 ## Test Reports
 
@@ -100,16 +100,16 @@ Reports are written to `build/reports/http4k/wiretap/`.
 
 Self-contained HTML report with three main sections:
 
-**Trace Detail** — Gantt-style span timeline with expandable attributes, events, and logs. Below the timeline, a set of diagrams for each trace:
-- **Sequence** — temporal flow across services with HTTP status codes and duration
-- **Interactions** — service topology with call count and total duration per edge
-- **Errors** — filtered sequence showing only paths to error spans
-- **Critical Path** — filtered sequence showing only the slowest root-to-leaf path
-- **Timing** — span breakdown table sorted by duration with percentage bars
+**Trace Detail** - Gantt-style span timeline with expandable attributes, events, and logs. Below the timeline, a set of diagrams for each trace:
+- **Sequence** - temporal flow across services with HTTP status codes and duration
+- **Interactions** - service topology with call count and total duration per edge
+- **Errors** - filtered sequence showing only paths to error spans
+- **Critical Path** - filtered sequence showing only the slowest root-to-leaf path
+- **Timing** - span breakdown table sorted by duration with percentage bars
 
-**HTTP Traffic** — full request/response detail with one-click cURL copy
+**HTTP Traffic** - full request/response detail with one-click cURL copy
 
-**Stdout/Stderr** — captured console output from the test
+**Stdout/Stderr** - captured console output from the test
 
 ### Living Test Document
 
@@ -119,7 +119,7 @@ Auto-generated markdown file alongside the HTML report. Contains:
 - Span events (exceptions, state transitions)
 - HTTP transactions with headers table and collapsible bodies
 
-The document uses deterministic labels — MCP operations show as `tools/call show_ui`, `resources/read ui://a-ui` etc.
+The document uses deterministic labels - MCP operations show as `tools/call show_ui`, `resources/read ui://a-ui` etc.
 
 ## Trace Diagrams
 
@@ -142,9 +142,9 @@ Add the full Wiretap console to your app using either a **LocalTarget** (in-proc
 ### MCP Tools
 
 All Wiretap features are exposed as MCP tools at `/_wiretap/mcp`:
-- `get_trace_diagrams` — all diagrams for a trace
-- `export_trace_markdown` — living document for a trace
-- `list_traces`, `list_transactions` — browse captured data
+- `get_trace_diagrams` - all diagrams for a trace
+- `export_trace_markdown` - living document for a trace
+- `list_traces`, `list_transactions` - browse captured data
 - Traffic replay, chaos control, and more
 
 ### Markdown Export

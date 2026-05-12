@@ -32,7 +32,7 @@ features:
     - title: Testable</br>Design
       icon: supportive
       colour: green
-      description: "**Pure functions**, no side effects. Test Tools, Resources, and MCP Apps fully **in-memory** — no network, no ports, no flaky CI."
+      description: "**Pure functions**, no side effects. Test Tools, Resources, and MCP Apps fully **in-memory** - no network, no ports, no flaky CI."
     - title: Type-safe</br>Tooling
       icon: footprint
       colour: indigo
@@ -44,7 +44,7 @@ features:
     - title: Built-in</br>Observability
       icon: footprint
       colour: orange
-      description: "**OpenTelemetry MCP Semantic Conventions** support. Plug into Jaeger, Honeycomb, Datadog — with zero custom instrumentation."
+      description: "**OpenTelemetry MCP Semantic Conventions** support. Plug into Jaeger, Honeycomb, Datadog - with zero custom instrumentation."
     - title: Machine</br>Payments
       icon: support
       colour: pink
@@ -53,10 +53,10 @@ features:
       icon: supportive
       colour: cyan
       description: "**HTTP Streaming**, SSE, WebSocket, JSON-RPC, and Standard IO transports. Stateful or stateless protocols for desktop and web clients."
-    - title: Protocol</br>Client
+    - title: Agent</br>Connectivity
       icon: testability
       colour: red
-      description: Build your own **AI agents** with pure Kotlin MCP protocol clients. Custom agent development and advanced AI workflows.
+      description: "Build your own **AI agents** with pure Kotlin MCP protocol clients. Plug any **A2A agent** straight into **Claude Desktop**, **Cursor**, or any MCP client via the built-in bridge - zero integration code."
 how_tos:
     - section: Getting started with MCP in http4k
       steps:

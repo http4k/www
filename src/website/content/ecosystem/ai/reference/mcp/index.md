@@ -31,6 +31,9 @@ dependencies {
 
     // for MPP payment-protected MCP tools
     implementation("org.http4k.pro:http4k-ai-mcp-mpp")
+
+    // for exposing an A2A agent as MCP tools (the A2A bridge)
+    implementation("org.http4k.pro:http4k-ai-mcp-a2a-bridge")
 }
 ```
 
@@ -272,12 +275,12 @@ Both filters use a `PaymentCheck` function to determine whether a request is `Fr
 
 ### MPP Payment-Protected MCP
 
-The `http4k-ai-mcp-mpp` module integrates the [Machine Payments Protocol (MPP)](/ecosystem/connect/reference/mpp/) with MCP, allowing you to require payments for MCP interactions. Unlike x402, MPP has no facilitator — you implement `MppVerifier` directly. Payment credentials are exchanged via the MCP `_meta` field on requests and responses.
+The `http4k-ai-mcp-mpp` module integrates the [Machine Payments Protocol (MPP)](/ecosystem/connect/reference/mpp/) with MCP, allowing you to require payments for MCP interactions. Unlike x402, MPP has no facilitator - you implement `MppVerifier` directly. Payment credentials are exchanged via the MCP `_meta` field on requests and responses.
 
 The module provides two filters:
 
 - **`MppToolFilter`** - A `ToolFilter` that wraps individual tools with payment challenges. Credentials are sent in `_meta["org.paymentauth/credential"]` and receipts are returned in `_meta["org.paymentauth/receipt"]`. Returns structured errors with challenges when payment is missing or invalid.
-- **`McpFilters.MppPaymentRequired`** - A lower-level `McpFilter` that operates on raw MCP JSON-RPC requests, enabling payment gating on any MCP resource — tools, prompts, resources, or any other server capability.
+- **`McpFilters.MppPaymentRequired`** - A lower-level `McpFilter` that operates on raw MCP JSON-RPC requests, enabling payment gating on any MCP resource - tools, prompts, resources, or any other server capability.
 
 Both filters use an `MppPaymentCheck` function to determine whether a request is `Free` or `Required`, allowing you to mix free and paid capabilities in the same server.
 
@@ -285,7 +288,7 @@ Use `MppToolFilter` to protect individual tools:
 
 {{< kotlin file="mpp_tool_example.kt" >}}
 
-Use `McpFilters.MppPaymentRequired` to gate all MCP requests at the protocol level — tools, prompts, resources, and any other capability:
+Use `McpFilters.MppPaymentRequired` to gate all MCP requests at the protocol level - tools, prompts, resources, and any other capability:
 
 {{< kotlin file="mpp_mcp_filter_example.kt" >}}
 
@@ -376,6 +379,23 @@ notifications with an MCP server.
 
 {{< kotlin file="client_example.kt" >}}
 
+### A2A → MCP Bridge
+
+The `http4k-ai-mcp-a2a-bridge` module wraps any [A2A](/ecosystem/ai/reference/a2a/) agent as a complete MCP HTTP server, so an LLM in any MCP client (Claude Desktop, Cursor, etc.) can discover and talk to A2A agents without writing custom integration code.
+
+The bridge fetches the agent card once at construction and folds the agent's name, description, and skill catalog into the `send_message` tool description so the LLM understands the agent's capabilities upfront. Four tools are exposed:
+
+- **`send_message`** - send a free-text message to the agent (with optional `contextId` for multi-turn)
+- **`get_task`** - fetch the current state of a task (status, artifacts, history)
+- **`cancel_task`** - cancel a running task
+- **`list_tasks`** - list tasks, filtered by context or status
+
+All responses are returned as MCP `structuredContent` - the LLM gets the full A2A `Task` / `Message` shape (including `taskId`, `contextId`, `artifacts`) so it can chain follow-up calls.
+
+The inbound MCP request's `Authorization` header is forwarded to the A2A agent on every tool call, so each MCP caller authenticates as itself.
+
+{{< kotlin file="a2a_bridge_example.kt" >}}
+
 ### Testing MCP Servers
 
 http4k provides an in-memory test client for testing MCP servers without network overhead. Use the `testMcpClient()` extension on any `PolyHandler` to create a test client.
@@ -434,10 +454,10 @@ brew install http4k-mcp-desktop
 ## OpenTelemetry Span Modifiers
 
 MCP servers can be instrumented with OpenTelemetry tracing via `McpFilters.OpenTelemetryTracing`. Span names follow [OTel semantic conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/mcp/):
-- `tools/call show_ui` — method + tool name
-- `prompts/get my-prompt` — method + prompt name
-- `resources/read` — method only (URIs are high-cardinality)
-- `tools/list`, `prompts/list` — method only
+- `tools/call show_ui` - method + tool name
+- `prompts/get my-prompt` - method + prompt name
+- `resources/read` - method only (URIs are high-cardinality)
+- `tools/list`, `prompts/list` - method only
 
 ### Default Span Modifiers
 
@@ -452,7 +472,7 @@ Included in `defaultMcpOtelSpanModifiers` and active by default:
 
 ### Opt-In Detail Modifiers
 
-Capture MCP request arguments and response payloads as span attributes. These may contain sensitive data — add them explicitly:
+Capture MCP request arguments and response payloads as span attributes. These may contain sensitive data - add them explicitly:
 
 {{< kotlin file="example_detail_modifiers.kt" >}}
 
@@ -461,7 +481,7 @@ Capture MCP request arguments and response payloads as span attributes. These ma
 | `CallToolDetailSpanModifiers` | `gen_ai.tool.call.arguments` | `gen_ai.tool.call.result` |
 | `GetPromptDetailSpanModifiers` | `gen_ai.prompt.arguments` | `gen_ai.prompt.result` |
 | `CompletionDetailSpanModifiers` | `gen_ai.completion.arguments` | `gen_ai.completion.result` |
-| `ReadResourceDetailSpanModifiers` | — | `gen_ai.resource.result` |
+| `ReadResourceDetailSpanModifiers` | - | `gen_ai.resource.result` |
 
 `gen_ai.tool.call.*` follows the official OTel spec. `gen_ai.prompt.*`, `gen_ai.completion.*`, and `gen_ai.resource.*` are http4k custom conventions.
 

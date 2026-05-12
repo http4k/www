@@ -114,7 +114,7 @@ on GitHub or through the Kotlin Slack.
 
 The http4k team is just at the start of it's MCP journey, We're diving deeper into what really matters: making AI
 development safer, smarter, and more intuitive. Think easier security controls, more graceful ways to build autonomous
-agents, and tools that just understand developers. We're not chasing buzzwords—we're creating an environment where
+agents, and tools that just understand developers. We're not chasing buzzwords-we're creating an environment where
 innovation meets responsibility, and complexity transforms into clarity.
 
 **Less vibe, more value. That's the http4k way.**

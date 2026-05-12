@@ -7,7 +7,7 @@ title: "Verify"
 description: Gradle plugin for automatic verification of http4k artifact signatures, with exported artifacts and attestation reports
 ---
 
-The **http4k Verify** plugin automatically verifies cosign signatures on every http4k dependency before your code compiles. It covers JARs, CycloneDX SBOMs, SLSA provenance attestations, and license compliance reports — and exports all verification artifacts to your project for independent inspection and attestation.
+The **http4k Verify** plugin automatically verifies cosign signatures on every http4k dependency before your code compiles. It covers JARs, CycloneDX SBOMs, SLSA provenance attestations, and license compliance reports - and exports all verification artifacts to your project for independent inspection and attestation.
 
 ### Installation (Gradle)
 
@@ -19,7 +19,7 @@ plugins {
 }
 ```
 
-The plugin automatically downloads the http4k [signing key list](https://http4k.org/.well-known/cosign-keys.json), resolves sigstore bundles for all http4k dependencies, and verifies every signature using the correct key for each artifact. If any artifact has been tampered with, the build fails. Verification results are cached locally — subsequent builds have zero overhead until dependencies change.
+The plugin automatically downloads the http4k [signing key list](https://http4k.org/.well-known/cosign-keys.json), resolves sigstore bundles for all http4k dependencies, and verifies every signature using the correct key for each artifact. If any artifact has been tampered with, the build fails. Verification results are cached locally - subsequent builds have zero overhead until dependencies change.
 
 ### (Optional) Configuration
 
@@ -53,16 +53,16 @@ Every time verification runs, all resolved verification artifacts are exported t
 
 For each http4k module, the following are exported:
 
-- **`.jar.sha256`** — SHA-256 hash of the JAR file
-- **`-jar-sigstore.json`** — Cosign signature bundle for the JAR
-- **`-cyclonedx.json`** — CycloneDX SBOM listing all dependencies
-- **`-cyclonedx-sigstore.json`** — Cosign signature bundle for the SBOM
-- **`-provenance.json`** — SLSA Build L2 provenance attestation
-- **`-provenance-sigstore.json`** — Cosign signature bundle for the provenance
-- **`-license-report.json`** — Curated license compliance report
-- **`-license-report-sigstore.json`** — Cosign signature bundle for the license report
-- **`cosign-keys.json`** — The key list used for verification (multi-key mode)
-- **`cosign.pub`** — The public key used for verification (single-key mode only)
+- **`.jar.sha256`** - SHA-256 hash of the JAR file
+- **`-jar-sigstore.json`** - Cosign signature bundle for the JAR
+- **`-cyclonedx.json`** - CycloneDX SBOM listing all dependencies
+- **`-cyclonedx-sigstore.json`** - Cosign signature bundle for the SBOM
+- **`-provenance.json`** - SLSA Build L2 provenance attestation
+- **`-provenance-sigstore.json`** - Cosign signature bundle for the provenance
+- **`-license-report.json`** - Curated license compliance report
+- **`-license-report-sigstore.json`** - Cosign signature bundle for the license report
+- **`cosign-keys.json`** - The key list used for verification (multi-key mode)
+- **`cosign.pub`** - The public key used for verification (single-key mode only)
 
 You can use these exported files to independently verify any artifact with cosign:
 
@@ -70,18 +70,18 @@ You can use these exported files to independently verify any artifact with cosig
 
 ### Verification Report
 
-A JSON verification report is always generated at `build/http4k-verify/verification-report.json`. This report serves as an attestation record — proof that specific http4k dependencies with specific hashes were verified against specific signatures at a specific time.
+A JSON verification report is always generated at `build/http4k-verify/verification-report.json`. This report serves as an attestation record - proof that specific http4k dependencies with specific hashes were verified against specific signatures at a specific time.
 
 {{< json file="verification-report.json" >}}
 
 The report includes:
 
-- **`timestamp`** — When verification was performed
-- **`plugin`** — Version and SHA-256 hash of the verify plugin JAR that performed the verification
-- **`modules`** — For each http4k dependency:
+- **`timestamp`** - When verification was performed
+- **`plugin`** - Version and SHA-256 hash of the verify plugin JAR that performed the verification
+- **`modules`** - For each http4k dependency:
     - GAV coordinates (group, module, version)
     - SHA-256 hash of the JAR
-    - **`signing_key_fingerprint`** — Fingerprint of the key that signed this module's artifacts
+    - **`signing_key_fingerprint`** - Fingerprint of the key that signed this module's artifacts
     - Verification result for each artifact type (`passed`, `failed`, or `not_available`)
     - Relative paths to all exported artifact and bundle files
 
@@ -97,7 +97,7 @@ Verification results are cached locally so that subsequent builds have zero over
 
 ### Key Rotation
 
-The plugin supports key rotation via the [signing key list](https://http4k.org/.well-known/cosign-keys.json) — a JSON document listing all currently valid signing keys with their fingerprints and validity windows. Each artifact's provenance includes the fingerprint of the signing key, which the plugin uses to select the correct key for verification.
+The plugin supports key rotation via the [signing key list](https://http4k.org/.well-known/cosign-keys.json) - a JSON document listing all currently valid signing keys with their fingerprints and validity windows. Each artifact's provenance includes the fingerprint of the signing key, which the plugin uses to select the correct key for verification.
 
 When http4k rotates signing keys, a new key is added to the key list and the old key is marked as `retired`. Artifacts signed with the old key continue to verify correctly because the old key remains in the list.
 

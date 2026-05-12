@@ -20,7 +20,7 @@ class McpTest {
         MyMcpServer(http { Response(OK) }, otel("mcp-server"))
     }
 
-    // McpClient is injected — connects to the MCP server under test
+    // McpClient is injected - connects to the MCP server under test
     @Test
     fun `can list tools via MCP`(mcpClient: McpClient) {
         mcpClient.start()

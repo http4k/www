@@ -40,7 +40,7 @@ class MyAppTest {
             .then(routes("/api" bind GET to { downstreamClient(Request(GET, "http://downstream/data")) }))
     }
 
-    // HttpHandler is injected — sends requests through Intercept's recording filters
+    // HttpHandler is injected - sends requests through Intercept's recording filters
     @Test
     fun `requests are captured with full trace context`(http: HttpHandler) {
         assertThat(http(Request(GET, "/api")).bodyString(), equalTo("from downstream"))

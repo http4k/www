@@ -30,7 +30,7 @@ class A2ATest {
         A2A(agentCard) { reply }
     }
 
-    // A2AClient is injected — connects to the A2A server under test
+    // A2AClient is injected - connects to the A2A server under test
     @Test
     fun `can interact with A2A agent`(client: A2AClient) {
         assertThat(client.agentCard(), equalTo(Success(agentCard)))

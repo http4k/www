@@ -30,7 +30,7 @@ features:
     -   title: Intercept:</br>InMemory
         icon: supportive
         colour: blue
-        description: "**@RegisterExtension** for instrumented HTTP clients, traffic capture, **Chaos Engine**, and **trace analysis** — sequence, topology, timing, errors, and critical path. All in-process, no ports, full speed."
+        description: "**@RegisterExtension** for instrumented HTTP clients, traffic capture, **Chaos Engine**, and **trace analysis** - sequence, topology, timing, errors, and critical path. All in-process, no ports, full speed."
     -   title: Intercept:</br>Reports
         icon: footprint
         colour: indigo
@@ -58,13 +58,13 @@ features:
 how_tos:
     -   section: Four ways to Wiretap
         steps:
-            -   description: "**@ExtendWith(Intercept::class)** on any test class — OpenTelemetry data captured automatically, Gantt-style HTML report on failure. That's it."
+            -   description: "**@ExtendWith(Intercept::class)** on any test class - OpenTelemetry data captured automatically, Gantt-style HTML report on failure. That's it."
                 image: wiretap-intercept.webp
                 alt: Add Intercept to your tests
-            -   description: "**@RegisterExtension** with your app factory — full in-memory HTTP testing with traffic capture and multi-service sequence diagrams."
+            -   description: "**@RegisterExtension** with your app factory - full in-memory HTTP testing with traffic capture and multi-service sequence diagrams."
                 image: wiretap-traffic.webp
                 alt: Register extension for in-memory testing
-            -   description: "Wrap your **HttpHandler** with **Wiretap()** — one function call adds the full console to your running app on the same port."
+            -   description: "Wrap your **HttpHandler** with **Wiretap()** - one function call adds the full console to your running app on the same port."
                 image: wiretap-launch.webp
                 alt: Wrap your app with Wiretap
             -   description: "Connect **Claude Code** or any MCP client to **/_wiretap/mcp** for AI-assisted debugging and chaos testing."

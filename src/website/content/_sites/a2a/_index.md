@@ -7,7 +7,7 @@ layout: "product"
 type: "product"
 subdomain: a2a
 tier: pro
-description: Full A2A protocol support for building interoperable multi-agent systems. JSON-RPC and REST bindings, Agent Cards, Tasks, Streaming, Multi-tenancy — all testable, all type-safe.
+description: Full A2A protocol support for building interoperable multi-agent systems. JSON-RPC and REST bindings, Agent Cards, Tasks, Streaming, Multi-tenancy - all testable, all type-safe.
 docs_link: https://http4k.org/ecosystem/ai/reference/a2a/
 navigation:
     -   name: docs
@@ -26,15 +26,15 @@ features:
     - title: Complete</br>Protocol
       icon: testability
       colour: blue
-      description: "Full **A2A spec** support with both **JSON-RPC** and **REST** protocol bindings. **Agent Cards**, **Tasks**, **Messages**, **Artifacts**, **Streaming**, **Push Notifications**, and **multi-turn conversations** — all from a single server definition."
-    - title: Protocol</br>Clients
+      description: "Full **A2A spec** support with both **JSON-RPC** and **REST** protocol bindings. **Agent Cards**, **Tasks**, **Messages**, **Artifacts**, **Streaming**, **Push Notifications**, and **multi-turn conversations** - all from a single server definition."
+    - title: Agent</br>Connectivity
       icon: supportive
       colour: red
-      description: "Type-safe **A2A clients** for both **JSON-RPC** and **REST** bindings. Connect to any **A2A-compliant agent** with full support for **streaming**, **task management**, and **push notification configuration**."
+      description: "Type-safe **A2A clients** for both **JSON-RPC** and **REST** bindings. Plug your agent straight into **Claude Desktop**, **Cursor**, or any MCP client via the built-in bridge - zero integration code."
     - title: Testable</br>Design
       icon: footprint
       colour: green
-      description: "**Pure functions**, no side effects. Test agent interactions fully **in-memory** — no network, no ports, no flaky CI."
+      description: "**Pure functions**, no side effects. Test agent interactions fully **in-memory** - no network, no ports, no flaky CI."
     - title: Agent</br>Discovery
       icon: support
       colour: violet
@@ -66,7 +66,7 @@ how_tos:
             kotlin_file: step2.kt
             alt: Handle tasks
             image: a2a-step2.webp
-          - description: "Step 3 - Test **in-memory** — no server, no ports, no flaky CI"
+          - description: "Step 3 - Test **in-memory** - no server, no ports, no flaky CI"
             kotlin_file: step3.kt
             alt: Test in-memory
             image: a2a-step3.webp

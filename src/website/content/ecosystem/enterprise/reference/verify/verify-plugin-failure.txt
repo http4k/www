@@ -1,7 +1,7 @@
 Downloading key list from https://http4k.org/.well-known/cosign-keys.json
 Verifying 3 http4k module(s)...
   org.http4k:http4k-core:0.0.0.0              jar ✗   sbom ✓   provenance ✓   license ✓
-    FAIL: jar — Artifact digest mismatch — file may have been tampered with
+    FAIL: jar - Artifact digest mismatch - file may have been tampered with
   org.http4k:http4k-format-jackson:0.0.0.0    jar ✓   sbom ✓   provenance ✓   license ✓
   org.http4k:http4k-server-undertow:0.0.0.0   jar ✓   sbom ✓   provenance ✓   license ✓
 Verified: 3 modules, 11 signatures, 1 failed

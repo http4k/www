@@ -1,6 +1,6 @@
 ---
 title: http4k Enterprise Edition
-description: Long-term stability, supply chain security, priority support, and Pro modules — everything your organisation needs to run http4k in production with confidence.
+description: Long-term stability, supply chain security, priority support, and Pro modules - everything your organisation needs to run http4k in production with confidence.
 type: solutions
 email: enterprise@http4k.org
 aliases:
@@ -16,10 +16,10 @@ highlights:
         description: Full access to the LTS editions of the http4k codebase for transparency and auditing.
         icon: "/images/connections.svg"
     -   title: License reporting
-        description: Signed, per-module license reports delivered with every artifact — ready for audit and regulatory review.
+        description: Signed, per-module license reports delivered with every artifact - ready for audit and regulatory review.
         icon: "/images/supportive.svg"
     -   title: Supply chain security
-        description: SLSA Level 2 provenance, signed SBOMs, and cosign signatures for every artifact — compliance-ready out of the box.
+        description: SLSA Level 2 provenance, signed SBOMs, and cosign signatures for every artifact - compliance-ready out of the box.
         icon: "/images/extendable.svg"
     -   title: Pro modules
         description: A growing collection of commercially licensed, battle-tested modules built from real-world enterprise delivery.

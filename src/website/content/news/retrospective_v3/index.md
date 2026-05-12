@@ -62,7 +62,7 @@ In 2018, we were lucky enough to be invited to [KotlinConf] in Amsterdam to talk
 
 Another high point for us was having http4k featured in the [Thoughtworks Technology Radar], which is a quarterly publication highlighting tools, techniques and languages that the well-known consultancy have been using to successfully deliver projects across the globe. ThoughtWorks called out the test-driven nature of http4k, citing:
 
-> **"Apart from its elegance and simplicity, we also like its emphasis on testability — given that the entities in the libraries are immutable and the routes in the app, as well as the app itself, are just functions, they're super easy to test." - TW TechRadar**
+> **"Apart from its elegance and simplicity, we also like its emphasis on testability - given that the entities in the libraries are immutable and the routes in the app, as well as the app itself, are just functions, they're super easy to test." - TW TechRadar**
 
 <img class="imageMid" src="./radar.png" alt="radar"/>
 

@@ -6,7 +6,7 @@
             {{ $ecosystem := .Params.ecosystem }}
             {{ $versions := .Site.Params.versions }}
 
-            {{/* Support ecosystem as string or list — use first value as primary */}}
+            {{/* Support ecosystem as string or list - use first value as primary */}}
             {{ $primaryEco := $ecosystem }}
             {{ if reflect.IsSlice $ecosystem }}
                 {{ $primaryEco = index $ecosystem 0 }}

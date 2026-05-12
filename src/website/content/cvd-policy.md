@@ -12,7 +12,7 @@ This policy applies to all http4k products, including the open-source http4k too
 
 **Email:** [security@http4k.org](mailto:security@http4k.org)
 
-**GitHub:** Use [GitHub Security Advisories](https://github.com/http4k/http4k/security/advisories) (private vulnerability reporting — messages are encrypted by default)
+**GitHub:** Use [GitHub Security Advisories](https://github.com/http4k/http4k/security/advisories) (private vulnerability reporting - messages are encrypted by default)
 
 Please include the following in your report:
 
@@ -71,14 +71,14 @@ When we receive a valid vulnerability report, we commit to:
 3. **Develop and release** a fix according to our severity-based timelines.
 4. **Assign a CVE** for confirmed vulnerabilities and publish a GitHub Security Advisory (GHSA).
 5. **Credit you** in our security advisory (unless you prefer to remain anonymous).
-6. **Update our SBOMs** — we publish CycloneDX SBOMs for every module, signed with cosign.
+6. **Update our SBOMs** - we publish CycloneDX SBOMs for every module, signed with cosign.
 7. **Notify our users** via our [security advisories page](/security/), GitHub, and direct communication with Enterprise customers.
-8. **Report upstream** — if the vulnerability is in a third-party or open-source component integrated into our products, we will report it to the component maintainer and share relevant fixes, in accordance with CRA Article 13(6).
-9. **Report to authorities** — where required by the EU Cyber Resilience Act (Article 14), we will notify the designated CSIRT and ENISA of actively exploited vulnerabilities within the mandated timeframes.
+8. **Report upstream** - if the vulnerability is in a third-party or open-source component integrated into our products, we will report it to the component maintainer and share relevant fixes, in accordance with CRA Article 13(6).
+9. **Report to authorities** - where required by the EU Cyber Resilience Act (Article 14), we will notify the designated CSIRT and ENISA of actively exploited vulnerabilities within the mandated timeframes.
 
 ## Upstream and Downstream Coordination (CRA Article 13(6))
 
-When we identify a vulnerability in a component we integrate — including open-source dependencies — we will:
+When we identify a vulnerability in a component we integrate - including open-source dependencies - we will:
 
 - Report the vulnerability to the person or entity maintaining that component
 - Share relevant code or documentation for the fix, in a machine-readable format where appropriate

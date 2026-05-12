@@ -18,7 +18,7 @@ dependencies {
 
 http4k Connect provides support for the [Machine Payments Protocol (MPP)](https://paymentauth.org/), enabling HTTP 402 Payment Required flows for APIs. MPP supports multiple payment methods (Stripe, crypto, etc.) and provides a protocol-level standard for machine-to-machine payments.
 
-Unlike x402, MPP has no facilitator service — `MppSigner` and `MppVerifier` are fun interfaces that you implement directly to handle signing and verification for your chosen payment method.
+Unlike x402, MPP has no facilitator service - `MppSigner` and `MppVerifier` are fun interfaces that you implement directly to handle signing and verification for your chosen payment method.
 
 ### Client-side Filter
 

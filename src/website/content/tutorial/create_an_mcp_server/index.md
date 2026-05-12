@@ -11,7 +11,7 @@ This tutorial gets you from zero to a working MCP server in a few lines of Kotli
 
 # 1. Generate your project
 
-Use the [http4k Toolbox](https://toolbox.http4k.org) to generate a project. Choose "Server-based application", and select the following — everything else can be left at default:
+Use the [http4k Toolbox](https://toolbox.http4k.org) to generate a project. Choose "Server-based application", and select the following - everything else can be left at default:
 
 - HTTP server backend - **Jetty** - MCP server backend with support for SSE
 - http4k AI integrations - **Model Context Protocol SDK** - MCP SDK dependencies
@@ -39,21 +39,21 @@ Here's a complete, spec-compliant MCP server in two lines of Kotlin:
 
 {{< kotlin file="clock_server.kt" >}}
 
-`Tool` takes a name and description. `bind` attaches a handler that returns the current time as a text response. `asServer` turns any `ServerCapability` into a Streamable HTTP MCP server — run it and you have a working endpoint at `http://localhost:3000/mcp`.
+`Tool` takes a name and description. `bind` attaches a handler that returns the current time as a text response. `asServer` turns any `ServerCapability` into a Streamable HTTP MCP server - run it and you have a working endpoint at `http://localhost:3000/mcp`.
 
-This works because http4k treats every capability as a composable unit. A single `Tool` can become a server on its own — no boilerplate, no registration step, no lifecycle hooks.
+This works because http4k treats every capability as a composable unit. A single `Tool` can become a server on its own - no boilerplate, no registration step, no lifecycle hooks.
 
 # 4. Adding server identity
 
-The one-liner is great for demos, but real servers need identity and security configuration. `mcp()` composes these three concerns — identity, security, and capabilities — into a `PolyHandler`:
+The one-liner is great for demos, but real servers need identity and security configuration. `mcp()` composes these three concerns - identity, security, and capabilities - into a `PolyHandler`:
 
 {{< kotlin file="clock_server_with_identity.kt" >}}
 
-- **`ServerMetaData`** — gives the server a name and version that hosts display to users.
-- **`NoMcpSecurity`** — no auth for local development. Replace with real security for production.
-- **`mcp()`** — the composition function that wires identity + security + capabilities into a single handler.
+- **`ServerMetaData`** - gives the server a name and version that hosts display to users.
+- **`NoMcpSecurity`** - no auth for local development. Replace with real security for production.
+- **`mcp()`** - the composition function that wires identity + security + capabilities into a single handler.
 
-The result is a `PolyHandler` — http4k's type for services that speak multiple protocol types (here HTTP + SSE for the streaming transport).
+The result is a `PolyHandler` - http4k's type for services that speak multiple protocol types (here HTTP + SSE for the streaming transport).
 
 # 5. Connect to Claude Desktop
 
@@ -69,7 +69,7 @@ Then:
 
 1. Start the MCP server (`main()` in `clock_server_with_identity.kt`)
 2. Start the Cloudflare tunnel
-3. In Claude Desktop, go to **Settings > Connectors** and add a new connector with the tunnel URL (appending `/mcp` — e.g. `https://xxx-yyy-zzz.trycloudflare.com/mcp`)
+3. In Claude Desktop, go to **Settings > Connectors** and add a new connector with the tunnel URL (appending `/mcp` - e.g. `https://xxx-yyy-zzz.trycloudflare.com/mcp`)
 4. Start a new chat and ask Claude: "What time is it?"
 5. Watch it call your clock tool and return the current time
 

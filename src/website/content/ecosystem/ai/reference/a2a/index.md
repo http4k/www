@@ -22,6 +22,9 @@ dependencies {
 
     // for connecting to A2A agents
     implementation("org.http4k.pro:http4k-ai-a2a-client")
+
+    // for exposing an A2A agent to MCP clients (the MCP bridge)
+    implementation("org.http4k.pro:http4k-ai-mcp-a2a-bridge")
 }
 ```
 
@@ -38,7 +41,7 @@ Both bindings support the same capabilities: Agent Cards, Tasks, Messages, Artif
 
 ## http4k and Agent2Agent
 
-http4k provides a complete, type-safe implementation of the A2A protocol — both server and client — using the familiar http4k patterns of composable functional protocols. The core extension point is the `MessageHandler`, a simple function that receives a message and returns a response.
+http4k provides a complete, type-safe implementation of the A2A protocol - both server and client - using the familiar http4k patterns of composable functional protocols. The core extension point is the `MessageHandler`, a simple function that receives a message and returns a response.
 
 ```kotlin
 typealias MessageHandler = (MessageRequest) -> MessageResponse
@@ -112,6 +115,18 @@ Similar to http4k's `Filter`, the `MessageFilter` allows cross-cutting concerns 
 ## Task Operations
 
 {{< kotlin file="client_tasks_example.kt" >}}
+
+# Exposing an A2A Agent to MCP Clients
+
+The `http4k-ai-mcp-a2a-bridge` module wraps any A2A agent as an [MCP](/ecosystem/ai/reference/mcp/) HTTP server. This lets an LLM in any MCP client (Claude Desktop, Cursor, etc.) discover and talk to your A2A agent without writing custom MCP integration code.
+
+The bridge fetches the agent card once at startup and folds the name, description, and skill catalog into the `send_message` tool description, then exposes four MCP tools: `send_message`, `get_task`, `cancel_task`, and `list_tasks`. Responses come back as MCP `structuredContent` carrying the full A2A `Task` / `Message` shape - including `taskId` and `contextId` - so the LLM can chain follow-up calls.
+
+The inbound MCP request's `Authorization` header is forwarded to the A2A agent on every tool call, so each MCP caller authenticates as itself.
+
+{{< kotlin file="mcp_bridge_example.kt" >}}
+
+For finer control - custom auth headers, a pre-built `A2AClient`, or composing the bridge alongside other MCP capabilities - use `mcpA2aBridge(...)` directly and wrap it with `mcp(...)` yourself.
 
 # Testing
 

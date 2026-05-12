@@ -56,7 +56,7 @@ fun `mpp mcp filter example`() {
         )
     }
 
-    // McpFilter gates ALL MCP requests — tools, prompts, resources, etc.
+    // McpFilter gates ALL MCP requests - tools, prompts, resources, etc.
     val mcpFilter = McpFilters.MppPaymentRequired(verifier) { MppPaymentCheck.Required(listOf(challenge)) }
 
     val tool = Tool("premium_data", "get premium data") bind {

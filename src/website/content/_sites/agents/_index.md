@@ -7,7 +7,7 @@ layout: "product"
 type: "product"
 subdomain: agents
 tier: pro
-description: "The complete http4k toolkit for AI agent systems. MCP servers and Apps, A2A agent interop, machine payments, and full observability — all testable in-memory with familiar http4k patterns."
+description: "The complete http4k toolkit for AI agent systems. MCP servers and Apps, A2A agent interop, machine payments, and full observability - all testable in-memory with familiar http4k patterns."
 docs_link: https://www.http4k.org/ecosystem/enterprise
 navigation:
     -   name: mcp
@@ -32,7 +32,7 @@ features:
     -   title: MCP</br>SDK
         icon: testability
         colour: blue
-        description: "**Full MCP protocol** support — Tools, Prompts, Resources, Tasks, Sampling, Elicitation, OAuth. **MCP Apps** for server-rendered UI in Claude Desktop and other MCP clients."
+        description: "**Full MCP protocol** support - Tools, Prompts, Resources, Tasks, Sampling, Elicitation, OAuth. **MCP Apps** for server-rendered UI in Claude Desktop and other MCP clients."
     -   title: Agent2Agent</br>Protocol
         icon: supportive
         colour: green
@@ -45,10 +45,10 @@ features:
         icon: support
         colour: orange
         description: "**X402** and **MPP** support for both HTTP and MCP. Payment-gated endpoints, tools, and resources. **Client and server filters** with automatic 402 handling."
-    -   title: Protocol</br>Clients
+    -   title: Agent</br>Connectivity
         icon: support
         colour: pink
-        description: "**MCP** and **A2A clients** with full streaming support. Connect to any compliant server. Test **in-memory** with no network, no ports, no flaky CI."
+        description: "**MCP** and **A2A clients** with full streaming support. Plug any **A2A agent** straight into **Claude Desktop**, **Cursor**, or any MCP client via the built-in bridge - zero integration code. Test **in-memory** with no network, no ports, no flaky CI."
     -   title: Multi-Transport
         icon: footprint
         colour: indigo
@@ -56,7 +56,7 @@ features:
     -   title: Observability
         icon: supportive
         colour: red
-        description: "**OpenTelemetry** tracing across MCP and A2A with semantic conventions. Plug into Jaeger, Honeycomb, Datadog — **zero custom instrumentation**."
+        description: "**OpenTelemetry** tracing across MCP and A2A with semantic conventions. Plug into Jaeger, Honeycomb, Datadog - **zero custom instrumentation**."
     -   title: Security &</br>Multi-tenancy
         icon: testability
         colour: cyan
@@ -64,9 +64,9 @@ features:
 how_tos:
     -   section: Build a complete AI agent system
         steps:
-            -   description: "Define **MCP tools** and **A2A Agent Cards** with type-safe, testable functions — the building blocks of your agent system."
+            -   description: "Define **MCP tools** and **A2A Agent Cards** with type-safe, testable functions - the building blocks of your agent system."
                 alt: Define agent capabilities
-            -   description: "Add **Wiretap Intercept** to your tests — one annotation for full OpenTelemetry capture with HTML reports. Use **@RegisterExtension** for multi-agent sequence diagrams."
+            -   description: "Add **Wiretap Intercept** to your tests - one annotation for full OpenTelemetry capture with HTML reports. Use **@RegisterExtension** for multi-agent sequence diagrams."
                 alt: Test with Intercept
             -   description: "Compose into production servers with **security**, **payments**, and **observability**. Wrap with **Wiretap()** for a full runtime console."
                 alt: Compose and deploy
