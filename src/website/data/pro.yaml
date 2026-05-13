@@ -40,8 +40,7 @@ modules:
     image: wiretap.webp
     description: OpenTelemetry trace capture and HTML test reports with Wiretap Intercept, plus real-time traffic monitoring, chaos engineering, and MCP debugging with Wiretap Console
     prompt: "A clean isometric illustration of a magnifying glass hovering over flowing data streams or network cables, with small request/response packet shapes visible through the lens. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-    available: false
-    early_access: true
+    available: true
   - name: Transactional Outbox
     link: https://outbox.http4k.org
     image: outbox.webp
