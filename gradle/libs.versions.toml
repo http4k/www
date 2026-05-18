@@ -1,22 +1,22 @@
 [versions]
-amazon-s3 = "2.42.41"
+amazon-s3 = "2.44.7"
 aws-lambda-java-events = "3.16.1"
-azure-search-documents = "11.8.1"
-forkhandles-bom = "2.25.4.0"
+azure-search-documents = "12.0.0"
+forkhandles-bom = "2.25.5.0"
 google-http-client = "2.1.0"
 graphql-kotlin-schema-generator = "9.2.0"
-http4k-standards = "1.4.0.0"
+http4k-standards = "1.6.0.0"
 jakarta-servlet-api = "6.1.0"
 javax-servlet-api = "4.0.1"
 junit = "6.0.3"
 kotlin = "2.3.21"
 kotshi-api = "4.0.0"
 kotshi-compiler = "4.0.0"
-ksp = "2.3.7"
+ksp = "2.3.8"
 moshi-metadata-reflect = "0.35.0"
-opentelemetry-aws-xray-propagator = "1.55.0-alpha"
-opentelemetry-sdk-testing = "1.61.0"
-redis-jedis = "7.4.1"
+opentelemetry-aws-xray-propagator = "1.56.0-alpha"
+opentelemetry-sdk-testing = "1.62.0"
+redis-jedis = "7.5.0"
 typeflows = "0.32.0-beta"
 version-catalog-update = "1.1.0"
 
@@ -27,6 +27,8 @@ azure-search-documents = { module = "com.azure:azure-search-documents", version.
 forkhandles-bom = { module = "dev.forkhandles:forkhandles-bom", version.ref = "forkhandles-bom" }
 google-http-client = { module = "com.google.http-client:google-http-client", version.ref = "google-http-client" }
 graphql-kotlin-schema-generator = { module = "com.expediagroup:graphql-kotlin-schema-generator", version.ref = "graphql-kotlin-schema-generator" }
+http4k-ai-a2a-client = { module = "org.http4k.pro:http4k-ai-a2a-client" }
+http4k-ai-a2a-sdk = { module = "org.http4k.pro:http4k-ai-a2a-sdk" }
 http4k-ai-langchain4j = { module = "org.http4k:http4k-ai-langchain4j" }
 http4k-ai-llm-anthropic = { module = "org.http4k:http4k-ai-llm-anthropic" }
 http4k-ai-llm-azure = { module = "org.http4k:http4k-ai-llm-azure" }
@@ -34,11 +36,9 @@ http4k-ai-llm-core = { module = "org.http4k:http4k-ai-llm-core" }
 http4k-ai-llm-gemini = { module = "org.http4k:http4k-ai-llm-gemini" }
 http4k-ai-llm-github = { module = "org.http4k:http4k-ai-llm-github" }
 http4k-ai-llm-openai = { module = "org.http4k:http4k-ai-llm-openai" }
-http4k-ai-a2a-client = { module = "org.http4k.pro:http4k-ai-a2a-client" }
-http4k-ai-a2a-sdk = { module = "org.http4k.pro:http4k-ai-a2a-sdk" }
+http4k-ai-mcp-a2a-bridge = { module = "org.http4k.pro:http4k-ai-mcp-a2a-bridge" }
 http4k-ai-mcp-mpp = { module = "org.http4k.pro:http4k-ai-mcp-mpp" }
 http4k-ai-mcp-sdk = { module = "org.http4k.pro:http4k-ai-mcp-sdk" }
-http4k-ai-mcp-a2a-bridge = { module = "org.http4k.pro:http4k-ai-mcp-a2a-bridge" }
 http4k-ai-mcp-testing = { module = "org.http4k.pro:http4k-ai-mcp-testing" }
 http4k-ai-mcp-x402 = { module = "org.http4k.pro:http4k-ai-mcp-x402" }
 http4k-api-cloudevents = { module = "org.http4k:http4k-api-cloudevents" }
@@ -240,6 +240,8 @@ version-catalog-update = { id = "nl.littlerobots.version-catalog-update", versio
 
 [bundles]
 http4k-ai = [
+    "http4k-ai-a2a-client",
+    "http4k-ai-a2a-sdk",
     "http4k-ai-langchain4j",
     "http4k-ai-llm-anthropic",
     "http4k-ai-llm-azure",
@@ -247,10 +249,8 @@ http4k-ai = [
     "http4k-ai-llm-gemini",
     "http4k-ai-llm-github",
     "http4k-ai-llm-openai",
-    "http4k-ai-mcp-mpp",
-    "http4k-ai-a2a-client",
-    "http4k-ai-a2a-sdk",
     "http4k-ai-mcp-a2a-bridge",
+    "http4k-ai-mcp-mpp",
     "http4k-ai-mcp-sdk",
     "http4k-ai-mcp-testing",
     "http4k-ai-mcp-x402",
