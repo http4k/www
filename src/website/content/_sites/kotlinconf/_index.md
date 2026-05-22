@@ -11,7 +11,7 @@ description: "Everything from the KotlinConf talk - slides, source code, and a w
 navigation:
     -   name: Slides
         title: Slides
-        url: https://speakerdeck.com/daviddenton/how-kotlin-powers
+        url: https://speakerdeck.com/daviddenton/how-kotlin-powers-functional-design-mcp-edition
     -   name: Explore Wiretap
         title: Explore Wiretap
         url: https://wiretap.http4k.org
