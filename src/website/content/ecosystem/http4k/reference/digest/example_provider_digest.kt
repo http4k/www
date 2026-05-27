@@ -9,6 +9,7 @@ import org.http4k.filter.ServerFilters
 import org.http4k.routing.bind
 import org.http4k.routing.path
 import org.http4k.routing.routes
+import org.http4k.security.Nonce
 import org.http4k.server.SunHttp
 import org.http4k.server.asServer
 
@@ -27,7 +28,10 @@ fun main() {
 
     val authFilter = ServerFilters.DigestAuth(
         realm = "http4k",
-        passwordLookup = { username -> users[username] })
+        passwordLookup = { username -> users[username] },
+        nonceGenerator = Nonce.SECURE_NONCE,
+        nonceVerifier = { true }
+    )
 
     authFilter
         .then(routes)
