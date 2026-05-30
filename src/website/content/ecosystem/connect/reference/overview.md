@@ -39,6 +39,7 @@ A quick reference as to what is what with the http4k Connect modules.
 | Kafka      | Rest Proxy          | ✅              |                                                                 |
 | Kafka      | Schema Registry     | ✅              |                                                                 |
 | Mattermost | WebHook             | ❌              |                                                                 |
+| OpenFeature| OFREP               | ✅              | OFREP-compatible client (with optional caching) and Fake server |
 | Slack      | Slack               | ✅              | Minimal support for sending messages to channel and via webhook |
 | X402       | X402                | ✅              | X402 payment gateway filters and facilitator client             |
 
