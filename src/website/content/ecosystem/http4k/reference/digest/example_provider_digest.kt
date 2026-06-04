@@ -10,6 +10,7 @@ import org.http4k.routing.bind
 import org.http4k.routing.path
 import org.http4k.routing.routes
 import org.http4k.security.Nonce
+import org.http4k.security.digest.DigestAlgorithm.MD5
 import org.http4k.server.SunHttp
 import org.http4k.server.asServer
 
@@ -30,7 +31,8 @@ fun main() {
         realm = "http4k",
         passwordLookup = { username -> users[username] },
         nonceGenerator = Nonce.SECURE_NONCE,
-        nonceVerifier = { true }
+        nonceVerifier = { true },
+        algorithm = MD5
     )
 
     authFilter
