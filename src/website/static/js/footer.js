@@ -11,6 +11,14 @@ $(document).ready(function () {
 
             navigator.clipboard.writeText(codeContent)
                 .then(() => {
+                    // Report which code snippets get copied, by language and page.
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'copy_code', {
+                            code_language: $icon.parent().find('code').data('lang') || 'unknown',
+                            page_path: window.location.pathname,
+                        });
+                    }
+
                     $icon.removeClass('bi-clipboard').addClass('bi-clipboard-check-fill');
 
                     setTimeout(() => {
