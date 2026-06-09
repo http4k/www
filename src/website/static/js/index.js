@@ -40,6 +40,10 @@ $(document).ready(function() {
     document.execCommand("copy");
     $temp.remove();
 
+    if (typeof gtag === "function") {
+      gtag("event", "copy_code", { page_path: window.location.pathname });
+    }
+
     $(this).attr("title", "Copied");
     $(this)
       .tooltip("dispose")
