@@ -1,0 +1,4 @@
+verify:
+    body: "**Building for the EU or shipping to regulated industries?** http4k Verify cryptographically validates every dependency's signature, SBOM, and SLSA provenance at build time — giving your security team **CRA**, **NIST SSDF**, **EO 14028** and **PCI DSS 4.0** evidence with zero developer effort. *Available with http4k Enterprise Edition.*"
+    cta_text: "Learn about Enterprise Edition"
+    cta_url: "/enterprise/"
