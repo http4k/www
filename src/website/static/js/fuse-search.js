@@ -4,6 +4,21 @@
     
     let fuseInstance;
     let searchData = [];
+    let searchTrackTimer;
+
+    // Report search terms to GA4 (debounced so we capture the settled query, not
+    // every keystroke). Zero-result searches reveal what visitors can't find.
+    function trackSearch(query, resultCount) {
+        clearTimeout(searchTrackTimer);
+        searchTrackTimer = setTimeout(function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'search', {
+                    search_term: query,
+                    result_count: resultCount,
+                });
+            }
+        }, 1200);
+    }
 
     // Initialize Fuse.js search
     async function initializeSearch() {
@@ -91,6 +106,7 @@
             }
 
             const results = fuseInstance.search(query, { limit: 15 });
+            trackSearch(query, results.length);
             
             // Sort results by date if available (newest first), then by search relevance
             const sortedResults = results.sort((a, b) => {
