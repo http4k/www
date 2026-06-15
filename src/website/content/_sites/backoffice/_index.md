@@ -1,7 +1,7 @@
 ---
 sitemap:
     disable: true
-title: "BackOffice"
+title: "http4k BackOffice"
 tagline: "Secure API Gateway for developers and MCP tools"
 layout: "product"
 type: "product"

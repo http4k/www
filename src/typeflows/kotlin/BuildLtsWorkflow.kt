@@ -42,7 +42,7 @@ class BuildLtsWorkflow : Builder<Workflow> {
             steps += UseAction("peaceiris/actions-hugo@v3.0.0") {
                 name = "Setup Hugo"
                 with += mapOf(
-                    "hugo-version" to "0.145.0",
+                    "hugo-version" to "0.163.0",
                     "extended" to "true"
                 )
             }

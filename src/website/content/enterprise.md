@@ -49,14 +49,14 @@ The **http4k Enterprise Edition (EE)** subscription delivers long-term stability
 
 ## In detail
 
+#### Supply Chain Security
+Ship with confidence knowing every http4k artifact comes with **SLSA Level 2 provenance**, **CycloneDX SBOMs**, **signed license compliance reports**, and **cosign signatures**. For organisations with enhanced compliance requirements, **optional SLSA Level 3** provenance is available on request. Whether you need to satisfy **EU CRA** requirements, **US federal SBOM mandates** (EO 14028), **NIST SSDF**, or **PCI DSS 4.0** supply chain requirements, http4k has you covered. [Learn more](/supply-chain-security/).
+
 #### Priority Support
 Access expert guidance and **priority support** directly from the creators and maintainers of http4k. With dedicated channels, including email and Slack, you’ll get **fast resolution** to any issues or questions, backed by our deep knowledge of the http4k ecosystem. Whether it’s compatibility updates or bug fixes, our team ensures that your http4k deployment remains fully integrated with the broader Kotlin and JVM environments.
 
 #### Pro Modules
 A growing collection of commercially licensed, battle-tested modules built from years of successfully delivering complex systems with http4k. These expert-designed extensions reflect real-world requirements and enterprise patterns, available from Maven Central. [See what's available](/pro).
-
-#### Supply Chain Security
-Ship with confidence knowing every http4k artifact comes with **SLSA Level 2 provenance**, **CycloneDX SBOMs**, **signed license compliance reports**, and **cosign signatures**. For organisations with enhanced compliance requirements, **optional SLSA Level 3** provenance is available on request. Whether you need to satisfy **EU CRA** requirements, **US federal SBOM mandates** (EO 14028), **NIST SSDF**, or **PCI DSS 4.0** supply chain requirements, http4k has you covered. [Learn more](/supply-chain-security/).
 
 #### Long Term Support
 Enjoy peace-of-mind with **Long-Term Support (LTS)** versions of http4k. Our LTS version provides up to 24 months of guaranteed security patches and high priority updates for a stable release, ensuring your projects remain secure and fully functional. Additionally, our priority support channel also extend up to 24 months, meaning **http4k EE LTS** is your key to maintaining focus on feature delivery while ensuring your http4k applications are future-proof.

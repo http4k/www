@@ -1,4 +1,28 @@
 modules:
+  - name: Verify
+    link: https://verify.http4k.org
+    image: verify.webp
+    description: Automatic build-time verification of http4k artifact signatures, SBOMs, SLSA provenance, and license reports
+    prompt: "A clean isometric illustration of a minimalist shield with a checkmark badge hovering above a stack of software artifacts (JARs), with thin verification lines connecting each artifact to the shield. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: true
+  - name: Wiretap
+    link: https://wiretap.http4k.org
+    image: wiretap.webp
+    description: OpenTelemetry trace capture and HTML test reports with Wiretap Intercept, plus real-time traffic monitoring, chaos engineering, and MCP debugging with Wiretap Console
+    prompt: "A clean isometric illustration of a magnifying glass hovering over flowing data streams or network cables, with small request/response packet shapes visible through the lens. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: true
+  - name: Model Context Protocol
+    link: https://mcp.http4k.org
+    image: mcp.webp
+    description: Build MCP servers and MCP Apps to integrate Large Language Models with your data and tools using familiar testable http4k patterns
+    prompt: "A clean isometric illustration of a minimalist server room with a glowing neural network node connected to simple data blocks via thin lines. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: true
+  - name: Agent2Agent
+    link: https://a2a.http4k.org
+    image: a2a.webp
+    description: Build interoperable AI agent systems with Google's A2A protocol - Agent Cards, Tasks, Streaming, and Push Notifications using testable http4k patterns
+    prompt: "A clean isometric illustration of two AI agent figures exchanging messages across a bridge, with task cards and notification icons flowing between them. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: true
   - name: X402 Payments
     link: https://payments.http4k.org
     image: x402.webp
@@ -17,30 +41,12 @@ modules:
     available: true
     description: Hot Reload automatically restarts your server after code changes, saving you time during development
     prompt: "A clean isometric illustration of a minimalist laptop with a circular refresh arrow hovering above the screen, beside a small code editor window. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-  - name: Verify
-    link: https://verify.http4k.org
-    image: verify.webp
-    description: Automatic build-time verification of http4k artifact signatures, SBOMs, SLSA provenance, and license reports
-    prompt: "A clean isometric illustration of a minimalist shield with a checkmark badge hovering above a stack of software artifacts (JARs), with thin verification lines connecting each artifact to the shield. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-    available: true
-  - name: Model Context Protocol
-    link: https://mcp.http4k.org
-    image: mcp.webp
-    description: Build MCP servers and MCP Apps to integrate Large Language Models with your data and tools using familiar testable http4k patterns
-    prompt: "A clean isometric illustration of a minimalist server room with a glowing neural network node connected to simple data blocks via thin lines. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-    available: true
-  - name: Agent2Agent
-    link: https://a2a.http4k.org
-    image: a2a.webp
-    description: Build interoperable AI agent systems with Google's A2A protocol - Agent Cards, Tasks, Streaming, and Push Notifications using testable http4k patterns
-    prompt: "A clean isometric illustration of two AI agent figures exchanging messages across a bridge, with task cards and notification icons flowing between them. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-    available: true
-  - name: Wiretap
-    link: https://wiretap.http4k.org
-    image: wiretap.webp
-    description: OpenTelemetry trace capture and HTML test reports with Wiretap Intercept, plus real-time traffic monitoring, chaos engineering, and MCP debugging with Wiretap Console
-    prompt: "A clean isometric illustration of a magnifying glass hovering over flowing data streams or network cables, with small request/response packet shapes visible through the lens. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-    available: true
+  - name: Storyboard
+    link: https://storyboard.http4k.org
+    image: storyboard.webp
+    description: Turn http4k tests into living visual stories - HTTP exchanges, WebDriver interactions, SQL queries, and author narration captured as navigable slideshows or scrollable pages
+    prompt: "A clean isometric illustration of a single wide open storyboard pad or document seen from a slight angle. Its surface is arranged with five clearly distinct content panels laid out in narrative reading order, each visually unique: (1) a browser window with a header bar and a wireframe page inside, (2) a syntax-highlighted code snippet with green and blue keyword colouring and visible indentation, (3) a labelled flowchart with three connected node shapes and arrows between them, (4) a small data table grid with visible rows and column dividers, (5) a thumbnail screenshot card with a tiny UI mockup. Each panel has distinct proportions, internal contents, and visual texture - no two look alike. The whole image reads as heterogeneous test artifacts collected onto a single living document. Muted palette: soft greys, pale blues, and white, with subtle accent hues differentiating each panel type. Light ambient shadows. No text or characters anywhere in the image. Square format."
+    available: false
   - name: Transactional Outbox
     link: https://outbox.http4k.org
     image: outbox.webp
@@ -54,7 +60,7 @@ modules:
     prompt: "A clean isometric illustration of a minimalist shield with several thin API pathway lines converging through a small gateway opening at its centre. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
     available: false
 packs:
-  - name: Agent Pack
+  - name: Agents Pack
     link: https://agents.http4k.org
     image: agents.webp
     prompt: "A clean isometric illustration of four interconnected modules arranged in a diamond pattern on a floating platform: a glowing neural network node

@@ -8,6 +8,13 @@ googleAnalytics: "G-YSM9QLBYXY"
 
 summaryLength: 20
 
+# Hugo 0.163+ tightened the default content security policy to deny text/html
+# content files. This site embeds .html files inside content/ as page bundles
+# (e.g. ecosystem/http4k/reference/datastar/example.html), so re-enable them.
+security:
+  allowContent:
+    - '.*'
+
 markup:
   asciidocExt:
     attributes:
