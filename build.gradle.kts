@@ -92,7 +92,10 @@ dependencies {
 
 sourceSets {
     test {
-        kotlin.srcDir("$projectDir/src/website")
+        kotlin {
+            srcDir("$projectDir/src/website")
+            exclude("**/*.kts")
+        }
         resources.srcDir("$projectDir/src/website")
     }
 }

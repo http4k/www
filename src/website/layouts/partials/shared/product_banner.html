@@ -1,0 +1,11 @@
+{{/*
+    Renders a keyed banner from site.Data.banners.
+    Usage: {{ partial "shared/product_banner.html" (dict "key" "verify" "ctx" .) }}
+*/}}
+{{ $banner := index .ctx.Site.Data.banners .key }}
+{{ if $banner }}
+<div class="alert alert-info border d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+    <span>{{ $banner.body | markdownify }}</span>
+    <a href="{{ $banner.cta_url }}" class="btn btn-secondary flex-shrink-0">{{ $banner.cta_text }}</a>
+</div>
+{{ end }}
