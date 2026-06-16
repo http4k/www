@@ -26,7 +26,7 @@
     </div>
 
 </div>
-<div class="features">
+<div class="features" style="background-color: #f4f9ff; padding-bottom: 80px;">
     <div class="container">
         <h2 class="reveal">Highlights</h2>
         <div class="row stagger-children">
@@ -91,7 +91,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10">
-            <div class="api reveal-scale">
+            <div class="api reveal-scale" style="margin-top: 80px; margin-bottom: 80px;">
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-xl-4">
                         <h2>More than 150 integrations</h2>
@@ -167,34 +167,38 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div>
-            <div class="container">
-                <div class="row justify-content-center reveal" style="margin-top: 80px;">
-                    <div class="col-md-8 col-lg-8 text-center">
-                        <h2>Corporate partners</h2>
-                        <p>
-                            http4k works with selected companies to fund and explore continued innovation around the
-                            project. If your organisation is using http4k and would like to take advantage of this
-                            program, please <a href="mailto:info@http4k.org?subject=Corporate Sponsorship">get in
-                                touch</a>.
-                        </p>
-                    </div>
-                    <div class="row-col-6 justify-content-center d-flex">
-                        {{ range .Site.Data.sponsors }}
-                            <div class="col-3">
-                                <a href="{{ .url }}"><img class="img-fluid"
-                                                          src="{{ .logo }}"
-                                                          alt="{{ .name}}"/></a>
-                            </div>
-                        {{ end }}
+<div style="padding-top: 80px; padding-bottom: 80px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div>
+                <div class="container">
+                    <div class="row justify-content-center reveal">
+                        <div class="col-md-8 col-lg-8 text-center">
+                            <h2>Corporate partners</h2>
+                            <p>
+                                http4k works with selected companies to fund and explore continued innovation around
+                                the project. If your organisation is using http4k and would like to take advantage of
+                                this program, please <a href="mailto:info@http4k.org?subject=Corporate Sponsorship">get
+                                in touch</a>.
+                            </p>
+                        </div>
+                        <div class="row-col-6 justify-content-center d-flex">
+                            {{ range .Site.Data.sponsors }}
+                                <div class="col-3">
+                                    <a href="{{ .url }}"><img class="img-fluid"
+                                                              src="{{ .logo }}"
+                                                              alt="{{ .name}}"/></a>
+                                </div>
+                            {{ end }}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        {{ partial "shared/cta.html" ( dict "hideImages" false "page" .) }}
     </div>
+</div>
+<div style="background: linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%);">
+    {{ partial "shared/cta.html" ( dict "hideImages" false "page" .) }}
 </div>
 {{ partial "shared/pipes.html" }}
 
