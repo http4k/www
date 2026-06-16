@@ -15,6 +15,8 @@ So we put http4k in the ring with Claude Opus - four full rounds, patching betwe
 
 A bet runs through the whole exercise: that a codebase deliberately kept small enough to read end-to-end is the only kind you can actually audit like this. http4k has held that line by design. The findings below are the receipts.
 
+(There's a second half to this story we get to at the bottom - supply-chain attacks, and how you know the bytes you pull off Maven Central are actually the ones we shipped. Worth scrolling for.)
+
 ---
 
 **TL;DR:** Across **[v6.48.0.0](https://github.com/http4k/http4k/releases/tag/6.48.0.0)**, **[v6.49.0.0](https://github.com/http4k/http4k/releases/tag/6.49.0.0)** and **[v6.50.0.0](https://github.com/http4k/http4k/releases/tag/6.50.0.0)** we shipped ~40 security hardening changes across a dozen-plus modules. **Three new CVEs** (gzip decompression bomb, Digest auth URI-binding, Digest auth algorithm-ignored), **an update to our first CVE** ([CVE-2024-55875](/security/cve-2024-55875), closing a residual billion-laughs gap the original fix didn't cover), and **four non-CVE advisories** for things like bad Digest nonce-verifier defaults and a cross-origin cookie-storage footgun. None of it landed in http4k's everyday request-handling path - which is exactly where the design effort has always gone. **Upgrade to 6.50.0.0** and you're covered.
