@@ -26,35 +26,35 @@ navigation:
         title: http4k Enterprise Edition
         url: https://http4k.org/enterprise
 features:
-    -   title: X402</br>Protocol
+    -   title: X402<br>Protocol
         icon: testability
         colour: blue
         description: "Full **x402 protocol** support with client-side automatic **402 handling**, server-side **payment verification and settlement** via facilitator services, and route-level **X402Security**."
-    -   title: Machine</br>Payments Protocol
+    -   title: Machine<br>Payments Protocol
         icon: supportive
         colour: green
         description: "Flexible payment protocol with **pluggable payment methods**. No facilitator needed - implement **MppSigner** and **MppVerifier** directly for any provider including **Stripe** and **crypto**."
-    -   title: MCP</br>Integration
+    -   title: MCP<br>Integration
         icon: footprint
         colour: indigo
         description: "**Payment-gated MCP tools and resources**. Add protocol-level and tool-level payment filters to your MCP servers for automated **machine-to-machine commerce** between AI agents."
-    -   title: Client</br>Filters
+    -   title: Client<br>Filters
         icon: support
         colour: violet
         description: "Automatic **402 handling** for both X402 and MPP. Your HTTP client detects payment-required responses, **signs the challenge**, and **retries** - transparent to your application code."
-    -   title: Server</br>Filters
+    -   title: Server<br>Filters
         icon: footprint
         colour: orange
         description: "**Protect any endpoint** with payment requirements. Verify and settle payments before allowing access. One filter wrapping your handler - **no changes to business logic**."
-    -   title: Route</br>Security
+    -   title: Route<br>Security
         icon: support
         colour: pink
         description: "**X402Security** and **MppSecurity** integrate with http4k's routing DSL for **fine-grained, per-route** payment protection. Different prices for different endpoints."
-    -   title: Testable</br>Fakes
+    -   title: Testable<br>Fakes
         icon: supportive
         colour: cyan
         description: "Built-in **FakeX402Facilitator** for testing payment flows without real transactions. Test your entire payment integration **in-memory** with no external services."
-    -   title: Transactional</br>Outbox
+    -   title: Transactional<br>Outbox
         icon: testability
         colour: red
         description: "**(Coming soon)** Reliable message delivery with **database consistency**. Ensure payment events, notifications, and downstream messages are **never lost**, even when services fail."

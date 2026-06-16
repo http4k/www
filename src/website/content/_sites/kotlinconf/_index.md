@@ -25,7 +25,7 @@ features:
     - title: Complete MCP server
       icon: testability
       colour: blue
-      description: "A fully spec-compliant MCP server in 50 lines of Kotlin.</br>Download the project, run the tests, start building."
+      description: "A fully spec-compliant MCP server in 50 lines of Kotlin.<br>Download the project, run the tests, start building."
     - title: Countdown MCP<br/>App
       icon: supportive
       colour: red

@@ -16,35 +16,35 @@ navigation:
         title: http4k Enterprise Edition
         url: https://http4k.org/enterprise
 features:
-    -   title: Unified API</br>Gateway
+    -   title: Unified API<br>Gateway
         icon: testability
         colour: pink
         description: Consolidate all your OpenAPI-powered services into a single, secure access point for developers and AI models.
-    -   title: Zero Data</br>Access
+    -   title: Zero Data<br>Access
         icon: supportive
         colour: indigo
         description: Enforce strict API-only access patterns, ensuring engineers and AI systems can never directly access your data sources.
-    -   title: MCP</br>Integration
+    -   title: MCP<br>Integration
         icon: footprint
         colour: violet
         description: Empower your APIs to be automatically exposed as MCP tools, enabling AI assistants to interact with your services through standard protocols.
-    -   title: SSO</br>Authentication
+    -   title: SSO<br>Authentication
         icon: support
         colour: blue
         description: Secure user login handled via integration with your standard Single Sign-On tooling. MCP tools are authenticated using standard OAuth2 flows.
-    -   title: Comprehensive</br>Auditing
+    -   title: Comprehensive<br>Auditing
         icon: footprint
         colour: green
         description: Track and log all API interactions with detailed audit trails for security and compliance requirements, extensible through custom connectors.
-    -   title: CLI</br>Support
+    -   title: CLI<br>Support
         icon: support
         colour: yellow
         description: Enable command-line access with token-based authentication, allowing developers to integrate your services into their toolchains and pipelines.
-    -   title: Cloud</br>Native
+    -   title: Cloud<br>Native
         icon: supportive
         colour: orange
         description: Deploy the Gateway within your own cloud environment with minimal configuration and maximum security. You are always in control.
-    -   title: Self-</br>Contained
+    -   title: Self-<br>Contained
         icon: testability
         colour: red
         description: A standalone solution that works with your existing OpenAPI services, requiring no changes to your backend implementation.

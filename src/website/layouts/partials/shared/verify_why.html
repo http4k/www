@@ -1,0 +1,126 @@
+<style>
+    .verify-why {
+        background: linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%);
+        padding: 80px 0;
+    }
+
+    .verify-why h2 {
+        margin-bottom: 1.5rem;
+        font-weight: 800;
+    }
+
+    .verify-why .lead-copy {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        color: #333;
+    }
+
+    .verify-why .lead-copy p {
+        margin-bottom: 1.1rem;
+    }
+
+    .verify-why .framework-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .verify-why .framework-chip {
+        background: #ffffff;
+        border: 1px solid #e3eaf3;
+        border-left: 3px solid #2096F3;
+        border-radius: 10px;
+        padding: 18px 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .verify-why .framework-chip .label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #2096F3;
+        margin-bottom: 6px;
+    }
+
+    .verify-why .framework-chip .name {
+        display: block;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 4px;
+    }
+
+    .verify-why .framework-chip .note {
+        font-size: 0.85rem;
+        color: #555;
+        margin: 0;
+    }
+
+    .verify-why .cta-row {
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    @media (max-width: 991.98px) {
+        .verify-why {
+            padding: 60px 0;
+        }
+        .verify-why .framework-grid {
+            margin-top: 2rem;
+        }
+    }
+</style>
+
+<section class="verify-why">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2>Why verify?</h2>
+                <div class="lead-copy">
+                    <p>
+                        Security teams and regulators increasingly require evidence that the third-party components in
+                        your build haven't been tampered with - and the bar is rising fast.
+                    </p>
+                    <p>
+                        <strong>http4k Enterprise Edition</strong> publishes SLSA provenance, CycloneDX SBOMs, signed
+                        licence reports and cosign signatures for every artifact. <strong>http4k Verify</strong> checks
+                        them all automatically, before your code compiles - so the assurance is captured at build time
+                        rather than chased down at audit time.
+                    </p>
+                </div>
+                <div class="cta-row">
+                    <a class="btn btn-primary ripple" href="https://http4k.org/supply-chain-security/">Supply chain security</a>
+                    <a class="btn btn-secondary ripple" href="https://http4k.org/enterprise/">http4k Enterprise Edition</a>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <div class="framework-grid">
+                    <div class="framework-chip">
+                        <span class="label">Mandatory Sep 2026</span>
+                        <span class="name">EU Cyber Resilience Act</span>
+                        <p class="note">Machine-readable SBOMs and secure development practices for software sold in the EU.</p>
+                    </div>
+                    <div class="framework-chip">
+                        <span class="label">Active</span>
+                        <span class="name">US Executive Order 14028</span>
+                        <p class="note">SBOMs and supply chain attestation required for federal procurement.</p>
+                    </div>
+                    <div class="framework-chip">
+                        <span class="label">Active</span>
+                        <span class="name">NIST SSDF</span>
+                        <p class="note">Consume provenance and verify third-party components (PS.3 / PW.4).</p>
+                    </div>
+                    <div class="framework-chip">
+                        <span class="label">Active</span>
+                        <span class="name">PCI DSS 4.0</span>
+                        <p class="note">Strengthened supply chain integrity controls for payment-processing software.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

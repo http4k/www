@@ -25,35 +25,35 @@ navigation:
         title: http4k Enterprise Edition
         url: https://http4k.org/enterprise
 features:
-    - title: Complete</br>Protocol
+    - title: Complete<br>Protocol
       icon: testability
       colour: blue
       description: "**MCP 2025-11-25 + Draft** protocols with **OAuth & Resource Metadata**, passing **MCP conformance tests**. Full support for **Tools**, **Prompts**, **Resources**, **Tasks**, **Sampling**, **Elicitation**, and more."
-    - title: Testable</br>Design
+    - title: Testable<br>Design
       icon: supportive
       colour: green
       description: "**Pure functions**, no side effects. Test Tools, Resources, and MCP Apps fully **in-memory** - no network, no ports, no flaky CI."
-    - title: Type-safe</br>Tooling
+    - title: Type-safe<br>Tooling
       icon: footprint
       colour: indigo
       description: "http4k's powerful Lens system for **type-safe tool definitions** and capability bindings with **compile-time safety**."
-    - title: MCP</br>Apps
+    - title: MCP<br>Apps
       icon: support
       colour: violet
       description: "**Server-rendered UI components** with the **MCP Apps** protocol. Dashboards, forms, and visualizations directly in MCP clients. Fully **testable**."
-    - title: Built-in</br>Observability
+    - title: Built-in<br>Observability
       icon: footprint
       colour: orange
       description: "**OpenTelemetry MCP Semantic Conventions** support. Plug into Jaeger, Honeycomb, Datadog - with zero custom instrumentation."
-    - title: Machine</br>Payments
+    - title: Machine<br>Payments
       icon: support
       colour: pink
       description: "Payment-gated MCP tools and resources with **x402** and **Machine Payments Protocol (MPP)**. Protocol-level and tool-level payment filters for automated machine-to-machine commerce."
-    - title: Flexible</br>Transport
+    - title: Flexible<br>Transport
       icon: supportive
       colour: cyan
       description: "**HTTP Streaming**, SSE, WebSocket, JSON-RPC, and Standard IO transports. Stateful or stateless protocols for desktop and web clients."
-    - title: Agent</br>Connectivity
+    - title: Agent<br>Connectivity
       icon: testability
       colour: red
       description: "Build your own **AI agents** with pure Kotlin MCP protocol clients. Plug any **A2A agent** straight into **Claude Desktop**, **Cursor**, or any MCP client via the provided bridge."

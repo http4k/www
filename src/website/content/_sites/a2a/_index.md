@@ -23,23 +23,23 @@ navigation:
         title: http4k Enterprise Edition
         url: https://http4k.org/enterprise
 features:
-    - title: Complete</br>Protocol
+    - title: Complete<br>Protocol
       icon: testability
       colour: blue
       description: "Full **A2A spec** support with both **JSON-RPC** and **REST** protocol bindings. **Agent Cards**, **Tasks**, **Messages**, **Artifacts**, **Streaming**, **Push Notifications**, and **multi-turn conversations** - all from a single server definition."
-    - title: Agent</br>Connectivity
+    - title: Agent<br>Connectivity
       icon: supportive
       colour: red
       description: "Type-safe **A2A clients** for both **JSON-RPC** and **REST** bindings. Plug your agent straight into **Claude Desktop**, **Cursor**, or any MCP client via the provided bridge."
-    - title: Testable</br>Design
+    - title: Testable<br>Design
       icon: footprint
       colour: green
       description: "**Pure functions**, no side effects. Test agent interactions fully **in-memory** - no network, no ports, no flaky CI."
-    - title: Agent</br>Discovery
+    - title: Agent<br>Discovery
       icon: support
       colour: violet
       description: "**Agent Cards** for capability advertisement and discovery. **Extended Agent Cards** for authenticated access. Publish **skills**, **security schemes**, and **JWS signatures** for card integrity."
-    - title: Task</br>Lifecycle
+    - title: Task<br>Lifecycle
       icon: support
       colour: orange
       description: "Full task state management with **pagination** and **filtering**. **Push notifications** via webhooks for status changes. Long-running agent collaboration built in."
@@ -51,7 +51,7 @@ features:
       icon: supportive
       colour: indigo
       description: "First-class **tenant isolation** across tasks, storage, and routing. Build **multi-tenant agent platforms** with tenant-scoped **task storage** and **protocol endpoints**."
-    - title: Wiretap</br>Integration
+    - title: Wiretap<br>Integration
       icon: testability
       colour: cyan
       description: "Built-in **Wiretap** support for A2A servers. **Intercept** JUnit extension. **Wiretap Console** for live **traffic monitoring** and **OpenTelemetry tracing** across agent interactions."

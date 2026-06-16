@@ -11,6 +11,7 @@ docs_link: https://http4k.org/ecosystem/enterprise/reference/verify/
 cta_label: "Included with Enterprise Edition"
 ee_included: "Get automated supply chain verification for every http4k dependency - giving your security team the assurance they need, with zero developer overhead."
 description: "**http4k Verify** ensures the integrity of every http4k dependency in your build - automatically, before your code compiles."
+pre_features_partial: shared/verify_why
 navigation:
     -   name: docs
         title: Documentation
@@ -26,7 +27,7 @@ features:
         icon: footprint
         colour: green
         description: "One Gradle plugin. **No CLI tools to install.** Every http4k dependency is verified automatically before compilation."
-    -   title: Build-Time</br>Enforcement
+    -   title: Build-Time<br>Enforcement
         icon: testability
         colour: blue
         description: "If any artifact has been **tampered with**, the build fails. No silent failures, no runtime surprises. Supply chain integrity verified **before your code compiles**."
@@ -34,26 +35,10 @@ features:
         icon: support
         colour: indigo
         description: "Covers all **200+ http4k modules** - verifies **JARs**, **CycloneDX SBOMs**, **SLSA provenance attestations**, and **license compliance reports** for every dependency."
-    -   title: Enterprise</br>Ready
+    -   title: Enterprise<br>Ready
         icon: supportive
         colour: orange
         description: "Works seamlessly through **Artifactory**, **Nexus**, or any repository manager proxying **maven.http4k.org**. Fits into your existing infrastructure with no changes."
-    -   title: EU Cyber</br>Resilience Act
-        icon: supportive
-        colour: pink
-        description: "The **CRA** requires machine-readable SBOMs and secure development practices for software sold in the EU. http4k Verify validates SBOMs for every dependency at build time."
-    -   title: US Executive</br>Order 14028
-        icon: footprint
-        colour: green
-        description: "Federal agencies require **SBOMs for all purchased software**. http4k Verify validates that SBOM signatures are authentic and untampered."
-    -   title: NIST SSDF</br>(PS.3 / PW.4)
-        icon: testability
-        colour: blue
-        description: "The Secure Software Development Framework recommends **consuming provenance** and verifying third-party components. http4k Verify automates this at build time."
-    -   title: PCI<br/>DSS 4.0
-        icon: support
-        colour: orange
-        description: "Strengthened **supply chain requirements** for payment-processing software. http4k Verify provides verifiable evidence of artifact integrity for your audit trail."
 how_tos:
     -   section: "One line. That's it."
         steps:
