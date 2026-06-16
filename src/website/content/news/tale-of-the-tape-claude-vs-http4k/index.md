@@ -33,6 +33,8 @@ The genuinely happy news: none of the above touched http4k's everyday request-ha
 
 If you're on http4k anywhere in the v6 line, simply **upgrade to [v6.50.0.0](https://github.com/http4k/http4k/releases/tag/6.50.0.0)** or later. The fixes are spread across a wide variety of modules so a blanket dependency bump is the cleanest path. Check the round-by-round below to see which findings directly apply to your deployment. We've broken the APIs where we feel we needed to in order to make choices simpler.
 
+Still on **v5** or **v4**? LTS backports of these fixes are available as part of the **[http4k Enterprise Edition](/enterprise)** - get in touch if you need security patches without taking the v6 jump.
+
 #### Round-by-round
 
 **[CVE-2026-53659](/security/cve-2026-53659) - gzip decompression bomb.** Our gzip request-decoding filter had no size cap; a few KB of crafted input could decompress to gigabytes and take the server down. Unpatched for ~9 years. **v6.49.0.0** caps at 10MB by default.
