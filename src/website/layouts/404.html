@@ -1,3 +1,5 @@
+{{ define "title" }}404 — Page Not Found{{ end }}
+
 {{ define "main" }}
 <style>
     .hero-404 {
@@ -42,19 +44,16 @@
 <div style="padding-bottom: 80px;"></div>
 
 {{/* Report 404s to GA4 as a dedicated event so they can be isolated from real
-     pageviews, and capture the referrer to find where broken links originate. */}}
+     pageviews. Uses non-reserved parameter names (attempted_path, attempted_referrer)
+     so they can be registered as event-scoped custom dimensions in GA4 admin
+     without colliding with the built-in page_view parameters. */}}
 <script>
     (function () {
-        var attempted = window.location.pathname + window.location.search;
-        var referrer = document.referrer || "(none)";
-
-        if (typeof gtag === "function") {
-            gtag("event", "page_not_found", {
-                page_location: window.location.href,
-                page_path: attempted,
-                page_referrer: referrer,
-            });
-        }
+        if (typeof gtag !== "function") return;
+        gtag("event", "page_not_found", {
+            attempted_path: window.location.pathname + window.location.search,
+            attempted_referrer: document.referrer || "(none)",
+        });
     })();
 </script>
 
