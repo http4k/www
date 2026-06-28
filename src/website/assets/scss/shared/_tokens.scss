@@ -1,0 +1,40 @@
+// ============================================================
+// DESIGN TOKENS — single source of truth for the whole site.
+// CSS custom properties so both this SCSS bundle and the static
+// styles.css can reference them. Bootstrap $vars mirror the hexes
+// (in _bootstrap.scss) because Bootstrap does compile-time colour math.
+// ============================================================
+
+:root {
+  // --- Type: one sans for display/body, one mono for code/labels ---
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+  // --- Brand blue (kept). One structural hue, a few shades. ---
+  --blue: #61C0FF;          // brand / accents / active borders / tints
+  --blue-strong: #1f8de0;   // solid fills with white text (a11y: white passes on this)
+  --blue-dark: #0f6cb8;     // hover / active, body links on white
+  --blue-wash: rgba(97, 192, 255, 0.10); // subtle tint backgrounds
+
+  // --- Orange: high-emphasis actions/highlights ONLY ---
+  --orange: #ff9800;
+  --orange-strong: #f57c00;
+
+  // --- Green: literal verified / passing states ONLY ---
+  --green: #198754;
+
+  // --- Neutrals ---
+  --ink: #14181f;           // dark "anchor" sections + footer
+  --paper: #ffffff;         // light section
+  --off-white: #f6f8fa;     // alternating section
+  --text: #1d2433;          // body text
+  --text-muted: #5a6577;    // secondary text
+  --text-on-ink: #e6eaf0;   // body text on ink
+  --border: #e3e8ef;        // hairline borders
+
+  // --- Structure ---
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 1px 2px rgba(20, 24, 31, 0.04), 0 2px 8px rgba(20, 24, 31, 0.06);
+  --transition-fast: 140ms ease;
+}

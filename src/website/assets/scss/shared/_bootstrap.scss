@@ -5,12 +5,15 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-$font-family-base: "Inter", sans-serif;
+$font-family-base: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-$primary: #7C76BB;
-$secondary: #27A3FF29;
-$danger: #FF87B0;
+$primary: #1f8de0;   // brand blue (--blue-strong)
+$secondary: #ff9800; // orange, high-emphasis only (--orange)
+$danger: #dc3545;
+$success: #198754;   // verified / passing (--green)
 $light: #FFFFFF;
+$dark: #14181f;      // ink (--ink)
 
 // scss-docs-start import-stack
 // Configuration
