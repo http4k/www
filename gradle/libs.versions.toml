@@ -1,14 +1,14 @@
 [versions]
-amazon-s3 = "2.46.15"
+amazon-s3 = "2.46.17"
 aws-lambda-java-events = "3.16.1"
 azure-search-documents = "12.0.0"
 forkhandles-bom = "2.25.6.0"
 google-http-client = "2.1.0"
-graphql-kotlin-schema-generator = "10.0.1"
-http4k-standards = "1.11.0.0"
+graphql-kotlin-schema-generator = "10.1.1"
+http4k-standards = "1.14.0.0"
 jakarta-servlet-api = "6.1.0"
 javax-servlet-api = "4.0.1"
-junit = "6.1.0"
+junit = "6.1.1"
 kotlin = "2.4.0"
 kotshi-api = "4.0.0"
 kotshi-compiler = "4.0.0"
@@ -173,6 +173,7 @@ http4k-platform-k8s = { module = "org.http4k:http4k-platform-k8s" }
 http4k-security-core = { module = "org.http4k:http4k-security-core" }
 http4k-security-digest = { module = "org.http4k:http4k-security-digest" }
 http4k-security-oauth = { module = "org.http4k:http4k-security-oauth" }
+http4k-security-webauthn = { module = "org.http4k.pro:http4k-security-webauthn" }
 http4k-server-apache = { module = "org.http4k:http4k-server-apache" }
 http4k-server-apache4 = { module = "org.http4k:http4k-server-apache4" }
 http4k-server-helidon = { module = "org.http4k:http4k-server-helidon" }
@@ -212,6 +213,7 @@ http4k-testing-servirtium = { module = "org.http4k:http4k-testing-servirtium" }
 http4k-testing-strikt = { module = "org.http4k:http4k-testing-strikt" }
 http4k-testing-tracerbullet = { module = "org.http4k:http4k-testing-tracerbullet" }
 http4k-testing-webdriver = { module = "org.http4k:http4k-testing-webdriver" }
+http4k-testing-webdriver-datastar = { module = "org.http4k:http4k-testing-webdriver-datastar" }
 http4k-tools-hotreload = { module = "org.http4k.pro:http4k-tools-hotreload" }
 http4k-tools-trafficcapture = { module = "org.http4k:http4k-tools-traffic-capture" }
 http4k-web-datastar = { module = "org.http4k:http4k-web-datastar" }
@@ -412,6 +414,7 @@ http4k-security = [
     "http4k-security-core",
     "http4k-security-digest",
     "http4k-security-oauth",
+    "http4k-security-webauthn",
 ]
 http4k-serverless = [
     "http4k-serverless-alibaba",
@@ -458,6 +461,7 @@ http4k-testing = [
     "http4k-testing-strikt",
     "http4k-testing-tracerbullet",
     "http4k-testing-webdriver",
+    "http4k-testing-webdriver-datastar",
 ]
 http4k-tools = [
     "http4k-tools-hotreload",
