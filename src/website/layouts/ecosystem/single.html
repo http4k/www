@@ -42,9 +42,13 @@
     </main>
 </div>
 
-<script language="JavaScript">
-    $(".sideToggle").on("click", function () {
-        $(".aside").toggleClass("no-side");
+<script>
+    document.querySelectorAll(".sideToggle").forEach(function (el) {
+        el.addEventListener("click", function () {
+            document.querySelectorAll(".aside").forEach(function (a) {
+                a.classList.toggle("no-side");
+            });
+        });
     });
 </script>
 

@@ -1,28 +1,57 @@
 // Footer JavaScript functionality
-$(document).ready(function () {
-    $('.highlight').each(function () {
-        const copyButton = $('<i class="fs-2 bi bi-clipboard copy-button"></i>');
 
-        $(this).find("pre").prepend(copyButton);
+// Copy helper: navigator.clipboard only exists in secure contexts (https /
+// localhost). Fall back to execCommand for plain-http origins (e.g. LAN dev).
+function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text);
+    }
+    return new Promise((resolve, reject) => {
+        try {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            resolve();
+        } catch (e) {
+            reject(e);
+        }
+    });
+}
 
-        copyButton.on('click', function () {
-            const $icon = $(this);
-            const codeContent = $icon.parent().find('code').text();
+function initCopyButtons() {
+    document.querySelectorAll('.highlight').forEach(function (highlight) {
+        const pre = highlight.querySelector('pre');
+        if (!pre) return;
 
-            navigator.clipboard.writeText(codeContent)
+        const copyButton = document.createElement('i');
+        copyButton.className = 'fs-2 bi bi-clipboard copy-button';
+        pre.prepend(copyButton);
+
+        copyButton.addEventListener('click', function () {
+            const code = copyButton.parentElement.querySelector('code');
+            const codeContent = code ? code.textContent : '';
+
+            copyText(codeContent)
                 .then(() => {
                     // Report which code snippets get copied, by language and page.
                     if (typeof gtag === 'function') {
                         gtag('event', 'copy_code', {
-                            code_language: $icon.parent().find('code').data('lang') || 'unknown',
+                            code_language: (code && code.dataset.lang) || 'unknown',
                             page_path: window.location.pathname,
                         });
                     }
 
-                    $icon.removeClass('bi-clipboard').addClass('bi-clipboard-check-fill');
+                    copyButton.classList.remove('bi-clipboard');
+                    copyButton.classList.add('bi-clipboard-check-fill');
 
                     setTimeout(() => {
-                        $icon.removeClass('bi-clipboard-check-fill').addClass('bi-clipboard');
+                        copyButton.classList.remove('bi-clipboard-check-fill');
+                        copyButton.classList.add('bi-clipboard');
                     }, 250);
                 })
                 .catch(err => {
@@ -30,7 +59,15 @@ $(document).ready(function () {
                 });
         });
     });
-});
+}
+
+// Run now if the DOM is already parsed (external script can execute after
+// DOMContentLoaded has fired), else wait — mirrors jQuery's $(document).ready.
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCopyButtons);
+} else {
+    initCopyButtons();
+}
 
 // HIDE THE PREAMBLE
 document.querySelectorAll('span[style*="color:#66d9ef"]').forEach(span => {

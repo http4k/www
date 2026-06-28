@@ -254,6 +254,7 @@ a {
 .card-shadow {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
     padding: 30px 40px 30px 20px;
     margin-bottom: 44px;
     background-color: var(--paper);
