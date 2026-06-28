@@ -1,7 +1,9 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Enterprise
+ecosystem:
+  - http4k Core
+  - http4k Enterprise
 tier: pro
 title: "Security: WebAuthn"
 description: Feature overview of the http4k-security-webauthn module

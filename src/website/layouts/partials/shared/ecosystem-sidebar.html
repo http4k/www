@@ -56,7 +56,7 @@
                     {{ $refs := where $allRefs ".Params.ecosystem" "eq" $primaryEco }}
                     {{ $refsFromLists := where $allRefs ".Params.ecosystem" "intersect" (slice $primaryEco) }}
                     {{ $refs = $refs | append $refsFromLists }}
-                    {{ $refs = $refs | uniq }}
+                    {{ $refs = sort ($refs | uniq) "Title" }}
                     {{ range $refs }}
                     <li class="mt-1">
                         <a href="{{ .RelPermalink }}" class="ecoLink {{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
