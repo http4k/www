@@ -27,7 +27,7 @@ features:
     -   title: Standards<br>Based
         icon: support
         colour: blue
-        description: "Full **W3C WebAuthn / FIDO2** registration and authentication ceremonies, backed by **webauthn4j** and BouncyCastle for attestation, signature, challenge, origin, and sign-counter (clone detection) verification."
+        description: "Full **W3C WebAuthn / FIDO2** registration and authentication ceremonies, backed by **WebAuthn4j** and BouncyCastle for attestation, signature, challenge, origin, and sign-counter (clone detection) verification."
     -   title: Pluggable<br/>By Design
         icon: testability
         colour: indigo
