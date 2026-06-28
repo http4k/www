@@ -1,6 +1,12 @@
 /* Design tokens live in assets/scss/shared/_tokens.scss (:root), inlined into
    <head> before this file loads. Reference them via var(--…) here. */
 
+/* Global font. styles.css loads AFTER the Bootstrap CDN link, so this beats
+   Bootstrap's default system-ui stack site-wide. */
+body {
+    font-family: var(--font-sans);
+}
+
 .text-logo {
     color: var(--blue);
     font-family: var(--font-sans);
