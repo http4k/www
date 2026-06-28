@@ -39,10 +39,10 @@ features:
 how_tos:
     -   section: "Passkeys, start to finish"
         steps:
-            -   description: "**Instantiate** - provide a verifier, a credential store, and a session strategy. That's the whole setup."
+            -   description: "**Instantiate** - provide a verifier, credential store, session strategy and choose a user mode. That's the whole setup."
                 alt: Instantiate Passkeys
                 image: webauthn-step1.webp
-            -   description: "**Mount** the pre-wired registration & authentication routes into your app - one line."
+            -   description: "**Mount** the pre-wired registration & authentication routes into your app, and use a filter to protect resources."
                 alt: Mount the passkey routes
                 image: webauthn-step2.webp
             -   description: "**Register** - the browser prompts the user to create a passkey with their fingerprint, face, or device PIN."
