@@ -36,12 +36,21 @@ features:
         icon: supportive
         colour: orange
         description: "Ships with **InsecurePasskeyVerifier**, **InMemoryPasskeyPersistence**, and a fake authenticator so you can drive the entire passkey flow in fast, **out-of-container** tests - the http4k way."
-#how_tos:
-#    -   section: "Passkeys in three pieces"
-#        steps:
-#            -   description: "**Step 1** - Describe your server with a **RelyingParty**, then pick your **PasskeyVerifier**, **PasskeyPersistence**, and **Principals** implementations."
-#            -   description: "**Step 2** - Build a **Passkeys** with `passwordless(...)` or `onTopOfExistingLogin(...)` and mount its pre-wired ceremony **routes**."
-#            -   description: "**Step 3** - Protect anything with **authFilter** and clear sessions with **logout**. Your users now sign in with a passkey."
+how_tos:
+    -   section: "Passkeys, start to finish"
+        steps:
+            -   description: "**Instantiate** - provide a verifier, a credential store, and a session strategy. That's the whole setup."
+                alt: Instantiate Passkeys
+                image: webauthn-step1.webp
+            -   description: "**Mount** the pre-wired registration & authentication routes into your app - one line."
+                alt: Mount the passkey routes
+                image: webauthn-step2.webp
+            -   description: "**Register** - the browser prompts the user to create a passkey with their fingerprint, face, or device PIN."
+                alt: Passkey registration prompt
+                image: webauthn-step3.webp
+            -   description: "**Sign in** - one tap. The user authenticates with the passkey and your server establishes the session."
+                alt: Passkey sign-in prompt
+                image: webauthn-step4.webp
 pricing_table:
     id: prctbl_1TnFtlG47sNzv4yX7yZwnkHx
     key: pk_live_51QVe22G47sNzv4yXpAdUo8zZKsS97wLXlkTOBr6WILnYRIm3UYQ1WhMwz3azZMoTRnUzOwebV1m5E4FDicDtGUaG001uo16uL0

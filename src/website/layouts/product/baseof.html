@@ -210,8 +210,8 @@
                 {{end}}
                 <div class="col-lg-5 text-center">
                     <p>{{ $element.description | markdownify }}</p>
-                    {{ if $element.image }}
-                    <img class="img-fluid" style="border-radius: 8px" src="/images/{{ $element.image }}" alt="{{ $element.alt }}"/>
+                    {{ with $.Resources.GetMatch $element.image }}
+                    <img class="img-fluid" style="border-radius: 8px" src="{{ .RelPermalink }}" alt="{{ $element.alt }}"/>
                     {{ end }}
                 </div>
                 {{ if not (modBool $index 2) }}
@@ -224,9 +224,9 @@
                 <div class="col-md-10 col-lg-8">
                     <div class="card-custom" style="padding: 40px;">
                         <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
-                            {{ if $.Params.cta_image }}
+                            {{ with $.Resources.GetMatch $.Params.cta_image }}
                             <div class="pb-3 pb-md-0 flex-shrink-0">
-                                <img src="/images/{{ $.Params.cta_image }}" alt="{{ $.Params.title }}" style="height: 60px; display: block; margin: 0 24px 0 0;"/>
+                                <img src="{{ .RelPermalink }}" alt="{{ $.Params.title }}" style="height: 60px; display: block; margin: 0 24px 0 0;"/>
                             </div>
                             {{ end }}
                             <div>
@@ -240,9 +240,9 @@
         </div>
     </div>
     {{ end }}
-    {{ if .Params.large_image }}
+    {{ with .Resources.GetMatch .Params.large_image }}
     <div class="d-flex justify-content-center">
-        <img class="img-fluid" style=" width: 50%; border-radius: 8px" src="/images/{{ .Params.large_image }}" alt="{{ $.Params.title }}"/>
+        <img class="img-fluid" style=" width: 50%; border-radius: 8px" src="{{ .RelPermalink }}" alt="{{ $.Params.title }}"/>
     </div>
     {{ end }}
 
