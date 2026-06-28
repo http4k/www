@@ -57,5 +57,8 @@ Supporting model types include `RelyingParty` (your server identity), `PasskeyUs
 `PasskeyError` describing ceremony failures (bad signature, challenge/origin mismatch, sign-counter regression for clone
 detection, and so on).
 
+#### Code
+
+{{< kotlin file="example.kt" >}}
 
 [http4k]: https://http4k.org
