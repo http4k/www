@@ -142,7 +142,7 @@ menus:
       weight: 34
     - name: ecosystem-pro
       title: http4k Pro
-      url: /pro/
+      url: /ecosystem/pro/
       parent: ecosystem
       weight: 35
     - name: ecosystem-enterprise
