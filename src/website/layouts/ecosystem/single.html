@@ -9,9 +9,10 @@
             {{ if .Params.image }}
             <img src="{{ .Params.image }}" alt="Image" class="imageSmall mt-3"/>
             {{ else }}
+            {{ $eco := .Params.ecosystem }}{{ if reflect.IsSlice $eco }}{{ $eco = index $eco 0 }}{{ end }}
             <nav class="docs-crumbs">
                 <a href="/ecosystem/">docs</a>
-                {{ with .Params.ecosystem }}<span>/</span>{{ if reflect.IsSlice . }}{{ index . 0 }}{{ else }}{{ . }}{{ end }}{{ end }}
+                {{ if and $eco (ne $eco .Title) }}<span>/</span>{{ $eco }}{{ end }}
                 <span>/</span>{{ .Title }}
             </nav>
             {{ with .Params.Category }}<div class="eyebrow">// {{ . | upper }}</div>{{ end }}
