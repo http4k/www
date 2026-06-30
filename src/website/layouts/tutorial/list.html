@@ -1,10 +1,6 @@
 {{ define "main" }}
 
-<section class="list-header">
-    <div class="eyebrow">// TUTORIALS</div>
-    <h1>{{ .Title }}</h1>
-    {{ with .Content }}<div class="list-header__intro">{{ . }}</div>{{ end }}
-</section>
+{{ partial "shared/list-header.html" (dict "eyebrow" "tutorials" "title" .Title "intro" .Content) }}
 
 {{ $tutorials := where .Site.Pages ".Params.series" "!=" nil }}
 {{ range $series := .Site.Data.tutorial_series }}

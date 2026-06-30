@@ -1,4 +1,5 @@
 ---
+eyebrow: legal
 title: http4k Commercial License
 description: http4k Commercial License
 ---

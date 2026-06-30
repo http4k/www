@@ -1,4 +1,5 @@
 ---
+eyebrow: legal
 title : "Terms & conditions"
 description: "Terms & conditions for http4k.org"
 ---

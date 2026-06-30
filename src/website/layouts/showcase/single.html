@@ -1,10 +1,6 @@
 {{ define "main" }}
 
-<section class="list-header">
-    <div class="eyebrow">// SHOWCASE</div>
-    <h1>{{ .Title }}</h1>
-    {{ with .Content }}<div class="list-header__intro">{{ . }}</div>{{ end }}
-</section>
+{{ partial "shared/list-header.html" (dict "eyebrow" "showcase" "title" .Title "intro" .Content) }}
 
 <section class="list-section">
     <h2 class="list-section__title">Talks</h2>

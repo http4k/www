@@ -1,10 +1,6 @@
 {{ define "main" }}
 
-<section class="list-header">
-    <div class="eyebrow">// HOW-TO GUIDES</div>
-    <h1>{{ .Title }}</h1>
-    {{ with .Content }}<div class="list-header__intro">{{ . }}</div>{{ end }}
-</section>
+{{ partial "shared/list-header.html" (dict "eyebrow" "how-to guides" "title" .Title "intro" .Content) }}
 
 {{ $items := where .Site.RegularPages "Type" "eq" "howto" }}
 

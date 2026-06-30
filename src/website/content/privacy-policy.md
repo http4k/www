@@ -1,4 +1,5 @@
 ---
+eyebrow: legal
 title : 'Privacy policy'
 description: "Privacy policy for http4k.org"
 ---

@@ -4,7 +4,7 @@ description: About http4k Limited and the people behind the project.
 type: company
 highlights:
     -   title: Custom consulting from the experts
-        description: No-one knows http4k better than the people who built it. Get tailored advice and support from the creators of http4k.
+        description: No-one knows http4k better than the engineers that built it. Get tailored advice and support from the creators of http4k.
         icon: "/images/supportive.svg"
     -   title: System architecture and design review
         description: Get expert advice on how to structure your applications for maximum performance and maintainability.

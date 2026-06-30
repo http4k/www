@@ -122,8 +122,8 @@
     margin-bottom: 1.25rem;
 }
 
-.docs-crumbs a { color: var(--text-muted); text-decoration: none; }
-.docs-crumbs a:hover { color: var(--docs-link); }
+.docs-crumbs a { color: var(--blue-strong); text-decoration: none; }
+.docs-crumbs a:hover { color: var(--ink); }
 .docs-crumbs span { color: var(--border); }
 
 // --- sidebar (existing ecosystem-sidebar partial, restyled - CSS only) ---

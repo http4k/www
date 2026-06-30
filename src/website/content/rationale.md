@@ -1,4 +1,5 @@
 ---
+eyebrow: about
 title: Rationale
 description: Overview of why we created http4k, the problems it solves, and the core concepts
 ---

@@ -2,6 +2,7 @@
 <main class="page-content">
     {{ if or .Title .Content }}
     <div>
+        {{ with .Section }}{{ partial "shared/eyebrow.html" . }}{{ end }}
         {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
         {{ with .Content }}
         <div>{{ . }}</div>

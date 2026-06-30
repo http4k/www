@@ -1,10 +1,6 @@
 {{ define "main" }}
 
-<section class="list-header">
-    <div class="eyebrow">// {{ .Title | upper }}</div>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
-</section>
+{{ partial "shared/list-header.html" (dict "eyebrow" .Title "title" .Title "lede" .Params.description) }}
 
 {{ with .Content }}
 <section class="solution-section">
