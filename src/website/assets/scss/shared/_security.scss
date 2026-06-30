@@ -1,7 +1,5 @@
 // Security pages (advisories list + CVE detail). ASCII only.
 
-.security-h2 { font-size: 2.125rem; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; color: var(--ink); margin: 0; }
-
 // --- hero (background = shared .ink-hero in _primitives.scss) ---
 .security-hero__inner { position: relative; padding-block: 84px 78px; }
 
@@ -38,8 +36,8 @@
 // --- proactive LLM audits (ink) ---
 .security-audits { position: relative; overflow: hidden; background: var(--ink); color: var(--text-on-ink); }
 .security-audits__inner { position: relative; max-width: 1000px; margin: 0 auto; padding: 84px 36px; }
-.security-audits h2 { font-size: 2.125rem; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; color: #fff; margin: 0 0 16px; }
-.security-audits p { font-size: var(--fs-lead); line-height: 1.6; color: #aebece; margin: 0 0 18px; max-width: var(--lede); }
+.security-audits .section-h2 { margin-bottom: 16px; }
+.security-audits .section-lede { margin-bottom: 18px; }
 .security-audits__link { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue); text-decoration: none; }
 .security-audits__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
 .security-stat__num { font-family: var(--font-sans); font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; color: #fff; }

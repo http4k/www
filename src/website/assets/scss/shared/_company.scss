@@ -1,23 +1,6 @@
 // Company page - fits the comp (~/Desktop/http4k Company.html) onto existing
 // copy/data. Comp hexes map to tokens. ASCII only (BOM gotcha).
 
-.company-h2 {
-    font-size: 2.125rem;
-    line-height: 1.12;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-    color: var(--ink);
-    margin: 0;
-}
-
-.company-lede {
-    font-size: var(--fs-lead);
-    line-height: 1.6;
-    color: var(--text-muted);
-    max-width: 620px;
-    margin: 12px 0 0;
-}
-
 .company-lede a { color: var(--blue-dark); }
 
 .company-section { @include section-wrap; }

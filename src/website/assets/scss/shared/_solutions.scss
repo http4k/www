@@ -21,7 +21,6 @@
 // professional-services cards (data/cta): title + desc + outbound link
 .solution-cta { background: var(--off-white); }
 .solution-cta__inner { max-width: 1200px; margin: 0 auto; padding: 80px 36px; }
-.solution-h2 { font-size: 2.125rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin: 0; }
 .solution-cta__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
 .solution-cta-card {

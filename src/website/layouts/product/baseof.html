@@ -31,7 +31,7 @@
 {{ if .Params.features }}
 <section class="product-features">
     <div class="product-section">
-        <div class="section-head"><h2 class="product-h2">Highlights</h2></div>
+        <div class="section-head"><h2 class="section-h2">Highlights</h2></div>
         <div class="product-feature-grid">
             {{ range .Params.features }}
             <div class="product-feature">
@@ -82,7 +82,7 @@
 {{ if .Params.pricing_table }}
 <section class="product-pricing" id="pricing">
     <div class="eyebrow">// PRICING</div>
-    <h2 class="product-h2">Pricing</h2>
+    <h2 class="section-h2">Pricing</h2>
     <p class="product-license"><b>{{ .Params.title }}</b> is available under the <a href="{{ "/commercial-license" | absURL }}">http4k Commercial License</a>. Free for qualifying small businesses (under $1M ARR), non-commercial, non-profit, and research use. Checkout is handled securely by Stripe.</p>
     <div class="product-stripe">
         <script async src="https://js.stripe.com/v3/pricing-table.js"></script>

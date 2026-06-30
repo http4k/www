@@ -10,7 +10,7 @@
 </section>
 
 <section class="company-section company-mission">
-    <div class="section-head"><h2 class="company-h2">Simplicity and clarity, with a stubborn allergy to magic.</h2></div>
+    <div class="section-head"><h2 class="section-h2">Simplicity and clarity, with a stubborn allergy to magic.</h2></div>
     {{ .Content }}
 </section>
 
@@ -28,8 +28,8 @@
 <section class="company-section">
     <div class="section-head">
         <div class="eyebrow">// THE FOUNDERS</div>
-        <h2 class="company-h2">Two engineers started it. A community runs with it.</h2>
-        <p class="company-lede">http4k began with the two of us back in 2017, but it's what it is today thanks to hundreds of companies and a <a href="/community/">global community of contributors</a>.</p>
+        <h2 class="section-h2">Two engineers started it. A community runs with it.</h2>
+        <p class="section-lede company-lede">http4k began with the two of us back in 2017, but it's what it is today thanks to hundreds of companies and a <a href="/community/">global community of contributors</a>.</p>
     </div>
     <div class="founder-grid">
         {{ range .Site.Data.company.founders }}
@@ -58,7 +58,7 @@
 <section class="company-section">
     <div class="section-head">
         <div class="eyebrow">// HOW WE CAN HELP</div>
-        <h2 class="company-h2">Need a hand? Go straight to the source.</h2>
+        <h2 class="section-h2">Need a hand? Go straight to the source.</h2>
     </div>
     <div class="service-grid">
         {{ range $i, $h := .Params.highlights }}

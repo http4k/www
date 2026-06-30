@@ -1,9 +1,7 @@
 // Product microsites (_sites/*) - fits the Wiretap comp onto product/baseof.html. ASCII only.
 
 .product-section { @include section-wrap; }
-.product-h2 { font-size: 2.125rem; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; color: var(--ink); margin: 0; }
-.section-head--center .product-lead { margin-inline: auto; }
-.product-lead { font-size: var(--fs-lead); line-height: 1.55; color: var(--text-muted); margin: 14px 0 0; }
+.section-head--center .section-lede { margin-inline: auto; }
 
 // --- hero (reuses the homepage .landing--ink pipes treatment) ---
 .product-hero { color: var(--text-on-ink); }

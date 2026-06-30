@@ -65,8 +65,17 @@
 .section-head--split { max-width: none; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .section-head--center { max-width: none; text-align: center; }
 
+// One section heading + one section lede everywhere. Pages stopped cloning
+// .company-h2 / .ent-h2 / .ov-lead etc; only genuine per-use deltas (a trailing
+// margin, a centered measure) stay in the page files. Ink variants below.
+.section-h2, .list-section__title { font-size: 2.125rem; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; color: var(--ink); }
+.section-h2 { margin: 0 0 12px; }
+.section-lede { font-size: var(--fs-lead); line-height: 1.6; color: var(--text-muted); max-width: var(--lede); margin: 0; }
+
 // One eyebrow everywhere; cyan on ink surfaces (heroes + ink sections).
 .ink-hero .eyebrow, .ent-editions .eyebrow, .security-audits .eyebrow { color: var(--blue); }
+.ent-editions .section-h2, .security-audits .section-h2 { color: #fff; }
+.security-audits .section-lede { color: #aebece; }
 
 // Shared ink-hero headline + sub (enterprise/company/security/product heroes).
 .hero-title { font-size: clamp(2.4rem, 5vw, 3.5rem); line-height: 1.04; letter-spacing: -0.03em; font-weight: 700; color: #fff; margin: 0 0 20px; max-width: 840px; }

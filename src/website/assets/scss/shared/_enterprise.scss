@@ -1,7 +1,6 @@
 // http4k Enterprise page - fits the comp onto enterprise.md. ASCII only.
 
 .ent-section { @include section-wrap; }
-.ent-h2 { font-size: 2.125rem; line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; margin: 0; color: var(--ink); }
 
 // --- hero (ink + pipes) ---
 // hero background = shared .ink-hero (_primitives.scss)
@@ -16,7 +15,7 @@
 
 // --- supply chain flagship ---
 .ent-supply { background: var(--off-white); border: 1px solid var(--border); border-radius: 20px; padding: 48px 44px; }
-.ent-supply__lead { font-size: var(--fs-lead); line-height: 1.6; color: var(--text-muted); margin: 14px 0 32px; max-width: var(--lede); }
+.ent-supply__lead { margin-bottom: 32px; }
 .ent-supply__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 36px; }
 .ent-deliverable { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 22px 20px; }
 .ent-deliverable h4 { font-size: 0.98rem; font-weight: 700; color: var(--ink); margin: 0 0 6px; }
@@ -56,7 +55,6 @@
 // --- editions (ink) ---
 .ent-editions { background: var(--ink); color: var(--text-on-ink); }
 .ent-editions__inner { max-width: 1200px; margin: 0 auto; padding: 84px 36px; }
-.ent-editions .ent-h2 { color: #fff; }
 
 .ent-matrix { width: 100%; border-collapse: collapse; }
 .ent-matrix th, .ent-matrix td { padding: 16px 18px; text-align: left; border-bottom: 1px solid #1f3142; }

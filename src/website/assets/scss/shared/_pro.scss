@@ -2,15 +2,6 @@
 
 .pro-section { @include section-wrap; }
 
-.pro-h2 {
-    font-size: 2.125rem;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-    margin: 0;
-    color: var(--ink);
-}
-
 // --- hero ---
 .pro-hero { border-bottom: 1px solid var(--border); }
 .pro-hero__inner { max-width: 1200px; margin: 0 auto; padding: 72px 36px 52px; }
