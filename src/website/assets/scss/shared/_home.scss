@@ -179,7 +179,7 @@
 
 .product-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 22px 46px -26px rgba(11, 22, 34, 0.35);
+    box-shadow: var(--shadow-hover);
 }
 
 .product-card h3 {

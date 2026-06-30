@@ -7,13 +7,7 @@
     padding: 70px 36px 40px;
     border-bottom: 1px solid var(--border);
 
-    .eyebrow {
-        font-family: var(--font-mono);
-        font-size: var(--fs-xs);
-        letter-spacing: 0.16em;
-        color: var(--blue-strong);
-        margin-bottom: 16px;
-    }
+    .eyebrow { margin-bottom: 16px; }
 
     h1 {
         font-size: var(--fs-h1);
@@ -101,7 +95,7 @@
 
 .article-card:hover {
     border-color: var(--blue-strong);
-    box-shadow: 0 22px 50px -28px rgba(11, 22, 34, 0.34);
+    box-shadow: var(--shadow-hover);
 }
 
 .article-thumb {

@@ -22,7 +22,7 @@
     transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.signpost:hover { border-color: var(--blue-strong); transform: translateY(-2px); box-shadow: 0 18px 40px -26px rgba(11, 22, 34, 0.3); }
+.signpost:hover { border-color: var(--blue-strong); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
 
 .signpost__rail { flex: 0 0 190px; display: flex; flex-direction: column; border-right: 1px solid #eef2f7; padding-right: 26px; }
 .signpost__title { font-size: 1.25rem; font-weight: 700; line-height: 1.18; color: var(--ink); }

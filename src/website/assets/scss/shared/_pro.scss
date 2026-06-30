@@ -59,7 +59,7 @@
     text-decoration: none;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
-.pro-module:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -24px rgba(11, 22, 34, 0.3); border-color: var(--blue-strong); }
+.pro-module:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--blue-strong); }
 
 .pro-module__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
 .pro-module__icon { width: 46px; height: 46px; border-radius: var(--radius-lg); object-fit: cover; }
