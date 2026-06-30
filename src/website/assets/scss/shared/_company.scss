@@ -25,17 +25,8 @@
 .company-mission p:last-child { margin-bottom: 0; }
 
 // --- receipts strip ---
-.company-receipts {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.company-receipts__tile { background: #fff; padding: 28px 26px; }
+.company-receipts { grid-template-columns: repeat(4, 1fr); }
+.company-receipts__tile { padding: 28px 26px; }
 
 .company-receipts__num {
     font-family: var(--font-sans);
@@ -85,17 +76,8 @@
 .founder-card__links a:hover { color: var(--blue-strong); }
 
 // --- services (numbered, 2-col bordered grid) ---
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    overflow: hidden;
-}
-
-.service-card { background: #fff; padding: 32px 30px; }
+.service-grid { grid-template-columns: repeat(2, 1fr); border-radius: 18px; }
+.service-card { padding: 32px 30px; }
 
 .service-card__num { font-family: var(--font-mono); font-size: 13px; color: var(--orange); margin-bottom: 12px; }
 

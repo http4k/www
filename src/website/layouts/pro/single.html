@@ -32,7 +32,7 @@
     </div>
     <div class="pro-grid">
         {{ range $modules }}
-        <a class="pro-module" href="{{ .link }}">
+        <a class="ui-card pro-module" href="{{ .link }}">
             <div class="pro-module__top">
                 <img class="pro-module__icon" src="/images/{{ .image }}" alt="">
                 {{ if .available }}<span class="pro-module__badge pro-module__badge--available">Available</span>
@@ -70,27 +70,27 @@
         <h2 class="section-h2">Honest licensing. Buy only the modules you use.</h2>
     </div>
     <div class="pro-tiers">
-        <div class="pro-tier">
+        <div class="ui-card pro-tier">
             <div class="pro-tier__label">FREE</div>
             <div class="pro-tier__price">&pound;0</div>
             <p class="pro-tier__desc">Individuals, non-profits and businesses under $1M revenue. Add the dependency and start using every Pro module today - no sign-up, no licence key.</p>
             <a class="pro-tier__cta" href="/quickstart/">Start building</a>
         </div>
-        <div class="pro-tier pro-tier--featured">
+        <div class="ui-card pro-tier pro-tier--featured">
             <div class="pro-tier__glow"></div>
             <div class="pro-tier__label">PER MODULE</div>
             <div class="pro-tier__price">Per seat</div>
             <p class="pro-tier__desc">Commercial teams over $1M revenue. Pick the modules you need - priced per module, per floating developer seat, billed yearly.</p>
             <a class="pro-tier__cta" href="#modules">Choose your modules &rarr;</a>
         </div>
-        <div class="pro-tier">
+        <div class="ui-card pro-tier">
             <div class="pro-tier__label">ENTERPRISE</div>
             <div class="pro-tier__price">Everything</div>
             <p class="pro-tier__desc">The only way to get every Pro module in one go - bundled with LTS, priority support, source access and supply-chain provenance. Best value past a few modules.</p>
             <a class="pro-tier__cta" href="/enterprise/">Explore Enterprise &rarr;</a>
         </div>
     </div>
-    <div class="pro-custom">
+    <div class="ui-card pro-custom">
         <div>
             <p class="pro-custom__title">Custom licensing</p>
             <p class="pro-custom__text">We offer custom licensing terms to suit your organisation's needs, with volume discounts and support package customisations available for your team's requirements.</p>

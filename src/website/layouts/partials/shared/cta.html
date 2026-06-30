@@ -6,7 +6,7 @@
         </div>
         <div class="solution-cta__grid">
             {{ range site.Data.cta }}
-            <div class="solution-cta-card">
+            <div class="ui-card solution-cta-card">
                 <h3>{{ .title }}</h3>
                 <p>{{ .description | markdownify }}</p>
                 <a href="{{ .link }}">{{ .text }} &rarr;</a>

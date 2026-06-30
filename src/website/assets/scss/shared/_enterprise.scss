@@ -7,8 +7,8 @@
 .ent-hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; }
 
 // --- at a glance ---
-.ent-glance { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-.ent-glance__card { background: #fff; padding: 30px 28px; }
+.ent-glance { grid-template-columns: repeat(3, 1fr); }
+.ent-glance__card { padding: 30px 28px; }
 .ent-glance__card h3 { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
 .ent-glance__card p { font-size: 0.95rem; line-height: 1.55; color: var(--text-muted); margin: 0; }
 
@@ -16,7 +16,7 @@
 .ent-supply { background: var(--off-white); border: 1px solid var(--border); border-radius: 20px; padding: 48px 44px; }
 .ent-supply__lead { margin-bottom: 32px; }
 .ent-supply__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 36px; }
-.ent-deliverable { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 22px 20px; }
+.ent-deliverable { padding: 22px 20px; }
 .ent-deliverable h4 { font-size: 0.98rem; font-weight: 700; color: var(--ink); margin: 0 0 6px; }
 .ent-deliverable p { font-size: 0.85rem; line-height: 1.5; color: var(--text-muted); margin: 0; }
 

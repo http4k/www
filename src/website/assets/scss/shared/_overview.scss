@@ -34,7 +34,7 @@
 
 // credit cards
 .ov-credits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.ov-credit { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 26px 28px; }
+.ov-credit { border-radius: 14px; padding: 26px 28px; }
 .ov-credit__kick { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 14px; }
 .ov-credit__name { font-size: 1.2rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
 .ov-credit__name a { color: var(--blue-strong); text-decoration: none; }

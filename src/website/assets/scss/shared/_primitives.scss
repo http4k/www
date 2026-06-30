@@ -93,3 +93,12 @@
 // Mono pill on dark surfaces (product hero badge, pro free-tier chip).
 .chip-ink { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 11px; border-radius: 6px; background: #13202e; border: 1px solid #1f3142; color: var(--blue); }
 .chip-ink--ea { color: var(--orange); background: rgba(238, 125, 43, 0.12); border-color: rgba(238, 125, 43, 0.3); }
+
+// One bordered card identity (white, hairline border, rounded). Page files keep
+// only their own deltas: padding, radius bump, flex/grid layout, hover.
+.ui-card { background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+
+// One 1px-seam grid (bordered mosaic of white tiles). Set columns per use; the
+// gap reveals --border as the seam, tiles paint over it.
+.mosaic { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.mosaic > * { background: var(--paper); }

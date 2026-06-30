@@ -34,7 +34,7 @@
         <div class="section-head"><h2 class="section-h2">Highlights</h2></div>
         <div class="product-feature-grid">
             {{ range .Params.features }}
-            <div class="product-feature">
+            <div class="ui-card product-feature">
                 {{ with .icon }}<img src="/images/{{ . }}.svg" alt="">{{ end }}
                 <h4>{{ .title | markdownify }}</h4>
                 <div class="product-feature__dash {{ .colour }}-colour"></div>

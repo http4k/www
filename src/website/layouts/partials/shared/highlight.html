@@ -1,6 +1,6 @@
 <div class="solution-grid">
     {{ range . }}
-    <div class="solution-card">
+    <div class="ui-card solution-card">
         {{ if .icon }}<img src="{{ .icon }}" alt="{{ .alt }}">{{ end }}
         <h3>{{ .title }}</h3>
         <p>{{ .description | markdownify }}</p>

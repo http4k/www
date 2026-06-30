@@ -54,8 +54,6 @@
 .pro-module {
     display: flex;
     flex-direction: column;
-    background: #fff;
-    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 26px 24px;
     text-decoration: none;
@@ -116,8 +114,6 @@
 .pro-tier {
     display: flex;
     flex-direction: column;
-    background: #fff;
-    border: 1px solid var(--border);
     border-radius: 18px;
     padding: 32px 30px;
 }
@@ -169,8 +165,6 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    background: #fff;
-    border: 1px solid var(--border);
     border-radius: 14px;
     padding: 22px 26px;
 }

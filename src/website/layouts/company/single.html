@@ -15,7 +15,7 @@
 </section>
 
 <section class="section-rail">
-    <div class="company-receipts">
+    <div class="company-receipts mosaic">
         {{ range .Site.Data.receipts }}
         <div class="company-receipts__tile">
             <div class="company-receipts__num">{{ .value }}</div>
@@ -60,7 +60,7 @@
         <div class="eyebrow">// HOW WE CAN HELP</div>
         <h2 class="section-h2">Need a hand? Go straight to the source.</h2>
     </div>
-    <div class="service-grid">
+    <div class="service-grid mosaic">
         {{ range $i, $h := .Params.highlights }}
         <div class="service-card">
             <div class="service-card__num">{{ printf "%02d" (add $i 1) }}</div>

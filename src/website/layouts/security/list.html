@@ -11,17 +11,17 @@
 
 <section class="security-policy section--off">
     <div class="security-policy__inner">
-        <a class="security-policy-card security-policy-card--report" href="mailto:security@http4k.org">
+        <a class="ui-card security-policy-card security-policy-card--report" href="mailto:security@http4k.org">
             <div class="security-policy-card__kick">REPORT</div>
             <h3>Found something?</h3>
             <p>Disclose privately via GitHub Security Advisories or security@http4k.org. We respond fast - see the timelines below.</p>
         </a>
-        <a class="security-policy-card" href="/cvd-policy/">
+        <a class="ui-card security-policy-card" href="/cvd-policy/">
             <div class="security-policy-card__kick">CVD POLICY</div>
             <h3>Coordinated disclosure</h3>
             <p>How we triage, fix and disclose vulnerabilities responsibly. Read the full policy.</p>
         </a>
-        <a class="security-policy-card" href="/.well-known/cosign-keys.json">
+        <a class="ui-card security-policy-card" href="/.well-known/cosign-keys.json">
             <div class="security-policy-card__kick">SIGNING KEYS</div>
             <h3>Verify our artifacts</h3>
             <p>Public cosign keys for verifying http4k artifact signatures and provenance.</p>
@@ -45,7 +45,7 @@
     </div>
     <div class="security-list">
         {{ range $advisories }}
-        <a class="advisory-row" href="{{ .RelPermalink }}">
+        <a class="ui-card advisory-row" href="{{ .RelPermalink }}">
             <div>{{ with .Params.severity }}<span class="sev sev--{{ . | lower }}">{{ . }}</span>{{ end }}</div>
             <div>
                 <p class="advisory-row__title">{{ .Title }}</p>

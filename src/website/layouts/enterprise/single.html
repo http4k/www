@@ -18,7 +18,7 @@
         <div class="eyebrow">// WHAT'S IN THE BOX</div>
         <h2 class="section-h2">Six guarantees, one subscription.</h2>
     </div>
-    <div class="ent-glance">
+    <div class="ent-glance mosaic">
         {{ range .Params.highlights }}
         <div class="ent-glance__card">
             <h3>{{ .title }}</h3>
@@ -34,10 +34,10 @@
         <h2 class="section-h2">Supply chain security is the whole point.</h2>
         <p class="section-lede ent-supply__lead">From September 2026, the EU Cyber Resilience Act requires verifiable provenance and machine-readable SBOMs for every component sold into Europe. US Executive Order 14028, NIST SSDF and PCI DSS 4.0 push in the same direction. http4k Enterprise Edition delivers it today.</p>
         <div class="ent-supply__grid">
-            <div class="ent-deliverable"><h4>SLSA Level 2 provenance</h4><p>Tamper-evident build provenance on every artifact. SLSA L3 on request.</p></div>
-            <div class="ent-deliverable"><h4>CycloneDX SBOMs</h4><p>Machine-readable software bills of materials, signed.</p></div>
-            <div class="ent-deliverable"><h4>Signed licence reports</h4><p>Per-module licence compliance reports, audit-ready.</p></div>
-            <div class="ent-deliverable"><h4>Cosign signatures</h4><p>Cosign signatures with trusted Sigstore timestamps.</p></div>
+            <div class="ui-card ent-deliverable"><h4>SLSA Level 2 provenance</h4><p>Tamper-evident build provenance on every artifact. SLSA L3 on request.</p></div>
+            <div class="ui-card ent-deliverable"><h4>CycloneDX SBOMs</h4><p>Machine-readable software bills of materials, signed.</p></div>
+            <div class="ui-card ent-deliverable"><h4>Signed licence reports</h4><p>Per-module licence compliance reports, audit-ready.</p></div>
+            <div class="ui-card ent-deliverable"><h4>Cosign signatures</h4><p>Cosign signatures with trusted Sigstore timestamps.</p></div>
         </div>
         <table class="ent-compliance">
             <thead><tr><th>Framework</th><th>Status</th><th>What http4k EE provides</th></tr></thead>

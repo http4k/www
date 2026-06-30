@@ -90,7 +90,7 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
         <h2 class="section-h2">Nine boxes we refused to leave unticked.</h2>
         <p class="section-lede">http4k was built from scratch to fully leverage Kotlin, against a non-negotiable set of principles. Every one of these is still true today.</p>
     </div>
-    <div class="service-grid">
+    <div class="service-grid mosaic">
         {{ range $i, $p := .Site.Data.overview.principles }}
         <div class="service-card">
             <div class="service-card__num">{{ printf "%02d" (add $i 1) }}</div>
@@ -110,7 +110,7 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
         </div>
         <div class="ov-credits">
             {{ range .Site.Data.overview.credits }}
-            <div class="ov-credit">
+            <div class="ui-card ov-credit">
                 <div class="ov-credit__kick">{{ .kick }}</div>
                 <div class="ov-credit__name">{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</div>
                 <p class="ov-credit__desc">{{ .description }}</p>

@@ -6,12 +6,7 @@
 // feature/highlight card grid
 .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
-.solution-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 28px 26px;
-}
+.solution-card { padding: 28px 26px; }
 
 .solution-card img { width: 44px; height: 44px; margin-bottom: 14px; }
 .solution-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
@@ -21,14 +16,7 @@
 .solution-cta__inner { max-width: 1200px; margin: 0 auto; padding: 80px 36px; }
 .solution-cta__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
-.solution-cta-card {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 28px 26px;
-}
+.solution-cta-card { display: flex; flex-direction: column; padding: 28px 26px; }
 
 .solution-cta-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--ink); margin: 0 0 10px; }
 .solution-cta-card p { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 18px; flex: 1; }
