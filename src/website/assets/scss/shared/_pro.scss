@@ -1,26 +1,8 @@
 // http4k Pro page - fits the comp onto data/pro.yaml + pro.md. ASCII only.
 
 
-// --- hero ---
-.pro-hero { border-bottom: 1px solid var(--border); }
-.pro-hero__inner { max-width: 1200px; margin: 0 auto; padding: 72px 36px 52px; }
-.pro-hero__eyebrow {
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    letter-spacing: 0.16em;
-    color: var(--orange);
-    margin-bottom: 16px;
-}
-.pro-hero__title {
-    font-size: clamp(2.4rem, 5vw, 3.375rem);
-    line-height: 1.04;
-    letter-spacing: -0.03em;
-    font-weight: 700;
-    margin: 0 0 18px;
-    color: var(--ink);
-    max-width: 840px;
-}
-.pro-hero__sub { font-size: var(--fs-lead); line-height: 1.55; color: var(--text-muted); margin: 0 0 30px; max-width: var(--lede); }
+// --- hero (dark .ink-hero + shared .eyebrow/.hero-title/.hero-sub) ---
+.pro-hero__inner { padding: 92px 0 60px; }
 .pro-hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; }
 
 // --- free-tier banner ---
@@ -166,6 +148,6 @@
 
 // --- responsive ---
 @media (max-width: 767.98px) {
-    .pro-hero__inner { padding: 56px 24px 40px; }
+    .pro-hero__inner { padding: 76px 0 44px; }
     .pro-free-banner__inner { padding: 20px 24px; }
 }

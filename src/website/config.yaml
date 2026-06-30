@@ -61,27 +61,36 @@ menus:
     - name: about
       title: About
       weight: 10
-      children:
     - name: about-overview
-      title: Overview
+      title: Why http4k
       url: /overview/
       parent: about
       weight: 11
-    - name: about-news
-      title: News
-      url: /news/
-      parent: about
-      weight: 12
-    - name: about-showcase
-      title: Showcase
-      url: /showcase/
-      parent: about
-      weight: 13
     - name: about-company
       title: Company
       url: /company/
       parent: about
+      weight: 12
+    - name: about-news
+      title: News
+      url: /news/
+      parent: about
+      weight: 13
+    - name: about-showcase
+      title: Showcase
+      url: /showcase/
+      parent: about
       weight: 14
+    - name: about-community
+      title: Community
+      url: /community/
+      parent: about
+      weight: 15
+    - name: about-community-slack
+      title: Community Slack
+      url: https://kotlinlang.slack.com/archives/C5AL3AKUY
+      parent: about
+      weight: 16
 
     - name: learn
       title: Learn
@@ -115,7 +124,22 @@ menus:
       title: FAQ
       url: /faq/
       parent: learn
-      weight: 25
+      weight: 26
+    - name: learn-toolbox
+      title: Toolbox
+      url: https://toolbox.http4k.org/
+      parent: learn
+      weight: 27
+    - name: learn-intellij
+      title: IntelliJ Plugin
+      url: https://plugins.jetbrains.com/plugin/25243-http4k-toolbox
+      parent: learn
+      weight: 28
+    - name: learn-agent-skills
+      title: Agent Skills
+      url: https://github.com/http4k/agent-skills
+      parent: learn
+      weight: 29
 
     - name: ecosystem
       title: Ecosystem
@@ -156,102 +180,137 @@ menus:
       parent: ecosystem
       weight: 37
 
-    - name: solutions
-      title: Solutions
+    - name: pro
+      title: Pro
+      url: /pro/
       weight: 40
-    - name: solutions-overview
-      title: Overview
-      url: /solutions/
-      parent: solutions
-      weight: 41
-    - name: solutions-enterprise
+
+    - name: enterprise
+      title: Enterprise
+      weight: 50
+    - name: enterprise-edition
       title: Enterprise Edition
       url: /enterprise/
-      parent: solutions
-      weight: 42
-    - name: solutions-supply-chain
-      title: Supply Chain Security
-      url: /supply-chain-security/
-      parent: solutions
-      weight: 43
-    - name: solutions-pro
-      title: http4k Pro
-      url: /pro/
-      parent: solutions
-      weight: 44
-    - name: solutions-consulting
+      parent: enterprise
+      weight: 51
+    - name: enterprise-lts
+      title: LTS Support
+      url: /lts-support/
+      parent: enterprise
+      weight: 52
+    - name: enterprise-consulting
       title: Consulting
       url: /consulting/
-      parent: solutions
-      weight: 45
-    - name: solutions-training
+      parent: enterprise
+      weight: 53
+    - name: enterprise-training
       title: Developer Training
       url: /training/
-      parent: solutions
-      weight: 46
-    - name: solutions-security
-      title: Security Advisories
-      url: /security/
-      parent: solutions
-      weight: 47
-    - name: solutions-cvd-policy
-      title: CVD Policy
-      url: /cvd-policy/
-      parent: solutions
-      weight: 48
-    - name: solutions-slack
+      parent: enterprise
+      weight: 54
+    - name: enterprise-slack
       title: http4k EE Slack
       url: "http://http4k.slack.com/"
-      parent: solutions
-      weight: 49
+      parent: enterprise
+      weight: 55
 
-    - name: community
-      title: Community
-      weight: 50
-    - name: community-contributors
-      title: Our Community of Contributors
-      url: /community/
-      parent: community
-      weight: 51
-    - name: community-slack
-      title: Community Slack
-      url: https://kotlinlang.slack.com/archives/C5AL3AKUY
-      parent: community
-      weight: 52
-    - name: community-coc
-      title: Code of Conduct
-      url: /code-of-conduct/
-      parent: community
-      weight: 53
-
-    - name: toolbox
-      title: Tooling
+    - name: security
+      title: Security
       weight: 60
-    - name: tools-web
-      title: Toolbox (Web)
-      url: https://toolbox.http4k.org/
-      parent: toolbox
+    - name: security-supply-chain
+      title: Supply Chain Security
+      url: /supply-chain-security/
+      parent: security
       weight: 61
-    - name: tools-claude
-      title: LLM Agent Skills
-      url: https://github.com/http4k/agent-skills
-      parent: toolbox
+    - name: security-verify
+      title: http4k Verify
+      url: https://verify.http4k.org
+      parent: security
       weight: 62
-    - name: toolbox-intellij
-      title: IntelliJ Plugin
-      url: https://plugins.jetbrains.com/plugin/25243-http4k-toolbox
-      parent: toolbox
+    - name: security-advisories
+      title: Security Advisories
+      url: /security/
+      parent: security
       weight: 63
-    - name: tools-cli
-      title: Toolbox CLI
-      url: https://toolbox.http4k.org/
-      parent: toolbox
+    - name: security-cvd
+      title: CVD Policy
+      url: /cvd-policy/
+      parent: security
       weight: 64
-    - name: tools-cosign
-      title: Public Signing Keys
-      url: /.well-known/cosign-keys.json
-      parent: toolbox
-      weight: 65
+
+  footer:
+    - name: footer-product
+      title: Product
+      weight: 10
+    - name: footer-pro
+      title: Pro
+      url: /pro/
+      parent: footer-product
+      weight: 11
+    - name: footer-enterprise
+      title: Enterprise
+      url: /enterprise/
+      parent: footer-product
+      weight: 12
+    - name: footer-supply-chain
+      title: Supply Chain Security
+      url: /supply-chain-security/
+      parent: footer-product
+      weight: 13
+    - name: footer-verify
+      title: http4k Verify
+      url: https://verify.http4k.org
+      parent: footer-product
+      weight: 14
+
+    - name: footer-learn
+      title: Learn
+      weight: 20
+    - name: footer-quickstart
+      title: Quickstart
+      url: /quickstart/
+      parent: footer-learn
+      weight: 21
+    - name: footer-tutorials
+      title: Tutorials
+      url: /tutorial/
+      parent: footer-learn
+      weight: 22
+    - name: footer-howto
+      title: How-to guides
+      url: /howto/
+      parent: footer-learn
+      weight: 23
+    - name: footer-docs
+      title: Docs
+      url: /ecosystem/
+      parent: footer-learn
+      weight: 24
+
+    - name: footer-resources
+      title: Resources
+      weight: 30
+    - name: footer-news
+      title: News
+      url: /news/
+      parent: footer-resources
+      weight: 31
+    - name: footer-showcase
+      title: Showcase
+      url: /showcase/
+      parent: footer-resources
+      weight: 32
+    - name: footer-community
+      title: Community
+      url: /community/
+      parent: footer-resources
+      weight: 33
+    - name: footer-security
+      title: Security Advisories
+      url: /security/
+      parent: footer-resources
+      weight: 34
+
   legal:
     - name: "Privacy policy"
       url: /privacy-policy/

@@ -1,41 +1,6 @@
 // List pages - one reusable article card across news / howto / tutorial / showcase.
 // Built from the News comp; comp hexes map 1:1 to design tokens. ASCII only (BOM gotcha).
 
-.list-header {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 70px 36px 40px;
-    border-bottom: 1px solid var(--border);
-
-    .eyebrow { margin-bottom: 16px; }
-
-    h1 {
-        font-size: var(--fs-h1);
-        line-height: 1.04;
-        letter-spacing: -0.03em;
-        font-weight: 700;
-        color: var(--ink);
-        margin: 0 0 16px;
-        max-width: 840px;
-    }
-
-    p {
-        font-size: var(--fs-lead);
-        line-height: 1.55;
-        color: var(--text-muted);
-        margin: 0;
-        max-width: 600px;
-    }
-}
-
-.list-header__intro {
-    margin-top: 14px;
-    color: var(--text-muted);
-
-    p, li { font-size: var(--fs-body); line-height: 1.6; }
-    p { margin: 0 0 0.6rem; max-width: none; }
-    a { color: var(--blue-dark); }
-}
 
 .list-section { padding-block: 30px 72px; }
 
@@ -271,7 +236,6 @@
 
 // --- responsive ---
 @media (max-width: 767.98px) {
-    .list-header { padding: 48px 24px 32px; }
     .list-section,
     .filter-chips,
     .newsletter-wrap { padding-left: 24px; padding-right: 24px; }

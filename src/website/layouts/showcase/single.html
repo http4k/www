@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "shared/list-header.html" (dict "eyebrow" "showcase" "title" .Title "intro" .Content) }}
+{{ partial "shared/section-hero.html" (dict "eyebrow" "showcase" "title" .Title "lede" .Params.description) }}
 
 <section class="section-rail list-section">
     <h2 class="list-section__title">Talks</h2>

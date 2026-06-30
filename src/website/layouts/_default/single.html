@@ -1,27 +1,17 @@
 {{ define "main" }}
 
-<div class="layout">
-    <main class="page-content">
-        <header>
-            {{ with .Params.eyebrow }}{{ partial "shared/eyebrow.html" . }}{{ end }}
-            <h1>{{ .Title }}</h1>
-        </header>
-        <article>
-            <div>
-                {{ .Content }}
-            </div>
-            {{ with .Params.tags }}
-            <div>
-                <ul id="tags">
-                    {{ range . }}
-                    <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-                    {{ end }}
-                </ul>
-            </div>
-            {{ end }}
-        </article>
-    </main>
+<div class="prose-page">
+    {{ with .Params.eyebrow }}{{ partial "shared/eyebrow.html" . }}{{ end }}
+    <h1 class="reading__title">{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="reading__lede">{{ . }}</p>{{ end }}
+    <div class="article-body">
+        {{ .Content }}
+    </div>
+    {{ with .Params.tags }}
+    <ul class="prose-page__tags">
+        {{ range . }}<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+    </ul>
+    {{ end }}
 </div>
-{{ partial "shared/pipes.html" }}
 
 {{ end }}

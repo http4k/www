@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "shared/list-header.html" (dict "eyebrow" "solutions" "title" .Title "lede" .Params.description) }}
+{{ partial "shared/section-hero.html" (dict "eyebrow" "solutions" "title" .Title "lede" .Params.description) }}
 
 {{ with .Params.top }}
 <section class="section-rail">

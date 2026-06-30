@@ -1,7 +1,6 @@
 {{ define "main" }}
 
-{{ partial "shared/list-header.html" (dict
-    "crumbs" (slice (dict "label" "learn" "url" "/learn/") (dict "label" "how-to guides"))
+{{ partial "shared/section-hero.html" (dict
     "eyebrow" "how-to guides"
     "title" "If you've got something to achieve, we've probably done it already."
     "lede" "Ready-made recipes for common use-cases - the required deps, the problem, and a fully runnable solution. Like a mini-StackOverflow, but you get the whole thing to adapt.") }}

@@ -1,7 +1,6 @@
 {{ define "main" }}
 
-{{ partial "shared/list-header.html" (dict
-    "crumbs" (slice (dict "label" "learn" "url" "/learn/") (dict "label" "tutorials"))
+{{ partial "shared/section-hero.html" (dict
     "eyebrow" "tutorials"
     "title" "Start at the top. Be dangerous by the bottom."
     "lede" "A guided path through http4k's main ideas, in order. Each tutorial builds on the last - work straight down and you'll go from an empty directory to a fully working service.") }}

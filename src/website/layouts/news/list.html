@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "shared/list-header.html" (dict "eyebrow" "news & updates" "title" .Title "lede" .Params.description) }}
+{{ partial "shared/section-hero.html" (dict "eyebrow" "news & updates" "title" .Title "lede" .Params.description) }}
 
 {{ $posts := sort (where .Site.RegularPages "Type" "eq" "news") "Date" "desc" }}
 {{ $featured := index $posts 0 }}
