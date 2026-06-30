@@ -1,206 +1,25 @@
 {{ define "main" }}
-<!-- features-->
-<div class="developers-custom">
-    <div class="container-fluid">
-        <h2 class="reveal">HTTP as a Function</h2>
-        <div class="row">
-            <div class="col-md-6 text-center reveal-left">
-                <img class="img-fluid img-zoom" style="border-radius: 8px" src="/images/server.png"
-                     alt="Creating a server with http4k"/>
-                <p>An http4k server is just a regular function that gets invoked with a Request and returns a Response.
-                    <br><br>
-                    In a single line of code you can switch your server between Java (built-in), Apache, Jetty, Netty,
-                    Undertow, Ktor, Ratpack or Helidon.
-                </p>
-            </div>
-            <div class="col-md-6 text-center reveal-right">
-                <img class="img-fluid img-zoom" style="border-radius: 8px" src="/images/client.png"
-                     alt="Creating a client with http4k"/>
-                <p>An http4k client is just a regular function that you invoke with a Request and receives a Response.
-                    <br><br>
-                    In a single line of code you can switch your client implementation between Java (built-in), Apache,
-                    Fuel, Jetty, and OkHttp.
-                </p>
-            </div>
-        </div>
-    </div>
+<h1 class="visually-hidden">http4k - the functional toolkit for Kotlin HTTP applications</h1>
+<!-- 2. Read it. Test it. Trust it. -->
+{{ partial "home/core-types.html" . }}
 
-</div>
-<div class="features" style="background-color: #f8f8f8; padding-bottom: 80px;">
-    <div class="container">
-        <h2 class="reveal">Highlights</h2>
-        <div class="row stagger-children">
-            <div class="col-md-6 col-lg-3">
-                <div class="card-custom feature-card hover-lift"><img src="/images/footprint.svg" alt="footprint"/>
-                    <h4>Tiny <br/> footprint</h4>
-                    <div class="dash blue-color">
+<!-- 3. Tale of the tape -->
+{{ partial "home/tale-of-the-tape.html" . }}
 
-                    </div>
-                    <p>The core library has no dependencies and it’s all you need to create fully-functional
-                        applications. <br><br>
-                        http4k APIs take advantage of Kotlin features and are powered by Functional Programming
-                        techniques.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card-custom feature-card hover-lift"><img src="/images/extendable.svg" alt="extendable"/>
-                    <h4>Highly <br/> extendable</h4>
-                    <div class="dash purple-color">
+<!-- 4. Look what we've been building -->
+{{ partial "home/products.html" . }}
 
-                    </div>
-                    <p>
-                        Supports many Server, Serverless and HTTP Client technologies behind simple, consistent
-                        interfaces. <br><br>
-                        http4k provides
-                        <a href="/ecosystem/">over 150 pre-built integrations</a> for developers to choose from
-                        including Observability, JSON, and OpenAPI support.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card-custom feature-card hover-lift"><img src="/images/testability.svg" alt="testability"/>
-                    <h4>First class<br/> testability</h4>
-                    <div class="dash secondary-color">
+<!-- 5. Supply chain (light + dark Verify terminal) -->
+{{ partial "home/verify-terminal.html" . }}
 
-                    </div>
-                    <p>
-                        Create lightning fast, rock solid test suites for individual endpoints, applications or
-                        multi-service systems, all running fully in-memory. <br><br>
-                        http4k embraces advanced testing approaches such as
-                        <a href="/ecosystem/http4k/reference/approvaltests/">Approval</a>,
-                        <a href="/ecosystem/http4k/reference/chaos/">Chaos</a> and
-                        <a href="/ecosystem/http4k/reference/servicevirtualisation/">Service Virtualization</a>.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card-custom feature-card hover-lift"><img src="/images/supportive.svg" alt="supportive"/>
-                    <h4>Battle-tested <br/> in the wild</h4>
-                    <div class="dash green-color">
+<!-- 6. Ecosystem marquee -->
+{{ partial "home/ecosystem-marquee.html" . }}
 
-                    </div>
-                    <p>http4k takes advantage of technologies that have millions of hours of production
-                        runtime. <br><br>
-                        The toolkit has been used to build high volume applications in Banking, Publishing & Government
-                        projects.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-10">
-            <div class="api reveal-scale" style="margin-top: 80px; margin-bottom: 80px;">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-xl-4">
-                        <h2>More than 150 integrations</h2>
-                        <p>http4k integrates with many tools, libraries and APIs for building Cloud-Native and AI powered
-                            applications.</p>
-                        <a class="btn btn-primary ripple" href="/ecosystem/">Check it out</a>
-                    </div>
-                    <div class="col-lg-7 offset-xl-1 col-lg-7 offset-xl-1">
-                        {{ range .Site.Data.modules }}
-                            <div class="row justify-content-center align-items-center">
-                                {{ range . }}
-                                    <div class="col text-center integrationLogo">
-                                        <img class="img-fluid" src="{{ .image }}" alt="{{ .alt }}"/>
-                                    </div>
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="features" style="background-color: #f8f8f8; padding-top: 80px; padding-bottom: 80px;">
-    <div class="container">
-        <h2 class="reveal">Supply chain you can prove</h2>
-        <p class="reveal text-center" style="max-width: 760px; margin: 0 auto 2.5rem;">
-            From September 2026, the EU Cyber Resilience Act requires verifiable provenance for every component
-            shipped in software sold into Europe. http4k Enterprise Edition delivers it today - and gives your
-            build the tooling to enforce it automatically.
-        </p>
-        <div class="row stagger-children">
-            <div class="col-md-4">
-                <div class="card-custom feature-card hover-lift">
-                    <img src="/images/connections.svg" alt="provenance and SBOMs"/>
-                    <h4>Signed provenance<br/>and SBOMs</h4>
-                    <div class="dash blue-color">
+<!-- 7. Receipts -->
+{{ partial "home/receipts.html" . }}
 
-                    </div>
-                    <p>Every artifact ships with <strong>SLSA Level 2 provenance</strong>, <strong>CycloneDX SBOMs</strong>,
-                        <strong>cosign signatures</strong> and signed licence reports - all available through the
-                        <a href="https://maven.http4k.org">http4k Enterprise Repository</a>.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-custom feature-card hover-lift">
-                    <img src="/images/verified.svg" alt="build-time verification"/>
-                    <h4>Build-time<br/>verification</h4>
-                    <div class="dash purple-color">
-
-                    </div>
-                    <p>The <a href="https://verify.http4k.org">http4k Verify</a> Gradle plugin checks signatures,
-                        SBOMs and provenance for every http4k dependency - automatically, before your code
-                        compiles. One line of build config; zero developer overhead.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-custom feature-card hover-lift">
-                    <img src="/images/supportive.svg" alt="regulatory readiness"/>
-                    <h4>Regulatory<br/>readiness</h4>
-                    <div class="dash green-color">
-
-                    </div>
-                    <p>Satisfy the evidence requirements of the <strong>EU CRA</strong>, <strong>US EO 14028</strong>,
-                        <strong>NIST SSDF</strong> and <strong>PCI DSS 4.0</strong> - without bolting on third-party
-                        scanners or maintaining your own attestation pipeline.</p>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <a class="btn btn-primary ripple" href="/supply-chain-security/">Explore supply chain security</a>
-            <a class="btn btn-secondary ripple" href="https://verify.http4k.org">Get http4k Verify</a>
-        </div>
-    </div>
-</div>
-<div style="padding-top: 80px; padding-bottom: 80px;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div>
-                <div class="container">
-                    <div class="row justify-content-center reveal">
-                        <div class="col-md-8 col-lg-8 text-center">
-                            <h2>Corporate partners</h2>
-                            <p>
-                                http4k works with selected companies to fund and explore continued innovation around
-                                the project. If your organisation is using http4k and would like to take advantage of
-                                this program, please <a href="mailto:info@http4k.org?subject=Corporate Sponsorship">get
-                                in touch</a>.
-                            </p>
-                        </div>
-                        <div class="row-col-6 justify-content-center d-flex">
-                            {{ range .Site.Data.sponsors }}
-                                <div class="col-3">
-                                    <a href="{{ .url }}"><img class="img-fluid"
-                                                              src="{{ .logo }}"
-                                                              alt="{{ .name}}"/></a>
-                                </div>
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div style="background: linear-gradient(180deg, #f8f8f8 0%, #ffffff 100%);">
-    {{ partial "shared/cta.html" ( dict "hideImages" false "page" .) }}
-</div>
-{{ partial "shared/pipes.html" }}
+<!-- 8. Final CTA -->
+{{ partial "home/final-cta.html" . }}
 
 {{ end }}
 

@@ -1,18 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 {{ partial "head/head.html" . }}
-{{ partial "shared/landing_styles.html" . }}
 <body>
-<header class="landing">
+<header class="landing landing--ink">
     <div class="landing-bg"></div>
-    <div class="overlay"></div>
+    <div class="landing-glow"></div>
     {{ partial "shared/header.html" . }}
     <div class="container h-80 text-white">
-        <div class="row align-items-center h-100">
-            <div class="col-md-9 col-lg-7 col-xl-6">
-                <h2 class="header mb-4">The Functional toolkit for Kotlin HTTP applications</h2>
-                <p class="mb-3">http4k provides a simple and uniform way to serve, consume, and test HTTP services.</p>
-                <a class="btn btn-secondary" href="/quickstart/">Quick Start</a>
+        <div class="row align-items-center h-100 g-5">
+            <div class="col-lg-6">
+                <div class="hero-kicker">// THE FUNCTIONAL TOOLKIT FOR KOTLIN&nbsp;&nbsp;·&nbsp;&nbsp;SINCE 2017</div>
+                <h1 class="hero-title">Server as a Function.<br>We meant it <span class="hero-em">literally</span>.</h1>
+                <p class="hero-sub">No annotations. No reflection. No container. No magic. Just immutable
+                    Kotlin functions you can read, test in-memory in milliseconds, and actually trust in
+                    production - from your first endpoint to your hundredth service.</p>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <a class="btn btn-secondary btn-lg" href="/quickstart/"><b>Start building - it's free</b></a>
+                    <a class="btn btn-outline-light btn-lg" href="/pro">See what's new in Pro →</a>
+                </div>
+                <div class="hero-proof">
+                    <span><span class="hero-proof__mark">›</span> 5M+ downloads / month</span>
+                    <span><span class="hero-proof__mark">›</span> 200+ modules</span>
+                    <span><span class="hero-proof__mark">›</span> 0 reflection</span>
+                    <span><span class="hero-proof__mark">›</span> Apache 2.0 core</span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="code-card">
+                    <div class="code-card__bar">
+                        <span class="code-card__dot code-card__dot--r"></span>
+                        <span class="code-card__dot code-card__dot--y"></span>
+                        <span class="code-card__dot code-card__dot--g"></span>
+                        <span class="code-card__file">HelloHttp4k.kt</span>
+                    </div>
+                    <div class="code-card__body"><pre><span class="tok-com">// a server is just a function. that's the whole trick.</span>
+<span class="tok-key">val</span> app: HttpHandler = { request -&gt; Response(OK).body(<span class="tok-str">"Hello, "</span> + request.query(<span class="tok-str">"name"</span>))
+}
+
+<span class="tok-com">// filters compose behaviours. no magic required.</span>
+<span class="tok-key">val</span> stack = DebuggingFilters.PrintRequest()
+    .then(ServerFilters.GZip())
+    .then(app)
+
+stack.asServer(<span class="tok-type">SunHttp</span>(<span class="tok-num">9000</span>)).start()
+<span class="tok-com">// → up in milliseconds. swap with 1 LOC.</span> <span class="code-cursor"></span></pre></div>
+                </div>
             </div>
         </div>
     </div>

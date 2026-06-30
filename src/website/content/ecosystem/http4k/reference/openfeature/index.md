@@ -22,6 +22,6 @@ This module integrates [OpenFeature](https://openfeature.dev/) feature flag eval
 
 ### OpenFeature
 
-The `ServerFilters.PopulateOpenFeatureContext` filter accepts any `OpenFeature` client (typically from `http4k-connect-openfeature`, real or fake) and a function deriving an `EvaluationContext` from the request. Downstream handlers extract values via `OpenFeatureFlag` Lenses — each supporting `required`, `optional`, and `defaulted` variants.
+The `ServerFilters.PopulateOpenFeatureContext` filter accepts any `OpenFeature` client (typically from `http4k-connect-openfeature`, real or fake) and a function deriving an `EvaluationContext` from the request. Downstream handlers extract values via `OpenFeatureFlag` Lenses - each supporting `required`, `optional`, and `defaulted` variants.
 
 {{< kotlin file="example.kt" >}}

@@ -1,5 +1,6 @@
 ---
 title: "An MCP Server That Fits in a Tweet (and MCP Apps That Don't Need To)"
+category: "AI"
 description: "http4k MCP SDK hits the 2025-11-25 spec, adds MCP Apps, OpenTelemetry, and a testing module - all with the testability you'd expect."
 date: 2026-03-10
 image: image.webp

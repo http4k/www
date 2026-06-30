@@ -1,24 +1,27 @@
 {{ define "main" }}
 
-<div class="layout d-flex">
-    <main class="page-content mx-auto">
-        <article>
-            <h1>{{ .Title }}</h1>
-            <h5> Severity: {{ .Params.severity }}</h5>
-            <h5 style="text-align: right;">{{ .Params.date | time.Format "January 2, 2006" }}</h5>
+<article class="advisory-detail">
+    <nav class="advisory-detail__crumbs">
+        <a href="/security/">security</a>
+        <span>/</span>
+        <span>{{ with .Params.CVE }}{{ . }}{{ else }}advisory{{ end }}</span>
+    </nav>
+    <div class="advisory-detail__badges">
+        {{ with .Params.severity }}<span class="sev sev--{{ . | lower }}">{{ . }}</span>{{ end }}
+    </div>
+    <h1>{{ .Title }}</h1>
+    <div class="advisory-detail__meta">{{ with .Params.date }}{{ . | time.Format "2 January 2006" }}{{ end }}{{ with .Params.CVE }} &middot; {{ . }}{{ end }}</div>
+    {{ with .Params.advisory }}<a class="cta-btn cta-btn--ghost" href="{{ . }}">View GitHub advisory &rarr;</a>{{ end }}
 
-            {{ .Content }}
+    <div class="article-body" style="margin-top:32px;">
+        {{ .Content }}
 
-            <h3>References</h3>
-            <ul>
-                <li>Full GitHub Advisory: <a href="{{ .Params.advisory }}"><b>{{ .Params.advisory}}</b></a></li>
-                <li>NIST CVE Registry: <a href="https://nvd.nist.gov/vuln/detail/{{ .Params.CVE }}"><b>https://nvd.nist.gov/vuln/detail/{{ .Params.CVE }}</b></a></li>
-            </ul>
-            <div class="my-5 d-flex justify-content-center">
-                <a href="../" class="btn btn-primary">All Security Advisories</a>
-            </div>
-        </article>
-    </main>
-</div>
+        <h3>References</h3>
+        <ul>
+            {{ with .Params.advisory }}<li>GitHub advisory: <a href="{{ . }}">{{ . }}</a></li>{{ end }}
+            {{ with .Params.CVE }}<li>NIST CVE registry: <a href="https://nvd.nist.gov/vuln/detail/{{ . }}">nvd.nist.gov/vuln/detail/{{ . }}</a></li>{{ end }}
+        </ul>
+    </div>
+</article>
 
 {{ end }}

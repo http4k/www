@@ -1,39 +1,74 @@
 {{ define "main" }}
 
-<div class="layout d-flex">
-    <main class="page-content">
-        <div class="row mt-5">
-            <div class="col-12 col-md-6">
-                <header>
-                    <h1>{{ .Title }}</h1>
-                </header>
-                <article>
-                    {{ .Content }}
-                </article>
-            </div>
-            <div class="col--12 col-md-6 p-4">
-                <div class="p-3 card-shadow p-4">
-                    <h3>Report a security vulnerability</h3>
-                    To report a security vulnerability for a project within the http4k ecosystem, see the
-                    <a href="/cvd-policy/">Security Policy</a>
-                </div>
-            </div>
-            <div class="row row-cols-12 mb-5">
-                {{ $pages := where .Site.RegularPages "Type" "eq" "security" }}
-                {{ range sort $pages "Permalink" "desc" }}
-                <div class="col-12 card p-5">
-                    <h5>{{ .Title }}</h5>
-                    <p><b>{{ .Params.date | time.Format "January 1st 2006" }}</b></p>
-                    <p>{{ .Params.description }}</p>
-                    <div class="mt-auto d-flex justify-content-end">
-                        <a href="{{ .RelPermalink }}" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
+<section class="security-hero ink-hero">
+    <div class="ink-hero__glow"></div>
+    <div class="container security-hero__inner">
+        <div class="eyebrow">// SECURITY</div>
+        <h1 class="hero-title">We do our security homework in public.</h1>
+        <p class="hero-sub">Every advisory below ships with the full story - root cause, affected versions, fix, and a timestamped timeline from discovery to disclosure. No quiet patches, no buried CVEs.</p>
+    </div>
+</section>
+
+<section class="security-policy">
+    <div class="security-policy__inner">
+        <a class="security-policy-card security-policy-card--report" href="mailto:security@http4k.org">
+            <div class="security-policy-card__kick">REPORT</div>
+            <h3>Found something?</h3>
+            <p>Disclose privately via GitHub Security Advisories or security@http4k.org. We respond fast - see the timelines below.</p>
+        </a>
+        <a class="security-policy-card" href="/cvd-policy/">
+            <div class="security-policy-card__kick">CVD POLICY</div>
+            <h3>Coordinated disclosure</h3>
+            <p>How we triage, fix and disclose vulnerabilities responsibly. Read the full policy.</p>
+        </a>
+        <a class="security-policy-card" href="/.well-known/cosign-keys.json">
+            <div class="security-policy-card__kick">SIGNING KEYS</div>
+            <h3>Verify our artifacts</h3>
+            <p>Public cosign keys for verifying http4k artifact signatures and provenance.</p>
+        </a>
+    </div>
+</section>
+
+{{ $advisories := sort (where .Site.RegularPages "Type" "eq" "security") "Date" "desc" }}
+<section class="security-advisories">
+    <div class="security-advisories__head">
+        <div>
+            <div class="eyebrow">// ADVISORIES</div>
+            <h2 class="security-h2">Published security advisories</h2>
         </div>
-    </main>
-</div>
-{{ partial "shared/pipes.html" }}
+        <div class="security-advisories__count">{{ len $advisories }} advisories &middot; newest first</div>
+    </div>
+    <div class="security-advisories__cols">
+        <div>Severity</div>
+        <div>Advisory</div>
+        <div class="r">Disclosed</div>
+    </div>
+    <div class="security-list">
+        {{ range $advisories }}
+        <a class="advisory-row" href="{{ .RelPermalink }}">
+            <div>{{ with .Params.severity }}<span class="sev sev--{{ . | lower }}">{{ . }}</span>{{ end }}</div>
+            <div>
+                <p class="advisory-row__title">{{ .Title }}</p>
+                <p class="advisory-row__desc">{{ .Params.description | plainify | truncate 150 }}</p>
+            </div>
+            <div class="advisory-row__date">{{ .Params.date | time.Format "2 Jan 2006" }}</div>
+        </a>
+        {{ end }}
+    </div>
+</section>
+
+<section class="security-audits">
+    <div class="security-audits__inner">
+        <div class="eyebrow">// PROACTIVE LLM SECURITY AUDITS</div>
+        <h2>We don't wait for someone to find the bug.</h2>
+        <p>We run proactive, LLM-assisted security audits across the entire http4k codebase - putting frontier models in the ring against all 200+ modules to surface issues before anyone in the wild does. Several of the advisories above came straight out of that programme, including bugs quietly present since 2017. Software that claims zero vulnerabilities usually just isn't looking.</p>
+        <a class="security-audits__link" href="/news/tale-of-the-tape-claude-vs-http4k/">Read "Tale of the tape: Claude vs http4k" &rarr;</a>
+        <div class="security-audits__stats">
+            <div><div class="security-stat__num">200+</div><div class="security-stat__label">modules reviewed by the audit pass</div></div>
+            <div><div class="security-stat__num">3</div><div class="security-stat__label">advisories surfaced proactively, then fixed</div></div>
+            <div><div class="security-stat__num">100%</div><div class="security-stat__label">disclosed publicly, with full timelines</div></div>
+        </div>
+    </div>
+</section>
 
 {{ end }}

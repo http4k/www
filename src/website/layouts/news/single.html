@@ -1,33 +1,99 @@
 {{ define "main" }}
 
-<div class="layout">
-    <main class="page-content">
-        <header>
-            <h1>{{ .Title }}</h1>
-        </header>
-        <article>
-            <div class="text-muted mt-3 mb-4" style="text-align: right;">{{ .Params.date | time.Format "January 2006" }}</div>
-            <div>
-                {{ .Content }}
+<article class="article{{ if .Fragments.Headings }} article--toc{{ end }}">
+    <div class="article-layout">
+        <div class="article-main">
+            <div class="article-head">
+                <nav class="article-crumbs">
+                    <a href="/news/">news</a>
+                    {{ with .Params.category }}<span>/</span><span>{{ . | lower }}</span>{{ end }}
+                </nav>
+                {{ if or .Params.category .Params.tags }}
+                <div class="article-badges">
+                    {{ with .Params.category }}<span class="badge-cat">{{ . }}</span>{{ end }}
+                    {{ range .Params.tags }}<span class="badge-tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+                <h1 class="article-title">{{ .Title }}</h1>
+                {{ with .Params.description }}<p class="article-lead">{{ . }}</p>{{ end }}
+                <div class="article-byline">
+                    <span class="article-byline__avatar">h4k</span>
+                    <div>
+                        <div class="article-byline__name">the http4k team</div>
+                        <div class="article-byline__meta">{{ .Params.date | time.Format "2 Jan 2006" }} &middot; {{ .ReadingTime }} min read</div>
+                    </div>
+                </div>
             </div>
-            {{ with .Params.tags }}
-            <div>
-                <ul id="tags">
-                    {{ range . }}
-                    <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-                    {{ end }}
-                </ul>
+
+            {{ $img := "" }}{{ with .Resources.GetMatch .Params.image }}{{ $img = .RelPermalink }}{{ end }}
+            {{ if and $img (not (in .Content .Params.image)) }}
+            <div class="article-banner-wrap">
+                <div class="article-banner"><img src="{{ $img }}" alt="{{ .Title }}"></div>
             </div>
             {{ end }}
-        </article>
-        <div class="mt-auto d-flex justify-content-center pb-5">
-            <script async data-uid="33ef03f749" src="https://http4k.kit.com/33ef03f749/index.js"></script>
-        </div>
-        <div class="mt-auto d-flex justify-content-center">
-            <a href="../" class="btn btn-primary">All News</a>
+
+            <div class="article-body">
+                {{ .Content }}
+            </div>
+
+            <div class="article-cta-wrap">
+                <div class="article-cta">
+                    <script async data-uid="33ef03f749" src="https://http4k.kit.com/33ef03f749/index.js"></script>
+                </div>
+            </div>
         </div>
 
-    </main>
+        {{ if .Fragments.Headings }}
+        <aside class="article-toc">
+            <div class="article-toc__title">On this page</div>
+            {{ .TableOfContents }}
+        </aside>
+        {{ end }}
+    </div>
 
-</div>
+    {{ $self := . }}
+    {{ $news := where .Site.RegularPages "Type" "eq" "news" }}
+    {{ $rel := slice }}
+    {{ range (where $news ".Params.category" .Params.category) }}{{ if ne .RelPermalink $self.RelPermalink }}{{ $rel = $rel | append . }}{{ end }}{{ end }}
+    {{ range (sort $news "Date" "desc") }}{{ if ne .RelPermalink $self.RelPermalink }}{{ $rel = $rel | append . }}{{ end }}{{ end }}
+    {{ $rel = ($rel | uniq) | first 3 }}
+    {{ with $rel }}
+    <section class="article-related">
+        <div class="eyebrow">// KEEP READING</div>
+        <div class="article-grid">
+            {{ range . }}
+            {{ $i := "" }}{{ with .Resources.GetMatch .Params.image }}{{ $i = .RelPermalink }}{{ end }}
+            {{ partial "shared/article-card.html" (dict
+                "title" .Title
+                "href" .RelPermalink
+                "excerpt" .Params.description
+                "category" .Params.category
+                "date" (.Params.date | time.Format "Jan 2006")
+                "image" $i
+                "thumbText" .Params.category) }}
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+</article>
+
+<script>
+(function () {
+    var links = document.querySelectorAll(".article-toc a");
+    if (!links.length || !("IntersectionObserver" in window)) return;
+    var map = {};
+    links.forEach(function (a) { map[decodeURIComponent(a.getAttribute("href").slice(1))] = a; });
+    var heads = document.querySelectorAll(".article-body h2[id], .article-body h3[id]");
+    var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting && map[e.target.id]) {
+                links.forEach(function (l) { l.classList.remove("active"); });
+                map[e.target.id].classList.add("active");
+            }
+        });
+    }, { rootMargin: "0px 0px -75% 0px" });
+    heads.forEach(function (h) { obs.observe(h); });
+})();
+</script>
+
 {{ end }}

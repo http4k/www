@@ -7,6 +7,49 @@ body {
     font-family: var(--font-sans);
 }
 
+/* Global header (non-hero pages) - white frosted sticky bar (docs comp).
+   Homepage keeps its own dark hero nav via landing/baseof. */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+/* light nav variant on the white header (overrides Bootstrap navbar-dark) */
+.site-header .navbar {
+    --bs-navbar-color: #43505f;
+    --bs-navbar-hover-color: var(--docs-link);
+    --bs-navbar-active-color: var(--docs-link);
+    --bs-navbar-brand-color: var(--ink);
+    --bs-navbar-brand-hover-color: var(--ink);
+    --bs-navbar-toggler-border-color: var(--border);
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(67,80,95,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* nav links: partial hardcodes .text-white / .text-primary (right for the dark
+   homepage nav) - override to dark here on the white header. !important beats the utils. */
+.site-header .navbar .nav-link,
+.site-header .navbar .nav-link:visited {
+    color: #43505f !important;
+    font-size: var(--fs-ui);
+    font-weight: 500;
+}
+
+.site-header .navbar .nav-link:hover,
+.site-header .navbar .nav-link:focus {
+    color: var(--docs-link) !important;
+}
+
+/* darken the white logo + github icon for the light header */
+.site-header .navbar-brand img,
+.site-header img[alt="github"] {
+    filter: brightness(0);
+}
+
 .text-logo {
     color: var(--blue);
     font-family: var(--font-sans);
@@ -302,6 +345,14 @@ a {
     color: var(--text);
 }
 
+// Bootstrap .card aligned to canonical card tokens (list pages)
+.card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background-color: var(--paper);
+    box-shadow: var(--shadow);
+}
+
 .grey-color {
     color: var(--text-on-ink);
     margin-top: 60px;
@@ -519,7 +570,7 @@ a {
 }
 
 .text-danger {
-    color: #dc3545;
+    color: var(--red);
 }
 
 .text-center {

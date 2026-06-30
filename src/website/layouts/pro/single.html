@@ -1,53 +1,116 @@
 {{ define "main" }}
-<div class="layout">
-    <main class="page-content">
-        <header>
-            <img src="/images/pro.png" class="imageMid mt-3" alt="{{ .Title }}">
-        </header>
-        <article>
-            <div class="mt-4 mb-4">
-                {{ .Content }}
-            </div>
-            <hr/>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-5 pb-4 justify-content-center">
-                {{ range site.Data.pro.modules }}
-                <div class="col">
-                    <div class="card h-100 text-center">
-                        <div class="p-3">
-                            <img src="/images/{{ .image }}" alt="{{ .name }}" class="rounded" style="width: 100%; aspect-ratio: 1; object-fit: cover;"/>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{ .name }}</h5>
-                            <p class="card-text small">{{ .description }}</p>
-                            <div class="mt-auto pt-3">
-                                {{ if .early_access }}
-                                <a href="{{ .link }}" class="btn btn-secondary w-100">Get Early Access</a>
-                                {{ else if .available }}
-                                <a href="{{ .link }}" class="btn btn-secondary w-100">See more</a>
-                                {{ else }}
-                                <a href="{{ .link }}" class="btn btn-secondary w-100">Coming soon...</a>
-                                {{ end }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-        </article>
-    </main>
-</div>
 
-<div class="text-center my-5 py-5" style="background-color: #f8f8f8">
-    <div class="container" style="max-width: 700px">
-        <h2>Need bulk developer seats, team licensing, or custom terms?</h2>
-        <p class="mt-3">Get in touch and we'll find the right fit - whether that's volume licensing for individual Pro modules or our full <a href="/enterprise">Enterprise Edition</a> with LTS support and priority access to all Pro modules.</p>
+<section class="pro-hero">
+    <div class="pro-hero__inner">
+        <div class="pro-hero__eyebrow">// HTTP4K PRO</div>
+        <h1 class="pro-hero__title">Premium modules. Exactly the same functional soul.</h1>
+        <p class="pro-hero__sub">Battle-tested, commercially-licensed building blocks for the hard parts - AI agents, payments, auth, observability, supply chain. No new paradigm to learn; they're just more http4k.</p>
+        <div class="pro-hero__buttons">
+            <a class="cta-btn cta-btn--primary" href="#modules">Browse the modules</a>
+            <a class="cta-btn cta-btn--ghost" href="#licensing">See licensing</a>
+        </div>
     </div>
-</div>
+</section>
 
-{{ partial "shared/faq.html" . }}
+<section class="pro-free-banner">
+    <div class="pro-free-banner__inner">
+        <span class="pro-free-banner__chip">FREE FOR SMALL TEAMS</span>
+        <span class="pro-free-banner__text">Every Pro module is <strong>free for individuals, non-profits and businesses under $1M revenue</strong> - because the best ideas come from scrappy teams.</span>
+    </div>
+</section>
 
-{{ partial "shared/cta-width.html" . }}
+{{ $modules := .Site.Data.pro.modules }}
+{{ $available := where $modules "available" true }}
+{{ $soon := where $modules "available" false }}
+<section class="pro-section pro-catalogue" id="modules">
+    <div class="pro-catalogue__head">
+        <div>
+            <div class="eyebrow">// THE CATALOGUE</div>
+            <h2 class="pro-h2">Modules, ready when you are.</h2>
+        </div>
+        <div class="pro-catalogue__count">{{ len $available }} available &middot; {{ len $soon }} in the works</div>
+    </div>
+    <div class="pro-grid">
+        {{ range $modules }}
+        <a class="pro-module" href="{{ .link }}">
+            <div class="pro-module__top">
+                <img class="pro-module__icon" src="/images/{{ .image }}" alt="">
+                {{ if .available }}<span class="pro-module__badge pro-module__badge--available">Available</span>
+                {{ else }}<span class="pro-module__badge pro-module__badge--soon">Coming soon</span>{{ end }}
+            </div>
+            <h3 class="pro-module__name">{{ .name }}</h3>
+            <p class="pro-module__desc">{{ .description }}</p>
+            <span class="pro-module__cta">{{ if .early_access }}Get early access{{ else if .available }}See more{{ else }}Coming soon{{ end }} &rarr;</span>
+        </a>
+        {{ end }}
+    </div>
+</section>
 
-{{ partial "shared/pipes.html" }}
+<section class="pro-section pro-packs">
+    <div class="eyebrow">// BUNDLED PACKS</div>
+    <h2 class="pro-h2">Buy them together, save the faff.</h2>
+    <div class="pro-packs__grid" style="margin-top:28px;">
+        {{ range .Site.Data.pro.packs }}
+        <a class="pro-pack" href="{{ .link }}">
+            <div class="pro-pack__glow"></div>
+            <div class="pro-pack__eyebrow">{{ .name }}</div>
+            <h3 class="pro-pack__name">{{ .name }}</h3>
+            {{ with .description }}<p class="pro-pack__desc">{{ . }}</p>{{ end }}
+            <span class="pro-pack__cta">Explore the pack &rarr;</span>
+        </a>
+        {{ end }}
+    </div>
+</section>
+
+<section class="pro-section" id="licensing">
+    <div class="eyebrow">// LICENSING</div>
+    <h2 class="pro-h2">Honest licensing. Buy only the modules you use.</h2>
+    <div class="pro-tiers" style="margin-top:28px;">
+        <div class="pro-tier">
+            <div class="pro-tier__label">FREE</div>
+            <div class="pro-tier__price">&pound;0</div>
+            <p class="pro-tier__desc">Individuals, non-profits and businesses under $1M revenue. Add the dependency and start using every Pro module today - no sign-up, no licence key.</p>
+            <a class="pro-tier__cta" href="/quickstart/">Start building</a>
+        </div>
+        <div class="pro-tier pro-tier--featured">
+            <div class="pro-tier__glow"></div>
+            <div class="pro-tier__label">PER MODULE</div>
+            <div class="pro-tier__price">Per seat</div>
+            <p class="pro-tier__desc">Commercial teams over $1M revenue. Pick the modules you need - priced per module, per floating developer seat, billed yearly.</p>
+            <a class="pro-tier__cta" href="#modules">Choose your modules &rarr;</a>
+        </div>
+        <div class="pro-tier">
+            <div class="pro-tier__label">ENTERPRISE</div>
+            <div class="pro-tier__price">Everything</div>
+            <p class="pro-tier__desc">The only way to get every Pro module in one go - bundled with LTS, priority support, source access and supply-chain provenance. Best value past a few modules.</p>
+            <a class="pro-tier__cta" href="/enterprise/">Explore Enterprise &rarr;</a>
+        </div>
+    </div>
+    <div class="pro-custom">
+        <div>
+            <p class="pro-custom__title">Custom licensing</p>
+            <p class="pro-custom__text">We offer custom licensing terms to suit your organisation's needs, with volume discounts and support package customisations available for your team's requirements.</p>
+        </div>
+        <a class="pro-custom__cta" href="mailto:solutions@http4k.org">Talk licensing &rarr;</a>
+    </div>
+</section>
+
+{{ with .Params.faq }}
+<section class="faq-section">
+    <div class="eyebrow">// FAQ</div>
+    <h2 class="pro-h2" style="margin-bottom:24px;">Frequently asked questions</h2>
+    {{ range . }}
+    <div class="faq-section__item">
+        <h3 class="faq-section__q">{{ .question | markdownify }}</h3>
+        <div class="faq-section__a">{{ .answer | markdownify }}</div>
+    </div>
+    {{ end }}
+    <div class="faq-section__contact">
+        <a href="mailto:solutions@http4k.org?subject=http4k Pro">Get in touch &rarr;</a>
+    </div>
+</section>
+{{ end }}
+
+<div class="pro-end"></div>
 
 {{ end }}

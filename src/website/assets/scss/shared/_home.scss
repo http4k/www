@@ -1,0 +1,537 @@
+// Homepage ("Bold") component styles. Beats are authored against the .section
+// primitive (_sections.scss); this file holds the reusable components.
+
+// --- Hero (ink pipes treatment via .landing--ink) --------------------------
+// Shared marketing hero: used by the homepage AND the product microsites
+// (layouts/product/baseof.html). Change here affects both - intentional.
+.landing--ink .landing-bg {
+    background: var(--ink);
+    -webkit-clip-path: none;
+    clip-path: none;
+}
+
+// http4k pipes as a background overlay on the header - present at the top,
+// faded toward the bottom so the hero content stays clean
+.landing--ink .landing-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/images/pipes-hero.svg") top center / cover no-repeat;
+    opacity: 0.8;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
+    pointer-events: none;
+}
+
+.landing-glow {
+    position: absolute;
+    top: -200px;
+    right: -100px;
+    width: 760px;
+    height: 760px;
+    max-width: 90%;
+    background: radial-gradient(circle, rgba(97, 192, 255, 0.22), transparent 62%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-kicker {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    color: var(--blue);
+    margin-bottom: 26px;
+}
+
+.landing--ink .hero-title {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 22px;
+    padding-top: 0;
+}
+
+.hero-tm { color: var(--blue); }
+.hero-em { color: var(--orange); }
+
+.hero-sub {
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: #aebece;
+    max-width: 545px;
+    margin: 0 0 30px;
+}
+
+.hero-proof {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 26px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: #6e8298;
+}
+
+.hero-proof__mark { color: var(--blue); }
+
+// --- Eyebrow (mono kicker - ration to ≤3 across the page) -------------------
+.eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.16em;
+    color: var(--blue-strong);
+    margin-bottom: 14px;
+}
+
+// --- Section intro (voiced H2 + lede) --------------------------------------
+.section-intro { max-width: var(--lede); }
+.section-intro--center { margin-inline: auto; text-align: center; }
+
+// --- Tale of the tape (comparison table) -----------------------------------
+.tape {
+    max-width: 1000px;
+    margin-inline: auto;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.tape__head,
+.tape__row { display: grid; grid-template-columns: 1.7fr 1fr 1fr; }
+
+.tape__head {
+    background: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.tape__row {
+    border-top: 1px solid var(--border);
+    font-size: 1rem;
+
+    &:nth-child(even) { background: var(--off-white); }
+}
+
+.tape__cell { padding: 16px 24px; }
+.tape__feature { color: var(--text); font-weight: 500; }
+.tape__h4k {
+    color: var(--green);
+    font-weight: 700;
+    border-left: 1px solid var(--border);
+}
+.tape__them {
+    color: var(--text-muted);
+    border-left: 1px solid var(--border);
+}
+
+.tape__head .tape__feature { color: #8298ae; }
+.tape__head .tape__h4k { color: var(--blue); border-left-color: rgba(255, 255, 255, 0.1); }
+.tape__head .tape__them { color: #8298ae; border-left-color: rgba(255, 255, 255, 0.1); }
+
+@media (max-width: 575.98px) {
+    .tape__cell { padding: 12px 14px; font-size: 0.9rem; }
+}
+
+.section-intro h2 {
+    font-size: var(--fs-h2);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 14px;
+}
+
+.section-lede {
+    font-size: var(--fs-lead);
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+// --- Orange callout --------------------------------------------------------
+.callout-orange {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    align-items: baseline;
+    background: var(--orange-wash);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--orange);
+    border-radius: var(--radius-lg);
+    padding: 18px 22px;
+    margin-top: 22px;
+    color: var(--text-muted);
+}
+
+.callout-orange__lead { font-weight: 700; color: var(--ink); }
+
+// --- Product cards (Pro / Enterprise / Verify) -----------------------------
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 30px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 46px -26px rgba(11, 22, 34, 0.35);
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 12px;
+}
+
+.product-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0 0 22px;
+    flex: 1;
+}
+
+.product-card__kick {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--orange);
+    margin-bottom: 20px;
+}
+
+.product-card__kick--cyan { color: var(--blue); }
+.product-card__kick--blue { color: var(--blue-strong); }
+
+.product-card__badge {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: #fff;
+    background: var(--orange);
+    padding: 2px 7px;
+    border-radius: 5px;
+    letter-spacing: 0;
+}
+
+.product-card__link { font-weight: 600; color: var(--orange); }
+.product-card__link--cyan { color: var(--blue); }
+.product-card__link--blue { color: var(--blue-strong); }
+
+.product-card--ink {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--text-on-ink);
+
+    h3 { color: #fff; }
+    p { color: #a9bacb; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .product-card:hover { transform: none; }
+}
+
+// --- Check list ------------------------------------------------------------
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 28px;
+    color: var(--text);
+
+    &::before {
+        content: "\2713"; // ✓ - escaped so the SCSS stays ASCII (non-ASCII makes Dart Sass emit a BOM that breaks :root)
+        position: absolute;
+        left: 0;
+        color: var(--green);
+        font-weight: 700;
+    }
+}
+
+// --- Ecosystem marquee -----------------------------------------------------
+.marquee {
+    overflow: hidden;
+
+    & + & { margin-top: 14px; }
+}
+
+.marquee__track {
+    display: flex;
+    width: max-content;
+}
+
+.marquee__track--l { animation: marquee-l 48s linear infinite; }
+.marquee__track--r { animation: marquee-r 56s linear infinite; }
+
+.marquee__set {
+    display: flex;
+    gap: 14px;
+    padding-right: 14px;
+}
+
+.pill {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: #33414f;
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    padding: 11px 18px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+@keyframes marquee-l { to { transform: translateX(-50%); } }
+@keyframes marquee-r { from { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee { overflow: visible; }
+    .marquee__track { animation: none; width: auto; flex-wrap: wrap; gap: 14px; }
+    .marquee__dup { display: none; }
+    .marquee__set { flex-wrap: wrap; row-gap: 14px; }
+}
+
+// --- Receipts (stat tiles + CVE card + partners) ---------------------------
+.receipts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.receipt-tile { background: var(--paper); padding: 30px 26px; }
+
+.receipt-tile__num {
+    font-family: var(--font-mono);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+}
+
+.receipt-tile__label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.cve-card {
+    height: 100%;
+    background: var(--ink);
+    color: var(--text-on-ink);
+    border-radius: var(--radius-lg);
+    padding: 34px 32px;
+}
+
+.cve-card__kick {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--orange);
+    margin-bottom: 16px;
+}
+
+.cve-card__lead {
+    font-size: 1.35rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 14px;
+}
+
+.cve-card__body { font-size: 1rem; line-height: 1.6; color: #a9bacb; margin: 0; }
+
+.partners-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 34px 32px;
+}
+
+.partners-card__kick {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 22px;
+}
+
+.partners-card__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+}
+
+.partners-card__logos img { max-height: 38px; width: auto; }
+.partners-card__note { font-size: 0.85rem; color: var(--text-muted); margin: 22px 0 0; }
+
+@media (max-width: 767.98px) {
+    .receipts-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+// --- Final CTA (dark panel on light) ---------------------------------------
+.final-cta {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink);
+    border-radius: 24px;
+    padding: 70px 60px;
+    text-align: center;
+    color: var(--text-on-ink);
+}
+
+.final-cta__glow {
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 420px;
+    max-width: 100%;
+    background: radial-gradient(ellipse, rgba(97, 192, 255, 0.2), transparent 65%);
+    pointer-events: none;
+}
+
+.final-cta__inner { position: relative; }
+
+.final-cta__title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #fff;
+    margin: 0 0 18px;
+}
+
+.final-cta__sub {
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: #a9bacb;
+    max-width: 560px;
+    margin: 0 auto 30px;
+}
+
+@media (max-width: 575.98px) {
+    .final-cta { padding: 48px 26px; }
+}
+
+// --- Code card -------------------------------------------------------------
+// Dark "terminal" used by the hero, the core-types section and the verify
+// showpiece. Its dark palette is deeper than --ink (a deliberate terminal
+// surface) so these constants live with the component rather than as tokens.
+$code-bg:     #070F1A;
+$code-border: #1F3142;
+$code-rule:   #16222F;
+$code-text:   #C7D3E0;
+$code-dim:    #5E7387;
+
+.code-card {
+    background: $code-bg;
+    border: 1px solid $code-border;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.code-card__bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 16px;
+    border-bottom: 1px solid $code-rule;
+}
+
+.code-card__dot { width: 11px; height: 11px; border-radius: 50%; }
+.code-card__dot--r { background: #E2655B; }
+.code-card__dot--y { background: #E2B33E; }
+.code-card__dot--g { background: #3FB36A; }
+
+.code-card__file {
+    margin-left: 6px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: $code-dim;
+}
+
+.code-card__body {
+    padding: 22px 20px;
+    font-family: var(--font-mono);
+    font-size: 13.5px;
+    line-height: 1.9;
+    color: $code-text;
+    overflow-x: auto;
+
+    pre { margin: 0; white-space: pre; }
+}
+
+// light variant - for code on light sections (core types, etc.)
+.code-card--light {
+    background: var(--paper);
+    border-color: var(--border);
+    box-shadow: none;
+
+    .code-card__bar { border-bottom-color: var(--border); }
+    .code-card__body { background: var(--off-white); color: var(--text); }
+
+    .tok-key { color: var(--blue-strong); }
+    .tok-str { color: #1f9a52; }
+    .tok-com { color: #8a97a8; }
+    .tok-ok  { color: var(--green); }
+}
+
+.code-card__bar--label { justify-content: space-between; }
+.code-card__tag { font-family: var(--font-mono); font-size: 12px; }
+.code-card__tag--blue { color: var(--blue-strong); }
+.code-card__tag--green { color: var(--green); }
+
+// lightweight syntax tokens (used in hand-authored snippets)
+.tok-key  { color: var(--blue); }   // val, typealias, fun
+.tok-str  { color: #7FD08A; }       // strings
+.tok-com  { color: $code-dim; }     // comments
+.tok-num  { color: #D98E73; }       // numbers
+.tok-type { color: #E2B36B; }       // type names
+.tok-ok   { color: #2FB36A; }       // ✓ / success
+
+// blinking cursor - steady when reduced motion is requested
+.code-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background: var(--blue);
+    vertical-align: -2px;
+    animation: code-blink 1.1s steps(1) infinite;
+}
+
+@keyframes code-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+    .code-cursor { animation: none; }
+}

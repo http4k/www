@@ -1,5 +1,6 @@
 ---
 title: Nanoservices - The Power of Composition 
+category: "Ecosystem"
 description: You thought that microservices were a thing? Pah! The powerful abstractions in the http4k toolkit allow you to write entire useful apps which fit in a Tweet.
 date: 2020-10-01
 ---

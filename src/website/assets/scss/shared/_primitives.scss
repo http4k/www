@@ -1,0 +1,61 @@
+// Shared cross-page primitives - collapses the per-page button/chip clones.
+// (Eyebrow uses the existing .eyebrow in _home.scss.)
+
+// Section content rail - single source for the bespoke *-section wrappers.
+// They @include this for width/gutters and keep only their own padding-block.
+@mixin section-wrap {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 36px;
+    @media (max-width: 767.98px) { padding-inline: 24px; }
+}
+
+// Unified content rail: one width for nav / heroes / sections, matching the
+// bespoke max-width:1200 + 36px gutters used across the redesign. Overrides the
+// Bootstrap .container so nav, .container heroes, and custom sections all align.
+.container { max-width: 1200px; padding-left: 36px; padding-right: 36px; }
+@media (max-width: 767.98px) { .container { padding-left: 24px; padding-right: 24px; } }
+
+// CTA buttons - used by heros + ink CTA bands across pro/enterprise/company/product.
+.cta-btn { display: inline-flex; align-items: center; height: 50px; padding: 0 24px; border-radius: 11px; font-weight: 600; font-size: 1rem; text-decoration: none; }
+.cta-btn--primary { background: var(--orange); color: #fff; }
+.cta-btn--primary:hover { background: var(--orange-strong); color: #fff; }
+.cta-btn--ghost { background: #fff; color: var(--ink); border: 1px solid #cbd6e3; }
+.cta-btn--ghost:hover { border-color: var(--blue-strong); color: var(--blue-strong); }
+.cta-btn--ghost-dark { background: rgba(255, 255, 255, 0.05); color: #fff; border: 1px solid #2c4156; }
+.cta-btn--ghost-dark:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+
+// Shared ink hero background - the common pipes + glow treatment (matches the
+// homepage/product .landing--ink hero). Used by section-style heroes that sit
+// below the site header (enterprise, company, security, 404). The hero's own
+// .X-hero__inner keeps position:relative so content stays above this.
+.ink-hero { position: relative; overflow: hidden; background: var(--ink); color: var(--text-on-ink); }
+.ink-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/images/pipes-hero.svg") top center / cover no-repeat;
+    opacity: 0.8;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
+    pointer-events: none;
+}
+.ink-hero__glow {
+    position: absolute;
+    top: -200px;
+    right: -100px;
+    width: 760px;
+    height: 760px;
+    max-width: 90%;
+    background: radial-gradient(circle, rgba(97, 192, 255, 0.22), transparent 62%);
+    pointer-events: none;
+}
+
+// Shared ink-hero headline + sub (enterprise/company/security/product heroes).
+.hero-title { font-size: clamp(2.4rem, 5vw, 3.5rem); line-height: 1.04; letter-spacing: -0.03em; font-weight: 700; color: #fff; margin: 0 0 20px; max-width: 840px; }
+.hero-sub { font-size: var(--fs-lead); line-height: 1.55; color: #aebece; margin: 0 0 30px; max-width: var(--lede); }
+.hero-sub strong { color: #d6e0eb; }
+
+// Mono pill on dark surfaces (product hero badge, pro free-tier chip).
+.chip-ink { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 11px; border-radius: 6px; background: #13202e; border: 1px solid #1f3142; color: var(--blue); }
+.chip-ink--ea { color: var(--orange); background: rgba(238, 125, 43, 0.12); border-color: rgba(238, 125, 43, 0.3); }

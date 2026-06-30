@@ -1,332 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 {{ partial "head/head.html" . }}
-{{ partial "shared/landing_styles.html" . }}
-<style>
-    .card-custom .dash {
-        width: 46px;
-        height: 2px;
-        margin: 12px 0;
-    }
-
-    .gray-colour {
-        background-color: #f8f8f8;
-    }
-
-    .blue-colour {
-        background-color: #75d6ff;
-    }
-
-    .green-colour {
-        background-color: #b2ffa6;
-    }
-
-    .purple-colour {
-        background-color: #bd9eff;
-    }
-
-    .red-colour {
-        background-color: #FF4C4C;
-    }
-
-    .orange-colour {
-        background-color: #FF8C4C;
-    }
-
-    .yellow-colour {
-        background-color: #FFD54C;
-    }
-
-    .green-colour {
-        background-color: #4CFF74;
-    }
-
-    .blue-colour {
-        background-color: #4CAFFF;
-    }
-
-    .indigo-colour {
-        background-color: #7C4CFF;
-    }
-
-    .violet-colour {
-        background-color: #BD9EFF;
-    }
-
-    .pink-colour {
-        background-color: #FF4CA6;
-    }
-
-    .cyan-colour {
-        background-color: #4CCAFF;
-    }
-
-    .features {
-        background-color: white;
-        min-height: 0;
-    }
-
-    .features .card-custom p {
-        font-size: 0.85rem;
-        margin-bottom: 0;
-    }
-
-    .pricing h2 {
-        text-align: center;
-    }
-
-    .license h2 {
-        text-align: center;
-    }
-
-    .our-document {
-        min-height: 0;
-    }
-
-    .download-stack {
-        width: 100%;
-    }
-
-    .download-stack__panel {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 40px 32px;
-        text-align: center;
-        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-        border-radius: var(--radius-lg, 20px);
-    }
-
-    .download-stack__icon {
-        font-size: 3rem;
-        line-height: 1;
-        margin-bottom: 16px;
-        animation: download-stack-pop 0.6s ease-out;
-    }
-
-    @keyframes download-stack-pop {
-        0% { transform: scale(0); opacity: 0; }
-        60% { transform: scale(1.2); opacity: 1; }
-        100% { transform: scale(1); }
-    }
-
-    .download-stack__panel h2 {
-        margin-bottom: 12px;
-    }
-
-    .download-stack__lead {
-        max-width: 520px;
-        margin-bottom: 12px;
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    .download-stack__panel .btn {
-        padding: 14px 32px;
-        font-weight: 600;
-        font-size: 1.05rem;
-    }
-
-    .download-stack__hint {
-        margin-top: 16px;
-        margin-bottom: 0;
-        color: #6c757d;
-    }
-
-    .download-stack[data-state="downloaded"] .download-stack__panel {
-        display: flex;
-    }
-
-    .download-stack[data-state="downloaded"] .download-stack__form {
-        display: none;
-    }
-
-</style>
 <body>
-<header class="landing">
+
+<header class="landing landing--ink product-hero">
     <div class="landing-bg"></div>
-    <div class="overlay"></div>
-    {{ if .Params.navigation }}
-    {{ partial "shared/product_header.html" . }}
-    {{ end }}
-    <div class="container h-80 text-white">
-        <div class="row align-items-center h-100">
-            <div class="col-md-9 col-lg-9 col-xl-6">
-                <h2 class="header mb-4">{{ .Params.tagline }}</h2>
-                <p class="mb-3">{{ .Params.description | markdownify }}</p>
-                <div class="d-flex flex-wrap gap-2 mt-3">
-                {{ if .Params.launch_announcement }}
-                <a class="btn btn-secondary" href="{{ .Params.launch_announcement }}"> <span class="launch-spark">✦</span> Read the Launch Announcement <span class="launch-spark">✦</span></a>
-                {{ else if .Params.docs_link }}
-                <a class="btn btn-secondary" href="{{ .Params.docs_link }}">{{ with .Params.cta_label }}{{ . }}{{ else }}See the docs{{ end }}</a>
-                {{ else if .Params.early_access }}
-                <a class="btn btn-secondary" href="#subscribe">Sign up for Early Access</a>
-                {{ else if .Params.download_form_id }}
-                {{ else }}
-                    <a class="btn btn-secondary" href="#subscribe">Get launch notifications</a>
-                {{ end }}
-                </div>
-            </div>
+    <div class="landing-glow"></div>
+    {{ if .Params.navigation }}{{ partial "shared/product_header.html" . }}{{ end }}
+    <div class="container product-hero__inner">
+        <div class="product-hero__badges">
+            <span class="product-hero__kicker">{{ if eq .Params.tier "pro" }}// HTTP4K PRO{{ else }}// HTTP4K{{ end }}</span>
+            {{ if .Params.early_access }}<span class="chip-ink chip-ink--ea">Early Access</span>{{ end }}
+        </div>
+        <h1 class="hero-title">{{ .Params.tagline }}</h1>
+        <p class="hero-sub">{{ .Params.description | markdownify }}</p>
+        <div class="product-hero__buttons">
+            {{ $primary := false }}
+            {{ if .Params.launch_announcement }}<a class="cta-btn cta-btn--primary" href="{{ .Params.launch_announcement }}">Read the launch announcement</a>{{ $primary = true }}
+            {{ else if .Params.early_access }}<a class="cta-btn cta-btn--primary" href="#subscribe">Sign up for Early Access</a>{{ $primary = true }}
+            {{ else if .Params.download_form_id }}<a class="cta-btn cta-btn--primary" href="#download">Get the demo</a>{{ $primary = true }}
+            {{ end }}
+            {{ with .Params.docs_link }}<a class="cta-btn {{ if $primary }}cta-btn--ghost-dark{{ else }}cta-btn--primary{{ end }}" href="{{ . }}">{{ with $.Params.cta_label }}{{ . }}{{ else }}Read the docs{{ end }} &rarr;</a>{{ $primary = true }}{{ end }}
+            {{ if not $primary }}<a class="cta-btn cta-btn--primary" href="#subscribe">Get launch notifications</a>{{ end }}
         </div>
     </div>
 </header>
 
-
 {{ if .Params.pre_features_partial }}{{ partial .Params.pre_features_partial . }}{{ end }}
-{{ if .Params.features }}
-<div class=".first-block">
-    <div class="features">
-        <div class="container">
-            <h2>Highlights</h2>
-            <div class="row">
-                {{ range .Params.features }}
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom">
-                        <img src="/images/{{ .icon }}.svg" alt="icon"/>
-                        <h4>{{ .title | markdownify }}</h4>
-                        <div class="dash {{ .colour }}-colour"></div>
-                        <p>{{ .description | markdownify}}</p>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-        </div>
 
-    </div>
-</div>
-{{ end }}
-{{ if .Params.post_features_partial }}{{ partial .Params.post_features_partial . }}{{ end }}
-{{ if .Params.how_tos }}
-<div class="our-document pt-5 pb-3">
-    {{ range .Params.how_tos }}
-    <div class="developers-custom pb-0">
-        <div class="container-fluid">
-            <h2>{{ .section }}</h2>
-            <div class="row">
-                {{ range $index, $element := .steps }}
-                {{ if (modBool $index 2) }}
-                <div class="col-lg-1"></div>
-                {{end}}
-                <div class="col-lg-5 text-center">
-                    <p>{{ $element.description | markdownify }}</p>
-                    {{ with $.Resources.GetMatch $element.image }}
-                    <img class="img-fluid" style="border-radius: 8px" src="{{ .RelPermalink }}" alt="{{ $element.alt }}"/>
-                    {{ end }}
-                </div>
-                {{ if not (modBool $index 2) }}
-                <div class="col-lg-1"></div>
-                {{end}}
-                {{ end }}
-            </div>
-            {{ if .cta }}
-            <div class="row pt-5 pb-3 justify-content-center">
-                <div class="col-md-10 col-lg-8">
-                    <div class="card-custom" style="padding: 40px;">
-                        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
-                            {{ with $.Resources.GetMatch $.Params.cta_image }}
-                            <div class="pb-3 pb-md-0 flex-shrink-0">
-                                <img src="{{ .RelPermalink }}" alt="{{ $.Params.title }}" style="height: 60px; display: block; margin: 0 24px 0 0;"/>
-                            </div>
-                            {{ end }}
-                            <div>
-                                <p style="font-size: 1.2em; margin: 0; line-height: 1.5; text-align: center;">{{ .cta | markdownify }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{{ if .Params.features }}
+<section class="product-features">
+    <div class="product-section">
+        <div class="product-head"><h2 class="product-h2">Highlights</h2></div>
+        <div class="product-feature-grid">
+            {{ range .Params.features }}
+            <div class="product-feature">
+                {{ with .icon }}<img src="/images/{{ . }}.svg" alt="">{{ end }}
+                <h4>{{ .title | markdownify }}</h4>
+                <div class="product-feature__dash {{ .colour }}-colour"></div>
+                <p>{{ .description | markdownify }}</p>
             </div>
             {{ end }}
         </div>
     </div>
-    {{ end }}
-    {{ with .Resources.GetMatch .Params.large_image }}
-    <div class="d-flex justify-content-center">
-        <img class="img-fluid" style=" width: 50%; border-radius: 8px" src="{{ .RelPermalink }}" alt="{{ $.Params.title }}"/>
+</section>
+{{ end }}
+
+{{ if .Params.post_features_partial }}{{ partial .Params.post_features_partial . }}{{ end }}
+
+{{ if .Params.how_tos }}
+<section class="product-section">
+    {{ range .Params.how_tos }}
+    <div class="product-howto">
+        <h2 class="product-howto__title">{{ .section }}</h2>
+        <div class="product-steps">
+            {{ range $index, $element := .steps }}
+            <div class="product-step">
+                <p>{{ $element.description | markdownify }}</p>
+                {{ with $.Resources.GetMatch $element.image }}<img src="{{ .RelPermalink }}" alt="{{ $element.alt }}">{{ end }}
+            </div>
+            {{ end }}
+        </div>
+        {{ if .cta }}
+        <div class="product-howto__cta">
+            {{ with $.Resources.GetMatch $.Params.cta_image }}<img src="{{ .RelPermalink }}" alt="{{ $.Params.title }}">{{ end }}
+            <p>{{ .cta | markdownify }}</p>
+        </div>
+        {{ end }}
     </div>
     {{ end }}
-
-</div>
+    {{ with .Resources.GetMatch .Params.large_image }}
+    <div class="product-large-image"><img src="{{ .RelPermalink }}" alt="{{ $.Params.title }}"></div>
+    {{ end }}
+</section>
 {{ end }}
+
+{{ partial "product/showcase.html" . }}
+
 {{ if .Params.post_how_tos_partial }}{{ partial .Params.post_how_tos_partial . }}{{ end }}
 
 {{ if .Params.pricing_table }}
-<div class="container pt-5 pb-5" id="pricing">
-    <div class="license pb-5">
-        <div class="row justify-content-center">
-            <h2>License</h2>
-            <span style="text-align: center"><b>{{ .Params.title }}</b> is available under the <a href="{{ "/commercial-license" | absURL }}"><b>http4k Commercial License</b></a>. Free usage is granted for qualifying small businesses (<$1m ARR), non-commercial, non-profit, and research activities.</span>
+<section class="product-pricing" id="pricing">
+    <div class="eyebrow">// PRICING</div>
+    <h2 class="product-h2">Pricing</h2>
+    <p class="product-license"><b>{{ .Params.title }}</b> is available under the <a href="{{ "/commercial-license" | absURL }}">http4k Commercial License</a>. Free for qualifying small businesses (under $1M ARR), non-commercial, non-profit, and research use. Checkout is handled securely by Stripe.</p>
+    <div class="product-stripe">
+        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+        <stripe-pricing-table pricing-table-id="{{ .Params.pricing_table.id }}" publishable-key="{{ .Params.pricing_table.key }}"></stripe-pricing-table>
+    </div>
+    <p class="product-pricing__foot">All <a href="{{ "/pro" | absURL }}">http4k Pro</a> modules are also automatically included with the <a href="{{ "/enterprise" | absURL }}">Enterprise Edition</a>. Need bulk seats, team licensing, or custom terms? <a href="mailto:solutions@http4k.org">Get in touch</a>.</p>
+</section>
+{{ else if eq .Params.tier "pro" }}
+<section class="product-subscribe" id="subscribe">
+    {{ if .Params.ee_included }}
+    <h2>Included with http4k Enterprise Edition</h2>
+    <p>{{ .Params.ee_included }}</p>
+    <a class="cta-btn cta-btn--primary" href="{{ "/enterprise/" | absURL }}">Learn about Enterprise Edition</a>
+    {{ else if .Params.early_access }}
+    <h2>Get Early Access</h2>
+    <p>This module is available through our Early Access Program - fully tested and production-ready. Sign up below for general availability updates, or <a href="mailto:solutions@http4k.org">get in touch</a> to join the EAP.</p>
+    <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
+    {{ else if .Params.email_form_id }}
+    <h2>Stay in the loop</h2>
+    <p>This module is coming soon. Sign up below to be the first to know when it launches.</p>
+    <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
+    {{ else if .Params.download_form_id }}
+    <div id="download" class="download-stack" data-download-stack>
+        <div class="download-stack__panel">
+            <div class="download-stack__icon">&#127873;</div>
+            <h2>Thanks for downloading!</h2>
+            <p class="download-stack__lead">The demo is a fully-formed <b>Gradle project</b> - just unzip and open it in IntelliJ IDEA (or your IDE of choice) to explore the code from the talk.</p>
+            <a class="cta-btn cta-btn--primary" href="{{ .Params.download_link }}">Download</a>
+        </div>
+        <div class="download-stack__form">
+            <script async data-uid="{{ .Params.download_form_id }}" src="https://http4k.kit.com/{{ .Params.download_form_id }}/index.js"></script>
         </div>
     </div>
-    <div class="pricing">
-        <div class="row justify-content-center">
-            <h2>Pricing</h2>
-            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-            <stripe-pricing-table pricing-table-id="{{ .Params.pricing_table.id }}"
-                                  publishable-key="{{ .Params.pricing_table.key }}">
-            </stripe-pricing-table>
-        </div>
-    </div>
-    <div class="text-center mt-5 pt-4 pb-3">
-        <div class="row justify-content-center">
-            <p>All <a href="{{ "/pro" | absURL }}"><b>http4k Pro</b></a> modules are also <b>automatically included</b> as part of the <a href="{{ "/enterprise" | absURL }}"><b>Enterprise Edition</b></a>. Need bulk developer seats, team licensing, or custom terms? Get in touch and we'll find the right fit - whether that's volume licensing for individual Pro modules or our full Enterprise Edition with LTS support and priority access to all Pro modules.</p>
-        </div>
-    </div>
-</div>
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            if (!params.has("download")) return;
+            var stack = document.querySelector("[data-download-stack]");
+            if (!stack) return;
+            stack.dataset.state = "downloaded";
+            var link = stack.querySelector(".download-stack__panel a");
+            if (link) { var iframe = document.createElement("iframe"); iframe.style.display = "none"; iframe.src = link.href; document.body.appendChild(iframe); }
+        })();
+    </script>
+    {{ end }}
+</section>
+{{ end }}
 
-{{ partial "shared/cta-width.html" . }}
-{{ else }}
-{{ if eq .Params.tier "pro" }}
-<div class="container pt-5 pb-5" id="subscribe">
-    <div class="row justify-content-center text-center" style="max-width: 700px; margin: 0 auto;">
-        {{ if .Params.ee_included }}
-        <h2>Included with http4k Enterprise Edition</h2>
-        <p>{{ .Params.ee_included }}</p>
-        <a class="btn btn-secondary mt-3" href="https://http4k.org/enterprise/"><b>Learn about Enterprise Edition</b></a>
-        {{ else if .Params.early_access }}
-        <h2>Get Early Access</h2>
-        <p>This module is available through our Early Access Program - fully tested and production-ready. Sign up below for general availability updates, or <a href="mailto:solutions@http4k.org"><b>get in touch</b></a> to join the EAP.</p>
-        <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
-        {{ else if .Params.email_form_id }}
-        <h2>Stay in the loop</h2>
-        <p>This module is coming soon. Sign up below to be the first to know when it launches.</p>
-        <script async data-uid="{{ .Params.email_form_id }}" src="https://http4k.kit.com/{{ .Params.email_form_id }}/index.js"></script>
-        {{ else if .Params.download_form_id }}
-        <div id="download" class="download-stack card-custom" data-download-stack>
-            <div class="download-stack__panel">
-                <div class="download-stack__icon">🎁</div>
-                <h2>Thanks for downloading!</h2>
-                <p class="download-stack__lead">The demo is a fully-formed <b>Gradle project</b> - just unzip and open it directly in IntelliJ IDEA (or your IDE of choice) to start exploring the code from the talk.</p>
-                <a class="btn btn-secondary btn-lg" href="{{ .Params.download_link }}">Download</a>
-            </div>
-            <div class="download-stack__form">
-                <script async data-uid="{{ .Params.download_form_id }}" src="https://http4k.kit.com/{{ .Params.download_form_id }}/index.js"></script>
-            </div>
-        </div>
-        <script>
-            (function () {
-                const params = new URLSearchParams(window.location.search);
-                if (!params.has('download')) return;
-                const stack = document.querySelector('[data-download-stack]');
-                if (!stack) return;
-                stack.dataset.state = 'downloaded';
-                const link = stack.querySelector('.download-stack__panel a.btn');
-                if (link) {
-                    const iframe = document.createElement('iframe');
-                    iframe.style.display = 'none';
-                    iframe.src = link.href;
-                    document.body.appendChild(iframe);
-                }
-            })();
-        </script>
-        {{ end }}
-    </div>
-</div>
-{{ end }}
-{{ end }}
 {{ partial "shared/pipes.html" }}
 {{- partial "shared/footer.html" . -}}
 </body>
 </html>
-
-

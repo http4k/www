@@ -1,5 +1,6 @@
 ---
 title: Server as a Function. In Kotlin. Typesafe. Without the Server.
+category: "Announcements"
 description: An overview of the Kotlin "Server as a Function" library, http4k
 date: 2017-11-01
 ---

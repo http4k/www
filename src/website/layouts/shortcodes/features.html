@@ -1,39 +1,39 @@
 <style>
     @media (max-width: 998.98px) {
         .features-table {
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: var(--font-sans);
             width: 95%;
             max-width: 95%;
             margin: 0.25rem auto;
             border-collapse: collapse;
-            border-radius: 8px;
+            border-radius: var(--radius);
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
         }
     }
 
     @media (min-width: 998.98px) {
         .features-table {
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: var(--font-sans);
             width: 90%;
             max-width: 90%;
             margin: 2rem auto;
             border-collapse: collapse;
-            border-radius: 8px;
+            border-radius: var(--radius);
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
         }
     }
 
     .features-table th {
-        background-color: #f3f4f6;
+        background-color: var(--off-white);
         padding: 1rem;
         text-align: left;
     }
 
     .features-table td {
         padding: 1rem;
-        border-bottom: 1px solid #e5e7eb;
+        border-bottom: 1px solid var(--border);
     }
 
     .features-table tr:last-child td {
@@ -45,13 +45,13 @@
     }
 
     .check {
-        color: #10b981;
+        color: var(--green);
         font-weight: bold;
         padding-right: 0.5em;
     }
 
     .x-mark {
-        color: #ef4444;
+        color: var(--red);
     }
 
     .edition-header {

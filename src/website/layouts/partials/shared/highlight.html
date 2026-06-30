@@ -1,15 +1,9 @@
-<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 ">
+<div class="solution-grid">
     {{ range . }}
-    <div class="col p-3">
-        <div class="row">
-            <div class="col-2 p-1">
-                <img src="{{ .icon }}" alt="{{ .alt }}"/>
-            </div>
-            <div class="col p-0">
-                <h3>{{ .title }}</h3>
-                <p>{{ .description | markdownify }}</p>
-            </div>
-        </div>
+    <div class="solution-card">
+        {{ if .icon }}<img src="{{ .icon }}" alt="{{ .alt }}">{{ end }}
+        <h3>{{ .title }}</h3>
+        <p>{{ .description | markdownify }}</p>
     </div>
     {{ end }}
 </div>

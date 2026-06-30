@@ -1,0 +1,57 @@
+// Solutions pages (solutions list + consulting/training/supply-chain singles). ASCII only.
+
+.solution-section { @include section-wrap; padding-block: 64px; }
+
+.solution-prose { max-width: 820px; margin: 0 auto; }
+
+// feature/highlight card grid
+.solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.solution-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 26px;
+}
+
+.solution-card img { width: 44px; height: 44px; margin-bottom: 14px; }
+.solution-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
+.solution-card p { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+// professional-services cards (data/cta): title + desc + outbound link
+.solution-cta { background: var(--off-white); }
+.solution-cta__inner { max-width: 1200px; margin: 0 auto; padding: 80px 36px; }
+.solution-cta__head { text-align: center; margin-bottom: 36px; }
+.solution-cta__head .eyebrow { text-align: center; }
+.solution-h2 { font-size: 2.125rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin: 0; }
+.solution-cta__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.solution-cta-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 26px;
+}
+
+.solution-cta-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--ink); margin: 0 0 10px; }
+.solution-cta-card p { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 18px; flex: 1; }
+.solution-cta-card a { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue-dark); text-decoration: none; }
+.solution-cta-card a:hover { text-decoration: underline; }
+
+.solution-contact { text-align: center; margin-top: 40px; }
+
+// "Let's talk" closing block
+.solution-talk { text-align: center; padding: 72px 24px 96px; }
+.solution-talk h2 { font-size: var(--fs-h2); font-weight: 700; color: var(--ink); margin: 0 0 20px; }
+
+@media (max-width: 991.98px) {
+    .solution-grid, .solution-cta__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767.98px) {
+    .solution-section { padding: 48px 24px; }
+    .solution-grid, .solution-cta__grid { grid-template-columns: 1fr; }
+    .solution-cta__inner { padding: 56px 24px; }
+}

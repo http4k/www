@@ -1,5 +1,6 @@
 ---
 title: "Preview: http4k v6 and beyond! Introducing Enterprise Edition and Long-Term Support"
+category: "Releases"
 description:  There's a new major http4k release coming up! We're ready to announce the next chapter in the http4k ecosystem, including the introduction of the http4k Enterprise Edition (EE) subscription.
 date: 2024-12-03
 ---

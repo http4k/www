@@ -1,13 +1,26 @@
 @import "tokens";
 @import "bootstrap";
 
-@import "fonts";
 @import "utilities";
+@import "primitives";
 
 @import "header";
 @import "footer";
 
-// Folded from static/css/*.css — site overrides last so they win over Bootstrap.
+// Folded from static/css/*.css - site overrides last so they win over Bootstrap.
 @import "site";
+@import "sections";
+@import "landing";
+@import "home";
+@import "docs";
+@import "lists";
+@import "company";
+@import "article";
+@import "pro";
+@import "enterprise";
+@import "product";
+@import "solutions";
+@import "security";
+@import "error";
 @import "search";
 

@@ -1,5 +1,6 @@
 ---
 title: http4k Toolbox - Guns for show, knives for a pro
+category: "Ecosystem"
 description: An introduction to the http4k Toolbox website and CLI.
 date: 2020-11-01
 image: guns.jpg

@@ -1,0 +1,19 @@
+// Section primitive - one way to build a page section.
+// Separates the three concerns that the old bespoke section classes welded
+// together:
+//   width   -> an inner .container constrains content
+//   rhythm  -> .section (+ --sm/--lg) sets vertical padding from the tokens
+//   surface -> .section--off / .section--ink set the background
+// The .section carries the full-bleed surface; the inner .container holds content.
+// Reserve .container-fluid only for genuinely full-width inner grids.
+//
+// The homepage restructure and product pages adopt this in place of the bespoke
+// .documentation/.features/.our-document/.company/.api/.community wrappers (kept
+// for now in _landing.scss until those pages are rebuilt).
+
+.section        { padding-block: var(--section-md); }
+.section--sm    { padding-block: var(--section-sm); }
+.section--lg    { padding-block: var(--section-lg); }
+
+.section--off   { background-color: var(--off-white); }
+.section--ink   { background-color: var(--ink); color: var(--text-on-ink); }

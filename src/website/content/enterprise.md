@@ -1,7 +1,7 @@
 ---
 title: http4k Enterprise Edition
 description: Long-term stability, supply chain security, priority support, and Pro modules - everything your organisation needs to run http4k in production with confidence.
-type: solutions
+type: enterprise
 email: enterprise@http4k.org
 aliases:
     - /lts-support

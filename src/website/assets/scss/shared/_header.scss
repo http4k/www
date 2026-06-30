@@ -9,4 +9,7 @@
       max-height: calc(1.4rem + .6vw);
     }
   }
+
+  // drop the dropdown caret decoration
+  .dropdown-toggle::after { display: none; }
 }

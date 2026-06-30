@@ -1,5 +1,6 @@
 ---
 title: "We Forgot to Ship Our 200th Module. What Do You Do When There's Too Many to Remember?"
+category: "AI"
 description: "Somewhere between module #199 and #205, http4k quietly sailed past 200. No cake, no fanfare - just another Tuesday release. So we taught an AI to remember it all for you."
 date: 2026-03-17
 draft: true

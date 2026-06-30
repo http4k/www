@@ -1,34 +1,49 @@
 {{ define "main" }}
 
+<section class="list-header">
+    <div class="eyebrow">// NEWS &amp; UPDATES</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+</section>
 
+{{ $posts := sort (where .Site.RegularPages "Type" "eq" "news") "Date" "desc" }}
+{{ $featured := index $posts 0 }}
+{{ $rest := after 1 $posts }}
 
-<div class="layout d-flex">
-    <main class="page-content mx-auto">
-        <article>
-            <h1>{{ .Title }}</h1>
-            {{ .Content }}
-            <div class="">
-                {{ range where .Site.RegularPages "Type" "eq" "news" }}
-                {{ $image := index .Site.Params.images 0 }}
-                {{ with .Resources.GetMatch .Params.image }}
-                {{ $image = .RelPermalink }}
-                {{ end }}
-                <div class="row mb-5 card card-shadow p-3" style="background-color: white">
-                    <a href="{{ .RelPermalink }}" class="text-reset text-decoration-none link-underline-opacity-0">
-                        <div class="d-flex">
-                            <img src="{{ $image}}" alt="thumbnail" class="me-5 d-none d-md-flex" style="width: 100px; height: 100px; object-fit: cover;">
-                            <div class="flex-grow-1">
-                                <h5 class="mb-1">{{ .Title }}</h5>
-                                <div class="text-muted small mb-2 text-end">{{ .Params.date | time.Format "January 2006" }}</div>
-                                <div>{{ .Params.description }}</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                {{ end }}
-            </div>
-        </article>
-    </main>
-</div>
-{{ partial "shared/pipes.html" }}
+{{ $cats := slice }}
+{{ range $posts }}{{ with .Params.category }}{{ $cats = $cats | append . }}{{ end }}{{ end }}
+{{ $cats = $cats | uniq | sort }}
+{{ if $cats }}{{ partial "shared/filter-chips.html" (dict "attr" "category" "items" $cats) }}{{ end }}
+
+<section class="list-section">
+    {{ with $featured }}
+    {{ $img := "" }}{{ with .Resources.GetMatch .Params.image }}{{ $img = .RelPermalink }}{{ end }}
+    {{ partial "shared/article-card.html" (dict
+        "featured" true
+        "title" .Title
+        "href" .RelPermalink
+        "excerpt" .Params.description
+        "category" .Params.category
+        "date" (.Params.date | time.Format "2 Jan 2006")
+        "image" $img
+        "thumbText" .Params.category) }}
+    {{ end }}
+
+    <div class="article-grid">
+        {{ range $rest }}
+        {{ $img := "" }}{{ with .Resources.GetMatch .Params.image }}{{ $img = .RelPermalink }}{{ end }}
+        {{ partial "shared/article-card.html" (dict
+            "title" .Title
+            "href" .RelPermalink
+            "excerpt" .Params.description
+            "category" .Params.category
+            "date" (.Params.date | time.Format "Jan 2006")
+            "image" $img
+            "thumbText" .Params.category) }}
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "shared/newsletter.html" . }}
+
 {{ end }}

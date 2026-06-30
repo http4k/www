@@ -1,0 +1,48 @@
+<section class="section">
+    <div class="container">
+        <div class="section-intro mb-5">
+            <h2>Read it. Test it. Trust it.</h2>
+            <p class="section-lede">Two function types power the entire toolkit. Everything - routing, auth,
+                clients, serverless - composes from them. What you read is exactly what runs.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="code-card code-card--light h-100">
+                    <div class="code-card__bar code-card__bar--label">
+                        <span class="code-card__file">CoreTypes.kt</span>
+                        <span class="code-card__tag code-card__tag--blue">the two types</span>
+                    </div>
+                    <div class="code-card__body"><pre><span class="tok-com">// 1. a handler is a function</span>
+<span class="tok-key">typealias</span> HttpHandler =
+    (Request) -&gt; Response
+
+<span class="tok-com">// 2. a filter wraps a handler</span>
+<span class="tok-key">typealias</span> Filter =
+    (HttpHandler) -&gt; HttpHandler</pre></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="code-card code-card--light h-100">
+                    <div class="code-card__bar code-card__bar--label">
+                        <span class="code-card__file">AppTest.kt</span>
+                        <span class="code-card__tag code-card__tag--green">no server, no ports</span>
+                    </div>
+                    <div class="code-card__body"><pre><span class="tok-com">// it's a function - just call it.</span>
+<span class="tok-key">val</span> res = app(Request(GET, <span class="tok-str">"/?name=ada"</span>))
+
+assertThat(res.status, equalTo(OK))
+assertThat(res.bodyString(),
+    equalTo(<span class="tok-str">"Hello, ada"</span>))
+<span class="tok-ok">// ✓ passes in milliseconds - no server, no @SpringBootTest.</span></pre></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout-orange">
+            <span class="callout-orange__lead">No server required.</span>
+            <span>Your whole stack runs in-memory in a unit test. That's not a testing strategy we bolted
+                on - it's just what happens when your app is a function.</span>
+        </div>
+    </div>
+</section>

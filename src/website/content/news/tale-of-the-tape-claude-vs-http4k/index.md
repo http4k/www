@@ -1,5 +1,6 @@
 ---
 title: "Tale of the tape: Claude vs the http4k codebase"
+category: "Security"
 description: "We put http4k in the ring with Claude Opus for four rounds, patching between each. Three new CVEs, an update to our first one, four advisories, ~40 hardenings. Here's what landed - and why a small, minimal-deps codebase is the only kind you can actually audit like this."
 date: 2026-06-16
 image: http4k-vs-opus.webp
@@ -25,17 +26,17 @@ A bet runs through the whole exercise: that a codebase deliberately kept small e
 
 ---
 
-#### Where the hits landed
+## Where the hits landed
 
 The genuinely happy news: none of the above touched http4k's everyday request-handling path. The HTTP model, routing, lenses, server config, and the filters most apps actually wire in all came through the pass cleanly. The findings clustered in opt-in modules and older API choices - Digest auth, XML parsing, the gzip filter, client-side cookie storage - which is where you'd hope they'd land, but also exactly the kind of code that doesn't get the day-one scrutiny the core does. The bit of http4k that most people touch every day is the bit we most wanted to come through cleanly. It did.
 
-#### What you should do
+## What you should do
 
 If you're on http4k anywhere in the v6 line, simply **upgrade to [v6.50.0.0](https://github.com/http4k/http4k/releases/tag/6.50.0.0)** or later. The fixes are spread across a wide variety of modules so a blanket dependency bump is the cleanest path. Check the round-by-round below to see which findings directly apply to your deployment. We've broken the APIs where we feel we needed to in order to make choices simpler.
 
 Still on **v5** or **v4**? LTS backports of these fixes are available as part of the **[http4k Enterprise Edition](/enterprise)** - get in touch if you need security patches without taking the v6 jump.
 
-#### Round-by-round
+## Round-by-round
 
 **[CVE-2026-53659](/security/cve-2026-53659) - gzip decompression bomb.** Our gzip request-decoding filter had no size cap; a few KB of crafted input could decompress to gigabytes and take the server down. Unpatched for ~9 years. **v6.49.0.0** caps at 10MB by default.
 
@@ -45,11 +46,11 @@ Still on **v5** or **v4**? LTS backports of these fixes are available as part of
 
 **[CVE-2024-55875 follow-up](/security/cve-2024-55875) - Residual XXE class fixed.** The [Dec 2024 fix](/security/cve-2024-55875) closed external-entity attacks but left DOCTYPE acceptance and billion-laughs DoS in place. **v6.50.0.0** closes the residual; the existing advisory is updated.
 
-#### The wider hardening
+## The wider hardening
 
 The same pass produced a long tail of smaller tightenings - DoS body and multipart caps, secret redaction across Secrets and OpenTelemetry, end-to-end OAuth hardening (PKCE, nonce, open-redirect), RFC 6265 cookie scoping, tighter reverse-proxy host matching, and a handful of crypto / API renames for clarity. Details across **v6.48.0.0**, **v6.49.0.0** and **v6.50.0.0** in the **[changelog](/ecosystem/changelog/)**.
 
-#### Why we could even do this
+## Why we could even do this
 
 None of the above is normal. The default for a JVM web app is a dependency tree with hundreds of transitive libraries, most of them you've never opened, several of them you couldn't read inside a working week. When something like the gzip bomb sits in *that* tree, the only signal you get is the CVE filing - months or years after the bytes arrived in your build.
 
@@ -57,7 +58,7 @@ http4k is a different shape on purpose. 200+ modules in the ecosystem, but each 
 
 That's a big part of why any of this was findable. Less surface area to defend, less foreign code to trust, fewer places for a nine-year-old gzip bug to hide. We've been making the minimal-deps argument for years on ergonomic grounds. This audit is the version where the argument is about whether you can sleep at night.
 
-#### What this looked like in practice
+## What this looked like in practice
 
 Here's what the workflow actually looked like.
 
@@ -71,7 +72,7 @@ Here's what the workflow actually looked like.
 
 **Scorecard.** Across three releases this pass surfaced enough real issues to justify the time spent. The lesson we're taking forward isn't "AI fixes security bugs" - it's "AI is a credible way to keep up regular security review on a 200-module codebase that no single human is going to audit end-to-end." We'll be doing more of these passes, on a recurring cadence rather than as a one-off.
 
-#### Why we put this in public
+## Why we put this in public
 
 We ran this exercise - and published the result - because we aren't afraid of what the models find. Plenty of large, well-resourced companies are running the same kind of LLM-assisted review on their own codebases right now. You aren't reading those findings. The CVEs don't get filed, the advisories never appear, the patches land discreetly (or not at all), and the rationale lives on in internal Confluence pages.
 
@@ -87,13 +88,13 @@ And while we're at it: **this work costs real money.** Tokens are not free (as i
 
 LLM-assisted review isn't a silver bullet. It produces noise (the false-positive rate on the first pass was real), it doesn't replace maintainer judgment (a lot of our triage was deciding what *wasn't* a CVE), and it doesn't audit anything you don't aim it at. As a force multiplier on the security review you were already going to do - or, more honestly, *should have been doing* - it's earning its keep. A small Kotlin library born out of the London XP community publishing its homework should be the bare minimum here, not the high-water mark.
 
-#### What's next
+## What's next
 
 - Enforcing PKCE on our OAuth server is opt-in today; we'll flip it to the default in a future major release.
 - We'll run another security review pass against the next major release window.
 - If you're using http4k in security-sensitive contexts and you spot something we missed, **[get in touch](mailto:contact@http4k.org)** - either via the **[Kotlin Slack](https://kotlinlang.slack.com)** or by opening a private security advisory on the **[http4k repo](https://github.com/http4k/http4k/security/advisories/new)**.
 
-#### Coming up: `http4k verify`
+## Coming up: `http4k verify`
 
 Hardening the source (the work this article is about) is one defence. *Proving* that what you pull off Maven Central is the same bytes we signed and shipped is the other - and given everything above about the threat picture, the one we've been getting more serious about too. **`http4k verify`** is a Gradle plugin that validates JAR signatures, CycloneDX SBOMs, SLSA provenance attestations, and license compliance across the entire http4k dependency tree, automatically, before your code compiles. Built for the enterprise / regulated / CRA-exposed audience that's going to need this evidence anyway. Early access is live now at **[verify.http4k.org](https://verify.http4k.org)**; full write-up when it lands formally.
 
@@ -103,4 +104,4 @@ Let us know what else we should be looking at.
 
 Peace out.
 
-#### // the http4k team
+## // the http4k team

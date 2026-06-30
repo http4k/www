@@ -1,35 +1,28 @@
 {{ define "main" }}
 
-<div class="layout d-flex">
-    <main class="page-content mx-auto">
-        <article>
-            <h1>{{ .Title }}</h1>
-            {{ .Content }}
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-5">
-                {{ range where .Site.RegularPages "Type" "eq" "howto" }}
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{ .Title }}</h5>
-                            <p class="card-text">{{ .Params.description | markdownify }}</p>
-                            <div class="mt-auto">
-                                <div class="row">
-                                    {{ range .Params.tags }}
-                                    <span class="badge text-bg-secondary" style="display:inline">{{ . }}</span>
-                                    {{ end }}
-                                </div>
-                                <div class="row mt-2">
-                                    <a href="{{ .RelPermalink }}" class="btn btn-secondary">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-        </article>
-    </main>
-</div>
-{{ partial "shared/pipes.html" }}
+<section class="list-header">
+    <div class="eyebrow">// HOW-TO GUIDES</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="list-header__intro">{{ . }}</div>{{ end }}
+</section>
+
+{{ $items := where .Site.RegularPages "Type" "eq" "howto" }}
+
+{{ $tags := slice }}
+{{ range $items }}{{ range .Params.tags }}{{ $tags = $tags | append . }}{{ end }}{{ end }}
+{{ $tags = $tags | uniq | sort }}
+{{ if $tags }}{{ partial "shared/filter-chips.html" (dict "attr" "tags" "items" $tags) }}{{ end }}
+
+<section class="list-section">
+    <div class="article-grid">
+        {{ range $items }}
+        {{ partial "shared/article-card.html" (dict
+            "title" .Title
+            "href" .RelPermalink
+            "excerpt" .Params.description
+            "tags" .Params.tags) }}
+        {{ end }}
+    </div>
+</section>
 
 {{ end }}

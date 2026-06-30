@@ -27,6 +27,10 @@ markup:
     style: "monokai"
     lineNos: false
 
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
 params:
   title: "http4k"
   description: "The Functional toolkit for Kotlin HTTP applications"

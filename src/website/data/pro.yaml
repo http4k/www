@@ -69,10 +69,12 @@ packs:
   - name: Agents Pack
     link: https://agents.http4k.org
     image: agents.webp
+    description: "MCP, Agent2Agent, Wiretap and X402 payments - the full toolkit for building and debugging agentic systems."
     prompt: "A clean isometric illustration of four interconnected modules arranged in a diamond pattern on a floating platform: a glowing neural network node
   (MCP), two small robots linked by a bridge exchanging task cards (A2A), a magnifying glass over data streams (Wiretap), and two server towers exchanging a coin token (X402/MPP) - all connected by thin luminous lines converging to a central hub. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
   - name: Machine Payments Pack
     link: https://payments.http4k.org
     image: payments.webp
+    description: "X402 and the Machine Payments Protocol - automated micropayment negotiation between your services."
     prompt: "A clean isometric illustration of two interconnected modules on a floating platform: a pair of minimalist server towers exchanging a small coin token across a bridge (X402), alongside a network of small connected nodes with tiny currency symbols flowing along paths between them on a simple grid (MPP)
    - both linked by thin luminous lines converging to a central payment hub. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."

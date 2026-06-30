@@ -1,7 +1,7 @@
 {{ define "main" }}
 
-<div class="layout d-flex">
-    <main class="page-content mx-auto">
+<div class="layout">
+    <main class="page-content">
         <article>
             <h1>{{ .Title }}</h1>
             {{ .Content }}
@@ -15,7 +15,7 @@
                                 src="{{ .image }}" alt="logo">
                             <p class="card-text">{{ .description | markdownify }}</p>
                             <div class="mt-auto d-flex justify-content-end">
-                                <a href="{{ with .url }}{{ . }}{{ else }}/ecosystem/{{ .ref }}/{{ end }}" class="btn btn-secondary">Find out more</a>
+                                <a href="{{ with .url }}{{ . }}{{ else }}/ecosystem/{{ .ref }}/{{ end }}" class="btn btn-secondary">Read more</a>
                             </div>
                         </div>
                     </div>

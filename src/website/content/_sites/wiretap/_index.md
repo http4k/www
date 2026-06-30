@@ -70,8 +70,38 @@ how_tos:
             -   description: "Connect **Claude Code** or any MCP client to **/_wiretap/mcp** for AI-assisted debugging and chaos testing."
                 image: wiretap-claude.webp
                 alt: Connect an MCP client
-pre_features_partial: product/wiretap_hero_image.html
-post_features_partial: product/wiretap_screenshots.html
+showcase:
+    -   title: Intercept JUnit Reports
+        tabs:
+            -   label: Traces
+                image: wiretap-intercept-traces.webp
+                alt: Intercept - Traces
+            -   label: Traffic
+                image: wiretap-intercept-traffic.webp
+                alt: Intercept - Traffic
+            -   label: Span Detail
+                image: wiretap-intercept-span-detail.webp
+                alt: Intercept - Span Detail
+    -   title: Wiretap Developer Console
+        tabs:
+            -   label: Dashboard
+                image: wiretap-console-dashboard.webp
+                alt: Console - Dashboard
+            -   label: OTel
+                image: wiretap-console-otel.webp
+                alt: Console - OTel
+            -   label: OpenAPI
+                image: wiretap-openapi.webp
+                alt: Console - OpenAPI
+            -   label: Chaos
+                image: wiretap-chaos.webp
+                alt: Console - Chaos
+            -   label: MCP Inspector
+                image: wiretap-console-mcp-inspector.webp
+                alt: Console - MCP Inspector
+            -   label: MCP Apps
+                image: wiretap-console-mcp-apps.webp
+                alt: Console - MCP Apps
 #email_form_id: 8b025c558c
 pricing_table:
     id: prctbl_1TDPBkG47sNzv4yX1N2tTzB6

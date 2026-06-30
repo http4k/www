@@ -12,6 +12,9 @@ highlights:
     -   title: Troubleshooting and debugging
         description: If you're having problems with your http4k application, we can help you get to the bottom of it.
         icon: "/images/faq.svg"
+    -   title: Hands-on training
+        description: Level your team up with hands-on training from the creators - learn to use http4k effectively, fast.
+        icon: "/images/supportive.svg"
 ---
 
 Founded in 2017, http4k has grown into one of the most popular HTTP libraries for Kotlin, reflecting over 15 years of
