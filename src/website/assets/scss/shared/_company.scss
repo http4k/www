@@ -7,7 +7,7 @@
     letter-spacing: -0.02em;
     font-weight: 700;
     color: var(--ink);
-    margin: 0 0 30px;
+    margin: 0 0 32px;
 }
 
 .company-lede {
@@ -28,18 +28,10 @@
     padding-block: 84px 78px;
 }
 
-.company-hero__eyebrow {
-    font-family: var(--font-mono);
-    font-size: var(--fs-sm);
-    letter-spacing: 0.16em;
-    color: var(--blue);
-    margin-bottom: 20px;
-}
 
 // --- mission ---
 .company-mission { max-width: 820px; }
 
-.company-mission .company-h2 { margin-bottom: 22px; }
 
 .company-mission p {
     font-size: 1.125rem;

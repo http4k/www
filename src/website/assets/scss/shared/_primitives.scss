@@ -51,6 +51,9 @@
     pointer-events: none;
 }
 
+// One eyebrow everywhere; cyan on ink surfaces (heroes + ink sections).
+.ink-hero .eyebrow, .ent-editions .eyebrow, .security-audits .eyebrow { color: var(--blue); }
+
 // Shared ink-hero headline + sub (enterprise/company/security/product heroes).
 .hero-title { font-size: clamp(2.4rem, 5vw, 3.5rem); line-height: 1.04; letter-spacing: -0.03em; font-weight: 700; color: #fff; margin: 0 0 20px; max-width: 840px; }
 .hero-sub { font-size: var(--fs-lead); line-height: 1.55; color: #aebece; margin: 0 0 30px; max-width: var(--lede); }

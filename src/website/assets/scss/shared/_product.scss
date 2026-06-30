@@ -2,7 +2,7 @@
 
 .product-section { @include section-wrap; padding-block: 80px; }
 .product-h2 { font-size: 2.125rem; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; color: var(--ink); margin: 0; }
-.product-head { max-width: 720px; margin-bottom: 44px; }
+.product-head { max-width: 720px; margin-bottom: 32px; }
 .product-head--center { max-width: none; text-align: center; }
 .product-head--center .product-lead { margin-inline: auto; }
 .product-lead { font-size: var(--fs-lead); line-height: 1.55; color: var(--text-muted); margin: 14px 0 0; }

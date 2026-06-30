@@ -1,13 +1,12 @@
 // http4k Enterprise page - fits the comp onto enterprise.md. ASCII only.
 
 .ent-section { @include section-wrap; padding-block: 84px; }
-.ent-head { max-width: 700px; margin-bottom: 44px; }
+.ent-head { max-width: 700px; margin-bottom: 32px; }
 .ent-h2 { font-size: 2.125rem; line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; margin: 0; color: var(--ink); }
 
 // --- hero (ink + pipes) ---
 // hero background = shared .ink-hero (_primitives.scss)
 .ent-hero__inner { position: relative; padding-block: 88px 80px; }
-.ent-hero__eyebrow { font-family: var(--font-mono); font-size: var(--fs-sm); letter-spacing: 0.16em; color: var(--blue); margin-bottom: 18px; }
 .ent-hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; }
 
 // --- at a glance ---
@@ -58,9 +57,8 @@
 // --- editions (ink) ---
 .ent-editions { background: var(--ink); color: var(--text-on-ink); }
 .ent-editions__inner { max-width: 1200px; margin: 0 auto; padding: 84px 36px; }
-.ent-editions .eyebrow { color: var(--blue); }
 .ent-editions .ent-h2 { color: #fff; }
-.ent-editions__head { max-width: 700px; margin-bottom: 40px; }
+.ent-editions__head { max-width: 700px; margin-bottom: 32px; }
 
 .ent-matrix { width: 100%; border-collapse: collapse; }
 .ent-matrix th, .ent-matrix td { padding: 16px 18px; text-align: left; border-bottom: 1px solid #1f3142; }

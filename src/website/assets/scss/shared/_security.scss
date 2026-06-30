@@ -4,7 +4,6 @@
 
 // --- hero (background = shared .ink-hero in _primitives.scss) ---
 .security-hero__inner { position: relative; padding-block: 84px 78px; }
-.security-hero .eyebrow { color: var(--blue); }
 
 // --- policy / keys strip ---
 .security-policy { border-bottom: 1px solid var(--border); background: var(--off-white); }
@@ -19,7 +18,7 @@
 
 // --- advisories list ---
 .security-advisories { @include section-wrap; padding-block: 72px 96px; }
-.security-advisories__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 28px; }
+.security-advisories__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
 .security-advisories__count { font-family: var(--font-mono); font-size: 13px; color: #9aa7b6; }
 .security-advisories__cols { display: grid; grid-template-columns: 120px 1fr 130px; padding: 0 26px 12px; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa7b6; }
 .security-advisories__cols .r { text-align: right; }
@@ -40,7 +39,6 @@
 // --- proactive LLM audits (ink) ---
 .security-audits { position: relative; overflow: hidden; background: var(--ink); color: var(--text-on-ink); }
 .security-audits__inner { position: relative; max-width: 1000px; margin: 0 auto; padding: 84px 36px; }
-.security-audits .eyebrow { color: var(--blue); }
 .security-audits h2 { font-size: 2.125rem; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; color: #fff; margin: 0 0 16px; }
 .security-audits p { font-size: var(--fs-lead); line-height: 1.6; color: #aebece; margin: 0 0 18px; max-width: var(--lede); }
 .security-audits__link { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue); text-decoration: none; }
