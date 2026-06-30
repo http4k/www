@@ -30,7 +30,7 @@
         </div>
         <div class="pro-catalogue__count">{{ len $available }} available &middot; {{ len $soon }} in the works</div>
     </div>
-    <div class="pro-grid">
+    <div class="card-grid pro-grid">
         {{ range $modules }}
         <a class="ui-card pro-module" href="{{ .link }}">
             <div class="pro-module__top">
@@ -51,7 +51,7 @@
         <div class="eyebrow">// BUNDLED PACKS</div>
         <h2 class="section-h2">Buy them together, save the faff.</h2>
     </div>
-    <div class="pro-packs__grid">
+    <div class="card-grid card-grid--2 pro-packs__grid">
         {{ range .Site.Data.pro.packs }}
         <a class="pro-pack" href="{{ .link }}">
             <div class="pro-pack__glow"></div>
@@ -69,7 +69,7 @@
         <div class="eyebrow">// LICENSING</div>
         <h2 class="section-h2">Honest licensing. Buy only the modules you use.</h2>
     </div>
-    <div class="pro-tiers">
+    <div class="card-grid pro-tiers">
         <div class="ui-card pro-tier">
             <div class="pro-tier__label">FREE</div>
             <div class="pro-tier__price">&pound;0</div>

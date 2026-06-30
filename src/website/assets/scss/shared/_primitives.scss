@@ -102,3 +102,12 @@
 // gap reveals --border as the seam, tiles paint over it.
 .mosaic { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; }
 .mosaic > * { background: var(--paper); }
+
+// One card grid: 3-up default, --2 / --4 for other counts. The responsive
+// collapse lives here once (was copy-pasted across ~8 page files). gap default
+// 20px; override per grid only where it differs.
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.card-grid--4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 991.98px) { .card-grid, .card-grid--4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 767.98px) { .card-grid, .card-grid--2, .card-grid--4 { grid-template-columns: 1fr; } }

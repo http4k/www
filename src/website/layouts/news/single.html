@@ -60,7 +60,7 @@
     {{ with $rel }}
     <section class="article-related">
         <div class="eyebrow">// KEEP READING</div>
-        <div class="article-grid">
+        <div class="card-grid article-grid">
             {{ range . }}
             {{ $i := "" }}{{ with .Resources.GetMatch .Params.image }}{{ $i = .RelPermalink }}{{ end }}
             {{ partial "shared/article-card.html" (dict

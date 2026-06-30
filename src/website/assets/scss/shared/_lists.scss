@@ -85,11 +85,7 @@
 }
 
 // --- grid ---
-.article-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
+.article-grid { gap: 24px; }
 
 // --- card ---
 .article-card {
@@ -265,12 +261,7 @@
 .newsletter__btn:hover { background: var(--orange-strong); }
 
 // --- responsive ---
-@media (max-width: 991.98px) {
-    .article-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (max-width: 767.98px) {
-    .article-grid { grid-template-columns: 1fr; }
     .list-header { padding: 48px 24px 32px; }
     .list-section,
     .filter-chips,

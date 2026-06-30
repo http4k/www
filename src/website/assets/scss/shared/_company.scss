@@ -39,7 +39,7 @@
 .company-receipts__label { font-size: var(--fs-sm); color: var(--text-muted); margin-top: 4px; }
 
 // --- founders ---
-.founder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.founder-grid { gap: 22px; }
 
 .founder-card {
     border: 1px solid var(--border);
@@ -216,7 +216,6 @@
     .company-map__card { max-width: none; width: 100%; }
     .company-hero__inner { padding: 60px 24px 56px; }
     .company-receipts { grid-template-columns: repeat(2, 1fr); }
-    .founder-grid,
     .service-grid { grid-template-columns: 1fr; }
     .cta-band-wrap { padding: 56px 24px 72px; }
     .cta-band { padding: 44px 28px; }

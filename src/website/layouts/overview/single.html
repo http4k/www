@@ -108,7 +108,7 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
             <h2 class="section-h2">Good artists borrow. We just stole the lot.</h2>
             <p class="section-lede">We're not precious about it. http4k distilled decades of using server-side libraries, and we pilfered the best parts shamelessly - then made them play together, the Kotlin way. Credit where it's due.</p>
         </div>
-        <div class="ov-credits">
+        <div class="card-grid ov-credits">
             {{ range .Site.Data.overview.credits }}
             <div class="ui-card ov-credit">
                 <div class="ov-credit__kick">{{ .kick }}</div>
@@ -127,7 +127,7 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
             <h2 class="section-h2">Testability isn't a feature we added. It's what falls out.</h2>
             <p class="section-lede">When both your server and your clients are the same kind of function, the hard things get easy - and some things other HTTP libraries simply can't do become trivial.</p>
         </div>
-        <div class="ov-payoff">
+        <div class="card-grid ov-payoff">
             {{ range .Site.Data.overview.payoff }}
             <div class="ov-payoff__card">
                 <h3>{{ .title }}</h3>

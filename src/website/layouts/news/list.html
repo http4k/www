@@ -25,7 +25,7 @@
         "thumbText" .Params.category) }}
     {{ end }}
 
-    <div class="article-grid">
+    <div class="card-grid article-grid">
         {{ range $rest }}
         {{ $img := "" }}{{ with .Resources.GetMatch .Params.image }}{{ $img = .RelPermalink }}{{ end }}
         {{ partial "shared/article-card.html" (dict

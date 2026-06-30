@@ -10,7 +10,7 @@
 {{ if $tags }}{{ partial "shared/filter-chips.html" (dict "attr" "tags" "items" $tags) }}{{ end }}
 
 <section class="section-rail list-section">
-    <div class="article-grid">
+    <div class="card-grid article-grid">
         {{ range $items }}
         {{ partial "shared/article-card.html" (dict
             "title" .Title

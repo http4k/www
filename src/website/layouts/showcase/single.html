@@ -5,7 +5,7 @@
 <section class="section-rail list-section">
     <h2 class="list-section__title">Talks</h2>
     <p class="list-section__lead">Here's a curated list of talks worth watching. Check out the <a href="https://bit.ly/http4k-talks">YouTube Playlist</a> for the latest collection of talks featuring http4k.</p>
-    <div class="article-grid">
+    <div class="card-grid article-grid">
         {{ range (sort .Site.Data.in_action.talks ".date" "desc") }}
         {{ partial "shared/article-card.html" (dict
             "title" .title
@@ -21,7 +21,7 @@
 <section class="section-rail list-section">
     <h2 class="list-section__title">Standalone projects</h2>
     <p class="list-section__lead">Each project is tagged with the http4k features it demonstrates:</p>
-    <div class="article-grid">
+    <div class="card-grid article-grid">
         {{ range .Site.Data.in_action.projects }}
         {{ partial "shared/article-card.html" (dict
             "title" .title

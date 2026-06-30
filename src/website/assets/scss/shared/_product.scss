@@ -18,7 +18,7 @@
 
 // --- feature grid ---
 .product-features { background: var(--off-white); }
-.product-feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.product-feature-grid { gap: 18px; }
 .product-feature { border-radius: var(--radius-lg); padding: 26px 24px; }
 .product-feature__dash { width: 40px; height: 3px; border-radius: var(--radius-sm); margin: 12px 0; background: var(--blue-strong); }
 .product-feature img { width: 40px; height: 40px; margin-bottom: 6px; }
@@ -28,7 +28,7 @@
 // --- how it works (steps + screenshots) ---
 .product-howto + .product-howto { margin-top: 24px; }
 .product-howto__title { font-size: var(--fs-h2); font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 28px; }
-.product-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.product-steps { gap: 28px; }
 .product-step p { font-size: 1rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 14px; }
 .product-step img { width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); }
 .product-howto__cta { margin-top: 28px; display: flex; align-items: center; gap: 20px; justify-content: center; background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 28px; }
@@ -72,13 +72,8 @@
 .download-stack[data-state="downloaded"] .download-stack__form { display: none; }
 
 // --- responsive ---
-@media (max-width: 991.98px) {
-    .product-feature-grid { grid-template-columns: repeat(2, 1fr); }
-}
 @media (max-width: 767.98px) {
     .product-hero__inner { padding-block: 20px 50px; }
-    .product-feature-grid { grid-template-columns: 1fr; }
-    .product-steps { grid-template-columns: 1fr; }
     .product-large-image img { max-width: 100%; }
     .product-pricing, .product-subscribe { padding: 56px 24px; }
 }

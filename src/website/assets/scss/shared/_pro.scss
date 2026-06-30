@@ -49,7 +49,7 @@
 // --- catalogue ---
 .pro-catalogue__count { font-family: var(--font-mono); font-size: 13px; color: var(--text-faint); }
 
-.pro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.pro-grid { gap: 22px; }
 
 .pro-module {
     display: flex;
@@ -80,7 +80,7 @@
 .pro-module__cta { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue-strong); }
 
 // --- packs ---
-.pro-packs__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.pro-packs__grid { gap: 22px; }
 
 .pro-pack {
     position: relative;
@@ -109,7 +109,7 @@
 .pro-pack__cta { position: relative; font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue); }
 
 // --- licensing tiers ---
-.pro-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.pro-tiers { gap: 22px; }
 
 .pro-tier {
     display: flex;
@@ -186,15 +186,8 @@
 .pro-end { padding-bottom: 96px; }
 
 // --- responsive ---
-@media (max-width: 991.98px) {
-    .pro-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (max-width: 767.98px) {
     .pro-hero__inner { padding: 56px 24px 40px; }
     .pro-free-banner__inner { padding: 20px 24px; }
-    .pro-grid,
-    .pro-packs__grid,
-    .pro-tiers { grid-template-columns: 1fr; }
     .faq-section { padding: var(--section-py-mobile) 24px 0; }
 }
