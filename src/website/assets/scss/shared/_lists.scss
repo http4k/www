@@ -45,13 +45,7 @@
 
 .list-section { @include section-wrap; padding-block: 30px 72px; }
 
-.list-section__title {
-    font-size: 2.125rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin: 26px 0 6px;
-}
+.list-section__title { margin: 26px 0 6px; }
 
 .list-section__lead {
     font-size: var(--fs-body);

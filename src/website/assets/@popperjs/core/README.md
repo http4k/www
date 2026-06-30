@@ -257,7 +257,7 @@ Popper is distributed in 3 different versions, in 3 different file formats.
 
 The 3 file formats are:
 
-- `esm` (works with `import` syntax — **recommended**)
+- `esm` (works with `import` syntax - **recommended**)
 - `umd` (works with `<script>` tags or RequireJS)
 - `cjs` (works with `require()` syntax)
 
