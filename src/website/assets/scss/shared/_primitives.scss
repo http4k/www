@@ -77,10 +77,13 @@
 .section-h2 { margin: 0 0 12px; }
 .section-lede { font-size: var(--fs-lead); line-height: 1.6; color: var(--text-muted); max-width: var(--lede); margin: 0; }
 
-// One eyebrow everywhere; cyan on ink surfaces (heroes + ink sections).
-.ink-hero .eyebrow, .ent-editions .eyebrow, .security-audits .eyebrow { color: var(--blue); }
-.ent-editions .section-h2, .security-audits .section-h2 { color: #fff; }
-.security-audits .section-lede { color: #aebece; }
+// One ink-surface text scope. Every dark band/hero recolors its eyebrow, heading
+// and lede the same way - so it lives once here, keyed off the shared surface
+// classes (.ink-hero for heroes, .section--ink for full-bleed bands), not per
+// page-class.
+.ink-hero .eyebrow, .section--ink .eyebrow { color: var(--blue); }
+.section--ink .section-h2 { color: #fff; }
+.section--ink .section-lede { color: #aebece; }
 
 // Shared ink-hero headline + sub (enterprise/company/security/product heroes).
 .hero-title { font-size: clamp(2.4rem, 5vw, 3.5rem); line-height: 1.04; letter-spacing: -0.03em; font-weight: 700; color: #fff; margin: 0 0 20px; max-width: 840px; }

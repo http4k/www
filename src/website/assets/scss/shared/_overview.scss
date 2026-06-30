@@ -30,12 +30,7 @@
 .ov-section .service-card__num { color: var(--blue-strong); }
 
 // full-bleed colour bands (inner content stays on the 1200 rail, symmetric padding)
-.ov-bleed--paper { background: var(--off-white); }
-.ov-bleed--ink { background: var(--ink); color: var(--text-on-ink); }
 .ov-bleed .ov-section { padding-bottom: var(--section-py); }
-.ov-bleed--ink .section-h2 { color: #fff; }
-.ov-bleed--ink .section-lede { color: #aebece; }
-.ov-bleed--ink .eyebrow { color: var(--blue); }
 
 // credit cards
 .ov-credits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }

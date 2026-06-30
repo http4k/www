@@ -4,7 +4,7 @@
 .security-hero__inner { position: relative; padding-block: 84px 78px; }
 
 // --- policy / keys strip ---
-.security-policy { border-bottom: 1px solid var(--border); background: var(--off-white); }
+.security-policy { border-bottom: 1px solid var(--border); }
 .security-policy__inner { max-width: 1200px; margin: 0 auto; padding: 40px 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .security-policy-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 24px; text-decoration: none; transition: border-color var(--transition-fast); }
 .security-policy-card:hover { border-color: var(--blue-strong); }
@@ -33,7 +33,7 @@
 .sev--low { color: var(--text-muted); background: var(--off-white); border-color: var(--border); }
 
 // --- proactive LLM audits (ink) ---
-.security-audits { position: relative; overflow: hidden; background: var(--ink); color: var(--text-on-ink); }
+.security-audits { position: relative; overflow: hidden; }
 .security-audits__inner { position: relative; max-width: 1000px; margin: 0 auto; padding: 84px 36px; }
 .security-audits .section-h2 { margin-bottom: 16px; }
 .security-audits .section-lede { margin-bottom: 18px; }

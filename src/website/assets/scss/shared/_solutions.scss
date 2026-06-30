@@ -18,7 +18,6 @@
 .solution-card p { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
 
 // professional-services cards (data/cta): title + desc + outbound link
-.solution-cta { background: var(--off-white); }
 .solution-cta__inner { max-width: 1200px; margin: 0 auto; padding: 80px 36px; }
 .solution-cta__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
