@@ -6,15 +6,15 @@
     <main class="page-content col">
         <article>
             <img class="mb-3 sideToggle" src="/images/exchange-icon.svg" width="20" alt="" srcset=""/>
-            {{ if .Params.image }}
-            <img src="{{ .Params.image }}" alt="Image" class="imageSmall mt-3"/>
-            {{ else }}
             {{ $eco := .Params.ecosystem }}{{ if reflect.IsSlice $eco }}{{ $eco = index $eco 0 }}{{ end }}
             <nav class="docs-crumbs">
                 <a href="/ecosystem/">docs</a>
                 {{ if and $eco (ne $eco .Title) }}<span>/</span>{{ $eco }}{{ end }}
                 <span>/</span>{{ .Title }}
             </nav>
+            {{ with .Params.image }}
+            <img src="{{ . }}" alt="Image" class="imageSmall mt-3"/>
+            {{ end }}
             {{ with .Params.Category }}<div class="eyebrow">// {{ . | upper }}</div>{{ end }}
             <div class="d-flex align-items-center">
                 <h1>{{ .Title }}</h1>
@@ -25,7 +25,6 @@
                 {{ end }}
 
             </div>
-            {{ end }}
 
             {{ if eq .Params.tier "pro" }}
             <div class="mt-3 alert alert-warning border d-flex align-items-center justify-content-between">
