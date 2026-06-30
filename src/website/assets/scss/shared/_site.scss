@@ -41,8 +41,6 @@ body {
 .site-header .navbar .nav-link,
 .site-header .navbar .nav-link:visited {
     color: #43505f !important;
-    font-size: var(--fs-ui);
-    font-weight: 500;
 }
 
 .site-header .navbar .nav-link:hover,
@@ -50,8 +48,8 @@ body {
     color: var(--docs-link) !important;
 }
 
-/* darken the white logo + github icon for the light header */
-.site-header .navbar-brand img,
+/* darken the github icon for the light header (the logo uses a real coloured
+   variant instead - see .nav-logo toggle in _header.scss) */
 .site-header img[alt="github"] {
     filter: brightness(0);
 }

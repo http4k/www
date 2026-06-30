@@ -17,6 +17,12 @@
 // nav CTA button - compact variant of .cta-btn for the top bar (white + dark navs)
 .nav-cta { height: 38px; padding: 0 16px; font-size: var(--fs-sm); margin-left: 6px; }
 
+// Logo: white wordmark on dark navs (landing / product / ink-hero pages), the
+// full-colour wordmark on the light .site-header. Two imgs toggled by context.
+.nav-logo--colour { display: none; }
+.site-header:not(:has(+ .ink-hero)) .nav-logo--white { display: none; }
+.site-header:not(:has(+ .ink-hero)) .nav-logo--colour { display: inline-block; }
+
 // When a page leads with a dark .ink-hero, integrate the nav into it: transparent
 // overlay, white links + logo, non-sticky (scrolls away like the home hero). No
 // per-page flag - keyed purely off "the header is immediately followed by an ink
