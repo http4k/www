@@ -47,6 +47,21 @@
     margin: 0 0 22px;
 }
 
+// --- row list: a bordered list of clickable rows (how-to recipes, tutorials) ---
+.row-list { border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; }
+.row-list__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 20px 26px;
+    text-decoration: none;
+    border-top: 1px solid var(--border);
+    transition: background-color var(--transition-fast);
+}
+.row-list__row:first-child { border-top: 0; }
+.row-list__row:hover { background: var(--off-white); }
+
 // --- filter chips ---
 .filter-chips {
     display: flex;

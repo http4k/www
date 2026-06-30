@@ -94,6 +94,13 @@
 .article-body img { display: block; max-width: 100%; height: auto; margin: 1.6em auto; border-radius: var(--radius-lg); }
 .article-body blockquote { border-left: 3px solid var(--border); padding-left: 1em; color: var(--text-muted); margin: 1.5em 0; }
 .article-body .highlight { border-radius: var(--radius-lg); overflow: hidden; margin: 1.5em 0; }
+// the dark bg + overflow live on the inner <pre>, so round that too or its
+// scrolling box shows square bottom corners past the parent's clip.
+.article-body .highlight pre { border-radius: var(--radius-lg); }
+// inside the {{ kotlin }} shortcode the .code-example provides the frame + header;
+// don't let the standalone-code-block radius/margin detach the body from the header.
+.article-body .code-example .highlight { border-radius: 0; margin: 0; }
+.article-body .code-example .highlight pre { border-radius: 0; }
 .article-body :not(pre) > code {
     background: var(--off-white);
     border: 1px solid var(--border);

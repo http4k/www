@@ -1,21 +1,53 @@
 {{ define "main" }}
 
-{{ partial "shared/list-header.html" (dict "eyebrow" "tutorials" "title" .Title "intro" .Content) }}
+{{ partial "shared/list-header.html" (dict
+    "crumbs" (slice (dict "label" "learn" "url" "/learn/") (dict "label" "tutorials"))
+    "eyebrow" "tutorials"
+    "title" "Start at the top. Be dangerous by the bottom."
+    "lede" "A guided path through http4k's main ideas, in order. Each tutorial builds on the last - work straight down and you'll go from an empty directory to a fully working service.") }}
 
 {{ $tutorials := where .Site.Pages ".Params.series" "!=" nil }}
-{{ range $series := .Site.Data.tutorial_series }}
-<section class="section-rail list-section">
-    <h2 class="list-section__title">{{ $series.name }}</h2>
-    <p class="list-section__lead">{{ $series.description }}</p>
-    <div class="card-grid article-grid">
-        {{ range where $tutorials ".Params.series" $series.name }}
-        {{ partial "shared/article-card.html" (dict
-            "title" .Title
-            "href" .RelPermalink
-            "excerpt" .Params.description) }}
-        {{ end }}
+{{ $firstSeries := index .Site.Data.tutorial_series 0 }}
+{{ $first := index (sort (where $tutorials ".Params.series" $firstSeries.name) ".Params.weight") 0 }}
+
+<section class="section-rail tut">
+    {{ with $first }}
+    <div class="tut-start">
+        <div class="tut-start__main">
+            <div class="tut-start__kick">NEW HERE? START WITH</div>
+            <div class="tut-start__title">{{ .Title }}</div>
+            <p class="tut-start__sub">{{ .Params.description }}</p>
+        </div>
+        <a class="cta-btn cta-btn--primary" href="{{ .RelPermalink }}">Begin the path &rarr;</a>
+    </div>
+    {{ end }}
+
+    {{ range $series := .Site.Data.tutorial_series }}
+    {{ $items := sort (where $tutorials ".Params.series" $series.name) ".Params.weight" }}
+    {{ if $items }}
+    <div class="tut-group">
+        <h2 class="list-section__title">{{ $series.name }}</h2>
+        <p class="list-section__lead">{{ $series.description }}</p>
+        <div class="row-list">
+            {{ range $i, $t := $items }}
+            <a class="row-list__row tut-row" href="{{ $t.RelPermalink }}">
+                <span class="tut-row__num">{{ printf "%02d" (add $i 1) }}</span>
+                <span class="tut-row__body">
+                    <span class="tut-row__title">{{ $t.Title }}</span>
+                    <span class="tut-row__desc">{{ $t.Params.description }}</span>
+                </span>
+                <span class="tut-row__go">&rarr;</span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+
+    <div class="tut-done">
+        <p class="tut-done__title">Done the path?</p>
+        <p class="tut-done__text">You're dangerous now. Head to the <a href="/howto/">how-to guides</a> for ready-made recipes, or the <a href="/overview/">concepts</a> for the why behind it all.</p>
     </div>
 </section>
-{{ end }}
 
 {{ end }}

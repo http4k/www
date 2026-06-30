@@ -211,6 +211,22 @@
 
 .docs-pager__link strong { color: var(--docs-link); font-weight: 600; }
 
+// --- reading layout: prose + sticky "on this page" TOC (tutorial + how-to detail) ---
+.reading { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 48px; align-items: start; max-width: 1120px; margin: 0 auto; padding: 46px 24px 80px; }
+.reading__main { min-width: 0; }
+.reading__meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 14px; }
+.reading__chip { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.04em; padding: 4px 10px; border-radius: var(--radius-sm); color: var(--text-muted); background: var(--off-white); border: 1px solid var(--border); }
+.reading__chip--accent { color: var(--blue-strong); background: var(--blue-wash); border-color: transparent; }
+.reading__title { font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; color: var(--ink); margin: 0 0 14px; }
+.reading__lede { font-size: var(--fs-lead); line-height: 1.6; color: var(--text-muted); margin: 0; max-width: var(--lede); }
+.reading__toc-link { display: block; font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--blue-strong); text-decoration: none; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+.reading__toc-link:hover { color: var(--ink); }
+
+@media (max-width: 1199.98px) {
+    .reading { grid-template-columns: 1fr; gap: 0; }
+    .reading__toc { display: none; }
+}
+
 // --- responsive ---
 .sideToggle { display: none; } // desktop: no toggle
 

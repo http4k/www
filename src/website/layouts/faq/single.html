@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<div class="faq-page">
+    <header class="faq-page__head">
+        {{ partial "shared/eyebrow.html" "faq" }}
+        <h1 class="reading__title">{{ .Title }}</h1>
+        {{ with .Params.description }}<p class="reading__lede">{{ . }}</p>{{ end }}
+    </header>
+
+    {{ range $ci, $cat := .Params.faq }}
+    <section class="faq-cat">
+        <h2 class="faq-cat__title">{{ $cat.category }}</h2>
+        <div class="faq-cat__items">
+            {{ range $ii, $item := $cat.items }}
+            <details class="faq-item"{{ if and (eq $ci 0) (eq $ii 0) }} open{{ end }}>
+                <summary class="faq-item__q">{{ $item.q }}</summary>
+                <div class="faq-item__a">{{ $item.a | markdownify }}</div>
+            </details>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+</div>
+
+{{ partial "shared/cta-band.html" (dict
+    "title" "Still stuck on something?"
+    "text" "Most questions get answered fastest in the #http4k channel on the Kotlin Slack - the maintainers are right there. Commercial queries go to the inbox."
+    "primaryLabel" "Join the Slack" "primaryHref" "https://kotlinlang.slack.com"
+    "secondaryLabel" "Email us" "secondaryHref" "mailto:info@http4k.org") }}
+
+{{ end }}

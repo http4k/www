@@ -1,0 +1,9 @@
+{{- /* Recursive TOC from .Fragments.Headings (all levels, unlike .TableOfContents
+       which is capped by config). Pass a headings slice. */ -}}
+<ul>
+    {{- range . }}
+    {{- if .Title }}
+    <li><a href="#{{ .ID }}">{{ .Title }}</a>{{ with .Headings }}{{ partial "shared/toc-tree.html" . }}{{ end }}</li>
+    {{- else if .Headings }}{{ partial "shared/toc-tree.html" .Headings }}{{ end }}
+    {{- end }}
+</ul>

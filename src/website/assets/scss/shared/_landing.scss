@@ -10,7 +10,10 @@ body {
     min-height: 480px;
     padding-bottom: 100px;
     position: relative;
-    overflow: visible;
+    // clip horizontal glow/pipes bleed (the glow sits at right:-100px) so it
+    // can't create page-wide horizontal scroll; vertical stays visible so nav
+    // dropdowns and the top bleed are unaffected.
+    overflow-x: clip;
 }
 
 .landing-bg {

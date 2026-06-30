@@ -1,0 +1,45 @@
+// Tutorials index: an ordered path grouped by series, on the shared .row-list.
+// Reuses .section-rail, .row-list, .list-section__title/__lead, .cta-btn. ASCII only.
+
+.tut { padding-bottom: var(--section-py); }
+
+// "new here? start with" banner (ink, rounded, inset)
+.tut-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 30px;
+    background: var(--ink);
+    color: var(--text-on-ink);
+    border-radius: var(--radius-xl);
+    padding: 28px 32px;
+    margin-bottom: 44px;
+}
+.tut-start__kick { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.12em; color: var(--blue); margin-bottom: 10px; }
+.tut-start__title { font-size: 1.4rem; font-weight: 700; color: #fff; }
+.tut-start__sub { font-size: 0.95rem; line-height: 1.55; color: var(--text-on-ink-2); margin: 6px 0 0; max-width: 620px; }
+
+// series groups
+.tut-group + .tut-group { margin-top: 48px; }
+
+// numbered tutorial rows (frame + hover from .row-list__row)
+.tut-row { gap: 22px; }
+.tut-row__num { font-family: var(--font-mono); font-size: 1rem; font-weight: 700; color: var(--blue-strong); flex-shrink: 0; width: 26px; }
+.tut-row__body { flex: 1; min-width: 0; }
+.tut-row__title { display: block; font-size: 1.05rem; font-weight: 700; color: var(--ink); line-height: 1.3; }
+.tut-row__desc { display: block; font-size: 0.95rem; line-height: 1.5; color: var(--text-muted); margin-top: 4px; }
+.tut-row__go { font-family: var(--font-mono); color: var(--text-faint); flex-shrink: 0; transition: color var(--transition-fast), transform var(--transition-fast); }
+.row-list__row.tut-row:hover .tut-row__go { color: var(--blue-strong); transform: translateX(3px); }
+
+// "done the path?" closing note
+.tut-done { margin-top: 48px; text-align: center; }
+.tut-done__title { font-family: var(--font-mono); font-size: var(--fs-sm); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); margin: 0 0 8px; }
+.tut-done__text { font-size: 1rem; line-height: 1.6; color: var(--text-muted); margin: 0 auto; max-width: 560px; }
+.tut-done__text a { color: var(--blue-dark); }
+
+@media (max-width: 575.98px) {
+    .tut-start { flex-direction: column; align-items: flex-start; }
+}
+
+// tutorial detail uses the shared .reading layout (see _docs.scss).

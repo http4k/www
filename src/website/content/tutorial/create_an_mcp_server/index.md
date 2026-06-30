@@ -86,4 +86,3 @@ Then:
 | `ServerMetaData`   | Server name and version                               |
 | `NoMcpSecurity`    | No-auth security for local development                |
 
-Next: [Add MCP Capabilities](/tutorial/add_mcp_capabilities/)

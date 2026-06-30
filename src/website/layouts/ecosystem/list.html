@@ -1,32 +1,95 @@
 {{ define "main" }}
+{{ $ver := .Site.Params.versions.http4k }}
 
-<div class="layout">
-    <main class="page-content">
-        <article>
-            {{ partial "shared/eyebrow.html" "ecosystem" }}
-            <h1>{{ .Title }}</h1>
-            {{ .Content }}
-            <div class="row row-cols-1 row-cols-sm-2 my-5 g-4 justify-content-center">
-                {{ range .Site.Data.ecosystem }}
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <img
-                                style="height: 5rem; max-width: 100%; object-fit: contain; margin-bottom: 20px;"
-                                src="{{ .image }}" alt="logo">
-                            <p class="card-text">{{ .description | markdownify }}</p>
-                            <div class="mt-auto d-flex justify-content-end">
-                                <a href="{{ with .url }}{{ . }}{{ else }}/ecosystem/{{ .ref }}/{{ end }}" class="btn btn-secondary">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    </a>
+<section class="ink-hero eco-hero">
+    <div class="ink-hero__glow"></div>
+    <div class="container eco-hero__inner">
+        <div class="eyebrow">// THE ECOSYSTEM</div>
+        <h1 class="hero-title">One platform. Four ecosystems. 200+ modules.</h1>
+        <p class="hero-sub">Everything ships under a single platform version, so it just works together. Each
+            sub-ecosystem has its own focus - but they all share the same functional soul, the same test-first
+            ethos, and minimal dependencies. Pull in only what you need.</p>
+        <ul class="hero-stats">
+            <li>Single BOM version</li>
+            <li>Minimal dependencies</li>
+            <li>In-memory fakes</li>
+            <li>Apache 2.0 core</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-head mb-5">
+            <div class="eyebrow">// FOUR FAMILIES</div>
+            <h2>Same platform version. Different jobs.</h2>
+            <p class="section-lede">Start in Core and reach into the others as you need them. Nothing is bundled you
+                didn't ask for.</p>
+        </div>
+        <div class="card-grid card-grid--2">
+            {{ range where .Site.Data.ecosystem "family" true }}
+            <a class="ui-card eco-family" href="{{ with .url }}{{ . }}{{ else }}/ecosystem/{{ .ref }}/{{ end }}">
+                <div class="eco-family__top">
+                    <img class="eco-family__logo" src="{{ .image }}" alt="{{ .title }}" loading="lazy">
+                    <span class="eco-family__badge">{{ .badge }}</span>
                 </div>
-                {{ end }}
+                <p class="eco-family__desc">{{ .tagline }}</p>
+                <div class="eco-family__chips">{{ range .chips }}<span class="chip">{{ . }}</span>{{ end }}</div>
+                <span class="eco-family__go">Explore {{ .title }} &rarr;</span>
+            </a>
+            {{ end }}
+        </div>
+
+        <div class="callout-orange mt-5">
+            <span class="callout-orange__lead">Running http4k where it counts?</span>
+            <span><a href="/enterprise/">http4k Enterprise</a> bundles every Pro module with Long-Term Support and
+                supply-chain security tooling - verified, signed, auditable artifacts for regulated teams.</span>
+        </div>
+    </div>
+</section>
+
+<section class="section section--off">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+                <div class="section-head">
+                    <div class="eyebrow">// ONE VERSION TO RULE THEM</div>
+                    <h2>Install the platform once. Never align versions by hand again.</h2>
+                    <p class="section-lede">The http4k BOM pins every module across all four ecosystems to a single,
+                        tested platform version. Add the BOM, then declare the modules you want - no versions, no
+                        clashes.</p>
+                </div>
+                <ul class="check-list mt-4">
+                    <li>Guaranteed-compatible across Core, AI, Connect &amp; Pro</li>
+                    <li>Add only the modules you actually use</li>
+                    <li>Core has zero transitive dependencies</li>
+                </ul>
             </div>
-        </article>
-    </main>
-</div>
-{{ partial "shared/pipes.html" }}
+            <div class="col-lg-7">
+                <div class="code-card">
+                    <div class="code-card__bar">
+                        <span class="code-card__dot code-card__dot--r"></span><span class="code-card__dot code-card__dot--y"></span><span class="code-card__dot code-card__dot--g"></span>
+                        <span class="code-card__file">build.gradle.kts</span>
+                    </div>
+                    <div class="code-card__body"><pre>dependencies {
+<span class="tok-com">    // the platform - one version</span>
+    implementation(platform(<span class="tok-str">"org.http4k:http4k-bom:{{ $ver }}"</span>))
+
+<span class="tok-com">    // ...then pick modules, no versions</span>
+    implementation(<span class="tok-str">"org.http4k:http4k-core"</span>)
+    implementation(<span class="tok-str">"org.http4k:http4k-ai-openai"</span>)
+    implementation(<span class="tok-str">"org.http4k:http4k-connect-amazon-s3"</span>)
+}</pre></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ partial "shared/cta-band.html" (dict
+    "title" "Not sure where to start?"
+    "text" "Most people begin in Core and reach into AI, Connect and Pro as they need them. Five minutes to your first running server."
+    "primaryLabel" "Quickstart" "primaryHref" "/quickstart/"
+    "secondaryLabel" "Browse the docs" "secondaryHref" "/ecosystem/http4k/") }}
 
 {{ end }}

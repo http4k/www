@@ -83,19 +83,11 @@
     </div>
 </section>
 
-<div class="cta-band-wrap">
-    <div class="cta-band">
-        <div class="cta-band__glow"></div>
-        <div class="cta-band__inner">
-            <h2>Let's build something solid together.</h2>
-            <p>Consulting, training, or just a hard question about your http4k deployment - talk to the people who wrote it.</p>
-            <div class="cta-band__buttons">
-                <a class="cta-btn cta-btn--primary" href="mailto:info@http4k.org">Get in touch</a>
-                <a class="cta-btn cta-btn--ghost-dark" href="/enterprise/">Explore Enterprise</a>
-            </div>
-        </div>
-    </div>
-</div>
+{{ partial "shared/cta-band.html" (dict
+    "title" "Let's build something solid together."
+    "text" "Consulting, training, or just a hard question about your http4k deployment - talk to the people who wrote it."
+    "primaryLabel" "Get in touch" "primaryHref" "mailto:info@http4k.org"
+    "secondaryLabel" "Explore Enterprise" "secondaryHref" "/enterprise/") }}
 
 <section class="company-map-section">
     <div class="company-map" role="link" tabindex="0" onclick='window.open("https://maps.app.goo.gl/LiFtUwycgDb17Pwr7")'>

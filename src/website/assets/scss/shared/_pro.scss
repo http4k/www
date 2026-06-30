@@ -33,16 +33,6 @@
     align-items: center;
     gap: 14px 22px;
 }
-.pro-free-banner__chip {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    color: var(--blue);
-    background: var(--ink-surface);
-    border: 1px solid var(--ink-border);
-    padding: 6px 12px;
-    border-radius: var(--radius-sm);
-}
 .pro-free-banner__text { font-size: 1rem; line-height: 1.5; color: #c7d3e0; }
 .pro-free-banner__text strong { color: #fff; }
 

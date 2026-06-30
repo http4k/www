@@ -6,7 +6,7 @@
         <div class="eyebrow">// WHY HTTP4K EXISTS</div>
         <h1 class="hero-title">It's not another HTTP library. It's a different way of thinking.</h1>
         <p class="hero-sub">Most frameworks bury HTTP under annotations, reflection and a container. http4k throws all of that out and starts from <strong>one radical idea</strong>. Every one of the 200+ modules is built on it, and nothing sneaks in behind your back.</p>
-        <ul class="ov-stats">
+        <ul class="hero-stats">
             <li>5M+ downloads / month</li>
             <li>200+ modules</li>
             <li>zero-dependency core</li>
@@ -110,10 +110,10 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
         </div>
         <div class="card-grid ov-credits">
             {{ range .Site.Data.overview.credits }}
-            <div class="ui-card ov-credit">
-                <div class="ov-credit__kick">{{ .kick }}</div>
-                <div class="ov-credit__name">{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</div>
-                <p class="ov-credit__desc">{{ .description }}</p>
+            <div class="ui-card kicker-card kicker-card--muted-kick">
+                <div class="kicker-card__kick">{{ .kick }}</div>
+                <div class="kicker-card__title">{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</div>
+                <p class="kicker-card__desc">{{ .description }}</p>
             </div>
             {{ end }}
         </div>
@@ -138,18 +138,10 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
     </div>
 </section>
 
-<div class="cta-band-wrap">
-    <div class="cta-band">
-        <div class="cta-band__glow"></div>
-        <div class="cta-band__inner">
-            <h2>Convinced, or want to see it for yourself?</h2>
-            <p>Dig into the core concepts, or skip straight to your first running server.</p>
-            <div class="cta-band__buttons">
-                <a class="cta-btn cta-btn--primary" href="/ecosystem/http4k/">Read the concepts</a>
-                <a class="cta-btn cta-btn--ghost-dark" href="/learn/">Back to Learn</a>
-            </div>
-        </div>
-    </div>
-</div>
+{{ partial "shared/cta-band.html" (dict
+    "title" "Convinced, or want to see it for yourself?"
+    "text" "Dig into the core concepts, or skip straight to your first running server."
+    "primaryLabel" "Read the concepts" "primaryHref" "/ecosystem/http4k/"
+    "secondaryLabel" "Back to Learn" "secondaryHref" "/learn/") }}
 
 {{ end }}

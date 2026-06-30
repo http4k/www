@@ -1,0 +1,70 @@
+# Homepage "There's a lot going on around here" spotlight tabs.
+# tone on card lines: ok (green check), dim (muted), str (prompt), or omit (plain).
+- tab: Modules
+  eyebrow: FOUR ECOSYSTEMS
+  title: More than just another HTTP library
+  body: "Servers, clients, serverless, formats, templates, security, testing, AI agents and cloud connectors - 200+ modules across Core, AI, Connect and Pro, all built on one functional idea."
+  link: { text: Explore the ecosystem, url: /ecosystem/ }
+  card:
+    title: "200+ modules · one BOM"
+    lines:
+      - { text: "http4k-core" }
+      - { text: "http4k-connect-amazon-s3" }
+      - { text: "http4k-ai-mcp-sdk" }
+      - { text: "http4k-security-oauth" }
+      - { text: "http4k-format-jackson" }
+      - { text: "http4k-testing-approval" }
+
+- tab: Supply chain
+  eyebrow: "SUPPLY CHAIN · EU CRA 2026"
+  title: Prove your dependencies before they compile
+  body: "Every artifact ships with SLSA L2 provenance, signed SBOMs and cosign signatures. http4k Verify checks them at build time - getting you ahead of the Cyber Resilience Act deadline."
+  link: { text: Explore Verify, url: "https://verify.http4k.org" }
+  card:
+    title: "build · http4k Verify"
+    lines:
+      - { text: "$ ./gradlew build", tone: str }
+      - { text: "> Task :verifyHttp4kArtifacts", tone: dim }
+      - { text: "http4k-core            sig · sbom · slsa-L2", tone: ok }
+      - { text: "http4k-connect-amazon  sig · sbom · slsa-L2", tone: ok }
+      - { text: "all artifacts verified · 0 issues", tone: ok }
+      - { text: "BUILD SUCCESSFUL in 6s", tone: ok }
+
+- tab: Pro
+  eyebrow: PRO MODULES
+  title: Premium power tools, same DNA
+  body: "Wiretap, WebAuthn, MCP, X402 and Server Hot Reload - commercially-licensed modules for teams running http4k for real. Free for individuals and small teams."
+  link: { text: Browse Pro, url: /pro/ }
+  card:
+    title: "org.http4k.pro"
+    lines:
+      - { text: "Wiretap      - trace & debug" }
+      - { text: "WebAuthn     - passkeys" }
+      - { text: "MCP          - agent tools" }
+      - { text: "Hot Reload   - fast feedback" }
+      - { text: "X402         - machine payments" }
+
+- tab: Enterprise
+  eyebrow: ENTERPRISE EDITION
+  title: Production peace of mind
+  body: "Up to 24 months LTS, priority support from the people who wrote it, source access, signed licence reports and every Pro module - in one subscription."
+  link: { text: Explore Enterprise, url: /enterprise/ }
+  card:
+    title: "LTS · support · provenance"
+    lines:
+      - { text: "24-month LTS channel", tone: ok }
+      - { text: "Priority Slack & email", tone: ok }
+      - { text: "Signed licence reports", tone: ok }
+      - { text: "All Pro modules included", tone: ok }
+
+- tab: News
+  eyebrow: LATEST FROM THE TEAM
+  title: "Tale of the tape: Claude vs http4k"
+  body: "We ran a proactive, LLM-assisted security audit across nine years of code. Several CVEs surfaced - fixed and disclosed in the open. Here is how it went."
+  link: { text: Read the news, url: /news/tale-of-the-tape-claude-vs-http4k/ }
+  card:
+    title: "news · 2026"
+    lines:
+      - { text: "proactive LLM security audits", tone: dim }
+      - { text: "public disclosure, full timelines", tone: dim }
+      - { text: "first CVE: a juicy 9.8", tone: ok }

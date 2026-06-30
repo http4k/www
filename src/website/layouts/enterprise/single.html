@@ -118,18 +118,10 @@
 </section>
 {{ end }}
 
-<div class="cta-band-wrap">
-    <div class="cta-band">
-        <div class="cta-band__glow"></div>
-        <div class="cta-band__inner">
-            <h2>Let's talk about your deployment.</h2>
-            <p>Tell us about your stack and compliance needs and we'll tailor a subscription - including LTS timelines outside the standard schedule.</p>
-            <div class="cta-band__buttons">
-                <a class="cta-btn cta-btn--primary" href="mailto:{{ .Params.email }}?subject=http4k Enterprise Edition">Talk to us</a>
-                <a class="cta-btn cta-btn--ghost-dark" href="https://verify.http4k.org">Explore Verify</a>
-            </div>
-        </div>
-    </div>
-</div>
+{{ partial "shared/cta-band.html" (dict
+    "title" "Let's talk about your deployment."
+    "text" "Tell us about your stack and compliance needs and we'll tailor a subscription - including LTS timelines outside the standard schedule."
+    "primaryLabel" "Talk to us" "primaryHref" (printf "mailto:%s?subject=http4k Enterprise Edition" .Params.email)
+    "secondaryLabel" "Explore Verify" "secondaryHref" "https://verify.http4k.org") }}
 
 {{ end }}

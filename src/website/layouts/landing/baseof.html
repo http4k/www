@@ -18,12 +18,12 @@
                     <a class="btn btn-secondary btn-lg" href="/quickstart/"><b>Start building</b></a>
                     <a class="btn btn-outline-light btn-lg" href="/pro">See what's new in Pro →</a>
                 </div>
-                <div class="hero-proof">
-                    <span><span class="hero-proof__mark">›</span> 5M+ downloads / month</span>
-                    <span><span class="hero-proof__mark">›</span> 200+ modules</span>
-                    <span><span class="hero-proof__mark">›</span> 0 reflection</span>
-                    <span><span class="hero-proof__mark">›</span> Apache 2.0 core</span>
-                </div>
+                <ul class="hero-stats">
+                    <li>5M+ downloads / month</li>
+                    <li>200+ modules</li>
+                    <li>0 reflection</li>
+                    <li>Apache 2.0 core</li>
+                </ul>
             </div>
             <div class="col-lg-6">
                 <div class="code-card">
@@ -34,7 +34,8 @@
                         <span class="code-card__file">HelloHttp4k.kt</span>
                     </div>
                     <div class="code-card__body"><pre><span class="tok-com">// a server is just a function. that's the whole trick.</span>
-<span class="tok-key">val</span> app: HttpHandler = { request -&gt; Response(OK).body(<span class="tok-str">"Hello, "</span> + request.query(<span class="tok-str">"name"</span>))
+<span class="tok-key">val</span> app: HttpHandler = { request -&gt;
+    Response(OK).body(<span class="tok-str">"Hello, "</span> + request.query(<span class="tok-str">"name"</span>))
 }
 
 <span class="tok-com">// filters compose behaviours. no magic required.</span>

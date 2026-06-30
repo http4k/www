@@ -64,16 +64,7 @@
     margin: 0 0 30px;
 }
 
-.hero-proof {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 26px;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: #6e8298;
-}
 
-.hero-proof__mark { color: var(--blue); }
 
 // --- Eyebrow (mono kicker - ration to ≤3 across the page) -------------------
 .eyebrow {
@@ -83,10 +74,18 @@
     color: var(--blue-strong);
     margin-bottom: 14px;
 }
+// section heads use the shared .section-head / .section-h2 (see _primitives.scss).
 
-// --- Section intro (voiced H2 + lede) --------------------------------------
-.section-intro { max-width: var(--lede); }
-.section-intro--center { margin-inline: auto; text-align: center; }
+// --- Spotlight ("there's a lot going on") - tabbed panels, reuses .chip + .code-card
+.spotlight__tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.spotlight__panel { display: none; background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius-2xl); box-shadow: var(--shadow); padding: 40px; }
+.spotlight__panel.is-active { display: block; }
+@media (max-width: 575.98px) { .spotlight__panel { padding: 28px 24px; } }
+.spotlight__kick { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.12em; color: var(--blue-strong); margin-bottom: 14px; }
+.spotlight__title { font-size: var(--fs-h2); font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 14px; }
+.spotlight__body { font-size: var(--fs-lead); line-height: 1.6; color: var(--text-muted); margin: 0 0 22px; }
+.spotlight__link { font-family: var(--font-mono); font-size: var(--fs-sm); font-weight: 600; color: var(--blue-strong); text-decoration: none; }
+.spotlight__link:hover { color: var(--ink); }
 
 // --- Tale of the tape (comparison table) -----------------------------------
 .tape {
@@ -135,15 +134,6 @@
 
 @media (max-width: 575.98px) {
     .tape__cell { padding: 12px 14px; font-size: 0.9rem; }
-}
-
-.section-intro h2 {
-    font-size: var(--fs-h2);
-    line-height: 1.12;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-    color: var(--ink);
-    margin: 0 0 14px;
 }
 
 // --- Product cards (Pro / Enterprise / Verify) -----------------------------
