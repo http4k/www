@@ -41,7 +41,7 @@
     background: var(--ink-surface);
     border: 1px solid var(--ink-border);
     padding: 6px 12px;
-    border-radius: 7px;
+    border-radius: var(--radius-sm);
 }
 .pro-free-banner__text { font-size: 1rem; line-height: 1.5; color: #c7d3e0; }
 .pro-free-banner__text strong { color: #fff; }
@@ -54,7 +54,7 @@
 .pro-module {
     display: flex;
     flex-direction: column;
-    border-radius: 16px;
+    border-radius: var(--radius-xl);
     padding: 26px 24px;
     text-decoration: none;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
@@ -62,7 +62,7 @@
 .pro-module:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -24px rgba(11, 22, 34, 0.3); border-color: var(--blue-strong); }
 
 .pro-module__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
-.pro-module__icon { width: 46px; height: 46px; border-radius: 11px; object-fit: cover; }
+.pro-module__icon { width: 46px; height: 46px; border-radius: var(--radius-lg); object-fit: cover; }
 
 .pro-module__badge {
     font-family: var(--font-mono);
@@ -70,7 +70,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     padding: 4px 10px;
-    border-radius: 100px;
+    border-radius: var(--radius-pill);
 }
 .pro-module__badge--available { color: var(--green); background: rgba(25, 135, 84, 0.1); border: 1px solid rgba(25, 135, 84, 0.2); }
 .pro-module__badge--soon { color: var(--text-muted); background: var(--off-white); border: 1px solid var(--border); }
@@ -89,7 +89,7 @@
     flex-direction: column;
     background: var(--ink);
     color: var(--text-on-ink);
-    border-radius: 18px;
+    border-radius: var(--radius-xl);
     padding: 32px 30px;
     text-decoration: none;
     transition: transform var(--transition-fast);
@@ -114,7 +114,7 @@
 .pro-tier {
     display: flex;
     flex-direction: column;
-    border-radius: 18px;
+    border-radius: var(--radius-xl);
     padding: 32px 30px;
 }
 .pro-tier__label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: #8392a2; margin-bottom: 14px; }
@@ -126,7 +126,7 @@
     align-items: center;
     justify-content: center;
     height: 46px;
-    border-radius: 10px;
+    border-radius: var(--radius-lg);
     font-weight: 600;
     font-size: 0.95rem;
     text-decoration: none;
@@ -165,7 +165,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    border-radius: 14px;
+    border-radius: var(--radius-lg);
     padding: 22px 26px;
 }
 .pro-custom__title { font-weight: 700; color: var(--ink); margin: 0 0 4px; }

@@ -31,7 +31,7 @@
 @media (max-width: 767.98px) { .container { padding-left: 24px; padding-right: 24px; } }
 
 // CTA buttons - used by heros + ink CTA bands across pro/enterprise/company/product.
-.cta-btn { display: inline-flex; align-items: center; height: 50px; padding: 0 24px; border-radius: 11px; font-weight: 600; font-size: 1rem; text-decoration: none; }
+.cta-btn { display: inline-flex; align-items: center; height: 50px; padding: 0 24px; border-radius: var(--radius-lg); font-weight: 600; font-size: 1rem; text-decoration: none; }
 .cta-btn--primary { background: var(--orange); color: #fff; }
 .cta-btn--primary:hover { background: var(--orange-strong); color: #fff; }
 .cta-btn--ghost { background: #fff; color: var(--ink); border: 1px solid #cbd6e3; }
@@ -91,7 +91,7 @@
 .hero-sub strong { color: #d6e0eb; }
 
 // Mono pill on dark surfaces (product hero badge, pro free-tier chip).
-.chip-ink { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 11px; border-radius: 6px; background: var(--ink-surface); border: 1px solid var(--ink-border); color: var(--blue); }
+.chip-ink { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 11px; border-radius: var(--radius-sm); background: var(--ink-surface); border: 1px solid var(--ink-border); color: var(--blue); }
 .chip-ink--ea { color: var(--orange); background: rgba(238, 125, 43, 0.12); border-color: rgba(238, 125, 43, 0.3); }
 
 // One bordered card identity (white, hairline border, rounded). Page files keep
@@ -100,5 +100,5 @@
 
 // One 1px-seam grid (bordered mosaic of white tiles). Set columns per use; the
 // gap reveals --border as the seam, tiles paint over it.
-.mosaic { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.mosaic { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; }
 .mosaic > * { background: var(--paper); }

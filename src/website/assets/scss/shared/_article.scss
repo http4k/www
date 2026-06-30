@@ -68,7 +68,7 @@
 .article-banner-wrap { margin: 36px 0 0; }
 
 .article-banner {
-    border-radius: 20px;
+    border-radius: var(--radius-2xl);
     overflow: hidden;
     background: var(--ink);
     aspect-ratio: 16 / 7;
@@ -91,13 +91,13 @@
 .article-body a:not(.btn) { color: var(--blue-dark); text-decoration: underline; }
 .article-body ul, .article-body ol { margin: 0 0 1.2em; padding-left: 1.4em; }
 .article-body li { margin: 0.3em 0; }
-.article-body img { display: block; max-width: 100%; height: auto; margin: 1.6em auto; border-radius: 12px; }
+.article-body img { display: block; max-width: 100%; height: auto; margin: 1.6em auto; border-radius: var(--radius-lg); }
 .article-body blockquote { border-left: 3px solid var(--border); padding-left: 1em; color: var(--text-muted); margin: 1.5em 0; }
-.article-body .highlight { border-radius: 12px; overflow: hidden; margin: 1.5em 0; }
+.article-body .highlight { border-radius: var(--radius-lg); overflow: hidden; margin: 1.5em 0; }
 .article-body :not(pre) > code {
     background: var(--off-white);
     border: 1px solid var(--border);
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     padding: 1px 6px;
     font-family: var(--font-mono);
     font-size: 0.88em;
@@ -109,7 +109,7 @@
 .article-cta {
     background: var(--off-white);
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: var(--radius-xl);
     padding: 32px;
     display: flex;
     justify-content: center;

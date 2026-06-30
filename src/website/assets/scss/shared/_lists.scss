@@ -70,7 +70,7 @@
     background: #fff;
     border: 1px solid var(--border);
     padding: 8px 16px;
-    border-radius: 100px;
+    border-radius: var(--radius-pill);
     cursor: pointer;
     transition: border-color var(--transition-fast), color var(--transition-fast);
 }
@@ -148,7 +148,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 5px 11px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
 }
 
 .badge-cat { color: var(--text-muted); background: var(--off-white); border: 1px solid var(--border); }
@@ -214,7 +214,7 @@
 .newsletter {
     background: var(--off-white);
     border: 1px solid var(--border);
-    border-radius: 20px;
+    border-radius: var(--radius-2xl);
     padding: 44px;
     display: flex;
     flex-wrap: wrap;

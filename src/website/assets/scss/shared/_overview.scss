@@ -34,7 +34,7 @@
 
 // credit cards
 .ov-credits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.ov-credit { border-radius: 14px; padding: 26px 28px; }
+.ov-credit { border-radius: var(--radius-lg); padding: 26px 28px; }
 .ov-credit__kick { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 14px; }
 .ov-credit__name { font-size: 1.2rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
 .ov-credit__name a { color: var(--blue-strong); text-decoration: none; }
@@ -43,7 +43,7 @@
 
 // payoff cards (on ink)
 .ov-payoff { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.ov-payoff__card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 28px; }
+.ov-payoff__card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: 28px; }
 .ov-payoff__card h3 { font-size: 1.15rem; font-weight: 700; color: #fff; margin: 0 0 10px; }
 .ov-payoff__card p { font-size: 0.95rem; line-height: 1.62; color: var(--text-on-ink-muted); margin: 0; }
 
