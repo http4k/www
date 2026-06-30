@@ -58,14 +58,6 @@
 .pro-free-banner__text strong { color: #fff; }
 
 // --- catalogue ---
-.pro-catalogue__head {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-}
 .pro-catalogue__count { font-family: var(--font-mono); font-size: 13px; color: #9aa7b6; }
 
 .pro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }

@@ -18,7 +18,6 @@
 
 // --- advisories list ---
 .security-advisories { @include section-wrap; padding-block: 72px 96px; }
-.security-advisories__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
 .security-advisories__count { font-family: var(--font-mono); font-size: 13px; color: #9aa7b6; }
 .security-advisories__cols { display: grid; grid-template-columns: 120px 1fr 130px; padding: 0 26px 12px; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa7b6; }
 .security-advisories__cols .r { text-align: right; }

@@ -23,7 +23,7 @@
 {{ $available := where $modules "available" true }}
 {{ $soon := where $modules "available" false }}
 <section class="pro-section pro-catalogue" id="modules">
-    <div class="pro-catalogue__head">
+    <div class="section-head section-head--split">
         <div>
             <div class="eyebrow">// THE CATALOGUE</div>
             <h2 class="pro-h2">Modules, ready when you are.</h2>
@@ -47,9 +47,11 @@
 </section>
 
 <section class="pro-section pro-packs">
-    <div class="eyebrow">// BUNDLED PACKS</div>
-    <h2 class="pro-h2">Buy them together, save the faff.</h2>
-    <div class="pro-packs__grid" style="margin-top:28px;">
+    <div class="section-head">
+        <div class="eyebrow">// BUNDLED PACKS</div>
+        <h2 class="pro-h2">Buy them together, save the faff.</h2>
+    </div>
+    <div class="pro-packs__grid">
         {{ range .Site.Data.pro.packs }}
         <a class="pro-pack" href="{{ .link }}">
             <div class="pro-pack__glow"></div>
@@ -63,9 +65,11 @@
 </section>
 
 <section class="pro-section" id="licensing">
-    <div class="eyebrow">// LICENSING</div>
-    <h2 class="pro-h2">Honest licensing. Buy only the modules you use.</h2>
-    <div class="pro-tiers" style="margin-top:28px;">
+    <div class="section-head">
+        <div class="eyebrow">// LICENSING</div>
+        <h2 class="pro-h2">Honest licensing. Buy only the modules you use.</h2>
+    </div>
+    <div class="pro-tiers">
         <div class="pro-tier">
             <div class="pro-tier__label">FREE</div>
             <div class="pro-tier__price">&pound;0</div>

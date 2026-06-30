@@ -51,6 +51,11 @@
     pointer-events: none;
 }
 
+// One section head (eyebrow + h2) -> content. 32px gap everywhere.
+.section-head { max-width: 720px; margin-bottom: 32px; }
+.section-head--split { max-width: none; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.section-head--center { max-width: none; text-align: center; }
+
 // One eyebrow everywhere; cyan on ink surfaces (heroes + ink sections).
 .ink-hero .eyebrow, .ent-editions .eyebrow, .security-audits .eyebrow { color: var(--blue); }
 

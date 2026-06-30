@@ -17,7 +17,7 @@ highlights:
         icon: "/images/supportive.svg"
 ---
 
-Founded in 2017, http4k has grown into one of the most popular HTTP libraries for Kotlin, reflecting over 15 years of
+Founded in 2017, http4k has grown into one of the most popular HTTP libraries for Kotlin, reflecting over 50 years of
 combined experience in server-side development. Our mission was to create a library that embodies simplicity and
 clarity, enabling developers to build robust applications without the complexities often associated with traditional
 frameworks.
