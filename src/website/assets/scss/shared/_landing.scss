@@ -37,7 +37,7 @@ body {
 // hero nav - grey links, white on hover (unify dropdowns + the github icon)
 .landing .navbar .nav-link,
 .landing .navbar .nav-link:visited {
-    color: #a9bacb !important;
+    color: var(--text-on-ink-2) !important;
 }
 
 .landing .navbar .nav-link:hover,

@@ -83,15 +83,15 @@
 // page-class.
 .ink-hero .eyebrow, .section--ink .eyebrow { color: var(--blue); }
 .section--ink .section-h2 { color: #fff; }
-.section--ink .section-lede { color: #aebece; }
+.section--ink .section-lede { color: var(--text-on-ink-muted); }
 
 // Shared ink-hero headline + sub (enterprise/company/security/product heroes).
 .hero-title { font-size: clamp(2.4rem, 5vw, 3.5rem); line-height: 1.04; letter-spacing: -0.03em; font-weight: 700; color: #fff; margin: 0 0 20px; max-width: 840px; }
-.hero-sub { font-size: var(--fs-lead); line-height: 1.55; color: #aebece; margin: 0 0 30px; max-width: var(--lede); }
+.hero-sub { font-size: var(--fs-lead); line-height: 1.55; color: var(--text-on-ink-muted); margin: 0 0 30px; max-width: var(--lede); }
 .hero-sub strong { color: #d6e0eb; }
 
 // Mono pill on dark surfaces (product hero badge, pro free-tier chip).
-.chip-ink { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 11px; border-radius: 6px; background: #13202e; border: 1px solid #1f3142; color: var(--blue); }
+.chip-ink { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 11px; border-radius: 6px; background: var(--ink-surface); border: 1px solid var(--ink-border); color: var(--blue); }
 .chip-ink--ea { color: var(--orange); background: rgba(238, 125, 43, 0.12); border-color: rgba(238, 125, 43, 0.3); }
 
 // One bordered card identity (white, hairline border, rounded). Page files keep

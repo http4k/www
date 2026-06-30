@@ -13,7 +13,7 @@
 // --- product nav (on ink hero) ---
 .product-hero .navbar { padding: 18px 0; }
 .product-hero .navbar-brand img { filter: brightness(0) invert(1); }
-.product-hero .navbar .nav-link { color: #aebece !important; font-size: var(--fs-ui); font-weight: 500; }
+.product-hero .navbar .nav-link { color: var(--text-on-ink-muted) !important; font-size: var(--fs-ui); font-weight: 500; }
 .product-hero .navbar .nav-link:hover { color: #fff !important; }
 
 // --- feature grid ---

@@ -15,7 +15,7 @@
     font-family: var(--font-mono);
     font-size: var(--fs-sm);
 }
-.ov-stats li { color: #aebece; }
+.ov-stats li { color: var(--text-on-ink-muted); }
 .ov-stats li::before { content: "\203A  "; color: var(--blue); }
 
 // sections
@@ -45,7 +45,7 @@
 .ov-payoff { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .ov-payoff__card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 28px; }
 .ov-payoff__card h3 { font-size: 1.15rem; font-weight: 700; color: #fff; margin: 0 0 10px; }
-.ov-payoff__card p { font-size: 0.95rem; line-height: 1.62; color: #aebece; margin: 0; }
+.ov-payoff__card p { font-size: 0.95rem; line-height: 1.62; color: var(--text-on-ink-muted); margin: 0; }
 
 @media (max-width: 991.98px) {
     .ov-section .service-grid { grid-template-columns: repeat(2, 1fr); }

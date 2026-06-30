@@ -39,11 +39,11 @@
 .ent-editions__inner { max-width: 1200px; margin: 0 auto; padding: 84px 36px; }
 
 .ent-matrix { width: 100%; border-collapse: collapse; }
-.ent-matrix th, .ent-matrix td { padding: 16px 18px; text-align: left; border-bottom: 1px solid #1f3142; }
+.ent-matrix th, .ent-matrix td { padding: 16px 18px; text-align: left; border-bottom: 1px solid var(--ink-border); }
 .ent-matrix thead th { font-size: 0.95rem; color: #fff; vertical-align: bottom; }
 .ent-matrix thead th span { display: block; font-family: var(--font-mono); font-size: 11px; font-weight: 400; color: #8aa0b6; margin-top: 4px; }
 .ent-matrix tbody td:first-child { color: #c7d3e0; }
-.ent-matrix td { font-size: 0.92rem; color: #aebece; }
+.ent-matrix td { font-size: 0.92rem; color: var(--text-on-ink-muted); }
 .ent-matrix .yes { color: var(--blue); font-weight: 700; }
 .ent-matrix .no { color: #5a6577; }
 .ent-matrix__cta td { border-bottom: none; padding-top: 26px; }

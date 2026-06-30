@@ -59,7 +59,7 @@
 }
 
 .founder-card__name { font-size: 1.3rem; font-weight: 700; color: var(--ink); }
-.founder-card__role { font-family: var(--font-mono); font-size: var(--fs-sm); color: #9aa7b6; }
+.founder-card__role { font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--text-faint); }
 
 .founder-card__bio { font-size: 0.97rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 18px; }
 
@@ -155,7 +155,7 @@
 .cta-band p {
     font-size: var(--fs-lead);
     line-height: 1.55;
-    color: #a9bacb;
+    color: var(--text-on-ink-2);
     margin: 0 auto 32px;
     max-width: 520px;
 }

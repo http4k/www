@@ -33,7 +33,12 @@
   --off-white: #F5F8FC;     // alternating section
   --text: #1d2433;          // body text
   --text-muted: #5a6577;    // secondary text
+  --text-faint: #9aa7b6;    // faint mono meta on light (counts, crumbs, dates)
   --text-on-ink: #e6eaf0;   // body text on ink
+  --text-on-ink-2: #a9bacb; // secondary text on ink
+  --text-on-ink-muted: #aebece; // muted lede/body on ink
+  --ink-surface: #13202e;   // raised chip/code surface on ink
+  --ink-border: #1f3142;    // hairline border on ink
   --border: #E2E8F1;        // hairline borders (reads on white)
 
   // --- Structure ---

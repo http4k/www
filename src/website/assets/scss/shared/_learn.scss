@@ -6,7 +6,7 @@
 // Diataxis diagram card
 .diataxis { border: 1px solid var(--border); border-radius: 16px; padding: 30px; background: #f8fafd; }
 .diataxis img { display: block; width: 100%; height: auto; max-width: 760px; margin: 0 auto; }
-.diataxis-note { font-size: 0.875rem; line-height: 1.6; color: #9aa7b6; margin: 16px 0 40px; }
+.diataxis-note { font-size: 0.875rem; line-height: 1.6; color: var(--text-faint); margin: 16px 0 40px; }
 
 // Four signpost cards
 .signposts { display: flex; flex-direction: column; gap: 16px; }
@@ -26,7 +26,7 @@
 
 .signpost__rail { flex: 0 0 190px; display: flex; flex-direction: column; border-right: 1px solid #eef2f7; padding-right: 26px; }
 .signpost__title { font-size: 1.25rem; font-weight: 700; line-height: 1.18; color: var(--ink); }
-.signpost__mode { margin-top: auto; padding-top: 18px; font-family: var(--font-mono); font-size: 11px; color: #9aa7b6; }
+.signpost__mode { margin-top: auto; padding-top: 18px; font-family: var(--font-mono); font-size: 11px; color: var(--text-faint); }
 
 .signpost__body { flex: 1; min-width: 0; }
 .signpost__body p { font-size: 1rem; line-height: 1.65; color: #26323f; margin: 0 0 16px; }

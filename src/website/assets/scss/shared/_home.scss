@@ -60,7 +60,7 @@
 .hero-sub {
     font-size: 1.2rem;
     line-height: 1.55;
-    color: #aebece;
+    color: var(--text-on-ink-muted);
     max-width: 545px;
     margin: 0 0 30px;
 }
@@ -231,7 +231,7 @@
     color: var(--text-on-ink);
 
     h3 { color: #fff; }
-    p { color: #a9bacb; }
+    p { color: var(--text-on-ink-2); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -356,7 +356,7 @@
     margin: 0 0 14px;
 }
 
-.cve-card__body { font-size: 1rem; line-height: 1.6; color: #a9bacb; margin: 0; }
+.cve-card__body { font-size: 1rem; line-height: 1.6; color: var(--text-on-ink-2); margin: 0; }
 
 .partners-card {
     height: 100%;
@@ -427,7 +427,7 @@
 .final-cta__sub {
     font-size: 1.2rem;
     line-height: 1.55;
-    color: #a9bacb;
+    color: var(--text-on-ink-2);
     max-width: 560px;
     margin: 0 auto 30px;
 }

@@ -17,7 +17,7 @@
     gap: 8px;
     font-family: var(--font-mono);
     font-size: 13px;
-    color: #9aa7b6;
+    color: var(--text-faint);
     margin-bottom: 26px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .article-byline__name { font-size: 15px; font-weight: 600; color: var(--ink); }
-.article-byline__meta { font-size: 13.5px; color: #9aa7b6; font-family: var(--font-mono); }
+.article-byline__meta { font-size: 13.5px; color: var(--text-faint); font-family: var(--font-mono); }
 
 // --- banner ---
 .article-banner-wrap { margin: 36px 0 0; }

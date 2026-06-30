@@ -38,8 +38,8 @@
     font-size: 12px;
     letter-spacing: 0.1em;
     color: var(--blue);
-    background: #13202e;
-    border: 1px solid #1f3142;
+    background: var(--ink-surface);
+    border: 1px solid var(--ink-border);
     padding: 6px 12px;
     border-radius: 7px;
 }
@@ -47,7 +47,7 @@
 .pro-free-banner__text strong { color: #fff; }
 
 // --- catalogue ---
-.pro-catalogue__count { font-family: var(--font-mono); font-size: 13px; color: #9aa7b6; }
+.pro-catalogue__count { font-family: var(--font-mono); font-size: 13px; color: var(--text-faint); }
 
 .pro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 
@@ -105,7 +105,7 @@
 }
 .pro-pack__eyebrow { position: relative; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--blue); margin-bottom: 16px; text-transform: uppercase; }
 .pro-pack__name { position: relative; font-size: 1.375rem; font-weight: 700; color: #fff; margin: 0 0 10px; }
-.pro-pack__desc { position: relative; font-size: 0.95rem; line-height: 1.55; color: #a9bacb; margin: 0 0 18px; flex: 1; }
+.pro-pack__desc { position: relative; font-size: 0.95rem; line-height: 1.55; color: var(--text-on-ink-2); margin: 0 0 18px; flex: 1; }
 .pro-pack__cta { position: relative; font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue); }
 
 // --- licensing tiers ---
@@ -153,7 +153,7 @@
 }
 .pro-tier--featured .pro-tier__label { position: relative; color: #ee9a5b; }
 .pro-tier--featured .pro-tier__price { position: relative; color: #fff; }
-.pro-tier--featured .pro-tier__desc { position: relative; color: #a9bacb; }
+.pro-tier--featured .pro-tier__desc { position: relative; color: var(--text-on-ink-2); }
 .pro-tier--featured .pro-tier__cta { position: relative; background: var(--orange); color: #fff; border-color: var(--orange); }
 .pro-tier--featured .pro-tier__cta:hover { background: var(--orange-strong); color: #fff; }
 
