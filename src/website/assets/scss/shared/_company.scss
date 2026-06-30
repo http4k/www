@@ -119,49 +119,6 @@
 .company-partners__names a:hover { color: var(--blue-strong); }
 .company-partners__sep { width: 1px; height: 26px; background: #cbd6e3; }
 
-// --- cta (ink) ---
-.cta-band-wrap { max-width: 1200px; margin: 0 auto; padding: 80px 36px 96px; }
-
-.cta-band {
-    position: relative;
-    overflow: hidden;
-    background: var(--ink);
-    border-radius: var(--radius-2xl);
-    padding: 60px 50px;
-    text-align: center;
-}
-
-.cta-band__glow {
-    position: absolute;
-    top: -130px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 720px;
-    height: 400px;
-    background: radial-gradient(ellipse, rgba(97, 192, 255, 0.2), transparent 65%);
-}
-
-.cta-band__inner { position: relative; }
-
-.cta-band h2 {
-    font-size: clamp(1.9rem, 4vw, 2.375rem);
-    line-height: 1.08;
-    letter-spacing: -0.025em;
-    font-weight: 700;
-    margin: 0 0 16px;
-    color: #fff;
-}
-
-.cta-band p {
-    font-size: var(--fs-lead);
-    line-height: 1.55;
-    color: var(--text-on-ink-2);
-    margin: 0 auto 32px;
-    max-width: 520px;
-}
-
-.cta-band__buttons { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
-
 // --- contact map (full width) ---
 .company-map-section { margin-top: 96px; border-top: 1px solid var(--border); }
 
@@ -217,6 +174,4 @@
     .company-hero__inner { padding: 60px 24px 56px; }
     .company-receipts { grid-template-columns: repeat(2, 1fr); }
     .service-grid { grid-template-columns: 1fr; }
-    .cta-band-wrap { padding: 56px 24px 72px; }
-    .cta-band { padding: 44px 28px; }
 }

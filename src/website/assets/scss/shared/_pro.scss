@@ -172,22 +172,10 @@
 .pro-custom__text { font-size: 0.92rem; color: var(--text-muted); margin: 0; max-width: 640px; }
 .pro-custom__cta { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue-strong); text-decoration: none; white-space: nowrap; }
 
-// --- faq ---
-.faq-section { max-width: 820px; margin: 0 auto; padding: var(--section-py) 36px 0; }
-.faq-section__item { padding: 22px 0; border-bottom: 1px solid var(--border); }
-.faq-section__item:first-of-type { border-top: 1px solid var(--border); }
-.faq-section__q { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
-.faq-section__a { font-size: 1rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
-.faq-section__a a { color: var(--blue-dark); }
-.faq-section__contact { margin-top: 28px; }
-.faq-section__contact a { font-weight: 600; color: var(--blue-dark); text-decoration: none; }
-.faq-section__contact a:hover { text-decoration: underline; }
-
 .pro-end { padding-bottom: 96px; }
 
 // --- responsive ---
 @media (max-width: 767.98px) {
     .pro-hero__inner { padding: 56px 24px 40px; }
     .pro-free-banner__inner { padding: 20px 24px; }
-    .faq-section { padding: var(--section-py-mobile) 24px 0; }
 }

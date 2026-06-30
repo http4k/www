@@ -146,23 +146,6 @@
     margin: 0 0 14px;
 }
 
-// --- Orange callout --------------------------------------------------------
-.callout-orange {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 14px;
-    align-items: baseline;
-    background: var(--orange-wash);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--orange);
-    border-radius: var(--radius-lg);
-    padding: 18px 22px;
-    margin-top: 22px;
-    color: var(--text-muted);
-}
-
-.callout-orange__lead { font-weight: 700; color: var(--ink); }
-
 // --- Product cards (Pro / Enterprise / Verify) -----------------------------
 .product-card {
     display: flex;
