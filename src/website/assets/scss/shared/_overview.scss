@@ -1,0 +1,72 @@
+// Overview / "why http4k exists" explainer. Leans on shared primitives:
+// .ink-hero, .code-card (+ tok-*), .callout-orange, .service-card, .cta-band.
+// Only the hero stat row, credit cards, ink payoff band and full-bleed wrappers
+// are bespoke here. ASCII only.
+
+.ov-hero__inner { position: relative; padding-block: 84px 64px; }
+
+// breadcrumb on the ink hero (docs-crumbs is tuned for light backgrounds)
+.ov-hero .docs-crumbs { color: #7e8ea0; margin-bottom: 22px; }
+.ov-hero .docs-crumbs a { color: var(--blue); }
+.ov-hero .docs-crumbs a:hover { color: #fff; }
+.ov-hero .docs-crumbs span { color: #3a4a5c; }
+
+.ov-stats {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    margin: 30px 0 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+}
+.ov-stats li { color: #aebece; }
+.ov-stats li::before { content: "\203A  "; color: var(--blue); }
+
+// sections
+.ov-section { @include section-wrap; }
+.ov-h2 { font-size: 2.125rem; line-height: 1.12; letter-spacing: -0.02em; font-weight: 700; color: var(--ink); margin: 0 0 14px; }
+.ov-lead { font-size: var(--fs-lead); line-height: 1.6; color: var(--text-muted); margin: 0; }
+.ov-prose { font-size: 1.0625rem; line-height: 1.7; color: #26323f; margin: 0 0 18px; }
+.ov-prose:last-child { margin-bottom: 0; }
+.ov-prose a { color: var(--blue-dark); }
+
+.ov-section .callout-orange { margin-top: 32px; }
+
+// nine principles - reuse .service-grid/.service-card at three columns, blue numbers
+.ov-section .service-grid { grid-template-columns: repeat(3, 1fr); }
+.ov-section .service-card__num { color: var(--blue-strong); }
+
+// full-bleed colour bands (inner content stays on the 1200 rail, symmetric padding)
+.ov-bleed--paper { background: var(--off-white); }
+.ov-bleed--ink { background: var(--ink); color: var(--text-on-ink); }
+.ov-bleed .ov-section { padding-bottom: var(--section-py); }
+.ov-bleed--ink .ov-h2 { color: #fff; }
+.ov-bleed--ink .ov-lead { color: #aebece; }
+.ov-bleed--ink .eyebrow { color: var(--blue); }
+
+// credit cards
+.ov-credits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ov-credit { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 26px 28px; }
+.ov-credit__kick { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 14px; }
+.ov-credit__name { font-size: 1.2rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+.ov-credit__name a { color: var(--blue-strong); text-decoration: none; }
+.ov-credit__name a:hover { text-decoration: underline; }
+.ov-credit__desc { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+// payoff cards (on ink)
+.ov-payoff { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ov-payoff__card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 28px; }
+.ov-payoff__card h3 { font-size: 1.15rem; font-weight: 700; color: #fff; margin: 0 0 10px; }
+.ov-payoff__card p { font-size: 0.95rem; line-height: 1.62; color: #aebece; margin: 0; }
+
+@media (max-width: 991.98px) {
+    .ov-section .service-grid { grid-template-columns: repeat(2, 1fr); }
+    .ov-credits, .ov-payoff { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767.98px) {
+    .ov-hero__inner { padding-block: 56px 44px; }
+    .ov-section .service-grid { grid-template-columns: 1fr; }
+}
