@@ -25,11 +25,11 @@ credits:
     description: "The shape of the routing module - and what convinced us that simple was possible."
   - kick: "MODEL"
     name: "Finagle"
-    url: "https://twitter.github.io/finagle/"
+    url: "https://twitter.github.io/finagle"
     description: "\"Server as a Function\" and the filter model - the underlying concept for everything."
   - kick: "OUR V1"
     name: "Fintrospect"
-    url: "http://fintrospect.github.io"
+    url: "http://github.com/daviddenton/fintrospect"
     description: "http4k's Scala-based ancestor. Everyone agreed it was too complex - so we threw it out and started again in Kotlin."
 
 payoff:
