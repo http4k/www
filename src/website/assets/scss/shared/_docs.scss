@@ -126,6 +126,10 @@
 .docs-crumbs a:hover { color: var(--ink); }
 .docs-crumbs span { color: var(--border); }
 
+// ecosystem module landing: the module logo stands in for the page title
+.eco-logo { margin: 0 0 1.25rem; text-align: center; }
+.eco-logo img { display: block; height: 56px; width: auto; max-width: 100%; margin-inline: auto; }
+
 // --- sidebar (existing ecosystem-sidebar partial, restyled - CSS only) ---
 .docs .aside h2 { font-size: 1.05rem; font-weight: 700; margin: 0; }
 .docs .aside h2 a { color: var(--ink); text-decoration: none; }
