@@ -30,7 +30,7 @@ credits:
   - kick: "OUR V1"
     name: "Fintrospect"
     url: "http://fintrospect.github.io"
-    description: "http4k's Scala-based ancestor. Everyone agreed it was too complex - so we threw it out and started again in Kotlin. Its OpenAPI generator survived the cull."
+    description: "http4k's Scala-based ancestor. Everyone agreed it was too complex - so we threw it out and started again in Kotlin."
 
 payoff:
   - title: "Test without a container"
