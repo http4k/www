@@ -15,8 +15,8 @@ principles:
     description: "Typesafe HTTP message construction and deconstruction via Lenses."
   - title: "No boilerplate"
     description: "Contract breaches are dealt with automatically, removing reams of boilerplate."
-  - title: "OpenAPI for free"
-    description: "Automatic OpenAPI documentation generation, including JSON Schema models."
+  - title: "Specs from code"
+    description: "Routes are described once in typed code - OpenAPI docs and JSON Schema models are generated from it, so the spec can never drift from what runs."
 
 credits:
   - kick: "ROUTING"
