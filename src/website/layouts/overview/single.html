@@ -3,14 +3,9 @@
 <section class="ov-hero ink-hero">
     <div class="ink-hero__glow"></div>
     <div class="container ov-hero__inner">
-        <nav class="docs-crumbs">
-            <a href="/learn/">learn</a>
-            <span>/</span><a href="/ecosystem/http4k/">concepts</a>
-            <span>/</span>overview
-        </nav>
         <div class="eyebrow">// WHY HTTP4K EXISTS</div>
         <h1 class="hero-title">It's not another HTTP library. It's a different way of thinking.</h1>
-        <p class="hero-sub">Most frameworks bury HTTP under annotations, reflection and a container. http4k throws all of that out and starts from one radical idea: <strong>a server is just a function - and so is a client.</strong> The same type models both. The whole toolkit, every one of the 200+ modules, is built from that single symmetry, and nothing sneaks in behind your back.</p>
+        <p class="hero-sub">Most frameworks bury HTTP under annotations, reflection and a container. http4k throws all of that out and starts from <strong>one radical idea</strong>. Every one of the 200+ modules is built on it, and nothing sneaks in behind your back.</p>
         <ul class="ov-stats">
             <li>5M+ downloads / month</li>
             <li>200+ modules</li>
@@ -23,8 +18,8 @@
 <section class="ov-section">
     <div class="section-head">
         <div class="eyebrow">// THE ONE IDEA</div>
-        <h2 class="ov-h2">Server as a Function is Client as a Function.</h2>
-        <p class="ov-lead">This is the part other frameworks miss. The same single type - (Request) -&gt; Response - models <em>both</em> sides of the wire. Your server is an HttpHandler. Your HTTP client is <strong>the exact same</strong> HttpHandler. So a real remote call and an in-memory fake are interchangeable - which is why testing stops being a chore.</p>
+        <h2 class="ov-h2">The server is the client.</h2>
+        <p class="ov-lead">This is the part other HTTP libraries miss. The same single type - (Request) -&gt; Response - models <em>both</em> sides of the wire. Your server is an HttpHandler. Your HTTP client is <strong>also an</strong> HttpHandler. So a real remote call and an in-memory fake are interchangeable - a superpower that falls straight out of the simplicity.</p>
     </div>
     <div class="row g-4">
         <div class="col-lg-6">
@@ -83,7 +78,7 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
 <span class="tok-key">typealias</span> Filter =
     (HttpHandler) -&gt; HttpHandler
 
-<span class="tok-com">// that's it. that's the framework.</span></pre></div>
+<span class="tok-com">// that's it. that's the toolkit.</span></pre></div>
             </div>
         </div>
     </div>
@@ -130,7 +125,7 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
         <div class="section-head">
             <div class="eyebrow">// THE PAYOFF</div>
             <h2 class="ov-h2">Testability isn't a feature we added. It's what falls out.</h2>
-            <p class="ov-lead">When both your server and your clients are the same kind of function, the hard things get easy - and some things other frameworks simply can't do become trivial.</p>
+            <p class="ov-lead">When both your server and your clients are the same kind of function, the hard things get easy - and some things other HTTP libraries simply can't do become trivial.</p>
         </div>
         <div class="ov-payoff">
             {{ range .Site.Data.overview.payoff }}

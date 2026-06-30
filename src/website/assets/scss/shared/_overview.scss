@@ -5,12 +5,6 @@
 
 .ov-hero__inner { position: relative; padding-block: 84px 64px; }
 
-// breadcrumb on the ink hero (docs-crumbs is tuned for light backgrounds)
-.ov-hero .docs-crumbs { color: #7e8ea0; margin-bottom: 22px; }
-.ov-hero .docs-crumbs a { color: var(--blue); }
-.ov-hero .docs-crumbs a:hover { color: #fff; }
-.ov-hero .docs-crumbs span { color: #3a4a5c; }
-
 .ov-stats {
     list-style: none;
     display: flex;
