@@ -26,7 +26,7 @@
 
 // --- receipts strip ---
 .company-receipts { grid-template-columns: repeat(4, 1fr); }
-.company-receipts__tile { padding: 28px 26px; }
+.company-receipts__tile { padding: var(--pad-card); }
 
 .company-receipts__num {
     font-family: var(--font-sans);
@@ -44,7 +44,7 @@
 .founder-card {
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
-    padding: 32px 30px;
+    padding: var(--pad-card-lg);
 }
 
 .founder-card__head { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; }
@@ -77,7 +77,7 @@
 
 // --- services (numbered, 2-col bordered grid) ---
 .service-grid { grid-template-columns: repeat(2, 1fr); border-radius: var(--radius-xl); }
-.service-card { padding: 32px 30px; }
+.service-card { padding: var(--pad-card-lg); }
 
 .service-card__num { font-family: var(--font-mono); font-size: 13px; color: var(--orange); margin-bottom: 12px; }
 

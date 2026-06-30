@@ -50,6 +50,12 @@
   --radius-xl: 16px;
   --radius-2xl: 22px;
   --radius-pill: 100px;
+  // Card padding: the three repeated card insets (single source so the card
+  // family stays consistent). Other paddings stay literal - they're contextual
+  // (table cells, chips, bands, buttons) and don't share a scale.
+  --pad-card-sm: 22px 26px;
+  --pad-card: 28px 26px;
+  --pad-card-lg: 32px 30px;
   --lede: 680px;            // measure for hero/section lede + sub-text
   --shadow: 0 1px 2px rgba(20, 24, 31, 0.04), 0 2px 8px rgba(20, 24, 31, 0.06);
   --transition-fast: 140ms ease;

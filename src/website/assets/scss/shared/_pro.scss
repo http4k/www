@@ -90,7 +90,7 @@
     background: var(--ink);
     color: var(--text-on-ink);
     border-radius: var(--radius-xl);
-    padding: 32px 30px;
+    padding: var(--pad-card-lg);
     text-decoration: none;
     transition: transform var(--transition-fast);
 }
@@ -115,7 +115,7 @@
     display: flex;
     flex-direction: column;
     border-radius: var(--radius-xl);
-    padding: 32px 30px;
+    padding: var(--pad-card-lg);
 }
 .pro-tier__label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: #8392a2; margin-bottom: 14px; }
 .pro-tier__price { font-family: var(--font-sans); font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
@@ -166,7 +166,7 @@
     justify-content: space-between;
     gap: 16px;
     border-radius: var(--radius-lg);
-    padding: 22px 26px;
+    padding: var(--pad-card-sm);
 }
 .pro-custom__title { font-weight: 700; color: var(--ink); margin: 0 0 4px; }
 .pro-custom__text { font-size: 0.92rem; color: var(--text-muted); margin: 0; max-width: 640px; }
