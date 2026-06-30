@@ -22,7 +22,7 @@
 {{ $modules := .Site.Data.pro.modules }}
 {{ $available := where $modules "available" true }}
 {{ $soon := where $modules "available" false }}
-<section class="pro-section pro-catalogue" id="modules">
+<section class="section-rail pro-catalogue" id="modules">
     <div class="section-head section-head--split">
         <div>
             <div class="eyebrow">// THE CATALOGUE</div>
@@ -46,7 +46,7 @@
     </div>
 </section>
 
-<section class="pro-section pro-packs">
+<section class="section-rail pro-packs">
     <div class="section-head">
         <div class="eyebrow">// BUNDLED PACKS</div>
         <h2 class="section-h2">Buy them together, save the faff.</h2>
@@ -64,7 +64,7 @@
     </div>
 </section>
 
-<section class="pro-section" id="licensing">
+<section class="section-rail" id="licensing">
     <div class="section-head">
         <div class="eyebrow">// LICENSING</div>
         <h2 class="section-h2">Honest licensing. Buy only the modules you use.</h2>

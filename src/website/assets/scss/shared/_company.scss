@@ -3,7 +3,6 @@
 
 .company-lede a { color: var(--blue-dark); }
 
-.company-section { @include section-wrap; }
 
 // --- hero (background = shared .ink-hero in _primitives.scss) ---
 .company-hero__inner {

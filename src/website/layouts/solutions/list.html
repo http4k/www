@@ -3,7 +3,7 @@
 {{ partial "shared/list-header.html" (dict "eyebrow" "solutions" "title" .Title "lede" .Params.description) }}
 
 {{ with .Params.top }}
-<section class="solution-section">
+<section class="section-rail">
     <div class="solution-grid">
         {{ range . }}
         <div class="solution-card">
@@ -17,7 +17,7 @@
 {{ end }}
 
 {{ with .Params.highlights }}
-<section class="solution-section">
+<section class="section-rail">
     {{ partial "shared/highlight.html" . }}
 </section>
 {{ end }}

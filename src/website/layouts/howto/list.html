@@ -9,7 +9,7 @@
 {{ $tags = $tags | uniq | sort }}
 {{ if $tags }}{{ partial "shared/filter-chips.html" (dict "attr" "tags" "items" $tags) }}{{ end }}
 
-<section class="list-section">
+<section class="section-rail list-section">
     <div class="article-grid">
         {{ range $items }}
         {{ partial "shared/article-card.html" (dict

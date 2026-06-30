@@ -13,11 +13,16 @@
     @media (max-width: 767.98px) { padding-inline: 24px; padding-block: var(--section-py-mobile) 0; }
 }
 
+// One content-section rail across every page. Pages add a page class for their
+// own deltas (a different measure, a trailing bottom); the rail owns width +
+// gutters + the top-only rhythm.
+.section-rail { @include section-wrap; }
+
 // First content section sits flush under a hero - the ink box already carries
 // bottom padding, so use the smaller step instead of stacking a full rhythm on
-// top. Scoped to the section-wrap content sections (not full-bleed bands like
+// top. Applies to any rail directly under a hero (not full-bleed bands like
 // .security-policy, whose padding lives on an inner wrapper).
-.ink-hero + .company-section, .ink-hero + .ent-section { padding-top: var(--section-sm); }
+.ink-hero + .section-rail { padding-top: var(--section-sm); }
 
 // Unified content rail: one width for nav / heroes / sections, matching the
 // bespoke max-width:1200 + 36px gutters used across the redesign. Overrides the

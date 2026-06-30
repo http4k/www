@@ -43,7 +43,7 @@
     a { color: var(--blue-dark); }
 }
 
-.list-section { @include section-wrap; padding-block: 30px 72px; }
+.list-section { padding-block: 30px 72px; }
 
 .list-section__title { margin: 26px 0 6px; }
 

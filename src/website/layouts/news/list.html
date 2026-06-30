@@ -11,7 +11,7 @@
 {{ $cats = $cats | uniq | sort }}
 {{ if $cats }}{{ partial "shared/filter-chips.html" (dict "attr" "category" "items" $cats) }}{{ end }}
 
-<section class="list-section">
+<section class="section-rail list-section">
     {{ with $featured }}
     {{ $img := "" }}{{ with .Resources.GetMatch .Params.image }}{{ $img = .RelPermalink }}{{ end }}
     {{ partial "shared/article-card.html" (dict

@@ -3,13 +3,13 @@
 {{ partial "shared/list-header.html" (dict "eyebrow" .Title "title" .Title "lede" .Params.description) }}
 
 {{ with .Content }}
-<section class="solution-section">
+<section class="section-rail">
     <div class="solution-prose article-body">{{ . }}</div>
 </section>
 {{ end }}
 
 {{ with .Params.highlights }}
-<section class="solution-section">
+<section class="section-rail">
     {{ partial "shared/highlight.html" . }}
 </section>
 {{ end }}

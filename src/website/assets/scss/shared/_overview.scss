@@ -19,7 +19,6 @@
 .ov-stats li::before { content: "\203A  "; color: var(--blue); }
 
 // sections
-.ov-section { @include section-wrap; }
 .ov-prose { font-size: 1.0625rem; line-height: 1.7; color: #26323f; margin: 0 0 18px; }
 .ov-prose:last-child { margin-bottom: 0; }
 .ov-prose a { color: var(--blue-dark); }

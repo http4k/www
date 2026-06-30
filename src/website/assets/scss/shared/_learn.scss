@@ -1,7 +1,7 @@
 // Learn / docs-index page (Diataxis explainer). Reuses .list-header / .eyebrow /
 // section-wrap. ASCII only.
 
-.learn-section { @include section-wrap; padding-block: 0 40px; max-width: 1000px; }
+.learn-section { padding-block: 0 40px; max-width: 1000px; }
 
 // Diataxis diagram card
 .diataxis { border: 1px solid var(--border); border-radius: 16px; padding: 30px; background: #f8fafd; }

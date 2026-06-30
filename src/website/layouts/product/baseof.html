@@ -30,7 +30,7 @@
 
 {{ if .Params.features }}
 <section class="product-features">
-    <div class="product-section">
+    <div class="section-rail">
         <div class="section-head"><h2 class="section-h2">Highlights</h2></div>
         <div class="product-feature-grid">
             {{ range .Params.features }}
@@ -49,7 +49,7 @@
 {{ if .Params.post_features_partial }}{{ partial .Params.post_features_partial . }}{{ end }}
 
 {{ if .Params.how_tos }}
-<section class="product-section">
+<section class="section-rail">
     {{ range .Params.how_tos }}
     <div class="product-howto">
         <h2 class="product-howto__title">{{ .section }}</h2>
