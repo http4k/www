@@ -1,7 +1,7 @@
 // Docs pages - 3-pane layout (sidebar / content / on-this-page TOC).
 // Fits the docs comp onto the existing ecosystem/single.html + ecosystem-sidebar
-// partial. Keeps `.newEcosystem` on the wrapper so the existing off-canvas mobile
-// behaviour + `.sideToggle` JS keep working until Phase 3 ports them here.
+// partial. The off-canvas mobile drawer (.docs .aside.no-side + .sideToggle JS)
+// is styled here.
 
 // Docs link colour - fit to the design system; flip to the comp's deeper blue by
 // swapping the commented line.
