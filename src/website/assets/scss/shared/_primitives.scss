@@ -2,13 +2,22 @@
 // (Eyebrow uses the existing .eyebrow in _home.scss.)
 
 // Section content rail - single source for the bespoke *-section wrappers.
-// They @include this for width/gutters and keep only their own padding-block.
+// Width/gutters plus the standard top-only rhythm (stacked sections give one
+// --section-py gap, not a doubled one). Override padding-block only where a
+// section genuinely differs (e.g. flush under a header, trailing bottom).
 @mixin section-wrap {
     max-width: 1200px;
     margin-inline: auto;
     padding-inline: 36px;
-    @media (max-width: 767.98px) { padding-inline: 24px; }
+    padding-block: var(--section-py) 0;
+    @media (max-width: 767.98px) { padding-inline: 24px; padding-block: var(--section-py-mobile) 0; }
 }
+
+// First content section sits flush under a hero - the ink box already carries
+// bottom padding, so use the smaller step instead of stacking a full rhythm on
+// top. Scoped to the section-wrap content sections (not full-bleed bands like
+// .security-policy, whose padding lives on an inner wrapper).
+.ink-hero + .company-section, .ink-hero + .ent-section { padding-top: var(--section-sm); }
 
 // Unified content rail: one width for nav / heroes / sections, matching the
 // bespoke max-width:1200 + 36px gutters used across the redesign. Overrides the

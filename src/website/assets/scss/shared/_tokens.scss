@@ -48,6 +48,8 @@
   --section-sm: 48px;
   --section-md: 96px;
   --section-lg: 128px;
+  --section-py: 72px;        // standard content-section top gap (single source for *-section)
+  --section-py-mobile: 56px;
 
   // --- Type scale (from the docs comp; rem @16px base) ---
   --fs-xs: 0.78rem;      // ~12.5px - labels / eyebrows

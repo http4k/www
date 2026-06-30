@@ -1,6 +1,6 @@
 // http4k Enterprise page - fits the comp onto enterprise.md. ASCII only.
 
-.ent-section { @include section-wrap; padding-block: 84px; }
+.ent-section { @include section-wrap; }
 .ent-h2 { font-size: 2.125rem; line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; margin: 0; color: var(--ink); }
 
 // --- hero (ink + pipes) ---
@@ -76,7 +76,6 @@
 }
 
 @media (max-width: 767.98px) {
-    .ent-section { padding: 56px 24px; }
     .ent-hero__inner { padding-block: 60px 56px; }
     .ent-glance, .ent-supply__grid { grid-template-columns: 1fr; }
     .ent-supply { padding: 32px 24px; }

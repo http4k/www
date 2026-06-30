@@ -1,6 +1,6 @@
 // http4k Pro page - fits the comp onto data/pro.yaml + pro.md. ASCII only.
 
-.pro-section { @include section-wrap; padding-block: 72px 0; }
+.pro-section { @include section-wrap; }
 
 .pro-h2 {
     font-size: 2.125rem;
@@ -190,7 +190,7 @@
 .pro-custom__cta { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue-strong); text-decoration: none; white-space: nowrap; }
 
 // --- faq ---
-.faq-section { max-width: 820px; margin: 0 auto; padding: 80px 36px 0; }
+.faq-section { max-width: 820px; margin: 0 auto; padding: var(--section-py) 36px 0; }
 .faq-section__item { padding: 22px 0; border-bottom: 1px solid var(--border); }
 .faq-section__item:first-of-type { border-top: 1px solid var(--border); }
 .faq-section__q { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
@@ -208,11 +208,10 @@
 }
 
 @media (max-width: 767.98px) {
-    .pro-section { padding: 56px 24px 0; }
     .pro-hero__inner { padding: 56px 24px 40px; }
     .pro-free-banner__inner { padding: 20px 24px; }
     .pro-grid,
     .pro-packs__grid,
     .pro-tiers { grid-template-columns: 1fr; }
-    .faq-section { padding: 56px 24px 0; }
+    .faq-section { padding: var(--section-py-mobile) 24px 0; }
 }

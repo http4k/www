@@ -20,7 +20,7 @@
 
 .company-lede a { color: var(--blue-dark); }
 
-.company-section { @include section-wrap; padding-block: 80px 0; }
+.company-section { @include section-wrap; }
 
 // --- hero (background = shared .ink-hero in _primitives.scss) ---
 .company-hero__inner {
@@ -245,7 +245,6 @@
 
 // --- responsive ---
 @media (max-width: 767.98px) {
-    .company-section { padding: 56px 24px 0; }
     .company-map-section { margin-top: 72px; }
     .company-map,
     .company-map__inner { min-height: 380px; }
