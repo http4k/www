@@ -20,8 +20,10 @@
 
 {{ with .Params.faq }}
 <section class="faq-section">
-    <div class="eyebrow">// FAQ</div>
-    <h2 class="solution-h2">Frequently asked questions</h2>
+    <div class="section-head">
+        <div class="eyebrow">// FAQ</div>
+        <h2 class="solution-h2">Frequently asked questions</h2>
+    </div>
     {{ range . }}
     <div class="faq-section__item">
         <h3 class="faq-section__q">{{ .question | markdownify }}</h3>

@@ -105,8 +105,10 @@
 
 {{ with .Params.faq }}
 <section class="faq-section">
-    <div class="eyebrow">// THE FINE PRINT</div>
-    <h2 class="ent-h2" style="margin-bottom:24px;">Enterprise FAQ</h2>
+    <div class="section-head">
+        <div class="eyebrow">// THE FINE PRINT</div>
+        <h2 class="ent-h2">Enterprise FAQ</h2>
+    </div>
     {{ range . }}
     <div class="faq-section__item">
         <h3 class="faq-section__q">{{ .question | markdownify }}</h3>
