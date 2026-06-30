@@ -1,5 +1,6 @@
 ---
 type: ecosystem
+category: Project
 ecosystem: http4k Core
 title: Changelog
 description: http4k Core Changelog
