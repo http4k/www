@@ -27,7 +27,13 @@ body {
     --bs-navbar-brand-color: var(--ink);
     --bs-navbar-brand-hover-color: var(--ink);
     --bs-navbar-toggler-border-color: var(--border);
-    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(67,80,95,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* this Bootstrap (5.1) paints the toggler icon via a direct
+   .navbar-dark .navbar-toggler-icon background-image, not the CSS var - so
+   override the image directly (dark strokes for the white header). */
+.site-header .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2343505f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* nav links: partial hardcodes .text-white / .text-primary (right for the dark
