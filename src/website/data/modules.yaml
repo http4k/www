@@ -1,23 +1,18 @@
-# Technologies the http4k ecosystem integrates with - shown in the home-page marquee.
-# Extracted from the http4k module names (settings.gradle.kts discovery): category/
-# provider prefixes and -core/-fake/-client suffixes stripped, variants deduped.
 - a2a
 - alibaba
-- analytics
-- anthropic
 - apache
-- approval
 - apprunner
 - argo
 - aws
 - azure
-- chaos
-- cloudevents
+- chaos monkey
+- claude
+- cloud events
 - cloudfront
 - cloudwatch
-- cloudwatchlogs
+- cloudwatch logs
 - cognito
-- containercredentials
+- container credentials
 - dataframe
 - datastar
 - digest
@@ -29,6 +24,7 @@
 - firehose
 - freemarker
 - fuel
+- google analytics
 - gcf
 - gcp
 - gemini
@@ -41,14 +37,13 @@
 - helidon
 - htmlflow
 - htmx
-- iamidentitycenter
-- instancemetadata
+- iam
 - jackson
 - jakarta
 - jdbc
 - jetty
 - jsonrpc
-- jsonschema
+- json schema
 - jte
 - k8s
 - kafka
@@ -56,12 +51,11 @@
 - kms
 - kondor
 - kotest
-- kotlinx-serialization
+- kotlinx serialization
 - ktor
 - lambda
-- langchain
 - langchain4j
-- lmstudio
+- lm studio
 - mattermost
 - mcp
 - micrometer
@@ -87,8 +81,7 @@
 - rocker
 - route53
 - s3
-- scheduler
-- secretsmanager
+- secrets manager
 - servirtium
 - servlet
 - ses
@@ -99,7 +92,7 @@
 - strikt
 - sts
 - swagger
-- systemsmanager
+- systems manager
 - tencent
 - thymeleaf
 - toon
