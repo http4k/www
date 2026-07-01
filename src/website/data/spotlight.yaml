@@ -1,5 +1,3 @@
-# Homepage "There's a lot going on around here" spotlight tabs.
-# tone on card lines: ok (green check), dim (muted), str (prompt), or omit (plain).
 - tab: Modules
   eyebrow: FOUR ECOSYSTEMS
   title: More than just another HTTP library
