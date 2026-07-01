@@ -99,7 +99,7 @@ object ClientExample {
 
         client.elicitations().onElicitation {
             println(">>> Elicitation: $it")
-            ElicitationResponse.Ok(accept).with(_root_ide_package_.content.ecosystem.pro.reference.mcp.userName of "David", _root_ide_package_.content.ecosystem.pro.reference.mcp.userAge of 30)
+            ElicitationResponse.Ok(accept).with(userName of "David", userAge of 30)
         }
 
         client.close()

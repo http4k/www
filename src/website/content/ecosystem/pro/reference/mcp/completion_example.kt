@@ -27,14 +27,14 @@ val loggingCompletion = CompletionFilter { next ->
         println("Result was: $it")
         response
     }
-}.then(_root_ide_package_.content.ecosystem.pro.reference.mcp.completionHandler)
+}.then(completionHandler)
 
 
 object ProvideCompletionOptionsForPrompt {
     @JvmStatic
     fun main() = println(
         // invoke/test the completion offline - just invoke it like a function
-        _root_ide_package_.content.ecosystem.pro.reference.mcp.loggingCompletion(
+        loggingCompletion(
             CompletionRequest("prefix", "Al")
         )
     )
