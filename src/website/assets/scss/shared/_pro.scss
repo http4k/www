@@ -27,7 +27,7 @@
 .pro-module:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--blue-strong); }
 
 .pro-module__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
-.pro-module__icon { width: 46px; height: 46px; border-radius: var(--radius-lg); object-fit: cover; }
+.pro-module__icon { width: 64px; height: 64px; border-radius: var(--radius-lg); object-fit: cover; }
 
 .pro-module__badge {
     font-family: var(--font-mono);
