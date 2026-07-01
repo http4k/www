@@ -24,7 +24,7 @@ frameworks.
 
 With it's uniform HTTP client/server model, http4k occupies a unique space within the Kotlin ecosystem and emphasizes
 functional principles, immutability, minimal dependencies and a focus on test-driven design. Today, http4k boasts over
-150 integrations and is utilized worldwide to power applications of all sizes.
+200 integrations and is utilized worldwide to power applications of all sizes.
 
 http4k Limited is a UK-based company that provides consulting services, training, and support for global clients of all sizes
 that use http4k to power their applications.
