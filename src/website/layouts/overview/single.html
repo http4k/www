@@ -69,12 +69,10 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
                     <span class="code-card__file">CoreTypes.kt</span>
                 </div>
                 <div class="code-card__body"><pre><span class="tok-com">// server AND client...</span>
-<span class="tok-key">typealias</span> HttpHandler =
-    (Request) -&gt; Response
+<span class="tok-key">typealias</span> HttpHandler = (Request) -&gt; Response
 
 <span class="tok-com">// ...and everything that wraps either.</span>
-<span class="tok-key">typealias</span> Filter =
-    (HttpHandler) -&gt; HttpHandler
+<span class="tok-key">typealias</span> Filter = (HttpHandler) -&gt; HttpHandler
 
 <span class="tok-com">// that's it. that's the toolkit.</span></pre></div>
             </div>
