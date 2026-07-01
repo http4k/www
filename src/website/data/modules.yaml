@@ -1,55 +1,112 @@
-_1:
-  - image: "/images/undertow.svg"
-    alt: "undertow"
-  - image: "/images/openai.svg"
-    alt: "openai"
-  - image: "/images/amazon-lambda.svg"
-    alt: "amazon-lambda"
-  - image: "/images/dynamodb.png"
-    alt: "dynamodb"
-  - image: "/images/open-api.svg"
-    alt: "open-api"
-_2:
-  - image: "/images/google-analytics.svg"
-    alt: "google analytics"
-  - image: "/images/anthropic.png"
-    alt: "anthropic"
-  - image: "/images/kms.png"
-    alt: "kms"
-  - image: "/images/netty.svg"
-    alt: "netty"
-  - image: "/images/sqs.png"
-    alt: "sqs"
-_3:
-  - image: "/images/apache.svg"
-    alt: "apache"
-  - image: "/images/monkey.svg"
-    alt: "monkey"
-  - image: "/images/gcp-functions.svg"
-    alt: "google-cloud-functions"
-  - image: "/images/eventbridge.png"
-    alt: "eventbridge"
-  - image: "/images/websockets.svg"
-    alt: "websockets"
-_4:
-  - image: "/images/kafka.svg"
-    alt: "kafka"
-  - image: "/images/gson.svg"
-    alt: "gson"
-  - image: "/images/cloudwatch.png"
-    alt: "cloudwatch"
-  - image: "/images/oauth.svg"
-    alt: "oauth"
-  - image: "/images/langchain.svg"
-    alt: "langchain"
-_5:
-  - image: "/images/openwhisk.svg"
-    alt: "openwhisk"
-  - image: "/images/firehose.svg"
-    alt: "firehose"
-  - image: "/images/handlebars.svg"
-    alt: "handlebars"
-  - image: "/images/s3.png"
-    alt: "s3"
-  - image: "/images/jetty.svg"
-    alt: "jetty"
+# Technologies the http4k ecosystem integrates with - shown in the home-page marquee.
+# Extracted from the http4k module names (settings.gradle.kts discovery): category/
+# provider prefixes and -core/-fake/-client suffixes stripped, variants deduped.
+- a2a
+- alibaba
+- analytics
+- anthropic
+- apache
+- approval
+- apprunner
+- argo
+- aws
+- azure
+- chaos
+- cloudevents
+- cloudfront
+- cloudwatch
+- cloudwatchlogs
+- cognito
+- containercredentials
+- dataframe
+- datastar
+- digest
+- docker
+- dynamodb
+- eventbridge
+- evidently
+- failsafe
+- firehose
+- freemarker
+- fuel
+- gcf
+- gcp
+- gemini
+- github
+- gitlab
+- graphql
+- gson
+- hamkrest
+- handlebars
+- helidon
+- htmlflow
+- htmx
+- iamidentitycenter
+- instancemetadata
+- jackson
+- jakarta
+- jdbc
+- jetty
+- jsonrpc
+- jsonschema
+- jte
+- k8s
+- kafka
+- klaxon
+- kms
+- kondor
+- kotest
+- kotlinx-serialization
+- ktor
+- lambda
+- langchain
+- langchain4j
+- lmstudio
+- mattermost
+- mcp
+- micrometer
+- micronaut
+- moshi
+- netty
+- oauth
+- okhttp
+- ollama
+- openai
+- openapi
+- openfeature
+- opentelemetry
+- openwhisk
+- pebble
+- playwright
+- powerassert
+- pug4j
+- ratpack
+- redis
+- redoc
+- resilience4j
+- rocker
+- route53
+- s3
+- scheduler
+- secretsmanager
+- servirtium
+- servlet
+- ses
+- slack
+- sns
+- spring
+- sqs
+- strikt
+- sts
+- swagger
+- systemsmanager
+- tencent
+- thymeleaf
+- toon
+- tracerbullet
+- undertow
+- vertx
+- webauthn
+- webdriver
+- x402
+- xml
