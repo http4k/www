@@ -19,45 +19,6 @@
         margin-bottom: 1.1rem;
     }
 
-    .verify-why .framework-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-
-    .verify-why .framework-chip {
-        background: var(--paper);
-        border: 1px solid var(--border);
-        border-left: 3px solid var(--blue-strong);
-        border-radius: var(--radius-lg);
-        padding: 18px 20px;
-        box-shadow: var(--shadow);
-    }
-
-    .verify-why .framework-chip .label {
-        display: block;
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--blue-strong);
-        margin-bottom: 6px;
-    }
-
-    .verify-why .framework-chip .name {
-        display: block;
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--text);
-        margin-bottom: 4px;
-    }
-
-    .verify-why .framework-chip .note {
-        font-size: 0.85rem;
-        color: var(--text-muted);
-        margin: 0;
-    }
-
     .verify-why .cta-row {
         margin-top: 3rem;
         display: flex;
@@ -69,7 +30,7 @@
         .verify-why {
             padding: var(--section-sm) 0;
         }
-        .verify-why .framework-grid {
+        .verify-why .card-grid {
             margin-top: 2rem;
         }
     }
@@ -98,26 +59,26 @@
                 </div>
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0">
-                <div class="framework-grid">
-                    <div class="framework-chip">
-                        <span class="label">Mandatory Sep 2026</span>
-                        <span class="name">EU Cyber Resilience Act</span>
-                        <p class="note">Machine-readable SBOMs and secure development practices for software sold in the EU.</p>
+                <div class="card-grid card-grid--2">
+                    <div class="ui-card kicker-card">
+                        <div class="kicker-card__kick">Mandatory Sep 2026</div>
+                        <div class="kicker-card__title">EU Cyber Resilience Act</div>
+                        <p class="kicker-card__desc">Machine-readable SBOMs and secure development practices for software sold in the EU.</p>
                     </div>
-                    <div class="framework-chip">
-                        <span class="label">Active</span>
-                        <span class="name">US Executive Order 14028</span>
-                        <p class="note">SBOMs and supply chain attestation required for federal procurement.</p>
+                    <div class="ui-card kicker-card">
+                        <div class="kicker-card__kick">Active</div>
+                        <div class="kicker-card__title">US Executive Order 14028</div>
+                        <p class="kicker-card__desc">SBOMs and supply chain attestation required for federal procurement.</p>
                     </div>
-                    <div class="framework-chip">
-                        <span class="label">Active</span>
-                        <span class="name">NIST SSDF</span>
-                        <p class="note">Consume provenance and verify third-party components (PS.3 / PW.4).</p>
+                    <div class="ui-card kicker-card">
+                        <div class="kicker-card__kick">Active</div>
+                        <div class="kicker-card__title">NIST SSDF</div>
+                        <p class="kicker-card__desc">Consume provenance and verify third-party components (PS.3 / PW.4).</p>
                     </div>
-                    <div class="framework-chip">
-                        <span class="label">Active</span>
-                        <span class="name">PCI DSS 4.0</span>
-                        <p class="note">Strengthened supply chain integrity controls for payment-processing software.</p>
+                    <div class="ui-card kicker-card">
+                        <div class="kicker-card__kick">Active</div>
+                        <div class="kicker-card__title">PCI DSS 4.0</div>
+                        <p class="kicker-card__desc">Strengthened supply chain integrity controls for payment-processing software.</p>
                     </div>
                 </div>
             </div>
