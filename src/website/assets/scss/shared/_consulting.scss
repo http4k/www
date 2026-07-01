@@ -1,0 +1,17 @@
+// /consulting/ page: numbered services list + how-it-works panel.
+.svc-list { padding: 4px 30px; }
+.svc-item { display: flex; gap: 22px; padding: 22px 0; border-top: 1px solid var(--border); }
+.svc-item:first-child { border-top: 0; }
+.svc-num { flex-shrink: 0; font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--blue-strong); padding-top: 3px; }
+.svc-title { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 6px; }
+.svc-desc { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+.hiw { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: 48px 44px; }
+.hiw-num { font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--orange); }
+.hiw-title { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 10px 0 6px; }
+.hiw-desc { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+@media (max-width: 767.98px) {
+    .svc-list { padding: 4px 22px; }
+    .hiw { padding: 36px 24px; }
+}
