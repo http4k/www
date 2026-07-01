@@ -8,7 +8,7 @@ type: "product"
 subdomain: verify
 tier: pro
 docs_link: https://http4k.org/ecosystem/enterprise/reference/verify/
-cta_label: "Included with Enterprise Edition"
+cta_label: "Read the docs"
 ee_included: "Get automated supply chain verification for every http4k dependency - giving your security team the assurance they need, with zero developer overhead."
 description: "**http4k Verify** ensures the integrity of every http4k dependency in your build - automatically, before your code compiles."
 pre_features_partial: shared/verify_why

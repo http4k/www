@@ -95,7 +95,7 @@
     {{ if .Params.ee_included }}
     <h2>Included with http4k Enterprise Edition</h2>
     <p>{{ .Params.ee_included }}</p>
-    <a class="cta-btn cta-btn--primary" href="{{ "/enterprise/" | absURL }}">Learn about Enterprise Edition</a>
+    <a class="cta-btn cta-btn--primary" href="mailto:solutions@http4k.org?subject={{ .Params.title }} deployment">Talk to us about your deployment</a>
     {{ else if .Params.early_access }}
     <h2>Get Early Access</h2>
     <p>This module is available through our Early Access Program - fully tested and production-ready. Sign up below for general availability updates, or <a href="mailto:solutions@http4k.org">get in touch</a> to join the EAP.</p>
