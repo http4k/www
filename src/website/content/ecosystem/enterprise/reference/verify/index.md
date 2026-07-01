@@ -1,7 +1,8 @@
 ---
 category: Reference
 type: ecosystem
-ecosystem: http4k Enterprise
+ecosystem:
+    - http4k Enterprise
 tier: pro
 title: "Verify"
 description: Gradle plugin for automatic verification of http4k artifact signatures, with exported artifacts and attestation reports

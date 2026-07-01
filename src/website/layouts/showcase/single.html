@@ -1,62 +1,36 @@
 {{ define "main" }}
-<div class="layout">
-    <main class="page-content">
-        <header>
-            <h1>{{ .Title }}</h1>
-        </header>
-        <article>
-            <div>
-                {{ .Content }}
-            </div>
-            <h3>Talks</h3>
-            Here's a curated list of talks worth watching. Check out the <a href="https://bit.ly/http4k-talks">YouTube Playlist</a> for the latest collection of talks featuring http4k.
-            <div class="row row-cols-1 row-cols-md-3 pb-4">
-                {{ range (sort .Site.Data.in_action.talks ".date" "desc" ) }}
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <div class="card-body ">
-                            <a class="text-decoration-none text-reset" href="{{ .link }}">
-                                <img class="mw-100" style="object-fit: contain;" src="{{ .thumbnail }}"/>
-                                <div class="pt-2 pb-3">{{ .title }}</div>
-                            </a>
-                            {{ if .extra_links }}
-                            <div class="d-flex justify-content-end">
-                                {{ $list := (.extra_links) }}
-                                {{ $len := (len $list) }}
-                                {{ range $index, $element := $list }}
-                                <div style="padding-left: 5px">
-                                    <a href="{{ .link }}">{{ .title }}</a>
-                                </div>
-                                {{ if ne (add $index 1) $len }}
-                                <div style="padding-left: 5px">/</div>
-                                {{ end }}
-                                {{ end }}
-                            </div>
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-            <h3>Standalone projects</h3>
-            <p>Each project is tagged with the http4k features it demonstrates:</p>
-            <div class="row row-cols-1 row-cols-md-3">
-                {{ range .Site.Data.in_action.projects }}
-                <div class="col p-2">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <a class="" href="https://github.com/{{ .github_slug }}"><strong>{{ .github_slug }}</strong></a>
-                            <div class="pt-2 pb-3">{{ .title }}</div>
-                            {{ range .tags }}
-                            <span class="badge text-bg-secondary" style="display:inline">{{ . }}</span>
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-        </article>
-    </main>
-</div>
-{{ partial "shared/pipes.html" }}
+
+{{ partial "shared/section-hero.html" (dict "eyebrow" "showcase" "title" .Title "lede" .Params.description) }}
+
+<section class="section-rail list-section">
+    <h2 class="list-section__title">Talks</h2>
+    <p class="list-section__lead">Here's a curated list of talks worth watching. Check out the <a href="https://bit.ly/http4k-talks">YouTube Playlist</a> for the latest collection of talks featuring http4k.</p>
+    <div class="card-grid article-grid">
+        {{ range (sort .Site.Data.in_action.talks ".date" "desc") }}
+        {{ partial "shared/article-card.html" (dict
+            "title" .title
+            "href" .link
+            "external" true
+            "image" .thumbnail
+            "date" (.date | time.Format "Jan 2006")
+            "links" .extra_links) }}
+        {{ end }}
+    </div>
+</section>
+
+<section class="section-rail list-section">
+    <h2 class="list-section__title">Standalone projects</h2>
+    <p class="list-section__lead">Each project is tagged with the http4k features it demonstrates:</p>
+    <div class="card-grid article-grid">
+        {{ range .Site.Data.in_action.projects }}
+        {{ partial "shared/article-card.html" (dict
+            "title" .title
+            "href" (printf "https://github.com/%s" .github_slug)
+            "external" true
+            "excerpt" .github_slug
+            "tags" .tags) }}
+        {{ end }}
+    </div>
+</section>
+
 {{ end }}

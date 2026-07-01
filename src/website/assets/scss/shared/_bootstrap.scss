@@ -5,15 +5,15 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-$font-family-base: "Lato", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+$font-family-base: "Space Grotesk", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 $font-family-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-$primary: #1f8de0;   // brand blue (--blue-strong)
-$secondary: #ff9800; // orange, high-emphasis only (--orange)
+$primary: #2096F3;   // brand cyan, legible step (--blue-strong)
+$secondary: #EE7D2B; // orange, high-emphasis only (--orange)
 $danger: #dc3545;
 $success: #198754;   // verified / passing (--green)
 $light: #FFFFFF;
-$dark: #14181f;      // ink (--ink)
+$dark: #0B1622;      // ink (--ink)
 
 // scss-docs-start import-stack
 // Configuration

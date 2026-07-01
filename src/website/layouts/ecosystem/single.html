@@ -1,21 +1,32 @@
 {{ define "main" }}
 
-<div class="layout newEcosystem">
+<style>
+  .github {
+    display: none;
+  }
+</style>
+
+<div class="docs">
     {{ partial "shared/ecosystem-sidebar" . }}
 
     <main class="page-content col">
         <article>
             <img class="mb-3 sideToggle" src="/images/exchange-icon.svg" width="20" alt="" srcset=""/>
+            {{ $eco := .Params.ecosystem }}{{ if reflect.IsSlice $eco }}{{ $eco = index $eco 0 }}{{ end }}
+            <nav class="docs-crumbs">
+                <a href="/ecosystem/">docs</a>
+                {{ if and $eco (ne $eco .Title) }}<span>/</span>{{ $eco }}{{ end }}
+                <span>/</span>{{ .Title }}
+            </nav>
+            {{ with .Params.Category }}<div class="eyebrow">// {{ . | upper }}</div>{{ end }}
             {{ if .Params.image }}
-            <img src="{{ .Params.image }}" alt="Image" class="imageSmall mt-3"/>
+            <h1 class="eco-logo"><img src="{{ .Params.image }}" alt="{{ .Title }}"></h1>
             {{ else }}
-            <div class="d-flex">
-                <h1>
-                    {{ with .Params.Category}}{{ . }}: {{ end }}{{ .Title }}
-                </h1>
+            <div class="d-flex align-items-center">
+                <h1>{{ .Title }}</h1>
                 {{ with .Params.tier }}
                 <a href="/pro" class="text-decoration-none" title="Get http4k Pro modules!">
-                    <span style="transform: translateY(-50%);" class="badge ms-2 text-bg-pro hover:opacity-80 transition-opacity">pro</span>
+                    <span class="badge ms-2 text-bg-pro hover:opacity-80 transition-opacity">pro</span>
                 </a>
                 {{ end }}
 
@@ -24,7 +35,7 @@
 
             {{ if eq .Params.tier "pro" }}
             <div class="mt-3 alert alert-warning border d-flex align-items-center justify-content-between">
-                <span>This is an http4k Pro feature and is licensed under the http4k Commercial License</span>
+                <span>This is an http4k Pro feature, licensed under the <a href="/commercial-license/">http4k Commercial License</a></span>
                 <a href="/pro" class="btn btn-secondary">Find out more</a>
             </div>
             {{ end }}
@@ -38,8 +49,45 @@
 
                 {{ .Content }}
             </div>
+
+            {{/* prev/next from the same page set as the sidebar: concepts then references for this ecosystem */}}
+            {{ $eco := .Params.ecosystem }}{{ if reflect.IsSlice $eco }}{{ $eco = index $eco 0 }}{{ end }}
+            {{ $ecoSlice := slice $eco }}
+            {{ $allC := where .Site.RegularPages ".Params.Category" "eq" "Concept" }}
+            {{ $concepts := sort (uniq ((where $allC ".Params.ecosystem" "eq" $eco) | append (where $allC ".Params.ecosystem" "intersect" $ecoSlice))) "Title" }}
+            {{ $allR := where .Site.RegularPages ".Params.Category" "eq" "Reference" }}
+            {{ $refs := sort (uniq ((where $allR ".Params.ecosystem" "eq" $eco) | append (where $allR ".Params.ecosystem" "intersect" $ecoSlice))) "Title" }}
+            {{ $ordered := $concepts | append $refs }}
+            {{ $idx := -1 }}
+            {{ range $i, $p := $ordered }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end }}
+            {{ $prev := false }}{{ $next := false }}
+            {{ if ge $idx 0 }}
+                {{ if gt $idx 0 }}{{ $prev = index $ordered (sub $idx 1) }}{{ end }}
+                {{ if lt $idx (sub (len $ordered) 1) }}{{ $next = index $ordered (add $idx 1) }}{{ end }}
+            {{ end }}
+            {{ if or $prev $next }}
+            <nav class="docs-pager">
+                {{ with $prev }}
+                <a class="docs-pager__link docs-pager__prev" href="{{ .RelPermalink }}">
+                    <span>&larr; Previous</span><strong>{{ .Title }}</strong>
+                </a>
+                {{ else }}<span></span>{{ end }}
+                {{ with $next }}
+                <a class="docs-pager__link docs-pager__next" href="{{ .RelPermalink }}">
+                    <span>Next &rarr;</span><strong>{{ .Title }}</strong>
+                </a>
+                {{ end }}
+            </nav>
+            {{ end }}
         </article>
     </main>
+
+    {{ if .Fragments.Headings }}
+    <aside class="docs-toc">
+        <div class="docs-toc__title">On this page</div>
+        {{ .TableOfContents }}
+    </aside>
+    {{ end }}
 </div>
 
 <script>
@@ -50,6 +98,26 @@
             });
         });
     });
+
+    // TOC scrollspy: highlight the section currently in view
+    (function () {
+        var links = document.querySelectorAll(".docs-toc a");
+        if (!links.length || !("IntersectionObserver" in window)) return;
+        var map = {};
+        links.forEach(function (a) {
+            map[decodeURIComponent(a.getAttribute("href").slice(1))] = a;
+        });
+        var headings = document.querySelectorAll(".page-content h2[id], .page-content h3[id]");
+        var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting && map[e.target.id]) {
+                    links.forEach(function (l) { l.classList.remove("active"); });
+                    map[e.target.id].classList.add("active");
+                }
+            });
+        }, { rootMargin: "0px 0px -75% 0px" });
+        headings.forEach(function (h) { obs.observe(h); });
+    })();
 </script>
 
 {{ end }}

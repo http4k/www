@@ -1,5 +1,6 @@
 ---
 title: A retrospective on http4k v3
+category: "Announcements"
 description: In preparation for the upcoming release of v4, the http4k team thought we'd do a bit of a retrospective about all the things that have gone in the >260 releases of v3.
 date: 2020-09-01
 image: mask_black.png

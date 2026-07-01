@@ -1,0 +1,107 @@
+{{ define "main" }}
+{{ $ver := .Site.Params.versions.http4k }}
+{{ $example := readFile "content/quickstart/example.kt" | replaceRE "(?s)^package.*?import" "import" }}
+
+<div class="reading">
+    <main class="reading__main">
+        <nav class="docs-crumbs">
+            <a href="/learn/">learn</a>
+            <span>/</span>quickstart
+        </nav>
+        <div class="eyebrow">// QUICKSTART &middot; ~5 MIN</div>
+        <h1 class="reading__title">{{ .Title }}</h1>
+        <p class="reading__lede">{{ .Params.description }}</p>
+
+        <div class="qs-steps">
+            <section class="qs-step" id="q1">
+                <div class="qs-step__head"><span class="qs-step__num">1</span><h2 class="qs-step__title">Add the dependencies</h2></div>
+                <p class="qs-step__intro">http4k-core, an Undertow server backend and the Apache HTTP client - the three modules this example uses.</p>
+                {{ $dep := printf `dependencies {
+    implementation(platform("org.http4k:http4k-bom:%s"))
+    implementation("org.http4k:http4k-core")
+    implementation("org.http4k:http4k-server-undertow")
+    implementation("org.http4k:http4k-client-apache")
+}` $ver }}
+                <div class="code-example">
+                    <div class="code-example-header">
+                        <span class="code-example-lang">Kotlin</span>
+                        <span class="code-example-file">build.gradle.kts</span>
+                    </div>
+                    {{ highlight $dep "kotlin" }}
+                </div>
+            </section>
+
+            <section class="qs-step" id="q2">
+                <div class="qs-step__head"><span class="qs-step__num">2</span><h2 class="qs-step__title">Write your app</h2></div>
+                <p class="qs-step__intro">A handler is a function. This <code>main</code> starts it on a server, calls it with an http4k client, prints the response and shuts down.</p>
+                <div class="code-example">
+                    <div class="code-example-header">
+                        <span class="code-example-lang">Kotlin</span>
+                        <span class="code-example-file">Example.kt</span>
+                    </div>
+                    {{ highlight $example "kotlin" }}
+                </div>
+            </section>
+
+            <section class="qs-step" id="q3">
+                <div class="qs-step__head"><span class="qs-step__num">3</span><h2 class="qs-step__title">Run it</h2></div>
+                <p class="qs-step__intro">Hit the green run arrow next to <code>main</code> in your IDE - it's an ordinary Kotlin <code>main</code>, no run task to configure. You'll see the response printed to the console.</p>
+                <div class="code-example">
+                    <div class="code-example-header">
+                        <span class="code-example-lang">Console</span>
+                        <span class="code-example-file">output</span>
+                    </div>
+                    {{ highlight `HTTP/1.1 200 OK
+
+Hello, John Doe!` "text" }}
+                </div>
+            </section>
+        </div>
+
+        <div class="qs-done">
+            <span class="qs-done__mark">&check;</span>
+            <div>
+                <div class="qs-done__title">Done. A real server, called by a real client - in one file.</div>
+                <p class="qs-done__text">And because your app is just a function, exercising it in a test never needs a running server. That's the whole model - everything else in http4k composes from exactly this.</p>
+            </div>
+        </div>
+
+        <div class="callout-orange">
+            <span class="callout-orange__lead">Prefer a head start?</span>
+            <span>The <a href="https://toolbox.http4k.org">http4k Toolbox</a> project wizard, the
+                <a href="https://plugins.jetbrains.com/plugin/25243-http4k-project-wizard">IntelliJ plugin</a> and our
+                <a href="https://github.com/http4k/agent-skills">LLM agent skills</a> scaffold a full project for you.</span>
+        </div>
+
+        <div class="qs-next card-grid card-grid--3">
+            <a class="ui-card kicker-card" href="/tutorial/">
+                <div class="kicker-card__kick">TUTORIALS</div>
+                <h3>Follow the path</h3>
+                <p>Guided, step-by-step from here to production.</p>
+            </a>
+            <a class="ui-card kicker-card" href="/howto/">
+                <div class="kicker-card__kick">HOW-TO</div>
+                <h3>Grab a recipe</h3>
+                <p>Ready-made solutions for common use-cases.</p>
+            </a>
+            <a class="ui-card kicker-card" href="/overview/">
+                <div class="kicker-card__kick">CONCEPTS</div>
+                <h3>Get the why</h3>
+                <p>The ideas behind server-as-a-function.</p>
+            </a>
+        </div>
+    </main>
+
+    <aside class="docs-toc reading__toc">
+        <div class="docs-toc__title">The steps</div>
+        <nav>
+            <ul>
+                <li><a href="#q1">1 &middot; Add the dependencies</a></li>
+                <li><a href="#q2">2 &middot; Write your app</a></li>
+                <li><a href="#q3">3 &middot; Run it</a></li>
+            </ul>
+        </nav>
+    </aside>
+</div>
+
+{{ end }}

@@ -1,0 +1,67 @@
+{{ define "main" }}
+
+{{ partial "shared/section-hero.html" (dict
+    "eyebrow" "how these docs work"
+    "title" "Four kinds of docs, depending on what you're here to do."
+    "lede" "Concepts, tutorials, how-to guides and reference - pick the mode that matches what you're trying to do.") }}
+
+<section class="section-rail learn-section">
+    <p class="diataxis-intro">The http4k technical documentation is designed following the Grand Unified Theory of Documentation. The http4k creators firmly believe that API design should be natural and friendly to the user, so the codebase is not heavily commented - if we've done our jobs correctly, you should be able to implement systems using the http4k APIs from your IDE alone.</p>
+    <div class="diataxis">
+        <img src="/images/doc-system.png" alt="The Grand Unified Theory of Documentation: four distinct styles of documentation depending on the reader's mode.">
+    </div>
+    <p class="diataxis-note">Regardless of which section you're reading, as much of the code as possible exists in the repository and is built with the rest of http4k in our CI. This makes the code a little more verbose (imports and all), but guarantees that it compiles and lets you navigate around to find where everything comes from.</p>
+
+    <div class="signposts">
+        <a class="signpost" href="/ecosystem/http4k/">
+            <div class="signpost__rail">
+                <div class="signpost__title">Concepts</div>
+                <div class="signpost__mode">learning &middot; theory</div>
+            </div>
+            <div class="signpost__body">
+                <p>http4k is a simple framework based around several function types, and hopefully the ideas behind it are not difficult to grasp. This section conveys the mindset and rationale behind http4k, and lays out each of the main function types used in the toolkit and how they relate to each other.</p>
+                <span class="signpost__more">Read the concepts &rarr;</span>
+            </div>
+        </a>
+        <a class="signpost" href="/tutorial/">
+            <div class="signpost__rail">
+                <div class="signpost__title">Tutorials</div>
+                <div class="signpost__mode">learning &middot; practice</div>
+            </div>
+            <div class="signpost__body">
+                <p>Getting started with a new library can be quite daunting, and sometimes everyone needs a little hand-holding to get comfortable with how things fit together. This section contains step-by-step guides to get you started with each of http4k's main conceptual areas - the first tutorial will get you up and running in no time.</p>
+                <span class="signpost__more">Start a tutorial &rarr;</span>
+            </div>
+        </a>
+        <a class="signpost" href="/howto/">
+            <div class="signpost__rail">
+                <div class="signpost__title">How-to guides</div>
+                <div class="signpost__mode">working &middot; practice</div>
+            </div>
+            <div class="signpost__body">
+                <p>The meat of the http4k documentation is in this section, in which you'll find ready made solutions to many common use-cases - because if you've got something to achieve, it's pretty likely we've come across it already. Each recipe contains the required Gradle dependencies, a brief description of the problem, and a fully runnable code example.</p>
+                <span class="signpost__more">Browse how-to guides &rarr;</span>
+            </div>
+        </a>
+        <a class="signpost" href="/ecosystem/">
+            <div class="signpost__rail">
+                <div class="signpost__title">Ecosystem references</div>
+                <div class="signpost__mode">working &middot; theory</div>
+            </div>
+            <div class="signpost__body">
+                <p>In order to "fly like a butterfly and sting like a bee", http4k is heavily modularised. This section contains more detailed technical notes on the capabilities present in each of the http4k modules. It's more of a "what" than a "why".</p>
+                <span class="signpost__more">Open the reference &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="learn-contribute">
+        <div>
+            <p class="learn-contribute__title">Contribute a recipe</p>
+            <p class="learn-contribute__text">As a community-driven project, we welcome new or updated recipes to make http4k easier to use. Just follow <a href="https://github.com/http4k/http4k/blob/master/.github/RECIPE_TEMPLATE.md">this Markdown template</a>.</p>
+        </div>
+        <a class="cta-btn cta-btn--primary" href="/howto/">Browse how-tos</a>
+    </div>
+</section>
+
+{{ end }}

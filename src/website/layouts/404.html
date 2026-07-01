@@ -1,52 +1,15 @@
-{{ define "title" }}404 — Page Not Found{{ end }}
-
 {{ define "main" }}
-<style>
-    .hero-404 {
-        min-height: 400px;
-        padding: 80px 0 140px;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-        background: url("/images/pipes-hero.svg"), linear-gradient(135deg, #59aff5 0%, #2096F3 50%, #61C0FF 100%);
-        background-size: cover, 100%;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: relative;
-        margin-top: -1px;
-    }
 
-    @media (max-width: 991.98px) {
-        .hero-404 {
-            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
-            padding: 60px 0 100px;
-        }
-    }
-</style>
-
-<div class="hero-404 text-white text-center d-flex align-items-center justify-content-center">
-    <div>
-        <h1 style="font-size: 8em; font-weight: 900; line-height: 1; margin-bottom: 0.1em;">404</h1>
-        <p style="font-size: 1.4em; opacity: 0.9;">This page has gone missing.</p>
+<section class="error-404 ink-hero">
+    <div class="ink-hero__glow"></div>
+    <div class="error-404__inner">
+        <div class="error-404__eyebrow">// NOT FOUND</div>
+        <div class="error-404__code">4<span>0</span>4</div>
+        <p class="error-404__msg">This page has gone missing. Looks like a pipe got disconnected - let's get you back on track.</p>
+        <a class="cta-btn cta-btn--primary" href="/">Back to safety</a>
     </div>
-</div>
+</section>
 
-<div class="container" style="max-width: 600px; margin-top: -80px; position: relative; z-index: 10;">
-    <div class="card-shadow reveal-scale text-center" style="padding: 40px; border-radius: 20px; background: white;">
-        <img src="/images/404.webp" class="border-radius-34 mb-4" alt="Page not found" style="max-width: 280px; width: 100%;"/>
-        <p style="font-size: 1.1em; margin-bottom: 1.5em;">
-            Looks like this pipe got disconnected. Let's get you back on track.
-        </p>
-        <a class="btn btn-primary btn-lg" href="/">Back to safety</a>
-    </div>
-</div>
-
-<div style="padding-bottom: 80px;"></div>
-
-{{/* Report 404s to GA4 as a dedicated event so they can be isolated from real
-     pageviews. Uses non-reserved parameter names (attempted_path, attempted_referrer)
-     so they can be registered as event-scoped custom dimensions in GA4 admin
-     without colliding with the built-in page_view parameters. */}}
 <script>
     (function () {
         if (typeof gtag !== "function") return;

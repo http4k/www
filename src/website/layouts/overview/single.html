@@ -1,0 +1,143 @@
+{{ define "main" }}
+
+<section class="ov-hero ink-hero">
+    <div class="ink-hero__glow"></div>
+    <div class="container ov-hero__inner">
+        <div class="eyebrow">// WHY HTTP4K EXISTS</div>
+        <h1 class="hero-title">It's not another HTTP library. It's a different way of thinking.</h1>
+        <p class="hero-sub">Most frameworks bury HTTP under annotations, reflection and a container. http4k throws all of that out and starts from <strong>one radical idea</strong>. Every one of the 200+ modules is built on it, and nothing sneaks in behind your back.</p>
+        <ul class="hero-stats">
+            <li>5M+ downloads / month</li>
+            <li>200+ modules</li>
+            <li>zero-dependency core</li>
+            <li>since 2017</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section-rail ov-section">
+    <div class="section-head">
+        <div class="eyebrow">// THE ONE IDEA</div>
+        <h2 class="section-h2">The server is the client.</h2>
+        <p class="section-lede">This is the part other HTTP libraries miss. The same single type - (Request) -&gt; Response - models <em>both</em> sides of the wire. Your server is an HttpHandler. Your HTTP client is <strong>also an</strong> HttpHandler. So a real remote call and an in-memory fake are interchangeable - a superpower that falls straight out of the simplicity.</p>
+    </div>
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="code-card h-100">
+                <div class="code-card__bar code-card__bar--label">
+                    <span class="code-card__file">Server.kt</span>
+                    <span class="code-card__tag code-card__tag--blue">an HttpHandler</span>
+                </div>
+                <div class="code-card__body"><pre><span class="tok-com">// a server takes a request, returns a response</span>
+<span class="tok-key">val</span> server: HttpHandler = { req -&gt; Response(OK).body(<span class="tok-str">"pong"</span>) }
+server(Request(GET, <span class="tok-str">"/ping"</span>))</pre></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="code-card h-100">
+                <div class="code-card__bar code-card__bar--label">
+                    <span class="code-card__file">Client.kt</span>
+                    <span class="code-card__tag code-card__tag--green">...also an HttpHandler</span>
+                </div>
+                <div class="code-card__body"><pre><span class="tok-com">// a client has the EXACT same type</span>
+<span class="tok-key">val</span> client: HttpHandler = JavaHttpClient()
+<span class="tok-com">// so calls are identical - swap one for</span>
+<span class="tok-com">// the other with zero ceremony</span>
+client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
+            </div>
+        </div>
+    </div>
+    <div class="callout-orange">
+        <span class="callout-orange__lead">One type, both sides.</span>
+        <span>Because a client is just an HttpHandler, you can hand your code a real one in production and an in-memory fake in tests - the same Filters (logging, metrics, caching, retries) compose onto either. Symmetry is the whole trick.</span>
+    </div>
+</section>
+
+<section class="section-rail ov-section">
+    <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+            <div class="section-head">
+                <div class="eyebrow">// WHERE IT CAME FROM</div>
+                <h2 class="section-h2">A 2013 paper, refined for HTTP.</h2>
+            </div>
+            <p class="ov-prose">The idea traces to the <a href="https://monkey.org/~marius/funsrv.pdf">"Your Server as a Function"</a> paper from Twitter - the observation that every system boundary can be modelled as a function from request to response. We took that generic concept and refined it specifically for HTTP.</p>
+            <p class="ov-prose">Then we extended the same model outward - WebSockets, Server-Sent Events, typesafe message handling via Lenses, function-based API clients - proving most things compose. The core idea never changed: <strong>simplicity</strong>.</p>
+        </div>
+        <div class="col-lg-5">
+            <div class="code-card h-100">
+                <div class="code-card__bar code-card__bar--label">
+                    <span class="code-card__file">CoreTypes.kt</span>
+                </div>
+                <div class="code-card__body"><pre><span class="tok-com">// server AND client...</span>
+<span class="tok-key">typealias</span> HttpHandler = (Request) -&gt; Response
+
+<span class="tok-com">// ...and everything that wraps either.</span>
+<span class="tok-key">typealias</span> Filter = (HttpHandler) -&gt; HttpHandler
+
+<span class="tok-com">// that's it. that's the toolkit.</span></pre></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-rail ov-section">
+    <div class="section-head">
+        <div class="eyebrow">// WHAT WE WANTED</div>
+        <h2 class="section-h2">Nine boxes we refused to leave unticked.</h2>
+        <p class="section-lede">http4k was built from scratch to fully leverage Kotlin, against a non-negotiable set of principles. Every one of these is still true today.</p>
+    </div>
+    <div class="service-grid mosaic">
+        {{ range $i, $p := .Site.Data.overview.principles }}
+        <div class="service-card">
+            <div class="service-card__num">{{ printf "%02d" (add $i 1) }}</div>
+            <h3>{{ $p.title }}</h3>
+            <p>{{ $p.description }}</p>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<section class="ov-bleed section--off">
+    <div class="section-rail ov-section">
+        <div class="section-head">
+            <div class="eyebrow">// CREDIT WHERE IT'S DUE</div>
+            <h2 class="section-h2">Good artists borrow. We just stole the lot.</h2>
+            <p class="section-lede">We're not precious about it. http4k distilled decades of using server-side libraries, and we pilfered the best parts shamelessly - then made them play together, the Kotlin way. Credit where it's due.</p>
+        </div>
+        <div class="card-grid ov-credits">
+            {{ range .Site.Data.overview.credits }}
+            <div class="ui-card kicker-card kicker-card--muted-kick">
+                <div class="kicker-card__kick">{{ .kick }}</div>
+                <div class="kicker-card__title">{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</div>
+                <p class="kicker-card__desc">{{ .description }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="ov-bleed section--ink">
+    <div class="section-rail ov-section">
+        <div class="section-head">
+            <div class="eyebrow">// THE PAYOFF</div>
+            <h2 class="section-h2">Testability isn't a feature we added. It's what falls out.</h2>
+            <p class="section-lede">When both your server and your clients are the same kind of function, the hard things get easy - and some things other HTTP libraries simply can't do become trivial.</p>
+        </div>
+        <div class="card-grid ov-payoff">
+            {{ range .Site.Data.overview.payoff }}
+            <div class="ov-payoff__card">
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "shared/cta-band.html" (dict
+    "title" "Convinced, or want to see it for yourself?"
+    "text" "Dig into the core concepts, or skip straight to your first running server."
+    "primaryLabel" "Read the concepts" "primaryHref" "/ecosystem/http4k/"
+    "secondaryLabel" "Back to Learn" "secondaryHref" "/learn/") }}
+
+{{ end }}

@@ -1,5 +1,6 @@
 ---
 title: "Simplifying MCP: http4k's Updated Authentication Model - Less Code, More Power"
+category: "AI"
 description: The http4k MCP SDK has been updated to support the latest Draft OAuth specification,
     enhancing security and flexibility in AI integrations.
 date: 2025-05-09

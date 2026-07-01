@@ -1,0 +1,14 @@
+{{/* Shared ink CTA band. Params: title, text, primaryLabel, primaryHref, secondaryLabel, secondaryHref. */}}
+<div class="cta-band-wrap">
+    <div class="cta-band">
+        <div class="cta-band__glow"></div>
+        <div class="cta-band__inner">
+            <h2>{{ .title }}</h2>
+            <p>{{ .text }}</p>
+            <div class="cta-band__buttons">
+                <a class="cta-btn cta-btn--primary" href="{{ .primaryHref }}">{{ .primaryLabel }}</a>
+                {{ with .secondaryLabel }}<a class="cta-btn cta-btn--ghost-dark" href="{{ $.secondaryHref }}">{{ . }}</a>{{ end }}
+            </div>
+        </div>
+    </div>
+</div>

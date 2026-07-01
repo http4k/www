@@ -1,5 +1,6 @@
 ---
 title: "http4k MCP Has Landed: Build Your Own AI Agents with Zero Compromise on Testability!"
+category: "AI"
 description: The http4k MCP SDK brings AI integration capabilities to your http4k applications with the same testability-first approach you know and love.
 date: 2025-03-28
 image: mcp.png

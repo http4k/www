@@ -1,40 +1,72 @@
-// ============================================================
-// DESIGN TOKENS — single source of truth for the whole site.
+// DESIGN TOKENS - single source of truth for the whole site.
 // CSS custom properties so both this SCSS bundle and the static
 // styles.css can reference them. Bootstrap $vars mirror the hexes
 // (in _bootstrap.scss) because Bootstrap does compile-time colour math.
-// ============================================================
 
 :root {
-  // --- Type: one sans for display/body, one mono for code/labels ---
-  --font-sans: 'Lato', -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-sans: 'Space Grotesk', -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 
-  // --- Brand blue (kept). One structural hue, a few shades. ---
-  --blue: #61C0FF;          // brand / accents / active borders / tints
-  --blue-strong: #1f8de0;   // solid fills with white text (a11y: white passes on this)
-  --blue-dark: #0f6cb8;     // hover / active, body links on white
+  --blue: #61C0FF;          // BRAND accent: on ink/dark bg, highlights, underlines, icon accents, the logo. Too light for text on white.
+  --blue-strong: #2096F3;   // legible cyan-family step: solid fills, primary actions, large headings/highlights on white
+  --blue-dark: #0f6cb8;     // body links + hover on white (passes WCAG 4.5:1)
   --blue-wash: rgba(97, 192, 255, 0.10); // subtle tint backgrounds
+  --glow-blue: rgba(97, 192, 255, 0.22);      // radial glow on dark heroes
+  --glow-blue-soft: rgba(97, 192, 255, 0.2);  // softer glow behind ink CTA bands
 
-  // --- Orange: high-emphasis actions/highlights ONLY ---
-  --orange: #ff9800;
-  --orange-strong: #f57c00;
+  --orange: #EE7D2B;
+  --orange-strong: #D9661A;
+  --orange-wash: rgba(238, 125, 43, 0.10); // expressive section accents
 
-  // --- Green: literal verified / passing states ONLY ---
   --green: #198754;
 
-  // --- Neutrals ---
-  --ink: #14181f;           // dark "anchor" sections + footer
+  --red: #dc3545;
+
+  --ink: #0B1622;           // deeper warm-dark "anchor" sections + footer
   --paper: #ffffff;         // light section
-  --off-white: #f6f8fa;     // alternating section
+  --off-white: #F5F8FC;     // alternating section
   --text: #1d2433;          // body text
   --text-muted: #5a6577;    // secondary text
+  --text-faint: #9aa7b6;    // faint mono meta on light (counts, crumbs, dates)
   --text-on-ink: #e6eaf0;   // body text on ink
-  --border: #d4dbe4;        // hairline borders (reads on white)
+  --text-on-ink-2: #a9bacb; // secondary text on ink
+  --text-on-ink-muted: #aebece; // muted lede/body on ink
+  --ink-surface: #13202e;   // raised chip/code surface on ink
+  --ink-border: #1f3142;    // hairline border on ink
+  --border: #E2E8F1;        // hairline borders (reads on white)
 
-  // --- Structure ---
+  // Radius scale: chips/swatches -> sm, controls/small panels -> base,
+  // cards -> lg, large cards/panels -> xl, bands -> 2xl, pills -> pill.
+  --radius-sm: 6px;
   --radius: 8px;
   --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 22px;
+  --radius-pill: 100px;
+  // Card padding: the three repeated card insets (single source so the card
+  // family stays consistent). Other paddings stay literal - they're contextual
+  // (table cells, chips, bands, buttons) and don't share a scale.
+  --pad-card-sm: 22px 26px;
+  --pad-card: 28px 26px;
+  --pad-card-lg: 32px 30px;
+  --lede: 680px;            // measure for hero/section lede + sub-text
   --shadow: 0 1px 2px rgba(20, 24, 31, 0.04), 0 2px 8px rgba(20, 24, 31, 0.06);
+  --shadow-hover: 0 18px 40px -26px rgba(11, 22, 34, 0.3); // card hover-lift
   --transition-fast: 140ms ease;
+
+  --section-xs: 32px;
+  --section-sm: 48px;
+  --section-md: 96px;
+  --section-lg: 128px;
+  --section-py: 72px;        // standard content-section top gap (single source for *-section)
+  --section-py-mobile: 56px;
+
+  --fs-xs: 0.78rem;      // ~12.5px - labels / eyebrows
+  --fs-sm: 0.84rem;      // ~13.5px - sidebar / TOC / code / meta
+  --fs-ui: 0.9375rem;    // 15px - nav / UI
+  --fs-body: 1.0625rem;  // 17px - body copy
+  --fs-lead: 1.2rem;     // ~19px - lead
+  --fs-h3: 1.35rem;      // ~22px
+  --fs-h2: 1.7rem;       // ~27px
+  --fs-h1: 2.75rem;      // 44px
 }

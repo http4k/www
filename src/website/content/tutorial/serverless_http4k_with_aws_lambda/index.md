@@ -93,7 +93,6 @@ You have successfully deployed and invoked an http4k Lambda to AWS!
 
 To see a complete example of a similar setup, you can check out the complete [AWS Lambda](https://github.com/http4k/examples/tree/master/aws-lambda-http) app from the [http4k Examples repo](https://github.com/http4k/examples/)
 
-Next: [Going native with Graal on AWS Lambda](/tutorial/going_native_with_graal_on_aws_lambda/)
 
 [Your first http4k app]: /tutorial/your_first_http4k_app/
 [pulumi]: https://www.pulumi.com/docs/get-started/install/

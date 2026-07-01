@@ -1,0 +1,127 @@
+{{ define "main" }}
+
+<section class="ent-hero ink-hero">
+    <div class="ink-hero__glow"></div>
+    <div class="container ent-hero__inner">
+        <div class="eyebrow">// HTTP4K ENTERPRISE EDITION</div>
+        <h1 class="hero-title">Production-grade peace of mind. Minus the enterprise theatre.</h1>
+        <p class="hero-sub">Long-term support, supply-chain security, priority help from the people who actually wrote the code, and every Pro module - one subscription for teams running http4k where it really counts.</p>
+        <div class="ent-hero__buttons">
+            <a class="cta-btn cta-btn--primary" href="mailto:{{ .Params.email }}?subject=http4k Enterprise Edition">Talk to us</a>
+            <a class="cta-btn cta-btn--ghost-dark" href="#editions">Compare editions &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<section class="section-rail">
+    <div class="section-head">
+        <div class="eyebrow">// WHAT'S IN THE BOX</div>
+        <h2 class="section-h2">Six guarantees, one subscription.</h2>
+    </div>
+    <div class="ent-glance mosaic">
+        {{ range .Params.highlights }}
+        <div class="ent-glance__card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<section class="section-rail">
+    <div class="ent-supply">
+        <div class="eyebrow">// COMPLIANCE, HANDLED TODAY</div>
+        <h2 class="section-h2">Supply chain security is the whole point.</h2>
+        <p class="section-lede ent-supply__lead">From September 2026, the EU Cyber Resilience Act requires verifiable provenance and machine-readable SBOMs for every component sold into Europe. US Executive Order 14028, NIST SSDF and PCI DSS 4.0 push in the same direction. http4k Enterprise Edition delivers it today.</p>
+        <div class="card-grid card-grid--4 ent-supply__grid">
+            <div class="ui-card ent-deliverable"><h4>SLSA Level 2 provenance</h4><p>Tamper-evident build provenance on every artifact. SLSA L3 on request.</p></div>
+            <div class="ui-card ent-deliverable"><h4>CycloneDX SBOMs</h4><p>Machine-readable software bills of materials, signed.</p></div>
+            <div class="ui-card ent-deliverable"><h4>Signed licence reports</h4><p>Per-module licence compliance reports, audit-ready.</p></div>
+            <div class="ui-card ent-deliverable"><h4>Cosign signatures</h4><p>Cosign signatures with trusted Sigstore timestamps.</p></div>
+        </div>
+        <table class="ent-compliance">
+            <thead><tr><th>Framework</th><th>Status</th><th>What http4k EE provides</th></tr></thead>
+            <tbody>
+                <tr><td>EU Cyber Resilience Act</td><td>Mandatory from September 2026</td><td>CycloneDX SBOMs, SLSA provenance, signed artifacts, vulnerability handling</td></tr>
+                <tr><td>US Executive Order 14028</td><td>Active</td><td>SBOM generation and supply chain attestation for federal procurement</td></tr>
+                <tr><td>NIST SSDF (PS.3 / PW.4)</td><td>Active</td><td>Secure development practices, provenance, third-party component verification</td></tr>
+                <tr><td>PCI DSS 4.0</td><td>Active</td><td>Supply chain integrity controls and verifiable artifact evidence for audit</td></tr>
+            </tbody>
+        </table>
+        <div class="ent-verify">
+            <p><strong>http4k Verify</strong> - one line of build config validates signatures, SBOMs and provenance for every http4k dependency, automatically, before your code compiles.</p>
+            <a href="https://verify.http4k.org">Explore Verify &rarr;</a>
+        </div>
+        <a class="ent-supply__more" href="/supply-chain-security/">Full technical detail &rarr;</a>
+    </div>
+</section>
+
+<section class="section--ink" id="editions">
+    <div class="ent-editions__inner">
+        <div class="section-head">
+            <div class="eyebrow">// COMPARE EDITIONS</div>
+            <h2 class="section-h2">Same core. More assurance as you grow.</h2>
+        </div>
+        <table class="ent-matrix">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Community<span>Free &middot; Apache 2.0</span></th>
+                    <th>Pro<span>Per module / seat</span></th>
+                    <th>Enterprise<span>Subscription</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Full open-source core</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                <tr><td>Supported http4k versions</td><td>v6</td><td>v6</td><td>v4, v5, v6</td></tr>
+                <tr><td>Minimum Java version</td><td>Java 21</td><td>Java 21</td><td>Java 8 (v4/5), 21 (v6)</td></tr>
+                <tr><td>Pro modules</td><td class="no">-</td><td>A la carte</td><td class="yes">&#10003; all</td></tr>
+                <tr><td>Supply chain & license provenance, Verify plugin</td><td class="no">-</td><td class="no">-</td><td class="yes">&#10003;</td></tr>
+                <tr><td>Priority support</td><td>GitHub issues</td><td>GitHub issues</td><td class="yes">&#10003; Slack, Email</td></tr>
+                <tr><td>Guaranteed support term</td><td class="no">-</td><td class="no">-</td><td class="yes">&#10003; up to 24 months</td></tr>
+                <tr><td>Source code access</td><td>Public</td><td>Public</td><td class="yes">&#10003; + private LTS</td></tr>
+                <tr class="ent-matrix__cta">
+                    <td></td>
+                    <td><a href="/quickstart/">Get started &rarr;</a></td>
+                    <td><a href="/pro/">View Pro &rarr;</a></td>
+                    <td><a href="mailto:{{ .Params.email }}?subject=http4k Enterprise Edition">Talk to us &rarr;</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="section-rail">
+    <div class="section-head">
+        <div class="eyebrow">// LONG-TERM SUPPORT</div>
+        <h2 class="section-h2">A predictable LTS cadence, aligned to the JDK.</h2>
+        <p class="section-lede ent-supply__lead">Major versions track the JDK's two-year LTS cycle. As each new Community major ships, the previous one rolls into a 24-month Enterprise LTS programme - so you upgrade on your schedule, not ours.</p>
+    </div>
+    <div class="ent-timeline-widget">
+        <div id="http4k"></div>
+    </div>
+</section>
+<script>createTimeline('http4k');</script>
+
+{{ with .Params.faq }}
+<section class="faq-section">
+    <div class="section-head">
+        <div class="eyebrow">// THE FINE PRINT</div>
+        <h2 class="section-h2">Enterprise FAQ</h2>
+    </div>
+    {{ range . }}
+    <div class="faq-section__item">
+        <h3 class="faq-section__q">{{ .question | markdownify }}</h3>
+        <div class="faq-section__a">{{ .answer | markdownify }}</div>
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+
+{{ partial "shared/cta-band.html" (dict
+    "title" "Let's talk about your deployment."
+    "text" "Tell us about your stack and compliance needs and we'll tailor a subscription - including LTS timelines outside the standard schedule."
+    "primaryLabel" "Talk to us" "primaryHref" (printf "mailto:%s?subject=http4k Enterprise Edition" .Params.email)
+    "secondaryLabel" "Explore Verify" "secondaryHref" "https://verify.http4k.org") }}
+
+{{ end }}

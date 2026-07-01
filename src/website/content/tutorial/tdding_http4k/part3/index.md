@@ -16,4 +16,3 @@ series: TDDing http4k
 
 {{< kotlin file="project.kt" >}}
 
-Next: [Part 4: Adding an external dependency](/tutorial/tdding_http4k/part4/)

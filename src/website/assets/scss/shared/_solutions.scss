@@ -1,0 +1,28 @@
+.solution-prose { max-width: 820px; margin: 0 auto; }
+
+// feature/highlight card grid
+.solution-card { padding: var(--pad-card); }
+
+.solution-card img { width: 44px; height: 44px; margin-bottom: 14px; }
+.solution-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
+.solution-card p { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+// professional-services cards (data/cta): title + desc + outbound link
+.solution-cta__inner { max-width: 1200px; margin: 0 auto; padding: 80px 36px; }
+
+.solution-cta-card { display: flex; flex-direction: column; padding: var(--pad-card); }
+
+.solution-cta-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--ink); margin: 0 0 10px; }
+.solution-cta-card p { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 18px; flex: 1; }
+.solution-cta-card a { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue-dark); text-decoration: none; }
+.solution-cta-card a:hover { text-decoration: underline; }
+
+.solution-contact { text-align: center; margin-top: 40px; }
+
+// "Let's talk" closing block
+.solution-talk { text-align: center; padding: 72px 24px 96px; }
+.solution-talk h2 { font-size: var(--fs-h2); font-weight: 700; color: var(--ink); margin: 0 0 20px; }
+
+@media (max-width: 767.98px) {
+    .solution-cta__inner { padding: 56px 24px; }
+}

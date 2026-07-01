@@ -1,5 +1,6 @@
 ---
 title: Reassurance to http4k users regarding JCenter shutdown
+category: "Announcements"
 description: Announcement regarding JCenter shutdown
 date: 2021-02-01
 image: image.png

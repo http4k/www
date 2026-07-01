@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-xl navbar-dark">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="{{ .Site.BaseURL }}">
-            <img style="min-height: 40px;" src="{{ .Site.Params.Logo }}" alt="logo"/>
+            <img class="nav-logo nav-logo--white" style="min-height: 40px;" src="{{ .Site.Params.Logo }}" alt="http4k"/>
+            <img class="nav-logo nav-logo--colour" style="min-height: 40px;" src="/images/logo-http4k.png" alt="http4k"/>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,9 +29,12 @@
                 {{ end }}
                 <li id="searchBox" class="nav-item searchBox align-content-center"></li>
                 <li class="nav-item">
-                    <a class="nav-link text-primary px-3" href="https://github.com/http4k">
+                    <a class="nav-link text-primary px-3" href="https://github.com/http4k/http4k">
                         <img src="/images/octocat-inverted-64.png" style="height: 1.5rem;" alt="github">
                     </a>
+                </li>
+                <li class="nav-item align-content-center">
+                    <a class="cta-btn cta-btn--primary nav-cta" href="mailto:solutions@http4k.org">Talk to us</a>
                 </li>
             </ul>
         </div>

@@ -1,33 +1,35 @@
 {{ define "main" }}
 
-<div class="layout">
-    <main class="page-content">
-        <header>
-            <h1>{{ .Title }}</h1>
-        </header>
+{{ partial "shared/section-hero.html" (dict "eyebrow" .Title "title" .Title "lede" .Params.description) }}
 
-        <article>
-            {{ .Content }}
-
-            <div class="mt-5 row row-cols-3 row-cols-xl-3 justify-content-center">
-                <a class="btn btn-secondary" href="mailto:{{.Params.email}}"><b>Contact us</b></a>
-            </div>
-
-            <div class="mt-5">
-                {{ partial "shared/highlight.html" .Params.highlights }}
-            </div>
-        </article>
-    </main>
-</div>
-
-{{ if .Params.faq }}
-    {{ partial "shared/faq.html" . }}
+{{ with .Content }}
+<section class="section-rail">
+    <div class="solution-prose article-body">{{ . }}</div>
+</section>
 {{ end }}
 
-{{ partial "shared/cta.html" ( dict "hideImages" true "page" .) }}
+{{ with .Params.highlights }}
+<section class="section-rail">
+    {{ partial "shared/highlight.html" . }}
+</section>
+{{ end }}
 
+{{ with .Params.faq }}
+<section class="faq-section">
+    <div class="section-head">
+        <div class="eyebrow">// FAQ</div>
+        <h2 class="section-h2">Frequently asked questions</h2>
+    </div>
+    {{ range . }}
+    <div class="faq-section__item">
+        <h3 class="faq-section__q">{{ .question | markdownify }}</h3>
+        <div class="faq-section__a">{{ .answer | markdownify }}</div>
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+
+{{ partial "shared/cta.html" . }}
 {{ partial "shared/cta-width.html" }}
-
-{{ partial "shared/pipes.html" }}
 
 {{ end }}

@@ -1,0 +1,34 @@
+{{ with .Params.showcase }}
+<section class="section-rail">
+    {{ range $group := . }}
+    <div class="product-showcase__group" data-showcase>
+        {{ with $group.title }}<h3 class="product-showcase__title">{{ . }}</h3>{{ end }}
+        <div class="product-tabs">
+            {{ range $i, $t := $group.tabs }}
+            <button type="button" class="chip{{ if eq $i 0 }} active{{ end }}">{{ $t.label }}</button>
+            {{ end }}
+        </div>
+        {{ range $i, $t := $group.tabs }}
+        <div class="product-shot{{ if eq $i 0 }} active{{ end }}">
+            {{ with $.Resources.GetMatch $t.image }}<img src="{{ .RelPermalink }}" alt="{{ $t.alt }}" loading="lazy">{{ end }}
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
+<script>
+(function () {
+    document.querySelectorAll("[data-showcase]").forEach(function (g) {
+        var tabs = g.querySelectorAll(".chip"), shots = g.querySelectorAll(".product-shot");
+        tabs.forEach(function (t, i) {
+            t.addEventListener("click", function () {
+                tabs.forEach(function (x) { x.classList.remove("active"); });
+                shots.forEach(function (x) { x.classList.remove("active"); });
+                t.classList.add("active");
+                shots[i].classList.add("active");
+            });
+        });
+    });
+})();
+</script>
+{{ end }}

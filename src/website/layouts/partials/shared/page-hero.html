@@ -1,0 +1,17 @@
+{{/* Leading dark hero for the services/marketing pages (consulting, training,
+     performance). dict: eyebrow, title, lede, buttons (slice {label, href, ghost}),
+     stats (slice of strings). Leads with .ink-hero so the overlay nav triggers. */}}
+<section class="ink-hero">
+    <div class="ink-hero__glow"></div>
+    <div class="container">
+        {{ with .eyebrow }}<div class="eyebrow">{{ . }}</div>{{ end }}
+        <h1 class="hero-title">{{ .title }}</h1>
+        {{ with .lede }}<p class="hero-sub">{{ . | markdownify }}</p>{{ end }}
+        {{ with .buttons }}
+        <div class="d-flex flex-wrap gap-3">
+            {{ range . }}<a class="cta-btn {{ if .ghost }}cta-btn--ghost-dark{{ else }}cta-btn--primary{{ end }}" href="{{ .href }}">{{ .label | safeHTML }}</a>{{ end }}
+        </div>
+        {{ end }}
+        {{ with .stats }}<ul class="hero-stats">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+    </div>
+</section>

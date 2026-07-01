@@ -1,0 +1,29 @@
+<section class="section section--off">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+            <div class="section-head mb-0">
+                <h2 class="mb-2">Plays nicely with your entire stack.</h2>
+                <p class="section-lede mb-0">200+ modules across servers, clients, formats, cloud, AI and testing - http4k ships a supported integration for each.</p>
+            </div>
+            <a class="btn btn-outline-primary" href="/ecosystem/">Browse the ecosystem →</a>
+        </div>
+    </div>
+
+    {{ $all := .Site.Data.modules }}
+    {{ $half := div (add (len $all) 1) 2 }}
+    {{ $row1 := first $half $all }}
+    {{ $row2 := after $half $all }}
+
+    <div class="marquee">
+        <div class="marquee__track marquee__track--l">
+            <div class="marquee__set">{{ range $row1 }}<span class="pill">{{ . }}</span>{{ end }}</div>
+            <div class="marquee__set marquee__dup" aria-hidden="true">{{ range $row1 }}<span class="pill">{{ . }}</span>{{ end }}</div>
+        </div>
+    </div>
+    <div class="marquee">
+        <div class="marquee__track marquee__track--r">
+            <div class="marquee__set">{{ range $row2 }}<span class="pill">{{ . }}</span>{{ end }}</div>
+            <div class="marquee__set marquee__dup" aria-hidden="true">{{ range $row2 }}<span class="pill">{{ . }}</span>{{ end }}</div>
+        </div>
+    </div>
+</section>

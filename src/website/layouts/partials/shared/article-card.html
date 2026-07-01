@@ -1,0 +1,26 @@
+<article class="article-card{{ if .featured }} article-card--featured{{ end }}"
+  {{- if not .featured }}{{ with .category }} data-category="{{ . }}"{{ end }}{{ with .tags }} data-tags="{{ delimit . "," }}"{{ end }}{{ end }}>
+  {{- if or .image .thumbText }}
+  <div class="article-thumb">
+    {{- with .image }}<img src="{{ . }}" alt="" loading="lazy">
+    {{- else }}<span class="article-thumb__mark">{{ .thumbText }}</span>{{ end }}
+  </div>
+  {{- end }}
+  <div class="article-card__body">
+    {{- if or .featured .category .tags }}
+    <div class="article-card__badges">
+      {{- if .featured }}<span class="badge-featured">Featured</span>{{ end }}
+      {{- with .category }}<span class="badge-cat">{{ . }}</span>{{ end }}
+      {{- range .tags }}<span class="badge-tag">{{ . }}</span>{{ end }}
+    </div>
+    {{- end }}
+    <h3 class="article-card__title"><a class="article-card__link" href="{{ .href }}"{{ if .external }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a></h3>
+    {{- with .excerpt }}<p class="article-card__excerpt">{{ . | plainify | truncate 170 }}</p>{{ end }}
+    {{- if or .date .links }}
+    <div class="article-card__foot">
+      {{- with .date }}<span class="article-card__date">{{ . }}</span>{{ end }}
+      {{- with .links }}<span class="article-card__links">{{ range $i, $l := . }}{{ if $i }}<span class="sep">/</span>{{ end }}<a href="{{ $l.link }}" target="_blank" rel="noopener">{{ $l.title }}</a>{{ end }}</span>{{ end }}
+    </div>
+    {{- end }}
+  </div>
+</article>

@@ -1,5 +1,6 @@
 ---
 type: ecosystem
+category: Project
 ecosystem: http4k Core
 title: Contributors Guide
 description: How to contribute to http4k

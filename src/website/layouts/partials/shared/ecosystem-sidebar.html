@@ -42,9 +42,9 @@
             <li class="mt-3">
                 <h4>Project</h4>
                 <ul class="list-unstyled ms-3">
-                    <li class="mt-1"><a class="ecoLink" href="/ecosystem/changelog/">Changelog</a></li>
+                    <li class="mt-1"><a class="ecoLink {{ if eq $.Page.RelPermalink "/ecosystem/changelog/" }}active{{ end }}" href="/ecosystem/changelog/">Changelog</a></li>
                     <li class="mt-1"><a class="ecoLink" href="https://github.com/http4k/http4k">GitHub</a></li>
-                    <li class="mt-1"><a class="ecoLink" href="/ecosystem/contributing/">Contributing</a></li>
+                    <li class="mt-1"><a class="ecoLink {{ if eq $.Page.RelPermalink "/ecosystem/contributing/" }}active{{ end }}" href="/ecosystem/contributing/">Contributing</a></li>
                     <li class="mt-1"><a class="ecoLink" href="https://github.com/http4k/http4k/issues">Issue Tracker</a></li>
                 </ul>
             </li>
@@ -60,7 +60,7 @@
                     {{ range $refs }}
                     <li class="mt-1">
                         <a href="{{ .RelPermalink }}" class="ecoLink {{ if eq .RelPermalink $.Page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
-                        {{ if and .Params.tier (ne $primaryEco "http4k Enterprise") }}
+                        {{ if and .Params.tier (ne $primaryEco "http4k Enterprise") (ne $primaryEco "http4k Pro") }}
                         <a href="/pro" class="text-decoration-none" title="Get http4k Pro modules!">
                             <span style="transform: translateY(-10%);" class="ms-1 badge text-bg-pro hover:opacity-80 transition-opacity">pro</span>
                         </a>

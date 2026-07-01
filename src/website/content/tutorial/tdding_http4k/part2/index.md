@@ -20,4 +20,3 @@ also been converted to reusable extension methods on Response.
 
 {{< kotlin file="project.kt" >}}
 
-Next: [Part 3: Adding another endpoint](/tutorial/tdding_http4k/part3/)

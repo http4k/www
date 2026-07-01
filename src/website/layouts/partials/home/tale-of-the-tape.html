@@ -1,0 +1,25 @@
+<section class="section">
+    <div class="container">
+        <div class="section-head section-head--center mb-5">
+            <div class="eyebrow">// THE TALE OF THE TAPE</div>
+            <h2>How it stacks up against the framework you're escaping.</h2>
+            <p class="section-lede">Yes, we're biased. No, we're not wrong. Bring your own benchmarks -
+                ours are in the repo.</p>
+        </div>
+
+        <div class="tape">
+            <div class="tape__head">
+                <div class="tape__cell tape__feature">In the ring</div>
+                <div class="tape__cell tape__h4k">http4k</div>
+                <div class="tape__cell tape__them">The Usual Framework&trade;</div>
+            </div>
+            {{ range site.Data.comparison }}
+            <div class="tape__row">
+                <div class="tape__cell tape__feature">{{ .feature }}</div>
+                <div class="tape__cell tape__h4k">{{ .http4k }}</div>
+                <div class="tape__cell tape__them">{{ .theirs }}</div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

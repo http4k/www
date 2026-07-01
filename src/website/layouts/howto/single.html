@@ -1,25 +1,38 @@
 {{ define "main" }}
 
-<div class="layout">
-    <main class="page-content">
-        <header>
-            <h1>{{ .Title }}</h1>
-        </header>
-        <article>
-            <div class="justify-content-end">
-                {{ range .Params.tags }}
-                <span class="badge text-bg-secondary" style="display:inline">{{ . }}</span>
-                {{ end }}
-            </div>
-            <div class="mt-3">
-                {{ .Content }}
-            </div>
-        </article>
+<div class="reading">
+    <main class="reading__main">
+        <nav class="docs-crumbs">
+            <a href="/learn/">learn</a>
+            <span>/</span><a href="/howto/">how-to guides</a>
+            <span>/</span>{{ .Title | lower }}
+        </nav>
 
-        <div class="mt-auto d-flex justify-content-center">
-            <a href="../" class="btn btn-primary">All How-to guides</a>
+        {{ with .Params.tags }}
+        <div class="reading__meta">
+            {{ range . }}<span class="reading__chip">{{ . }}</span>{{ end }}
         </div>
+        {{ end }}
+
+        <h1 class="reading__title">{{ .Title }}</h1>
+        {{ with .Params.description }}<p class="reading__lede">{{ . }}</p>{{ end }}
+
+        <div class="article-body">
+            {{ .Content }}
+        </div>
+
+        <nav class="docs-pager">
+            <a class="docs-pager__link" href="/howto/"><span>&larr; All how-to guides</span><strong>Browse the recipes</strong></a>
+        </nav>
     </main>
 
+    <aside class="docs-toc reading__toc">
+        {{ with .Fragments.Headings }}
+        <div class="docs-toc__title">On this page</div>
+        <nav>{{ partial "shared/toc-tree.html" . }}</nav>
+        {{ end }}
+        <a class="reading__toc-link" href="https://github.com/http4k/http4k/blob/master/.github/RECIPE_TEMPLATE.md">Improve this recipe &#9998;</a>
+    </aside>
 </div>
+
 {{ end }}

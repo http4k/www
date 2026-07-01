@@ -1,5 +1,6 @@
 ---
 title: http4k v4 - 17 platforms and counting...
+category: "Releases"
 description: There's a new major http4k release! Read about all the new stuff the team have been working on for http4k v4.
 date: 2021-01-01
 image: backends.png

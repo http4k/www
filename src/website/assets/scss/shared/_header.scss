@@ -9,4 +9,48 @@
       max-height: calc(1.4rem + .6vw);
     }
   }
+
+  // drop the dropdown caret decoration
+  .dropdown-toggle::after { display: none; }
 }
+
+// nav CTA button - compact variant of .cta-btn for the top bar (white + dark navs)
+.nav-cta { height: 38px; padding: 0 16px; font-size: var(--fs-sm); margin-left: 6px; }
+
+// anchor-scroll targets (#id links) must clear the ~66px sticky .site-header.
+[id] { scroll-margin-top: 84px; }
+
+// external dropdown links get a small north-east arrow (\2197). Dropdown items use
+// the raw .URL, so [href^="http"] matches only external ones (not internal /paths).
+.dropdown-item[href^="http"]::after { content: "\2197"; margin-left: 5px; font-size: 0.8em; opacity: 0.55; vertical-align: 1px; }
+
+// Logo: white wordmark on dark navs (landing / product / ink-hero pages), the
+// full-colour wordmark on the light .site-header. Two imgs toggled by context.
+.nav-logo--colour { display: none; }
+.site-header:not(:has(+ .ink-hero)) .nav-logo--white { display: none; }
+.site-header:not(:has(+ .ink-hero)) .nav-logo--colour { display: inline-block; }
+
+// When a page leads with a dark .ink-hero, integrate the nav into it: transparent
+// overlay, white links + logo, non-sticky (scrolls away like the home hero). No
+// per-page flag - keyed purely off "the header is immediately followed by an ink
+// hero". Pages without a leading ink hero keep the white sticky .site-header.
+.site-header:has(+ .ink-hero) {
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 1030;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 0;
+}
+.site-header:has(+ .ink-hero) .navbar .nav-link,
+.site-header:has(+ .ink-hero) .navbar .nav-link:visited { color: #fff !important; }
+.site-header:has(+ .ink-hero) .navbar .nav-link:hover,
+.site-header:has(+ .ink-hero) .navbar .nav-link:focus { color: var(--blue) !important; }
+.site-header:has(+ .ink-hero) .navbar-brand img,
+.site-header:has(+ .ink-hero) img[alt="github"] { filter: none; }
+.site-header:has(+ .ink-hero) .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+// the overlaid nav is out of flow; each ink hero's own top padding clears it
+// (bespoke heroes already carry ~96px; the shared section-hero sets its own below).

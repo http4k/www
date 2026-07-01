@@ -1,0 +1,27 @@
+.ov-prose { font-size: 1.0625rem; line-height: 1.7; color: #26323f; margin: 0 0 18px; }
+.ov-prose:last-child { margin-bottom: 0; }
+.ov-prose a { color: var(--blue-dark); }
+
+.ov-section .callout-orange { margin-top: 32px; }
+
+// nine principles - reuse .service-grid/.service-card at three columns, blue numbers
+.ov-section .service-grid { grid-template-columns: repeat(3, 1fr); }
+.ov-section .service-card__num { color: var(--blue-strong); }
+
+// full-bleed colour bands (inner content stays on the 1200 rail, symmetric padding)
+.ov-bleed .ov-section { padding-bottom: var(--section-py); }
+
+// credit cards
+
+// payoff cards (on ink)
+.ov-payoff__card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: 28px; }
+.ov-payoff__card h3 { font-size: 1.15rem; font-weight: 700; color: #fff; margin: 0 0 10px; }
+.ov-payoff__card p { font-size: 0.95rem; line-height: 1.62; color: var(--text-on-ink-muted); margin: 0; }
+
+@media (max-width: 991.98px) {
+    .ov-section .service-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767.98px) {
+    .ov-section .service-grid { grid-template-columns: 1fr; }
+}

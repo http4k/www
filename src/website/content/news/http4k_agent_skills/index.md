@@ -1,5 +1,6 @@
 ---
 title: "http4k Mastery, On Tap for Your AI Coding Agent"
+category: "AI"
 description: "http4k Agent Skills gives your AI coding agent the patterns, tricks, and hard-won knowledge of the http4k masters - regenerated with every release."
 date: 2026-04-27
 image: agents.webp

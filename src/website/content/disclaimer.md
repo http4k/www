@@ -1,4 +1,5 @@
 ---
+eyebrow: legal
 title : 'Disclaimer'
 description: "Disclaimer for http4k.org"
 ---

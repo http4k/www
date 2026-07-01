@@ -1,6 +1,7 @@
 ---
 title: About the docs
 description: An explanation of how the http4k docs are organised
+type: learn
 ---
 
 The http4k technical documentation has been designed following the **Grand Unified Theory of Documentation**. Overall, the http4k developers firmly believe that API design should be natural and friendly to the user, and hence the codebase is not heavily commented. If we have done our jobs correctly, someone with the correct knowledge of a particular domain or platform should be able to implement systems using the http4k APIs by just using an IDE.

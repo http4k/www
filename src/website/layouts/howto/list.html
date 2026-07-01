@@ -1,35 +1,70 @@
 {{ define "main" }}
 
-<div class="layout d-flex">
-    <main class="page-content mx-auto">
-        <article>
-            <h1>{{ .Title }}</h1>
-            {{ .Content }}
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-5">
-                {{ range where .Site.RegularPages "Type" "eq" "howto" }}
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{ .Title }}</h5>
-                            <p class="card-text">{{ .Params.description | markdownify }}</p>
-                            <div class="mt-auto">
-                                <div class="row">
-                                    {{ range .Params.tags }}
-                                    <span class="badge text-bg-secondary" style="display:inline">{{ . }}</span>
-                                    {{ end }}
-                                </div>
-                                <div class="row mt-2">
-                                    <a href="{{ .RelPermalink }}" class="btn btn-secondary">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-        </article>
-    </main>
-</div>
-{{ partial "shared/pipes.html" }}
+{{ partial "shared/section-hero.html" (dict
+    "eyebrow" "how-to guides"
+    "title" "If you've got something to achieve, we've probably done it already."
+    "lede" "Ready-made recipes for common use-cases - the required deps, the problem, and a fully runnable solution. Like a mini-StackOverflow, but you get the whole thing to adapt.") }}
+
+{{ $items := where .Site.RegularPages "Type" "eq" "howto" }}
+{{ $tags := slice }}
+{{ range $items }}{{ range .Params.tags }}{{ $tags = $tags | append . }}{{ end }}{{ end }}
+{{ $tags = $tags | uniq | sort }}
+
+<section class="section-rail howto">
+    <div class="howto-filters" id="howtoFilters">
+        <button type="button" class="chip active" data-value="*">All</button>
+        {{ range $tags }}<button type="button" class="chip" data-value="{{ . }}">{{ . }}</button>{{ end }}
+        <span class="howto-count" id="howtoCount"></span>
+    </div>
+
+    <div class="row-list" id="howtoList">
+        {{ range $items }}
+        <a class="row-list__row howto-row" href="{{ .RelPermalink }}" data-tags="{{ delimit .Params.tags "," }}">
+            <span class="howto-row__main">
+                <span class="howto-row__title">{{ .Title }}</span>
+                <span class="howto-row__desc">{{ .Params.description }}</span>
+            </span>
+            <span class="howto-row__tags">
+                {{ range .Params.tags }}<span class="howto-tag">{{ . }}</span>{{ end }}
+            </span>
+        </a>
+        {{ end }}
+    </div>
+
+    <div class="learn-contribute howto-contribute">
+        <div>
+            <p class="learn-contribute__title">Missing one?</p>
+            <p class="learn-contribute__text">http4k is community-driven. New and updated recipes are very welcome - just follow the <a href="https://github.com/http4k/http4k/blob/master/.github/RECIPE_TEMPLATE.md">recipe template</a>.</p>
+        </div>
+        <a class="cta-btn cta-btn--primary" href="https://github.com/http4k/http4k/blob/master/.github/RECIPE_TEMPLATE.md">Contribute a recipe</a>
+    </div>
+</section>
+
+<script>
+(function () {
+    var count = document.getElementById("howtoCount");
+    var filters = document.getElementById("howtoFilters");
+    var rows = Array.prototype.slice.call(document.querySelectorAll(".howto-row"));
+    var total = rows.length;
+    function apply(tag) {
+        var shown = 0;
+        rows.forEach(function (row) {
+            var tags = (row.getAttribute("data-tags") || "").split(",");
+            var ok = tag === "*" || tags.indexOf(tag) >= 0;
+            row.style.display = ok ? "" : "none";
+            if (ok) shown++;
+        });
+        count.textContent = shown === total ? (total + " recipes") : (shown + " of " + total);
+    }
+    filters.querySelectorAll(".chip").forEach(function (chip) {
+        chip.addEventListener("click", function () {
+            filters.querySelectorAll(".chip").forEach(function (c) { c.classList.remove("active"); });
+            chip.classList.add("active");
+            apply(chip.getAttribute("data-value"));
+        });
+    });
+    apply("*");
+})();
+</script>
 
 {{ end }}

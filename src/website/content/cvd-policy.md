@@ -1,4 +1,5 @@
 ---
+eyebrow: security
 title: Coordinated Vulnerability Disclosure Policy
 description: How to report security vulnerabilities in http4k products and what to expect from us
 aliases: /security-policy

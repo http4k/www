@@ -1,0 +1,42 @@
+<section class="section">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+                <div class="section-head">
+                    <div class="eyebrow">// SUPPLY CHAIN SECURITY</div>
+                    <h2>From Sept 2026, "trust us" stops being a valid answer.</h2>
+                    <p class="section-lede">The EU Cyber Resilience Act will demand verifiable provenance and
+                        machine-readable SBOMs for everything shipped into Europe. http4k delivers it today -
+                        every artifact ships with SLSA L2 provenance, CycloneDX SBOMs, signed licence reports and
+                        cosign signatures.</p>
+                </div>
+                <ul class="check-list my-4">
+                    <li>Cryptographically linked to source commit &amp; CI run</li>
+                    <li>Machine-readable SBOMs for every module</li>
+                    <li>Signed, audit-ready licence reports</li>
+                </ul>
+                <a class="btn btn-secondary btn-lg" href="https://verify.http4k.org"><b>Explore http4k Verify →</b></a>
+            </div>
+            <div class="col-lg-7">
+                <div class="code-card">
+                    <div class="code-card__bar">
+                        <span class="code-card__dot code-card__dot--r"></span>
+                        <span class="code-card__dot code-card__dot--y"></span>
+                        <span class="code-card__dot code-card__dot--g"></span>
+                        <span class="code-card__file">build · http4k Verify</span>
+                    </div>
+                    <div class="code-card__body"><pre><span class="tok-str">$</span> ./gradlew build
+
+<span class="tok-key">&gt; Task :verifyHttp4kArtifacts</span>
+<span class="tok-ok">✓</span> http4k-core            <span class="tok-com">sig · sbom · slsa-L2</span>
+<span class="tok-ok">✓</span> http4k-pro-failsafe    <span class="tok-com">sig · sbom · slsa-L2</span>
+<span class="tok-ok">✓</span> http4k-connect-amazon  <span class="tok-com">sig · sbom · slsa-L2</span>
+<span class="tok-ok">✓</span> all artifacts verified · 0 issues
+<span class="tok-com">  attestation → build/http4k-verify.json</span>
+
+<span class="tok-ok">BUILD SUCCESSFUL</span> <span class="tok-com">in 6s</span> <span class="code-cursor"></span></pre></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -62,7 +62,7 @@ function initCopyButtons() {
 }
 
 // Run now if the DOM is already parsed (external script can execute after
-// DOMContentLoaded has fired), else wait — mirrors jQuery's $(document).ready.
+// DOMContentLoaded has fired), else wait - mirrors jQuery's $(document).ready.
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initCopyButtons);
 } else {

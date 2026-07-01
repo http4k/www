@@ -1,0 +1,44 @@
+<section class="section">
+    <div class="container">
+        <div class="section-head mb-5">
+            <h2>Battle-tested where it actually matters.</h2>
+            <p class="section-lede">Not a side project. http4k runs high-volume systems in banking, publishing and
+                government - and has done for the better part of a decade.</p>
+        </div>
+
+        <div class="mosaic receipts-grid mb-4">
+            {{ range site.Data.receipts }}
+            <div class="receipt-tile">
+                <div class="receipt-tile__num">{{ .value }}</div>
+                <div class="receipt-tile__label">{{ .label }}</div>
+            </div>
+            {{ end }}
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="cve-card">
+                    <div class="cve-card__kick">RADICAL TRANSPARENCY</div>
+                    <p class="cve-card__lead">Our first-ever CVE was a juicy 9.8. We disclosed it publicly the same
+                        day - because that's what you actually do.</p>
+                    <p class="cve-card__body">We publish our security homework in the open: CVD policy, signed
+                        advisories, public signing keys. The big vendors quietly hope you don't ask. We'd rather just
+                        show you.</p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="partners-card">
+                    <div class="partners-card__kick">BACKED &amp; TRUSTED BY</div>
+                    <div class="partners-card__logos">
+                        {{ range .Site.Data.sponsors }}
+                        <a href="{{ .url }}"><img src="{{ .logo }}" alt="{{ .name }}"/></a>
+                        {{ end }}
+                    </div>
+                    <p class="partners-card__note">Corporate partners funding continued innovation on the project.
+                        Using http4k and want to take part?
+                        <a href="mailto:info@http4k.org?subject=Corporate Sponsorship">Get in touch</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

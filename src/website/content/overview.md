@@ -1,5 +1,7 @@
 ---
+eyebrow: learn
 title: Overview
+type: overview
 description: Overview of why we created http4k, the problems it solves, and the core concepts
 ---
 

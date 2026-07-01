@@ -1,29 +1,49 @@
 ---
 title: Consulting
-description: We can help you get the most out of http4k, whether you're just starting out or looking to scale up.
-type: solutions
+type: consulting
+tagline: "Stuck? Talk to the people who wrote the library."
+description: "No-one knows http4k better than its creators. Whether you're just starting out or scaling to the moon, we offer tailored guidance and support at every stage of your journey through the ecosystem."
 email: consulting@http4k.org
 highlights:
-    - title: Custom consulting from the experts
-      description: No-one knows http4k better than the people who built it. Get tailored advice and support from the creators of http4k.
+    - title: Straight from the creators
+      description: Tailored advice and support from the two engineers who built http4k - not a reseller reading from a runbook.
       icon: "/images/supportive.svg"
-    - title: System architecture and design review
-      description: Get expert advice on how to structure your applications for maximum performance and maintainability.
+    - title: Architecture & design review
+      description: Expert eyes on how you've structured things - for maximum performance, testability and long-term maintainability.
       icon: "/images/testability.svg"
-    - title: Troubleshooting and debugging
-      description: If you're having problems with your http4k application, we can help you get to the bottom of it.
+    - title: Troubleshooting & debugging
+      description: Hit a wall with your http4k app? We'll help you get to the bottom of it - fast - and leave your team wiser for it.
       icon: "/images/faq.svg"
+services_intro: "Plenty of organisations happily run open-source http4k - but gain real peace of mind from a direct line to the people who make it. Pick what you need; engagements are shaped around your team."
+services:
+    - title: System architecture & design review
+      description: A deep look at how your applications are structured, with concrete recommendations for performance and maintainability.
+    - title: Testing strategy & implementation review
+      description: Make the most of http4k's test-first design - from in-memory testing through to CI strategy.
+    - title: Developer & team mentoring
+      description: Project-level mentoring that levels up your engineers while shipping real work.
+    - title: Troubleshooting & debugging
+      description: Focused help getting to the bottom of integration issues and gnarly bugs.
+    - title: Kotlin language training
+      description: Developer training in idiomatic Kotlin, tuned to how http4k likes to be written.
+    - title: Custom builds & extensions
+      description: Advice on extending http4k or creating custom builds for your organisation's needs.
+steps:
+    - title: Tell us what's up
+      description: Drop us a line describing your stack, your goal, and where it hurts. We'll reply as ourselves, not a bot.
+    - title: Scope it together
+      description: A short call to agree what good looks like - a one-off review, a mentoring block, or ongoing support.
+    - title: Get unstuck
+      description: We dig in alongside your team - and leave them more capable than we found them.
+crosslinks:
+    - kick: Training
+      title: Hands-on team training
+      description: Level your team up with hands-on http4k and Kotlin training, delivered by the creators.
+      linkText: Meet the team
+      linkHref: /company/
+    - kick: Enterprise
+      title: Need ongoing support & LTS?
+      description: Enterprise Edition bundles priority support, LTS and supply-chain security into one subscription.
+      linkText: Explore Enterprise
+      linkHref: /enterprise/
 ---
-
-Unlock the full potential of your applications with consulting services directly from the architects of **http4k**. We provide tailored guidance and support at every stage of your journey through the http4k ecosystem.
-
-We recognise that although organisations use happily Open Source Software such as http4k, they may gain additional peace of mind from having direct access to expert advice. For this purpose, the project creators offer a range of professional services to support http4k users in making the most of the powerful feature set which http4k provides, including:
-
-- **System architecture** and design review
-- **Testing** strategy and implementation review
-- Project-level Developer and **Team mentoring**
-- **Troubleshooting** integration issues and debugging
-- Kotlin **language** Developer training
-- Advice on extending or creating **custom builds** of http4k
-
-If your organisation is interested in getting support or consulting on this basis, please get in touch.

@@ -89,4 +89,3 @@ The `http4k-ai-mcp-testing` module provides `testMcpClient()` - an in-memory MCP
 | `mcp()`             | Composes identity + security + capabilities         |
 | `testMcpClient()`   | In-memory test client - full protocol, no network   |
 
-Next: [Build an MCP App](/tutorial/build_a_simple_mcp_app/)

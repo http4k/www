@@ -1,5 +1,6 @@
 ---
 title: "Preview: http4k v6 and beyond! Introducing Enterprise Edition and Long-Term Support"
+category: "Releases"
 description:  There's a new major http4k release coming up! We're ready to announce the next chapter in the http4k ecosystem, including the introduction of the http4k Enterprise Edition (EE) subscription.
 date: 2024-12-03
 ---
@@ -12,7 +13,7 @@ date: 2024-12-03
 
 #### A brief history of time
 
-From its inception over seven years ago, http4k has been increasingly adopted by teams looking to leverage its powerful simplicity, focus on testability and uncompromised stability in their projects. That now translates to over two million monthly downloads. With over 150 modules, http4k has continued to grow steadily and to have some of the most flexible support and integrations available in the Kotlin ecosystem, all backed up by rock-solid test suites and our trademark lightweight approach.
+From its inception over seven years ago, http4k has been increasingly adopted by teams looking to leverage its powerful simplicity, focus on testability and uncompromised stability in their projects. That now translates to over two million monthly downloads. With over 200 modules, http4k has continued to grow steadily and to have some of the most flexible support and integrations available in the Kotlin ecosystem, all backed up by rock-solid test suites and our trademark lightweight approach.
 
 As the JVM and Kotlin ecosystems evolve, we’re committed to taking advantage of the latest features of the underlying platforms, while continuing to provide the best level of support for teams working on all versions.
 

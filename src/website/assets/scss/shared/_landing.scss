@@ -1,0 +1,83 @@
+// Landing hero shell - the ink pipes header used by landing/baseof.html and
+// product/baseof.html. (The old homepage section classes that lived here have
+// been removed; the homepage renders via partials/home/* on .section-rail.)
+
+body {
+    text-align: left;
+}
+
+.landing {
+    min-height: 480px;
+    padding-bottom: 100px;
+    position: relative;
+    // clip horizontal glow/pipes bleed (the glow sits at right:-100px) so it
+    // can't create page-wide horizontal scroll; vertical stays visible so nav
+    // dropdowns and the top bleed are unaffected.
+    overflow-x: clip;
+}
+
+.landing-bg {
+    position: absolute;
+    inset: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    background: url("/images/pipes-hero.svg"), var(--blue-strong);
+    background-size: cover, 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    z-index: 0;
+}
+
+.landing h1 {
+    padding-top: 40px;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+// hero nav - grey links, white on hover (unify dropdowns + the github icon)
+.landing .navbar .nav-link,
+.landing .navbar .nav-link:visited {
+    color: var(--text-on-ink-2) !important;
+}
+
+.landing .navbar .nav-link:hover,
+.landing .navbar .nav-link:focus {
+    color: #fff !important;
+}
+
+.landing .navbar img[alt="github"] {
+    opacity: 0.68;
+    transition: opacity var(--transition-fast);
+}
+
+.landing .navbar .nav-link:hover img[alt="github"] {
+    opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+    .landing-bg {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+    }
+}
+
+.landing > *:not(.landing-bg):not(.navbar):not(.ink-hero__glow) {
+    position: relative;
+    z-index: 1;
+}
+
+.landing > .navbar {
+    position: relative;
+    z-index: 1030;
+}
+
+.landing .overlay {
+    background-image: none;
+}
+
+@media (min-width: 768px) {
+    .landing p {
+        padding: 0;
+    }
+}
+

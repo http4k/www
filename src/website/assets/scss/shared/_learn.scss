@@ -1,0 +1,57 @@
+.learn-section { padding-block: 0 40px; max-width: 1000px; }
+
+// Diataxis diagram card
+.diataxis-intro { font-size: var(--fs-lead); line-height: 1.6; color: var(--text-muted); margin: 0 0 28px; max-width: var(--lede); }
+.diataxis { border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 30px; background: #f8fafd; }
+.diataxis img { display: block; width: 100%; height: auto; max-width: 760px; margin: 0 auto; }
+.diataxis-note { font-size: 0.875rem; line-height: 1.6; color: var(--text-faint); margin: 16px 0 40px; }
+
+// Four signpost cards
+.signposts { display: flex; flex-direction: column; gap: 16px; }
+
+.signpost {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 30px 32px;
+    text-decoration: none;
+    transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.signpost:hover { border-color: var(--blue-strong); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+
+.signpost__rail { flex: 0 0 190px; display: flex; flex-direction: column; border-right: 1px solid #eef2f7; padding-right: 26px; }
+.signpost__title { font-size: 1.25rem; font-weight: 700; line-height: 1.18; color: var(--ink); }
+.signpost__mode { margin-top: auto; padding-top: 18px; font-family: var(--font-mono); font-size: 11px; color: var(--text-faint); }
+
+.signpost__body { flex: 1; min-width: 0; }
+.signpost__body p { font-size: 1rem; line-height: 1.65; color: #26323f; margin: 0 0 16px; }
+.signpost__more { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue-strong); }
+
+// Contribute strip
+.learn-contribute {
+    margin-top: 40px;
+    margin-bottom: var(--section-py);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 30px;
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 32px 36px;
+}
+
+.learn-contribute > div { flex: 1 1 auto; min-width: 0; }
+.learn-contribute__title { font-size: 1.2rem; font-weight: 700; color: var(--ink); margin: 0 0 6px; }
+.learn-contribute__text { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
+.learn-contribute__text a { color: var(--blue-dark); }
+
+@media (max-width: 767.98px) {
+    .signpost { flex-direction: column; gap: 18px; }
+    .signpost__rail { flex-basis: auto; border-right: 0; border-bottom: 1px solid #eef2f7; padding-right: 0; padding-bottom: 16px; }
+    .signpost__mode { margin-top: 0; padding-top: 12px; }
+}

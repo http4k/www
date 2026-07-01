@@ -1,0 +1,58 @@
+<section class="section">
+    <div class="container">
+        <div class="section-head mb-4">
+            <div class="eyebrow">// MORE THAN A CORE</div>
+            <h2>There's a lot going on around here.</h2>
+        </div>
+
+        <div class="spotlight__tabs" id="spotlightTabs">
+            {{ range $i, $t := .Site.Data.spotlight }}
+            <button type="button" class="chip{{ if eq $i 0 }} active{{ end }}" data-index="{{ $i }}">{{ $t.tab }}</button>
+            {{ end }}
+        </div>
+
+        <div class="spotlight__panels">
+            {{ range $i, $t := .Site.Data.spotlight }}
+            <div class="spotlight__panel{{ if eq $i 0 }} is-active{{ end }}" data-index="{{ $i }}">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="spotlight__kick">{{ $t.eyebrow }}</div>
+                        <h3 class="spotlight__title">{{ $t.title }}</h3>
+                        <p class="spotlight__body">{{ $t.body }}</p>
+                        <a class="spotlight__link" href="{{ $t.link.url }}">{{ $t.link.text }} &rarr;</a>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="code-card">
+                            <div class="code-card__bar">
+                                <span class="code-card__dot code-card__dot--r"></span>
+                                <span class="code-card__dot code-card__dot--y"></span>
+                                <span class="code-card__dot code-card__dot--g"></span>
+                                <span class="code-card__file">{{ $t.card.title }}</span>
+                            </div>
+                            <div class="code-card__body"><pre>{{ range $t.card.lines }}{{ if eq .tone "ok" }}<span class="tok-ok">✓ {{ .text }}</span>{{ else if eq .tone "dim" }}<span class="tok-com">{{ .text }}</span>{{ else if eq .tone "str" }}<span class="tok-str">{{ .text }}</span>{{ else }}{{ .text }}{{ end }}
+{{ end }}</pre></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<script>
+(function () {
+    var tabs = document.getElementById("spotlightTabs");
+    if (!tabs) return;
+    var chips = tabs.querySelectorAll(".chip");
+    var panels = document.querySelectorAll(".spotlight__panel");
+    chips.forEach(function (c) {
+        c.addEventListener("click", function () {
+            var i = c.getAttribute("data-index");
+            chips.forEach(function (x) { x.classList.remove("active"); });
+            c.classList.add("active");
+            panels.forEach(function (p) { p.classList.toggle("is-active", p.getAttribute("data-index") === i); });
+        });
+    });
+})();
+</script>

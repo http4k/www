@@ -1,5 +1,6 @@
 ---
 title: "http4k v6: Still the most testable web toolkit on the planet!*"
+category: "Releases"
 description: http4k v6 has landed! Discover the groundbreaking features we've packed into our most powerful release yet.
 date: 2025-02-01
 image: takeoff.png

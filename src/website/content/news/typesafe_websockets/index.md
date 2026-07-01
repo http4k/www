@@ -1,5 +1,6 @@
 ---
 title: Websockets. But typesafe. And testable. Without the Server.
+category: "Ecosystem"
 description: An overview of typesafe Websocket support in http4k
 date: 2017-12-01
 image: logo.png

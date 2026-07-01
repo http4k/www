@@ -23,4 +23,3 @@ documentation, and checking in a high-level way that the business endpoints are 
 
 {{< kotlin file="project.kt" >}}
 
-Next: [Part 2: Adding an endpoint](/tutorial/tdding_http4k/part2/)

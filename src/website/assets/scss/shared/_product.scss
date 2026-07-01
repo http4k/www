@@ -1,0 +1,70 @@
+// Product microsites (_sites/*) - fits the Wiretap comp onto product/baseof.html. ASCII only.
+
+.product-hero { color: var(--text-on-ink); }
+.product-hero__inner { padding-block: 30px 60px; }
+.product-hero__badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.product-hero__kicker { font-family: var(--font-mono); font-size: var(--fs-sm); letter-spacing: 0.16em; color: var(--blue); align-self: center; }
+.product-hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+
+
+.product-hero .navbar { padding: 18px 0; }
+.product-hero .navbar-brand img { filter: brightness(0) invert(1); }
+.product-hero .navbar .nav-link { color: var(--text-on-ink-muted) !important; font-size: var(--fs-ui); font-weight: 500; }
+.product-hero .navbar .nav-link:hover { color: #fff !important; }
+
+.product-features { background: var(--off-white); }
+.product-features .section-rail { padding-bottom: var(--section-py); }
+.product-feature-grid { gap: 18px; }
+.product-feature { border-radius: var(--radius-lg); padding: 26px 24px; }
+.product-feature__dash { width: 40px; height: 3px; border-radius: var(--radius-sm); margin: 12px 0; background: var(--blue-strong); }
+.product-feature img { width: 40px; height: 40px; margin-bottom: 6px; }
+.product-feature h4 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin: 0; line-height: 1.25; }
+.product-feature p { font-size: 0.9rem; line-height: 1.55; color: var(--text-muted); margin: 0; }
+
+.product-howto + .product-howto { margin-top: 24px; }
+.product-howto__title { font-size: var(--fs-h2); font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 28px; }
+.product-steps { gap: 28px; }
+.product-step p { font-size: 1rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 14px; }
+.product-step img { width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); }
+.product-howto__cta { margin-top: 28px; display: flex; align-items: center; gap: 20px; justify-content: center; background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 28px; }
+.product-howto__cta img { height: 56px; }
+.product-howto__cta p { margin: 0; font-size: 1.1rem; line-height: 1.5; color: var(--ink); }
+.product-large-image { display: flex; justify-content: center; margin-top: 28px; }
+.product-large-image img { max-width: 70%; border-radius: var(--radius-lg); border: 1px solid var(--border); }
+
+.product-showcase__group + .product-showcase__group { margin-top: 48px; }
+.product-showcase__title { text-align: center; font-size: var(--fs-h3); font-weight: 700; color: var(--ink); margin: 0 0 20px; }
+.product-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 20px; } // tab pills reuse .chip (_lists.scss)
+.product-shot { display: none; }
+.product-shot.active { display: block; }
+.product-shot img { width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow); }
+
+.product-pricing { max-width: 1000px; margin: 0 auto; padding: 80px 36px; text-align: center; }
+.product-license { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0 auto 36px; max-width: 640px; }
+.product-license a { color: var(--blue-dark); }
+.product-stripe { margin: 0 auto; }
+.product-pricing__foot { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 36px auto 0; max-width: var(--lede); }
+.product-pricing__foot a { color: var(--blue-dark); }
+
+.product-logos { display: grid; grid-template-columns: repeat(6, 1fr); gap: 28px 24px; align-items: center; justify-items: center; max-width: 920px; margin: 0 auto; }
+.product-logos img { max-width: 100%; max-height: 46px; object-fit: contain; }
+
+.product-subscribe { max-width: 700px; margin: 0 auto; padding: 80px 36px; text-align: center; }
+.product-subscribe h2 { font-size: var(--fs-h2); font-weight: 700; color: var(--ink); margin: 0 0 12px; }
+.product-subscribe p { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 20px; }
+.product-subscribe p a { color: var(--blue-dark); }
+
+.download-stack__panel { display: flex; flex-direction: column; align-items: center; padding: 40px 32px; text-align: center; background: var(--paper); border: 1px solid var(--border); box-shadow: var(--shadow); border-radius: var(--radius-lg); }
+.download-stack__form { display: none; } // ponytail: email signup parked - show the download by default
+.download-stack__icon { font-size: 3rem; line-height: 1; margin-bottom: 16px; animation: download-stack-pop 0.6s ease-out; }
+@keyframes download-stack-pop { 0% { transform: scale(0); opacity: 0; } 60% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); } }
+.download-stack__panel h2 { margin-bottom: 12px; }
+.download-stack__lead { max-width: 520px; margin-bottom: 12px; font-size: 1rem; line-height: 1.5; }
+.download-stack[data-state="downloaded"] .download-stack__panel { display: flex; }
+.download-stack[data-state="downloaded"] .download-stack__form { display: none; }
+
+@media (max-width: 767.98px) {
+    .product-hero__inner { padding-block: 20px 50px; }
+    .product-large-image img { max-width: 100%; }
+    .product-pricing, .product-subscribe { padding: 56px 24px; }
+}

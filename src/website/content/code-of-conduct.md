@@ -1,4 +1,5 @@
 ---
+eyebrow: legal
 title: Contributor Covenant Code of Conduct
 description: Our Pledge, Our Standards, Enforcement Responsibilities, Scope, Enforcement, Enforcement Guidelines, Attribution
 ---

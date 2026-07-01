@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+{{ partial "shared/page-hero.html" (dict
+    "eyebrow" "// CONSULTING"
+    "title" .Params.tagline
+    "lede" .Params.description
+    "buttons" (slice
+        (dict "label" "Book a conversation" "href" (printf "mailto:%s" .Params.email))
+        (dict "label" "What we help with &rarr;" "href" "#services" "ghost" true))) }}
+
+{{ with .Params.highlights }}
+<section class="section-rail">
+    {{ partial "shared/highlight.html" . }}
+</section>
+{{ end }}
+
+<section class="section-rail" id="services">
+    <div class="row g-4 g-lg-5">
+        <div class="col-lg-5">
+            <div class="section-head mb-0">
+                <div class="eyebrow">// HOW WE CAN HELP</div>
+                <h2 class="section-h2">Professional services, across the whole journey.</h2>
+                <p class="section-lede">{{ .Params.services_intro }}</p>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="ui-card svc-list">
+                {{ range $i, $s := .Params.services }}
+                <div class="svc-item">
+                    <span class="svc-num">{{ printf "%02d" (add $i 1) }}</span>
+                    <div>
+                        <h3 class="svc-title">{{ $s.title }}</h3>
+                        <p class="svc-desc">{{ $s.description | markdownify }}</p>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-rail">
+    <div class="hiw">
+        <div class="section-head">
+            <div class="eyebrow">// HOW IT WORKS</div>
+            <h2 class="section-h2">No lengthy sales cycle. Just a conversation.</h2>
+        </div>
+        <div class="card-grid card-grid--3">
+            {{ range $i, $s := .Params.steps }}
+            <div class="hiw-step">
+                <span class="hiw-num">{{ printf "%02d" (add $i 1) }}</span>
+                <h3 class="hiw-title">{{ $s.title }}</h3>
+                <p class="hiw-desc">{{ $s.description | markdownify }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ with .Params.crosslinks }}{{ partial "shared/crosslinks.html" . }}{{ end }}
+
+{{ partial "shared/cta-band.html" (dict
+    "title" "Let's get you unstuck."
+    "text" "Tell us what you're building and where it hurts. We'll come back to you - as ourselves - to figure out how we can help."
+    "primaryLabel" .Params.email
+    "primaryHref" (printf "mailto:%s" .Params.email)
+    "secondaryLabel" "Find us on Slack"
+    "secondaryHref" "https://kotlinlang.slack.com/archives/C5AL3AKUY") }}
+
+{{ end }}

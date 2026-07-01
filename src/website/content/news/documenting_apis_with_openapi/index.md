@@ -1,5 +1,6 @@
 ---
 title: Documenting http4k APIs with OpenApi3
+category: "Ecosystem"
 description: An overview of the OpenApi3 support available in the http4k library.
 date: 2019-05-01
 image: openapi.png

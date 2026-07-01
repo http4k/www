@@ -6,12 +6,11 @@
 {{- $sharedJS := resources.Get "js/shared/shared.js" -}}
 {{- $sharedJS := $sharedJS | js.Build (dict "minify" "true") -}}
 
-<style type="text/css" media="all">{{ $sharedSCSS.Content | safeCSS }}</style>
+<style type="text/css" media="all">{{ $sharedSCSS.Content | strings.TrimPrefix "\ufeff" | safeCSS }}</style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
 
 <script>{{- $sharedJS.Content | safeJS -}}</script>
 <script src="/js/timeline.js"></script>
-<script src="/js/animations.js"></script>
 
 

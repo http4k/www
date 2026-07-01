@@ -7,36 +7,53 @@ body {
     font-family: var(--font-sans);
 }
 
-.text-logo {
-    color: var(--blue);
-    font-family: var(--font-sans);
-    font-weight: 800;
-    font-style: normal;
+/* Global header (non-hero pages) - white frosted sticky bar (docs comp).
+   Homepage keeps its own dark hero nav via landing/baseof. */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
 }
 
-.text-highlight {
-    color: var(--blue-dark);
-    font-weight: 600;
+/* light nav variant on the white header (overrides Bootstrap navbar-dark) */
+.site-header .navbar {
+    --bs-navbar-color: #43505f;
+    --bs-navbar-hover-color: var(--docs-link);
+    --bs-navbar-active-color: var(--docs-link);
+    --bs-navbar-brand-color: var(--ink);
+    --bs-navbar-brand-hover-color: var(--ink);
+    --bs-navbar-toggler-border-color: var(--border);
 }
 
-.icon-primary,
-.icon-secondary {
-    color: var(--blue);
+/* this Bootstrap (5.1) paints the toggler icon via a direct
+   .navbar-dark .navbar-toggler-icon background-image, not the CSS var - so
+   override the image directly (dark strokes for the white header). */
+.site-header .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2343505f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.border-primary {
-    border-color: var(--blue);
+/* nav links: partial hardcodes .text-white / .text-primary (right for the dark
+   homepage nav) - override to dark here on the white header. !important beats the utils. */
+.site-header .navbar .nav-link,
+.site-header .navbar .nav-link:visited {
+    color: #43505f !important;
 }
 
-.primary-color {
-    background-color: var(--blue);
+.site-header .navbar .nav-link:hover,
+.site-header .navbar .nav-link:focus {
+    color: var(--docs-link) !important;
 }
 
-.secondary-color {
-    background-color: var(--orange);
+/* darken the github icon for the light header (the logo uses a real coloured
+   variant instead - see .nav-logo toggle in _header.scss) */
+.site-header img[alt="github"] {
+    filter: brightness(0);
 }
 
-/* Buttons: solid, flat, no gradient/glow/lift */
 .btn-primary {
     color: #fff;
     background-color: var(--blue-strong) !important;
@@ -65,37 +82,14 @@ body {
     border-color: var(--orange-strong) !important;
 }
 
-.cards {
-    justify-content: center;
-}
-
-.text-justify {
-    text-align: justify;
-}
-
-.thumbnail-border-radius {
-    border-radius: var(--radius-lg);
-}
-
 .py-5 {
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
 }
 
-.pb-5 {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-}
-
 .d-flex {
-    flex-wrap: nowrap !important; /* Prevent wrapping */
+    flex-wrap: nowrap !important;
     align-items: center;
-}
-
-.no-links a {
-    text-decoration: none;
-    color: inherit;
-    pointer-events: none;
 }
 
 .layout {
@@ -118,35 +112,6 @@ body {
     }
 }
 
-@media (min-width: 600.98px) {
-    .headshot-card {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    .headshot {
-        border-radius: 34px;
-        width: 20rem;
-        height: 20rem;
-        object-fit: cover;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 600.98px) {
-    .headshot {
-        border-radius: 34px;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-.sidebar {
-    flex: 1;
-    padding: 20px;
-    background-color: var(--off-white);
-}
-
 .imageMid {
     display: block;
     margin-left: auto;
@@ -163,65 +128,6 @@ body {
     height: auto;
 }
 
-section.contact-map {
-    width: 100%;
-}
-
-section.contact-map div.map {
-    position: relative;
-    aspect-ratio: 2.25;
-    width: 100%;
-    background-position: center calc(50% + 2rem);
-    background-repeat: repeat;
-    background-size: cover;
-    padding: 3rem 0;
-    border-radius: 0;
-}
-
-section.contact-map div.map::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: url('/images/marker.svg') center center / auto 4rem no-repeat;
-    left: 0;
-    top: 0;
-    position: absolute;
-    display: block;
-    filter: contrast(0.7) sepia(1) hue-rotate(160deg) !important;
-}
-
-section.contact-map .overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0);
-}
-
-section.contact-map div.map > .container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-section.contact-map div.map > .container > div {
-    background: white;
-    padding: 2.5rem 3rem;
-    border-radius: var(--radius-lg);
-    position: relative;
-    z-index: 2;
-    min-width: 22rem;
-    box-shadow: var(--shadow);
-}
-
-@media (max-width: 55rem) {
-    section.contact-map div.map > .container {
-        justify-content: center;
-    }
-}
-
-/* Footer: flat ink, no gradient, no pipes overlay */
 footer {
     background: var(--ink);
     padding-bottom: 85px;
@@ -246,11 +152,6 @@ a {
     padding: 10px;
 }
 
-.github {
-    display: none;
-}
-
-/* Cards: hairline border, flat surface, no hover-lift */
 .card-shadow {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
@@ -259,27 +160,6 @@ a {
     margin-bottom: 44px;
     background-color: var(--paper);
     height: 100%;
-}
-
-.card-shadow.cta-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-shadow.cta-card > .container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.card-shadow.cta-card > .container > .row.px-4 {
-    margin-top: auto;
-    padding-top: 1rem;
-    padding-bottom: 10px;
-}
-
-.card-shadow.cta-card p {
-    margin-bottom: 0;
 }
 
 .card-shadow img {
@@ -294,58 +174,11 @@ a {
     margin-bottom: 2rem;
 }
 
-.card-shadow .see-more {
-    text-align: right;
-}
-
-.card-shadow .see-more a {
-    color: var(--text);
-}
-
-.grey-color {
-    color: var(--text-on-ink);
-    margin-top: 60px;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    background-color: var(--ink);
-}
-
-.newEcosystem .no-side {
-    transform: translate(-320px);
-    width: 0;
-}
-
-.newEcosystem .aside {
-    background-color: var(--off-white);
-    padding: 20px;
-    height: auto;
-    overflow: scroll;
-    width: 320px;
-    transition: width 0.3s ease-in-out;
-    will-change: width;
-}
-
-@media (max-width: 1199.98px) {
-    .newEcosystem .aside {
-        padding: 40px 15px;
-        width: 220px;
-        transform: translate(-220px);
-        position: absolute;
-        left: 0;
-        z-index: 99;
-        box-shadow: var(--shadow);
-    }
-
-    .newEcosystem .no-side {
-        width: auto;
-        transform: translate(0px);
-    }
-}
-
-@media (min-width: 1199.98px) {
-    .newEcosystem .sideToggle {
-        display: none;
-    }
+.card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background-color: var(--paper);
+    box-shadow: var(--shadow);
 }
 
 @media (max-width: 1199.98px) {
@@ -423,7 +256,7 @@ a {
 .timeline-bar {
     position: absolute;
     height: 100%;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     z-index: 10;
 }
 
@@ -499,7 +332,7 @@ a {
 .legend-color {
     width: 20px;
     height: 20px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
 }
 
 .legend-current-date {
@@ -514,14 +347,6 @@ a {
     color: var(--text-muted);
 }
 
-.text-success {
-    color: var(--green);
-}
-
-.text-danger {
-    color: #dc3545;
-}
-
 .text-center {
     text-align: center;
 }
@@ -531,18 +356,6 @@ a {
     background: var(--orange) !important;
 }
 
-/* Feature icon container: flat, hairline */
-.icon-box {
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius);
-    background: var(--blue-wash);
-}
-
-/* Navbar / dropdown: restrained */
 .navbar {
     transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -565,7 +378,6 @@ a {
     color: var(--blue-dark);
 }
 
-/* Restrained motion only */
 html {
     scroll-behavior: smooth;
 }
@@ -588,9 +400,6 @@ html {
     }
 }
 
-/* ========================================
-   Content (page-content) styling
-   ======================================== */
 
 .page-content .highlight {
     border-radius: var(--radius);
@@ -610,7 +419,7 @@ html {
     background-color: var(--blue-wash);
     color: var(--blue-dark);
     padding: 0.15rem 0.4rem;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-size: 0.9em;
     font-family: var(--font-mono);
 }
@@ -621,7 +430,6 @@ html {
     color: inherit;
 }
 
-/* Tables: hairline, flat header */
 table {
     border-collapse: collapse;
 }
@@ -737,7 +545,6 @@ table {
     margin: 2rem 0;
 }
 
-/* Code example shortcode wrapper */
 .code-example {
     margin: 1.5rem 0;
     border: 1px solid var(--border);

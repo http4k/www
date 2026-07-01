@@ -1,0 +1,23 @@
+{{- $attr := .attr -}}
+<div class="filter-chips" data-filter="{{ $attr }}">
+  <button type="button" class="chip active" data-value="*">All</button>
+  {{- range .items }}<button type="button" class="chip" data-value="{{ . }}">{{ . }}</button>{{ end }}
+</div>
+<script>
+(function () {
+  document.querySelectorAll(".filter-chips").forEach(function (group) {
+    var attr = group.getAttribute("data-filter");
+    group.querySelectorAll(".chip").forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        group.querySelectorAll(".chip").forEach(function (c) { c.classList.remove("active"); });
+        chip.classList.add("active");
+        var v = chip.getAttribute("data-value");
+        document.querySelectorAll(".article-card[data-" + attr + "]").forEach(function (card) {
+          var vals = (card.getAttribute("data-" + attr) || "").split(",").map(function (s) { return s.trim(); });
+          card.style.display = (v === "*" || vals.indexOf(v) >= 0) ? "" : "none";
+        });
+      });
+    });
+  });
+})();
+</script>
