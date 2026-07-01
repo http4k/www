@@ -1,0 +1,33 @@
+// /performance/ page: TechEmpower results bar panels.
+.bench-panel { padding: 32px 36px; }
+.bench-panel + .bench-panel { margin-top: 20px; }
+.bench-composite { background: var(--off-white); }
+
+.bench-panel__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.bench-panel__head h3 { font-size: 1.3rem; font-weight: 700; color: var(--ink); margin: 0 0 4px; }
+.bench-panel__head p { font-size: 0.95rem; color: var(--text-muted); margin: 0; }
+.bench-panel__link { font-family: var(--font-mono); font-size: var(--fs-sm); font-weight: 600; color: var(--blue-strong); text-decoration: none; white-space: nowrap; }
+.bench-panel__link:hover { text-decoration: underline; }
+.bench-panel__note { font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--text-faint); white-space: nowrap; }
+
+.bench-row { display: flex; align-items: center; gap: 20px; padding: 8px 0; text-decoration: none; }
+.bench-row--link:hover .bench-fill { filter: brightness(1.06); }
+.bench-row__label { flex: 0 0 190px; font-size: 0.95rem; color: var(--text); }
+.bench-row__rank { flex: 0 0 58px; text-align: right; font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--text-muted); }
+.bench-track { flex: 1; height: 30px; background: var(--off-white); border-radius: var(--radius-sm); overflow: hidden; }
+.bench-composite .bench-track { background: #fff; }
+.bench-fill { height: 100%; min-width: 2px; background: var(--blue-strong); border-radius: var(--radius-sm); display: flex; align-items: center; }
+.bench-fill--muted { background: #98a6b6; }
+.bench-fill--hero { background: var(--orange); color: #fff; padding-left: 14px; font-family: var(--font-mono); font-size: var(--fs-sm); font-weight: 700; }
+
+.bench-note { font-size: 0.9rem; color: var(--text-faint); margin: 22px 0 0; }
+.bench-note a { color: var(--blue-dark); }
+
+.bench-honest { margin-bottom: 22px; }
+.bench-honest .section-head, .bench-honest .section-lede { max-width: none; }
+
+@media (max-width: 767.98px) {
+    .bench-panel { padding: 24px 22px; }
+    .bench-row { gap: 12px; }
+    .bench-row__label { flex-basis: 110px; font-size: 0.85rem; }
+}

@@ -1,0 +1,103 @@
+{{ define "main" }}
+
+{{ partial "shared/page-hero.html" (dict
+    "eyebrow" "// PERFORMANCE"
+    "title" .Params.tagline
+    "lede" .Params.description
+    "stats" .Params.stats) }}
+
+<section class="section-rail">
+    <div class="row g-4 g-lg-5 align-items-start">
+        <div class="col-lg-5">
+            <div class="section-head mb-0">
+                <div class="eyebrow">// TECH EMPOWER BENCHMARKS</div>
+                <h2 class="section-h2">Measured in public, by someone else.</h2>
+                {{ range .Params.bench_intro }}<p class="section-lede">{{ . | markdownify }}</p>{{ end }}
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="code-card">
+                <div class="code-card__bar">
+                    <span class="code-card__dot code-card__dot--r"></span>
+                    <span class="code-card__dot code-card__dot--y"></span>
+                    <span class="code-card__dot code-card__dot--g"></span>
+                    <span class="code-card__file">benchmark.kt</span>
+                </div>
+                <div class="code-card__body"><pre><span class="tok-com">// one HttpHandler, every backend</span>
+<span class="tok-key">val</span> app: HttpHandler = routes(
+    <span class="tok-str">"/json"</span> bind GET to { Response(OK)
+        .with(jsonLens of Message(<span class="tok-str">"Hello"</span>)) },
+    <span class="tok-str">"/plaintext"</span> bind GET to {
+        Response(OK).body(<span class="tok-str">"Hello, World!"</span>) }
+)
+<span class="tok-com">// plug into Netty, Jetty, Apache...</span></pre></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-rail" id="results">
+    <div class="section-head">
+        <div class="eyebrow">// RESULTS - ROUND 22</div>
+        <h2 class="section-h2">Placing 48/159 overall - and top-half of the JVM pack.</h2>
+        <p class="section-lede">{{ .Params.results_intro }}</p>
+    </div>
+
+    {{ with .Params.composite }}
+    <div class="ui-card bench-panel bench-composite">
+        <div class="bench-panel__head">
+            <div>
+                <h3>Composite ranking</h3>
+                <p>The headline, all-round score across every test type.</p>
+            </div>
+            <a class="bench-panel__link" href="{{ .href }}">view data &rarr;</a>
+        </div>
+        {{ $pct := math.Round (div (mul (sub .total .rank) 100.0) .total) }}
+        <div class="bench-row">
+            <span class="bench-row__label">Top rank</span>
+            <div class="bench-track"><div class="bench-fill bench-fill--hero" style="width: {{ $pct }}%">{{ .rank }} / {{ .total }} JVM</div></div>
+            <span class="bench-row__rank">{{ .rank }}/{{ .total }}</span>
+        </div>
+    </div>
+    {{ end }}
+
+    <div class="ui-card bench-panel">
+        <div class="bench-panel__head">
+            <h3>By test type</h3>
+            <span class="bench-panel__note">top JVM rank &middot; best backend</span>
+        </div>
+        {{ range .Params.results }}
+        {{ $pct := math.Round (div (mul (sub .total .rank) 100.0) .total) }}
+        <a class="bench-row bench-row--link" href="{{ .href }}">
+            <span class="bench-row__label">{{ .label }}</span>
+            <div class="bench-track"><div class="bench-fill{{ if lt $pct 50.0 }} bench-fill--muted{{ end }}" style="width: {{ $pct }}%"></div></div>
+            <span class="bench-row__rank">{{ .rank }}/{{ .total }}</span>
+        </a>
+        {{ end }}
+        <p class="bench-note">{{ .Params.results_note | markdownify }}</p>
+    </div>
+</section>
+
+<section class="section-rail">
+    <div class="ink-panel section--ink bench-honest">
+        <div class="section-head mb-0">
+            <div class="eyebrow">// THE HONEST BIT</div>
+            <h2 class="section-h2">We optimise for developer experience first.</h2>
+            <p class="section-lede">{{ .Params.honest_para }}</p>
+        </div>
+    </div>
+    <div class="callout-orange">
+        <span class="callout-orange__lead">{{ .Params.callout_lead }}</span>
+        <span>{{ .Params.callout_text }}</span>
+    </div>
+</section>
+
+{{ partial "shared/cta-band.html" (dict
+    "title" .Params.cta_title
+    "text" .Params.cta_text
+    "primaryLabel" .Params.cta_primary_label
+    "primaryHref" .Params.cta_primary_href
+    "secondaryLabel" .Params.cta_secondary_label
+    "secondaryHref" .Params.cta_secondary_href) }}
+
+{{ end }}

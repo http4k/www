@@ -45,8 +45,9 @@
     padding: 32px 36px;
 }
 
+.learn-contribute > div { flex: 1 1 auto; min-width: 0; }
 .learn-contribute__title { font-size: 1.2rem; font-weight: 700; color: var(--ink); margin: 0 0 6px; }
-.learn-contribute__text { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0; max-width: 620px; }
+.learn-contribute__text { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
 .learn-contribute__text a { color: var(--blue-dark); }
 
 @media (max-width: 767.98px) {

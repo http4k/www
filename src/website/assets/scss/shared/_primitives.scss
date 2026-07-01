@@ -105,6 +105,11 @@
 
 .ui-card { background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius-lg); }
 
+// Dark rounded panel (training delivery, performance honest-bit). Pair with
+// .section--ink so the heading/eyebrow recolour for the dark surface.
+.ink-panel { background: var(--ink); border-radius: var(--radius-2xl); padding: 48px 44px; }
+@media (max-width: 767.98px) { .ink-panel { padding: 36px 24px; } }
+
 // 1px-seam grid: the gap reveals --border as the seam; tiles paint over it.
 .mosaic { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; }
 .mosaic > * { background: var(--paper); }

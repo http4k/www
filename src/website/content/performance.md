@@ -1,63 +1,53 @@
 ---
-eyebrow: learn
 title: Performance
-description: An overview of http4k performance
+type: performance
+tagline: "A thin layer over the metal - and it shows."
+description: "The http4k server backends are a very thin adapter over the raw server APIs, so they run at very low overhead compared to the bare server. We'll be straight with you though: our north star is developer experience, not topping a leaderboard. Happily, you rarely have to choose."
+stats:
+    - TechEmpower Round 22
+    - 13/41 JVM composite
+    - pluggable backends
+bench_intro:
+    - "http4k is entered into the [TechEmpower Framework Benchmarks](https://www.techempower.com/benchmarks/) - an independent project that runs frameworks through a series of realistic tests. No custom tuning of the underlying servers: the default app HttpHandler is plugged into each backend, exactly as you'd write it."
+    - "JVM command-line options were tuned to take advantage of JVM features. The full implementation is [public on GitHub](https://github.com/TechEmpower/FrameworkBenchmarks/tree/master/frameworks/Kotlin/http4k)."
+results_intro: "Rankings below are filtered to JVM libraries, best backend shown per test. Each links to the live TechEmpower data. Lower rank is better."
+composite:
+    rank: 13
+    total: 41
+    href: "https://www.techempower.com/benchmarks/#section=data-r22&l=xan3i3-cn3"
+results:
+    - label: DB query + HTML render
+      rank: 25
+      total: 146
+      href: "https://www.techempower.com/benchmarks/#section=data-r22&l=xan3i3-cn3"
+    - label: Multiple DB queries
+      rank: 23
+      total: 145
+      href: "https://www.techempower.com/benchmarks/#section=data-r22&l=xan3i3-cn3"
+    - label: Single DB query
+      rank: 25
+      total: 151
+      href: "https://www.techempower.com/benchmarks/#section=data-r22&l=xan3i3-cn3"
+    - label: Random DB updates
+      rank: 41
+      total: 138
+      href: "https://www.techempower.com/benchmarks/#section=data-r22&l=xan3i3-cn3"
+    - label: JSON serialization
+      rank: 59
+      total: 152
+      href: "https://www.techempower.com/benchmarks/#section=data-r22&l=xan3i3-cn3"
+    - label: Plaintext pipelining
+      rank: 84
+      total: 153
+      href: "https://www.techempower.com/benchmarks/#section=data-r22&l=xan3i3-cn3"
+results_note: "Backends & drivers vary per test (Apache, Jetty Loom, Netty; PostgreSQL / Vert.x with a Hikari pool; Rocker templating). See the [full Round 22 data](https://www.techempower.com/benchmarks/#section=data-r22&l=xan3i3-cn3)."
+honest_para: "Chasing the very top of a benchmark table tends to produce hostile, un-http4k-like APIs. We'd rather give you friendly, testable, composable code that still lands comfortably in the top half of the JVM pack. For the vast majority of real systems, http4k is nowhere near your bottleneck - your database is."
+callout_lead: "Benchmark your own app."
+callout_text: "TechEmpower simulates simple real-world scenarios, but your app can behave drastically differently. If performance is critical, try different engines with your own workload - and remember startup time varies a lot between backends too."
+cta_title: "Pick the backend, keep the code."
+cta_text: "Swap Netty for Jetty Loom for Apache with one line, and benchmark what actually matters: your app."
+cta_primary_label: "Explore the backends"
+cta_primary_href: "/howto/use_a_server_backend/"
+cta_secondary_label: "Read the ethos"
+cta_secondary_href: "/overview/"
 ---
-
-The http4k server-backend modules provide a very thin adapter layer over the raw APIs of the underlying servers, so 
-generally performs at a very low overhead compared to the raw server.
-
-### Tech Empower Benchmarks
-We have entered http4k into the prominent [Tech Empower Framework Benchmarks](https://www.techempower.com/benchmarks/) 
-project, which assesses frameworks over a series of realistic tests. 
-
-For this benchmark, no customisation or performance tuning of the underlying servers is done - the default application 
-HttpHandler is used which is then plugged into each custom backend, as below:
-
-{{< kotlin file="benchmark.kt" >}}
-
-Command-line JVM options, however, were tuned for the test to take advantage of various JVM features.
-
-The full implementation of the benchmark can be found [here](https://github.com/TechEmpower/FrameworkBenchmarks/tree/master/frameworks/Kotlin/http4k).
-
-### Results - Round 22
-Overall, http4k continues to do well in this round of benchmarking, placing 48/159 - especially considering that the [ethos](/overview/) of the library is one of excellent Developer experience over and above high-end performance (which tends to result in less friendly APIs).
-
-Rankings below are filtered for JVM libraries:
-
-#### Composite ranking: [results](https://www.techempower.com/benchmarks/#section=data-r22&hw=ph&test=composite&l=xan3h7-cn3):
-*Top rank: 13/41
-
-#### DB query + HTML rendering: [results](https://www.techempower.com/benchmarks/#section=data-r22&hw=ph&test=fortune&l=xan3h7-cn3):
-*Top rank: 25/146 - Apache backend*
-
-Database driver used is PostgreSql backed by a Hikari pool.
-Rocker templating engine used for rendering.
-
-#### Multiple DB queries: [results](https://www.techempower.com/benchmarks/#section=data-r22&hw=ph&test=query&l=xan3h7-cn3):
-*Top rank: 23/145 - Jetty Loom backend*
-
-Database driver used is Postgres Vertx Client backed by a Hikari pool.
-
-#### Single DB query: [results](https://www.techempower.com/benchmarks/#section=data-r22&hw=ph&test=db&l=xan3h7-cn3):
-*Top rank: 25/151 - Apache backend*
-
-Database driver used is PostgreSql backed by a Hikari pool.
-
-#### Random DB updates: [results](https://www.techempower.com/benchmarks/#section=data-r22&hw=ph&test=update&l=xan3h7-cn3):
-*Top rank: 41/138 - Jetty Loom backend*
-
-Database driver used is Postgres Vertx Client backed by a Hikari pool.
-
-#### JSON Serialization: [results](https://www.techempower.com/benchmarks/#section=data-r22&hw=ph&test=json&l=xan3h7-cn3):
-*Top rank: 59/152 - Netty backend*
-
-The standard Argo JSON module used for JSON creation and marshalling.
-
-#### Plaintext pipelining: [results](https://www.techempower.com/benchmarks/#section=data-r22&hw=ph&test=plaintext&l=xan3h7-cn3):
-*Top rank: 84/153 - Netty backend*
-
-### Recommendations
-Benchmark your own app's performance trying different engines if performance is critical.  The Tech Empower benchmarks attempt to simulate simple real-world scenarios, but they can behave drastically different than your app.  One other consideration is test time; some engines start up much faster than others.
-
-[http4k]: https://http4k.org
