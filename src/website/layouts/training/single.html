@@ -1,17 +1,12 @@
 {{ define "main" }}
 
-<section class="ink-hero">
-    <div class="ink-hero__glow"></div>
-    <div class="container">
-        <div class="eyebrow">// DEVELOPER TRAINING</div>
-        <h1 class="hero-title">{{ .Params.tagline }}</h1>
-        <p class="hero-sub">{{ .Params.description | markdownify }}</p>
-        <div class="d-flex flex-wrap gap-3">
-            <a class="cta-btn cta-btn--primary" href="mailto:{{ .Params.email }}">Book a session</a>
-            <a class="cta-btn cta-btn--ghost-dark" href="#curriculum">See what we cover &rarr;</a>
-        </div>
-    </div>
-</section>
+{{ partial "shared/page-hero.html" (dict
+    "eyebrow" "// DEVELOPER TRAINING"
+    "title" .Params.tagline
+    "lede" .Params.description
+    "buttons" (slice
+        (dict "label" "Book a session" "href" (printf "mailto:%s" .Params.email))
+        (dict "label" "See what we cover &rarr;" "href" "#curriculum" "ghost" true))) }}
 
 {{ with .Params.highlights }}
 <section class="section-rail">
@@ -58,20 +53,7 @@
 </section>
 {{ end }}
 
-{{ with .Params.crosslinks }}
-<section class="section-rail">
-    <div class="card-grid card-grid--2">
-        {{ range . }}
-        <a class="ui-card kicker-card" href="{{ .linkHref }}">
-            <div class="kicker-card__kick">{{ .kick }}</div>
-            <div class="kicker-card__title">{{ .title }}</div>
-            <p class="kicker-card__desc">{{ .description }}</p>
-            <span class="kicker-card__go">{{ .linkText }} &rarr;</span>
-        </a>
-        {{ end }}
-    </div>
-</section>
-{{ end }}
+{{ with .Params.crosslinks }}{{ partial "shared/crosslinks.html" . }}{{ end }}
 
 {{ partial "shared/cta-band.html" (dict
     "title" "Give your team a head start."

@@ -1,0 +1,13 @@
+{{/* Two-up cross-link cards. Takes a slice of {kick, title, description, linkText, linkHref}. */}}
+<section class="section-rail">
+    <div class="card-grid card-grid--2">
+        {{ range . }}
+        <a class="ui-card kicker-card" href="{{ .linkHref }}">
+            <div class="kicker-card__kick">{{ .kick }}</div>
+            <div class="kicker-card__title">{{ .title }}</div>
+            <p class="kicker-card__desc">{{ .description }}</p>
+            <span class="kicker-card__go">{{ .linkText }} &rarr;</span>
+        </a>
+        {{ end }}
+    </div>
+</section>
