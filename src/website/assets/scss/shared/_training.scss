@@ -1,0 +1,13 @@
+// /training/ page: numbered curriculum cards + dark delivery panel.
+.crs-card { display: flex; gap: 20px; padding: var(--pad-card); }
+.crs-num { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 40px; border-radius: var(--radius-lg); background: var(--blue-wash); border: 1px solid var(--border); font-family: var(--font-mono); font-size: var(--fs-sm); font-weight: 700; color: var(--blue-strong); }
+.crs-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 6px; }
+.crs-card p { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+.deliver { background: var(--ink); border-radius: var(--radius-2xl); padding: 48px 44px; }
+.deliver-card { padding: 26px 24px; background: var(--ink-surface); border: 1px solid var(--ink-border); border-radius: var(--radius-lg); }
+.deliver-card__kick { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+.deliver-card h3 { font-size: 1.15rem; font-weight: 700; color: #fff; margin: 0 0 8px; }
+.deliver-card p { font-size: 0.95rem; line-height: 1.6; color: var(--text-on-ink-muted); margin: 0; }
+
+@media (max-width: 767.98px) { .deliver { padding: 36px 24px; } }
