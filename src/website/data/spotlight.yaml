@@ -13,7 +13,7 @@
       - { text: "http4k-format-jackson" }
       - { text: "http4k-testing-approval" }
 
-- tab: Supply chain
+- tab: Supply Chain Security
   eyebrow: "SUPPLY CHAIN · EU CRA 2026"
   title: Prove your dependencies before they compile
   body: "Every artifact ships with SLSA L2 provenance, signed SBOMs and cosign signatures. http4k Verify checks them at build time - getting you ahead of the Cyber Resilience Act deadline."

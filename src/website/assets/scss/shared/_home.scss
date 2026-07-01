@@ -78,7 +78,7 @@
 }
 
 .tape__head,
-.tape__row { display: grid; grid-template-columns: 1.7fr 1fr 1fr; }
+.tape__row { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr) minmax(0, 1fr); }
 
 .tape__head {
     background: var(--ink);
