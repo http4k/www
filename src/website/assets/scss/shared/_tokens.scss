@@ -1,33 +1,27 @@
-// ============================================================
 // DESIGN TOKENS - single source of truth for the whole site.
 // CSS custom properties so both this SCSS bundle and the static
 // styles.css can reference them. Bootstrap $vars mirror the hexes
 // (in _bootstrap.scss) because Bootstrap does compile-time colour math.
-// ============================================================
 
 :root {
-  // --- Type: one sans for display/body, one mono for code/labels ---
   --font-sans: 'Space Grotesk', -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 
-  // --- Brand cyan (matches the logo). Two-tone: light pops on dark, darker step is legible on white. ---
   --blue: #61C0FF;          // BRAND accent: on ink/dark bg, highlights, underlines, icon accents, the logo. Too light for text on white.
   --blue-strong: #2096F3;   // legible cyan-family step: solid fills, primary actions, large headings/highlights on white
   --blue-dark: #0f6cb8;     // body links + hover on white (passes WCAG 4.5:1)
   --blue-wash: rgba(97, 192, 255, 0.10); // subtle tint backgrounds
+  --glow-blue: rgba(97, 192, 255, 0.22);      // radial glow on dark heroes
+  --glow-blue-soft: rgba(97, 192, 255, 0.2);  // softer glow behind ink CTA bands
 
-  // --- Orange: high-emphasis actions/highlights. Warmer; does more work now. ---
   --orange: #EE7D2B;
   --orange-strong: #D9661A;
   --orange-wash: rgba(238, 125, 43, 0.10); // expressive section accents
 
-  // --- Green: literal verified / passing states ONLY ---
   --green: #198754;
 
-  // --- Red: error / failing states ONLY (mirrors Bootstrap $danger) ---
   --red: #dc3545;
 
-  // --- Neutrals ---
   --ink: #0B1622;           // deeper warm-dark "anchor" sections + footer
   --paper: #ffffff;         // light section
   --off-white: #F5F8FC;     // alternating section
@@ -41,7 +35,6 @@
   --ink-border: #1f3142;    // hairline border on ink
   --border: #E2E8F1;        // hairline borders (reads on white)
 
-  // --- Structure ---
   // Radius scale: chips/swatches -> sm, controls/small panels -> base,
   // cards -> lg, large cards/panels -> xl, bands -> 2xl, pills -> pill.
   --radius-sm: 6px;
@@ -61,7 +54,6 @@
   --shadow-hover: 0 18px 40px -26px rgba(11, 22, 34, 0.3); // card hover-lift
   --transition-fast: 140ms ease;
 
-  // --- Section vertical rhythm (snap section padding to these steps) ---
   --section-xs: 32px;
   --section-sm: 48px;
   --section-md: 96px;
@@ -69,7 +61,6 @@
   --section-py: 72px;        // standard content-section top gap (single source for *-section)
   --section-py-mobile: 56px;
 
-  // --- Type scale (from the docs comp; rem @16px base) ---
   --fs-xs: 0.78rem;      // ~12.5px - labels / eyebrows
   --fs-sm: 0.84rem;      // ~13.5px - sidebar / TOC / code / meta
   --fs-ui: 0.9375rem;    // 15px - nav / UI

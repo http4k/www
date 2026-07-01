@@ -1,18 +1,10 @@
-// http4k Enterprise page - fits the comp onto enterprise.md. ASCII only.
-
-
-// --- hero (ink + pipes) ---
-// hero background = shared .ink-hero (_primitives.scss)
-.ent-hero__inner { position: relative; padding-block: 88px 80px; }
 .ent-hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; }
 
-// --- at a glance ---
 .ent-glance { grid-template-columns: repeat(3, 1fr); }
 .ent-glance__card { padding: 30px 28px; }
 .ent-glance__card h3 { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
 .ent-glance__card p { font-size: 0.95rem; line-height: 1.55; color: var(--text-muted); margin: 0; }
 
-// --- supply chain flagship ---
 .ent-supply { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: 48px 44px; }
 .ent-supply__lead { margin-bottom: 32px; }
 .ent-supply__grid { gap: 16px; margin-bottom: 36px; }
@@ -32,10 +24,8 @@
 .ent-verify a { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue); text-decoration: none; white-space: nowrap; }
 .ent-supply__more { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue-dark); text-decoration: none; }
 
-// --- lts timeline ---
 .ent-timeline-widget { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 24px; background: #fff; }
 
-// --- editions (ink) ---
 .ent-editions__inner { max-width: 1200px; margin: 0 auto; padding: 84px 36px; }
 
 .ent-matrix { width: 100%; border-collapse: collapse; }
@@ -49,13 +39,11 @@
 .ent-matrix__cta td { border-bottom: none; padding-top: 26px; }
 .ent-matrix__cta a { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue); text-decoration: none; }
 
-// --- responsive ---
 @media (max-width: 991.98px) {
     .ent-glance { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 767.98px) {
-    .ent-hero__inner { padding-block: 60px 56px; }
     .ent-glance { grid-template-columns: 1fr; }
     .ent-supply { padding: 32px 24px; }
     .ent-editions__inner { padding: 56px 24px; }

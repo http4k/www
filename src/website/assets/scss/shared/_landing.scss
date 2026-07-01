@@ -61,7 +61,7 @@ body {
     }
 }
 
-.landing > *:not(.landing-bg):not(.navbar):not(.landing-glow) {
+.landing > *:not(.landing-bg):not(.navbar):not(.ink-hero__glow) {
     position: relative;
     z-index: 1;
 }

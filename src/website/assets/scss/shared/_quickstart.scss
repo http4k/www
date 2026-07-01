@@ -1,0 +1,15 @@
+// /quickstart/: numbered steps in the .reading layout. Reuses .code-example,
+// .callout-orange, .ui-card + .card-grid + .kicker-card.
+.qs-steps { margin-top: 6px; }
+.qs-step + .qs-step { margin-top: 40px; }
+.qs-step__head { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.qs-step__num { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; font-family: var(--font-mono); font-size: 0.9rem; font-weight: 700; flex-shrink: 0; }
+.qs-step__title { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); margin: 0; }
+.qs-step__intro { color: var(--text-muted); line-height: 1.6; margin: 0 0 16px; }
+
+.qs-done { display: flex; gap: 16px; align-items: flex-start; background: rgba(25, 135, 84, 0.08); border: 1px solid rgba(25, 135, 84, 0.25); border-radius: var(--radius-lg); padding: 20px 24px; margin-top: 32px; }
+.qs-done__mark { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem; }
+.qs-done__title { font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.qs-done__text { color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+.qs-next { margin-top: 40px; }

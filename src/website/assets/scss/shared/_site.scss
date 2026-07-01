@@ -54,7 +54,6 @@ body {
     filter: brightness(0);
 }
 
-/* Buttons: solid, flat, no gradient/glow/lift */
 .btn-primary {
     color: #fff;
     background-color: var(--blue-strong) !important;
@@ -89,7 +88,7 @@ body {
 }
 
 .d-flex {
-    flex-wrap: nowrap !important; /* Prevent wrapping */
+    flex-wrap: nowrap !important;
     align-items: center;
 }
 
@@ -129,7 +128,6 @@ body {
     height: auto;
 }
 
-/* Footer: flat ink, no gradient, no pipes overlay */
 footer {
     background: var(--ink);
     padding-bottom: 85px;
@@ -154,7 +152,6 @@ a {
     padding: 10px;
 }
 
-/* Cards: hairline border, flat surface, no hover-lift */
 .card-shadow {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
@@ -177,7 +174,6 @@ a {
     margin-bottom: 2rem;
 }
 
-// Bootstrap .card aligned to canonical card tokens (list pages)
 .card {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
@@ -360,7 +356,6 @@ a {
     background: var(--orange) !important;
 }
 
-/* Navbar / dropdown: restrained */
 .navbar {
     transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -383,7 +378,6 @@ a {
     color: var(--blue-dark);
 }
 
-/* Restrained motion only */
 html {
     scroll-behavior: smooth;
 }
@@ -406,9 +400,6 @@ html {
     }
 }
 
-/* ========================================
-   Content (page-content) styling
-   ======================================== */
 
 .page-content .highlight {
     border-radius: var(--radius);
@@ -439,7 +430,6 @@ html {
     color: inherit;
 }
 
-/* Tables: hairline, flat header */
 table {
     border-collapse: collapse;
 }
@@ -555,7 +545,6 @@ table {
     margin: 2rem 0;
 }
 
-/* Code example shortcode wrapper */
 .code-example {
     margin: 1.5rem 0;
     border: 1px solid var(--border);

@@ -1,13 +1,6 @@
-// Security pages (advisories list + CVE detail). ASCII only.
-
-// --- hero (background = shared .ink-hero in _primitives.scss) ---
-.security-hero__inner { position: relative; padding-block: 84px 78px; }
-
-// --- policy / keys strip ---
 .security-policy { border-bottom: 1px solid var(--border); }
 .security-policy__inner { max-width: 1200px; margin: 0 auto; padding: 40px 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
-// --- advisories list ---
 .security-advisories__count { font-family: var(--font-mono); font-size: 13px; color: var(--text-faint); }
 .security-advisories__cols { display: grid; grid-template-columns: 120px 1fr 130px; padding: 0 26px 12px; font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
 .security-advisories__cols .r { text-align: right; }
@@ -25,7 +18,6 @@
 .sev--moderate { color: var(--orange); background: var(--orange-wash); border-color: rgba(238, 125, 43, 0.25); }
 .sev--low { color: var(--text-muted); background: var(--off-white); border-color: var(--border); }
 
-// --- proactive LLM audits (ink) ---
 .security-audits { position: relative; overflow: hidden; }
 .security-audits__inner { position: relative; max-width: 1000px; margin: 0 auto; padding: 84px 36px; }
 .security-audits .section-h2 { margin-bottom: 16px; }
@@ -35,7 +27,6 @@
 .security-stat__num { font-family: var(--font-sans); font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
 .security-stat__label { font-size: 0.92rem; line-height: 1.5; color: #8aa0b6; margin-top: 6px; }
 
-// --- advisory detail ---
 .advisory-detail { max-width: 820px; margin: 0 auto; padding: 46px 36px 80px; }
 .advisory-detail__crumbs { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 13px; color: var(--text-faint); margin-bottom: 22px; }
 .advisory-detail__crumbs a { color: var(--blue-strong); text-decoration: none; }
@@ -49,9 +40,7 @@
 .article-body th, .article-body td { border: 1px solid var(--border); padding: 10px 13px; text-align: left; vertical-align: top; }
 .article-body th { background: var(--off-white); font-weight: 600; color: var(--ink); }
 
-// --- responsive ---
 @media (max-width: 767.98px) {
-    .security-hero__inner { padding: 60px 24px 56px; }
     .security-policy__inner { grid-template-columns: 1fr; padding: 32px 24px; }
     .security-advisories { padding: 56px 24px 72px; }
     .security-advisories__cols { display: none; }

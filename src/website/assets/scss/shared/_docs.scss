@@ -1,13 +1,9 @@
 // Docs pages - 3-pane layout (sidebar / content / on-this-page TOC).
-// Fits the docs comp onto the existing ecosystem/single.html + ecosystem-sidebar
-// partial. The off-canvas mobile drawer (.docs .aside.no-side + .sideToggle JS)
 // is styled here.
 
-// Docs link colour - fit to the design system; flip to the comp's deeper blue by
 // swapping the commented line.
 :root {
     --docs-link: var(--blue-strong);
-    // --docs-link: #1763D6; // comp's deeper blue - uncomment to switch
 }
 
 .docs {
@@ -20,7 +16,6 @@
     padding: 40px 24px 80px;
 }
 
-// let the grid track size the sidebar (override the old fixed 320px / col-auto)
 .docs .aside {
     width: auto;
     background: transparent;
@@ -40,7 +35,6 @@
     padding: 0;
 }
 
-// prose - match the comp scale (type tokens) + docs links
 .docs .page-content {
     font-size: var(--fs-body);
     line-height: 1.7;
@@ -65,7 +59,6 @@
     text-decoration: underline;
 }
 
-// right rail
 .docs-toc {
     position: sticky;
     top: 90px;
@@ -111,7 +104,6 @@
     border-left-color: var(--docs-link);
 }
 
-// --- breadcrumb ---
 .docs-crumbs {
     display: flex;
     flex-wrap: wrap;
@@ -130,7 +122,6 @@
 .eco-logo { margin: 0 0 1.25rem; text-align: center; }
 .eco-logo img { display: block; height: 56px; width: auto; max-width: 100%; margin-inline: auto; }
 
-// --- sidebar (existing ecosystem-sidebar partial, restyled - CSS only) ---
 .docs .aside h2 { font-size: 1.05rem; font-weight: 700; margin: 0; }
 .docs .aside h2 a { color: var(--ink); text-decoration: none; }
 
@@ -179,7 +170,6 @@
 
 .docs .aside .ecoLink.active::before { content: "\2022"; margin-right: 7px; }
 
-// --- prev / next pager ---
 .docs-pager {
     display: flex;
     justify-content: space-between;
@@ -211,7 +201,6 @@
 
 .docs-pager__link strong { color: var(--docs-link); font-weight: 600; }
 
-// --- reading layout: prose + sticky "on this page" TOC (tutorial + how-to detail) ---
 .reading { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 48px; align-items: start; max-width: 1120px; margin: 0 auto; padding: 46px 24px 80px; }
 .reading__main { min-width: 0; }
 .reading__meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 14px; }
@@ -227,16 +216,13 @@
     .reading__toc { display: none; }
 }
 
-// --- responsive ---
 .sideToggle { display: none; } // desktop: no toggle
 
-// tablet: drop the right TOC, keep sidebar + content
 @media (max-width: 1199.98px) {
     .docs { grid-template-columns: 224px minmax(0, 1fr); gap: 32px; }
     .docs-toc { display: none; }
 }
 
-// mobile: single column + off-canvas sidebar drawer (toggled by .sideToggle JS)
 @media (max-width: 991.98px) {
     .docs { display: block; padding-top: 24px; }
     .sideToggle { display: block; width: 22px; cursor: pointer; }

@@ -1,6 +1,5 @@
 // Product microsites (_sites/*) - fits the Wiretap comp onto product/baseof.html. ASCII only.
 
-// --- hero (reuses the homepage .landing--ink pipes treatment) ---
 .product-hero { color: var(--text-on-ink); }
 .product-hero__inner { padding-block: 30px 60px; }
 .product-hero__badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
@@ -8,13 +7,11 @@
 .product-hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; }
 
 
-// --- product nav (on ink hero) ---
 .product-hero .navbar { padding: 18px 0; }
 .product-hero .navbar-brand img { filter: brightness(0) invert(1); }
 .product-hero .navbar .nav-link { color: var(--text-on-ink-muted) !important; font-size: var(--fs-ui); font-weight: 500; }
 .product-hero .navbar .nav-link:hover { color: #fff !important; }
 
-// --- feature grid ---
 .product-features { background: var(--off-white); }
 .product-feature-grid { gap: 18px; }
 .product-feature { border-radius: var(--radius-lg); padding: 26px 24px; }
@@ -23,7 +20,6 @@
 .product-feature h4 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin: 0; line-height: 1.25; }
 .product-feature p { font-size: 0.9rem; line-height: 1.55; color: var(--text-muted); margin: 0; }
 
-// --- how it works (steps + screenshots) ---
 .product-howto + .product-howto { margin-top: 24px; }
 .product-howto__title { font-size: var(--fs-h2); font-weight: 700; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 28px; }
 .product-steps { gap: 28px; }
@@ -35,7 +31,6 @@
 .product-large-image { display: flex; justify-content: center; margin-top: 28px; }
 .product-large-image img { max-width: 70%; border-radius: var(--radius-lg); border: 1px solid var(--border); }
 
-// --- screenshot showcase (tabbed) ---
 .product-showcase__group + .product-showcase__group { margin-top: 48px; }
 .product-showcase__title { text-align: center; font-size: var(--fs-h3); font-weight: 700; color: var(--ink); margin: 0 0 20px; }
 .product-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 20px; } // tab pills reuse .chip (_lists.scss)
@@ -43,7 +38,6 @@
 .product-shot.active { display: block; }
 .product-shot img { width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow); }
 
-// --- pricing / license ---
 .product-pricing { max-width: 1000px; margin: 0 auto; padding: 80px 36px; text-align: center; }
 .product-license { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 0 auto 36px; max-width: 640px; }
 .product-license a { color: var(--blue-dark); }
@@ -51,11 +45,9 @@
 .product-pricing__foot { font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin: 36px auto 0; max-width: var(--lede); }
 .product-pricing__foot a { color: var(--blue-dark); }
 
-// --- integrations logo grid ---
 .product-logos { display: grid; grid-template-columns: repeat(6, 1fr); gap: 28px 24px; align-items: center; justify-items: center; max-width: 920px; margin: 0 auto; }
 .product-logos img { max-width: 100%; max-height: 46px; object-fit: contain; }
 
-// --- tier blocks (subscribe / EAP / download) ---
 .product-subscribe { max-width: 700px; margin: 0 auto; padding: 80px 36px; text-align: center; }
 .product-subscribe h2 { font-size: var(--fs-h2); font-weight: 700; color: var(--ink); margin: 0 0 12px; }
 .product-subscribe p { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 20px; }
@@ -69,7 +61,6 @@
 .download-stack[data-state="downloaded"] .download-stack__panel { display: flex; }
 .download-stack[data-state="downloaded"] .download-stack__form { display: none; }
 
-// --- responsive ---
 @media (max-width: 767.98px) {
     .product-hero__inner { padding-block: 20px 50px; }
     .product-large-image img { max-width: 100%; }

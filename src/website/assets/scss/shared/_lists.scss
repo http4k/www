@@ -1,7 +1,3 @@
-// List pages - one reusable article card across news / howto / tutorial / showcase.
-// Built from the News comp; comp hexes map 1:1 to design tokens. ASCII only (BOM gotcha).
-
-
 .list-section { padding-block: 30px 72px; }
 
 .list-section__title { margin: 26px 0 6px; }
@@ -12,7 +8,6 @@
     margin: 0 0 22px;
 }
 
-// --- row list: a bordered list of clickable rows (how-to recipes, tutorials) ---
 .row-list { border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; }
 .row-list__row {
     display: flex;
@@ -27,7 +22,6 @@
 .row-list__row:first-child { border-top: 0; }
 .row-list__row:hover { background: var(--off-white); }
 
-// --- filter chips ---
 .filter-chips {
     display: flex;
     flex-wrap: wrap;
@@ -37,31 +31,8 @@
     padding: 30px 36px 6px;
 }
 
-.chip {
-    font-size: var(--fs-sm);
-    font-weight: 500;
-    color: var(--text-muted);
-    background: #fff;
-    border: 1px solid var(--border);
-    padding: 8px 16px;
-    border-radius: var(--radius-pill);
-    cursor: pointer;
-    transition: border-color var(--transition-fast), color var(--transition-fast);
-}
-
-.chip:hover { border-color: var(--blue-strong); color: var(--blue-strong); }
-
-.chip.active {
-    color: #fff;
-    background: var(--ink);
-    border-color: var(--ink);
-    font-weight: 600;
-}
-
-// --- grid ---
 .article-grid { gap: 24px; }
 
-// --- card ---
 .article-card {
     position: relative;
     display: flex;
@@ -160,7 +131,6 @@
 .article-card__links a:hover { text-decoration: underline; }
 .article-card__links .sep { color: var(--border); padding: 0 4px; }
 
-// --- featured (2-col, dark thumb on the right) ---
 .article-card--featured {
     display: grid;
     grid-template-columns: 1.12fr 0.88fr;
@@ -178,7 +148,6 @@
 .article-card--featured .article-card__title { font-size: var(--fs-h2); }
 .article-card--featured .article-card__excerpt { font-size: var(--fs-lead); }
 
-// --- newsletter ---
 .newsletter-wrap { max-width: 1200px; margin: 0 auto; padding: 80px 36px 96px; }
 
 .newsletter {
@@ -234,7 +203,6 @@
 
 .newsletter__btn:hover { background: var(--orange-strong); }
 
-// --- responsive ---
 @media (max-width: 767.98px) {
     .list-section,
     .filter-chips,

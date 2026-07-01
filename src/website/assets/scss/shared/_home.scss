@@ -1,7 +1,4 @@
-// Homepage ("Bold") component styles. Beats are authored against the .section
-// primitive (_sections.scss); this file holds the reusable components.
 
-// --- Hero (ink pipes treatment via .landing--ink) --------------------------
 // Shared marketing hero: used by the homepage AND the product microsites
 // (layouts/product/baseof.html). Change here affects both - intentional.
 .landing--ink .landing-bg {
@@ -10,8 +7,6 @@
     clip-path: none;
 }
 
-// http4k pipes as a background overlay on the header - present at the top,
-// faded toward the bottom so the hero content stays clean
 .landing--ink .landing-bg::after {
     content: "";
     position: absolute;
@@ -21,18 +16,6 @@
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
     mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
     pointer-events: none;
-}
-
-.landing-glow {
-    position: absolute;
-    top: -200px;
-    right: -100px;
-    width: 760px;
-    height: 760px;
-    max-width: 90%;
-    background: radial-gradient(circle, rgba(97, 192, 255, 0.22), transparent 62%);
-    pointer-events: none;
-    z-index: 0;
 }
 
 .hero-kicker {
@@ -56,7 +39,7 @@
 
 .hero-em { color: var(--orange); }
 
-.hero-sub {
+.landing .hero-sub {
     font-size: 1.2rem;
     line-height: 1.55;
     color: var(--text-on-ink-muted);
@@ -66,7 +49,6 @@
 
 
 
-// --- Eyebrow (mono kicker - ration to ≤3 across the page) -------------------
 .eyebrow {
     font-family: var(--font-mono);
     font-size: 12.5px;
@@ -74,9 +56,7 @@
     color: var(--blue-strong);
     margin-bottom: 14px;
 }
-// section heads use the shared .section-head / .section-h2 (see _primitives.scss).
 
-// --- Spotlight ("there's a lot going on") - tabbed panels, reuses .chip + .code-card
 .spotlight__tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
 .spotlight__panel { display: none; background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius-2xl); box-shadow: var(--shadow); padding: 40px; }
 .spotlight__panel.is-active { display: block; }
@@ -87,7 +67,6 @@
 .spotlight__link { font-family: var(--font-mono); font-size: var(--fs-sm); font-weight: 600; color: var(--blue-strong); text-decoration: none; }
 .spotlight__link:hover { color: var(--ink); }
 
-// --- Tale of the tape (comparison table) -----------------------------------
 .tape {
     max-width: 1000px;
     margin-inline: auto;
@@ -136,7 +115,6 @@
     .tape__cell { padding: 12px 14px; font-size: 0.9rem; }
 }
 
-// --- Product cards (Pro / Enterprise / Verify) -----------------------------
 .product-card {
     display: flex;
     flex-direction: column;
@@ -210,7 +188,6 @@
     .product-card:hover { transform: none; }
 }
 
-// --- Check list ------------------------------------------------------------
 .check-list {
     list-style: none;
     padding: 0;
@@ -234,7 +211,6 @@
     }
 }
 
-// --- Ecosystem marquee -----------------------------------------------------
 .marquee {
     overflow: hidden;
 
@@ -276,18 +252,9 @@
     .marquee__set { flex-wrap: wrap; row-gap: 14px; }
 }
 
-// --- Receipts (stat tiles + CVE card + partners) ---------------------------
-.receipts-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-}
+.receipts-grid { grid-template-columns: repeat(4, 1fr); border-radius: var(--radius-lg); }
 
-.receipt-tile { background: var(--paper); padding: 30px 26px; }
+.receipt-tile { padding: 30px 26px; }
 
 .receipt-tile__num {
     font-family: var(--font-mono);
@@ -363,7 +330,6 @@
     .receipts-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-// --- Final CTA (dark panel on light) ---------------------------------------
 .final-cta {
     position: relative;
     overflow: hidden;
@@ -382,7 +348,7 @@
     width: 760px;
     height: 420px;
     max-width: 100%;
-    background: radial-gradient(ellipse, rgba(97, 192, 255, 0.2), transparent 65%);
+    background: radial-gradient(ellipse, var(--glow-blue-soft), transparent 65%);
     pointer-events: none;
 }
 
@@ -408,7 +374,6 @@
     .final-cta { padding: 48px 26px; }
 }
 
-// --- Code card -------------------------------------------------------------
 // Dark "terminal" used by the hero, the core-types section and the verify
 // showpiece. Its dark palette is deeper than --ink (a deliberate terminal
 // surface) so these constants live with the component rather than as tokens.
@@ -457,27 +422,11 @@ $code-dim:    #5E7387;
     pre { margin: 0; white-space: pre; }
 }
 
-// light variant - for code on light sections (core types, etc.)
-.code-card--light {
-    background: var(--paper);
-    border-color: var(--border);
-    box-shadow: none;
-
-    .code-card__bar { border-bottom-color: var(--border); }
-    .code-card__body { background: var(--off-white); color: var(--text); }
-
-    .tok-key { color: var(--blue-strong); }
-    .tok-str { color: #1f9a52; }
-    .tok-com { color: #8a97a8; }
-    .tok-ok  { color: var(--green); }
-}
-
 .code-card__bar--label { justify-content: space-between; }
 .code-card__tag { font-family: var(--font-mono); font-size: 12px; }
 .code-card__tag--blue { color: var(--blue-strong); }
 .code-card__tag--green { color: var(--green); }
 
-// lightweight syntax tokens (used in hand-authored snippets)
 .tok-key  { color: var(--blue); }   // val, typealias, fun
 .tok-str  { color: #7FD08A; }       // strings
 .tok-com  { color: $code-dim; }     // comments

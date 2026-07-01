@@ -1,11 +1,5 @@
-// http4k Pro page - fits the comp onto data/pro.yaml + pro.md. ASCII only.
-
-
-// --- hero (dark .ink-hero + shared .eyebrow/.hero-title/.hero-sub) ---
-.pro-hero__inner { padding: 92px 0 60px; }
 .pro-hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; }
 
-// --- free-tier banner ---
 .pro-free-banner__inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -18,7 +12,6 @@
 .pro-free-banner__text { font-size: 1rem; line-height: 1.5; color: #c7d3e0; }
 .pro-free-banner__text strong { color: #fff; }
 
-// --- catalogue ---
 .pro-catalogue__count { font-family: var(--font-mono); font-size: 13px; color: var(--text-faint); }
 
 .pro-grid { gap: 22px; }
@@ -51,7 +44,6 @@
 .pro-module__desc { font-size: 0.92rem; line-height: 1.55; color: var(--text-muted); margin: 0 0 18px; flex: 1; }
 .pro-module__cta { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue-strong); }
 
-// --- packs ---
 .pro-packs__grid { gap: 22px; }
 
 .pro-pack {
@@ -73,14 +65,13 @@
     right: -40px;
     width: 220px;
     height: 220px;
-    background: radial-gradient(circle, rgba(97, 192, 255, 0.2), transparent 62%);
+    background: radial-gradient(circle, var(--glow-blue-soft), transparent 62%);
 }
 .pro-pack__eyebrow { position: relative; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--blue); margin-bottom: 16px; text-transform: uppercase; }
 .pro-pack__name { position: relative; font-size: 1.375rem; font-weight: 700; color: #fff; margin: 0 0 10px; }
 .pro-pack__desc { position: relative; font-size: 0.95rem; line-height: 1.55; color: var(--text-on-ink-2); margin: 0 0 18px; flex: 1; }
 .pro-pack__cta { position: relative; font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue); }
 
-// --- licensing tiers ---
 .pro-tiers { gap: 22px; }
 
 .pro-tier {
@@ -146,8 +137,6 @@
 
 .pro-end { padding-bottom: 96px; }
 
-// --- responsive ---
 @media (max-width: 767.98px) {
-    .pro-hero__inner { padding: 76px 0 44px; }
     .pro-free-banner__inner { padding: 20px 24px; }
 }

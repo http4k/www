@@ -1,8 +1,3 @@
-// How-to guides index: tag filter over a shared .row-list of recipe rows.
-// Reuses .section-rail, .row-list, .chip pills, .learn-contribute, .cta-btn.
-// ASCII only.
-
-// filter pills row (+ live count pushed to the end)
 .howto-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 24px; }
 .howto-count { margin-left: auto; font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--text-faint); }
 

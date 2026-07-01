@@ -1,10 +1,7 @@
-// Shared cross-page primitives - collapses the per-page button/chip clones.
-// (Eyebrow uses the existing .eyebrow in _home.scss.)
+// Shared cross-page primitives.
 
-// Section content rail - single source for the bespoke *-section wrappers.
-// Width/gutters plus the standard top-only rhythm (stacked sections give one
-// --section-py gap, not a doubled one). Override padding-block only where a
-// section genuinely differs (e.g. flush under a header, trailing bottom).
+// Section rail: width/gutters + top-only rhythm (stacked sections give one gap,
+// not a doubled one). Pages override padding-block only where they differ.
 @mixin section-wrap {
     max-width: 1200px;
     margin-inline: auto;
@@ -12,25 +9,20 @@
     padding-block: var(--section-py) 0;
     @media (max-width: 767.98px) { padding-inline: 24px; padding-block: var(--section-py-mobile) 0; }
 }
-
-// One content-section rail across every page. Pages add a page class for their
-// own deltas (a different measure, a trailing bottom); the rail owns width +
-// gutters + the top-only rhythm.
 .section-rail { @include section-wrap; }
 
-// First content section sits flush under a hero - the ink box already carries
-// bottom padding, so use the smaller step instead of stacking a full rhythm on
-// top. Applies to any rail directly under a hero (not full-bleed bands like
-// .security-policy, whose padding lives on an inner wrapper).
+// First rail under a hero: the hero carries bottom padding, so use the small step.
 .ink-hero + .section-rail { padding-top: var(--section-sm); }
+.ink-hero + .filter-chips { padding-top: var(--section-sm); }
 
-// Unified content rail: one width for nav / heroes / sections, matching the
-// bespoke max-width:1200 + 36px gutters used across the redesign. Overrides the
-// Bootstrap .container so nav, .container heroes, and custom sections all align.
+// One hero inner padding for every dark hero (the .container inside .ink-hero).
+.ink-hero .container { position: relative; padding-block: 84px 78px; }
+@media (max-width: 767.98px) { .ink-hero .container { padding-block: 60px 56px; } }
+
+// Override Bootstrap .container so nav, heroes and sections share one width.
 .container { max-width: 1200px; padding-left: 36px; padding-right: 36px; }
 @media (max-width: 767.98px) { .container { padding-left: 24px; padding-right: 24px; } }
 
-// CTA buttons - used by heros + ink CTA bands across pro/enterprise/company/product.
 .cta-btn { display: inline-flex; align-items: center; height: 50px; padding: 0 24px; border-radius: var(--radius-lg); font-weight: 600; font-size: 1rem; text-decoration: none; }
 .cta-btn--primary { background: var(--orange); color: #fff; }
 .cta-btn--primary:hover { background: var(--orange-strong); color: #fff; }
@@ -39,10 +31,7 @@
 .cta-btn--ghost-dark { background: rgba(255, 255, 255, 0.05); color: #fff; border: 1px solid #2c4156; }
 .cta-btn--ghost-dark:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
 
-// Shared ink hero background - the common pipes + glow treatment (matches the
-// homepage/product .landing--ink hero). Used by section-style heroes that sit
-// below the site header (enterprise, company, security, 404). The hero's own
-// .X-hero__inner keeps position:relative so content stays above this.
+// Shared dark hero background: pipes + glow (matches the .landing--ink home hero).
 .ink-hero { position: relative; overflow: hidden; background: var(--ink); color: var(--text-on-ink); }
 .ink-hero::before {
     content: "";
@@ -61,82 +50,83 @@
     width: 760px;
     height: 760px;
     max-width: 90%;
-    background: radial-gradient(circle, rgba(97, 192, 255, 0.22), transparent 62%);
+    background: radial-gradient(circle, var(--glow-blue), transparent 62%);
     pointer-events: none;
+    z-index: 0;
 }
 
-// One section head (eyebrow + h2) -> content. 32px gap everywhere.
 .section-head { max-width: 720px; margin-bottom: 32px; }
 .section-head--split { max-width: none; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .section-head--center { max-width: none; text-align: center; }
 .section-head--center .section-lede { margin-inline: auto; }
 
-// One section heading + one section lede everywhere. Pages stopped cloning
-// .company-h2 / .ent-h2 / .ov-lead etc; only genuine per-use deltas (a trailing
-// margin, a centered measure) stay in the page files. Ink variants below.
 .section-h2, .section-head h2, .list-section__title { font-size: 2.125rem; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; color: var(--ink); }
 .section-h2, .section-head h2 { margin: 0 0 12px; }
 .section-lede { font-size: var(--fs-lead); line-height: 1.6; color: var(--text-muted); max-width: var(--lede); margin: 0; }
 
-// One ink-surface text scope. Every dark band/hero recolors its eyebrow, heading
-// and lede the same way - so it lives once here, keyed off the shared surface
-// classes (.ink-hero for heroes, .section--ink for full-bleed bands), not per
-// page-class.
+// One ink-surface text scope for every dark band/hero.
 .ink-hero .eyebrow, .section--ink .eyebrow { color: var(--blue); }
 .section--ink .section-h2 { color: #fff; }
 .section--ink .section-lede { color: var(--text-on-ink-muted); }
 
-// Shared ink-hero headline + sub (enterprise/company/security/product heroes).
 .hero-title { font-size: clamp(2.4rem, 5vw, 3.5rem); line-height: 1.04; letter-spacing: -0.03em; font-weight: 700; color: #fff; margin: 0 0 20px; max-width: 840px; }
 .hero-sub { font-size: var(--fs-lead); line-height: 1.55; color: var(--text-on-ink-muted); margin: 0 0 30px; max-width: var(--lede); }
 .hero-sub strong { color: #d6e0eb; }
 
-// Shared dark section-landing hero (eyebrow + title + lede). Top padding clears
-// the overlaid transparent nav (see _header.scss :has rule).
-.section-hero__inner { padding: 92px 0 60px; }
-
-// Shared hero "proof strip": mono list, each item prefixed with a > marker.
-// Used on the home, overview and community ink heroes (was .hero-proof / .ov-stats).
+// Hero proof strip: mono list, each item prefixed with a > marker.
 .hero-stats { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 30px 0 0; padding: 0; font-family: var(--font-mono); font-size: var(--fs-sm); }
 .hero-stats li { color: var(--text-on-ink-muted); }
 .hero-stats li::before { content: "\203A  "; color: var(--blue); }
 
-// Mono pill on dark surfaces (product hero badge, pro free-tier chip).
 .chip-ink { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 11px; border-radius: var(--radius-sm); background: var(--ink-surface); border: 1px solid var(--ink-border); color: var(--blue); }
 .chip-ink--ea { color: var(--orange); background: rgba(238, 125, 43, 0.12); border-color: rgba(238, 125, 43, 0.3); }
 
-// One bordered card identity (white, hairline border, rounded). Page files keep
-// only their own deltas: padding, radius bump, flex/grid layout, hover.
+// Interactive pill (filter/tab chips) - used across list + non-list pages.
+.chip {
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.chip:hover { border-color: var(--blue-strong); color: var(--blue-strong); }
+
+.chip.active {
+    color: #fff;
+    background: var(--ink);
+    border-color: var(--ink);
+    font-weight: 600;
+}
+
 .ui-card { background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius-lg); }
 
-// One 1px-seam grid (bordered mosaic of white tiles). Set columns per use; the
-// gap reveals --border as the seam, tiles paint over it.
+// 1px-seam grid: the gap reveals --border as the seam; tiles paint over it.
 .mosaic { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; }
 .mosaic > * { background: var(--paper); }
 
-// One card grid: 3-up default, --2 / --4 for other counts. The responsive
-// collapse lives here once (was copy-pasted across ~8 page files). gap default
-// 20px; override per grid only where it differs.
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .card-grid--2 { grid-template-columns: repeat(2, 1fr); }
 .card-grid--4 { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 991.98px) { .card-grid, .card-grid--4 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 767.98px) { .card-grid, .card-grid--2, .card-grid--4 { grid-template-columns: 1fr; } }
 
-// Orange callout (home + overview).
 .callout-orange { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; background: var(--orange-wash); border: 1px solid var(--border); border-left: 3px solid var(--orange); border-radius: var(--radius-lg); padding: 18px 22px; margin-top: 22px; color: var(--text-muted); }
 .callout-orange__lead { font-weight: 700; color: var(--ink); }
 
-// Ink CTA band (company + enterprise + overview).
 .cta-band-wrap { max-width: 1200px; margin: 0 auto; padding: 80px 36px 96px; }
 .cta-band { position: relative; overflow: hidden; background: var(--ink); border-radius: var(--radius-2xl); padding: 60px 50px; text-align: center; }
-.cta-band__glow { position: absolute; top: -130px; left: 50%; transform: translateX(-50%); width: 720px; height: 400px; background: radial-gradient(ellipse, rgba(97, 192, 255, 0.2), transparent 65%); }
+.cta-band__glow { position: absolute; top: -130px; left: 50%; transform: translateX(-50%); width: 720px; height: 400px; background: radial-gradient(ellipse, var(--glow-blue-soft), transparent 65%); }
 .cta-band__inner { position: relative; }
 .cta-band h2 { font-size: clamp(1.9rem, 4vw, 2.375rem); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; margin: 0 0 16px; color: #fff; }
 .cta-band p { font-size: var(--fs-lead); line-height: 1.55; color: var(--text-on-ink-2); margin: 0 auto 32px; max-width: 520px; }
 .cta-band__buttons { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
-// FAQ accordion-ish list (pro + enterprise + solutions).
+// Always-open FAQ list (pro + enterprise + solutions). (The /faq/ accordion is _faq.scss.)
 .faq-section { max-width: 820px; margin: 0 auto; padding: var(--section-py) 36px 0; }
 .faq-section__item { padding: 22px 0; border-bottom: 1px solid var(--border); }
 .faq-section__item:first-of-type { border-top: 1px solid var(--border); }
@@ -147,7 +137,6 @@
 .faq-section__contact a { font-weight: 600; color: var(--blue-dark); text-decoration: none; }
 .faq-section__contact a:hover { text-decoration: underline; }
 
-// FAQ page (/faq/): categorised native-<details> accordion. Reuses .eyebrow + .cta-band.
 // Solo reading page (legal/misc via _default/single): light header + prose.
 .prose-page { max-width: 760px; margin: 0 auto; padding: 72px 24px 88px; }
 .prose-page .reading__title { margin-bottom: 14px; }
@@ -155,46 +144,8 @@
 .prose-page__tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 32px 0 0; }
 .prose-page__tags a { font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--text-muted); background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 4px 12px; text-decoration: none; }
 
-.faq-page { max-width: 820px; margin: 0 auto; padding: 64px 24px 24px; }
-// title/lede reuse the shared .reading__title / .reading__lede (see _docs.scss).
-
-.faq-cat { margin-top: 44px; }
-.faq-cat__title { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); margin: 0 0 14px; }
-.faq-cat__items { display: flex; flex-direction: column; gap: 12px; }
-
-.faq-item { border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--paper); }
-.faq-item__q { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 22px; font-size: 1.05rem; font-weight: 600; color: var(--ink); cursor: pointer; list-style: none; }
-.faq-item__q::-webkit-details-marker { display: none; }
-.faq-item__q::after { content: "+"; font-family: var(--font-mono); font-size: 1.4rem; font-weight: 400; line-height: 1; color: var(--blue-strong); flex-shrink: 0; }
-.faq-item[open] .faq-item__q { padding-bottom: 12px; }
-.faq-item[open] .faq-item__q::after { content: "\2212"; }
-.faq-item__a { padding: 0 22px 20px; font-size: 1rem; line-height: 1.6; color: var(--text-muted); }
-.faq-item__a > :first-child { margin-top: 0; }
-.faq-item__a > :last-child { margin-bottom: 0; }
-.faq-item__a a { color: var(--blue-dark); }
-.faq-item__a code { font-family: var(--font-mono); font-size: 0.9em; background: var(--off-white); padding: 0.1em 0.35em; border-radius: var(--radius-sm); color: var(--ink); }
-.faq-item__a ul { margin: 10px 0 0; padding-left: 20px; }
-.faq-item__a li { margin: 4px 0; }
-
-// Quickstart (/quickstart/): numbered steps in the .reading layout. Reuses
-// .code-card, .callout-orange, .ui-card + .card-grid.
-.qs-steps { margin-top: 6px; }
-.qs-step + .qs-step { margin-top: 40px; }
-.qs-step__head { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
-.qs-step__num { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; font-family: var(--font-mono); font-size: 0.9rem; font-weight: 700; flex-shrink: 0; }
-.qs-step__title { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); margin: 0; }
-.qs-step__intro { color: var(--text-muted); line-height: 1.6; margin: 0 0 16px; }
-
-.qs-done { display: flex; gap: 16px; align-items: flex-start; background: rgba(25, 135, 84, 0.08); border: 1px solid rgba(25, 135, 84, 0.25); border-radius: var(--radius-lg); padding: 20px 24px; margin-top: 32px; }
-.qs-done__mark { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem; }
-.qs-done__title { font-weight: 700; color: var(--ink); margin-bottom: 4px; }
-.qs-done__text { color: var(--text-muted); line-height: 1.6; margin: 0; }
-
-.qs-next { margin-top: 40px; }
-
-// Shared "kicker card": mono kicker + title + desc (+ optional go arrow), on
-// .ui-card in a .card-grid. Used by community, quickstart, security, overview.
-// Title/desc styled by class OR bare h3/p so pages need only the card + kick class.
+// Kicker card: mono kicker + title + desc (+ optional arrow), on .ui-card in a
+// .card-grid. Title/desc match by class OR bare h3/p (community/quickstart/security/overview).
 .kicker-card { display: flex; flex-direction: column; padding: 24px 26px; text-decoration: none; transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
 .kicker-card:hover { border-color: var(--blue-strong); box-shadow: var(--shadow-hover); }
 .kicker-card__kick { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.08em; color: var(--blue-strong); margin-bottom: 12px; }
@@ -207,35 +158,8 @@
 .kicker-card--report:hover { border-color: var(--orange); }
 .kicker-card--report .kicker-card__kick { color: var(--orange); }
 
-// Ecosystem landing (/ecosystem/): family cards. Reuses .ink-hero, .hero-stats,
-// .card-grid, .ui-card, .chip, .check-list, .code-card, .callout-orange, .cta-band.
-.eco-hero__inner { padding: 96px 0 84px; }
-.eco-family { display: flex; flex-direction: column; padding: 28px 30px; text-decoration: none; transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
-.eco-family:hover { border-color: var(--blue-strong); box-shadow: var(--shadow-hover); }
-.eco-family__top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
-.eco-family__logo { height: 34px; width: auto; max-width: 170px; object-fit: contain; }
-.eco-family__badge { flex-shrink: 0; font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.04em; color: var(--text-muted); background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 4px 12px; white-space: nowrap; }
-.eco-family__desc { font-size: 1rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 18px; }
-.eco-family__chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
-.eco-family__go { margin-top: auto; font-family: var(--font-mono); font-size: var(--fs-sm); font-weight: 600; color: var(--blue-strong); }
-
-// Community page (/community/). Reuses .ink-hero, .hero-stats, .card-grid + .ui-card, .callout-orange, .cta-band.
-.comm-hero__inner { padding: 96px 0 84px; }
-
-.comm-contributors { border: 1px solid var(--border); border-radius: var(--radius-xl); background: var(--paper); padding: 28px; text-align: center; }
-.comm-contributors img { max-width: 100%; height: auto; }
-.comm-more { display: inline-block; margin-top: 20px; font-family: var(--font-mono); font-size: var(--fs-sm); font-weight: 600; color: var(--blue-strong); text-decoration: none; }
-.comm-more:hover { color: var(--ink); }
-
-.comm-vendor { display: flex; flex-direction: column; align-items: flex-start; padding: 28px 26px; text-decoration: none; transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
-.comm-vendor:hover { border-color: var(--blue-strong); box-shadow: var(--shadow-hover); }
-.comm-vendor__logo { height: 44px; width: auto; max-width: 160px; object-fit: contain; margin-bottom: 18px; }
-.comm-vendor__title { font-size: 1.1rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
-.comm-vendor__desc { font-size: 0.95rem; line-height: 1.55; color: var(--text-muted); margin: 0; }
-
 @media (max-width: 767.98px) {
     .cta-band-wrap { padding: 56px 24px 72px; }
     .cta-band { padding: 44px 28px; }
     .faq-section { padding: var(--section-py-mobile) 24px 0; }
-    .faq-page { padding-top: 40px; }
 }

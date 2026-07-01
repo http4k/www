@@ -1,3 +1,4 @@
+// ASCII only in these files - a non-ASCII char makes Dart Sass emit a BOM that breaks :root.
 @import "tokens";
 @import "bootstrap";
 
@@ -6,7 +7,7 @@
 
 @import "header";
 
-// Folded from static/css/*.css - site overrides last so they win over Bootstrap.
+// site overrides load after Bootstrap so they win over it.
 @import "site";
 @import "sections";
 @import "landing";
@@ -24,6 +25,10 @@
 @import "overview";
 @import "howto";
 @import "tutorial";
+@import "faq";
+@import "quickstart";
+@import "ecosystem";
+@import "community";
 @import "error";
 @import "search";
 
