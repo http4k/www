@@ -103,6 +103,12 @@
     font-weight: 600;
 }
 
+// Interactive-card hover: border + lift. Included by kicker-card / eco-family / comm-vendor.
+@mixin card-hover {
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    &:hover { border-color: var(--blue-strong); box-shadow: var(--shadow-hover); }
+}
+
 .ui-card { background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius-lg); }
 
 // Dark rounded panel (training delivery, performance honest-bit). Pair with
@@ -151,8 +157,7 @@
 
 // Kicker card: mono kicker + title + desc (+ optional arrow), on .ui-card in a
 // .card-grid. Title/desc match by class OR bare h3/p (community/quickstart/security/overview).
-.kicker-card { display: flex; flex-direction: column; padding: 24px 26px; text-decoration: none; transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
-.kicker-card:hover { border-color: var(--blue-strong); box-shadow: var(--shadow-hover); }
+.kicker-card { display: flex; flex-direction: column; padding: 24px 26px; text-decoration: none; @include card-hover; }
 .kicker-card__kick { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.08em; color: var(--blue-strong); margin-bottom: 12px; }
 .kicker-card__title, .kicker-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
 .kicker-card__title a, .kicker-card h3 a { color: var(--blue-strong); text-decoration: none; }

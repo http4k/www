@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="faq-page">
-    <header class="faq-page__head">
+    <header>
         {{ partial "shared/eyebrow.html" "faq" }}
         <h1 class="reading__title">{{ .Title }}</h1>
         {{ with .Params.description }}<p class="reading__lede">{{ . }}</p>{{ end }}

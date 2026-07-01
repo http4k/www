@@ -1,12 +1,10 @@
 .learn-section { padding-block: 0 40px; max-width: 1000px; }
 
-// Diataxis diagram card
 .diataxis-intro { font-size: var(--fs-lead); line-height: 1.6; color: var(--text-muted); margin: 0 0 28px; max-width: var(--lede); }
 .diataxis { border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 30px; background: #f8fafd; }
 .diataxis img { display: block; width: 100%; height: auto; max-width: 760px; margin: 0 auto; }
 .diataxis-note { font-size: 0.875rem; line-height: 1.6; color: var(--text-faint); margin: 16px 0 40px; }
 
-// Four signpost cards
 .signposts { display: flex; flex-direction: column; gap: 16px; }
 
 .signpost {
@@ -30,7 +28,6 @@
 .signpost__body p { font-size: 1rem; line-height: 1.65; color: #26323f; margin: 0 0 16px; }
 .signpost__more { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--blue-strong); }
 
-// Contribute strip
 .learn-contribute {
     margin-top: 40px;
     margin-bottom: var(--section-py);

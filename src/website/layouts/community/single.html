@@ -1,8 +1,8 @@
 {{ define "main" }}
 
-<section class="ink-hero comm-hero">
+<section class="ink-hero">
     <div class="ink-hero__glow"></div>
-    <div class="container comm-hero__inner">
+    <div class="container">
         <div class="eyebrow">// COMMUNITY</div>
         <h1 class="hero-title">{{ .Title }}</h1>
         <p class="hero-sub">{{ .Params.description }}</p>
@@ -53,7 +53,7 @@
             <h2>The tools that keep us building.</h2>
             <p class="section-lede">A handful of generous vendors support the project with free access to their excellent tools. We're grateful - and happy to say so.</p>
         </div>
-        <div class="card-grid card-grid--3">
+        <div class="card-grid">
             {{ range .Params.vendors }}
             <a class="ui-card comm-vendor" href="{{ .link }}">
                 <img class="comm-vendor__logo" src="{{ .image }}" alt="{{ .vendor }}" loading="lazy">

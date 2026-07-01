@@ -203,7 +203,7 @@
     color: var(--text);
 
     &::before {
-        content: "\2713"; // ✓ - escaped so the SCSS stays ASCII (non-ASCII makes Dart Sass emit a BOM that breaks :root)
+        content: "\2713"; // escaped so the SCSS stays ASCII (non-ASCII makes Dart Sass emit a BOM that breaks :root)
         position: absolute;
         left: 0;
         color: var(--green);
@@ -428,11 +428,11 @@ $code-dim:    #5E7387;
 .code-card__tag--green { color: var(--green); }
 
 .tok-key  { color: var(--blue); }   // val, typealias, fun
-.tok-str  { color: #7FD08A; }       // strings
-.tok-com  { color: $code-dim; }     // comments
-.tok-num  { color: #D98E73; }       // numbers
+.tok-str  { color: #7FD08A; }
+.tok-com  { color: $code-dim; }
+.tok-num  { color: #D98E73; }
 .tok-type { color: #E2B36B; }       // type names
-.tok-ok   { color: #2FB36A; }       // ✓ / success
+.tok-ok   { color: #2FB36A; }       // success
 
 // blinking cursor - steady when reduced motion is requested
 .code-cursor {

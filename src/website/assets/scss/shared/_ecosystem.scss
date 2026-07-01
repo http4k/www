@@ -1,7 +1,6 @@
 // /ecosystem/ landing: family cards. Reuses .ink-hero, .hero-stats, .card-grid,
 // .ui-card, .chip, .check-list, .code-card, .callout-orange, .cta-band.
-.eco-family { display: flex; flex-direction: column; padding: 28px 30px; text-decoration: none; transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
-.eco-family:hover { border-color: var(--blue-strong); box-shadow: var(--shadow-hover); }
+.eco-family { display: flex; flex-direction: column; padding: 28px 30px; text-decoration: none; @include card-hover; }
 .eco-family__top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
 .eco-family__logo { height: 34px; width: auto; max-width: 170px; object-fit: contain; }
 .eco-family__badge { flex-shrink: 0; font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.04em; color: var(--text-muted); background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 4px 12px; white-space: nowrap; }
