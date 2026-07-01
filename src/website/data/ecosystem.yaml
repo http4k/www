@@ -29,7 +29,7 @@
 - title: http4k Pro
   description: Enterprise-ready capabilities for teams building scalable, mission-critical applications. Commercially licensed extensions enabling enhanced security, monitoring, and reliability features. Pro modules are available to license standalone or are automatically included as part of the **[http4k Enterprise Edition](/enterprise)**.
   image: "/images/pro.png"
-  url: /pro
+  ref: pro
   family: true
   badge: Commercial
   tagline: Commercially-licensed power tools for teams running http4k for real - free for individuals and small teams.

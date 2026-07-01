@@ -13,6 +13,7 @@
 .product-hero .navbar .nav-link:hover { color: #fff !important; }
 
 .product-features { background: var(--off-white); }
+.product-features .section-rail { padding-bottom: var(--section-py); }
 .product-feature-grid { gap: 18px; }
 .product-feature { border-radius: var(--radius-lg); padding: 26px 24px; }
 .product-feature__dash { width: 40px; height: 3px; border-radius: var(--radius-sm); margin: 12px 0; background: var(--blue-strong); }
@@ -53,7 +54,8 @@
 .product-subscribe p { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); margin: 0 0 20px; }
 .product-subscribe p a { color: var(--blue-dark); }
 
-.download-stack__panel { display: none; flex-direction: column; align-items: center; padding: 40px 32px; text-align: center; background: var(--paper); border: 1px solid var(--border); box-shadow: var(--shadow); border-radius: var(--radius-lg); }
+.download-stack__panel { display: flex; flex-direction: column; align-items: center; padding: 40px 32px; text-align: center; background: var(--paper); border: 1px solid var(--border); box-shadow: var(--shadow); border-radius: var(--radius-lg); }
+.download-stack__form { display: none; } // ponytail: email signup parked - show the download by default
 .download-stack__icon { font-size: 3rem; line-height: 1; margin-bottom: 16px; animation: download-stack-pop 0.6s ease-out; }
 @keyframes download-stack-pop { 0% { transform: scale(0); opacity: 0; } 60% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); } }
 .download-stack__panel h2 { margin-bottom: 12px; }

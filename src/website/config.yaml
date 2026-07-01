@@ -193,11 +193,6 @@ menus:
       url: /enterprise/
       parent: enterprise
       weight: 51
-    - name: enterprise-lts
-      title: LTS Support
-      url: /lts-support/
-      parent: enterprise
-      weight: 52
     - name: enterprise-consulting
       title: Consulting
       url: /consulting/

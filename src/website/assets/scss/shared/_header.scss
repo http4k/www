@@ -17,6 +17,13 @@
 // nav CTA button - compact variant of .cta-btn for the top bar (white + dark navs)
 .nav-cta { height: 38px; padding: 0 16px; font-size: var(--fs-sm); margin-left: 6px; }
 
+// anchor-scroll targets (#id links) must clear the ~66px sticky .site-header.
+[id] { scroll-margin-top: 84px; }
+
+// external dropdown links get a small north-east arrow (\2197). Dropdown items use
+// the raw .URL, so [href^="http"] matches only external ones (not internal /paths).
+.dropdown-item[href^="http"]::after { content: "\2197"; margin-left: 5px; font-size: 0.8em; opacity: 0.55; vertical-align: 1px; }
+
 // Logo: white wordmark on dark navs (landing / product / ink-hero pages), the
 // full-colour wordmark on the light .site-header. Two imgs toggled by context.
 .nav-logo--colour { display: none; }
