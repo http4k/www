@@ -29,9 +29,7 @@
                     <span class="code-card__tag code-card__tag--blue">an HttpHandler</span>
                 </div>
                 <div class="code-card__body"><pre><span class="tok-com">// a server takes a request, returns a response</span>
-<span class="tok-key">val</span> server: HttpHandler = { req -&gt;
-    Response(OK).body(<span class="tok-str">"pong"</span>)
-}
+<span class="tok-key">val</span> server: HttpHandler = { req -&gt; Response(OK).body(<span class="tok-str">"pong"</span>) }
 server(Request(GET, <span class="tok-str">"/ping"</span>))</pre></div>
             </div>
         </div>
