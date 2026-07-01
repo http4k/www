@@ -95,7 +95,7 @@
     &:nth-child(even) { background: var(--off-white); }
 }
 
-.tape__cell { padding: 16px 24px; }
+.tape__cell { padding: 16px 24px; overflow-wrap: anywhere; }
 .tape__feature { color: var(--text); font-weight: 500; }
 .tape__h4k {
     color: var(--green);
