@@ -9,9 +9,9 @@ faq:
       - q: Is http4k a library or a framework?
         a: |
           Neither! Although it has many of the features of a framework, the http4k ecosystem is a generalised **Toolkit** which enables the creation of HTTP-based applications. It is incredibly unopinionated and has been designed to not enforce design decisions on the API user. We use http4k for applications both large and small, using no DI framework.
-      - q: Is http4k currently used in production?
+      - q: What kind of systems run on http4k?
         a: |
-          Absolutely - and has been for years. We have built and run many production systems using http4k across many different industries. The biggest known deployment serves the global site traffic (rank ~700 globally) for a large academic publisher, comfortably handling tens of millions of requests per day on a handful of nodes. The library is downloaded millions of times a month from Maven Central, and appears in the [Thoughtworks Tech Radar](https://www.thoughtworks.com/radar/languages-and-frameworks/http4k) alongside other proven technologies used on Thoughtworks-delivered projects.
+          Mission-critical ones. http4k powers digital banks, financial risk systems and high-traffic platforms in production, with adoption across every industry sector - and has done for years. The biggest known deployment serves the global site traffic (rank ~700 globally) for a large academic publisher. http4k libraries are downloaded millions of times a month from Maven Central, and http4k was included in the [Thoughtworks Tech Radar](https://www.thoughtworks.com/radar/languages-and-frameworks/http4k) alongside other proven technologies used on Thoughtworks-delivered projects.
 
           If you're running http4k in production and would like to be listed on the site as an adopter, please get in touch.
       - q: Does http4k support an Async model? I need webscale!
