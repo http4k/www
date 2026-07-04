@@ -71,9 +71,11 @@
         timer = setInterval(function () { select((current + 1) % count); }, 6000);
     }
 
-    var section = tabs.closest(".section") || tabs;
-    section.addEventListener("mouseenter", stop);
-    section.addEventListener("mouseleave", start);
+    var hoverZone = document.querySelector(".spotlight__panels");
+    if (hoverZone) {
+        hoverZone.addEventListener("mouseenter", stop);
+        hoverZone.addEventListener("mouseleave", start);
+    }
 
     start();
 })();
