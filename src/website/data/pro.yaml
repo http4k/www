@@ -45,7 +45,7 @@ modules:
     link: https://hotreload.http4k.org
     image: hotreload.webp
     available: true
-    description: Hot Reload automatically restarts your server after code changes, saving you time during development
+    description: Hot Reload restarts your server the moment your code changes - no more manual restarts
     prompt: "A clean isometric illustration of a minimalist laptop with a circular refresh arrow hovering above the screen, beside a small code editor window. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
   - name: Storyboard
     link: https://storyboard.http4k.org

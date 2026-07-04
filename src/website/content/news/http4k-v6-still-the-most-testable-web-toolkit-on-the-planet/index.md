@@ -158,7 +158,7 @@ from the serverside. Expect more of this in the future!
 
 #### Developer tooling
 
-http4k has always been a developer-first framework and we are always looking for ways to make the developer experience
+http4k has always been a developer-first toolkit and we are always looking for ways to make the developer experience
 better. The new `http4k-tools` namespace is the new home for all developer tooling modules, and we've promoted
 `http4k-tools-traffic-capture` as the first module in this space - it allows you to capture and replay HTTP traffic
 to/from a folder structure or any other source you can think of!

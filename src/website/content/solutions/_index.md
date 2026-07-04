@@ -1,10 +1,10 @@
 ---
 title: Solutions
-description: How to make the most of http4k, helped by the experts who know it best.
+description: Make the most of http4k, with the experts who know it best.
 email: solutions@http4k.org
 top:
     - title: Scale up your http4k expertise
-      description: On-demand training developed and curated by the maintainers of http4k, designed to upskill your team at scale.
+      description: On-demand training developed and curated by the maintainers of http4k, upskilling your team at scale.
     - title: Modernize your apps with confidence
       description: Upgrade your applications to the latest version of http4k, or architect entirely new projects with our expert guidance.
     - title: World-class support for your http4k stack

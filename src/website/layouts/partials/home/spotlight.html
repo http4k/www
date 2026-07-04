@@ -46,13 +46,35 @@
     if (!tabs) return;
     var chips = tabs.querySelectorAll(".chip");
     var panels = document.querySelectorAll(".spotlight__panel");
-    chips.forEach(function (c) {
+    var count = chips.length;
+    var current = 0;
+
+    function select(i) {
+        current = i;
+        chips.forEach(function (x, j) { x.classList.toggle("active", j === i); });
+        panels.forEach(function (p) { p.classList.toggle("is-active", p.getAttribute("data-index") === String(i)); });
+    }
+
+    chips.forEach(function (c, i) {
         c.addEventListener("click", function () {
-            var i = c.getAttribute("data-index");
-            chips.forEach(function (x) { x.classList.remove("active"); });
-            c.classList.add("active");
-            panels.forEach(function (p) { p.classList.toggle("is-active", p.getAttribute("data-index") === i); });
+            select(i);
+            start();
         });
     });
+
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var timer = null;
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function start() {
+        stop();
+        if (reduceMotion || count < 2) return;
+        timer = setInterval(function () { select((current + 1) % count); }, 6000);
+    }
+
+    var section = tabs.closest(".section") || tabs;
+    section.addEventListener("mouseenter", stop);
+    section.addEventListener("mouseleave", start);
+
+    start();
 })();
 </script>

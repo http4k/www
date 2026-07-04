@@ -1,5 +1,5 @@
 - title: http4k Core
-  description: The core ecosystem is the foundation of the http4k project, providing the **essential building blocks** for creating HTTP servers and clients. This ecosystem is designed to be lightweight, efficient, and testable, making it ideal for building reliable, high-performance applications.
+  description: The core ecosystem is the foundation of the http4k project, providing the **essential building blocks** for creating HTTP servers and clients. This ecosystem is lightweight, efficient and testable - ideal for building reliable, high-performance applications.
   image: "/images/logo-http4k.png"
   ref: http4k
   family: true
@@ -7,7 +7,7 @@
   tagline: "The foundation: server-as-a-function, routing, typesafe lenses, clients, formats and a testing toolkit. Zero dependencies, runs on any backend."
   chips: [Servers, Clients, Routing, OpenAPI, Testing, WebSockets]
 - title: http4k AI
-  description: http4k AI is a **collection of libraries and tools** that enable developers to integrate AI capabilities into their applications. It provides a simple and intuitive API for working with AI models, making it easy to add intelligent features to your applications.
+  description: http4k AI is a **collection of libraries and tools** that enable developers to integrate AI capabilities into their applications. It provides a simple and intuitive API for working with AI models, so you can add intelligent features to your applications.
   image: "/images/logo-ai.png"
   ref: ai
   family: true
@@ -15,7 +15,7 @@
   tagline: Lightweight adapters for LLM providers and AI services - with full Fake implementations so you can test AI integrations offline, deterministically and for free.
   chips: [OpenAI, MCP, A2A, LLM adapters, Fakes]
 - title: http4k Connect
-  description: http4k Connect is designed to facilitate seamless **integration with external systems and services** from the client viewpoint. It is optimised for zero-reflection, ideal for native and serverless use. It ships with in-memory fakes for testing without Docker and keeps dependencies minimal for small binary sizes.
+  description: http4k Connect provides seamless **integration with external systems and services** from the client viewpoint. It is optimised for zero-reflection, ideal for native and serverless use. It ships with in-memory fakes for testing without Docker and keeps dependencies minimal for small binary sizes.
   image: "/images/logo-connect.png"
   ref: connect
   family: true

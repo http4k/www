@@ -5,7 +5,7 @@ type: overview
 description: Overview of why we created http4k, the problems it solves, and the core concepts
 ---
 
-http4k is a Kotlin-based HTTP toolkit which is designed to be simple, lightweight, and easy to use. It is built on functional programming principles, and is designed to be testable and easy to reason about. Since it's release it has been used in production by a vast number of companies, and has been used to build a wide range of applications,  from simple microservices to complex distributed systems, garnered millions of downloads per month and powers several globally significant websites.
+http4k is a Kotlin-based HTTP toolkit that is simple, lightweight, and easy to use. It is built on functional programming principles, and is testable and easy to reason about. Since it's release it has been used in production by a vast number of companies, and has been used to build a wide range of applications,  from simple microservices to complex distributed systems, garnered millions of downloads per month and powers several globally significant websites.
 
 The basis of http4k is inspired by the ["Your Function as a Server"](https://monkey.org/~marius/funsrv.pdf) paper produced at Twitter in 2013, which stated that all systems boundaries could be modelled as a simple function which takes a request and returns a response. This idea is the core of http4k, and is the basis for all of the libraries and tools that have been built around it. We have refined the generic concept presented in the paper to be specific to the HTTP protocol, and have built a set of tools and libraries that make it easy to build HTTP services in a functional way. See the [concepts](/ecosystem/http4k/concepts/http/) pages for more information.
 

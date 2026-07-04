@@ -6,8 +6,8 @@ type: "product"
 subdomain: hotreload
 layout: "product"
 tier: pro
-tagline: Save time on server restarts!
-description: http4k Hot Reload automatically restart your server after code changes, saving you time during development
+tagline: No more manual server restarts.
+description: http4k Hot Reload restarts your server the moment your code changes - no more manual restarts
 docs_link: https://http4k.org/ecosystem/http4k/reference/hot_reload/
 navigation:
     -   name: docs
@@ -25,7 +25,7 @@ features:
     - title: No more<br>stop/starts
       icon: testability
       colour: indigo
-      description: This tool automatically restarts the server when it detects a code change, resulting in fewer steps in your development workflow.
+      description: This tool restarts the server the instant it detects a code change, cutting the manual steps out of your development workflow.
     - title: Tiny<br> overhead
       icon: supportive
       colour: pink

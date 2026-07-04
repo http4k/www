@@ -8,15 +8,15 @@ faq:
     items:
       - q: Is http4k a library or a framework?
         a: |
-          Neither! Although it has many of the features of a framework, we consider the http4k ecosystem to be a generalised **Toolkit** which enables the creation of HTTP-based applications. It is incredibly unopinionated and has been designed to not enforce design decisions on the API user. We use http4k for applications both large and small, using no DI framework.
+          Neither! Although it has many of the features of a framework, the http4k ecosystem is a generalised **Toolkit** which enables the creation of HTTP-based applications. It is incredibly unopinionated and has been designed to not enforce design decisions on the API user. We use http4k for applications both large and small, using no DI framework.
       - q: Is http4k currently used in production?
         a: |
-          Absolutely! Whilst overall stats are hard to come by, we have built and run many production systems using http4k in many different industries. The biggest known usage of http4k is serving the global site traffic (rank ~700 globally) for a large academic publisher, easily serving 10s of millions of requests per day on a few nodes. At last check, the library was being downloaded millions of times a month from Maven Central. http4k also appears in the [Thoughtworks Tech Radar](https://www.thoughtworks.com/radar/languages-and-frameworks/http4k), which covers useful and upcoming technologies used in Thoughtworks-delivered projects.
+          Absolutely - and has been for years. We have built and run many production systems using http4k across many different industries. The biggest known deployment serves the global site traffic (rank ~700 globally) for a large academic publisher, comfortably handling tens of millions of requests per day on a handful of nodes. The library is downloaded millions of times a month from Maven Central, and appears in the [Thoughtworks Tech Radar](https://www.thoughtworks.com/radar/languages-and-frameworks/http4k) alongside other proven technologies used on Thoughtworks-delivered projects.
 
           If you're running http4k in production and would like to be listed on the site as an adopter, please get in touch.
       - q: Does http4k support an Async model? I need webscale!
         a: |
-          Currently there is no direct coroutine support in http4k. However, with the advent of project Loom on the JVM, we get a lot of the benefits of async model out of the box using Virtual Threads without the need to complicate the API with the use of suspend etc. As for scaling arguments, see the above answer relating to production usage, or checkout the [benchmark results](/performance/) to see how http4k compares to other JVM-based sync and async web libraries.
+          http4k embraces project Loom's Virtual Threads on the JVM, giving you the benefits of an async model out of the box - without complicating the API with the use of suspend etc. That's deliberate: Loom makes direct coroutine support unnecessary. As for scaling, see the above answer relating to production usage, or checkout the [benchmark results](/performance/) to see how http4k compares to other JVM-based sync and async web libraries.
   - category: API
     items:
       - q: "I'm attempting to build HTTP messages using the API, but changes don't affect the object (e.g. calling `request.body(\"hello\")`)?"

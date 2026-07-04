@@ -1,7 +1,7 @@
 ---
 title: http4k Pro modules
 type: pro
-description: "The http4k Pro modules are a set of premium features and tools designed to help engineers solve recurring problems. These modules are designed to save you time and effort when building your http4k applications and provide production-ready implementations that help teams deploy http4k applications in regulated and high-volume environments."
+description: "The http4k Pro modules are a set of premium features and tools that solve recurring problems. They save you time and effort building your http4k applications, and provide production-ready implementations for teams deploying http4k in regulated and high-volume environments."
 faq:
   - question: "How are http4k Pro modules different from the http4k Community modules?"
     answer: "Pro modules are commercially licensed extensions developed specifically to solve common enterprise use cases. They are distributed under **org.http4k.pro** Maven coordinate group. You can find details of the http4k Commercial License [here](/commercial-license/)."
