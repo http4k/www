@@ -45,7 +45,7 @@ fun `mpp mcp filter example`() {
         )
     )
 
-    val verifier = MppVerifier { credential ->
+    val verifier = MppVerifier { _, credential ->
         Success(
             Receipt(
                 status = ReceiptStatus.success,
