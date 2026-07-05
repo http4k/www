@@ -43,7 +43,7 @@ objects, including custom Lens methods for each library so that JSON node object
 
 ### Notes on individual module choice
 - As a default, we recommend using **Moshi** as an engine for JSON marshalling, as it is the most modern, lightweight and Kotlin-friendly library with automarshalling capabilities. It also has the option of [Kotshi](https://github.com/ansman/kotshi), which allows the compile-time generation of adapters for Kotlin data classes.
-- If you are using OpenAPI contracts, the only current option is to use **Jackson**.
+- If you are using OpenAPI contracts and want complete auto-generated documentation, the only current option is to use **Jackson**. **Kondor** provides documentation for manually registered adapters.
 - **Kondor** is an excellent choice for manual mapping of classes to JSON, and does not use reflection.
 - For the simplest use-cases, **Argo** is a good lightweight non-reflection choice, although it's API is Java-first.
 - **GSON** support is provided in http4k, but is not recommended due to being mostly unsupported.
