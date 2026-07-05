@@ -22,7 +22,8 @@ import org.http4k.security.MppSecurity
 import java.time.Instant
 
 fun `using MppSecurity`() {
-    val verifier = MppVerifier { credential ->
+    val verifier = MppVerifier { received, credential ->
+        require(received.id == credential.challenge.id)
         Success(
             Receipt(
                 status = ReceiptStatus.success,

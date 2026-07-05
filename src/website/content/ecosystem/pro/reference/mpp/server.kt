@@ -1,5 +1,6 @@
 package content.ecosystem.pro.reference.mpp
 
+import dev.forkhandles.result4k.Failure
 import dev.forkhandles.result4k.Success
 import org.http4k.connect.mpp.MppVerifier
 import org.http4k.connect.mpp.model.Challenge
@@ -32,7 +33,9 @@ fun `using the server filter`() {
         )
     )
 
-    val verifier = MppVerifier { credential ->
+    val verifier = MppVerifier { received, credential ->
+        require(received.id == credential.challenge.id)
+
         Success(
             Receipt(
                 status = ReceiptStatus.success,
