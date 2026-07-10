@@ -8,7 +8,7 @@ layout: "product"
 tier: pro
 tagline: No more manual server restarts.
 description: http4k Hot Reload restarts your server the moment your code changes - no more manual restarts
-docs_link: https://http4k.org/ecosystem/http4k/reference/hot_reload/
+docs_link: https://http4k.org/ecosystem/pro/reference/hot_reload/
 navigation:
     -   name: docs
         title: Documentation

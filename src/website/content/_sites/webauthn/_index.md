@@ -7,7 +7,7 @@ layout: "product"
 type: "product"
 subdomain: webauthn
 tier: pro
-docs_link: https://http4k.org/ecosystem/http4k/reference/webauthn/
+docs_link: https://http4k.org/ecosystem/pro/reference/webauthn/
 description: "**http4k WebAuthn** gives your users phishing-resistant passwordless login  with FIDO2 passkeys - the complete registration and authentication ceremonies, handled for you and fully testable."
 navigation:
     -   name: docs
