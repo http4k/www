@@ -86,7 +86,7 @@ The threat picture only goes one way. Supply-chain incidents in the JVM ecosyste
 
 And while we're at it: **this work costs real money.** Tokens are not free (as in beer). Maintainer triage time isn't free. The nine years of attention that put us in a position to run the pass at all isn't free either. If your company runs on open-source libraries you don't pay for, and your security posture quietly depends on those libraries staying audited - someone is subsidising you, and it isn't us volunteering for it. **Fund the OSS you depend on.** The maintainers will spend it on exactly this kind of work.
 
-LLM-assisted review isn't a silver bullet. It produces noise (the false-positive rate on the first pass was real), it doesn't replace maintainer judgment (a lot of our triage was deciding what *wasn't* a CVE), and it doesn't audit anything you don't aim it at. As a force multiplier on the security review you were already going to do - or, more honestly, *should have been doing* - it's earning its keep. A small Kotlin library born out of the London XP community publishing its homework should be the bare minimum here, not the high-water mark.
+LLM-assisted review isn't a silver bullet. It produces noise (the false-positive rate on the first pass was real), it doesn't replace maintainer judgment (a lot of our triage was deciding what *wasn't* a CVE), and it doesn't audit anything you don't aim it at. As a force multiplier on the security review you were already going to do - or, more honestly, *should have been doing* - it's earning its keep. A project born out of the London XP community publishing its homework should be the bare minimum here, not the high-water mark.
 
 ## What's next
 

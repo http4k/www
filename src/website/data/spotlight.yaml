@@ -1,17 +1,14 @@
-- tab: Modules
-  eyebrow: FOUR ECOSYSTEMS
-  title: More than just another HTTP library
-  body: "Servers, clients, serverless, formats, templates, security, testing, AI agents and cloud connectors - 200+ modules across Core, AI, Connect and Pro, all built on one functional idea."
-  link: { text: Explore the ecosystem, url: /ecosystem/ }
+- tab: News
+  eyebrow: LATEST FROM THE TEAM
+  title: "Publishing our homework: what running http4k responsibly actually takes"
+  body: "http4k hit the OpenSSF Best Practices silver badge at 100%. Here is the unglamorous work behind it - reporting, change control, signed releases, dependency hygiene - and the one gold criterion we deliberately skip."
+  link: { text: Read the news, url: /news/publishing-our-homework/ }
   card:
-    title: "200+ modules · one BOM"
+    title: "news · 2026"
     lines:
-      - { text: "http4k-core" }
-      - { text: "http4k-connect-amazon-s3" }
-      - { text: "http4k-ai-mcp-sdk" }
-      - { text: "http4k-security-oauth" }
-      - { text: "http4k-format-jackson" }
-      - { text: "http4k-testing-approval" }
+      - { text: "OpenSSF silver badge · 100%", tone: ok }
+      - { text: "signed releases, threat model, CVD", tone: dim }
+      - { text: "trunk-based by choice", tone: ok }
 
 - tab: Supply Chain Security
   eyebrow: "SUPPLY CHAIN · EU CRA 2026"
@@ -55,14 +52,17 @@
       - { text: "Signed licence reports", tone: ok }
       - { text: "All Pro modules included", tone: ok }
 
-- tab: News
-  eyebrow: LATEST FROM THE TEAM
-  title: "Tale of the tape: Claude vs http4k"
-  body: "We ran a proactive, LLM-assisted security audit across nine years of code. Several CVEs surfaced - fixed and disclosed in the open. Here is how it went."
-  link: { text: Read the news, url: /news/tale-of-the-tape-claude-vs-http4k/ }
+- tab: Ecosystem
+  eyebrow: FOUR ECOSYSTEMS
+  title: More than just another HTTP library
+  body: "Servers, clients, serverless, formats, templates, security, testing, AI agents and cloud connectors - 200+ modules across Core, AI, Connect and Pro, all built on one functional idea."
+  link: { text: Explore the ecosystem, url: /ecosystem/ }
   card:
-    title: "news · 2026"
+    title: "200+ modules · one BOM"
     lines:
-      - { text: "proactive LLM security audits", tone: dim }
-      - { text: "public disclosure, full timelines", tone: dim }
-      - { text: "first CVE: a juicy 9.8", tone: ok }
+      - { text: "http4k-core" }
+      - { text: "http4k-connect-amazon-s3" }
+      - { text: "http4k-ai-mcp-sdk" }
+      - { text: "http4k-security-oauth" }
+      - { text: "http4k-format-jackson" }
+      - { text: "http4k-testing-approval" }
