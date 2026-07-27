@@ -17,7 +17,7 @@ faq:
     -   question: "How do I get access to the http4k Enterprise Repository?"
         answer: Repository credentials are included with your http4k Enterprise Edition subscription. Contact enterprise@http4k.org to get started.
     -   question: "What SLSA level do http4k artifacts achieve?"
-        answer: All artifacts achieve SLSA Build Level 2 as standard. SLSA Level 3 provenance with build platform isolation is available on request for customers with enhanced compliance requirements.
+        answer: All artifacts achieve SLSA Build Level 2 as standard, with the signing step isolated from the build. Full SLSA Level 3 - non-falsifiable provenance on dedicated, hardened build infrastructure - is available as a bespoke engagement for customers with enhanced compliance requirements.
     -   question: "Where do I get the public key for verification?"
         answer: The http4k signing keys are published at https://http4k.org/.well-known/cosign-keys.json. The http4k Verify plugin downloads this automatically. For manual verification, extract the public key from the key list document.
     -   question: "Are community (org.http4k) artifacts also covered?"
@@ -62,11 +62,15 @@ Each provenance attestation follows the [in-toto Statement v1](https://in-toto.i
 - The **build invocation ID** for full traceability
 - **SHA-256 digests** of all subject artifacts
 
+## Build Isolation
+
+Provenance signing runs in a dedicated CI job, separate from the job that compiles the code. The build job holds no signing keys; a separate signing job - running no build logic - signs the artifacts and publishes them. This defence-in-depth reduces the risk of a compromised build tampering with signatures or exfiltrating signing material.
+
 ## SLSA Level 3 Provenance
 
-All http4k Enterprise Edition artifacts are published with **SLSA Level 2** provenance as standard. For organisations with enhanced compliance requirements, we also offer **SLSA Level 3** provenance on a per-customer basis.
+All http4k Enterprise Edition artifacts are published with **SLSA Build Level 2** provenance as standard, generated on hosted GitHub Actions infrastructure with signing isolated from the build (see Build Isolation, above).
 
-SLSA Level 3 adds **build platform isolation guarantees** - artifacts are built on hardened, tamper-resistant CI infrastructure where the build process is fully isolated and cannot be influenced by project maintainers or external actors. This provides the highest level of supply chain assurance available.
+**SLSA Level 3** raises the bar further, requiring *non-falsifiable* provenance produced by a build platform whose signing identity is unreachable by the build itself. For organisations with enhanced compliance requirements, we offer L3 provenance as a **bespoke engagement** on dedicated, hardened build infrastructure.
 
 To discuss SLSA Level 3 provenance for your organisation, [contact us](mailto:enterprise@http4k.org).
 
