@@ -1,4 +1,13 @@
 talks:
+    - title: "How Kotlin Powers Functional Design: MCP Edition"
+      link: https://www.youtube.com/watch?v=Xmkl7Y3lwUk
+      thumbnail: https://i3.ytimg.com/vi/Xmkl7Y3lwUk/maxresdefault.jpg
+      date: 2025-05-23
+      extra_links:
+          - title: "slides"
+            link: https://speakerdeck.com/daviddenton/how-kotlin-powers-functional-design-mcp-edition
+          - title: "code"
+            link: https://kotlinconf.http4k.org/
     - title: "Full Stream Ahead: Breaking the Protocol Barrier with http4k"
       link: https://www.youtube.com/watch?v=vewgb-vyJME
       thumbnail: https://i3.ytimg.com/vi/vewgb-vyJME/maxresdefault.jpg
