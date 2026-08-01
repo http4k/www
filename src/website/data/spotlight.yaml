@@ -10,6 +10,18 @@
       - { text: "signed releases, threat model, CVD", tone: dim }
       - { text: "trunk-based by choice", tone: ok }
 
+- tab: Showcase
+  eyebrow: "IN ACTION · TALK"
+  title: "How Kotlin Powers Functional Design: MCP Edition"
+  body: "See http4k's functional approach applied to the Model Context Protocol - building agent tooling in Kotlin, live. Talk, slides and runnable code."
+  link: { text: Watch the talk, url: "https://www.youtube.com/watch?v=Xmkl7Y3lwUk" }
+  card:
+    title: "talk · 2025"
+    lines:
+      - { text: "MCP Edition · functional design", tone: ok }
+      - { text: "slides · speakerdeck", tone: dim }
+      - { text: "code · kotlinconf.http4k.org", tone: dim }
+
 - tab: Supply Chain Security
   eyebrow: "SUPPLY CHAIN · EU CRA 2026"
   title: Prove your dependencies before they compile
