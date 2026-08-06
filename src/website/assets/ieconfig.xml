@@ -6,7 +6,7 @@
           <square150x150logo src="{{ .mediumtile.Permalink }}"/>
           <wide310x150logo src="{{ .widetile.Permalink }}"/>
           <square310x310logo src="{{ .largetile.Permalink }}"/>
-          <TileColor>{{ site.Params.themeColor }}</TileColor>
+          <TileColor>{{ .themeColor }}</TileColor>
         </tile>
       </msapplication>
     </browserconfig>
