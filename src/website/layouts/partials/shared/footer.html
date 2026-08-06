@@ -3,7 +3,10 @@
         <div class="row pb-3 text-start text-xl-start">
             <div class="col-md-6 col-lg-3" style="width: 200px">
                 <a class="p-0" href="{{ .Site.BaseURL }}">
-                    <img src="{{ .Site.Params.LogoSvg }}" alt="logo" width="50%"/>
+                    {{/* Reuses the navbar's scaled white logo - already cached by the time the
+                         footer paints. images/logo.svg is a 37KB base64 bitmap in SVG clothing. */}}
+                    {{- $logo := partial "utilities/scaled-image.html" (dict "file" "logo.png" "width" 256) -}}
+                    <img src="{{ $logo.RelPermalink }}" alt="logo" width="50%" loading="lazy"/>
                 </a>
                 <p></p>
                 <ul class="list-unstyled">

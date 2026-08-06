@@ -1,0 +1,6 @@
+{{/* Returns a right-sized copy of an assets/images source, generated at build time.
+     The originals in static/images are left untouched - the logos ship at up to 3462px
+     wide for a 128px slot, which was 112KB of navbar logo on every page.
+     Params: file (name under assets/images), width (target px, use 2x the CSS size). */}}
+{{- $src := resources.Get (printf "images/%s" .file) -}}
+{{- return $src.Resize (printf "%dx webp q90" .width) -}}
