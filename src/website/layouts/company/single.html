@@ -44,10 +44,10 @@
             <p class="founder-card__bio">{{ .description | markdownify }}</p>
             {{ with .links }}
             <ul class="founder-card__links">
-                {{ with .clockwork }}<li><a href="{{ . }}" aria-label="Profile"><i class="bi bi-person-bounding-box"></i></a></li>{{ end }}
-                {{ with .linkedin }}<li><a href="{{ . }}" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>{{ end }}
-                {{ with .github }}<li><a href="{{ . }}" aria-label="GitHub"><i class="bi bi-github"></i></a></li>{{ end }}
-                {{ with .email }}<li><a href="mailto:{{ . }}" aria-label="Email"><i class="bi bi-envelope"></i></a></li>{{ end }}
+                {{ with .clockwork }}<li><a href="{{ . }}" aria-label="Profile">{{ (resources.Get "icons/person-bounding-box.svg").Content | safeHTML }}</a></li>{{ end }}
+                {{ with .linkedin }}<li><a href="{{ . }}" aria-label="LinkedIn">{{ (resources.Get "icons/linkedin.svg").Content | safeHTML }}</a></li>{{ end }}
+                {{ with .github }}<li><a href="{{ . }}" aria-label="GitHub">{{ (resources.Get "icons/github.svg").Content | safeHTML }}</a></li>{{ end }}
+                {{ with .email }}<li><a href="mailto:{{ . }}" aria-label="Email">{{ (resources.Get "icons/envelope.svg").Content | safeHTML }}</a></li>{{ end }}
             </ul>
             {{ end }}
         </div>
