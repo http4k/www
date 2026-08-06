@@ -1,16 +1,20 @@
 <!-- Load Shared SCSS -->
 {{- $sharedSCSS := resources.Get "scss/shared/shared.scss" -}}
 {{- $sharedSCSS := $sharedSCSS | css.Sass (dict "outputStyle" "compressed" "includePaths" (slice "assets")) -}}
-{{- $sharedSCSS := $sharedSCSS | resources.ExecuteAsTemplate "main.scss" . -}}
+{{/* target must be .css, not .scss - Sass has already run, and the extension decides the
+     served Content-Type. A .scss stylesheet is rejected by the browser in standards mode. */}}
+{{- $sharedSCSS := $sharedSCSS | resources.ExecuteAsTemplate "main.css" . -}}
+{{- $sharedSCSS := $sharedSCSS | resources.Fingerprint "sha256" -}}
 <!-- Load Shared JS -->
 {{- $sharedJS := resources.Get "js/shared/shared.js" -}}
 {{- $sharedJS := $sharedJS | js.Build (dict "minify" "true") -}}
+{{- $sharedJS := $sharedJS | resources.Fingerprint "sha256" -}}
 
-<style type="text/css" media="all">{{ $sharedSCSS.Content | strings.TrimPrefix "\ufeff" | safeCSS }}</style>
+<link rel="stylesheet" media="all" href="{{ $sharedSCSS.RelPermalink }}" integrity="{{ $sharedSCSS.Data.Integrity }}">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous" media="print" onload="this.media='all'">
 
-<script>{{- $sharedJS.Content | safeJS -}}</script>
-<script src="/js/timeline.js"></script>
+<script defer src="{{ $sharedJS.RelPermalink }}" integrity="{{ $sharedJS.Data.Integrity }}"></script>
+<script defer src="/js/timeline.js"></script>
 
 
