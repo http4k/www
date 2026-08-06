@@ -1,5 +1,6 @@
 // ASCII only in these files - a non-ASCII char makes Dart Sass emit a BOM that breaks :root.
 @import "tokens";
+@import "fonts";
 @import "bootstrap";
 
 @import "utilities";

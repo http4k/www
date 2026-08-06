@@ -6,12 +6,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
   <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{end}}" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts are self-hosted (see scss/shared/_fonts.scss). Preloaded so they are in flight
+       alongside the stylesheet rather than discovered only once the CSS has parsed - late
+       font arrival was the entire cause of the hero's layout shift. latin only; latin-ext
+       is gated by unicode-range and loads on demand. -->
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/space-grotesk-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/jetbrains-mono-latin.woff2" crossorigin>
 
   {{ partial "head/_resources.html" . }}
-
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <!-- Favicons and Manifest -->
   {{ partial "head/_favicons.html" . }}
 
