@@ -38,7 +38,7 @@ jobs:
       run: hugo --minify -s src/website
       shell: bash
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v4.0.0
+      uses: peaceiris/actions-gh-pages@v4.1.0
       with:
         personal_token: ${{ secrets.TOOLBOX_REPO_TOKEN }}
         external_repository: http4k/http4k.github.io
