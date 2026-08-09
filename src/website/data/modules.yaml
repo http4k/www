@@ -35,9 +35,11 @@
 - hamkrest
 - handlebars
 - helidon
+- hot reload
 - htmlflow
 - htmx
 - iam
+- iot dataplane
 - jackson
 - jakarta
 - jdbc
@@ -101,5 +103,6 @@
 - vertx
 - webauthn
 - webdriver
+- wiretap
 - x402
 - xml
