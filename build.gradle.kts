@@ -46,7 +46,7 @@ dependencies {
     typeflowsApi(libs.typeflows.github.marketplace)
     typeflowsApi(libs.http4k.standards)
 
-    testImplementation(platform("org.http4k:http4k-bom:${project.properties["http4k_version"]}"))
+    testImplementation(platform("org.http4k:http4k-bom:${providers.gradleProperty("http4k_version").get()}"))
     testImplementation(platform(libs.forkhandles.bom))
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.http4k.core)
