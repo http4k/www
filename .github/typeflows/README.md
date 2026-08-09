@@ -3,8 +3,8 @@
 ```mermaid
 flowchart LR
     push(["📤 push"])
-    schedule(["⏰ schedule"])
     workflowdispatch(["👤 workflow_dispatch"])
+    schedule(["⏰ schedule"])
     repositorydispatchgithubrepository(["🔔 repository_dispatch<br/>→ this repo"])
     buildyml["Build and Deploy"]
     buildltsyml["Build and Deploy LTS"]
@@ -13,10 +13,11 @@ flowchart LR
     updatedependenciesyml["Update Dependencies"]
     push -->|"branches(only: 1)"|buildyml
     push -->|"branches(only: 1)"|buildltsyml
+    workflowdispatch --> buildyml
+    workflowdispatch --> updatedependenciesyml
     schedule -->|"0 0,6,12,18 * * *"|buildyml
     schedule -->|"0 0,6,12,18 * * *"|buildltsyml
     schedule -->|"0 08 * * 1"|updatedependenciesyml
-    workflowdispatch --> updatedependenciesyml
     upgradehttp4kyml --> repositorydispatchgithubrepository
     repositorydispatchgithubrepository -->|"release"|buildyml
     upgradehttp4kltsyml --> repositorydispatchgithubrepository

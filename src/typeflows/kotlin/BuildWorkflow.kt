@@ -13,6 +13,7 @@ import io.typeflows.github.workflow.trigger.Branches
 import io.typeflows.github.workflow.trigger.Push
 import io.typeflows.github.workflow.trigger.RepositoryDispatch
 import io.typeflows.github.workflow.trigger.Schedule
+import io.typeflows.github.workflow.trigger.WorkflowDispatch
 import io.typeflows.util.Builder
 
 class BuildWorkflow : Builder<Workflow> {
@@ -22,6 +23,7 @@ class BuildWorkflow : Builder<Workflow> {
             branches = Branches.Only("master")
         }
         on += RepositoryDispatch("release")
+        on += WorkflowDispatch()
         on += Schedule {
             cron += Cron.of("0 0,6,12,18 * * *")
         }
