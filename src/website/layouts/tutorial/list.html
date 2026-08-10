@@ -6,7 +6,7 @@
     "lede" "A guided path through http4k's main ideas, in order. Each tutorial builds on the last - work straight down and you'll go from an empty directory to a fully working service.") }}
 
 {{ $tutorials := where .Site.Pages ".Params.series" "!=" nil }}
-{{ $firstSeries := index .Site.Data.tutorial_series 0 }}
+{{ $firstSeries := index hugo.Data.tutorial_series 0 }}
 {{ $first := index (sort (where $tutorials ".Params.series" $firstSeries.name) ".Params.weight") 0 }}
 
 <section class="section-rail tut">
@@ -21,7 +21,7 @@
     </div>
     {{ end }}
 
-    {{ range $series := .Site.Data.tutorial_series }}
+    {{ range $series := hugo.Data.tutorial_series }}
     {{ $items := sort (where $tutorials ".Params.series" $series.name) ".Params.weight" }}
     {{ if $items }}
     <div class="tut-group">

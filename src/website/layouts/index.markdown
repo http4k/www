@@ -20,11 +20,11 @@ http4k integrates with many tools, libraries and APIs for building Cloud-Native 
 ## Corporate partners
 
 http4k works with selected companies to fund and explore continued innovation around the project.
-{{ range .Site.Data.sponsors }}
+{{ range hugo.Data.sponsors }}
 - [{{ .name }}]({{ .url }})
 {{ end }}
 
 ## Professional Services
-{{ range .Site.Data.cta }}
+{{ range hugo.Data.cta }}
 - **{{ .title }}** - {{ .description }} [{{ .text }}]({{ .link }})
 {{ end }}

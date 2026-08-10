@@ -87,7 +87,7 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
         <p class="section-lede">http4k was built from scratch to fully leverage Kotlin, against a non-negotiable set of principles. Every one of these is still true today.</p>
     </div>
     <div class="service-grid mosaic">
-        {{ range $i, $p := .Site.Data.overview.principles }}
+        {{ range $i, $p := hugo.Data.overview.principles }}
         <div class="service-card">
             <div class="service-card__num">{{ printf "%02d" (add $i 1) }}</div>
             <h3>{{ $p.title }}</h3>
@@ -105,7 +105,7 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
             <p class="section-lede">We're not precious about it. http4k distilled decades of using server-side libraries, and we pilfered the best parts shamelessly - then made them play together, the Kotlin way. Credit where it's due.</p>
         </div>
         <div class="card-grid ov-credits">
-            {{ range .Site.Data.overview.credits }}
+            {{ range hugo.Data.overview.credits }}
             <div class="ui-card kicker-card kicker-card--muted-kick">
                 <div class="kicker-card__kick">{{ .kick }}</div>
                 <div class="kicker-card__title">{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</div>
@@ -124,7 +124,7 @@ client(Request(GET, <span class="tok-str">"http://.../ping"</span>))</pre></div>
             <p class="section-lede">When both your server and your clients are the same kind of function, the hard things get easy - and some things other HTTP libraries simply can't do become trivial.</p>
         </div>
         <div class="card-grid ov-payoff">
-            {{ range .Site.Data.overview.payoff }}
+            {{ range hugo.Data.overview.payoff }}
             <div class="ov-payoff__card">
                 <h3>{{ .title }}</h3>
                 <p>{{ .description }}</p>

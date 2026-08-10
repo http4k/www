@@ -7,7 +7,7 @@
         </div>
 
         <div class="mosaic receipts-grid mb-4">
-            {{ range site.Data.receipts }}
+            {{ range hugo.Data.receipts }}
             <div class="receipt-tile">
                 <div class="receipt-tile__num">{{ .value }}</div>
                 <div class="receipt-tile__label">{{ .label }}</div>
@@ -30,7 +30,7 @@
                 <div class="partners-card">
                     <div class="partners-card__kick">BACKED &amp; TRUSTED BY</div>
                     <div class="partners-card__logos">
-                        {{ range .Site.Data.sponsors }}
+                        {{ range hugo.Data.sponsors }}
                         <a href="{{ .url }}"><img src="{{ .logo }}" alt="{{ .name }}"/></a>
                         {{ end }}
                     </div>

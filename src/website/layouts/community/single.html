@@ -7,7 +7,7 @@
         <h1 class="hero-title">{{ .Title }}</h1>
         <p class="hero-sub">{{ .Params.description }}</p>
         <ul class="hero-stats">
-            {{ range site.Data.receipts }}<li>{{ .value }} {{ .label }}</li>{{ end }}
+            {{ range hugo.Data.receipts }}<li>{{ .value }} {{ .label }}</li>{{ end }}
         </ul>
     </div>
 </section>

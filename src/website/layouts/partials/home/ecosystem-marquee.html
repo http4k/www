@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    {{ $all := .Site.Data.modules }}
+    {{ $all := hugo.Data.modules }}
     {{ $half := div (add (len $all) 1) 2 }}
     {{ $row1 := first $half $all }}
     {{ $row2 := after $half $all }}

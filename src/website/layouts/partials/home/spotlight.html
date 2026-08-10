@@ -6,13 +6,13 @@
         </div>
 
         <div class="spotlight__tabs" id="spotlightTabs">
-            {{ range $i, $t := .Site.Data.spotlight }}
+            {{ range $i, $t := hugo.Data.spotlight }}
             <button type="button" class="chip{{ if eq $i 0 }} active{{ end }}" data-index="{{ $i }}">{{ $t.tab }}</button>
             {{ end }}
         </div>
 
         <div class="spotlight__panels">
-            {{ range $i, $t := .Site.Data.spotlight }}
+            {{ range $i, $t := hugo.Data.spotlight }}
             <div class="spotlight__panel{{ if eq $i 0 }} is-active{{ end }}" data-index="{{ $i }}">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5">

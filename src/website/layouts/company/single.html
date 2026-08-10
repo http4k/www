@@ -16,7 +16,7 @@
 
 <section class="section-rail">
     <div class="company-receipts mosaic">
-        {{ range .Site.Data.receipts }}
+        {{ range hugo.Data.receipts }}
         <div class="company-receipts__tile">
             <div class="company-receipts__num">{{ .value }}</div>
             <div class="company-receipts__label">{{ .label }}</div>
@@ -32,7 +32,7 @@
         <p class="section-lede company-lede">http4k began with the two of us back in 2017, but it's what it is today thanks to hundreds of companies and a <a href="/community/">global community of contributors</a>.</p>
     </div>
     <div class="card-grid card-grid--2 founder-grid">
-        {{ range .Site.Data.company.founders }}
+        {{ range hugo.Data.company.founders }}
         <div class="founder-card">
             <div class="founder-card__head">
                 <img class="founder-card__avatar" src="{{ .image }}" alt="{{ .name }}">
@@ -75,7 +75,7 @@
     <div class="company-partners">
         <div class="company-partners__kick">Backed &amp; trusted by</div>
         <div class="company-partners__names">
-            {{ range $i, $s := .Site.Data.sponsors }}
+            {{ range $i, $s := hugo.Data.sponsors }}
             {{ if $i }}<span class="company-partners__sep"></span>{{ end }}
             <a href="{{ $s.url }}">{{ $s.name }}</a>
             {{ end }}

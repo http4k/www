@@ -1,8 +1,8 @@
 {{/*
-    Renders a keyed banner from site.Data.banners.
+    Renders a keyed banner from hugo.Data.banners.
     Usage: {{ partial "shared/product_banner.html" (dict "key" "verify" "ctx" .) }}
 */}}
-{{ $banner := index .ctx.Site.Data.banners .key }}
+{{ $banner := index hugo.Data.banners .key }}
 {{ if $banner }}
 <div class="alert alert-info border d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
     <span>{{ $banner.body | markdownify }}</span>

@@ -20,7 +20,7 @@
     </div>
 </section>
 
-{{ $modules := .Site.Data.pro.modules }}
+{{ $modules := hugo.Data.pro.modules }}
 {{ $available := where $modules "available" true }}
 {{ $soon := where $modules "available" false }}
 <section class="section-rail pro-catalogue" id="modules">
@@ -52,7 +52,7 @@
         <h2 class="section-h2">Buy them together, save the faff.</h2>
     </div>
     <div class="card-grid card-grid--2 pro-packs__grid">
-        {{ range .Site.Data.pro.packs }}
+        {{ range hugo.Data.pro.packs }}
         <a class="pro-pack" href="{{ .link }}">
             <div class="pro-pack__glow"></div>
             <div class="pro-pack__eyebrow">{{ .name }}</div>

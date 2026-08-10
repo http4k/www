@@ -18,7 +18,7 @@
         <loc>{{ .Site.BaseURL }}.well-known/security.txt</loc>
     </url>
 
-    {{ range where .Site.AllPages "Sitemap.Disable" "ne" true }}
+    {{ range where .Site.Pages "Sitemap.Disable" "ne" true }}
     {{- if .Permalink -}}
     <url>
         <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}

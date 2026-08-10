@@ -27,7 +27,7 @@
                 didn't ask for.</p>
         </div>
         <div class="card-grid card-grid--2">
-            {{ range where .Site.Data.ecosystem "family" true }}
+            {{ range where hugo.Data.ecosystem "family" true }}
             <a class="ui-card eco-family" href="{{ with .url }}{{ . }}{{ else }}/ecosystem/{{ .ref }}/{{ end }}">
                 <div class="eco-family__top">
                     <img class="eco-family__logo" src="{{ .image }}" alt="{{ .title }}" loading="lazy">
