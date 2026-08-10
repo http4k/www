@@ -15,7 +15,8 @@ dependencies {
 ```
 
 
-The IoT Data Plane connector provides the following Actions:
+The IoT Data Plane connector covers the messaging and Thing Shadow APIs - what devices and applications use to talk
+to each other through IoT Core. It provides the following Actions:
 
      *  DeleteConnection
      *  DeleteThingShadow
@@ -35,6 +36,15 @@ so it cannot be derived from the Region and is passed to the client explicitly.
 
 Shadow documents are opaque JSON as far as the API is concerned, so they are sent as raw bytes and returned as an
 `InputStream` for the caller to parse with the JSON library of their choosing.
+
+`Publish` exposes the full set of MQTT5 options - `qos`, `retain`, `contentType`, `payloadFormatIndicator`,
+`messageExpiry`, `responseTopic`, `correlationData` and `userProperties`.
+
+The Fake records every published message for test assertions, stores Thing Shadows, and serves the retained
+messages that its retained publishes create.
+
+The rest of IoT Core lives in sibling modules: the cloud-side control plane for Jobs and Streams in
+[IoT Core](/ecosystem/connect/reference/amazon/iot/), and the device side of Jobs in [IoT Jobs Data Plane](/ecosystem/connect/reference/amazon/iotjobsdataplane/).
 
 ### Example usage
 

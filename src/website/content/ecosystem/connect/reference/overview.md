@@ -23,7 +23,9 @@ A quick reference as to what is what with the http4k Connect modules.
 | AWS        | Firehose            | ✅              |                                                                 |
 | AWS        | IAM Identity Center | ✅              |                                                                 |
 | AWS        | Instance Metadata   | ✅              |                                                                 |
-| AWS        | IoT Data Plane      | ✅              |                                                                 |
+| AWS        | IoT Core            | ✅              | Control plane: Jobs and Streams                                 |
+| AWS        | IoT Data Plane      | ✅              | Messaging and Thing Shadows                                     |
+| AWS        | IoT Jobs Data Plane | ✅              | Device side of Jobs; shares a job store with the IoT Core Fake  |
 | AWS        | KMS                 | ✅              |                                                                 |
 | AWS        | Lambda              | ✅              |                                                                 |
 | AWS        | S3                  | ✅              |                                                                 |

@@ -38,7 +38,7 @@ None of that is a headline feature. It's just what "responsible" cashes out to w
 
 ## The road to gold - and the fork we won't take
 
-Gold is stricter, and we're at 78% of it. Some of the gap is quick and on the list - nudging statement coverage from 84% past 90%, and wiring a dynamic-analysis (fuzzing) step into the release pipeline. Some is a bigger lift, like applying per-file licence headers across the whole tree. We'll work through them.
+Gold is stricter, and we're at 78% of it. Some of the gap is quick and on the list - nudging statement coverage from 81% past 90%, and wiring a dynamic-analysis (fuzzing) step into the release pipeline. Some is a bigger lift, like applying per-file licence headers across the whole tree. We'll work through them.
 
 One gold criterion we're deliberately leaving unmet: it wants a second human to review and approve every change before it merges. We practise iterative **trunk-based development** - maintainer commits land on trunk directly, in small continuous increments, under full CI, CodeQL, wrapper validation and branch protection. Every *external* contribution is still reviewed through CODEOWNERS; what we don't do is put a mandatory human review queue in front of the core team's own commits.
 
