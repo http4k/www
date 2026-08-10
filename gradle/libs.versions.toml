@@ -93,6 +93,8 @@ http4k-connect-amazon-iamidentitycenter = { module = "org.http4k:http4k-connect-
 http4k-connect-amazon-iamidentitycenter-fake = { module = "org.http4k:http4k-connect-amazon-iamidentitycenter-fake" }
 http4k-connect-amazon-instancemetadata = { module = "org.http4k:http4k-connect-amazon-instancemetadata" }
 http4k-connect-amazon-instancemetadata-fake = { module = "org.http4k:http4k-connect-amazon-instancemetadata-fake" }
+http4k-connect-amazon-iotdataplane = { module = "org.http4k:http4k-connect-amazon-iotdataplane" }
+http4k-connect-amazon-iotdataplane-fake = { module = "org.http4k:http4k-connect-amazon-iotdataplane-fake" }
 http4k-connect-amazon-kms = { module = "org.http4k:http4k-connect-amazon-kms" }
 http4k-connect-amazon-kms-fake = { module = "org.http4k:http4k-connect-amazon-kms-fake" }
 http4k-connect-amazon-lambda = { module = "org.http4k:http4k-connect-amazon-lambda" }
@@ -318,6 +320,8 @@ http4k-connect-amazon = [
     "http4k-connect-amazon-iamidentitycenter-fake",
     "http4k-connect-amazon-instancemetadata",
     "http4k-connect-amazon-instancemetadata-fake",
+    "http4k-connect-amazon-iotdataplane",
+    "http4k-connect-amazon-iotdataplane-fake",
     "http4k-connect-amazon-kms",
     "http4k-connect-amazon-kms-fake",
     "http4k-connect-amazon-lambda",

@@ -2,7 +2,7 @@
 title: "Trust every dependency: introducing http4k Verify"
 category: "Security"
 description: "http4k Verify is generally available - one Gradle plugin that checks the signature, SBOM, SLSA provenance and licence report of every http4k dependency, automatically, before your code compiles."
-date: 2026-08-11
+date: 2026-08-14
 image: verify.webp
 ---
 
@@ -18,7 +18,11 @@ Back in **[Tale of the tape](/news/tale-of-the-tape-claude-vs-http4k/)** we spen
 
 Nobody ships an app any more - they ship a dependency tree, and every node in it is someone else's code arriving over the wire. The interesting attacks stopped being "find a bug in the app" a while ago; they're "get something into the supply chain and let the build tools carry it the rest of the way".
 
-The regulators have noticed too, and the deadlines are close. The **EU Cyber Resilience Act** is mandatory from **September 2026** and wants verifiable provenance and machine-readable SBOMs for everything sold into Europe. **US Executive Order 14028**, **NIST SSDF** and **PCI DSS 4.0** all push the same way: know what's in your software, and prove the third-party pieces are what they claim to be.
+The regulators have noticed too, and the first deadline is close. The **EU Cyber Resilience Act**'s vulnerability reporting obligations apply from **11 September 2026** - and they reach products already on the market, not just new ones. Its full requirements land in December 2027: machine-readable SBOMs, secure and timely distribution of updates, and due diligence over the third-party components you integrate, open source very much included.
+
+Note what the CRA does *not* say: it never asks for SLSA provenance or signed attestations by name, and it doesn't require you to hand an SBOM to your customers. What it asks is that you know what's in your product, that you can show it to an authority that asks, and that you can get a fix out quickly when something in your dependency tree turns out to be exploited. Provenance and signatures are simply the cheapest honest way we know to be able to answer those questions on demand.
+
+The picture is not uniform, and it's worth being straight about that. The US moved the other way in February 2026, when OMB memorandum **M-26-05** rescinded the M-22-18 and M-23-16 secure-software mandates - self-attestation, NIST **SSDF** conformance and SBOM provision are now at each agency's discretion rather than required government-wide. **PCI DSS 4.0.1** still pushes in the same direction for anyone touching cardholder data. So: one jurisdiction tightening, one loosening, and a lot of security teams who have concluded that the underlying practice is worth doing regardless of who is currently mandating it.
 
 You can meet that at audit time by scrambling for evidence after the fact, or you can capture it at build time and move on. Verify is firmly in the second camp.
 
@@ -78,6 +82,8 @@ No CLI tools to install, and nothing exotic in your infrastructure - it works th
 If you're an **[http4k Enterprise Edition](/enterprise/)** subscriber, add the plugin to your build today and get supply-chain assurance for every http4k dependency with essentially zero effort. The full setup - configuration, manual cosign verification, and Gradle dependency pinning - is in the **[Verify reference docs](/ecosystem/enterprise/reference/verify/)**.
 
 Not on EE yet and this is the kind of evidence your security team is going to be asking for? **[Get in touch](/enterprise/)** or email enterprise@http4k.org - and take a look at **[verify.http4k.org](https://verify.http4k.org)**.
+
+One related note, since the two get confused. The supply-chain artifacts described above - cosign signatures, SLSA provenance, SBOMs and licence reports - have always been published to **[maven.http4k.org](https://maven.http4k.org)** rather than to Maven Central, and that hasn't changed. What *is* changing is how often http4k reaches Maven Central at all: from 1 October 2026, new Sonatype publishing limits mean releases there drop to roughly quarterly, while `maven.http4k.org` continues on the normal 1-2 week cadence. The full picture, and our current status with Sonatype, is in **[DISTRIBUTION.md](https://github.com/http4k/http4k/blob/master/DISTRIBUTION.md)**.
 
 Trust every dependency. Verify every build.
 
