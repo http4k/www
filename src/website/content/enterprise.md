@@ -12,8 +12,8 @@ highlights:
     -   title: Supply chain security
         description: SLSA Level 2 provenance, signed SBOMs, and cosign signatures for every artifact - compliance-ready out of the box and verified at build time with [http4k Verify](https://verify.http4k.org).
         icon: "/images/extendable.svg"
-    -   title: Release cadence
-        description: Continuous access to releases through [maven.http4k.org](https://maven.http4k.org) every 1-2 weeks, rather than the approximately quarterly cadence on Maven Central (from 1 October 2026).
+    -   title: Never wait for a release
+        description: Early access to all http4k features and fixes through [maven.http4k.org](https://maven.http4k.org) every 1-2 weeks, rather than the [quarterly](/distribution/) cadence on Maven Central (from 1 October 2026).
         icon: "/images/connections.svg"
     -   title: Access to priority support
         description: The http4k team are here on Slack and Email to guide you through any issues or questions.
