@@ -7,23 +7,23 @@ aliases:
     - /lts-support
 highlights:
     -   title: Up to 24 months peace of mind
-        description: Guaranteed security and bug updates for the LTS stable release channel, allowing you to focus on feature delivery.
+        description: Guaranteed security and critical updates for the LTS stable release channel, including source access, allowing you to focus on feature delivery.
         icon: "/images/footprint.svg"
+    -   title: Supply chain security
+        description: SLSA Level 2 provenance, signed SBOMs, and cosign signatures for every artifact - compliance-ready out of the box and verified at build time with [http4k Verify](https://verify.http4k.org).
+        icon: "/images/extendable.svg"
+    -   title: Release cadence
+        description: Continuous access to releases through [maven.http4k.org](https://maven.http4k.org) every 1-2 weeks, rather than the approximately quarterly cadence on Maven Central (from 1 October 2026).
+        icon: "/images/connections.svg"
     -   title: Access to priority support
         description: The http4k team are here on Slack and Email to guide you through any issues or questions.
         icon: "/images/faq.svg"
-    -   title: Source code access
-        description: Full access to the LTS editions of the http4k codebase for transparency and auditing.
-        icon: "/images/connections.svg"
-    -   title: License reporting
-        description: Signed, per-module license reports delivered with every artifact - ready for audit and regulatory review.
-        icon: "/images/supportive.svg"
-    -   title: Supply chain security
-        description: SLSA Level 2 provenance, signed SBOMs, and cosign signatures for every artifact - compliance-ready out of the box.
-        icon: "/images/extendable.svg"
     -   title: Pro modules
         description: A growing collection of commercially licensed, battle-tested modules built from real-world enterprise delivery.
         icon: "/images/footprint.svg"
+    -   title: License reporting
+        description: Signed, per-module license reports delivered with every artifact - ready for audit and regulatory review.
+        icon: "/images/supportive.svg"
 faq:
     -   question: "How long are LTS versions of http4k EE available for?"
         answer: As standard, the open source http4k CE of http4k releases major versions of the ecosystem on a delayed cadence which is aligned with major release dates of the JDK every 2 years. As a new major http4k CE version is released, the previous major version enters the http4k EE LTS programme for 2 years. See the schedule above for the current timeline.

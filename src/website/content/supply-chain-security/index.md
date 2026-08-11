@@ -30,9 +30,9 @@ As part of the **http4k Enterprise Edition**, every http4k artifact is published
 
 With increasing regulatory pressure from the **EU Cyber Resilience Act (CRA)**, **US Executive Order 14028**, **NIST SSDF**, and **PCI DSS 4.0**, organisations need to demonstrate full visibility into their software supply chain. http4k delivers this out of the box - every build produces **SLSA Level 2 provenance** linking artifacts to the exact source commit and CI pipeline, **CycloneDX SBOMs** detailing all transitive dependencies, and **cosign signatures** with trusted timestamps from the Sigstore Timestamp Authority.
 
-## What Gets Published
+## What Gets Published, When, and Where
 
-For every http4k module, the following provenance artifacts are published as classified Maven artifacts alongside the standard JARs and POMs:
+For every http4k module, the following provenance artifacts are published to **[maven.http4k.org](https://maven.http4k.org)** as classified Maven artifacts alongside the standard JARs and POMs:
 
 <table class="table" style="max-width: 90%">
 <thead><tr><th>Artifact</th><th>Description</th></tr></thead>
@@ -44,6 +44,8 @@ For every http4k module, the following provenance artifacts are published as cla
 <tr><td><strong>Cosign bundles</strong></td><td>Sigstore signature bundle for each of the above, with trusted timestamps</td></tr>
 </tbody>
 </table>
+
+Artifacts published to Maven Central carry PGP signatures. See [Distribution & release channels](/distribution/) for how the two channels differ.
 
 See the [Enterprise Repository reference](/ecosystem/enterprise/reference/repository/) for Maven coordinates, repository layout, and setup guides.
 

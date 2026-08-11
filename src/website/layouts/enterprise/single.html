@@ -22,7 +22,7 @@
         {{ range .Params.highlights }}
         <div class="ent-glance__card">
             <h3>{{ .title }}</h3>
-            <p>{{ .description }}</p>
+            <p>{{ .description | markdownify }}</p>
         </div>
         {{ end }}
     </div>

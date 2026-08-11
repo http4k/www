@@ -83,7 +83,7 @@ If you're an **[http4k Enterprise Edition](/enterprise/)** subscriber, add the p
 
 Not on EE yet and this is the kind of evidence your security team is going to be asking for? **[Get in touch](/enterprise/)** or email enterprise@http4k.org - and take a look at **[verify.http4k.org](https://verify.http4k.org)**.
 
-One related note, since the two get confused. The supply-chain artifacts described above - cosign signatures, SLSA provenance, SBOMs and licence reports - have always been published to **[maven.http4k.org](https://maven.http4k.org)** rather than to Maven Central, and that hasn't changed. What *is* changing is how often http4k reaches Maven Central at all: from 1 October 2026, new Sonatype publishing limits mean releases there drop to roughly quarterly, while `maven.http4k.org` continues on the normal 1-2 week cadence. The full picture, and our current status with Sonatype, is in **[DISTRIBUTION.md](https://github.com/http4k/http4k/blob/master/DISTRIBUTION.md)**.
+One related note, since the two get confused. The supply-chain artifacts described above - cosign signatures, SLSA provenance, SBOMs and licence reports - have always been published to **[maven.http4k.org](https://maven.http4k.org)** rather than to Maven Central, and that hasn't changed. What *is* changing is how often http4k reaches Maven Central at all: from 1 October 2026, new Sonatype publishing limits mean releases there drop to roughly quarterly, while `maven.http4k.org` continues on the normal 1-2 week cadence. The full picture, and our current status with Sonatype, is in **[Distribution & release channels](https://www.http4k.org/distribution/)**.
 
 Trust every dependency. Verify every build.
 

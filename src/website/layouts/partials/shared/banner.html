@@ -1,0 +1,136 @@
+{{/*
+Time-boxed distribution notice - REMOVE IN DECEMBER 2026.
+To remove: delete this file and the three `{{ partial "shared/banner.html" . }}`
+lines in layouts/_default/baseof.html, layouts/landing/baseof.html and layouts/product/baseof.html.
+
+Self-contained (markup + style + script) so removal is one file plus three lines.
+Bootstrap's alert-dismiss JS and .btn-close CSS are both excluded from the bundle
+(see assets/scss/shared/_bootstrap.scss), so data-bs-dismiss is not available here.
+*/}}
+<style>
+  .dist-banner {
+    background: var(--ink);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1031;
+  }
+
+  .dist-banner[hidden] {
+    display: none;
+  }
+
+  .dist-banner a {
+    color: var(--orange);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .dist-banner a:hover {
+    text-decoration: underline;
+  }
+
+  .dist-banner__close {
+    background: none;
+    border: 0;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.25rem;
+    line-height: 1;
+    padding: 0 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .dist-banner__close:hover {
+    opacity: 1;
+  }
+
+  /* The full sentence wraps to four lines on a phone, which is not a slim
+     banner. Drop to the short form below Bootstrap's sm breakpoint - the
+     linked page carries the detail that gets cut. */
+  .dist-banner__short {
+    display: none;
+  }
+
+  @media (max-width: 575.98px) {
+    .dist-banner {
+      padding: 8px 14px;
+      gap: 10px;
+    }
+
+    .dist-banner__full {
+      display: none;
+    }
+
+    .dist-banner__short {
+      display: inline;
+    }
+  }
+
+  /* Pages with an ink hero take the nav out of flow and pin it to the document
+     top (_header.scss: `.site-header:has(+ .ink-hero) { position: absolute; inset: 0 0 auto 0 }`),
+     so it would paint over this banner. Push it down by the banner's measured
+     height instead. Reverts to 0 automatically once the banner is dismissed. */
+  .dist-banner:not([hidden]) ~ .site-header:has(+ .ink-hero) {
+    top: var(--dist-banner-h, 0px);
+  }
+</style>
+
+<div class="dist-banner" id="dist-banner" hidden>
+    <span>
+      <span class="dist-banner__full">From 1 October 2026, http4k releases reach Maven Central
+         quarterly. <a href="https://maven.http4k.org">maven.http4k.org</a> releases
+        continue every 1-2 weeks.
+        <a href="{{ "/distribution/" | absURL }}">What this means &rarr;</a>
+      </span>
+      <span class="dist-banner__short">From 1 October 2026, http4k distribution is changing.
+        <a href="{{ "/distribution/" | absURL }}">Details &rarr;</a>
+      </span>
+    </span>
+  <button type="button" class="dist-banner__close" aria-label="Dismiss notice">&times;</button>
+</div>
+
+<script>
+  // Inline and immediately after the element, so dismissed visitors never see a flash.
+  (function () {
+    var key = 'http4k-distribution-notice-dismissed';
+    var maxAge = 7 * 24 * 60 * 60 * 1000;
+    var el = document.getElementById('dist-banner');
+    var root = document.documentElement;
+    try {
+      // localStorage has no TTL, so the dismissal stores a timestamp and
+      // expires here. A non-numeric legacy value reads as 0 and expires
+      // immediately, which is the behaviour we want anyway.
+      var at = parseInt(localStorage.getItem(key), 10);
+      if (at > 0 && Date.now() - at < maxAge) return;
+    } catch (e) { /* private mode - show the banner rather than fail */
+    }
+
+    // The copy wraps on narrow viewports, so the offset the ink-hero nav
+    // needs is measured rather than hardcoded.
+    var syncHeight = function () {
+      root.style.setProperty('--dist-banner-h', el.offsetHeight + 'px');
+    };
+
+    el.hidden = false;
+    syncHeight();
+    if (window.ResizeObserver) new ResizeObserver(syncHeight).observe(el);
+
+    el.querySelector('.dist-banner__close').addEventListener('click', function () {
+      el.hidden = true;
+      root.style.setProperty('--dist-banner-h', '0px');
+      try {
+        localStorage.setItem(key, String(Date.now()));
+      } catch (e) { /* nothing to do */
+      }
+    });
+  })();
+</script>
