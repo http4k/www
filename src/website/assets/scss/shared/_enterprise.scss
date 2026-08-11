@@ -5,7 +5,7 @@
 .ent-glance__card h3 { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0 0 8px; }
 .ent-glance__card p { font-size: 0.95rem; line-height: 1.55; color: var(--text-muted); margin: 0; }
 
-.ent-supply { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: 48px 44px; }
+.ent-supply { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: 48px 44px; margin-bottom: var(--section-py); }
 .ent-supply__lead { margin-bottom: 32px; }
 .ent-supply__grid { gap: 16px; margin-bottom: 36px; }
 .ent-deliverable { padding: 22px 20px; }
