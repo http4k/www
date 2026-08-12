@@ -39,10 +39,11 @@
     <div class="row text-center g-0">
         <div class="col">
             <p class="small text-white text-decoration-none">
-                © {{ now.Format "2006" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;&nbsp;
+                © 2016&ndash;{{ now.Format "2006" }} http4k Ltd&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;&nbsp;
                 {{ range .Site.Menus.legal }}
                 |&nbsp;&nbsp;&nbsp;<a class="text-white text-decoration-none" href="{{ .URL | absURL }}">{{ .Name }}</a>&nbsp;&nbsp;&nbsp;
                 {{ end }}
+                |&nbsp;&nbsp;&nbsp;<a class="text-white text-decoration-none" href="{{ "/trademark/" | absURL }}">Trademark Policy</a>&nbsp;&nbsp;&nbsp;
             </p>
         </div>
     </div>

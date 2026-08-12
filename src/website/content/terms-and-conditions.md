@@ -4,7 +4,7 @@ title : "Terms & conditions"
 description: "Terms & conditions for http4k.org"
 ---
 
-Last updated: 2024-05-20
+Effective date: 2024-05-20
 
 1\. **Introduction**
 

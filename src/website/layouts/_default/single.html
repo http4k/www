@@ -1,11 +1,5 @@
 {{ define "main" }}
 
-<style>
-  .github {
-    display: none;
-  }
-</style>
-
 <div class="prose-page">
     {{ with .Params.eyebrow }}{{ partial "shared/eyebrow.html" . }}{{ end }}
     <h1 class="reading__title">{{ .Title }}</h1>

@@ -4,7 +4,7 @@ title : 'Disclaimer'
 description: "Disclaimer for http4k.org"
 ---
 
-Last updated: 2024-05-20
+Last updated: 2026-08-13
 
 **WEBSITE DISCLAIMER**
 
@@ -40,7 +40,9 @@ In no event will http4k Ltd, its related partnerships or corporations, or the pa
 
 **LOGOS AND TRADEMARKS DISCLAIMER**
 
-All logos and trademarks of third parties referenced on http4k.org are the trademarks and logos of their respective owners. Any inclusion of such trademarks or logos does not imply or constitute any approval, endorsement or sponsorship of http4k Ltd by such owners.
+"http4k", the http4k logo, and related names and marks are trademarks of http4k Ltd. Their use is governed by the [http4k Trademark Policy](https://www.http4k.org/trademark/).
+
+All other logos and trademarks referenced on http4k.org are the trademarks and logos of their respective owners. Any inclusion of such trademarks or logos does not imply or constitute any approval, endorsement or sponsorship of http4k Ltd by such owners.
 
 **CONTACT US**
 
