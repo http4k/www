@@ -2,7 +2,7 @@
 title: "Trust every dependency: introducing http4k Verify"
 category: "Security"
 description: "http4k Verify is generally available - one Gradle plugin that checks the signature, SBOM, SLSA provenance and licence report of every http4k dependency, automatically, before your code compiles."
-date: 2026-08-14
+date: 2026-08-21
 image: verify.webp
 ---
 
