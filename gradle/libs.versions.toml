@@ -1,10 +1,11 @@
 [versions]
-amazon-s3 = "2.53.1"
+amazon-s3 = "2.53.3"
 aws-lambda-java-events = "3.16.1"
-azure-search-documents = "12.0.1"
+azure-search-documents = "12.0.2"
 forkhandles-bom = "3.0.0.0"
 google-http-client = "2.2.0"
 graphql-kotlin-schema-generator = "10.2.1"
+hikaricp = "7.1.0"
 http4k-standards = "1.22.0.0"
 jakarta-servlet-api = "6.1.0"
 javax-servlet-api = "4.0.1"
@@ -27,6 +28,7 @@ azure-search-documents = { module = "com.azure:azure-search-documents", version.
 forkhandles-bom = { module = "dev.forkhandles:forkhandles-bom", version.ref = "forkhandles-bom" }
 google-http-client = { module = "com.google.http-client:google-http-client", version.ref = "google-http-client" }
 graphql-kotlin-schema-generator = { module = "com.expediagroup:graphql-kotlin-schema-generator", version.ref = "graphql-kotlin-schema-generator" }
+hikaricp = { module = "com.zaxxer:HikariCP", version.ref = "hikaricp" }
 http4k-ai-a2a-client = { module = "org.http4k.pro:http4k-ai-a2a-client" }
 http4k-ai-a2a-sdk = { module = "org.http4k.pro:http4k-ai-a2a-sdk" }
 http4k-ai-langchain4j = { module = "org.http4k:http4k-ai-langchain4j" }

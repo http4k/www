@@ -87,7 +87,7 @@ dependencies {
     testImplementation(libs.graphql.kotlin.schema.generator)
     testImplementation(libs.aws.lambda.java.events)
     testImplementation(libs.redis.jedis)
-    testImplementation("com.zaxxer:HikariCP:_")
+    testImplementation(libs.hikaricp)
 }
 
 sourceSets {
