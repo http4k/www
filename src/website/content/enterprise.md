@@ -10,7 +10,7 @@ highlights:
         description: Guaranteed security and critical updates for the LTS stable release channel, including source access, allowing you to focus on feature delivery.
         icon: "/images/footprint.svg"
     -   title: Supply chain security
-        description: SLSA Level 2 provenance, signed SBOMs, and cosign signatures for every artifact - compliance-ready out of the box and verified at build time with [http4k Verify](https://verify.http4k.org).
+        description: SLSA Level 2 provenance, signed SBOMs, and cosign signatures for every artifact, verified at build time with [http4k Verify](https://verify.http4k.org).
         icon: "/images/extendable.svg"
     -   title: Never wait for a release
         description: Early access to all http4k features and fixes through [maven.http4k.org](https://maven.http4k.org) every 1-2 weeks, rather than the [quarterly](/distribution/) cadence on Maven Central (from 1 October 2026).

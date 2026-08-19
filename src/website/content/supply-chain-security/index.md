@@ -28,7 +28,7 @@ faq:
 
 As part of the **http4k Enterprise Edition**, every http4k artifact is published with cryptographically signed provenance, complete dependency transparency, and verified build attestations - giving your organisation the supply chain assurance it needs to ship with confidence.
 
-With increasing regulatory pressure from the **EU Cyber Resilience Act (CRA)**, **US Executive Order 14028**, **NIST SSDF**, and **PCI DSS 4.0**, organisations need to demonstrate full visibility into their software supply chain. http4k delivers this out of the box - every build produces **SLSA Level 2 provenance** linking artifacts to the exact source commit and CI pipeline, **CycloneDX SBOMs** detailing all transitive dependencies, and **cosign signatures** with trusted timestamps from the Sigstore Timestamp Authority.
+Security teams, customers and auditors increasingly ask for evidence that the third-party components in a build are the ones their authors published. The **EU Cyber Resilience Act** brings vulnerability reporting obligations from **11 September 2026**, and its full requirements - machine-readable SBOMs and due diligence over integrated components - from December 2027. **PCI DSS 4.0.1** and **NIST SSDF** (SP 800-218) push the same way. http4k delivers this out of the box - every build produces **SLSA Level 2 provenance** linking artifacts to the exact source commit and CI pipeline, **CycloneDX SBOMs** detailing all transitive dependencies, and **cosign signatures** with trusted timestamps from the Sigstore Timestamp Authority.
 
 ## What Gets Published, When, and Where
 
