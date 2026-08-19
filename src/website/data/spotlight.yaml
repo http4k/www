@@ -1,14 +1,14 @@
 - tab: News
   eyebrow: LATEST FROM THE TEAM
-  title: "Publishing our homework: what running http4k responsibly actually takes"
-  body: "http4k hit the OpenSSF Best Practices silver badge at 100%. Here is the unglamorous work behind it - reporting, change control, signed releases, dependency hygiene - and the one gold criterion we deliberately skip."
-  link: { text: Read the news, url: /news/publishing-our-homework/ }
+  title: "Trust every dependency: introducing http4k Verify"
+  body: "One Gradle plugin that proves every http4k artifact in your build is the exact one we signed and shipped, before your code compiles. It has been doing that since 6.40.0.0 - we just never got round to writing it up."
+  link: { text: Read the news, url: /news/introducing-http4k-verify/ }
   card:
     title: "news · 2026"
     lines:
-      - { text: "OpenSSF silver badge · 100%", tone: ok }
-      - { text: "signed releases, threat model, CVD", tone: dim }
-      - { text: "trunk-based by choice", tone: ok }
+      - { text: "shipped in 6.40.0.0", tone: dim }
+      - { text: "sig · sbom · slsa-L2 · licence", tone: ok }
+      - { text: "one line, zero config", tone: ok }
 
 - tab: Showcase
   eyebrow: "IN ACTION · TALK"

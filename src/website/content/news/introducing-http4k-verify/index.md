@@ -1,89 +1,75 @@
 ---
 title: "Trust every dependency: introducing http4k Verify"
 category: "Security"
-description: "http4k Verify is generally available - one Gradle plugin that checks the signature, SBOM, SLSA provenance and licence report of every http4k dependency, automatically, before your code compiles."
-date: 2026-08-21
+description: "New in this release: nothing. http4k Verify has been proving every http4k artifact in your build is the one we signed and shipped since 6.40.0.0. This is just the post we owed you."
+date: 2026-08-19
 image: verify.webp
 ---
 
 <img class="imageMid my-4" src="./verify.webp" alt="http4k Verify - cryptographic chain-of-custody for every dependency"/>
 
-Back in **[Tale of the tape](/news/tale-of-the-tape-claude-vs-http4k/)** we spent four rounds hardening the http4k source and then flagged the other half of the problem: hardening the code proves the code is sound, but it says nothing about the bytes that actually land in your build. *Proving the JAR you pulled off the repo is the exact one we signed and shipped* is a different job - and it's the one **http4k Verify** does. It's the newest capability in **[http4k Enterprise Edition](/enterprise/)**, and it's generally available to subscribers today.
+Back in **[Tale of the tape](/news/tale-of-the-tape-claude-vs-http4k/)** we spent four rounds hardening the http4k source, then flagged the other half of the problem: hardening the code proves the code is sound. It says nothing about the bytes that actually land in your  build.
 
-**TL;DR:** http4k Verify is a single Gradle plugin, included with http4k Enterprise Edition. Apply it, and every http4k dependency in your build is checked - JAR signatures, CycloneDX SBOMs, SLSA provenance and licence reports - **before your code compiles**. Tampered artifact? The build fails. Clean build? You get a signed attestation report to hand your auditors. One line, zero config, results cached so there's no day-to-day overhead.
+This is the post about the other half.
+
+New in the latest http4k release: nothing. **http4k Verify**, a Gradle plugin that proves every http4k artifact in your build is the exact one we signed and shipped, went out in **6.40.0.0** and has been doing so in builds ever since. We just never got round to writing it up. This is either a damning indictment of our marketing, or the highest compliment you can pay a build plugin... we're going with the second one.
+
+**TL;DR:** it ships with **[http4k Enterprise Edition](/enterprise/)**. One line in your build file, and every http4k dependency has its JAR signature, CycloneDX SBOM, SLSA provenance and licence report checked **before your code compiles**. Tampered artifact? Build fails. Clean build? You get a verification report to hand your auditors. Zero config, results cached, costs you nothing day-to-day.
 
 ---
 
 ## Why this exists
 
-Nobody ships an app any more - they ship a dependency tree, and every node in it is someone else's code arriving over the wire. The interesting attacks stopped being "find a bug in the app" a while ago; they're "get something into the supply chain and let the build tools carry it the rest of the way".
+Nobody ships an app any more. They ship a (sometimes very weighty) dependency tree, and every node in it is someone else's code arriving over the wire. The interesting attacks stopped being "find a bug in the app" a while back. They're "get something into the supply chain and let the build tools carry it the rest of the way".
 
-The regulators have noticed too, and the first deadline is close. The **EU Cyber Resilience Act**'s vulnerability reporting obligations apply from **11 September 2026** - and they reach products already on the market, not just new ones. Its full requirements land in December 2027: machine-readable SBOMs, secure and timely distribution of updates, and due diligence over the third-party components you integrate, open source very much included.
+Regulators have definitely noticed. The **EU Cyber Resilience Act**'s reporting obligations start on **11 September 2026**, and they reach products already on the market, not just new ones.
 
-Note what the CRA does *not* say: it never asks for SLSA provenance or signed attestations by name, and it doesn't require you to hand an SBOM to your customers. What it asks is that you know what's in your product, that you can show it to an authority that asks, and that you can get a fix out quickly when something in your dependency tree turns out to be exploited. Provenance and signatures are simply the cheapest honest way we know to be able to answer those questions on demand.
+Mind you, it doesn't mandate any of this - the CRA never names SLSA provenance or signed attestations. What it actually wants is that you know what's in your product and can get a fix out fast when something in it turns out to be exploited. Provenance and signatures are just the cheapest honest way we know to answer that on demand. Anyone telling you otherwise is probably selling you something.
 
-The picture is not uniform, and it's worth being straight about that. The US moved the other way in February 2026, when OMB memorandum **M-26-05** rescinded the M-22-18 and M-23-16 secure-software mandates - self-attestation, NIST **SSDF** conformance and SBOM provision are now at each agency's discretion rather than required government-wide. **PCI DSS 4.0.1** still pushes in the same direction for anyone touching cardholder data. So: one jurisdiction tightening, one loosening, and a lot of security teams who have concluded that the underlying practice is worth doing regardless of who is currently mandating it.
+(The wider picture is messier than that. The US spent this year going the other way and rescinded the federal mandates for exactly this kind of evidence. Not really good enough it turns out because the security questionnaires your customers send you won't be any shorter.)
 
-You can meet that at audit time by scrambling for evidence after the fact, or you can capture it at build time and move on. Verify is firmly in the second camp.
+So, you can scramble for that evidence at audit time, or capture it at build time and get on with your life. Verify is firmly in the second camp.
 
-## What http4k already ships
+## What we already shipped
 
-Every http4k Enterprise Edition artifact - all 200+ modules, both community (`org.http4k`) and pro (`org.http4k.pro`) - is published with the evidence baked in:
+Every artifact we publish to **[maven.http4k.org](https://maven.http4k.org)** - all 200+ modules, community (`org.http4k`) and pro (`org.http4k.pro`) alike - carries its evidence with it:
 
-- a **cosign signature** for the JAR, with a trusted timestamp from the Sigstore Timestamp Authority
+- a **cosign signature** for the JAR, timestamped by the Sigstore Timestamp Authority
 - a **CycloneDX SBOM** listing every transitive dependency
-- **SLSA Build Level 2 provenance** linking the artifact to the exact commit and CI pipeline that built it
+- **SLSA Build Level 2 provenance** tying the artifact to the exact commit and pipeline that built it
 - a signed **licence compliance report**
 
-Signing runs in a job isolated from the build - the job that compiles the code holds no signing keys. It's a genuinely hardened Level 2 posture; we're deliberately precise about that rather than rounding up. (Full detail, including where SLSA Level 3 fits, is on the **[Supply Chain Security](/supply-chain-security/)** page.)
+http4k release signing runs in a job isolated from the build, so the job that compiles the code holds no keys. That's what's known as a hardened Level 2 posture, and we're deliberately precise about that rather than rounding up because these things matter. (Where the stricter Level 3 fits is on the **[Supply Chain Security](/supply-chain-security/)** page.)
 
-That's not bolted-on marketing - it's how the whole project is run. We walked through the wider picture, from vulnerability reporting to signed releases, in **[Publishing our homework](/news/publishing-our-homework/)**. Verify is the next link in that chain: it extends the same assurance from *how http4k is built* to *what lands in your build*.
+Note *where* all that lives, because it starts to matter in October. None of it goes to Maven Central and never has: Central gets the JARs and their standard PGP signatures, which isn't changing either.
 
-## The SLSA bit, briefly
+What *is* changing is how often http4k reaches Central at all. New Sonatype publishing limits mean releases there are dropping to roughly quarterly from **1 October 2026**, while `maven.http4k.org` carries on at the usual 1-2 weeks. Nothing is being withdrawn, and the community edition stays free, stays Apache-2.0 and stays on Central. But if you want the evidence *and* you want it current, which repository you pull from has stopped being a detail. Full story on **[Distribution & release channels](https://www.http4k.org/distribution/)**.
 
-Each artifact carries a signed [SLSA provenance](https://slsa.dev/provenance/v1) attestation - an [in-toto](https://in-toto.io/Statement/v1) statement tying it to the exact **git commit**, the **workflow** that built it, and the **SHA-256 digests** of everything produced.
-
-Because these artifacts are distributed privately rather than to the public world, verification is key-based and works **fully offline** - against a signing key you already trust, with no round-trip to a public transparency log.
+The signing, the provenance, the SBOMs: none of it is bolted-on marketing, it's just how http4k is run - we went through the whole unglamorous list in **[Publishing our homework](/news/publishing-our-homework/)**. **[http4k Verify](https://verify.http4k.org)** is the next link in the chain: it takes the same assurance from *how http4k is built* to *what lands in your build*.
 
 ## One plugin. One line.
 
-Here's the whole integration:
+We know that security is boring and hard and not very fun all at the same time. But with Verify, here's the whole integration:
 
 ```kotlin
 plugins {
-    id("org.http4k.verify") version "6.56.0.0"
+    id("org.http4k.verify") version "6.58.0.0"
 }
 ```
 
-That's it. On the next build the plugin downloads the http4k [signing key list](https://http4k.org/.well-known/cosign-keys.json), resolves the sigstore bundles for every http4k dependency, and verifies each signature **with the correct key for that artifact** - so key rotation just works, because each artifact's provenance carries the fingerprint of the key that signed it. Results are cached, so subsequent builds have zero overhead until your dependencies change.
+That's it. On the next Gradle build the plugin grabs our [signing key list](https://http4k.org/.well-known/cosign-keys.json), resolves the sigstore bundles for every http4k dependency, and checks each signature (with the correct key for that artifact - so key rotation just works). The provenance carries the fingerprint of the key that signed it.
 
-You can run it explicitly too:
+Signature doesn't match? Boom - the build stops dead in its tracks.
 
-```shell
-./gradlew verifyHttp4kDependencies
-```
+Every run also dumps what it touched into a `verification-report.json` - a timestamped record of which artifacts, with which hashes, were verified against which signatures. That report is the point and you can drop it straight into your audit trail.
 
-```
-Verifying 3 http4k module(s)...
-  org.http4k:http4k-core:6.56.0.0              jar ✓   sbom ✓   provenance ✓   license ✓
-  org.http4k:http4k-format-jackson:6.56.0.0    jar ✓   sbom ✓   provenance ✓   license ✓
-  org.http4k:http4k-server-undertow:6.56.0.0   jar ✓   sbom ✓   provenance ✓   license ✓
-Verified: 3 modules, 12 signatures
-```
-
-If a signature doesn't match, the check is marked **✗** and the build stops. No silent pass, no runtime surprise.
-
-Every run also exports everything it touched to `build/http4k-verify/` - the SBOMs, provenance, licence reports and sigstore bundles - alongside a `verification-report.json`. That report is the point: a timestamped, per-module record of exactly which artifacts, with which hashes, were verified against which signatures. Drop it straight into your audit trail or CI artifacts as evidence.
-
-No CLI tools to install, and nothing exotic in your infrastructure - it works through **Artifactory**, **Nexus**, or any repository manager proxying **[maven.http4k.org](https://maven.http4k.org)**.
+Verification is key-based rather than log-based, so it works **fully offline**, against a key you already trust. No CLI tools required, nothing exotic in your infrastructure, and it works through **Artifactory**, **Nexus** or anything else proxying **[maven.http4k.org](https://maven.http4k.org)**.
 
 ## What you should do
 
-If you're an **[http4k Enterprise Edition](/enterprise/)** subscriber, add the plugin to your build today and get supply-chain assurance for every http4k dependency with essentially zero effort. The full setup - configuration, manual cosign verification, and Gradle dependency pinning - is in the **[Verify reference docs](/ecosystem/enterprise/reference/verify/)**.
+If you're on **[Enterprise Edition](/enterprise/)** you already have this. Add the plugin and you're done - full setup is in the **[Verify reference docs](/ecosystem/enterprise/reference/verify/)**.
 
-Not on EE yet and this is the kind of evidence your security team is going to be asking for? **[Get in touch](/enterprise/)** or email enterprise@http4k.org - and take a look at **[verify.http4k.org](https://verify.http4k.org)**.
-
-One related note, since the two get confused. The supply-chain artifacts described above - cosign signatures, SLSA provenance, SBOMs and licence reports - have always been published to **[maven.http4k.org](https://maven.http4k.org)** rather than to Maven Central, and that hasn't changed. What *is* changing is how often http4k reaches Maven Central at all: from 1 October 2026, new Sonatype publishing limits mean releases there drop to roughly quarterly, while `maven.http4k.org` continues on the normal 1-2 week cadence. The full picture, and our current status with Sonatype, is in **[Distribution & release channels](https://www.http4k.org/distribution/)**.
+Not on EE, and this is the kind of evidence your security team is going to start asking for? **[Get in touch](/enterprise/)** or email enterprise@http4k.org and we can talk. There's more at **[verify.http4k.org](https://verify.http4k.org)**.
 
 Trust every dependency. Verify every build.
 
