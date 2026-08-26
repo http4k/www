@@ -20,9 +20,9 @@ Where http4k and Customer have executed a Master Subscription Agreement, that ag
 
 ## 1. LICENSE AND SUPPORT
 
-1.1 Upon obtaining a valid subscription through http4k's official channels and subject to the terms and conditions of this Agreement, http4k hereby grants to Customer and its Affiliates (as defined below) a limited, non-exclusive, non-transferable, non-sublicensable license for Customer's and its Affiliates' employees and contractors to (1) internally (a) use, reproduce, modify, prepare derivative works based upon, and display the code of the Licensed Materials at the tier level selected by Customer or set forth on a Quote (as defined below), if applicable with the specifications generally promulgated by http4k from time to time (the "Software") solely (i) for its internal use in connection with the development of Customer's and/or its Affiliates' own software, and (ii) by the number of Hosts (defined below) for which Customer has paid http4k; and (b) use the documentation, training materials or other materials supplied by http4k (the "Other http4k Materials"); and (2) modify the Software and publish patches to the Software.
+1.1 Upon obtaining a valid subscription through http4k's official channels and subject to the terms and conditions of this Agreement, http4k hereby grants to Customer and its Affiliates (as defined below) a limited, non-exclusive, non-transferable, non-sublicensable license for Customer's and its Affiliates' employees and contractors to (1) internally (a) use, reproduce, modify, prepare derivative works based upon, and display the code of the Licensed Materials at the tier level selected by Customer or set forth on a Quote (as defined below), if applicable with the specifications generally promulgated by http4k from time to time (the "Software") solely (i) for its internal use in connection with the development of Customer's and/or its Affiliates' own software, and (ii) on no more than the number of Seats for which Customer has paid http4k; and (b) use the documentation, training materials or other materials supplied by http4k (the "Other http4k Materials"); and (2) modify the Software and publish patches to the Software.
 
-Notwithstanding anything to the contrary, Customer agrees that http4k and/or its licensors (as applicable) retain all right, title and interest in and to all Software incorporated in such modifications and/or patches, and all such Software may only be used, copied, modified, displayed, distributed, or otherwise exploited in full compliance with this Agreement, and with a valid http4k Commercial subscription for the correct number of Hosts.
+Notwithstanding anything to the contrary, Customer agrees that http4k and/or its licensors (as applicable) retain all right, title and interest in and to all Software incorporated in such modifications and/or patches, and all such Software may only be used, copied, modified, displayed, distributed, or otherwise exploited in full compliance with this Agreement, and with a valid http4k Commercial subscription for the correct number of Seats.
 
 The Software and Other http4k Materials are collectively referred to herein as the "Licensed Materials."
 
@@ -34,6 +34,8 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 
 "Customer" means the entity using the Licensed Materials under a valid subscription.
 
+"Developer Workstation" means a single physical or virtual machine operated interactively by one or more authorised users of Customer for the purpose of writing, running, or testing software, each with no more than one interactive session active at a time, but not including: (i) shared servers accessed concurrently by multiple developers via remote sessions; (ii) continuous integration or continuous delivery (CI/CD) runners or build agents; (iii) automated test execution environments not directly operated by a human; and (iv) staging, pre-production, or any environment used to run software outside of direct human development activity.
+
 "Enterprise Edition" means the enhanced offering of the Software that includes Long Term Support and additional support services.
 
 "Master Subscription Agreement" means a written subscription agreement executed by http4k Ltd and Customer.
@@ -44,6 +46,8 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 
 "Quote" means a written agreement between http4k Ltd and Customer specifying Enterprise Edition terms, support levels, and pricing.
 
+"Seat" means, as specified in the applicable Quote or Order, the number of Developer Workstations on which the Licensed Materials are permitted to be concurrently installed.
+
 "Subscription Term" means the period for which a subscription is valid and active.
 
 1.1.1 Customer Modifications. Customer may modify the Licensed Materials only for its own internal business use and subject to the following conditions:
@@ -52,6 +56,8 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 - http4k retains ownership of the underlying Licensed Materials and any derivative works
 - Customer agrees that http4k has no support obligations for modified code unless otherwise agreed in the Quote
 - Customer agrees to indemnify and hold http4k harmless from any claims arising from Customer modifications
+
+1.1.2 Deployment. For the avoidance of doubt, Seats limit only the number of Developer Workstations on which the Licensed Materials may be installed. Customer may deploy and run software incorporating the Licensed Materials on an unlimited number of servers, containers, and other non-development environments and machines without requiring additional Seats.
 
 1.2 Subject to the terms and conditions of this Agreement, support services are provided based on subscription type. Pro Edition subscribers receive standard support services including security patches and updates. Enterprise Edition subscribers receive additional support services including Long Term Support (LTS) and dedicated support channels as specified in their Quote if any such agreement exists). Notwithstanding anything to the contrary, in the event that Customer does not reasonably comply with written specifications or instructions from http4k's service engineers regarding any support issue or request (including without limitation, failure to make backups of Customer's Licensed Materials) (each, a "Support Issue"), http4k may terminate its support obligations to Customer with respect to such Support Issue upon fifteen (15) days' written notice if Customer does not cure such noncompliance within the notice period.
 
@@ -79,7 +85,7 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 
 1.3 Training and Consultancy
 
-1.3.1 Training courses are delivered for up to 10 persons per day. For in-person training, travel and associated costs are not included in the Training fee.
+1.3.1 For in-person training, travel and associated costs are not included in the Training fee.
 
 1.3.2 Consultancy activities are arranged on an as-needed basis.
 
@@ -113,15 +119,15 @@ Additionally, except as expressly authorized above, Customer will not, and will 
 (a) use the Licensed Materials for any purpose other than as specifically authorized in Section 1, or in such a manner that would enable any unlicensed person to access the Licensed Materials;
 (b) copy, adapt, modify, reverse engineer, decompile, reassemble or disassemble the Software in whole or in part except to the extent expressly permitted by applicable law;
 (c) make available the Software to third parties, unless such third parties are using or operating the Software solely on behalf of the Customer;
-(d) exceed the number of Hosts specified in the Quote or for which Customer has paid http4k, including but not limited to exceeding the number of concurrent developer licenses when using floating development licenses;
+(d) exceed the number of Seats specified in the applicable Quote or Order, or for which Customer has paid http4k;
 (e) use the Licensed Materials or any other http4k software for timesharing or service bureau purposes or for any purpose other than its and its Affiliates' own internal use;
 (f) use the Licensed Materials in connection with any high risk or strict liability activity (including, without limitation, space travel, firefighting, police operations, power plant operation, military operations, rescue operations, hospital and medical operations or the like);
 (g) use the Licensed Materials or software other than in accordance with this Agreement and in compliance with all applicable laws and regulations (including but not limited to any privacy laws, and laws and regulations concerning intellectual property, consumer and child protection, obscenity or defamation);
-(h) use the Licensed Materials in any manner that (1) is harmful, fraudulent, deceptive, threatening, abusive, harassing, tortious, defamatory, vulgar, obscene, or libelous (including without limitation, accessing any computer, computer system, network, software, or data without authorization, breaching the security of another user or system, and/or attempting to circumvent any Host or User authentication or security process), (2) impersonates any person or entity, including without limitation any employee or representative of http4k, or (3) contains a virus, trojan horse, worm, time bomb, unsolicited bulk, commercial, or "spam" message, or other harmful computer code, file, or program (including without limitation, password guessing programs, decoders, password gatherers, keystroke loggers, cracking tools, packet sniffers, and/or encryption circumvention programs).
+(h) use the Licensed Materials in any manner that (1) is harmful, fraudulent, deceptive, threatening, abusive, harassing, tortious, defamatory, vulgar, obscene, or libelous (including without limitation, accessing any computer, computer system, network, software, or data without authorization, breaching the security of another user or system, and/or attempting to circumvent any host or user authentication or security process), (2) impersonates any person or entity, including without limitation any employee or representative of http4k, or (3) contains a virus, trojan horse, worm, time bomb, unsolicited bulk, commercial, or "spam" message, or other harmful computer code, file, or program (including without limitation, password guessing programs, decoders, password gatherers, keystroke loggers, cracking tools, packet sniffers, and/or encryption circumvention programs).
 
 2.2 Customer will cooperate with http4k in connection with the performance of this Agreement by making available such personnel and information as may be reasonably required, and taking such other actions as http4k may reasonably request. Customer will also cooperate with http4k in establishing a password or other procedures for verifying that only designated employees of Customer have access to any administrative functions of the Licensed Materials. Customer shall maintain during the term of this Agreement and through the end of the third year after the date on which the final payment is made under this Agreement, books, records, contracts and accounts relating to the payments due http4k under this Agreement (collectively, the "Customer Records"). http4k may, at its sole expense, upon 30 days' prior written notice to Customer and during Customer's normal business hours and subject to industry-standard confidentiality obligations, hire an independent third party auditor to audit the Customer Records only to verify the amounts payable under this Agreement. If an audit reveals underpayment, then Customer shall promptly pay the deficiency to http4k plus late fees pursuant to Section 5. http4k shall bear the cost of an audit unless the audit reveals underpayment by more than 5% for the audited period, in which case Customer shall promptly pay http4k for the reasonable costs of the audit.
 
-2.3 Customer will be responsible for maintaining the security of Customer's account, passwords (including but not limited to administrative and User passwords and credentials for Hosts) and files, and for all uses of Customer account with or without Customer's knowledge or consent.
+2.3 Customer will be responsible for maintaining the security of Customer's account, passwords (including but not limited to administrative and User passwords and credentials for Developer Workstations) and files, and for all uses of Customer account with or without Customer's knowledge or consent.
 
 2.4 Customer agrees to implement reasonable controls to ensure that any modifications made under Section 1.1.1 are developed and deployed following secure software development practices, and to maintain appropriate records of all modifications made to the Licensed Materials.
 
@@ -153,17 +159,16 @@ Order (the "Fees") without any right of set-off or deduction.
 
 5.2 Usage Monitoring and True-Up
 Customer agrees to:
-- Maintain complete and accurate records of all Host usage
-- Perform quarterly internal audits of actual Host usage against licensed quantities
-- Report any excess usage to http4k within 15 days of discovery
-- Pay for any excess usage retroactively from the date such usage began
-- Provide usage reports upon reasonable request from http4k
+- Maintain reasonable records of the number of Developer Workstations on which the Licensed Materials are installed
+- Notify http4k within thirty (30) days of becoming aware that its use has exceeded the number of Seats purchased
+- Pay for any excess Seats from the date such excess use began, at the then-current rates
+- Provide usage information upon reasonable written request from http4k, no more than once in any twelve (12) month period
 
-Failure to maintain accurate records or report excess usage constitutes a material breach of this agreement.
+Continued use of the Licensed Materials in excess of the number of Seats purchased, where not remedied within thirty (30) days of written notice from http4k, constitutes a material breach of this Agreement.
 
 On each anniversary of the Effective Date:
-a) http4k will invoice Customer for any additional Customer Hosts beyond pre-paid quantities at the then-current rates
-b) All additional Hosts purchased shall be co-terminated through the end of the original Subscription period
+a) http4k will invoice Customer for any additional Seats beyond pre-paid quantities at the then-current rates
+b) All additional Seats purchased shall be co-terminated through the end of the original Subscription period
 
 5.3 All payments will be made in accordance with the payment schedule and the method of payment set forth in the applicable Quote or Order. If not otherwise
 specified, (a) http4k will invoice Customer with respect to Fees up-front, for each term of the Customer's subscription (as applicable), and (b) payments will
@@ -296,7 +301,7 @@ EXCEPT WITH RESPECT TO BREACH(ES) OF SECTION 1.1 AND/OR 2.1, IN NO EVENT WILL EI
 
 ## 11. U.S. GOVERNMENT MATTERS
 
-Notwithstanding anything else, Customer may not provide to any person or export or re-export or allow the export or re-export of the Licensed Materials or any software or anything related thereto or any direct product thereof (collectively "Controlled Subject Matter"), in violation of any restrictions, laws or regulations of the United States Department of Commerce, the United States Department of Treasury Office of Foreign Assets Control, or any other United States or foreign agency or authority. Without limiting the foregoing Customer acknowledges and agrees that the Controlled Subject Matter will not be used or transferred or otherwise exported or re-exported to countries as to which the United States maintains an embargo (collectively, "Embargoed Countries"), or to or by a national or resident thereof, or any person or entity on the U.S. Department of Treasury's List of Specially Designated Nationals or the U.S. Department of Commerce's Table of Denial Orders (collectively, "Designated Nationals"). The lists of Embargoed Countries and Designated Nationals are subject to change without notice. Use of the Licensed Materials is representation and warranty that neither the User nor Host is located in, under the control of, or a national or resident of an Embargoed Country or Designated National. The Controlled Subject Matter may use or include encryption technology that is subject to licensing requirements under the U.S. Export Administration Regulations.
+Notwithstanding anything else, Customer may not provide to any person or export or re-export or allow the export or re-export of the Licensed Materials or any software or anything related thereto or any direct product thereof (collectively "Controlled Subject Matter"), in violation of any restrictions, laws or regulations of the United States Department of Commerce, the United States Department of Treasury Office of Foreign Assets Control, or any other United States or foreign agency or authority. Without limiting the foregoing Customer acknowledges and agrees that the Controlled Subject Matter will not be used or transferred or otherwise exported or re-exported to countries as to which the United States maintains an embargo (collectively, "Embargoed Countries"), or to or by a national or resident thereof, or any person or entity on the U.S. Department of Treasury's List of Specially Designated Nationals or the U.S. Department of Commerce's Table of Denial Orders (collectively, "Designated Nationals"). The lists of Embargoed Countries and Designated Nationals are subject to change without notice. Use of the Licensed Materials is representation and warranty that neither the User nor any machine on which the Licensed Materials are installed is located in, under the control of, or a national or resident of an Embargoed Country or Designated National. The Controlled Subject Matter may use or include encryption technology that is subject to licensing requirements under the U.S. Export Administration Regulations.
 
 ## 12. EXPORT COMPLIANCE
 
