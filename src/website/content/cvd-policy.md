@@ -70,12 +70,35 @@ When we receive a valid vulnerability report, we commit to:
 1. **Acknowledge** your report within 48 hours.
 2. **Assess** the vulnerability and assign a severity rating using CVSS v3.1.
 3. **Develop and release** a fix according to our severity-based timelines.
-4. **Assign a CVE** for confirmed vulnerabilities and publish a GitHub Security Advisory (GHSA).
+4. **Publish a GitHub Security Advisory (GHSA)** for every confirmed vulnerability, and request a CVE identifier where assignment is warranted - see [Vulnerability Identifiers](#vulnerability-identifiers-ghsa-and-cve) below.
 5. **Credit you** in our security advisory (unless you prefer to remain anonymous).
 6. **Update our SBOMs** - we publish CycloneDX SBOMs for every module, signed with cosign.
 7. **Notify our users** via our [security advisories page](/security/), GitHub, and direct communication with Enterprise customers.
 8. **Report upstream** - if the vulnerability is in a third-party or open-source component integrated into our products, we will report it to the component maintainer and share relevant fixes, in accordance with CRA Article 13(6).
 9. **Report to authorities** - where required by the EU Cyber Resilience Act (Article 14), we will notify the designated CSIRT and ENISA of actively exploited vulnerabilities within the mandated timeframes.
+
+## Vulnerability Identifiers (GHSA and CVE)
+
+Every confirmed vulnerability is published as a GitHub Security Advisory (GHSA) against the affected repository. The GHSA is our canonical disclosure record: it is carried by the GitHub Advisory Database, OSV, Dependabot and the major SCA tools, so downstream consumers are notified and can remediate whether or not a CVE identifier has also been assigned.
+
+We request a CVE identifier where assignment is warranted and adds value to consumers. That is assessed per advisory, taking into account:
+
+- whether the issue is reachable by an untrusted party against a supported configuration;
+- the assessed severity (CVSS v3.1);
+- whether the change fixes a defect, or hardens a default that requires a specific application-side configuration before it has any effect;
+- whether downstream consumers need a CVE identifier to track remediation in their own tooling.
+
+Where we decide not to request a CVE, the reasoning is recorded on the advisory. Assignment is in any case at the discretion of the CNA, which may decline for reasons unrelated to the severity of the issue.
+
+### Requests to assign a CVE to an already-published advisory
+
+We receive requests asking us to request a CVE for an advisory that is already public, frequently in bulk and without new technical content. For clarity on how these are handled:
+
+- Requests containing no new technical information are closed as duplicates of the existing advisory, without individual re-assessment.
+- Requests that demonstrate impact we had not accounted for - a reproduction, a working attack path against a supported configuration, or a materially different impact assessment - are very welcome. We will reassess promptly and request a CVE where the reassessment warrants it.
+- Credit on an advisory is given for discovery of a vulnerability, or for material contribution to its analysis or remediation. We do not add attribution for administrative or coordination requests relating to advisories that are already public.
+
+Nothing in this policy prevents a third party from seeking a CVE identifier directly from MITRE or another CNA; we simply do not undertake to request one on their behalf.
 
 ## Upstream and Downstream Coordination (CRA Article 13(6))
 
