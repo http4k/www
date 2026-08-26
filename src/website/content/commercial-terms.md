@@ -16,6 +16,8 @@ Customer's continued use of the software or any Licensed Materials provided by h
 
 If these terms are considered an offer, acceptance is expressly limited to these terms. If you are executing this agreement on behalf of an organization, you represent that you have the authority to do so.
 
+Where http4k and Customer have executed a Master Subscription Agreement, that agreement governs Customer's subscription and these Terms do not apply to it.
+
 ## 1. LICENSE AND SUPPORT
 
 1.1 Upon obtaining a valid subscription through http4k's official channels and subject to the terms and conditions of this Agreement, http4k hereby grants to Customer and its Affiliates (as defined below) a limited, non-exclusive, non-transferable, non-sublicensable license for Customer's and its Affiliates' employees and contractors to (1) internally (a) use, reproduce, modify, prepare derivative works based upon, and display the code of the Licensed Materials at the tier level selected by Customer or set forth on a Quote (as defined below), if applicable with the specifications generally promulgated by http4k from time to time (the "Software") solely (i) for its internal use in connection with the development of Customer's and/or its Affiliates' own software, and (ii) by the number of Hosts (defined below) for which Customer has paid http4k; and (b) use the documentation, training materials or other materials supplied by http4k (the "Other http4k Materials"); and (2) modify the Software and publish patches to the Software.
@@ -33,6 +35,8 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 "Customer" means the entity using the Licensed Materials under a valid subscription.
 
 "Enterprise Edition" means the enhanced offering of the Software that includes Long Term Support and additional support services.
+
+"Master Subscription Agreement" means a written subscription agreement executed by http4k Ltd and Customer.
 
 "Private Resources" means any private repositories, systems, channels, or services provided by http4k Ltd to subscribers as part of their subscription.
 
@@ -81,10 +85,11 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 
 ## 2. RESTRICTIONS AND RESPONSIBILITIES
 
-2.1 This Software is governed by this Commercial License. Usage is permitted under one of the following conditions:
+2.1 Use of the Licensed Materials is governed by the http4k Commercial License. Usage is permitted under one of the following conditions:
 
 a) Non-Commercial Usage:
-- Personal projects, research, education, and non-profit organizations may use the Software freely
+
+- Personal projects, academic research, education, and non-profit organizations may use the Software freely
 - Attribution is required in any resulting work or publication
 
 b) Small Business Usage:
@@ -143,7 +148,8 @@ Additionally, except as expressly authorized above, Customer will not, and will 
 ## 5. PAYMENT OF FEES
 
 5.1 License Fees
-Unless otherwise specified in an executed Quote or handled through a reseller, Customer will pay http4k the applicable fees as set forth at https://http4k.org (the "Pricing") for the Licensed Materials selected and/or used by Customer (the "Fees") without any right of set-off or deduction.
+Unless otherwise specified in an executed Quote or handled through a reseller, Customer will pay http4k the applicable fees set forth in the applicable Quote or
+Order (the "Fees") without any right of set-off or deduction.
 
 5.2 Usage Monitoring and True-Up
 Customer agrees to:
@@ -159,7 +165,11 @@ On each anniversary of the Effective Date:
 a) http4k will invoice Customer for any additional Customer Hosts beyond pre-paid quantities at the then-current rates
 b) All additional Hosts purchased shall be co-terminated through the end of the original Subscription period
 
-5.3 All payments will be made in accordance with the payment schedule and the method of payment set forth in the Pricing. If not otherwise specified, (a) http4k will invoice Customer with respect to Fees up-front, for each term of the Customer's subscription (as applicable), and (b) payments will be due within thirty (30) days of Customer's receipt of correct invoice. Except as expressly set forth in this Agreement, all Fees paid and/or due hereunder (including any prepaid amounts) are non-refundable, including without limitation if this Agreement is terminated in accordance with Section 6 below. If Customer terminates this Agreement pursuant to Section 6.2 within 45 calendar days from receipt of the initial invoice for the Licensed Materials, http4k will refund all Fees paid hereunder.
+5.3 All payments will be made in accordance with the payment schedule and the method of payment set forth in the applicable Quote or Order. If not otherwise
+specified, (a) http4k will invoice Customer with respect to Fees up-front, for each term of the Customer's subscription (as applicable), and (b) payments will
+be due within thirty (30) days of Customer's receipt of correct invoice. Except as expressly set forth in this Agreement, all Fees paid and/or due hereunder (
+including any prepaid amounts) are non-cancellable and non-refundable, including without limitation if this Agreement is terminated in accordance with Section 6
+below.
 
 5.4 Any unpaid fees are subject to a finance charge of four percent (4%) per annum above the Bank of England base rate, calculated daily, or the maximum permitted by law, whichever is lower, plus all expenses of collection, including reasonable legal costs. Fees under this Agreement are exclusive of all taxes, including Value Added Tax, sales, use, and similar taxes, if any. Customer agrees to pay such taxes (excluding taxes based on http4k's net income) unless Customer has provided http4k with a valid exemption certificate. In the case of any withholding requirements, Customer will pay any required withholding itself and will not reduce the amount paid to http4k on account thereof.
 
@@ -169,7 +179,7 @@ b) All additional Hosts purchased shall be co-terminated through the end of the 
 Subscriptions automatically renew for equal terms unless:
 - Written notice is provided forty-five (45) days before renewal date
 - Material breach has occurred
-- Either party exercises termination rights under Section 6.4
+- Either party elects not to renew in accordance with Section 6.4
 
 6.2 Pricing Adjustments
 
@@ -189,11 +199,14 @@ http4k will provide written notification of the upcoming renewal, including:
 
 6.4 Non-Renewal
 
-6.4.1 Either party may terminate the subscription by providing written notice prior to the renewal date.
+6.4.1 Either party may elect not to renew the subscription by providing written notice no less than forty-five (45) days prior to the renewal date.
 
 6.4.2 Upon non-renewal:
 - Access to Licensed Materials and Private Resources will be revoked
 - Maintenance and support services will cease
+
+6.4.3 For the avoidance of doubt, where a subscription has been purchased for a committed multi-year term, that subscription may not be terminated for
+convenience during the committed term, and may be ended only in accordance with Section 6.4.1 at the conclusion of that term or under Sections 6.7 or 6.8.
 
 6.5 Dispute Resolution
 Any disputes related to renewals or pricing shall be resolved through good-faith negotiation in accordance with the dispute resolution provisions in Section 13 of this Agreement.
@@ -202,11 +215,14 @@ Any disputes related to renewals or pricing shall be resolved through good-faith
 - For subscribers with a Quote, either party may terminate this Agreement upon 15 days' written notice in the event that Customer has no then-current subscription.
 - For Pro edition subscribers, continuation is subject to active renewal through ongoing subscription or purchase.
 
-6.7 Customer may terminate this Agreement at any time upon written notice to http4k. Either party may terminate this Agreement immediately upon 15 days' written notice to the other party in the event of any material breach of this Agreement (including without limitation, any breach of Section 2.2 and/or failure to pay any amounts when due hereunder) by such party where such material breach is not cured during such notice period.
+6.7 Either party may terminate this Agreement immediately upon 15 days' written notice to the other party in the event of any material breach of this
+Agreement (including without limitation, any breach of Section 2.2 and/or failure to pay any amounts when due hereunder) by such party where such material
+breach is not cured during such notice period.
 
 6.8 Either party may terminate this Agreement, without notice, (i) upon the institution by or against the other party of insolvency, receivership or bankruptcy proceedings (provided such proceedings are not dismissed within one hundred twenty (120) days of such institution), (ii) upon the other party's making an assignment for the benefit of creditors, or (iii) upon the other party's dissolution or ceasing to do business without a successor.
 
-6.9 Customer's rights to the Licensed Materials, and any licenses granted hereunder, shall terminate upon any termination of this Agreement. In the event that Customer terminates this Agreement pursuant to the second sentence of Section 6.2 above, http4k will refund to Customer a pro-rated portion of pre-paid Fees for Services not actually received by Customer as of the date of such termination. The following Sections will survive any termination of this Agreement: 2 through 6 (except for Section 4.3), and 8 through 11.
+6.9 Customer's rights to the Licensed Materials, and any licenses granted hereunder, shall terminate upon any termination of this Agreement. The following
+Sections will survive any termination of this Agreement: 2 through 6 (except for Section 4.3), and 8 through 11.
 
 ## 7. ACCESS TO PRIVATE RESOURCES
 
@@ -288,7 +304,20 @@ Export laws and regulations of the European Union, the United States, Great Brit
 
 ## 13. MISCELLANEOUS
 
-If any provision of this Agreement is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that this Agreement will otherwise remain in full force and effect and enforceable. This Agreement is not assignable, transferable or sublicensable by either party without the other party's prior written consent, not to be unreasonably withheld or delayed; provided that either party may transfer and/or assign this Agreement to a successor in the event of a sale of all or substantially all of its business or assets to which this Agreement relates. Both parties agree that this Agreement is the complete and exclusive statement of the mutual understanding of the parties and supersedes and cancels all previous written and oral agreements, communications and other understandings relating to the subject matter of this Agreement, and that all waivers and modifications must be in a writing signed or otherwise agreed to by each party, except as otherwise provided herein. No agency, partnership, joint venture, or employment is created as a result of this Agreement and neither party has any authority of any kind to bind the other in any respect whatsoever. In any action or proceeding to enforce rights under this Agreement, the prevailing party will be entitled to recover costs and legal fees. All notices under this Agreement will be in writing and will be deemed to have been duly given when received, if personally delivered; when receipt is electronically confirmed, if transmitted by e-mail; and upon receipt, if sent by certified or registered mail (return receipt requested), postage prepaid. http4k will not be liable for any loss resulting from a cause over which it does not have direct control. This Agreement shall be governed by and construed in accordance with the laws agreed upon in writing between the parties. If no governing law is specified in a written agreement between the parties, any disputes shall be resolved in accordance with the laws of the jurisdiction where http4k Ltd is incorporated, without regard to its conflict of laws provisions.
+If any provision of this Agreement is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that
+this Agreement will otherwise remain in full force and effect and enforceable. This Agreement is not assignable, transferable or sublicensable by Customer
+without http4k's prior written consent, not to be unreasonably withheld or delayed; provided that http4k may assign this Agreement to any of its Affiliates or
+to any purchaser of that part of its business to which the subject matter of this Agreement relates. Both parties agree that this Agreement is the complete and
+exclusive statement of the mutual understanding of the parties and supersedes and cancels all previous written and oral agreements, communications and other
+understandings relating to the subject matter of this Agreement, and that all waivers and modifications must be in a writing signed or otherwise agreed to by
+each party, except as otherwise provided herein. No agency, partnership, joint venture, or employment is created as a result of this Agreement and neither party
+has any authority of any kind to bind the other in any respect whatsoever. In any action or proceeding to enforce rights under this Agreement, the prevailing
+party will be entitled to recover costs and legal fees. All notices under this Agreement will be in writing and will be deemed to have been duly given when
+received, if personally delivered; when receipt is electronically confirmed, if transmitted by e-mail; and upon receipt, if sent by certified or registered
+mail (return receipt requested), postage prepaid. http4k will not be liable for any loss resulting from a cause over which it does not have direct control. This
+Agreement and any dispute or claim arising out of or in connection with it or its subject matter or formation (including non-contractual disputes or claims)
+shall be governed by and construed in accordance with the law of England and Wales, and the parties submit to the exclusive jurisdiction of the courts of
+England and Wales.
 
 ## 14. DATA PRIVACY
 
