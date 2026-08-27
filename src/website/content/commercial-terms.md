@@ -40,13 +40,15 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 
 "Master Subscription Agreement" means a written subscription agreement executed by http4k Ltd and Customer.
 
+"Order" means an order form or similar ordering document issued by http4k Ltd and agreed by Customer.
+
 "Private Resources" means any private repositories, systems, channels, or services provided by http4k Ltd to subscribers as part of their subscription.
 
 "Pro Edition" means the standard commercial offering of the Software.
 
 "Quote" means a written agreement between http4k Ltd and Customer specifying Enterprise Edition terms, support levels, and pricing.
 
-"Seat" means, as specified in the applicable Quote or Order, the number of Developer Workstations on which the Licensed Materials are permitted to be concurrently installed.
+"Seat" means, as specified in the applicable Quote or Order, a Floating Developer License as defined in the http4k Commercial License. Each Seat permits installation of the Licensed Materials on any number of Developer Workstations, provided that the number of concurrently active Developer Workstations does not exceed the number of Seats held by Customer. Collaborative development practices such as pair or mob programming on a single Developer Workstation consume only one Seat.
 
 "Subscription Term" means the period for which a subscription is valid and active.
 
@@ -95,7 +97,7 @@ All terms defined in the http4k Commercial License shall have the same meaning i
 
 a) Non-Commercial Usage:
 
-- Personal projects, academic research, education, and non-profit organizations may use the Software freely
+- Personal projects, research, education, and non-profit organizations may use the Software freely
 - Attribution is required in any resulting work or publication
 
 b) Small Business Usage:
@@ -103,6 +105,7 @@ b) Small Business Usage:
 - Must provide attribution in any resulting work or publication
 - Must provide annual self-certification of revenue status if requested
 - Must obtain a commercial subscription within 60 days of exceeding $1,000,000 ARR
+- This exception applies only to for-profit organizations; non-profit organizations qualify under Non-Commercial Usage above
 
 c) Pro Edition Usage:
 - Required for commercial use by organizations with ARR of $1,000,000 USD or more
@@ -159,7 +162,7 @@ Order (the "Fees") without any right of set-off or deduction.
 
 5.2 Usage Monitoring and True-Up
 Customer agrees to:
-- Maintain reasonable records of the number of Developer Workstations on which the Licensed Materials are installed
+- Maintain reasonable records of the number of concurrently active Developer Workstations on which the Licensed Materials are used
 - Notify http4k within thirty (30) days of becoming aware that its use has exceeded the number of Seats purchased
 - Pay for any excess Seats from the date such excess use began, at the then-current rates
 - Provide usage information upon reasonable written request from http4k, no more than once in any twelve (12) month period
@@ -214,7 +217,7 @@ http4k will provide written notification of the upcoming renewal, including:
 convenience during the committed term, and may be ended only in accordance with Section 6.4.1 at the conclusion of that term or under Sections 6.7 or 6.8.
 
 6.5 Dispute Resolution
-Any disputes related to renewals or pricing shall be resolved through good-faith negotiation in accordance with the dispute resolution provisions in Section 13 of this Agreement.
+Any disputes related to renewals or pricing shall be resolved through good-faith negotiation, failing which they shall be determined in accordance with the governing law and jurisdiction provisions in Section 13 of this Agreement.
 
 6.6 This Agreement shall continue until terminated in accordance with this Section 6.
 - For subscribers with a Quote, either party may terminate this Agreement upon 15 days' written notice in the event that Customer has no then-current subscription.
@@ -227,7 +230,7 @@ breach is not cured during such notice period.
 6.8 Either party may terminate this Agreement, without notice, (i) upon the institution by or against the other party of insolvency, receivership or bankruptcy proceedings (provided such proceedings are not dismissed within one hundred twenty (120) days of such institution), (ii) upon the other party's making an assignment for the benefit of creditors, or (iii) upon the other party's dissolution or ceasing to do business without a successor.
 
 6.9 Customer's rights to the Licensed Materials, and any licenses granted hereunder, shall terminate upon any termination of this Agreement. The following
-Sections will survive any termination of this Agreement: 2 through 6 (except for Section 4.3), and 8 through 11.
+Sections will survive any termination of this Agreement: Sections 2 through 14 (except for Section 4.3).
 
 ## 7. ACCESS TO PRIVATE RESOURCES
 
