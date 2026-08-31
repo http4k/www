@@ -1,5 +1,5 @@
 [versions]
-amazon-s3 = "2.54.2"
+amazon-s3 = "2.54.7"
 aws-lambda-java-events = "3.16.1"
 azure-search-documents = "12.0.2"
 forkhandles-bom = "3.0.0.0"
@@ -15,9 +15,9 @@ kotshi-api = "4.0.0"
 kotshi-compiler = "4.0.0"
 ksp = "2.3.11"
 moshi-metadata-reflect = "0.37.0"
-opentelemetry-aws-xray-propagator = "1.59.0-alpha"
+opentelemetry-aws-xray-propagator = "1.60.0-alpha"
 opentelemetry-sdk-testing = "1.65.0"
-redis-jedis = "8.0.0"
+redis-jedis = "8.0.1"
 typeflows = "0.34.0-beta"
 version-catalog-update = "1.1.1"
 
