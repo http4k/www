@@ -16,7 +16,7 @@
 
 .company-mission p:last-child { margin-bottom: 0; }
 
-.company-receipts { grid-template-columns: repeat(4, 1fr); }
+.company-receipts { grid-template-columns: repeat(3, 1fr); }
 .company-receipts__tile { padding: var(--pad-card); }
 
 .company-receipts__num {

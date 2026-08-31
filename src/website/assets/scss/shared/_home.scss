@@ -257,7 +257,7 @@
     .marquee__set { flex-wrap: wrap; row-gap: 14px; }
 }
 
-.receipts-grid { grid-template-columns: repeat(4, 1fr); border-radius: var(--radius-lg); }
+.receipts-grid { grid-template-columns: repeat(3, 1fr); border-radius: var(--radius-lg); }
 
 .receipt-tile { padding: 30px 26px; }
 
