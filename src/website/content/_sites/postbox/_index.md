@@ -8,13 +8,13 @@ type: "product"
 subdomain: postbox
 tier: pro
 description: "Build reliable, distributed transaction processing systems using the http4k Transactional Outbox pattern"
-docs_link: https://http4k.org/ecosystem/pro/reference/outbox/
+docs_link: https://http4k.org/ecosystem/pro/reference/postbox/
 cta_label: "Read the docs"
 ee_included: "Reliable, asynchronous HTTP processing for your services - transactional outbox and inbox patterns backed by database transactions, retries, and in-memory testability."
 navigation:
     -   name: docs
         title: Documentation
-        url: https://http4k.org/ecosystem/pro/reference/outbox/
+        url: https://http4k.org/ecosystem/pro/reference/postbox/
     -   name: http4k Pro
         title: http4k Pro
         url: https://http4k.org/pro
