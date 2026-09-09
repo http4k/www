@@ -58,7 +58,7 @@ modules:
     image: outbox.webp
     description: A robust transactional outbox implementation for http4k that ensures reliable message delivery with database consistency.
     prompt: "A clean isometric illustration of a minimalist database cylinder with small envelopes queued in an orderly line flowing outward into a delivery chute. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-    available: false
+    available: true
   - name: BackOffice
     link: https://backoffice.http4k.org
     image: backoffice.webp
