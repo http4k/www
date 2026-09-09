@@ -80,6 +80,8 @@ http4k-connect-amazon-cloudwatchlogs = { module = "org.http4k:http4k-connect-ama
 http4k-connect-amazon-cloudwatchlogs-fake = { module = "org.http4k:http4k-connect-amazon-cloudwatchlogs-fake" }
 http4k-connect-amazon-cognito = { module = "org.http4k:http4k-connect-amazon-cognito" }
 http4k-connect-amazon-cognito-fake = { module = "org.http4k:http4k-connect-amazon-cognito-fake" }
+http4k-connect-amazon-cognitoidentity = { module = "org.http4k:http4k-connect-amazon-cognitoidentity" }
+http4k-connect-amazon-cognitoidentity-fake = { module = "org.http4k:http4k-connect-amazon-cognitoidentity-fake" }
 http4k-connect-amazon-containercredentials = { module = "org.http4k:http4k-connect-amazon-containercredentials" }
 http4k-connect-amazon-containercredentials-fake = { module = "org.http4k:http4k-connect-amazon-containercredentials-fake" }
 http4k-connect-amazon-core = { module = "org.http4k:http4k-connect-amazon-core" }
@@ -121,6 +123,8 @@ http4k-connect-amazon-sts = { module = "org.http4k:http4k-connect-amazon-sts" }
 http4k-connect-amazon-sts-fake = { module = "org.http4k:http4k-connect-amazon-sts-fake" }
 http4k-connect-amazon-systemsmanager = { module = "org.http4k:http4k-connect-amazon-systemsmanager" }
 http4k-connect-amazon-systemsmanager-fake = { module = "org.http4k:http4k-connect-amazon-systemsmanager-fake" }
+http4k-connect-amazon-xray = { module = "org.http4k:http4k-connect-amazon-xray" }
+http4k-connect-amazon-xray-fake = { module = "org.http4k:http4k-connect-amazon-xray-fake" }
 http4k-connect-core = { module = "org.http4k:http4k-connect-core" }
 http4k-connect-core-fake = { module = "org.http4k:http4k-connect-core-fake" }
 http4k-connect-github = { module = "org.http4k:http4k-connect-github" }
@@ -311,6 +315,8 @@ http4k-connect-amazon = [
     "http4k-connect-amazon-cloudwatchlogs-fake",
     "http4k-connect-amazon-cognito",
     "http4k-connect-amazon-cognito-fake",
+    "http4k-connect-amazon-cognitoidentity",
+    "http4k-connect-amazon-cognitoidentity-fake",
     "http4k-connect-amazon-containercredentials",
     "http4k-connect-amazon-containercredentials-fake",
     "http4k-connect-amazon-core",
@@ -352,6 +358,8 @@ http4k-connect-amazon = [
     "http4k-connect-amazon-sts-fake",
     "http4k-connect-amazon-systemsmanager",
     "http4k-connect-amazon-systemsmanager-fake",
+    "http4k-connect-amazon-xray",
+    "http4k-connect-amazon-xray-fake",
 ]
 http4k-connect-other = [
     "http4k-connect-core",

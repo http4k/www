@@ -17,6 +17,7 @@ A quick reference as to what is what with the http4k Connect modules.
 | AWS        | CloudFront          | ✅              |                                                                 |
 | AWS        | CloudWatch          | ✅              |                                                                 |
 | AWS        | Cloudwatch Logs     | ✅              |                                                                 |
+| AWS        | Cognito Identity    | ✅              | Identity Pools: exchange logins for temporary credentials       |
 | AWS        | DynamoDb            | ✅              |                                                                 |
 | AWS        | EventBridge         | ✅              |                                                                 |
 | AWS        | Evidently           | ✅              |                                                                 |
@@ -35,6 +36,7 @@ A quick reference as to what is what with the http4k Connect modules.
 | AWS        | SQS                 | ✅              |                                                                 |
 | AWS        | STS                 | ✅              |                                                                 |
 | AWS        | Systems Manager     | ✅              |                                                                 |
+| AWS        | X-Ray               | ✅              | Trace read APIs                                                 |
 | GitHub     | V3 API              | ❌              | Client Shell and WebHook Signing only                           |
 | GitLab     | API                 | ❌              | Client Shell and WebHook Signing only                           |
 | Google     | Analytics GA4       | ✅              |                                                                 |
