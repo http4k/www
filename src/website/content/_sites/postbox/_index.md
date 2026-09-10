@@ -39,9 +39,9 @@ features:
       colour: blue
       description: "**Database transactions**, **retries with incremental backoff**, and a **claim-lease** model so concurrent processors never double-handle work."
 how_tos:
-    - section: Getting started with the Transactional Outbox in http4k
+    - section: Getting started with the Postbox module in http4k
       steps:
-          - description: "Step 1 - Replace your HTTP client or handler with a **`PostboxHandlers` interceptor**. Requests are stored **transactionally** and returned as `202 Accepted`."
+          - description: "Step 1 - To implement a Transactional Outbox, replace your HTTP client or handler with a **`PostboxHandlers` interceptor**. Requests are stored **transactionally** and returned as `202 Accepted`."
             alt: Intercept requests
           - description: "Step 2 - Create the storage with **`JdbcPostboxSchema.create(datasource)`** and wrap it in a **`PostboxTransactor`** for transactional processing."
             alt: Set up transactional storage
