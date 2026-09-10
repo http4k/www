@@ -318,11 +318,7 @@ menus:
       url: /disclaimer/
       weight: 3
 
-taxonomies:
-  module: "module"
-  ecosystem: "ecosystem"
-  news: "news"
-  howto: "howto"
+taxonomies: {}
 
 outputs:
   home:
