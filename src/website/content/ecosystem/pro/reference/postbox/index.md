@@ -5,7 +5,7 @@ ecosystem:
     - http4k Pro
     - http4k Enterprise
 tier: pro
-title: "Transactional Outbox"
+title: "Postbox"
 description: Reliable asynchronous processing of HTTP requests using the transactional outbox/inbox pattern
 aliases:
     - /ecosystem/enterprise/reference/outbox/

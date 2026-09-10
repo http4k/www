@@ -1,7 +1,7 @@
 ---
 sitemap:
     disable: true
-title: "http4k Transactional Outbox"
+title: "http4k Postbox"
 tagline: "Reliable, distributed transaction processing"
 layout: "product"
 type: "product"

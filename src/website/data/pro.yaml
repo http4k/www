@@ -53,10 +53,10 @@ modules:
     description: Turn http4k tests into living visual stories - HTTP exchanges, WebDriver interactions, SQL queries, and author narration captured as navigable slideshows or scrollable pages
     prompt: "A clean isometric illustration of a single wide open storyboard pad or document seen from a slight angle. Its surface is arranged with five clearly distinct content panels laid out in narrative reading order, each visually unique: (1) a browser window with a header bar and a wireframe page inside, (2) a syntax-highlighted code snippet with green and blue keyword colouring and visible indentation, (3) a labelled flowchart with three connected node shapes and arrows between them, (4) a small data table grid with visible rows and column dividers, (5) a thumbnail screenshot card with a tiny UI mockup. Each panel has distinct proportions, internal contents, and visual texture - no two look alike. The whole image reads as heterogeneous test artifacts collected onto a single living document. Muted palette: soft greys, pale blues, and white, with subtle accent hues differentiating each panel type. Light ambient shadows. No text or characters anywhere in the image. Square format."
     available: false
-  - name: Transactional Outbox
+  - name: Postbox
     link: https://postbox.http4k.org
     image: postbox.webp
-    description: A robust transactional outbox implementation for http4k that ensures reliable message delivery with database consistency.
+    description: A robust transactional outbox (+inbox) implementation for http4k that ensures reliable message delivery with database consistency.
     prompt: "A clean isometric illustration of a minimalist database cylinder with small envelopes queued in an orderly line flowing outward into a delivery chute. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
     available: true
   - name: BackOffice
