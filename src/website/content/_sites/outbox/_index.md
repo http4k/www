@@ -5,7 +5,7 @@ title: "http4k Transactional Outbox"
 tagline: "Reliable, distributed transaction processing"
 layout: "product"
 type: "product"
-subdomain: outbox
+subdomain: postbox
 tier: pro
 description: "Build reliable, distributed transaction processing systems using the http4k Transactional Outbox pattern"
 docs_link: https://http4k.org/ecosystem/pro/reference/outbox/

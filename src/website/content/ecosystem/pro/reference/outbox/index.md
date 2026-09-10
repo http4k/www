@@ -22,7 +22,7 @@ The name `Postbox` referes to the fact it follows the `HttpHandler` uniform desi
 ```kotlin
 dependencies {
     {{< http4k_bom >}}
-    implementation("org.http4k.pro:http4k-incubator-postbox")
+    implementation("org.http4k.pro:http4k-postbox")
 }
 ```
 
