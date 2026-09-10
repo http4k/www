@@ -29,6 +29,18 @@ modules:
     description: Passwordless authentication with FIDO2 passkeys - full WebAuthn registration and authentication ceremonies, pluggable verification and storage
     prompt: "A clean isometric illustration of a minimalist passkey or security key token hovering above a login card, with a fingerprint motif and a small unlocked padlock connected by thin lines. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
     available: true
+  - name: Postbox
+    link: https://postbox.http4k.org
+    image: postbox.webp
+    description: A robust transactional outbox (+inbox) implementation for http4k that ensures reliable message delivery with database consistency.
+    prompt: "A clean isometric illustration of a minimalist database cylinder with small envelopes queued in an orderly line flowing outward into a delivery chute. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
+    available: true
+  - name: Server Hot Reload
+    link: https://hotreload.http4k.org
+    image: hotreload.webp
+    available: true
+    description: Hot Reload restarts your server the moment your code changes - no more manual restarts
+    prompt: "A clean isometric illustration of a minimalist laptop with a circular refresh arrow hovering above the screen, beside a small code editor window. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
   - name: Machine Payments Protocol
     link: https://payments.http4k.org
     image: mpp.webp
@@ -41,24 +53,12 @@ modules:
     description: HTTP 402-based payment protocol enabling machine-to-machine commerce with automatic micropayment negotiation
     prompt: "A clean isometric illustration of two minimalist server towers exchanging a small coin token across a bridge or conduit between them. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
     available: true
-  - name: Server Hot Reload
-    link: https://hotreload.http4k.org
-    image: hotreload.webp
-    available: true
-    description: Hot Reload restarts your server the moment your code changes - no more manual restarts
-    prompt: "A clean isometric illustration of a minimalist laptop with a circular refresh arrow hovering above the screen, beside a small code editor window. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
   - name: Storyboard
     link: https://storyboard.http4k.org
     image: storyboard.webp
     description: Turn http4k tests into living visual stories - HTTP exchanges, WebDriver interactions, SQL queries, and author narration captured as navigable slideshows or scrollable pages
     prompt: "A clean isometric illustration of a single wide open storyboard pad or document seen from a slight angle. Its surface is arranged with five clearly distinct content panels laid out in narrative reading order, each visually unique: (1) a browser window with a header bar and a wireframe page inside, (2) a syntax-highlighted code snippet with green and blue keyword colouring and visible indentation, (3) a labelled flowchart with three connected node shapes and arrows between them, (4) a small data table grid with visible rows and column dividers, (5) a thumbnail screenshot card with a tiny UI mockup. Each panel has distinct proportions, internal contents, and visual texture - no two look alike. The whole image reads as heterogeneous test artifacts collected onto a single living document. Muted palette: soft greys, pale blues, and white, with subtle accent hues differentiating each panel type. Light ambient shadows. No text or characters anywhere in the image. Square format."
     available: false
-  - name: Postbox
-    link: https://postbox.http4k.org
-    image: postbox.webp
-    description: A robust transactional outbox (+inbox) implementation for http4k that ensures reliable message delivery with database consistency.
-    prompt: "A clean isometric illustration of a minimalist database cylinder with small envelopes queued in an orderly line flowing outward into a delivery chute. Muted palette: soft greys, pale blues, and white. Light ambient shadows, no text. Square format."
-    available: true
   - name: BackOffice
     link: https://backoffice.http4k.org
     image: backoffice.webp
