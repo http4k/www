@@ -51,6 +51,7 @@ dependencies {
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.http4k.core)
     testImplementation(libs.http4k.incubator)
+    testImplementation(libs.http4k.postbox)
     testImplementation(libs.bundles.http4k.ai)
     testImplementation(libs.bundles.http4k.api)
     testImplementation(libs.bundles.http4k.clients)
