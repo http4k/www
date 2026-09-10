@@ -1,4 +1,4 @@
-package content.ecosystem.pro.reference.outbox
+package content.ecosystem.pro.reference.postbox
 
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
