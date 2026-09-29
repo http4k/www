@@ -60,6 +60,7 @@ A quick reference as to what is what with the http4k Connect modules.
 | LM Studio   | API      | ✅              |                                                            |
 | Ollama      | API      | ✅              | Includes content generators and image generation           |
 | Open AI     | API      | ✅              | Includes content generators and image generation           |
+| TypeSafe    | API      | ✅              | Typed question/answer API instead of prompts               |
 
 <br/>
 <br/>
