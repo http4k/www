@@ -150,6 +150,8 @@
 
 .docs .aside ul.ms-3 { margin-left: 0 !important; }
 
+.docs .aside ul.ms-3 li { display: flex; align-items: center; }
+
 .docs .aside .ecoLink {
     display: block;
     font-size: var(--fs-sm);
