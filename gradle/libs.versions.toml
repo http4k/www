@@ -1,5 +1,5 @@
 [versions]
-amazon-s3 = "2.55.6"
+amazon-s3 = "2.55.11"
 aws-lambda-java-events = "3.16.1"
 azure-search-documents = "12.0.2"
 forkhandles-bom = "3.0.0.0"
