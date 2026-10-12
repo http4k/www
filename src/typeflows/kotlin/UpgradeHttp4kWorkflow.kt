@@ -7,6 +7,7 @@ import io.typeflows.github.workflow.step.SendRepositoryDispatch
 import io.typeflows.github.workflow.step.marketplace.Checkout
 import io.typeflows.github.workflow.trigger.RepositoryDispatch
 import io.typeflows.util.Builder
+import org.http4k.typeflows.GithubActionConstants.CHECKOUT
 
 class UpgradeHttp4kWorkflow : Builder<Workflow> {
     override fun build() = Workflow("upgrade_http4k") {
@@ -14,7 +15,7 @@ class UpgradeHttp4kWorkflow : Builder<Workflow> {
         on += RepositoryDispatch("http4k-release")
 
         jobs += Job("upgrade", RunsOn.of("ubuntu-latest")) {
-            steps += Checkout()
+            steps += Checkout(CHECKOUT)
             steps += RunCommand(
                 $$"""
                 git config --local user.name "github-actions"
