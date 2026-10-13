@@ -16,6 +16,7 @@ import Actions.ACTIONS_HUGO
 import Actions.SetupJavaAction
 import org.http4k.typeflows.GithubActionConstants.CHECKOUT
 import org.http4k.typeflows.GithubActionConstants.SETUP_GRADLE
+import org.http4k.typeflows.GithubActionConstants.http4kMavenCredentials
 
 class BuildLtsWorkflow : Builder<Workflow> {
     override fun build() = Workflow("build-lts") {
@@ -31,7 +32,7 @@ class BuildLtsWorkflow : Builder<Workflow> {
         jobs += Job("release-lts-site", RunsOn.of("ubuntu-latest")) {
             steps += Checkout(CHECKOUT) {
                 fetchDepth = 0
-                ref = "lts"
+                this.ref = "lts"
             }
             steps += SetupJavaAction
             steps += SetupGradle(SETUP_GRADLE) {
@@ -40,16 +41,17 @@ class BuildLtsWorkflow : Builder<Workflow> {
             steps += RunCommand("./gradlew check") {
                 name = "Build"
                 timeoutMinutes = 25
+                env.http4kMavenCredentials()
             }
             steps += UseAction(ACTIONS_HUGO) {
                 name = "Setup Hugo"
-                with += mapOf(
+                this.with += mapOf(
                     "hugo-version" to "0.145.0",
                     "extended" to "true"
                 )
             }
             steps += RunCommand("hugo --minify -s src/website") {
-                name = "Build Site"
+                this.name = "Build Site"
             }
             steps += UseAction(ACTIONS_GH_PAGES) {
                 name = "Deploy"

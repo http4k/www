@@ -1,4 +1,5 @@
 import org.gradle.api.JavaVersion.VERSION_21
+import java.net.URI
 
 plugins {
     alias(libs.plugins.typeflows)
@@ -24,8 +25,18 @@ buildscript {
 apply(plugin = "java")
 apply(plugin = "kotlin")
 
+val http4kMavenUser: String = project.findProperty("http4kMavenUser") as? String ?: System.getenv("HTTP4K_MAVEN_USER")
+val http4kMavenPassword: String = project.findProperty("http4kMavenPassword") as? String ?: System.getenv("HTTP4K_MAVEN_PASSWORD")
+
 repositories {
     mavenLocal()
+    maven {
+        credentials {
+            username = http4kMavenUser
+            password = http4kMavenPassword
+        }
+        url = URI("https://maven.http4k.org")
+    }
     mavenCentral()
 }
 

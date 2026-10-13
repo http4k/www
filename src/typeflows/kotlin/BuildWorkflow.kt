@@ -17,6 +17,7 @@ import Actions.ACTIONS_HUGO
 import Actions.SetupJavaAction
 import org.http4k.typeflows.GithubActionConstants.CHECKOUT
 import org.http4k.typeflows.GithubActionConstants.SETUP_GRADLE
+import org.http4k.typeflows.GithubActionConstants.http4kMavenCredentials
 
 class BuildWorkflow : Builder<Workflow> {
     override fun build() = Workflow("build") {
@@ -41,6 +42,7 @@ class BuildWorkflow : Builder<Workflow> {
             steps += RunCommand("./gradlew check") {
                 name = "Build"
                 timeoutMinutes = 25
+                env.http4kMavenCredentials()
             }
             steps += UseAction(ACTIONS_HUGO) {
                 name = "Setup Hugo"

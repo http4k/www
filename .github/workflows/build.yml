@@ -29,6 +29,9 @@ jobs:
     - name: Build
       timeout-minutes: 25
       run: ./gradlew check
+      env:
+        HTTP4K_MAVEN_USER: ${{ secrets.LTS_MAVEN_USER }}
+        HTTP4K_MAVEN_PASSWORD: ${{ secrets.LTS_MAVEN_USER }}
       shell: bash
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78

@@ -6,7 +6,7 @@ flowchart TD
     schedule(["⏰ schedule<br/>0 08 * * 1"])
     workflowdispatch(["👤 workflow_dispatch"])
     subgraph updatedependenciesyml["Update Dependencies"]
-        updatedependenciesyml_metadata[["🔧 Workflow Config<br/>🔐 custom permissions"]]
+        updatedependenciesyml_metadata[["🔧 Workflow Config<br/>🔐 custom permissions<br/>🌍 2 env vars"]]
         updatedependenciesyml_updatedependencies["update-dependencies<br/>🐧 ubuntu-latest<br/>🔑 Uses secrets"]
     end
     schedule --> updatedependenciesyml_updatedependencies
@@ -26,7 +26,7 @@ flowchart TD
 flowchart TD
     step1["Step 1: Checkout repository"]
     style step1 fill:#f8f9fa,stroke:#495057
-    action1["🎬 actions<br/>checkout<br/><br/>📝 Inputs:<br/>• token: ${{ secrets.TOOLBOX_REPO_TOKEN..."]
+    action1["🎬 actions<br/>checkout<br/><br/>📝 Inputs:<br/>• ref: master<br/>• token: ${{ secrets.TOOLBOX_REPO_TOKEN..."]
     style action1 fill:#e1f5fe,stroke:#0277bd
     step1 -.-> action1
     step2["Step 2: Set up JDK"]
