@@ -17,7 +17,7 @@ val llm = Chat.Azure(ApiKey.of("api-key"), AzureResource.of("foo"), AzureRegion.
 val request = ChatRequest(
     Message.User("What's the weather like in London?"),
     params = ModelParams(
-        modelName = OpenAIModels.GPT4,
+        modelName = OpenAIModels.GPT_6_1_SOL,
         tools = listOf(
             LLMTool(
                 name = "get_weather",

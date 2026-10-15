@@ -1,5 +1,7 @@
 import org.gradle.api.JavaVersion.VERSION_21
 import java.net.URI
+import nl.littlerobots.vcu.plugin.resolver.VersionSelectors
+import nl.littlerobots.vcu.plugin.versionSelector
 
 plugins {
     alias(libs.plugins.typeflows)
@@ -38,6 +40,10 @@ repositories {
         url = URI("https://maven.http4k.org")
     }
     mavenCentral()
+}
+
+versionCatalogUpdate {
+    versionSelector { it.candidate.version.endsWith("-ee") || VersionSelectors.PREFER_STABLE.select(it) }
 }
 
 tasks {
