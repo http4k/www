@@ -2,5 +2,5 @@
 {{ with resources.GetRemote $file }}
 {{ .Content | markdownify }}
 {{ else }}
-{{ errorf "Remote not found: %s" .Params.remote }}
+{{ errorf "Remote not found: %s" $file }}
 {{ end }}

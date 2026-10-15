@@ -143,6 +143,10 @@ a {
     font-weight: bold;
 }
 
+.tab-pane.active {
+    font-weight: normal;
+}
+
 .highlight pre {
     padding: 10px;
 }
