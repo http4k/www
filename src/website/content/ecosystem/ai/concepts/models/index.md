@@ -43,6 +43,27 @@ fun interface ImageGeneration {
 
 AI-powered image generation from text prompts.
 
+### Decide
+
+```kotlin
+fun interface Decide {
+    operator fun invoke(request: DecideRequest): LLMResult<DecideResponse>
+}
+```
+
+Structured decisions evaluated against a piece of state, rather than free text generation. A `DecideRequest` carries the
+state (text, or a list of `Content` such as images), a map of named `Question`s and the model to use. Each question is
+answered with a matching `Answer`:
+
+| Question   | Asks for                                 | Answer                                                   |
+|------------|------------------------------------------|----------------------------------------------------------|
+| `Choice`   | one of a set of named options            | the choice, per-option probabilities, confidence         |
+| `Score`    | a position on an ordered list of `Level`s | the score, per-level probabilities, confidence          |
+| `YesNo`    | the truth of a single statement          | a probability                                            |
+
+A provider may also answer any question with `Answer.Refusal`. Implementations are available for
+[OpenAI](/ecosystem/ai/reference/openai/) and [TypeSafe](/ecosystem/ai/reference/typesafe/).
+
 ## Result-Based Error Handling
 
 All operations return `LLMResult<T>` - a `Result4k` type that forces explicit error handling:

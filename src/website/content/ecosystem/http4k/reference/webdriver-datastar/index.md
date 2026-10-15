@@ -28,8 +28,10 @@ On top of the base WebDriver it understands the Datastar runtime:
 | Feature | Supported | Notes |
 |---------|-----------|-------|
 | `data-on-*` event directives | yes | e.g. `data-on-click`, `data-on-load` |
-| `@get` / `@post` actions | yes | issued back to your `HttpHandler` |
+| `data-init` | yes | runs when the element is loaded into the page |
+| `@get` / `@post` actions | yes | issued back to your `HttpHandler`. Relative URLs resolve against the current page, and cookies are sent |
 | SSE patches | yes | `datastar-patch-elements` and `datastar-patch-signals` |
+| Live event streams | yes | events from unbounded SSE streams are applied before each element lookup, and streams close on navigation |
 | DOM morphing | yes | applies the configured `MorphMode` |
 | Signals / reactivity | yes | client-side signal store with reactive bindings |
 

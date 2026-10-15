@@ -38,12 +38,18 @@ without changing your application code.
 
 It also allows pluggable support for any OpenAI-compatible model provider by implementing the `OpenAICompatibleClient` interface.
 
+The adapter also implements the [`Decide`](/ecosystem/ai/concepts/models/) interface on top of the OpenAI Decisions API.
+State can be text or binary images.
+
+{{< kotlin file="decide.kt" >}}
+
 ## Low-level API Client
 
 The OpenAI connector provides the following Actions:
 
 * GetModels
 * ChatCompletion
+* CreateDecision
 * CreateEmbeddings
 * GenerateImage
 
@@ -66,6 +72,7 @@ environments without using up valuable request tokens!
 
 * GetModels
 * ChatCompletion
+* CreateDecision
 * GenerateImage
 
 ### Security
@@ -84,6 +91,9 @@ of 256x/512x/1024x are supported.
 By default, a random LoremIpsum generator creates chat completion responses for the Fake. This behaviour can be
 overridden to generate custom response formats (eg. structured responses) if required. To do so, create instances of
 the `ChatCompletionGenerator` interface and return as appropriate.
+
+Decisions are answered by default with the first option of each question (and a probability of 0.5 for predicates). To
+script answers, pass a `DecisionAnswerer` to the Fake, which receives the input and the question being asked.
 
 ### Default Fake port: 45674
 

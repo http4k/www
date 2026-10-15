@@ -13,7 +13,7 @@ import org.http4k.events.StdOutEvents
 import org.http4k.postbox.PostboxHandlers
 import org.http4k.postbox.RequestIdResolvers.fromHeader
 import org.http4k.postbox.RequestIdResolvers.fromPath
-import org.http4k.postbox.processing.PostboxProcessing
+import org.http4k.postbox.processing.ScheduledPostboxProcessing
 import org.http4k.postbox.storage.jdbc.JdbcPostboxSchema
 import org.http4k.postbox.storage.jdbc.PostboxTransactor
 import org.http4k.routing.bind
@@ -34,7 +34,7 @@ fun main() {
     JdbcPostboxSchema.create(dataSource)
 
     val transactor = PostboxTransactor(dataSource).also { transactor ->
-        PostboxProcessing(transactor, JavaHttpClient(), events = StdOutEvents).start()
+        ScheduledPostboxProcessing(transactor, JavaHttpClient(), events = StdOutEvents).start()
     }
 
     val outbox = PostboxHandlers(transactor)

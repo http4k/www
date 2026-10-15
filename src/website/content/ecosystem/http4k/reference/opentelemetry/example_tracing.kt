@@ -3,6 +3,9 @@ package content.ecosystem.http4k.reference.opentelemetry
 import io.opentelemetry.context.propagation.ContextPropagators.create
 import io.opentelemetry.contrib.awsxray.propagator.AwsXrayPropagator
 import io.opentelemetry.sdk.OpenTelemetrySdk
+import io.opentelemetry.sdk.testing.exporter.InMemorySpanExporter
+import io.opentelemetry.sdk.trace.SdkTracerProvider
+import io.opentelemetry.sdk.trace.export.SimpleSpanProcessor
 import org.http4k.core.HttpHandler
 import org.http4k.core.Method.GET
 import org.http4k.core.Method.POST
@@ -18,8 +21,12 @@ import org.http4k.routing.path
 import org.http4k.routing.routes
 
 fun main() {
+    // spans are only recorded when a span processor is registered - use your exporter of choice (eg. OTLP)
+    val spans = InMemorySpanExporter.create()
+
     // configure OpenTelemetry using the Amazon XRAY tracing scheme
     val openTelemetry = OpenTelemetrySdk.builder()
+        .setTracerProvider(SdkTracerProvider.builder().addSpanProcessor(SimpleSpanProcessor.create(spans)).build())
         .setPropagators(create(AwsXrayPropagator.getInstance()))
         .buildAndRegisterGlobal()
 
@@ -43,4 +50,6 @@ fun main() {
         }))
 
     println("RETURNED TO CALLER: " + app(Request(GET, "http://localhost:8080/echo/david")))
+
+    println("RECORDED SPANS: " + spans.finishedSpanItems.map { it.name })
 }

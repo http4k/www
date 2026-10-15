@@ -45,7 +45,7 @@ how_tos:
             alt: Intercept requests
           - description: "Step 2 - Create the storage with **`JdbcPostboxSchema.create(datasource)`** and wrap it in a **`PostboxTransactor`** for transactional processing."
             alt: Set up transactional storage
-          - description: "Step 3 - Run **`PostboxProcessing`** in the background to **claim** pending requests, process them with your `HttpHandler`, and store the responses."
+          - description: "Step 3 - Run **`ScheduledPostboxProcessing`** in the background to **claim** pending requests, process them with your `HttpHandler`, and store the responses."
             alt: Process in the background
           - description: "Step 4 - Serve the stored responses with the Postbox **status handler** - consume them immediately or later, with **idempotent** retries."
             alt: Serve responses

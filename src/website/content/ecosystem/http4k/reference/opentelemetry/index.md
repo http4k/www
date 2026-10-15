@@ -26,6 +26,8 @@ This module provides configurable Filters to provide distributed tracing and met
 
 OpenTelemetry provides a pluggable interface for tracing propagation, so you can easily switch between different implementations such as AWS X-Ray, B3 and Jaeger etc.
 
+Note that the `SdkTracerProvider` must have at least one span processor registered. Without one (including when no tracer provider is set at all), OpenTelemetry returns no-op tracers and the tracing filters will silently produce no spans.
+
 {{< kotlin file="example_tracing.kt" >}}
 
 ### Metrics 

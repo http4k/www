@@ -38,6 +38,7 @@ http4k-ai-llm-core = { module = "org.http4k:http4k-ai-llm-core" }
 http4k-ai-llm-gemini = { module = "org.http4k:http4k-ai-llm-gemini" }
 http4k-ai-llm-github = { module = "org.http4k:http4k-ai-llm-github" }
 http4k-ai-llm-openai = { module = "org.http4k:http4k-ai-llm-openai" }
+http4k-ai-llm-typesafe = { module = "org.http4k:http4k-ai-llm-typesafe" }
 http4k-ai-mcp-a2a-bridge = { module = "org.http4k.pro:http4k-ai-mcp-a2a-bridge" }
 http4k-ai-mcp-mpp = { module = "org.http4k.pro:http4k-ai-mcp-mpp" }
 http4k-ai-mcp-sdk = { module = "org.http4k.pro:http4k-ai-mcp-sdk" }
@@ -269,6 +270,7 @@ http4k-ai = [
     "http4k-ai-llm-gemini",
     "http4k-ai-llm-github",
     "http4k-ai-llm-openai",
+    "http4k-ai-llm-typesafe",
     "http4k-ai-mcp-a2a-bridge",
     "http4k-ai-mcp-mpp",
     "http4k-ai-mcp-sdk",

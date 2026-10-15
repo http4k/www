@@ -13,6 +13,9 @@ dependencies {
 
     {{< http4k_bom >}}
 
+    // for the Universal LLM adapter
+    implementation("org.http4k:http4k-ai-llm-typesafe")
+
     // for the low-level TypeSafe API client
     implementation("org.http4k:http4k-connect-ai-typesafe")
 
@@ -23,8 +26,17 @@ dependencies {
 
 The http4k-ai TypeSafe integration provides:
 
+- Universal LLM adapter
 - Low-level API Client
 - FakeTypeSafe server which can be used as a testing harness for the API Client
+
+## Universal LLM adapter
+
+The Universal LLM adapter implements the http4k [`Decide`](/ecosystem/ai/concepts/models/) interface on top of the
+SystemOne API, allowing you to swap out decision providers without changing your application code. `Question.YesNo` maps
+onto the TypeSafe `Noul` question. Only text state is supported - requests containing other content fail.
+
+{{< kotlin file="universal_adapter.kt" >}}
 
 ## Low-level API Client
 

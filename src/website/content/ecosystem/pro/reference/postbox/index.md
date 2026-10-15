@@ -142,10 +142,12 @@ val myRequestHandler: HttpHandler = { request -> // this is the request stored i
 
 val postbox: PostboxTransactor = ...
 
-PostboxProcessing(postbox, myRequestHandler).start()
+ScheduledPostboxProcessing(postbox, myRequestHandler).start()
 ```
 
 This will start a single background (virtual) thread to process the requests in the Postbox using polling.
+
+> `ScheduledPostboxProcessing` replaces the now-deprecated `PostboxProcessing`.
 
 It'll do so by periodically claiming a small batch of pending requests and processing them.
 
@@ -153,19 +155,42 @@ The responses for those requests are stored so they can be consumed or served la
 
 By default, a request will be marked as processed if the handler returns a `2xx` status code. Otherwise, it'll be marked as failed and reprocessed later using an incremental backoff strategy. If it exceeds the maximum retry attempts, the request is marked as "dead" and won't be reprocessed.
 
-To avoid multiple instances of `PostboxProcessing` processing the same request, each batch of pending requests is claimed before being processed. A claimed request is marked as being processed for the duration of a lease; if the request isn't finalised within that lease (for instance because the processor crashed), it will be reclaimed and reprocessed by another or subsequent run.
+To avoid multiple instances of `ScheduledPostboxProcessing` processing the same request, each batch of pending requests is claimed before being processed. A claimed request is marked as being processed for the duration of a lease; if the request isn't finalised within that lease (for instance because the processor crashed), it will be reclaimed and reprocessed by another or subsequent run.
 
-You can configure `PostboxProcessing` by providing the following options:
+You can configure `ScheduledPostboxProcessing` by providing the following options:
 
 | Option | Description | Default |
 |--------|-------------|---------|
 | `batchSize` | The number of requests to process in a single batch | 10 |
 | `lease` | The duration for which a claimed request is reserved before it can be reclaimed by another processor | 30 seconds |
-| `maxPollingTime` | The maximum time to wait between polling requests | 5 seconds |
+| `pollInterval` | How long to wait after each batch completes before polling again | 5 seconds |
 | `shutdownGracePeriod` | How long `stop()` waits for in-flight work to finish before returning. If it elapses with work still in flight, a `ShutdownTimedOut` event is emitted | 30 seconds |
 | `successCriteria` | A `(Response) -> Boolean` function to determine if the request was processed successfully | `response.status.successful` (i.e. status code 2xx) |
 | `maxFailures` | The maximum number of failures before marking the request as "dead" | 3 |
 | `backoffStrategy` | A function to calculate the delay before trying to reprocess a request again | `(2 ^ (# failures)) * 5 seconds + random(10) seconds` |
+| `events` | An http4k `Events` sink for processing events (batches, retries, dead requests, shutdown timeouts) | no-op |
+| `externalScheduler` | A `ScheduledExecutorService` to run polling on. If provided, it is not shut down by `stop()` | a single virtual thread |
+| `timeSource` | The source of the current time, used for claiming and leases | system clock |
+
+### Testing background processing
+
+Because polling is driven by a `ScheduledExecutorService`, tests can take full control of time by passing a deterministic scheduler (such as the `DeterministicScheduler` from [time4k](https://github.com/fork-handles/forkhandles/tree/trunk/time4k)) and its clock:
+
+```kotlin
+val scheduler = DeterministicScheduler(Instant.EPOCH)
+
+ScheduledPostboxProcessing(
+    postbox,
+    myRequestHandler,
+    externalScheduler = scheduler,
+    timeSource = scheduler::currentTime
+).start()
+
+scheduler.runUntilIdle() // first poll
+scheduler.tick(Duration.ofSeconds(5)) // next poll
+```
+
+Alternatively, `processPendingRequests()` processes a single batch synchronously, without starting the scheduler.
 
 ### Configuring response for pending requests
 

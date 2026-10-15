@@ -12,7 +12,7 @@ import org.http4k.events.StdOutEvents
 import org.http4k.postbox.PendingResponseGenerators.redirect
 import org.http4k.postbox.PostboxHandlers
 import org.http4k.postbox.RequestIdResolvers.fromPath
-import org.http4k.postbox.processing.PostboxProcessing
+import org.http4k.postbox.processing.ScheduledPostboxProcessing
 import org.http4k.postbox.storage.jdbc.JdbcPostboxSchema
 import org.http4k.postbox.storage.jdbc.PostboxTransactor
 import org.http4k.routing.bind
@@ -30,7 +30,7 @@ fun main() {
     JdbcPostboxSchema.create(dataSource)
 
     val transactor = PostboxTransactor(dataSource).also { transactor ->
-        PostboxProcessing(transactor, SlowInternalHandler, events = StdOutEvents).start()
+        ScheduledPostboxProcessing(transactor, SlowInternalHandler, events = StdOutEvents).start()
     }
 
     val inbox = PostboxHandlers(transactor, redirect("taskId", from("http://localhost:9000/workload/status/{taskId}")))
