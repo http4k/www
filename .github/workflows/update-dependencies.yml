@@ -7,7 +7,7 @@ permissions:
   contents: read
 env:
   HTTP4K_MAVEN_USER: ${{ secrets.LTS_MAVEN_USER }}
-  HTTP4K_MAVEN_PASSWORD: ${{ secrets.LTS_MAVEN_USER }}
+  HTTP4K_MAVEN_PASSWORD: ${{ secrets.LTS_MAVEN_PASSWORD }}
 jobs:
   update-dependencies:
     runs-on: ubuntu-latest
@@ -29,11 +29,11 @@ jobs:
         distribution: temurin
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6
-    - name: Build
+    - name: Update library versions
       run: ./gradlew versionCatalogUpdate typeflowsExport
       env:
         HTTP4K_MAVEN_USER: ${{ secrets.LTS_MAVEN_USER }}
-        HTTP4K_MAVEN_PASSWORD: ${{ secrets.LTS_MAVEN_USER }}
+        HTTP4K_MAVEN_PASSWORD: ${{ secrets.LTS_MAVEN_PASSWORD }}
       shell: bash
     - run: ls
       shell: bash
