@@ -4,7 +4,7 @@
     <nav class="advisory-detail__crumbs">
         <a href="/security/">security</a>
         <span>/</span>
-        <span>{{ with .Params.CVE }}{{ . }}{{ else }}advisory{{ end }}</span>
+        <span>{{ with .Params.CVE }}{{ . }}{{ else }}{{ $.Params.GHSA }}{{ end }}</span>
     </nav>
     <div class="advisory-detail__badges">
         {{ with .Params.severity }}<span class="sev sev--{{ . | lower }}">{{ . }}</span>{{ end }}
