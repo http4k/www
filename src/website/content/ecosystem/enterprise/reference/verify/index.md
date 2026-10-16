@@ -14,9 +14,15 @@ The **http4k Verify** plugin automatically verifies cosign signatures on every h
 
 ### Gradle setup
 
+The plugin is published to the [http4k Enterprise Repository](/ecosystem/enterprise/reference/repository/), so add the repository to the plugin repositories in `settings.gradle.kts`, using the same credentials as for your dependencies:
+
+{{< kotlin file="verify-plugin-settings.kts" >}}
+
+Then apply the plugin in `build.gradle.kts`:
+
 ```kotlin
 plugins {
-    id("org.http4k.verify") <version>
+    id("org.http4k.verify") version "<version>"
 }
 ```
 
