@@ -15,7 +15,7 @@ val llm = Chat.Gemini(ApiKey.of("api-key"), JavaHttpClient())
 val request = ChatRequest(
     Message.User("What's the weather like in London?"),
     params = ModelParams(
-        modelName = GeminiModels.Gemini1_5,
+        modelName = GeminiModels.Gemini3_6Flash,
         tools = listOf(
             LLMTool(
                 name = "get_weather",

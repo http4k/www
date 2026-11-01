@@ -16,7 +16,6 @@ A quick reference as to what is what with the http4k AI modules.
 | AnthropicAI   | ✅    | ❌              | ❌                | ❌      | http4k-connect-ai-anthropic-fake |
 | Azure         | ✅    | ✅              | ❌                | ❌      | http4k-connect-ai-openai-fake    |
 | Gemini        | ✅    | ✅              | ❌                | ❌      | http4k-connect-ai-openai-fake    |
-| Github Models | ✅    | ✅              | ❌                | ❌      | http4k-connect-ai-openai-fake    |
 | Open AI       | ✅    | ✅              | ✅                | ✅      | http4k-connect-ai-openai-fake    |
 | TypeSafe      | ❌    | ❌              | ❌                | ✅      | http4k-connect-ai-typesafe-fake  |
 
