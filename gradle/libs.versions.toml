@@ -60,6 +60,7 @@ http4k-client-helidon = { module = "org.http4k:http4k-client-helidon" }
 http4k-client-jetty = { module = "org.http4k:http4k-client-jetty" }
 http4k-client-okhttp = { module = "org.http4k:http4k-client-okhttp" }
 http4k-client-websocket = { module = "org.http4k:http4k-client-websocket" }
+http4k-compression = { module = "org.http4k:http4k-compression" }
 http4k-config = { module = "org.http4k:http4k-config" }
 http4k-connect-ai-anthropic = { module = "org.http4k:http4k-connect-ai-anthropic" }
 http4k-connect-ai-anthropic-fake = { module = "org.http4k:http4k-connect-ai-anthropic-fake" }
@@ -419,6 +420,7 @@ http4k-formats = [
     "http4k-format-xml",
 ]
 http4k-misc = [
+    "http4k-compression",
     "http4k-config",
     "http4k-incubator",
     "http4k-multipart",

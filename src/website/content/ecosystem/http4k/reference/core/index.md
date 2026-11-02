@@ -78,6 +78,17 @@ covering common things like:
 
 Check out the `org.http4k.filter` package for the exact list.
 
+#### Compression (from 6.64.0.0)
+
+The `Compression` and `Decompression` filters negotiate a content-encoding with the other side (using `accept-encoding` and `content-encoding`) from the `ContentEncoding`s you give them, in order of preference. `http4k-core` ships `ContentEncoding.Gzip()` and `ContentEncoding.Deflate()`. Brotli and Zstandard are in the [http4k-compression](/ecosystem/http4k/reference/compression/) module.
+
+- **Server:** `ServerFilters.Compression` decompresses requests and compresses responses. Use `shouldCompress` (eg. `compressibleContentTypes(...)`) to limit which responses get compressed.
+- **Client:** `ClientFilters.Compression` compresses requests and decompresses responses. `ClientFilters.Decompression` only decompresses responses.
+
+Decompression is capped by `maxDecompressedSize`.
+
+{{< kotlin file="compression.kt" >}}
+
 #### Testing Filters
 
 {{< kotlin file="FilterTest.kt" >}}
