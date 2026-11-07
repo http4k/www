@@ -20,7 +20,7 @@ import org.http4k.typeflows.GithubActionConstants.SETUP_GRADLE
 import org.http4k.typeflows.GithubActionConstants.http4kMavenCredentials
 
 class BuildWorkflow : Builder<Workflow> {
-    override fun build() = Workflow("build") {
+    override fun build() = Workflow("build-site") {
         displayName = "Build and Deploy"
         on += Push {
             branches = Branches.Only("master")

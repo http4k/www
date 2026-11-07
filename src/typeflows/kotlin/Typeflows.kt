@@ -14,9 +14,7 @@ class Typeflows : Builder<TypeflowsGitHubRepo> {
     override fun build() = TypeflowsGitHubRepo {
         dotGithub = DotGitHub {
             workflows += BuildWorkflow()
-            workflows += BuildLtsWorkflow()
             workflows += UpgradeHttp4kWorkflow()
-            workflows += UpgradeHttp4kLtsWorkflow()
 
             workflows += UpdateGradleProjectDependencies(
                 "update-dependencies",
