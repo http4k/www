@@ -19,7 +19,7 @@ The fix changes the default matcher to `Exact`. Callers that genuinely need subs
 
 - `http4k-core`
     - 6.48.x and below
-    - 5.41.0.0 and below
+    - 5.50.0.0 and below
     - 4.50.0.0 and below
 
 ### Mitigation
@@ -29,7 +29,7 @@ Users of affected versions should upgrade to the corresponding fixed version as 
 | Version     | Fixed Version | Availability                                  |
 |-------------|---------------|-----------------------------------------------|
 | < 6.49.0.0  | 6.49.0.0      | Community & [Enterprise Support](/enterprise) |
-| <= 5.41.0.0 | 5.42.0.0      | [Enterprise Support Only](/enterprise)        |
+| <= 5.50.0.0 | 5.51.0.0      | [Enterprise Support Only](/enterprise)        |
 | <= 4.50.0.0 | 4.51.0.0      | [Enterprise Support Only](/enterprise)        |
 
 Older, unsupported versions are also affected.
