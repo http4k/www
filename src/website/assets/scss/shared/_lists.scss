@@ -203,6 +203,8 @@
 
 .newsletter__btn:hover { background: var(--orange-strong); }
 
+.newsletter__thanks { font-size: var(--fs-lead); font-weight: 600; color: var(--ink); margin: 0; }
+
 .footer-newsletter {
     display: flex;
     flex-wrap: wrap;

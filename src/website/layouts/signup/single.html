@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+{{ partial "shared/section-hero.html" (dict "eyebrow" "newsletter" "title" .Title "lede" .Params.description) }}
+
+{{ partial "shared/newsletter.html" . }}
+
+<section class="section-rail list-section">
+    <h2>Recently from the team</h2>
+    <div class="card-grid article-grid">
+        {{ range first 3 (sort (where .Site.RegularPages "Type" "eq" "news") "Date" "desc") }}
+        {{ $img := "" }}{{ with .Resources.GetMatch .Params.image }}{{ $img = .RelPermalink }}{{ end }}
+        {{ partial "shared/article-card.html" (dict
+            "title" .Title
+            "href" .RelPermalink
+            "excerpt" .Params.description
+            "category" .Params.category
+            "date" (.Params.date | time.Format "Jan 2006")
+            "image" $img
+            "thumbText" .Params.category) }}
+        {{ end }}
+    </div>
+</section>
+
+<script>
+    (function () {
+        var form = document.querySelector(".newsletter__form");
+        if (!form) return;
+        var thanks = function () {
+            form.outerHTML = '<p class="newsletter__thanks">Thanks! Check your inbox to confirm your subscription.</p>';
+        };
+        if (new URLSearchParams(window.location.search).has("subscribed")) return thanks();
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+                .then(function (r) { return r.json(); })
+                .then(function (j) { if (j.status !== "success") throw j; thanks(); })
+                .catch(function () { form.submit(); });
+        });
+    })();
+</script>
+
+{{ end }}
