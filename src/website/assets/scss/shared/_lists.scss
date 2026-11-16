@@ -203,6 +203,21 @@
 
 .newsletter__btn:hover { background: var(--orange-strong); }
 
+.footer-newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 0 32px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-newsletter__label { font-weight: 600; color: #fff; margin-right: 8px; }
+
+.footer-newsletter .newsletter__input,
+.footer-newsletter .newsletter__btn { height: 42px; }
+
 @media (max-width: 767.98px) {
     .list-section,
     .filter-chips,

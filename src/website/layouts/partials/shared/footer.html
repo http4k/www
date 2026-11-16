@@ -35,6 +35,13 @@
                 </ul>
             </div>
         </div>
+        {{- with .Site.Params.newsletter }}{{ with .action }}
+        <form class="footer-newsletter" action="{{ . }}" method="post">
+            <span class="footer-newsletter__label">Get the http4k newsletter</span>
+            <input class="newsletter__input" type="email" name="email_address" placeholder="you@company.com" aria-label="Email address" required>
+            <button class="newsletter__btn" type="submit">Subscribe</button>
+        </form>
+        {{- end }}{{ end }}
     </div>
     <div class="row text-center g-0">
         <div class="col">

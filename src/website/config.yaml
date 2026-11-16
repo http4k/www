@@ -52,6 +52,9 @@ params:
     enabled: true
     id: "BGFZWRDS"
 
+  newsletter:
+    action: "https://app.kit.com/forms/7622075/subscriptions"
+
   contact:
     email: "info@http4k.org?subject=Get in touch with http4k"
 
