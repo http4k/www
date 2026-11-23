@@ -1,6 +1,6 @@
 ---
 title: http4k Enterprise Edition
-description: Long-term stability, supply chain security, priority support, and Pro modules - everything your organisation needs to run http4k in production with confidence.
+description: Long-term stability, supply chain security, advance vulnerability notice, priority support, and Pro modules - everything your organisation needs to run http4k in production with confidence.
 type: enterprise
 email: enterprise@http4k.org
 aliases:
@@ -10,20 +10,20 @@ highlights:
         description: Guaranteed security and critical updates for the LTS stable release channel, including source access, allowing you to focus on feature delivery.
         icon: "/images/footprint.svg"
     -   title: Supply chain security
-        description: SLSA Level 2 provenance, signed SBOMs, and cosign signatures for every artifact, verified at build time with [http4k Verify](https://verify.http4k.org).
+        description: SLSA Level 2 provenance, signed SBOMs, signed per-module licence reports and cosign signatures for every artifact, verified at build time with [http4k Verify](https://verify.http4k.org).
         icon: "/images/extendable.svg"
+    -   title: Know before it's public
+        description: Advance notice of vulnerabilities in http4k as soon as we confirm them, ahead of public disclosure - giving teams time to assess exposure and plan remediation.
+        icon: "/images/faq.svg"
     -   title: Never wait for a release
         description: Early access to all http4k features and fixes through [maven.http4k.org](https://maven.http4k.org) every 1-2 weeks, rather than the [quarterly](/distribution/) cadence on Maven Central (from 1 October 2026).
         icon: "/images/connections.svg"
     -   title: Access to priority support
-        description: The http4k team are here on Slack and Email to guide you through any issues or questions.
+        description: Direct access to the people who wrote the code. The http4k team are here to guide you through any issues or questions, from LTS fixes to architecture advice.
         icon: "/images/faq.svg"
     -   title: Pro modules
-        description: A growing collection of commercially licensed, battle-tested modules built from real-world enterprise delivery.
+        description: Every [Pro module](/pro/) included as standard - from AI agents and MCP to payments and passkeys. Commercially licensed, battle-tested modules built from real-world enterprise delivery.
         icon: "/images/footprint.svg"
-    -   title: License reporting
-        description: Signed, per-module license reports delivered with every artifact - ready for audit and regulatory review.
-        icon: "/images/supportive.svg"
 faq:
     -   question: "What evidence do we receive with each artifact?"
         answer: >-
@@ -31,6 +31,11 @@ faq:
             a signed licence report and cosign signatures. None of it is published to Maven Central,
             which carries PGP signatures only. The
             [supply chain security](/supply-chain-security/) page has the detail.
+    -   question: "How does advance vulnerability notice work?"
+        answer: >-
+            When we confirm a vulnerability in http4k, Enterprise customers are informed through designated security contacts - with the
+            affected modules and versions, severity, any mitigations, and the expected fix - before the
+            public advisory is published. By that point we have usually started on the fix.
     -   question: "Are we locked in to http4k Verify, or can we check the artifacts ourselves?"
         answer: >-
             You can check them yourself. The signing keys are published openly and every artifact

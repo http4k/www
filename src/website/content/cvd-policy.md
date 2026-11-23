@@ -73,9 +73,13 @@ When we receive a valid vulnerability report, we commit to:
 4. **Publish a GitHub Security Advisory (GHSA)** for every confirmed vulnerability, and request a CVE identifier where assignment is warranted - see [Vulnerability Identifiers](#vulnerability-identifiers-ghsa-and-cve) below.
 5. **Credit you** in our security advisory (unless you prefer to remain anonymous).
 6. **Update our SBOMs** - we publish CycloneDX SBOMs for every module, signed with cosign.
-7. **Notify our users** via our [security advisories page](/security/), GitHub, and direct communication with Enterprise customers.
+7. **Notify our users** via our [security advisories page](/security/) and GitHub. http4k Enterprise Edition customers are notified directly and in advance, under embargo - see [Advance Notice to Enterprise Customers](#advance-notice-to-enterprise-customers) below.
 8. **Report upstream** - if the vulnerability is in a third-party or open-source component integrated into our products, we will report it to the component maintainer and share relevant fixes, in accordance with CRA Article 13(6).
 9. **Report to authorities** - where required by the EU Cyber Resilience Act (Article 14), we will notify the designated CSIRT and ENISA of actively exploited vulnerabilities within the mandated timeframes.
+
+## Advance Notice to Enterprise Customers
+
+Once we have confirmed a vulnerability, we notify http4k Enterprise Edition customers before public disclosure, so that they can prepare to remediate. Notices contain what a customer needs to assess their exposure - affected modules and versions, severity, mitigations and the expected fix - and are confidential until our advisory is published. Advance notice does not change the public disclosure timeline agreed with the reporter.
 
 ## Vulnerability Identifiers (GHSA and CVE)
 
