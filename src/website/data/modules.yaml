@@ -2,6 +2,7 @@
 - alibaba
 - apache
 - apprunner
+- approval tests
 - argo
 - aws
 - azure
@@ -12,7 +13,9 @@
 - cloudwatch
 - cloudwatch logs
 - cognito
+- cognito identity
 - container credentials
+- csv
 - dataframe
 - datastar
 - digest
@@ -22,6 +25,7 @@
 - evidently
 - failsafe
 - firehose
+- fory
 - freemarker
 - fuel
 - google analytics
@@ -56,6 +60,7 @@
 - kondor
 - kotest
 - kotlinx serialization
+- kotlinx html
 - ktor
 - lambda
 - langchain4j
@@ -65,6 +70,7 @@
 - micrometer
 - micronaut
 - moshi
+- mpp
 - netty
 - oauth
 - okhttp
@@ -86,6 +92,7 @@
 - rocker
 - route53
 - s3
+- scheduler
 - secrets manager
 - servirtium
 - servlet
@@ -109,4 +116,6 @@
 - webdriver
 - wiretap
 - x402
+- x-ray
 - xml
+- yaml
