@@ -4,7 +4,7 @@ description: The default Fory configuration disabled class registration, so a cr
 severity: HIGH
 GHSA: GHSA-96pg-gr7h-87hj
 advisory: https://github.com/http4k/http4k/security/advisories/GHSA-96pg-gr7h-87hj
-date: 2026-11-23
+date: 2026-11-25
 ---
 
 ### Description
